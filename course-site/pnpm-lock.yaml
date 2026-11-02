@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      pele:
+        specifier: ^1.13.0
+        version: 1.13.0
     devDependencies:
       vitepress:
         specifier: ^1.6.4
@@ -676,6 +680,10 @@ packages:
 
   oniguruma-to-es@3.1.1:
     resolution: {integrity: sha512-bUH8SDvPkH3ho3dvwJwfonjlQ4R80vjyvrU8YpxuROddv55vAEJrTuCuCVUhhsHbtlD9tGGbaNApGQckXhS8iQ==}
+
+  pele@1.13.0:
+    resolution: {integrity: sha512-Ie8UKY9x00MsuR3jO6AzUwzK2Z6MIV3Tf4EDdITiuk8Uaz8K7g0R082WqsqNaSU8DdgkrRvZThzhit83mi/uiw==}
+    engines: {node: '>=20'}
 
   perfect-debounce@1.0.0:
     resolution: {integrity: sha512-xCy9V055GLEqoFaHoC1SoLIaLmWctgCUaBaWxDZ7/Zx4CTyX7cJQLJOok/orfjZAh9kEYpjJa4d0KcJmCbctZA==}
@@ -1443,6 +1451,8 @@ snapshots:
       emoji-regex-xs: 1.0.0
       regex: 6.1.0
       regex-recursion: 6.0.2
+
+  pele@1.13.0: {}
 
   perfect-debounce@1.0.0: {}
 

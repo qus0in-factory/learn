@@ -2,8 +2,8 @@
 
 ## Workers 접속 경로
 
-- PPT: 배포 전
-- 정적 사이트: 배포 전
+- 슬라이드: https://hdai.qus0in.workers.dev/git/slides/
+- 문서: https://hdai.qus0in.workers.dev/git/docs/
 
 ## 프로젝트 구조
 

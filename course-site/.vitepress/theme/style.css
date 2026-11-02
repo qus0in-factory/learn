@@ -19,3 +19,18 @@
 @media (max-width: 320px) {
   .vp-doc { overflow-wrap: anywhere; }
 }
+
+.mermaid-diagram {
+  overflow-x: auto;
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  color: var(--vp-c-text-1);
+}
+
+.mermaid-diagram svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
