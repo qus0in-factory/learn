@@ -9,6 +9,10 @@ export default {
         return Response.redirect(new URL(`${route}/`, url), 308)
       }
     }
-    return env.ASSETS.fetch(request)
+    const response = await env.ASSETS.fetch(request)
+    if (response.status === 404 && /^\/git\/slides\/\d+\/?$/.test(url.pathname)) {
+      return env.ASSETS.fetch(new Request(new URL('/git/slides/index.html', url), request))
+    }
+    return response
   },
 }
