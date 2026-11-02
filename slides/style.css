@@ -9,4 +9,5 @@
   background: #fff;
   overflow-wrap: anywhere;
 }
+.slidev-layout.cover h1 { font-size: 2.15em; line-height: 1.2; }
 .slidev-layout a { color: #444; }

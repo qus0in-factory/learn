@@ -5,6 +5,8 @@ import shutil
 ROOT = Path(__file__).resolve().parent.parent
 SOURCE = ROOT / 'docs/261102/source'
 FILES = ('slides/slides.md', 'course-site/index.md',
+         'course-site/blocks/a.md', 'course-site/blocks/b.md',
+         'course-site/blocks/c.md', 'course-site/blocks/d.md',
          'example-site/index.html', 'example-site/style.css')
 
 
