@@ -14,9 +14,10 @@
 ```sh
 pnpm --dir slides build
 pnpm --dir course-site build
+python3 scripts/build-landing.py
 ```
 
-두 빌드는 `dist/git/slides`와 `dist/git/docs`에 각각 결과물을 만듭니다. 두 결과와 `src/worker.js`가 준비된 뒤 저장소 루트에서 배포합니다.
+각 빌드는 `dist/git/slides`, `dist/git/docs`, `dist/git/index.html`에 결과물을 만듭니다. 세 결과와 `src/worker.js`가 준비된 뒤 저장소 루트에서 배포합니다. `/git/`은 문서와 슬라이드 링크를 제공하는 안내 페이지입니다.
 
 ```sh
 pnpm --dir slides exec wrangler deploy --config ../wrangler.jsonc

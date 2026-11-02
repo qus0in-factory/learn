@@ -1,0 +1,39 @@
+:root {
+  color-scheme: light;
+  font-family: "Noto Serif KR", "Batang", "바탕", Georgia, serif;
+  color: #252522;
+  background: #f5f4f0;
+}
+* { box-sizing: border-box; }
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  padding: 48px 24px;
+}
+main { width: min(100%, 680px); }
+.eyebrow, footer { color: #77766f; font: 11px/1.5 sans-serif; }
+.eyebrow { margin: 0 0 28px; letter-spacing: .18em; text-transform: uppercase; }
+h1 {
+  max-width: 12em;
+  margin: 0;
+  font-size: clamp(36px, 9vw, 64px);
+  font-weight: 400;
+  line-height: 1.35;
+  letter-spacing: -.07em;
+  word-break: keep-all;
+}
+.intro {
+  margin: 24px 0 52px;
+  color: #6c6a63;
+  font-size: 15px;
+  line-height: 1.9;
+  word-break: keep-all;
+}
+footer { margin-top: 36px; color: #929089; letter-spacing: .06em; }
+@media (max-width: 420px) {
+  body { padding: 32px 20px; }
+  .intro { margin-bottom: 38px; }
+}
