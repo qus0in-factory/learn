@@ -1,0 +1,12 @@
+@font-face {
+  font-family: Ridibatang;
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
+  font-display: swap;
+}
+.slidev-layout {
+  font-family: Ridibatang, serif;
+  color: #222;
+  background: #fff;
+  overflow-wrap: anywhere;
+}
+.slidev-layout a { color: #444; }

@@ -1,0 +1,1 @@
+{"name":"hdg-slides","private":true,"type":"module","scripts":{"dev":"slidev --host","build":"slidev build --without-notes","export":"slidev export"},"dependencies":{"@slidev/cli":"latest","@slidev/theme-default":"latest","vue":"latest"}}
