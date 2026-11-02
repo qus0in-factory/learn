@@ -11,7 +11,7 @@ export default {
     }
     const response = await env.ASSETS.fetch(request)
     if (response.status === 404 && /^\/git\/slides\/\d+\/?$/.test(url.pathname)) {
-      return env.ASSETS.fetch(new Request(new URL('/git/slides/index.html', url), request))
+      return env.ASSETS.fetch(new Request(new URL('/git/slides/', url), request))
     }
     return response
   },
