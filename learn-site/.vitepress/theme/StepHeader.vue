@@ -20,6 +20,6 @@ const course = { title: page.value.title, summary: frontmatter.value.subtitle ||
     <p v-if="frontmatter.subtitle">{{ frontmatter.subtitle }}</p>
     <StepTags />
     <small>{{ site.updated }}{{ frontmatter.pageUpdated }}</small>
-    <ShareCourse v-if="lesson" :course="course" :lesson="lesson" />
+    <ShareCourse :course="course" :lesson="lesson || {}" />
   </header>
 </template>

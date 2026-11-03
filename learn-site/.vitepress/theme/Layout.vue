@@ -21,7 +21,7 @@ const { frontmatter, page } = useData()
     </template>
     <template #doc-before>
       <CourseBreadcrumb v-if="/^git\/(?:\d{2}-|appendix\/)/.test(page.relativePath)" />
-      <StepIntro v-if="frontmatter.pdf" :key="page.relativePath" />
+      <StepIntro v-if="frontmatter.stepHeader" :key="page.relativePath" />
     </template>
   </DefaultTheme.Layout>
 </template>
