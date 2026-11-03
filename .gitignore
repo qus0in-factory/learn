@@ -3,3 +3,6 @@ dist/
 .vitepress/cache/
 .vitepress/dist/
 .DS_Store
+docs/261103/.review-snapshot/
+docs/261103/requirements-check.md
+
