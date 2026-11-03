@@ -1,0 +1,7 @@
+.vp-doc li.task-list-item { list-style: none; position: relative; padding-left: 1.5em; }
+.vp-doc .task-list-item-checkbox {
+  position: absolute;
+  left: 0;
+  top: .35em;
+  margin: 0;
+}

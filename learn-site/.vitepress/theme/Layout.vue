@@ -5,6 +5,7 @@ import SiteFooter from './SiteFooter.vue'
 import { site } from '../site.mjs'
 import { labels } from '../labels.mjs'
 import CourseBreadcrumb from './CourseBreadcrumb.vue'
+import './task-list.css'
 import './header-logo.css'
 
 const { frontmatter, page } = useData()
