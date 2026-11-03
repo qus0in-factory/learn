@@ -27,7 +27,9 @@ pnpm --dir slides exec wrangler deploy --config ../wrangler.jsonc
 
 ## Learn Worker 운영 배포
 
-아래는 위 hdai 예시와 별개인 현행 `learn` Worker 운영 절차입니다. `learn-worker/wrangler.jsonc`와 `dist/learn`을 사용합니다. 워크트리에서 빌드할 때 `course-site/node_modules`를 메인 저장소의 같은 디렉터리에 심볼릭 링크합니다. 별도 `pnpm install`은 Vue scoped-style ID를 바꿔 라이브와 다른 해시를 만들고, `learn-site/.vitepress/pages.mjs`의 `vueAlias` 경로도 깨뜨립니다.
+아래는 위 hdai 예시와 별개인 현행 `learn` Worker 운영 절차입니다. `learn-worker/wrangler.jsonc`와 `dist/learn`을 사용합니다. 빌드 해시는 `node_modules` 내용이 아니라 체크아웃 위치(메인 저장소 `hdg`까지의 상대 경로)에 의존합니다. `/tmp`에서 빌드하면 같은 커밋도 라이브와 다른 해시가 되므로 `/tmp` 빌드는 사용하지 않고, 메인 저장소와 같은 부모 아래 `.worktrees/`에서 빌드합니다.
+
+워크트리에서는 `course-site/node_modules`를 메인 저장소의 같은 디렉터리에, `learn-site/node_modules`를 `../course-site/node_modules`에 링크합니다. 의존성이 바뀌면 워크트리에서 설치하지 말고 메인 `hdg`에서 먼저 `pnpm --dir course-site install --frozen-lockfile`을 실행합니다. `learn-site/.vitepress/updated.mjs`가 git을 호출하므로 빌드는 git 저장소에서만 됩니다(tarball·export 빌드는 실패).
 
 ```sh
 ln -s /path/to/main/course-site/node_modules course-site/node_modules
@@ -35,7 +37,13 @@ ln -s ../course-site/node_modules learn-site/node_modules
 VITE_ASSET_CDN_BASE_URL=https://files.qus0in.dev ./course-site/node_modules/.bin/vitepress build learn-site
 ```
 
-배포 전 `dist/learn/assets/app.*.js`·`style.*.css` 이름이 라이브 해시와 같은지 확인합니다. 로컬 `wrangler dev`가 IPC 오류(`ERR_IPC_CHANNEL_CLOSED`)나 workerd 호환성 오류로 종료되면 `npx wrangler deploy --dry-run --config learn-worker/wrangler.jsonc`로 설정·번들을 확인하고, 실제 배포 후 readback으로 검증합니다.
+배포 전 `dist/learn/assets/app.*.js`·`style.*.css` 이름이 라이브 해시와 같은지 확인합니다. 로컬 `wrangler dev`가 실패하면 오류의 `newest date supported by this server binary` 값을 확인합니다. 로컬 workerd가 설정의 `compatibility_date`보다 낮은 날짜까지만 지원해서 생기는 문제이므로, 그 지원 날짜를 `--compatibility-date`로 넘겨 실행합니다(값을 문서에 고정하지 않음). `ERR_IPC_CHANNEL_CLOSED`는 원인이 아니라 증상이었습니다.
+
+```sh
+npx wrangler dev --config learn-worker/wrangler.jsonc --compatibility-date <로컬 workerd 지원 날짜>
+```
+
+`--compatibility-date`로도 해결되지 않거나 wrangler 업그레이드가 필요하면 `npx wrangler deploy --dry-run --config learn-worker/wrangler.jsonc`로 설정·번들을 확인하고, 실제 배포 후 readback으로 검증합니다.
 
 배포 전후에 같은 readback과 tail을 남겨 비교합니다.
 
