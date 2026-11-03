@@ -222,5 +222,131 @@
     "size": 155018,
     "sha256": "fe1a7949964e6945da67169e964a6f92609c38415b099e59d775d3d001cf42f5",
     "type": "image/webp"
+  },
+  {
+    "path": "/git-cover-180.avif",
+    "key": "static/f2be13f40aad5e6a81f0b6251d19bed9756e673b34f968ab9f0f9d92d1bc5037/git-cover-180.avif",
+    "size": 17501,
+    "sha256": "f2be13f40aad5e6a81f0b6251d19bed9756e673b34f968ab9f0f9d92d1bc5037",
+    "type": "image/avif"
+  },
+  {
+    "path": "/git-cover-180.webp",
+    "key": "static/5cbaab12eeffc66bf84f607d0f92965dd3adabfc628e8531a53a9096280dcedc/git-cover-180.webp",
+    "size": 17972,
+    "sha256": "5cbaab12eeffc66bf84f607d0f92965dd3adabfc628e8531a53a9096280dcedc",
+    "type": "image/webp"
+  },
+  {
+    "path": "/git-cover-222.avif",
+    "key": "static/e9c9309d60b0873fd91e26854032264f320fecb47f0fbfbd48cdf7ba8738006c/git-cover-222.avif",
+    "size": 24118,
+    "sha256": "e9c9309d60b0873fd91e26854032264f320fecb47f0fbfbd48cdf7ba8738006c",
+    "type": "image/avif"
+  },
+  {
+    "path": "/git-cover-222.webp",
+    "key": "static/9d4a0d74e38d4cb85bac0700de65a7116511b81228b7f4e9df7e15575cea378c/git-cover-222.webp",
+    "size": 25130,
+    "sha256": "9d4a0d74e38d4cb85bac0700de65a7116511b81228b7f4e9df7e15575cea378c",
+    "type": "image/webp"
+  },
+  {
+    "path": "/git-cover-282.avif",
+    "key": "static/763afa4ecf13b46099499d42a6e2a1c4594cbecf3b8dcd07d8b2387e887023ac/git-cover-282.avif",
+    "size": 35027,
+    "sha256": "763afa4ecf13b46099499d42a6e2a1c4594cbecf3b8dcd07d8b2387e887023ac",
+    "type": "image/avif"
+  },
+  {
+    "path": "/git-cover-282.webp",
+    "key": "static/0a04ffa477451ee5189d0673a7cb185052b1d1b2823e13fb2ac91df2823eff6e/git-cover-282.webp",
+    "size": 36740,
+    "sha256": "0a04ffa477451ee5189d0673a7cb185052b1d1b2823e13fb2ac91df2823eff6e",
+    "type": "image/webp"
+  },
+  {
+    "path": "/git-cover-360.avif",
+    "key": "static/293e9939425edeef93d2ca5b2e886b4b4c2d604aeb8b887b6974e264a5174f36/git-cover-360.avif",
+    "size": 49445,
+    "sha256": "293e9939425edeef93d2ca5b2e886b4b4c2d604aeb8b887b6974e264a5174f36",
+    "type": "image/avif"
+  },
+  {
+    "path": "/git-cover-360.webp",
+    "key": "static/821c29b90364556810ff1a7a044ccdae1503dbdf19bc80d3efc2e9c47b7bbd6e/git-cover-360.webp",
+    "size": 52506,
+    "sha256": "821c29b90364556810ff1a7a044ccdae1503dbdf19bc80d3efc2e9c47b7bbd6e",
+    "type": "image/webp"
+  },
+  {
+    "path": "/git-cover-441.avif",
+    "key": "static/7b4929de665a8a23efb7e70f699bf0c00907a89f88b61b290f8c8ec566967ab6/git-cover-441.avif",
+    "size": 68278,
+    "sha256": "7b4929de665a8a23efb7e70f699bf0c00907a89f88b61b290f8c8ec566967ab6",
+    "type": "image/avif"
+  },
+  {
+    "path": "/git-cover-441.webp",
+    "key": "static/f9a8ae3a49d7d6300e679a1431b57c4e7959f50163e997af6066780df6fe5d96/git-cover-441.webp",
+    "size": 74488,
+    "sha256": "f9a8ae3a49d7d6300e679a1431b57c4e7959f50163e997af6066780df6fe5d96",
+    "type": "image/webp"
+  },
+  {
+    "path": "/git-cover-540.avif",
+    "key": "static/b73f5b48ef180bf0e106935b0a1197137a2f189692da479d276bf55c5f3bea5c/git-cover-540.avif",
+    "size": 95430,
+    "sha256": "b73f5b48ef180bf0e106935b0a1197137a2f189692da479d276bf55c5f3bea5c",
+    "type": "image/avif"
+  },
+  {
+    "path": "/git-cover-540.webp",
+    "key": "static/5515351e86f31acb01c03445b354450b76fbd875f27821f0f74c75efabc8c576/git-cover-540.webp",
+    "size": 102740,
+    "sha256": "5515351e86f31acb01c03445b354450b76fbd875f27821f0f74c75efabc8c576",
+    "type": "image/webp"
+  },
+  {
+    "path": "/git-cover-561.avif",
+    "key": "static/8d85eea851721569ce494d1bcbf186640e9f15c5272d2ec085436366ca60a5c7/git-cover-561.avif",
+    "size": 100956,
+    "sha256": "8d85eea851721569ce494d1bcbf186640e9f15c5272d2ec085436366ca60a5c7",
+    "type": "image/avif"
+  },
+  {
+    "path": "/git-cover-561.webp",
+    "key": "static/7895348da1d46a0da43ac77c4597f7a2d778197c9ebb2f09cfb4328e17935f27/git-cover-561.webp",
+    "size": 110316,
+    "sha256": "7895348da1d46a0da43ac77c4597f7a2d778197c9ebb2f09cfb4328e17935f27",
+    "type": "image/webp"
+  },
+  {
+    "path": "/git-cover-660.avif",
+    "key": "static/af5a8b9a9a01dea3cde2142a84e65a1a8a9725f4be0cf460c0f84e08a734473a/git-cover-660.avif",
+    "size": 133619,
+    "sha256": "af5a8b9a9a01dea3cde2142a84e65a1a8a9725f4be0cf460c0f84e08a734473a",
+    "type": "image/avif"
+  },
+  {
+    "path": "/git-cover-660.webp",
+    "key": "static/6776a3425cd6ee14b3fe34eb765bc43e7ab550be363b1a6a6164e8aa3c6c11a1/git-cover-660.webp",
+    "size": 148486,
+    "sha256": "6776a3425cd6ee14b3fe34eb765bc43e7ab550be363b1a6a6164e8aa3c6c11a1",
+    "type": "image/webp"
+  },
+  {
+    "path": "/git-cover-840.avif",
+    "key": "static/924eb8305d453930558d5d78631fe0263f28ea75dc6867eddf39be86c7398660/git-cover-840.avif",
+    "size": 200415,
+    "sha256": "924eb8305d453930558d5d78631fe0263f28ea75dc6867eddf39be86c7398660",
+    "type": "image/avif"
+  },
+  {
+    "path": "/git-cover-840.webp",
+    "key": "static/5849b378de7cabc25136196b42a76be44ddd86250db19107fcce1fa1df612b77/git-cover-840.webp",
+    "size": 224196,
+    "sha256": "5849b378de7cabc25136196b42a76be44ddd86250db19107fcce1fa1df612b77",
+    "type": "image/webp"
   }
 ]

@@ -1,6 +1,7 @@
 export const labels = {
   siteTitle: '에코익힘책',
   courseTitle: 'Go Git 集',
+  courseCoverAlt: 'Go Git 集 표지',
   outline: '목차',
   previous: '이전 페이지',
   next: '다음 페이지',

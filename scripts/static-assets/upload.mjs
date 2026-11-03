@@ -4,7 +4,9 @@ import { prove } from '../learn-pdf-ops/verify-files.mjs'
 import { checkedAssets, settings } from './manifest.mjs'
 
 const apply = process.argv.includes('--apply')
+const prefix = process.argv.find(a => a.startsWith('--path-prefix='))?.slice(14)
 for (const asset of checkedAssets()) {
+  if (prefix && !asset.path.startsWith(prefix)) continue
   if (process.argv.includes('--images-only') && !asset.type.startsWith('image/')) continue
   const file = `dist/learn${asset.path}`
   prove(readFileSync(file), asset.size, asset.sha256)
