@@ -44,10 +44,13 @@ jobs:
         run: NODE_PATH=course-site/node_modules node scripts/lint-markdown.cjs docs/lecture README.md
 
       - name: Run unit and integration tests
-        run: node --test learn-site/pdf.test.mjs scripts/learn/*.test.mjs learn-worker/api.test.mjs
+        run: node --test scripts/learn/*.test.mjs learn-worker/api.test.mjs
 
       - name: Build learn-site
         run: pnpm --dir course-site exec vitepress build ../learn-site
+
+      - name: Verify built learn-site artifacts
+        run: node --test learn-site/*.test.mjs
 
       - name: Generate D1 SQL artifact
         run: node scripts/sync-learn-d1.mjs
