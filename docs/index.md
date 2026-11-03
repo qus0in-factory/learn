@@ -9,7 +9,10 @@ import column from '../learn-site/.vitepress/landing-column.json'
 import '../learn-site/.vitepress/theme/landing-column.css'
 </script>
 
-<div class="landing-column" :style="{ '--landing-column-width': column.maxWidth }">
+<div class="landing-column" :style="{
+  '--landing-column-width': column.maxWidth,
+  '--landing-content-width': column.contentMaxWidth
+}">
   <LandingCover />
 
   <CourseList />
