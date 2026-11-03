@@ -8,17 +8,17 @@
 flowchart TD
     Client["클라이언트 브라우저"]
     CDN["Cloudflare Edge (echo.qus0in.dev / files.qus0in.dev)"]
+    Static["Cloudflare 정적 자산 (ASSETS / dist/learn)"]
     Worker["Cloudflare Worker (learn)"]
-    Assets["정적 사이트 에셋 (ASSETS / dist)"]
     D1["Cloudflare D1 (learn)"]
     R2["Cloudflare R2 (learn-files)"]
 
     Client -->|HTTPS 요청| CDN
-    CDN -->|정적 자산 요청| R2
-    CDN -->|웹페이지 및 API 요청| Worker
-    Worker -->|HTML / 정적 파일 서빙| Assets
+    CDN -->|HTML · /assets 등 정적 파일| Static
+    CDN -->|옛 주소 301 · /api/* · /v0.1.0/* PDF| Worker
+    CDN -->|폰트 · 표지 /static/*| R2
     Worker -->|카탈로그 · 퀴즈 조회| D1
-    Worker -->|PDF 문서 조회| R2
+    Worker -->|PDF 객체 조회| R2
 ```
 
 ## 주요 구성 요소
