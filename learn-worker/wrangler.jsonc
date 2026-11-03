@@ -19,6 +19,10 @@
   ],
   "routes": [
     {
+      "pattern": "echo.qus0in.dev",
+      "custom_domain": true
+    },
+    {
       "pattern": "learn.qus0in.dev",
       "custom_domain": true
     },

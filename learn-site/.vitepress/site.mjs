@@ -1,5 +1,6 @@
 export const site = {
-  title: '코딩익힘책',
+  title: '에코익힘책',
+  subtitle: 'AI & 코딩 익힘책',
   logo: '/favicon.svg',
   catchphrase: '날로 달라지는 세상, 익혀서 배우자!',
   updated: '최종 업데이트 : ',

@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 import { markdown } from './markdown.mjs'
-import { themeConfig, transformPageData } from './pdf.mjs'
+import { themeConfig } from './pdf.mjs'
+import { transformPageData } from './page-data.mjs'
 import { printHead } from './print.mjs'
 import { site } from './site.mjs'
 import { faviconHead } from './favicon.mjs'
