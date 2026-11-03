@@ -3,7 +3,11 @@
   "background": "#FFFFFF",
   "book": "#000000",
   "fire": "#B85C57",
-  "radius": 0.2,
+  "radius": 0.4,
+  "header": {
+    "file": "header-logo.png",
+    "size": 192
+  },
   "sizes": {
     "favicon-96x96.png": 96,
     "apple-touch-icon.png": 180,
