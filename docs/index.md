@@ -1,10 +1,12 @@
 ---
 layout: doc
-title: 강의 과정
+title: 자료 목록
 ---
 
-# 강의 과정
+<script setup>
+import { site } from '../learn-site/.vitepress/site.mjs'
+</script>
 
-현재 공개된 과정입니다. 과정을 선택하면 차시별 강의와 부록, 보충 자료로 이동합니다.
+<h1>{{ site.catalog }}</h1>
 
 <CourseList />

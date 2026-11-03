@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import { themeConfig, transformPageData, revision } from './.vitepress/pdf.mjs'
+import { themeConfig, transformPageData } from './.vitepress/pdf.mjs'
 import { pdfUrl } from './.vitepress/pdf-url.mjs'
 
 test('only numbered lecture pages receive matching PDF data', () => {
@@ -14,9 +14,5 @@ test('only numbered lecture pages receive matching PDF data', () => {
     transformPageData(page)
     assert.equal(page.frontmatter.pdf, undefined)
   }
-  assert.equal(themeConfig.nav[0].link, '/')
-  assert.equal(themeConfig.nav[1].link, '/git/')
-  assert.equal(themeConfig.nav[2].text, 'PDF 다운로드')
-  assert.equal(themeConfig.nav[2].link, pdfUrl('01-environment.pdf'))
-  assert.ok(themeConfig.nav[2].link.endsWith(`?revision=${revision}`))
+  assert.deepEqual(themeConfig.nav, [])
 })

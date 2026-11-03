@@ -1,15 +1,12 @@
 import { sidebar } from './nav.mjs'
-import { courses } from './courses.mjs'
+import { site } from './site.mjs'
 import { pdfUrl, revision } from './pdf-url.mjs'
 
 export { revision }
 
 export const themeConfig = {
-  nav: [
-    { text: '과정 목록', link: '/' },
-    ...courses.map((course) => ({ text: course.navTitle, link: course.link })),
-    { text: 'PDF 다운로드', link: pdfUrl('01-environment.pdf') },
-  ],
+  logo: site.logo,
+  nav: [],
   sidebar,
 }
 
