@@ -13,6 +13,6 @@ for (const f of docs) {
   if (gc !== sc) throw new Error(`${f}: cb gh=${gc} site=${sc}`);
   if (sc > 0 && cnt(site, /disabled/g) < sc) throw new Error(`${f}: cb not disabled`);
   if (cnt(gh, /<table/g) !== cnt(site, /<table/g)) throw new Error(`${f}: table mismatch`);
-  if (site.includes('**')) throw new Error(`${f}: literal **`);
+  if (site.includes('**') || gh.includes('**')) throw new Error(`${f}: literal **`);
 }
 console.log('GFM comparison test passed');
