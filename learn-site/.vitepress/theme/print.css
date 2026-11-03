@@ -2,7 +2,7 @@
   :root {
     --print-bg: white;
     --print-fg: black;
-    color-scheme: light;
+    color-scheme: light !important;
   }
   :root, :root body, :root body * {
     color: var(--print-fg) !important;
