@@ -3,7 +3,7 @@
   "background": "#FFFFFF",
   "book": "#000000",
   "fire": "#B85C57",
-  "radius": 0.4,
+  "radius": 0.24,
   "header": {
     "file": "header-logo.png",
     "size": 192
