@@ -9,6 +9,8 @@
 .course-card a {
   display: grid;
   gap: 8px;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
   padding: 20px;
   border: 1px solid var(--vp-c-divider);
   border-radius: 12px;
@@ -19,3 +21,10 @@
 .course-card strong { font-size: 1.15rem; }
 .course-card span { color: var(--vp-c-text-2); }
 .course-card small { color: var(--vp-c-text-3); }
+.course-card-text { display: grid; gap: 8px; }
+.vp-doc .card-thumbnail img {
+  display: block;
+  width: var(--card-thumb-width);
+  height: auto;
+  border-radius: var(--card-thumb-radius);
+}
