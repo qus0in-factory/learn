@@ -9,3 +9,6 @@
   text-decoration: none;
 }
 .share-actions button:disabled { opacity: .55; cursor: not-allowed; }
+.share-icon { display: inline-flex; vertical-align: middle; }
+.share-icon svg { width: 20px; height: 20px; color: currentColor; }
+.share-icon.simple svg { fill: currentColor; }

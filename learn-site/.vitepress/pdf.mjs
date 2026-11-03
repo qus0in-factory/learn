@@ -2,12 +2,14 @@ import { sidebar } from './nav.mjs'
 import { site } from './site.mjs'
 import { pdfUrl, revision } from './pdf-url.mjs'
 import { labels } from './labels.mjs'
+import { courseLessons } from './course-data.mjs'
 
 export { revision }
 
 export const themeConfig = {
   logo: site.logo,
   nav: [],
+  courseLessons,
   outline: { label: labels.outline },
   docFooter: { prev: labels.previous, next: labels.next },
   sidebarMenuLabel: labels.menu,

@@ -1,5 +1,3 @@
-.vp-doc table.course-contents { width: 100%; display: table; table-layout: auto; }
-.course-contents th:first-child, .course-contents td:first-child {
-  width: 1%;
-  white-space: nowrap;
-}
+.course-table { max-width: 100%; overflow-x: auto; }
+.vp-doc table.course-contents { width: 100%; display: table; min-width: 42rem; }
+.course-contents th, .course-contents td:not(:nth-child(2)) { white-space: nowrap; }
