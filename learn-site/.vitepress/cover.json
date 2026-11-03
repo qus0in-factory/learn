@@ -1,0 +1,9 @@
+{
+  "source": "assets/cover/source.png",
+  "src": "/cover.webp",
+  "alt": "에코익힘책 표지",
+  "width": 540,
+  "height": 720,
+  "displayWidth": "240px",
+  "quality": 85
+}
