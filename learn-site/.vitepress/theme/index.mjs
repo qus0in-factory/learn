@@ -5,6 +5,7 @@ import CourseHeader from './CourseHeader.vue'
 import CourseContents from './CourseContents.vue'
 import './content-links.css'
 import './mermaid-theme.css'
+import './print.css'
 
 export default {
   extends: DefaultTheme,

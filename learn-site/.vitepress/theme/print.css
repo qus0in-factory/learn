@@ -1,0 +1,29 @@
+@media print {
+  :root {
+    --print-bg: white;
+    --print-fg: black;
+    color-scheme: light;
+  }
+  :root body, :root body * {
+    color: var(--print-fg) !important;
+    background-color: var(--print-bg) !important;
+    transition: none !important;
+  }
+  .VPNav, .VPLocalNav, .VPSidebar, .aside, .VPSkipLink,
+  .course-breadcrumb, .share-course, .pdf-download, .site-footer,
+  .VPDocFooter, .header-anchor, button,
+  .course-contents :is(th, td):nth-child(n+3) { display: none !important; }
+  .VPContent, .VPDoc { margin: 0 !important; padding: 0 !important; }
+  .VPDoc .content { max-width: none !important; width: 100% !important; }
+  .vp-doc a { text-decoration: underline !important; }
+  .mermaid-diagram {
+    --pele-bg: var(--print-bg);
+    --pele-surface: var(--print-bg);
+    --pele-surface-alt: var(--print-bg);
+    --pele-fg: var(--print-fg);
+    --pele-muted: var(--print-fg);
+    --pele-line: var(--print-fg);
+    --pele-border: var(--print-fg);
+    --pele-accent: var(--print-fg);
+  }
+}
