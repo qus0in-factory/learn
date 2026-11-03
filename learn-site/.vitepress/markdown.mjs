@@ -2,6 +2,7 @@ import { render } from 'pele';
 import { configureMarkdown } from '../../scripts/learn-pdf/markdown-shared.mjs';
 import { displayMarkdown, displayText } from './display-text.mjs';
 import { labels } from './labels.mjs';
+import { imageRequest } from './image-request.mjs';
 
 export const markdown = {
   codeCopyButtonTitle: labels.copyCode,
@@ -9,7 +10,7 @@ export const markdown = {
     configureMarkdown(md, {
       mermaid: c => `<div class="mermaid-diagram">${render(displayText(c)).svg}</div>\n`
     });
-    displayMarkdown(md);
+    displayMarkdown(md); imageRequest(md);
     const link = md.renderer.rules.link_open;
     md.renderer.rules.link_open = (tokens, i, options, env, self) => {
       const token = tokens[i];
