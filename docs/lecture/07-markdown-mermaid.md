@@ -113,7 +113,7 @@ Mermaid 다이어그램에 pull 흐름 화살표 추가
 | 링크가 열리지 않음 | GitHub Pages URL 오타 | `계정이름.github.io/portfolio-web/` 형식으로 다시 복사한다 |
 | push가 거절됨 | 원격에 없는 커밋이 있음 | `git pull origin main` 후 다시 push 한다 |
 
-## 안전 주의
+## 정보 누출 방지
 
 - README에 비밀 값, 토큰, 비밀번호를 적지 않는다.
 - 공개 저장소이므로 배포 주소와 소개 문구만 노출한다.

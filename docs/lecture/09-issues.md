@@ -80,7 +80,7 @@ Label과 Milestone 차이 설명
 | Milestone이 보이지 않음 | 메뉴 위치를 찾지 못함 | 저장소 `Issues` 탭의 `Milestones` 메뉴를 다시 확인한다 |
 | Label이 적용되지 않음 | Label 미생성 | `Labels` 메뉴에서 먼저 Label을 만든다 |
 
-## 안전 주의
+## 정보 누출 방지
 
 - Issue와 PR 본문에 비밀 값, 토큰, 비밀번호를 적지 않는다.
 - `gh`와 ChatGPT-GitHub 연동은 선택 심화이며 필수 설치 대상이 아니다.

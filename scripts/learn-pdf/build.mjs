@@ -8,7 +8,7 @@ import { provenance } from './provenance.mjs';
 import { renderer } from './bundle.mjs';
 import { checkRevision } from './revision-check.mjs';
 import { seal } from './artifact.mjs';
-checkRevision();
+checkRevision(true);
 await mkdir(output, { recursive: true });
 const bundle = await renderer();
 const browser = await launch();

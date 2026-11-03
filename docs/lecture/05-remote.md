@@ -113,7 +113,7 @@ clone과 fork 차이 초보자 눈높이 비교 설명
 | `error: failed to push some refs ... (non-fast-forward)` | GitHub에서 빈 저장소를 만들지 않고 README 등을 함께 생성함 | GitHub 저장소를 삭제 후 체크박스를 모두 풀고 빈 저장소로 다시 만들거나 강사에게 문의한다. |
 | 인증 실패 또는 403 Forbidden 오류 | 이전 다른 계정 자격 증명이 남아있거나 토큰 만료 | Windows 자격 증명 관리자에서 이전 계정을 삭제하고 재인증한다. 상세 절차는 [부록 1](appendix/01-authentication.md)과 [부록 5](appendix/05-os-differences.md)를 참조한다. |
 
-## 안전 주의
+## 정보 누출 방지
 
 - Personal Access Token이나 비밀번호를 절대 소스 코드 파일이나 공개 채팅, 이슈에 남기지 않습니다.
 - 원격 저장소의 이력을 강제로 덮어쓰는 `git push --force` (또는 `-f`) 명령은 팀원의 작업을 파괴할 수 있으므로 절대 실행하지 않습니다.
