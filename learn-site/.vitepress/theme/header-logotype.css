@@ -1,6 +1,6 @@
 /* Header logotype: outline of the site name drawn in currentColor; the text stays in the DOM for assistive tech. */
 :root {
-  --header-logotype-height: 26px;
+  --header-logotype-height: 23.4px;
 }
 
 .VPNavBarTitle .title {
