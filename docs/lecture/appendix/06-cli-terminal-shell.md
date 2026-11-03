@@ -40,7 +40,7 @@ subtitle: "CLI와 터미널, 셸의 관계와 Git이 실행되는 흐름을 이�
 `git status`를 입력했을 때 일어나는 일은 아래와 같다. Git은 터미널이나 셸 안의 기능이 아니라 별도로 설치된 프로그램이며, 셸이 찾아서 실행한다.
 
 ```mermaid
-flowchart LR
+flowchart TB
   A["사용자 입력: git status"] --> B["터미널(창)"]
   B --> C["셸(Bash·zsh)"]
   C --> D["git 프로그램"]
