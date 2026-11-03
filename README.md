@@ -16,14 +16,23 @@ flowchart LR
 ## 연결 주소
 
 - 저장소: https://github.com/qus0in-factory/learn
-- 강의 목차: https://github.com/qus0in-factory/learn/blob/main/docs/lecture/index.md
+- 강의 목차: https://github.com/qus0in-factory/learn/blob/dev/docs/lecture/index.md
 - Wiki: https://github.com/qus0in-factory/learn/wiki
 - Issue #1: https://github.com/qus0in-factory/learn/issues/1
 - Issue #3: https://github.com/qus0in-factory/learn/issues/3
 - PR #2: https://github.com/qus0in-factory/learn/pull/2
 - 현재 서비스: https://hdai.qus0in.workers.dev/git/
 - 강의 사이트: https://learn.qus0in.dev
-- 파일 제공: https://files.qus0in.dev/v0.1.0/
-- 12주제 PDF: https://files.qus0in.dev/v0.1.0/01-environment.pdf
-- 기존 슬라이드: 게시하지 않음
-- v0.1.0: 배포 asset prefix, tag/release 미생성
+- 12주제 PDF:
+  - https://files.qus0in.dev/v0.1.0/01-environment.pdf
+  - https://files.qus0in.dev/v0.1.0/02-local-repository.pdf
+  - https://files.qus0in.dev/v0.1.0/03-commit-history.pdf
+  - https://files.qus0in.dev/v0.1.0/04-amend-ignore.pdf
+  - https://files.qus0in.dev/v0.1.0/05-remote.pdf
+  - https://files.qus0in.dev/v0.1.0/06-pages.pdf
+  - https://files.qus0in.dev/v0.1.0/07-markdown-mermaid.pdf
+  - https://files.qus0in.dev/v0.1.0/08-profile-records.pdf
+  - https://files.qus0in.dev/v0.1.0/09-issues.pdf
+  - https://files.qus0in.dev/v0.1.0/10-branches-tags.pdf
+  - https://files.qus0in.dev/v0.1.0/11-merge-conflicts.pdf
+  - https://files.qus0in.dev/v0.1.0/12-pull-request.pdf

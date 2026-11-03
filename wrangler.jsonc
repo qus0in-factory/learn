@@ -4,7 +4,7 @@
   "main": "src/worker.js",
   "compatibility_date": "2026-11-02",
   "assets": {
-    "directory": "./dist",
+    "directory": "./dist/hdai",
     "binding": "ASSETS",
     "not_found_handling": "single-page-application"
   }

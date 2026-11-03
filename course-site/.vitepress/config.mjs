@@ -5,7 +5,7 @@ export default defineConfig({
   title: '수업 안내',
   lang: 'ko-KR',
   base: '/git/docs/',
-  outDir: '../dist/git/docs',
+  outDir: '../dist/hdai/git/docs',
   markdown: {
     config(md) {
       const fence = md.renderer.rules.fence
