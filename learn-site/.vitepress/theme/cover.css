@@ -14,7 +14,7 @@
   .landing-cover { margin-bottom: var(--cover-mobile-gap); }
   .vp-doc .landing-cover img { width: min(100%, var(--cover-mobile-width)); }
 }
-.visually-hidden {
+.landing-cover .visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
