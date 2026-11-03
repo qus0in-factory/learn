@@ -1,13 +1,15 @@
 import { mkdir, readdir, writeFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { build } from 'esbuild';
-import { chromium } from 'playwright';
+import { launch } from './runtime.mjs';
 import { here, root, output } from './paths.mjs';
 import { exportLesson } from './export.mjs';
+import { provenance } from './provenance.mjs';
 await mkdir(output, { recursive: true });
 const bundle = resolve(output, 'renderer.js');
 await build({ entryPoints: [resolve(here, 'browser.js')], bundle: true, outfile: bundle });
-const browser = await chromium.launch({ channel: process.env.PDF_BROWSER || 'chrome' });
+const browser = await launch();
+provenance(browser);
 try {
   const dir = resolve(root, 'docs/lecture');
   const files = (await readdir(dir)).filter(n => /^\d\d-.*\.md$/.test(n)).sort();
