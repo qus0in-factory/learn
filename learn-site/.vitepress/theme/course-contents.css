@@ -1,3 +1,12 @@
 .course-table { max-width: 100%; overflow-x: auto; }
-.vp-doc table.course-contents { width: 100%; display: table; min-width: 42rem; }
+.vp-doc table.course-contents { width: 100%; display: table; min-width: 28rem; }
 .course-contents th, .course-contents td:not(:nth-child(2)) { white-space: nowrap; }
+.course-contents th:nth-child(n+3), .course-contents td:nth-child(n+3) { text-align: center; }
+.course-contents td:nth-child(n+3) a {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: var(--share-button-size); height: var(--share-button-size); padding: var(--share-padding);
+  box-sizing: border-box;
+}
+.course-contents td:nth-child(n+3) svg {
+  width: var(--share-icon-size); height: var(--share-icon-size); color: currentColor;
+}

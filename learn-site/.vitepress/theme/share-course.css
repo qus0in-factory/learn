@@ -1,8 +1,5 @@
 .share-course {
-  --share-button-size: 42px;
-  --share-icon-size: 24px;
   --share-x-scale: .82;
-  --share-padding: 8px;
   display: flex; flex-direction: column; gap: 16px; align-items: flex-start; margin: 20px 0;
 }
 .share-course img { width: 120px; height: 120px; }
