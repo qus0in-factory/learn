@@ -6,7 +6,7 @@ export function displayText(text) {
 }
 
 export function displayTitle(text) {
-  return displayText(text.replace(/^\d+차시\.\s*/, ''))
+  return displayText(text.replace(/^(?:\d+차시\.|부록\s+\d+\.)\s*/, ''))
 }
 
 export function displayMarkdown(md) {

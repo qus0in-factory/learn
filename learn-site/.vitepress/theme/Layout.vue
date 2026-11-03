@@ -6,7 +6,6 @@ import { site } from '../site.mjs'
 import CourseBreadcrumb from './CourseBreadcrumb.vue'
 import StepIntro from './StepIntro.vue'
 import PageUpdated from './PageUpdated.vue'
-import { appendixPrefix } from '../appendix-prefix.mjs'
 import './task-list.css'
 import './header-logo.css'
 import './header-logotype.css'
@@ -15,7 +14,7 @@ const { frontmatter, page } = useData()
 </script>
 
 <template>
-  <DefaultTheme.Layout :style="{ '--vp-nav-logo-height': site.logoHeight, '--appendix-prefix': appendixPrefix(page.relativePath) }">
+  <DefaultTheme.Layout :style="{ '--vp-nav-logo-height': site.logoHeight }">
     <template #layout-bottom><SiteFooter /></template>
     <template #doc-footer-before>
       <PageUpdated />
