@@ -26,6 +26,7 @@ export const labels = {
   step: 'Step',
   stepDigits: 2,
   stepPad: '0',
+  learningGoals: '학습 목표',
   pdfColumn: 'PDF 슬라이드',
   pdfDownload: 'PDF 다운로드',
   gistColumn: '예제 묶음',

@@ -1,0 +1,4 @@
+.share-icon { display: inline-flex; vertical-align: middle; }
+.share-icon svg { width: var(--share-icon-size); height: var(--share-icon-size); color: currentColor; }
+.share-icon.x svg { fill: currentColor; transform: scale(var(--share-x-scale)); }
+.share-icon.kakao svg { shape-rendering: geometricPrecision; }

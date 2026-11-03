@@ -1,4 +1,5 @@
 import { labels } from './labels.mjs'
+import { markdownLabels } from './markdown-labels.mjs'
 
 export function displayText(text) {
   return text.replace(/(\d+)차시/g, `$1${labels.numberedLesson}`).replace(/차시/g, labels.lesson)
@@ -9,6 +10,7 @@ export function displayTitle(text) {
 }
 
 export function displayMarkdown(md) {
+  markdownLabels(md)
   md.core.ruler.after('inline', 'display-lesson-text', (state) => {
     for (let i = 0; i < state.tokens.length; i++) {
       const token = state.tokens[i]
