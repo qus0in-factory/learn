@@ -9,7 +9,7 @@
 
 ## 빌드와 배포
 
-저장소 루트에서 각 프로젝트 빌드를 실행합니다.
+저장소 루트에서 각 프로젝트 빌드를 실행합니다. 빌드 전 구 버전 잔여 디렉터리(`dist/git`)가 없도록 clean build를 권장하며, assets root는 `./dist/hdai`만 사용합니다.
 
 ```sh
 pnpm --dir slides build
