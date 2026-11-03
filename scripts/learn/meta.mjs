@@ -1,10 +1,10 @@
-export function courseMeta(root) {
-  const version = root.match(/(v[\d.]+)\/$/)?.[1]
-  if (!version) throw new Error(`version not found in pdf root: ${root}`)
+import { pdfConfig } from '../../learn-site/.vitepress/pdf-url.mjs'
+
+export function courseMeta() {
   return {
     title: 'Git과 웹 배포 강의',
-    version,
-    root,
+    version: pdfConfig.version,
+    revision: pdfConfig.revision,
     syncedAt: new Date().toISOString(),
   }
 }

@@ -5,8 +5,7 @@ import { LECTURE_DIR } from './paths.mjs'
 const TITLE = /^# \d+차시\. (.+)$/
 const SCHEDULE = /^Day (\d) · (.+)$/
 
-export async function parseLecture(file) {
-  const text = await readFile(join(LECTURE_DIR, file), 'utf8')
+export function parseLectureText(text, file) {
   const lines = text.split('\n')
   const title = lines.map((line) => line.match(TITLE)).find(Boolean)
   const schedule = lines.map((line) => line.trim().match(SCHEDULE)).find(Boolean)
@@ -18,6 +17,10 @@ export async function parseLecture(file) {
     title: title[1],
     schedule: schedule[2],
   }
+}
+
+export async function parseLecture(file) {
+  return parseLectureText(await readFile(join(LECTURE_DIR, file), 'utf8'), file)
 }
 
 export function parseLectures(files) {

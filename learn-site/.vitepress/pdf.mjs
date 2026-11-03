@@ -1,6 +1,6 @@
-const root = 'https://files.qus0in.dev/v0.1.0/'
-export const revision = '8dea329'
-const pdfUrl = file => `${root}${file}?revision=${revision}`
+import { pdfUrl, revision } from './pdf-url.mjs'
+
+export { revision }
 
 export const themeConfig = {
   nav: [

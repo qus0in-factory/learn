@@ -13,3 +13,5 @@ Node.js/npm, Python 3, Chrome, Poppler(`pdftotext`, `pdftoppm`)가 필요하다.
 내용 보존·DOM 경계·넘침 거부 회귀 검사 후 PDF 전 페이지의 16:9 크기,
 페이지수, 추출 텍스트와 단어 좌표를 검사한다. PNG는 표지·코드·Mermaid·최대 텍스트 장을 생성한다.
 PNG 육안 확인은 별도로 수행하며, PDF 크기는 960×540pt(1280×720 CSS px)다.
+
+PDF를 다시 만들면 `learn-site/.vitepress/pdf.json`의 `revision`을 갱신하고, README·learn-site·D1이 같은 URL을 쓰는지 테스트한다.

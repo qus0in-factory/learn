@@ -20,6 +20,7 @@ export function parseQuiz(text) {
       if (match && match[1] !== '번호') answers.set(Number(match[1]), match)
     }
   }
+  if (!questions.length) throw Error('empty quiz')
   return questions.map((question) => {
     const row = answers.get(question.position)
     if (!row) throw new Error(`missing quiz answer: ${question.position}`)
