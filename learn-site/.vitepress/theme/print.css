@@ -4,9 +4,10 @@
     --print-fg: black;
     color-scheme: light;
   }
-  :root body, :root body * {
+  :root, :root body, :root body * {
     color: var(--print-fg) !important;
     background-color: var(--print-bg) !important;
+    border-color: var(--print-fg) !important;
     transition: none !important;
   }
   .VPNav, .VPLocalNav, .VPSidebar, .aside, .VPSkipLink,
@@ -14,7 +15,6 @@
   .VPDocFooter, .header-anchor, button,
   .course-contents :is(th, td):nth-child(n+3) { display: none !important; }
   .VPContent, .VPDoc { margin: 0 !important; padding: 0 !important; }
-  .VPDoc .content { max-width: none !important; width: 100% !important; }
   .vp-doc a { text-decoration: underline !important; }
   .mermaid-diagram {
     --pele-bg: var(--print-bg);
