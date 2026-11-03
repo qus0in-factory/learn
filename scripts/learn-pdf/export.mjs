@@ -7,7 +7,7 @@ import { inspect } from './inspect.mjs';
 import { auditFonts } from './font-audit.mjs';
 export async function exportLesson(browser, file, bundle) {
   const text = await readFile(file, 'utf8');
-  const title = text.split('\n')[0].replace(/^# (\d+)차시\./, '$1.');
+  const title = text.match(/^# (.+)$/m)[1].replace(/^(\d+)차시\./, '$1.');
   const page = await createPage(browser, bundle, title);
   const name = file.split('/').at(-1).replace('.md', '');
   const result = await page.evaluate(html => window.prepare(html),

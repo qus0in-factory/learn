@@ -1,11 +1,11 @@
 <script setup>
 import { useData } from 'vitepress'
 import { labels } from '../labels.mjs'
+import { stepLabel as step } from '../display-text.mjs'
 import './course-contents.css'
 import CourseResourceCells from './CourseResourceCells.vue'
 const { theme } = useData()
 const lessons = theme.value.courseLessons
-const step = (index) => `${labels.step} ${String(index + 1).padStart(labels.stepDigits, labels.stepPad)}`
 </script>
 
 <template>

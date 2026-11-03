@@ -1,5 +1,6 @@
 import { readdirSync, readFileSync } from 'node:fs'
 import { displayTitle } from './display-text.mjs'
+import { labels } from './labels.mjs'
 
 const DIR = new URL('../../docs/lecture/', import.meta.url)
 const BASE = '/git/'
@@ -14,7 +15,7 @@ function items(dir, pattern) {
     .filter((file) => pattern.test(file))
     .sort()
     .map((file) => ({
-      text: displayTitle(title(`${dir}${file}`)),
+      text: `${dir === 'appendix/' ? `${labels.appendix} ${Number(file.slice(0, 2))}. ` : ''}${displayTitle(title(`${dir}${file}`))}`,
       link: `${BASE}${dir}${file.replace(/\.md$/, '')}`,
     }))
 }

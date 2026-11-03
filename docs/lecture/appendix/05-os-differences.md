@@ -1,4 +1,8 @@
-# 부록 5. macOS와 Windows 사용 차이
+---
+subtitle: "macOS와 Windows의 사용 차이를 확인한다."
+---
+
+# macOS·Windows
 
 관련 차시: [1차시 환경 점검](../01-environment.md) · [5차시 GitHub 원격 연동](../05-remote.md)
 

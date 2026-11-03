@@ -1,10 +1,14 @@
-# 12차시. Pull Request와 협업
+---
+subtitle: "Pull Request로 협업한다."
+day: 2
+schedule: "15:00–15:45 (수업 45분) / 15:45–16:00 (휴식 및 피날레 15분)"
+---
 
-Day 2 · 15:00–15:45 (수업 45분) / 15:45–16:00 (휴식 및 피날레 15분)  
-저장소: `portfolio-web`  
-선수: 11차시 병합과 충돌 해결 완료
+# Pull Request
 
-## 이 차시에서 하는 일
+저장소: `portfolio-web`
+
+## 학습 목표
 
 - 기능 브랜치를 원격에 push 한다.
 - GitHub 웹에서 Pull Request를 만든다.

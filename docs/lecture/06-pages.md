@@ -1,10 +1,14 @@
-# 6차시. 전 세계에 내 사이트 공개하기: GitHub Pages 배포와 배포 갱신
+---
+subtitle: "GitHub Pages로 웹사이트를 배포한다."
+day: 1
+schedule: "15:00–15:45 (수업 45분) / 15:45–16:00 (휴식 15분)"
+---
 
-Day 1 · 15:00–15:45 (수업 45분) / 15:45–16:00 (휴식 15분)  
-저장소: `portfolio-web`  
-선수 학습: 5차시 GitHub 원격 연동 및 첫 푸시 완료
+# GitHub Pages·push
 
-## 이 차시에서 하는 일
+저장소: `portfolio-web`
+
+## 학습 목표
 
 - GitHub Pages 호스팅 서비스를 활성화하여 내 포트폴리오 웹사이트를 무료 공개 주소로 배포한다.
 - 전 세계 누구나 접속할 수 있는 라이브 사이트 URL(`https://계정이름.github.io/portfolio-web/`)을 확인한다.

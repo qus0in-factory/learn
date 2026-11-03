@@ -1,4 +1,8 @@
-# 부록 3. 웹 보조 도구: 눈누·Bulma·Coolors
+---
+subtitle: "웹 보조 도구를 살펴본다."
+---
+
+# 눈누·Bulma·Coolors
 
 관련 차시: [6차시 Pages 배포](../06-pages.md) · [7차시 Markdown과 Mermaid](../07-markdown-mermaid.md)
 

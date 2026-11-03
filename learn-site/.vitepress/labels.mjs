@@ -24,6 +24,7 @@ export const labels = {
   mobileNavigation: '모바일 메뉴',
   extraNavigation: '추가 메뉴',
   step: 'Step',
+  appendix: '부록',
   stepDigits: 2,
   stepPad: '0',
   learningGoals: '학습 목표',

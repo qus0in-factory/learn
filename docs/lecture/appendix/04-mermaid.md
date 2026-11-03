@@ -1,4 +1,8 @@
-# 부록 4. Mermaid 시각화
+---
+subtitle: "Mermaid로 다이어그램을 작성한다."
+---
+
+# Mermaid
 
 관련 차시: [7차시 Markdown과 Mermaid](../07-markdown-mermaid.md) · [11차시 병합과 충돌](../11-merge-conflicts.md)
 

@@ -1,10 +1,14 @@
-# 7차시. Markdown과 Mermaid
+---
+subtitle: "Markdown과 Mermaid로 문서를 작성한다."
+day: 2
+schedule: "09:00–09:45 (수업 45분) / 09:45–10:00 (휴식 15분)"
+---
 
-Day 2 · 09:00–09:45 (수업 45분) / 09:45–10:00 (휴식 15분)  
-저장소: `portfolio-web`  
-선수: 6차시 Pages 배포 완료
+# Markdown·Mermaid
 
-## 이 차시에서 하는 일
+저장소: `portfolio-web`
+
+## 학습 목표
 
 - 프로젝트 얼굴인 `README.md`를 Markdown으로 작성한다.
 - Mermaid 코드 블록으로 Git 흐름을 시각화한다.
@@ -19,7 +23,7 @@ Day 2 · 09:00–09:45 (수업 45분) / 09:45–10:00 (휴식 15분)
 ## 핵심 개념
 
 - Markdown은 제목, 목록, 링크, 표, 코드 블록, 체크리스트를 표현한다.
-- Mermaid는 ` ```mermaid ` 코드 블록 안에 텍스트로 다이어그램을 작성한다.
+- Mermaid는 `` ```mermaid `` 코드 블록 안에 텍스트로 다이어그램을 작성한다.
 - `flowchart LR`은 왼쪽에서 오른쪽으로 흐르는 순서도를 만든다.
 - 노드는 `[이름]`, 화살표는 `-->`, 라벨은 `-->|텍스트|`로 표현한다.
 - VS Code 미리보기와 GitHub 렌더링 결과가 같아야 한다.
@@ -108,7 +112,7 @@ Mermaid 다이어그램에 pull 흐름 화살표 추가
 
 | 증상 | 원인 | 대응 |
 | --- | --- | --- |
-| Mermaid가 렌더링되지 않음 | 코드 블록 언어가 `mermaid`가 아님 | 첫 줄을 ` ```mermaid `로 고친다 |
+| Mermaid가 렌더링되지 않음 | 코드 블록 언어가 `mermaid`가 아님 | 첫 줄을 `` ```mermaid ``로 고친다 |
 | 표가 깨짐 | 파이프(`\|`) 개수 불일치 | 헤더와 구분선의 열 개수를 맞춘다 |
 | 링크가 열리지 않음 | GitHub Pages URL 오타 | `계정이름.github.io/portfolio-web/` 형식으로 다시 복사한다 |
 | push가 거절됨 | 원격에 없는 커밋이 있음 | `git pull origin main` 후 다시 push 한다 |

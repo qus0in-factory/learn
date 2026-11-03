@@ -1,10 +1,14 @@
-# 9차시. Issue, Label, Milestone
+---
+subtitle: "이슈와 레이블, 마일스톤으로 작업을 관리한다."
+day: 2
+schedule: "11:00–11:45 (수업 45분) / 11:45–12:00 (휴식 15분)"
+---
 
-Day 2 · 11:00–11:45 (수업 45분) / 11:45–12:00 (휴식 15분)  
-저장소: `portfolio-web`  
-선수: 8차시 프로필과 기록
+# Issue·Label·Milestone
 
-## 이 차시에서 하는 일
+저장소: `portfolio-web`
+
+## 학습 목표
 
 - GitHub Issue로 작업 요청서를 등록한다.
 - Label로 이슈 종류를 분류한다.

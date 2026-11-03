@@ -1,0 +1,3 @@
+.step-header ~ main .vp-doc > div > h1:first-child { display: none; }
+.vp-doc[class*="_git_appendix_"] > div > h1:first-child::before { content: var(--appendix-prefix); }
+.step-header__step { margin: 0 0 4px; color: var(--vp-c-brand-1); font-size: 14px; font-weight: 600; }
