@@ -7,7 +7,7 @@ export function checkBuild() {
   if (!base) throw Error('Set CDN base for production deployment')
   const root = 'dist/learn'
   const css = readdirSync(`${root}/assets`).filter((p) => p.endsWith('.css'))
-  const text = ['index.html', ...css.map((p) => `assets/${p}`)]
+  const text = ['index.html', 'git/index.html', ...css.map((p) => `assets/${p}`)]
     .map((p) => readFileSync(`${root}/${p}`, 'utf8')).join('\n')
   for (const asset of checkedAssets()) {
     if (!text.includes(cdnUrl(asset.path, base))) throw Error(`Missing CDN URL: ${asset.path}`)

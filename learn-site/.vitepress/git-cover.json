@@ -1,0 +1,5 @@
+{
+  "source": "assets/cover/git-source.png",
+  "stem": "git-cover",
+  "style": { "margin-top": "var(--cover-gap)" }
+}
