@@ -1,7 +1,7 @@
 <script setup>
 import { useData } from 'vitepress'
 import { labels } from '../labels.mjs'
-import { stepLabel as step } from '../display-text.mjs'
+import { stepLabel as step } from '../step-label.mjs'
 import './course-contents.css'
 import CourseResourceCells from './CourseResourceCells.vue'
 const { theme } = useData()

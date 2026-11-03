@@ -17,7 +17,7 @@ export const themeConfig = {
   darkModeSwitchLabel: labels.appearance,
   darkModeSwitchTitle: labels.dark,
   lightModeSwitchTitle: labels.light,
-  lastUpdated: { text: labels.updated },
+  lastUpdated: false,
   skipToContentLabel: labels.skip,
   langMenuLabel: labels.language,
   sidebar,
