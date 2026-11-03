@@ -1,6 +1,5 @@
 [
   { "id": "vscode", "name": "VS Code", "url": "https://code.visualstudio.com/download" },
-  { "id": "opencode", "name": "OpenCode", "url": "https://opencode.ai/download" },
-  { "id": "git", "name": "Git", "url": "https://git-scm.com/downloads" },
-  { "id": "gitWindows", "name": "Git for Windows (Git Bash 포함)", "url": "https://git-scm.com/install/windows" }
+  { "id": "opencode", "name": "OpenCode", "url": "https://opencode.ai/v2/docs/" },
+  { "id": "gitWindows", "name": "Git for Windows (Git Bash 포함, Windows 전용)", "url": "https://git-scm.com/install/windows" }
 ]

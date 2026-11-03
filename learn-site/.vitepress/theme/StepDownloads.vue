@@ -16,5 +16,9 @@ const items = (frontmatter.value.downloads || []).map((id) => links.find((link) 
         <a :href="item.url" target="_blank" rel="noopener noreferrer">{{ item.name }}</a>
       </li>
     </ul>
+    <template v-if="items.some(item => item.id === 'gitWindows')">
+      <p>{{ stepLabels.installOrder }}</p>
+      <p>{{ stepLabels.macGit }}</p>
+    </template>
   </section>
 </template>

@@ -1,7 +1,7 @@
 ---
 subtitle: "버전 관리가 필요한 이유와 Git의 세 영역을 이해한다."
 tags: ["VCS", "SCM", "작업 공간", "스테이징 영역", "로컬 저장소"]
-downloads: ["vscode", "opencode", "git", "gitWindows"]
+downloads: ["vscode", "gitWindows", "opencode"]
 day: 1
 schedule: "09:00–09:45 (수업 45분) / 09:45–10:00 (휴식 15분)"
 ---
@@ -93,7 +93,7 @@ pwd
 
 | 증상 | 원인 | 대응 |
 | --- | --- | --- |
-| `git: command not found` 에러 | Git이 설치되지 않았거나 환경 변수(PATH) 미등록 | Git 공식 웹사이트에서 재설치하거나 환경 변수를 점검한다. OS별 설정은 [부록 5. 운영체제별 차이](appendix/05-os-differences.md)를 참조한다. |
+| `git: command not found` 에러 | Git 미설치 또는 환경 변수(PATH) 미등록 | 이 페이지 앞의 OS별 설치 안내를 확인하고 PATH를 점검한다. 터미널 차이는 [부록 5. 운영체제별 차이](appendix/05-os-differences.md)를 참조한다. |
 | VS Code 터미널 창이 열리지 않음 | 터미널 기본 셸 설정 충돌 | VS Code를 재시작하거나 `기본 프로필 선택`에서 Git Bash 또는 zsh를 다시 지정한다. |
 | OpenCode 응답 지연 | 네트워크 일시 지연 또는 세션 만료 | 브라우저 세션을 새로고침하거나 강사에게 네트워크 연결을 문의한다. |
 
