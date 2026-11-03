@@ -1,7 +1,7 @@
 <script setup>
 import { useData } from 'vitepress'
 import { site } from '../site.mjs'
-import { stepLabel } from '../display-text.mjs'
+import { stepLabel } from '../step-label.mjs'
 import ShareCourse from './ShareCourse.vue'
 import './step-header.css'
 
