@@ -45,9 +45,9 @@ flowchart LR
 ### 빈 폴더와 `.gitkeep`
 Git은 파일의 내용을 추적하는 시스템이므로 빈 디렉터리(폴더) 자체는 커밋 대상으로 인식하지 않는다. 하지만 웹 프로젝트에서는 이미지(`images/`)나 폰트(`fonts/`)를 담을 빈 폴더 구조를 미리 만들어 두고 형상 관리에 포함해야 할 때가 많다. 이때 폴더 안에 빈 파일인 `.gitkeep`을 넣어 폴더가 Git에 추적되도록 만드는 것이 개발자들의 표준적인 관례이다.
 
-## 첫 웹페이지 코드
+## 예시 산출물
 
-실습에서 사용할 가벼운 첫 번째 웹 포트폴리오 코드이다.
+각자 OpenCode에 요청해 첫 웹페이지(`index.html`·`style.css`)를 만든다. 아래는 결과물의 한 예시이며 그대로 복사할 필요는 없다.
 
 ### `index.html`
 
@@ -105,7 +105,7 @@ p {
 1. 터미널에서 작업자 이름과 이메일을 전역(`--global`)으로 설정한다.
 2. 실습 전용 폴더인 `portfolio-web`를 생성하고 해당 디렉터리로 이동한다.
 3. `git init`을 실행하여 저장소를 초기화한다.
-4. VS Code 탐색기나 OpenCode를 활용해 `index.html`과 `style.css`를 생성하고 위의 코드를 입력 후 저장한다.
+4. OpenCode에 첫 웹페이지 생성을 요청해 `index.html`과 `style.css`를 만들고 저장한다. 요청 예시는 `초보자를 위한 1페이지 자기소개 HTML/CSS 생성`이다. 이후 단계는 각자 만든 파일을 기준으로 진행한다.
 5. 이미지 폴더를 만들고 빈 폴더 추적용 `.gitkeep` 파일을 만든다: `mkdir -p images && touch images/.gitkeep`.
 6. `git status`를 실행하여 3개의 파일이 빨간색 Untracked 상태로 표시되는지 확인한다.
 7. `git add index.html style.css images/.gitkeep`을 입력해 스테이징 영역에 파일을 올린다.
