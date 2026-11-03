@@ -2,6 +2,17 @@ import { handleApi } from './api.js'
 import { legacyRedirect } from './legacy-redirects.js'
 import { pdfRequest } from './pdf-request.js'
 
+function cacheAsset(response, pathname) {
+  if (response.status !== 200 || !pathname.startsWith('/assets/')) return response
+  const headers = new Headers(response.headers)
+  headers.set('Cache-Control', 'public, max-age=31536000, immutable')
+  return new Response(response.body, {
+    status: response.status,
+    statusText: response.statusText,
+    headers,
+  })
+}
+
 export default {
   async fetch(request, env) {
     const pdf = pdfRequest(request, env)
@@ -16,6 +27,6 @@ export default {
       destination.search = url.search
       return Response.redirect(destination.toString(), 301)
     }
-    return env.ASSETS.fetch(request)
+    return cacheAsset(await env.ASSETS.fetch(request), url.pathname)
   },
 }
