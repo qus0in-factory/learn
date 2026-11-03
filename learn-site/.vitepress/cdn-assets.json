@@ -348,5 +348,19 @@
     "size": 224196,
     "sha256": "5849b378de7cabc25136196b42a76be44ddd86250db19107fcce1fa1df612b77",
     "type": "image/webp"
+  },
+  {
+    "path": "/og-echo.jpg",
+    "key": "static/3404285fd61e7f77e2eba15ddc7e143df6c2994f62c275dc2614aaef8f2b0fcd/og-echo.jpg",
+    "size": 99838,
+    "sha256": "3404285fd61e7f77e2eba15ddc7e143df6c2994f62c275dc2614aaef8f2b0fcd",
+    "type": "image/jpeg"
+  },
+  {
+    "path": "/og-git.jpg",
+    "key": "static/333e3c0eb13e1123e6380db5a9ae35d203d9ae531540e45d040f23619b80884b/og-git.jpg",
+    "size": 126640,
+    "sha256": "333e3c0eb13e1123e6380db5a9ae35d203d9ae531540e45d040f23619b80884b",
+    "type": "image/jpeg"
   }
 ]

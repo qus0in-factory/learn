@@ -1,0 +1,14 @@
+{
+  "width": 1200,
+  "height": 630,
+  "padding": 20,
+  "background": "#fff8eb",
+  "quality": 90,
+  "card": "summary_large_image",
+  "siteType": "website",
+  "stepType": "article",
+  "images": {
+    "home": { "source": "assets/cover/source.png", "path": "/og-echo.jpg" },
+    "git": { "source": "assets/cover/git-source.png", "path": "/og-git.jpg" }
+  }
+}

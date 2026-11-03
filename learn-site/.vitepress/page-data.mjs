@@ -4,6 +4,7 @@ import { displayTitle } from './display-text.mjs'
 import { labels } from './labels.mjs'
 import { pageUpdated } from './page-updated.mjs'
 import { appendixTitle } from './appendix-title.mjs'
+import { ogPage } from './og-page.mjs'
 
 export function transformPageData(page) {
   pdfData(page)
@@ -20,4 +21,5 @@ export function transformPageData(page) {
     page.frontmatter.title = site.title
     page.frontmatter.titleTemplate = false
   }
+  ogPage(page)
 }
