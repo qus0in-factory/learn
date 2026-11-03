@@ -1,6 +1,7 @@
 import { readdirSync, readFileSync } from 'node:fs'
 
 const DIR = new URL('../../docs/lecture/', import.meta.url)
+const BASE = '/git/'
 
 function title(file) {
   const text = readFileSync(new URL(file, DIR), 'utf8')
@@ -13,12 +14,12 @@ function items(dir, pattern) {
     .sort()
     .map((file) => ({
       text: title(`${dir}${file}`),
-      link: `/${dir}${file.replace(/\.md$/, '')}`,
+      link: `${BASE}${dir}${file.replace(/\.md$/, '')}`,
     }))
 }
 
 export const sidebar = {
-  '/': [{ text: '12차시 강의', items: items('', /^\d{2}-[\w-]+\.md$/) }],
-  '/appendix/': [{ text: '부록', items: items('appendix/', /^\d{2}-[\w-]+\.md$/) }],
-  '/supplement/': [{ text: '보충', items: items('supplement/', /^\d{2}-[\w-]+\.md$/) }],
+  '/git/': [{ text: '12차시 강의', items: items('', /^\d{2}-[\w-]+\.md$/) }],
+  '/git/appendix/': [{ text: '부록', items: items('appendix/', /^\d{2}-[\w-]+\.md$/) }],
+  '/git/supplement/': [{ text: '보충', items: items('supplement/', /^\d{2}-[\w-]+\.md$/) }],
 }

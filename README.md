@@ -22,7 +22,8 @@ flowchart LR
 - Issue #3: https://github.com/qus0in-factory/learn/issues/3
 - PR #2: https://github.com/qus0in-factory/learn/pull/2
 - 현재 서비스: https://hdai.qus0in.workers.dev/git/
-- 강의 사이트: https://learn.qus0in.dev
+- 강의 사이트(과정 목록): https://learn.qus0in.dev/
+- Git 과정: https://learn.qus0in.dev/git/
 - 12주제 PDF:
   - https://files.qus0in.dev/v0.1.0/01-environment.pdf?revision=8dea329
   - https://files.qus0in.dev/v0.1.0/02-local-repository.pdf?revision=8dea329
