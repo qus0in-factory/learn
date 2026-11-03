@@ -4,6 +4,7 @@ import ShareLinks from './ShareLinks.vue'
 import KakaoButton from './KakaoButton.vue'
 import { useShare } from './useShare.mjs'
 import LessonLinks from './LessonLinks.vue'
+import PrintHelp from './PrintHelp.vue'
 import './share-course.css'
 import './share-interaction.css'
 import './share-toast.css'
@@ -18,6 +19,7 @@ const { message, xUrl, copy, kakao } = useShare(props.course)
       <LessonLinks :lesson="lesson" />
       <KakaoButton :kakao="kakao" />
       <ShareLinks :x-url="xUrl" @copy="copy" />
+      <PrintHelp />
     </div>
     <img v-if="!lesson" :src="share.qr" :alt="share.qrAlt" width="120" height="120">
     <span v-if="message" class="share-toast" role="status" aria-live="polite">{{ message }}</span>
