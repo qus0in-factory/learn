@@ -16,5 +16,6 @@
   "appendix/03-web-tools": "palette",
   "appendix/04-mermaid": "workflow",
   "appendix/05-os-differences": "monitor",
-  "appendix/06-cli-terminal-shell": "square-terminal"
+  "appendix/06-cli-terminal-shell": "square-terminal",
+  "appendix/07-git-scenarios": "route"
 }
