@@ -1,6 +1,7 @@
-body { color: #172b46; font-family: "Apple SD Gothic Neo", "Noto Sans CJK KR", sans-serif; }
+body { color: #172b46; font-family: "Learn Sans"; }
 h1, a { color: #164e89; }
 pre { background: #edf3f9; }
-code { font-family: "D2Coding", "Menlo", monospace; }
+pre, code { font-family: "Learn Mono", "Learn Sans"; }
+svg text, svg foreignObject { font-family: "Learn Sans" !important; }
 td, th { border: 1px solid #aabbd0; }
 footer { color: #526580; }

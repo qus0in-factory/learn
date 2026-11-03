@@ -25,15 +25,15 @@ flowchart LR
 - 강의 사이트(과정 목록): https://learn.qus0in.dev/
 - Git 과정: https://learn.qus0in.dev/git/
 - 12주제 PDF:
-  - https://files.qus0in.dev/v0.1.0/01-environment.pdf?revision=ddf5a90
-  - https://files.qus0in.dev/v0.1.0/02-local-repository.pdf?revision=ddf5a90
-  - https://files.qus0in.dev/v0.1.0/03-commit-history.pdf?revision=ddf5a90
-  - https://files.qus0in.dev/v0.1.0/04-amend-ignore.pdf?revision=ddf5a90
-  - https://files.qus0in.dev/v0.1.0/05-remote.pdf?revision=ddf5a90
-  - https://files.qus0in.dev/v0.1.0/06-pages.pdf?revision=ddf5a90
-  - https://files.qus0in.dev/v0.1.0/07-markdown-mermaid.pdf?revision=ddf5a90
-  - https://files.qus0in.dev/v0.1.0/08-profile-records.pdf?revision=ddf5a90
-  - https://files.qus0in.dev/v0.1.0/09-issues.pdf?revision=ddf5a90
-  - https://files.qus0in.dev/v0.1.0/10-branches-tags.pdf?revision=ddf5a90
-  - https://files.qus0in.dev/v0.1.0/11-merge-conflicts.pdf?revision=ddf5a90
-  - https://files.qus0in.dev/v0.1.0/12-pull-request.pdf?revision=ddf5a90
+  - https://files.qus0in.dev/v0.1.0/01-environment.pdf?revision=0444320a59711d0568077bd9e8ac85daef2d2cda
+  - https://files.qus0in.dev/v0.1.0/02-local-repository.pdf?revision=0444320a59711d0568077bd9e8ac85daef2d2cda
+  - https://files.qus0in.dev/v0.1.0/03-commit-history.pdf?revision=0444320a59711d0568077bd9e8ac85daef2d2cda
+  - https://files.qus0in.dev/v0.1.0/04-amend-ignore.pdf?revision=0444320a59711d0568077bd9e8ac85daef2d2cda
+  - https://files.qus0in.dev/v0.1.0/05-remote.pdf?revision=0444320a59711d0568077bd9e8ac85daef2d2cda
+  - https://files.qus0in.dev/v0.1.0/06-pages.pdf?revision=0444320a59711d0568077bd9e8ac85daef2d2cda
+  - https://files.qus0in.dev/v0.1.0/07-markdown-mermaid.pdf?revision=0444320a59711d0568077bd9e8ac85daef2d2cda
+  - https://files.qus0in.dev/v0.1.0/08-profile-records.pdf?revision=0444320a59711d0568077bd9e8ac85daef2d2cda
+  - https://files.qus0in.dev/v0.1.0/09-issues.pdf?revision=0444320a59711d0568077bd9e8ac85daef2d2cda
+  - https://files.qus0in.dev/v0.1.0/10-branches-tags.pdf?revision=0444320a59711d0568077bd9e8ac85daef2d2cda
+  - https://files.qus0in.dev/v0.1.0/11-merge-conflicts.pdf?revision=0444320a59711d0568077bd9e8ac85daef2d2cda
+  - https://files.qus0in.dev/v0.1.0/12-pull-request.pdf?revision=0444320a59711d0568077bd9e8ac85daef2d2cda

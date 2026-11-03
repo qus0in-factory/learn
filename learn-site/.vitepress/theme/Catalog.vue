@@ -1,6 +1,6 @@
 <script setup>
 import { useCatalog } from './useCatalog.mjs'
-
+import QuizList from './QuizList.vue'
 const { state, data } = useCatalog()
 </script>
 
@@ -23,6 +23,6 @@ const { state, data } = useCatalog()
         </tr>
       </tbody>
     </table>
-    <p>복습 퀴즈 {{ data.quiz.length }}문항</p>
+    <QuizList :quiz="data.quiz" :lectures="data.lectures" />
   </template>
 </template>

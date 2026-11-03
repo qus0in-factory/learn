@@ -1,0 +1,8 @@
+body { margin: 28px; color: #172b46; background: #f7f9fa;
+  font: 22px/1.5 "Learn Sans"; }
+pre { padding: 24px; background: #172b46; color: white;
+  font: 24px/1.5 "Learn Mono", "Learn Sans"; }
+h1 { font-size: 32px; }
+h2 { font-size: 25px; }
+* { font-family: "Learn Sans" !important; }
+pre, code { font-family: "Learn Mono", "Learn Sans" !important; }

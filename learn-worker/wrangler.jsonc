@@ -21,6 +21,11 @@
     {
       "pattern": "learn.qus0in.dev",
       "custom_domain": true
+    },
+    {
+      "pattern": "files.qus0in.dev/v0.1.0/*",
+      "zone_name": "qus0in.dev"
     }
-  ]
+  ],
+  "r2_buckets": [{ "binding": "FILES", "bucket_name": "learn-files" }]
 }

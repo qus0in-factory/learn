@@ -1,0 +1,10 @@
+import { writeFileSync } from 'node:fs';
+import { objects } from './learn-pdf-ops/objects.mjs';
+import { output } from './learn-pdf/paths.mjs';
+import { verifyPdfHttp } from './learn-pdf-ops/verify-pdf-http.mjs';
+import { verifySiteHttp } from './learn-pdf-ops/verify-site-http.mjs';
+const files = objects();
+const receipt = files.map(file => verifyPdfHttp(file));
+verifySiteHttp(files);
+writeFileSync(output + '/live-readback.json', JSON.stringify(receipt, null, 2));
+console.log('Live HTTP: plain redirects, immutable PDF size/SHA, site/API URLs 12/12 verified');

@@ -1,29 +1,11 @@
-import { loadLectures, loadMeta, loadQuiz } from './store.js'
+import { rows } from './store.js'
+import { catalogSql } from './catalog-sql.mjs'
+
+const byPosition = (items) => [...items].sort((a, b) => a.position - b.position)
 
 export async function loadCatalog(db) {
-  const [meta, lectures, quiz] = await Promise.all([
-    loadMeta(db),
-    loadLectures(db),
-    loadQuiz(db),
-  ])
-  if (!meta) throw new Error('catalog not initialized')
-  return {
-    version: meta.asset_version,
-    title: meta.title,
-    syncedAt: meta.synced_at,
-    lectures: lectures.map((lecture) => ({
-      slug: lecture.slug,
-      day: lecture.day,
-      position: lecture.position,
-      title: lecture.title,
-      schedule: lecture.schedule,
-      pdf: lecture.pdf,
-    })),
-    quiz: quiz.map((question) => ({
-      position: question.position,
-      question: question.question,
-      answer: question.answer,
-      lesson: question.lesson_slug,
-    })),
-  }
+  const [row] = await rows(db, catalogSql)
+  const data = JSON.parse(row.catalog)
+  if (!data.meta) throw new Error('catalog not initialized')
+  return { ...data.meta, lectures: byPosition(data.lectures), quiz: byPosition(data.quiz) }
 }

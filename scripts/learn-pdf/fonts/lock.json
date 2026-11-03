@@ -1,0 +1,13 @@
+{
+  "source": "2fe1e8c6b137fb13041a7cfca6fdcd8a910ea4dc",
+  "assets": [
+    {
+      "file": "NotoSansKR.ttf",
+      "sha256": "194018e6b2b293a7964f037b25c0249ce1418bc9ab3c971060a03aa57861e252"
+    },
+    {
+      "file": "NotoSansMono.ttf",
+      "sha256": "2cb2adb378a8f574213e23df697050b83c54c27df465a2015552740b2769a081"
+    }
+  ]
+}

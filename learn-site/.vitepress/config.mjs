@@ -8,7 +8,7 @@ export default defineConfig({
   lang: 'ko-KR',
   base: '/',
   srcDir: '../docs',
-  srcExclude: ['261102/**', '261103/**', 'deployment.md', 'setup/**'],
+  srcExclude: ['261102/**', '261103/**', 'ci.md', 'deployment.md', 'setup/**'],
   rewrites: {
     'lecture/index.md': 'git/index.md',
     'lecture/catalog.md': 'git/catalog.md',

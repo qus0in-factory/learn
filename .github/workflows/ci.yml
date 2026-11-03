@@ -1,0 +1,56 @@
+name: CI
+
+on:
+  push:
+    branches: [dev, main]
+  pull_request:
+    branches: [dev, main]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: test
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7.0.1
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v6.1.0
+        with:
+          version: 11
+
+      - name: Setup Node.js (Latest LTS 26)
+        uses: actions/setup-node@v7.1.0
+        with:
+          node-version: '26'
+          cache: 'pnpm'
+          cache-dependency-path: 'course-site/pnpm-lock.yaml'
+
+      - name: Install dependencies
+        run: pnpm --dir course-site install --frozen-lockfile
+
+      - name: Link shared dependencies
+        run: ln -s ../course-site/node_modules learn-site/node_modules
+
+      - name: Lint Korean Markdown
+        run: NODE_PATH=course-site/node_modules node scripts/lint-markdown.cjs docs/lecture README.md
+
+      - name: Run unit and integration tests
+        run: node --test scripts/learn/*.test.mjs learn-worker/*.test.mjs
+
+      - name: Build learn-site
+        run: pnpm --dir course-site exec vitepress build ../learn-site
+
+      - name: Verify built learn-site artifacts
+        run: node --test learn-site/*.test.mjs
+
+      - name: Generate D1 SQL artifact
+        run: node scripts/sync-learn-d1.mjs
