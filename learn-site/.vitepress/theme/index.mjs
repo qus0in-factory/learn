@@ -5,6 +5,8 @@ import CourseHeader from './CourseHeader.vue'
 import CourseContents from './CourseContents.vue'
 import './content-links.css'
 import './mermaid-theme.css'
+import './nav-icons.css'
+import 'virtual:nav-icons.css'
 import './print.css'
 
 export default {
