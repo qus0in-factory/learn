@@ -1,34 +1,29 @@
 import { defineConfig } from 'vitepress'
 import { markdown } from './markdown.mjs'
-import { themeConfig, transformPageData } from './pdf.mjs'
+import { themeConfig } from './pdf.mjs'
+import { transformPageData } from './page-data.mjs'
 import { printHead } from './print.mjs'
+import { site } from './site.mjs'
+import { faviconHead } from './favicon.mjs'
+import { courseUpdated } from './updated.mjs'
+import { pages, vueAlias } from './pages.mjs'
+import { cdnVite } from './cdn-vite.mjs'
+import { cdnHead } from './cdn-head.mjs'
 
 export default defineConfig({
-  title: 'Git과 웹 배포 강의',
+  title: site.title,
   lang: 'ko-KR',
   base: '/',
   srcDir: '../docs',
-  srcExclude: ['261102/**', '261103/**', 'ci.md', 'deployment.md', 'setup/**'],
-  rewrites: {
-    'lecture/index.md': 'git/index.md',
-    'lecture/catalog.md': 'git/catalog.md',
-    'lecture/:page': 'git/:page',
-    'lecture/appendix/:page': 'git/appendix/:page',
-    'lecture/supplement/:page': 'git/supplement/:page',
-  },
+  srcExclude: ['261102/**', '261103/**', 'ci.md', 'deployment.md', 'setup/**', 'license-notices.md'],
+  rewrites: pages,
   cleanUrls: true,
   outDir: '../dist/learn',
   ignoreDeadLinks: true,
-  themeConfig,
+  themeConfig: { ...themeConfig, courseUpdated: courseUpdated() },
   transformPageData,
-  head: printHead,
-  vite: {
-    resolve: {
-      alias: {
-        'vue': new URL('../../course-site/node_modules/vue', import.meta.url).pathname,
-        'vue/server-renderer': new URL('../../course-site/node_modules/vue/server-renderer', import.meta.url).pathname,
-      },
-    },
-  },
+  transformHead: cdnHead,
+  head: [...printHead, ...faviconHead],
+  vite: { ...cdnVite, resolve: { alias: vueAlias } },
   markdown,
 })

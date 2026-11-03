@@ -1,10 +1,19 @@
 ---
 layout: doc
-title: 강의 과정
+aside: false
 ---
 
-# 강의 과정
+<script setup>
+import LandingCover from '../learn-site/.vitepress/theme/LandingCover.vue'
+import column from '../learn-site/.vitepress/landing-column.json'
+import '../learn-site/.vitepress/theme/landing-column.css'
+</script>
 
-현재 공개된 과정입니다. 과정을 선택하면 차시별 강의와 부록, 보충 자료로 이동합니다.
+<div class="landing-column" :style="{
+  '--landing-column-width': column.maxWidth,
+  '--landing-content-width': column.contentMaxWidth
+}">
+  <LandingCover />
 
-<CourseList />
+  <CourseList />
+</div>

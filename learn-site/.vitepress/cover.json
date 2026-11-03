@@ -1,0 +1,18 @@
+{
+  "source": "assets/cover/source.png",
+  "alt": "에코익힘책 표지",
+  "widths": [180, 222, 282, 360, 441, 540, 561, 660, 840],
+  "intrinsic": { "width": 1086, "height": 1448 },
+  "quality": 85,
+  "avifQuality": 75,
+  "sizes": "(max-width: 639px) 180px, (max-width: 959px) 220px, 280px",
+  "style": {
+    "--cover-width": "280px",
+    "--cover-tablet-width": "220px",
+    "--cover-mobile-width": "180px",
+    "--cover-gap": "24px",
+    "--cover-mobile-gap": "16px",
+    "--cover-radius": "20px",
+    "--cover-feather": "5%"
+  }
+}

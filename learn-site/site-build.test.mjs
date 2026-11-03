@@ -20,6 +20,7 @@ const lecturePages = [
 const expectedPages = [
   'index.html',
   '404.html',
+  'licenses.html',
   'git/index.html',
   'git/catalog.html',
   ...lecturePages,
@@ -28,7 +29,7 @@ const expectedPages = [
 ]
 
 test('build emits landing, 404 and 21 course pages under /git', () => {
-  assert.equal(expectedPages.length, 24)
+  assert.equal(expectedPages.length, 25)
   assert.equal(expectedPages.filter((page) => page.startsWith('git/') && page !== 'git/index.html').length, 21)
   for (const page of expectedPages) assert.ok(existsSync(new URL(page, dist)), page)
   assert.deepEqual(htmlFiles.sort(), expectedPages.sort())
@@ -48,8 +49,8 @@ test('internal links stay under /git and resolve to built pages', () => {
       if (/^(?:[a-z]+:)?\/\//i.test(href) || href.startsWith('#')) continue
       const url = new URL(href, base)
       if (url.origin !== origin) continue
-      if (url.pathname === '/vp-icons.css' || url.pathname.startsWith('/api/') || url.pathname.startsWith('/assets/')) continue
-      assert.ok(url.pathname === '/' || url.pathname === '/git/' || url.pathname.startsWith('/git/'), `${file}: ${href}`)
+      if (url.pathname === '/vp-icons.css' || url.pathname.startsWith('/api/') || url.pathname.startsWith('/assets/') || /\.(svg|png|ico|webmanifest|txt)$/.test(url.pathname)) continue
+      assert.ok(url.pathname === '/' || url.pathname === '/licenses' || url.pathname === '/git/' || url.pathname.startsWith('/git/'), `${file}: ${href}`)
       const target = url.pathname.endsWith('/') ? `${url.pathname.slice(1)}index.html` : `${url.pathname.slice(1)}.html`
       assert.ok(existsSync(new URL(target, dist)), `${file}: missing ${target}`)
     }
@@ -59,7 +60,7 @@ test('internal links stay under /git and resolve to built pages', () => {
 test('root is a course landing without the Git sidebar or pager', () => {
   const root = read('index.html')
   assert.ok(root.includes('href="/git/"'))
-  assert.ok(root.includes('Git과 웹 배포'))
+  assert.ok(root.includes('Go Git 集'))
   assert.ok(!root.includes('href="/git/01-environment"'))
   assert.ok(!root.includes('pager-link'))
 })

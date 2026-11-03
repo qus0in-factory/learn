@@ -1,0 +1,27 @@
+{
+  "source": "playwright-core@1.56.1/browsers.json",
+  "playwright": "1.56.1",
+  "browsers": [
+    {
+      "name": "chromium",
+      "revision": "1194",
+      "installByDefault": true,
+      "browserVersion": "141.0.7390.37"
+    },
+    {
+      "name": "chromium-headless-shell",
+      "revision": "1194",
+      "installByDefault": true,
+      "browserVersion": "141.0.7390.37"
+    },
+    {
+      "name": "ffmpeg",
+      "revision": "1011",
+      "installByDefault": true,
+      "revisionOverrides": {
+        "mac12": "1010",
+        "mac12-arm64": "1010"
+      }
+    }
+  ]
+}
