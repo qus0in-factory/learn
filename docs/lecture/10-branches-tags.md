@@ -1,10 +1,10 @@
 ---
-subtitle: "브랜치와 태그로 분기를 관리한다."
+subtitle: "branch·switch·tag로 작업을 분기하고 버전을 표시한다."
 day: 2
 schedule: "13:00–13:45 (수업 45분) / 13:45–14:00 (휴식 15분)"
 ---
 
-# branch·switch·tag
+# 브랜치와 태그
 
 저장소: `portfolio-web`
 

@@ -1,10 +1,10 @@
 ---
-subtitle: "이슈와 레이블, 마일스톤으로 작업을 관리한다."
+subtitle: "Issue·Label·Milestone으로 작업을 나누고 추적한다."
 day: 2
 schedule: "11:00–11:45 (수업 45분) / 11:45–12:00 (휴식 15분)"
 ---
 
-# Issue·Label·Milestone
+# 이슈로 작업 관리
 
 저장소: `portfolio-web`
 

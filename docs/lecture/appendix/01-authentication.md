@@ -2,7 +2,7 @@
 subtitle: "Windows 자격 증명을 초기화하고 GitHub에 재인증한다."
 ---
 
-# Windows 자격 증명·GitHub 재인증
+# 자격 증명 재인증
 
 관련 차시: [5차시 GitHub 원격 연동](../05-remote.md)
 

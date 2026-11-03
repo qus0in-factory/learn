@@ -1,10 +1,10 @@
 ---
-subtitle: "프로필과 작업 기록을 관리한다."
+subtitle: "프로필 README·TIL·Post-mortem으로 작업 기록을 남긴다."
 day: 2
 schedule: "10:00–10:45 (수업 45분) / 10:45–11:00 (휴식 15분)"
 ---
 
-# 프로필 README·TIL·Post-mortem
+# 프로필과 작업 기록
 
 저장소: `portfolio-web` (작업 저장소)와 `<계정ID>/<계정ID>` (별도 Profile 저장소)
 

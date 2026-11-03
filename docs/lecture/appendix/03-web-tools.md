@@ -1,8 +1,8 @@
 ---
-subtitle: "웹 보조 도구를 살펴본다."
+subtitle: "눈누·Bulma·Coolors로 폰트·스타일·색상을 고른다."
 ---
 
-# 눈누·Bulma·Coolors
+# 웹 디자인 보조 도구
 
 관련 차시: [6차시 Pages 배포](../06-pages.md) · [7차시 Markdown과 Mermaid](../07-markdown-mermaid.md)
 

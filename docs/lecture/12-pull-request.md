@@ -1,10 +1,10 @@
 ---
-subtitle: "Pull Request로 협업한다."
+subtitle: "branch와 push 뒤 Pull Request를 열어 리뷰하고 병합한다."
 day: 2
 schedule: "15:00–15:45 (수업 45분) / 15:45–16:00 (휴식 및 피날레 15분)"
 ---
 
-# Pull Request
+# 풀 리퀘스트와 협업
 
 저장소: `portfolio-web`
 

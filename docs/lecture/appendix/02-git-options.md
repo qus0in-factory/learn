@@ -1,8 +1,8 @@
 ---
-subtitle: "Git 명령과 옵션을 확인한다."
+subtitle: "Git 명령과 옵션을 한눈에 확인한다."
 ---
 
-# Git 명령·옵션
+# 명령과 옵션 일람
 
 관련 차시: [2차시 로컬 저장소](../02-local-repository.md) · [3차시 커밋](../03-commit-history.md) · [4차시 이력 수정](../04-amend-ignore.md) · [5차시 원격 연동](../05-remote.md)
 

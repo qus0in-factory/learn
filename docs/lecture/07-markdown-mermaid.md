@@ -1,10 +1,10 @@
 ---
-subtitle: "Markdown과 Mermaid로 문서를 작성한다."
+subtitle: "Markdown 문법과 Mermaid 다이어그램으로 문서를 작성한다."
 day: 2
 schedule: "09:00–09:45 (수업 45분) / 09:45–10:00 (휴식 15분)"
 ---
 
-# Markdown·Mermaid
+# 마크다운과 다이어그램
 
 저장소: `portfolio-web`
 
