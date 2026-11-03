@@ -4,6 +4,7 @@ import { compact } from './compact.js';
 import { numberPages } from './number.js';
 import { audit } from './audit.js';
 import { sourceText, checkContent } from './content.js';
+window.preview = ready;
 window.prepare = async html => {
   const source = document.createElement('main');
   source.innerHTML = html;
