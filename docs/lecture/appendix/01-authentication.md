@@ -21,6 +21,20 @@ Git은 커밋 작성자 정보와 GitHub 로그인 정보를 따로 관리한다
 - PC와 Windows 버전에 따라 메뉴 이름과 항목 위치가 다를 수 있다.
 - 삭제 대상은 `git:https://github.com`처럼 Git이 GitHub에 접속할 때 쓰는 항목으로 한정한다.
 
+### 진단 흐름
+
+인증 실패는 아래 순서로 원인을 좁힌다.
+
+```mermaid
+flowchart TB
+    FAIL["push·pull 실패(403)"] --> REMOTE["git remote -v로 저장소 주소 확인"]
+    REMOTE --> ACCOUNT["다른 계정으로 인증되었는가"]
+    ACCOUNT -->|예| DELETE["자격 증명 관리자에서 GitHub 항목 삭제"]
+    DELETE --> RETRY["다시 push·pull로 재인증"]
+    ACCOUNT -->|아니오| CHECK["조직 SSO와 2FA 확인"]
+    RETRY --> VERIFY["git ls-remote origin으로 확인"]
+```
+
 ## 따라하기
 
 1. `git remote -v`로 대상 저장소 주소가 맞는지 확인한다.
