@@ -6,9 +6,8 @@ import { courseUpdated } from './updated.mjs'
 
 export function transformPageData(page) {
   pdfData(page)
-  if (page.frontmatter.pdf) {
-    const name = page.relativePath.split('/').at(-1)
-    page.frontmatter.stepUpdated = courseUpdated(`docs/lecture/${name}`)
+  if (page.filePath && !/^(?:git\/)?index\.md$/.test(page.relativePath)) {
+    page.frontmatter.pageUpdated = courseUpdated(`docs/${page.filePath}`)
   }
   if (page.title) page.title = displayTitle(page.title)
   const appendix = page.relativePath.match(/^(?:lecture|git)\/appendix\/(\d{2})-/)

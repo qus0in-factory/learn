@@ -11,7 +11,7 @@ export const labels = {
   light: '밝은 화면으로 전환',
   dark: '어두운 화면으로 전환',
   edit: '이 페이지 수정',
-  updated: '최종 수정',
+  updated: '최종 업데이트',
   skip: '본문으로 건너뛰기',
   language: '언어 변경',
   home: '첫 페이지',

@@ -19,6 +19,9 @@ const appendixPrefix = () => {
 <template>
   <DefaultTheme.Layout :style="{ '--vp-nav-logo-height': site.logoHeight, '--appendix-prefix': appendixPrefix() }">
     <template #layout-bottom><SiteFooter /></template>
+    <template #doc-footer-before>
+      <p v-if="frontmatter.pageUpdated" class="page-updated">{{ site.updated }}{{ frontmatter.pageUpdated }}</p>
+    </template>
     <template #doc-before>
       <CourseBreadcrumb v-if="/^git\/(?:\d{2}-|appendix\/)/.test(page.relativePath)" />
       <StepHeader v-if="frontmatter.pdf" :key="page.relativePath" />
