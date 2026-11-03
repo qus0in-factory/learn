@@ -9,6 +9,7 @@ import PageUpdated from './PageUpdated.vue'
 import { appendixPrefix } from '../appendix-prefix.mjs'
 import './task-list.css'
 import './header-logo.css'
+import './header-logotype.css'
 
 const { frontmatter, page } = useData()
 </script>

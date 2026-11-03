@@ -1,0 +1,25 @@
+{
+  "output": "learn-site/.vitepress/theme/icons/logotype.svg",
+  "outputSha256": "b314922dc0f4d066ab126392af07e2e51ad12710d70c3a3984deb83845ef4441",
+  "text": "에코익힘책",
+  "font": {
+    "name": "학교안심 맑은날 B (HakgyoansimMalgeunnalB.otf)",
+    "bytes": 631348,
+    "sha256": "163f545e2584d15a8e7b8b7f26524002d03c675c9da9c8f1c07a4ae9785391ce",
+    "mirror": "https://github.com/item4/kfonts",
+    "mirrorCommit": "0b1e8292f771cf40672dea6e9bb6964ce64d9d89",
+    "url": "https://raw.githubusercontent.com/item4/kfonts/0b1e8292f771cf40672dea6e9bb6964ce64d9d89/packages/hakgyoansim-malgeunnal/src/HakgyoansimMalgeunnalB.otf",
+    "fontFileCommitted": false
+  },
+  "verification": "KERIS 원본 파일과 대조하지 않음(비공식 미러 파일 사용, 사용자 승인 2026-11-03)",
+  "license": {
+    "owner": "KERIS (Hakgyoansim fonts, OFL)",
+    "notice": "https://www.keris.or.kr/main/na/ntt/selectNttInfo.do?mi=1051&nttSn=40461",
+    "noticeDate": "2024-01-09",
+    "download": "https://copyright.keris.or.kr/wft/fntDwnld",
+    "press": "https://www.korea.kr/news/policyNewsView.do?newsId=148912775",
+    "ofl": "https://openfontlicense.org/ofl-faq/",
+    "note": "공지: 학교 안심폰트는 OFL이며 CI/BI 등 영리적 목적 이용 가능, 출처표기 의무 없음. 폰트 파일 자체의 유료 판매만 금지."
+  },
+  "command": "python3 scripts/logotype/extract.py <font.otf> 에코익힘책 learn-site/.vitepress/theme/icons/logotype.svg (fontTools 필요, 격리된 venv에서 실행, 프로젝트 의존성 아님)"
+}

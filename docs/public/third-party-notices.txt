@@ -7428,3 +7428,16 @@ see https://developers.kakao.com/docs/en/tool/common#resource-download and
 https://developers.kakao.com/docs/en/tutorial/js-share#apply-official-kakaotalk-share-button.
 Kakao terms and trademark rights apply; this is not an open-source license.
 The provided SVG uses #FAE100 and #3C1E1E; the artwork is not recolored.
+
+
+에코익힘책 header logotype — outlines of "에코익힘책" from 학교안심 맑은날 B (Hakgyoansim Malgeunnal B)
+Font: © KERIS (한국교육학술정보원), Hakgyoansim fonts, distributed under the SIL Open Font License 1.1.
+The font file is not included in this repository or the deployed site; only the five glyph outlines,
+converted to one SVG path (learn-site/.vitepress/theme/icons/logotype.svg), are used.
+License basis: KERIS notice of 2024-01-09 (https://www.keris.or.kr/main/na/ntt/selectNttInfo.do?mi=1051&nttSn=40461):
+the Hakgyoansim fonts are OFL fonts usable without restriction of target or purpose, including commercial use
+such as CI/BI; attribution is not required. Download page: https://copyright.keris.or.kr/wft/fntDwnld
+Source file used: unofficial mirror https://github.com/item4/kfonts at commit 0b1e8292f771cf40672dea6e9bb6964ce64d9d89,
+SHA-256 163f545e2584d15a8e7b8b7f26524002d03c675c9da9c8f1c07a4ae9785391ce (631,348 bytes).
+Not compared with the original KERIS file (user approved on 2026-11-03).
+Extraction script and record: scripts/logotype/extract.py, scripts/logotype/source.json
