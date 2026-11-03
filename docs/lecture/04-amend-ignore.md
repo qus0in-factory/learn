@@ -114,6 +114,8 @@ Thumbs.db
 
 ## Git 명령
 
+명령어 참조: [git status](commands/status.md) · [git add](commands/add.md) · [git commit](commands/commit.md) · [git log](commands/log.md) · [git rm](commands/rm.md) · [git revert](commands/revert.md)
+
 ```bash
 # 1. 직전 커밋 메시지 수정 (amend)
 git commit --amend -m "docs: 첫 화면 학습 목표 섹션 및 안내 문구 보완"

@@ -104,6 +104,8 @@ STEP 03에서 소개 문구를 보강하고 스타일을 다듬는 수정 예시
 
 ## Git 명령
 
+명령어 참조: [git add](commands/add.md) · [git commit](commands/commit.md) · [git log](commands/log.md) · [git diff](commands/diff.md) · [git restore](commands/restore.md)
+
 ```bash
 # 1. 첫 커밋 확정
 git commit -m "feat: 첫 웹페이지 레이아웃 및 스타일 추가"

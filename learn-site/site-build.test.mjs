@@ -4,7 +4,7 @@ import { htmlFiles, read, hrefs, htmlHref } from './site-build-fixture.mjs'
 import { checkLinks } from './site-link-checks.mjs'
 import { checkPages, checkLanding, check404 } from './site-page-checks.mjs'
 
-test('build emits landing, 404 and 34 course pages under /git', checkPages)
+test('build emits landing, 404 and 41 course pages under /git', checkPages)
 test('generated HTML has no .html href', () => {
   for (const file of htmlFiles) {
     const found = hrefs(read(file)).filter(htmlHref)

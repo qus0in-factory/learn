@@ -114,6 +114,8 @@ footer {
 
 ## Git 명령
 
+명령어 참조: [git status](commands/status.md) · [git add](commands/add.md) · [git commit](commands/commit.md) · [git push](commands/push.md)
+
 ```bash
 # 1. 파일 변경 상태 확인
 git status

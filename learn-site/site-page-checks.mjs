@@ -3,8 +3,8 @@ import { expectedPages } from './site-pages.mjs'
 import { htmlFiles, exists, read, hrefs, htmlHref } from './site-build-fixture.mjs'
 
 export function checkPages() {
-  assert.equal(expectedPages.length, 39)
-  assert.equal(expectedPages.filter(page => page.startsWith('git/') && page !== 'git/index.html').length, 34)
+  assert.equal(expectedPages.length, 46)
+  assert.equal(expectedPages.filter(page => page.startsWith('git/') && page !== 'git/index.html').length, 41)
   for (const page of expectedPages) assert.ok(exists(page), page)
   assert.deepEqual(htmlFiles.sort(), expectedPages.sort())
 }

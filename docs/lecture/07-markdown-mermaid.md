@@ -43,6 +43,8 @@ schedule: "09:00–09:45 (수업 45분) / 09:45–10:00 (휴식 15분)"
 
 ## Git 명령
 
+명령어 참조: [git status](commands/status.md) · [git add](commands/add.md) · [git commit](commands/commit.md) · [git push](commands/push.md)
+
 ```bash
 git status
 git add README.md

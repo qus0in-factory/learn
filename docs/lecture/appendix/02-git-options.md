@@ -24,6 +24,8 @@ tags: ["Git 명령", "옵션", "위험도"]
 
 ## 필수 명령
 
+명령어 참조: [git config](../commands/config.md) · [git init](../commands/init.md) · [git status](../commands/status.md) · [git add](../commands/add.md) · [git commit](../commands/commit.md) · [git log](../commands/log.md) · [git diff](../commands/diff.md) · [git restore](../commands/restore.md) · [git rm](../commands/rm.md) · [git remote](../commands/remote.md) · [git clone](../commands/clone.md) · [git push](../commands/push.md) · [git pull](../commands/pull.md) · [git branch](../commands/branch.md) · [git switch](../commands/switch.md) · [git merge](../commands/merge.md) · [git tag](../commands/tag.md) · [git reset](../commands/reset.md) · [git revert](../commands/revert.md)
+
 | 명령 | 의미와 사용 상황 |
 | --- | --- |
 | `git status` | 현재 변경과 stage 상태 확인 |

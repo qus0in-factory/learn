@@ -53,6 +53,8 @@ flowchart TB
 
 ## Git 명령
 
+명령어 참조: [git status](commands/status.md) · [git add](commands/add.md) · [git commit](commands/commit.md) · [git push](commands/push.md)
+
 ```bash
 mkdir -p docs
 printf '# 에러 사후분석\n- 현상: ...\n- 원인: ...\n- 조치: ...\n- 재발 방지: ...\n' > docs/post-mortem.md
