@@ -3,7 +3,7 @@ import shutil
 
 ROOT = Path(__file__).resolve().parent.parent
 SOURCE = ROOT / 'landing'
-TARGET = ROOT / 'dist/git'
+TARGET = ROOT / 'dist/hdai/git'
 
 
 def main():

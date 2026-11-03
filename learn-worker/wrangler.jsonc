@@ -1,0 +1,24 @@
+{
+  "name": "learn",
+  "main": "index.js",
+  "compatibility_date": "2026-11-03",
+  "assets": {
+    "directory": "../dist/learn",
+    "binding": "ASSETS",
+    "not_found_handling": "404-page"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "learn",
+      "database_id": "c63cc8b4-ce13-47ec-826f-db31317a6747",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "routes": [
+    {
+      "pattern": "learn.qus0in.dev",
+      "custom_domain": true
+    }
+  ]
+}
