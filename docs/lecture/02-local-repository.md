@@ -47,9 +47,28 @@ Git은 파일의 내용을 추적하는 시스템이므로 빈 디렉터리(폴�
 
 ## 예시 산출물
 
-각자 OpenCode에 요청해 첫 웹페이지(`index.html`·`style.css`)를 만든다. 아래는 결과물의 한 예시이며 그대로 복사할 필요는 없다.
+각자 OpenCode에 요청해 첫 웹페이지(`index.html`·`style.css`)를 만든다. 예시 코드는 만들어진 결과물의 한 예일 뿐이며 그대로 복사할 필요는 없다.
 
-### `index.html`
+### OpenCode 요청
+
+OpenCode에 아래 요청문을 입력한다. 오른쪽 위의 복사 버튼으로 복사할 수 있다.
+
+```text
+현재 폴더에 자기소개용 index.html과 style.css 생성.
+제목·소개 문단 포함, 간단한 가운데 정렬 스타일.
+```
+
+### 생성 결과 확인
+
+생성이 끝나면 파일 탐색기에서 `index.html`을 브라우저로 열어 제목과 소개 문단이 보이는지 확인한다.
+
+### 예시 코드 참고
+
+생성이 잘 안 되거나 확실하게 진행하고 싶다면 아래 예시 코드를 참고해도 좋다.
+
+::: details 예시 코드 보기
+
+`index.html` 예시:
 
 ```html
 <!doctype html>
@@ -69,7 +88,7 @@ Git은 파일의 내용을 추적하는 시스템이므로 빈 디렉터리(폴�
 </html>
 ```
 
-### `style.css`
+`style.css` 예시:
 
 ```css
 body {
@@ -100,6 +119,8 @@ p {
 }
 ```
 
+:::
+
 ## GitHub 가입
 
 Git 명령은 내 컴퓨터에서 실행되지만, STEP 05부터 쓰는 원격 저장소와 배포에는 GitHub 계정이 필요하다. 지금 가입해 두면 아래 작업자 정보 등록에 같은 이메일을 쓸 수 있다.
@@ -114,7 +135,7 @@ Git 명령은 내 컴퓨터에서 실행되지만, STEP 05부터 쓰는 원격 �
 1. GitHub 가입 이메일(또는 `noreply` 이메일)로 작업자 이름과 이메일을 전역(`--global`)으로 설정하고, `git config --global --list`로 확인한다.
 2. 실습 전용 폴더인 `portfolio-web`를 생성하고 해당 디렉터리로 이동한다.
 3. `git init`을 실행하여 저장소를 초기화한다.
-4. OpenCode에 첫 웹페이지 생성을 요청해 `index.html`과 `style.css`를 만들고 저장한다. 요청 예시는 `초보자를 위한 1페이지 자기소개 HTML/CSS 생성`이다. 이후 단계는 각자 만든 파일을 기준으로 진행한다.
+4. 예시 산출물의 요청문으로 OpenCode에 첫 웹페이지 생성을 요청해 `index.html`과 `style.css`를 만들고 저장한다. 이후 단계는 각자 만든 파일을 기준으로 진행한다.
 5. 이미지 폴더를 만들고 빈 폴더 추적용 `.gitkeep` 파일을 만든다: `mkdir -p images && touch images/.gitkeep`.
 6. `git status`를 실행하여 3개의 파일이 빨간색 Untracked 상태로 표시되는지 확인한다.
 7. `git add index.html style.css images/.gitkeep`을 입력해 스테이징 영역에 파일을 올린다.
