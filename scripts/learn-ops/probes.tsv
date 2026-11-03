@@ -1,0 +1,27 @@
+# label<TAB>path; $ASSET_JS, $ASSET_CSS, $PDF_VERSION, @files/ 치환 지원
+landing /	/
+lecture index /git/	/git/
+lecture page	/git/01-environment
+license /licenses	/licenses
+404 /nope	/nope
+static /favicon.svg	/favicon.svg
+static /header-logo.png	/header-logo.png
+hashed js	$ASSET_JS
+hashed css	$ASSET_CSS
+legacy /index.html	/index.html
+legacy /index	/index
+legacy /catalog	/catalog
+legacy /catalog.html?x=1	/catalog.html?x=1
+legacy /01-environment.html	/01-environment.html
+legacy /12-foo	/12-foo
+legacy /appendix/01-a.html	/appendix/01-a.html
+legacy /supplement/02-b	/supplement/02-b
+non-legacy /13-foo (asset 404)	/13-foo
+api /api/catalog	/api/catalog
+api /api	/api
+api /api/	/api/
+api /api/nope	/api/nope
+pdf plain (files host)	@files/$PDF_VERSION/01-environment.pdf
+pdf bad name (files host)	@files/$PDF_VERSION/x.pdf
+pdf wrong prefix (files host)	@files/v9.9.9/01-environment.pdf
+files root (files host)	@files/

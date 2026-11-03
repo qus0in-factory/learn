@@ -12,6 +12,8 @@ Node 최신 지원 LTS, curl, Wrangler 인증, 봉인된 `dist/learn-pdfs/artifa
 2. `node scripts/verify-learn-r2.mjs`: R2에서 12개 키를 직접 읽어 로컬 seal의 SHA256·크기와 비교한다. 누락·읽기 실패·크기/해시 불일치 중 하나라도 있으면 실패한다.
 3. `node scripts/deploy-learn-pdfs.mjs`: 같은 원격 완전성 검사를 **먼저** 수행한 뒤에만 사이트 빌드·D1 SQL 생성·learn Worker 배포·D1 적용을 차례로 실행한다.
 
+PDF namespace를 올릴 때는 `/v0.1.0/*`가 쓰인 `learn-site/.vitepress/pdf.json`의 `version`, `learn-worker/wrangler.jsonc`의 `routes`(`files.qus0in.dev/v0.1.0/*`), 같은 파일의 `assets.run_worker_first`(`/v0.1.0/*`) 세 곳을 함께 바꾼다.
+
 실패 시 사이트·D1 갱신 명령은 시작되지 않는다. 업로드가 일부만 성공했다면 원래 봉인된 산출물로 업로더를 재실행한다.
 수동 `wrangler deploy`/`d1 execute`로 이 가드를 우회하지 않는다. 로컬 SQL 생성만 하는 `sync-learn-d1.mjs`는 원격을 변경하지 않으므로 CI에서도 쓸 수 있다.
 
