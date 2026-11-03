@@ -56,7 +56,7 @@ git push origin main
 # 나의 포트폴리오
 
 ## 소개
-Git과 GitHub를 배우며 만든 첫 웹페이지입니다.
+Git과 GitHub를 배우며 만든 첫 웹페이지이다.
 
 ## 배포 주소
 https://계정이름.github.io/portfolio-web/
