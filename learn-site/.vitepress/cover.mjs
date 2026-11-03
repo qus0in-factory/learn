@@ -12,3 +12,4 @@ export const coverImage = {
   srcset: srcset('webp'),
 }
 export const coverAvif = { type: 'image/avif', srcset: srcset('avif'), sizes: cover.sizes }
+export const shareCover = url(cover.widths.at(-1), 'webp')
