@@ -4,8 +4,12 @@ layout: doc
 
 <script setup>
 import LandingCover from '../learn-site/.vitepress/theme/LandingCover.vue'
+import column from '../learn-site/.vitepress/landing-column.json'
+import '../learn-site/.vitepress/theme/landing-column.css'
 </script>
 
-<LandingCover />
+<div class="landing-column" :style="{ '--landing-column-width': column.maxWidth }">
+  <LandingCover />
 
-<CourseList />
+  <CourseList />
+</div>

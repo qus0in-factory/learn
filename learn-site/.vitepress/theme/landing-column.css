@@ -1,0 +1,6 @@
+@media (min-width: 960px) {
+  .landing-column {
+    max-width: var(--landing-column-width);
+    margin-inline: auto;
+  }
+}
