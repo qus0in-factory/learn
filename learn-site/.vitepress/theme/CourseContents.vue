@@ -1,11 +1,10 @@
 <script setup>
 import { useData } from 'vitepress'
 import { labels } from '../labels.mjs'
-import { stepLabel as step } from '../step-label.mjs'
 import './course-contents.css'
 import CourseResourceCells from './CourseResourceCells.vue'
 const { theme } = useData()
-const lessons = theme.value.courseLessons
+const lessons = theme.value.courseContents
 </script>
 
 <template>
@@ -13,8 +12,9 @@ const lessons = theme.value.courseLessons
     <thead><tr><th>{{ labels.order }}</th><th>{{ labels.title }}</th><th>{{ labels.pdfColumn }}</th><th>{{ labels.gistColumn }}</th></tr></thead>
     <tbody>
       <tr v-for="(lesson, index) in lessons" :key="lesson.link">
-        <td>{{ step(index) }}</td><td><a :href="lesson.link">{{ lesson.text }}</a></td>
-        <CourseResourceCells :lesson="lesson" :step="step(index)" />
+        <td>{{ lesson.order }}</td><td><a :href="lesson.link">{{ lesson.text }}</a></td>
+        <CourseResourceCells v-if="lesson.pdf" :lesson="lesson" :step="lesson.order" />
+        <template v-else><td></td><td></td></template>
       </tr>
     </tbody>
   </table></div>

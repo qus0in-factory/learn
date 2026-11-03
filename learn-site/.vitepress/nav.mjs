@@ -1,27 +1,8 @@
-import { readdirSync, readFileSync } from 'node:fs'
-import { displayTitle } from './display-text.mjs'
-import { labels } from './labels.mjs'
+import { navGroups } from './nav-groups.mjs'
+import { navItems } from './nav-items.mjs'
 
-const DIR = new URL('../../docs/lecture/', import.meta.url)
-const BASE = '/git/'
-
-function title(file) {
-  const text = readFileSync(new URL(file, DIR), 'utf8')
-  return text.match(/^# (.+)$/m)?.[1] ?? file.replace(/\.md$/, '')
-}
-
-function items(dir, pattern) {
-  return readdirSync(new URL(dir, DIR))
-    .filter((file) => pattern.test(file))
-    .sort()
-    .map((file) => ({
-      text: `${dir === 'appendix/' ? `${labels.appendix} ${Number(file.slice(0, 2))}. ` : ''}${displayTitle(title(`${dir}${file}`))}`,
-      link: `${BASE}${dir}${file.replace(/\.md$/, '')}`,
-    }))
-}
-
-export const sidebar = {
-  '/git/': [{ text: 'Go Git 集', items: items('', /^\d{2}-[\w-]+\.md$/) }],
-  '/git/appendix/': [{ text: '부록', items: items('appendix/', /^\d{2}-[\w-]+\.md$/) }],
-  '/git/supplement/': [{ text: '보충', items: items('supplement/', /^\d{2}-[\w-]+\.md$/) }],
-}
+export const sidebar = { '/git/': navGroups.map(group => ({
+  text: group.text, ...(group.collapsed === undefined ? {} : { collapsed: group.collapsed }),
+  items: navItems(group),
+})) }
+export const courseOrder = sidebar['/git/'].flatMap(group => group.items)
