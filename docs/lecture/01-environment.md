@@ -32,6 +32,20 @@ schedule: "09:00–09:45 (수업 45분) / 09:45–10:00 (휴식 15분)"
 2. **변경 이유 불명확**: 두 파일 사이에 구체적으로 어떤 코드나 문구가 바뀌었는지 한눈에 파악하기 어렵다.
 3. **복구를 못할 위험성**: 실수로 최신 파일 위에 이전 파일을 덮어쓰면 복구가 불가능하다.
 
+복사본 방식은 파일만 늘어나지만, Git 이력은 순서와 설명이 함께 남는다.
+
+```mermaid
+flowchart TB
+    subgraph COPY["복사본 방식"]
+        direction TB
+        V1["index_v1.html"] --> V2["index_v2.html"] --> V3["index_최종.html"] --> V4["index_진짜최종.html"]
+    end
+    subgraph GIT["Git 이력"]
+        direction TB
+        C1["커밋 1: 첫 웹페이지"] --> C2["커밋 2: 소개 수정"] --> C3["커밋 3: 스타일 정리"]
+    end
+```
+
 이러한 문제를 해결하고 코드의 변경 이력을 타임머신처럼 시간순으로 저장하여 언제든 안전한 과거 시점으로 되돌려 주는 도구가 바로 <strong>버전 관리 시스템(VCS, Version Control System)</strong>이다. 그리고 HTML, CSS, 이미지, 문서 등 프로젝트 전체의 구성 요소들을 하나의 유기적인 상태로 추적하고 통제하는 활동을 <strong>형상 관리(SCM, Software Configuration Management)</strong>라고 부른다.
 
 ## 로컬 3단계 구조와 상태 변화
@@ -39,7 +53,7 @@ schedule: "09:00–09:45 (수업 45분) / 09:45–10:00 (휴식 15분)"
 Git은 파일 변경을 무작정 저장하지 않고 확실히 구분되는 3단계를 거친다.
 
 ```mermaid
-flowchart LR
+flowchart TB
     WD["작업 공간<br/>(Working Directory)"] -->|git add| SA["스테이징 영역<br/>(Staging Area)"]
     SA -->|git commit| LR["로컬 저장소<br/>(Local Repository)"]
 ```

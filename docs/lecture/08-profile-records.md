@@ -28,6 +28,16 @@ schedule: "10:00–10:45 (수업 45분) / 10:45–11:00 (휴식 15분)"
 - **KPT 회고**: Keep(좋았던 점), Problem(어려웠던 점), Try(다음에 시도할 점)으로 나눈다.
 - **GitHub Wiki**: 코드 저장소와 분리하여 매뉴얼이나 용어집을 웹에서 정리하는 탭 기능이다.
 
+### 저장소 역할 구분
+
+Profile 저장소와 작업 저장소는 노출되는 곳과 담는 내용이 다르다.
+
+```mermaid
+flowchart TB
+    PROFILE["Profile 저장소<br/>(계정ID/계정ID)"] -->|README 노출| HOME["프로필 첫 화면"]
+    WORK["작업 저장소<br/>(예: portfolio-web)"] --> CODE["포트폴리오 코드와 docs"]
+```
+
 ## 따라하기
 
 1. `portfolio-web` 폴더가 현재 작업 저장소임을 확인한다.
@@ -53,6 +63,16 @@ git push origin main
 ```
 
 ## Post-mortem 예시
+
+Post-mortem은 한 번 쓰고 끝내지 않고 다음 작업에 반영한다.
+
+```mermaid
+flowchart TB
+    EVENT["발생 상황"] --> CAUSE["원인 분석"]
+    CAUSE --> ACTION["조치 내용"]
+    ACTION --> PREVENT["재발 방지책"]
+    PREVENT -->|다음 작업에 반영| EVENT
+```
 
 ```markdown
 # 에러 사후분석

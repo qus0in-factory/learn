@@ -27,6 +27,18 @@ schedule: "11:00–11:45 (수업 45분) / 11:45–12:00 (휴식 15분)"
 - **GitHub CLI (`gh`)**: 터미널에서 `gh issue list` 등을 실행하는 공식 CLI 도구다. 설치와 인증은 선택 사항이다.
 - **ChatGPT-GitHub 연동**: 저장소 코드를 AI로 질의하는 기능이다. 권한과 보안을 먼저 확인한다.
 
+### Issue 관계도
+
+Milestone은 Issue를 묶고, Label은 Issue를 분류하며, Issue는 Open에서 Closed로 바뀐다.
+
+```mermaid
+flowchart TB
+    MS["Milestone<br/>(목표 묶음)"] --> I1["Issue<br/>(작업 요청)"]
+    LB["Label<br/>(분류 표시)"] -.->|붙인다| I1
+    I1 --> OPEN["Open"]
+    OPEN -->|해결| CLOSED["Closed"]
+```
+
 ## 따라하기
 
 1. GitHub 저장소 웹 페이지의 `Issues` 탭을 연다.

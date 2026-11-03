@@ -28,9 +28,13 @@ schedule: "10:00–10:45 (수업 45분) / 10:45–11:00 (휴식 15분)"
 Git에서 파일은 단순히 존재하기만 하는 것이 아니라 다음과 같은 상태를 거친다:
 
 ```mermaid
-flowchart LR
-    UT["Untracked<br/>(Git이 아직 모르는 새 파일)"] -->|git add| ST["Staged<br/>(커밋 대기 상태)"]
-    MD["Modified<br/>(기존 파일 수정됨)"] -->|git add| ST
+stateDiagram-v2
+    [*] --> Untracked: 새 파일 생성
+    Untracked --> Staged: git add
+    Unmodified --> Modified: 파일 수정
+    Modified --> Staged: git add
+    Staged --> Unmodified: git commit
+    Staged --> Modified: git restore --staged
 ```
 
 1. **Untracked (미추적 상태)**

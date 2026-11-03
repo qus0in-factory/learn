@@ -27,7 +27,7 @@ schedule: "15:00–15:45 (수업 45분) / 15:45–16:00 (휴식 15분)"
 GitHub Pages는 다음과 같은 자동화 흐름으로 동작한다:
 
 ```mermaid
-flowchart LR
+flowchart TB
     ED["코드 수정<br/>(VS Code / OpenCode)"] -->|git add & commit| LC["로컬 커밋 완료"]
     LC -->|git push origin main| GH["GitHub 원격 저장소"]
     GH -->|Actions 빌드 자동 실행| GP["GitHub Pages 배포 완료<br/>(Live Website URL)"]
@@ -40,6 +40,22 @@ flowchart LR
    - 본 실습의 주소는 `https://<GitHub계정명>.github.io/<저장소이름>/` 형태가 된다. 예시 저장소 이름은 `portfolio-web`이다.
 3. **자동 재배포 주기**
    - 로컬에서 코드를 고친 뒤 `push`하면, GitHub 내부의 배포 자동화 로봇(GitHub Actions)이 동작하여 약 1~2분 안에 실제 사이트에 반영한다.
+
+### 배포 시간 순서
+
+`push`부터 사이트 반영까지는 아래 순서로 진행된다.
+
+```mermaid
+sequenceDiagram
+    participant L as 내 컴퓨터
+    participant G as GitHub 저장소
+    participant A as GitHub Actions
+    participant P as GitHub Pages
+    L->>G: git push
+    G->>A: 빌드 시작
+    A->>P: 배포
+    P-->>L: 약 1~2분 뒤 사이트 반영
+```
 
 ### 눈누와 Coolors
 포트폴리오 웹페이지를 가꿀 때 유용한 참고 도구이다:
