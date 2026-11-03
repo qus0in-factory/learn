@@ -26,6 +26,8 @@ export const labels = {
   extraNavigation: '추가 메뉴',
   step: 'STEP',
   appendix: '부록',
+  commands: '명령어',
+  tags: '태그',
   stepDigits: 2,
   stepPad: '0',
   learningGoals: '학습 목표',

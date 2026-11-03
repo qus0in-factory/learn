@@ -1,0 +1,5 @@
+{
+  "order": ["config", "init", "status", "add", "commit", "log", "diff", "restore", "rm", "remote",
+    "clone", "push", "pull", "branch", "switch", "merge", "tag", "reset", "revert"],
+  "docs": "https://git-scm.com/docs/git-"
+}
