@@ -1,3 +1,4 @@
+import { sidebar } from './nav.mjs'
 import { pdfUrl, revision } from './pdf-url.mjs'
 
 export { revision }
@@ -7,6 +8,7 @@ export const themeConfig = {
     { text: '강의 목차', link: '/index' },
     { text: 'PDF 다운로드', link: pdfUrl('01-environment.pdf') },
   ],
+  sidebar,
 }
 
 export function transformPageData(page) {
