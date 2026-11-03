@@ -1,7 +1,7 @@
 {
   "02": {"steps": [["add", "README.md"]], "views": [["status", "--short", "--branch"]]},
   "03": {"steps": [["add", "README.md"], ["commit", "-qm", "docs: add project guide"]], "views": [["log", "--oneline", "-3"]]},
-  "04": {"steps": [["commit", "--amend", "-qm", "feat: clarify portfolio title"]], "views": [["log", "--oneline", "-1"], ["status", "--short"]]},
+  "04": {"files": {".gitignore": ".env\n", ".env": "EXAMPLE=demo\n"}, "steps": [["add", ".gitignore"], ["commit", "--amend", "-qm", "chore: ignore local environment"]], "views": [["log", "--oneline", "-1"], ["check-ignore", ".env"], ["status", "--short"]]},
   "05": {"steps": [], "views": [["status", "--short", "--branch"], ["log", "--oneline", "-1"]]},
   "06": {"steps": [["add", "README.md"], ["commit", "-qm", "feat: document deployed portfolio"]], "views": [["log", "--oneline", "-2"]]},
   "07": {"steps": [["add", "README.md"], ["commit", "-qm", "docs: add project README"]], "views": [["status", "--short", "--branch"], ["log", "--oneline", "-2"]]},

@@ -14,6 +14,6 @@ export async function demo(topic) {
     git('add', '.');
     git('commit', '-qm', 'feat: add portfolio page');
     await writeFile(join(dir, 'README.md'), '# Portfolio\n');
-    return demoOutput(git, topic);
+    return demoOutput(git, topic, dir);
   } finally { await rm(dir, { recursive: true }); }
 }
