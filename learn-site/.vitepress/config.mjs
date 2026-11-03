@@ -2,9 +2,8 @@ import { defineConfig } from 'vitepress'
 import { markdown } from './markdown.mjs'
 import { themeConfig } from './site-theme.mjs'
 import { transformPageData } from './page-data.mjs'
-import { printHead } from './print.mjs'
+import { siteHead } from './site-head.mjs'
 import { site } from './site.mjs'
-import { faviconHead } from './favicon.mjs'
 import { excluded, pages, vueAlias } from './pages.mjs'
 import { cdnVite } from './cdn-vite.mjs'
 import { cdnHead } from './cdn-head.mjs'
@@ -25,7 +24,7 @@ export default defineConfig({
   themeConfig,
   transformPageData,
   transformHead: cdnHead,
-  head: [...printHead, ...faviconHead],
+  head: siteHead,
   vite: { ...cdnVite, plugins: sitePlugins, resolve: { alias: vueAlias } },
   markdown,
 })
