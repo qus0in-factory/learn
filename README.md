@@ -16,7 +16,7 @@ flowchart LR
 ## 연결 주소
 
 - 저장소: https://github.com/qus0in-factory/learn
-- 강의 목차: https://github.com/qus0in-factory/learn/blob/dev/docs/lecture/index.md
+- 강의 목차: https://github.com/qus0in-factory/learn/blob/main/docs/lecture/index.md
 - Wiki: https://github.com/qus0in-factory/learn/wiki
 - Issue #1: https://github.com/qus0in-factory/learn/issues/1
 - Issue #3: https://github.com/qus0in-factory/learn/issues/3
