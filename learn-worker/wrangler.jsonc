@@ -1,0 +1,15 @@
+{
+  "name": "learn",
+  "main": "index.js",
+  "compatibility_date": "2026-11-03",
+  "assets": {
+    "directory": "../dist/learn",
+    "binding": "ASSETS"
+  },
+  "routes": [
+    {
+      "pattern": "learn.qus0in.dev",
+      "custom_domain": true
+    }
+  ]
+}

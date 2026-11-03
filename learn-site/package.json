@@ -1,0 +1,10 @@
+{
+  "name": "hdg-learn-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev --host",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  }
+}
