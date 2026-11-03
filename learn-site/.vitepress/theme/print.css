@@ -10,7 +10,7 @@
     border-color: var(--print-fg) !important;
     transition: none !important;
   }
-  .VPNav, .VPLocalNav, .VPSidebar, .aside, .VPSkipLink,
+  .VPNav, .VPLocalNav, .VPSidebar, .aside, .VPSkipLink, .VPLocalSearchBox,
   .course-breadcrumb, .share-course, .pdf-download, .site-footer,
   .VPDocFooter, .header-anchor, button,
   .course-contents :is(th, td):nth-child(n+3) { display: none !important; }
