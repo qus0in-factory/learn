@@ -1,4 +1,5 @@
 import { labels } from './labels.mjs'
+import { adLabels } from './ad-labels.mjs'
 
 export const site = {
   title: labels.siteTitle,
@@ -13,6 +14,7 @@ export const site = {
   appLicense: '웹앱 자체 라이선스',
   appLicenseNotice: '추후 이곳에 표시합니다.',
   footer: [
+    { text: adLabels.privacy, link: adLabels.privacyPath },
     { text: 'License', link: '/licenses' },
     { text: 'GitHub', link: 'https://github.com/qus0in-factory', icon: 'github' },
     { text: 'X', link: 'https://x.com/qus0in', icon: 'x' },

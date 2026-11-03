@@ -1,7 +1,7 @@
 import { origin } from './seo-paths.mjs'
-import { seoBuild } from './seo-build.mjs'
+import { siteBuild } from './site-build.mjs'
 
 export const seoOptions = {
   sitemap: { hostname: origin, transformItems: items => items.filter(item => item.url !== '404.html') },
-  buildEnd: seoBuild,
+  buildEnd: siteBuild,
 }
