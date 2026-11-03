@@ -10,4 +10,7 @@ export const share = {
   copied: labels.copied,
   failed: labels.copyFailed,
   kakao: labels.shareKakao,
+  kakaoReady: labels.shareKakaoReady,
+  kakaoFailed: labels.shareKakaoFailed,
+  toastDuration: 3000,
 }

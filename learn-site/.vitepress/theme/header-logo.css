@@ -1,0 +1,17 @@
+.dark {
+  --header-logo-bg: #fff;
+  --header-logo-radius: 8px;
+  --header-logo-padding: 4px;
+}
+
+.dark .VPNavBarTitle .logo {
+  --header-logo-size: var(--vp-nav-logo-height, 36px);
+  box-sizing: content-box;
+  flex: none;
+  width: var(--header-logo-size);
+  height: var(--header-logo-size);
+  padding: var(--header-logo-padding);
+  background: var(--header-logo-bg);
+  border-radius: var(--header-logo-radius);
+  object-fit: contain;
+}

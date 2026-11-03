@@ -1,7 +1,5 @@
 .share-course {
-  --share-button-size: 40px;
-  --share-icon-size: 22px;
-  --share-padding: 8px;
+  --share-x-scale: .82;
   display: flex; flex-direction: column; gap: 16px; align-items: flex-start; margin: 20px 0;
 }
 .share-course img { width: 120px; height: 120px; }
@@ -20,6 +18,3 @@
   text-decoration: none;
 }
 .share-actions button:disabled { cursor: not-allowed; }
-.share-icon { display: inline-flex; vertical-align: middle; }
-.share-icon svg { width: var(--share-icon-size); height: var(--share-icon-size); color: currentColor; }
-.share-icon.x svg { fill: currentColor; }
