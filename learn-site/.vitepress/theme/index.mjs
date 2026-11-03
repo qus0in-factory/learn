@@ -1,11 +1,15 @@
 import DefaultTheme from 'vitepress/theme'
 import Layout from './Layout.vue'
 import CourseList from './CourseList.vue'
+import CourseHeader from './CourseHeader.vue'
+import CourseContents from './CourseContents.vue'
 
 export default {
   extends: DefaultTheme,
   Layout,
   enhanceApp({ app }) {
     app.component('CourseList', CourseList)
+    app.component('CourseHeader', CourseHeader)
+    app.component('CourseContents', CourseContents)
   },
 }

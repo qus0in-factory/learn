@@ -5,6 +5,7 @@ export const site = {
   logoHeight: '36px',
   catchphrase: '날로 달라지는 세상, 익혀서 배우자!',
   updated: '최종 업데이트 : ',
+  home: '첫 페이지',
   licenseTitle: '오픈소스 라이선스',
   licenseNotice: '이 사이트의 제작·실행에 사용한 의존성과 라이선스입니다.',
   appLicense: '웹앱 자체 라이선스',

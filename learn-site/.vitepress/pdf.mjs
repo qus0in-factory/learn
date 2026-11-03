@@ -7,6 +7,7 @@ export { revision }
 export const themeConfig = {
   logo: site.logo,
   nav: [],
+  outline: { label: '목차' },
   sidebar,
 }
 

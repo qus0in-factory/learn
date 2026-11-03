@@ -1,0 +1,11 @@
+.share-course { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; margin: 20px 0; }
+.share-course img { width: 120px; height: 120px; }
+.share-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.share-actions button, .share-actions a {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 6px;
+  padding: 6px 10px;
+  color: var(--vp-c-text-1);
+  text-decoration: none;
+}
+.share-actions button:disabled { opacity: .55; cursor: not-allowed; }

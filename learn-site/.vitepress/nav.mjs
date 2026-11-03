@@ -13,13 +13,13 @@ function items(dir, pattern) {
     .filter((file) => pattern.test(file))
     .sort()
     .map((file) => ({
-      text: title(`${dir}${file}`),
+      text: title(`${dir}${file}`).replace(/^\d+차시\.\s*/, ''),
       link: `${BASE}${dir}${file.replace(/\.md$/, '')}`,
     }))
 }
 
 export const sidebar = {
-  '/git/': [{ text: '12차시 강의', items: items('', /^\d{2}-[\w-]+\.md$/) }],
+  '/git/': [{ text: 'Go Git 集', items: items('', /^\d{2}-[\w-]+\.md$/) }],
   '/git/appendix/': [{ text: '부록', items: items('appendix/', /^\d{2}-[\w-]+\.md$/) }],
   '/git/supplement/': [{ text: '보충', items: items('supplement/', /^\d{2}-[\w-]+\.md$/) }],
 }

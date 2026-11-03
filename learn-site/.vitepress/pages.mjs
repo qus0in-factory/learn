@@ -1,10 +1,15 @@
 export const pages = {
-  'lecture/index.md': 'git/index.md',
+  'course-git.md': 'git/index.md',
   'lecture/catalog.md': 'git/catalog.md',
   'lecture/:page': 'git/:page',
   'lecture/appendix/:page': 'git/appendix/:page',
   'lecture/supplement/:page': 'git/supplement/:page',
 }
+
+export const excluded = [
+  '261102/**', '261103/**', 'ci.md', 'deployment.md',
+  'setup/**', 'license-notices.md', 'lecture/index.md',
+]
 
 export const vueAlias = {
   vue: new URL('../../course-site/node_modules/vue', import.meta.url).pathname,

@@ -9,6 +9,7 @@ const { frontmatter } = useData()
 
 <template>
   <DefaultTheme.Layout :style="{ '--vp-nav-logo-height': site.logoHeight }">
+    <template #sidebar-nav-before><a href="/">{{ site.home }}</a></template>
     <template #layout-bottom><SiteFooter /></template>
     <template #doc-before>
       <p v-if="frontmatter.pdf" class="pdf-download">
