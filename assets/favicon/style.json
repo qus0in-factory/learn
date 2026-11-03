@@ -1,0 +1,13 @@
+{
+  "source": "assets/favicon/source-22.png",
+  "background": "#FFFFFF",
+  "book": "#000000",
+  "fire": "#B85C57",
+  "radius": 0.2,
+  "sizes": {
+    "favicon-96x96.png": 96,
+    "apple-touch-icon.png": 180,
+    "web-app-manifest-192x192.png": 192,
+    "web-app-manifest-512x512.png": 512
+  }
+}
