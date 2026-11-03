@@ -4,6 +4,7 @@ import CourseList from './CourseList.vue'
 import CourseHeader from './CourseHeader.vue'
 import CourseContents from './CourseContents.vue'
 import './content-links.css'
+import './mermaid-theme.css'
 
 export default {
   extends: DefaultTheme,

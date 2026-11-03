@@ -1,0 +1,40 @@
+/* Mermaid diagram colors. All values live in these tokens; pele reads --pele-* at paint time,
+   so the light/dark switch needs no re-render. Pairs were checked for WCAG contrast. */
+:root {
+  --mermaid-bg: #f6f6f7;
+  --mermaid-frame: #d5d8df;
+  --mermaid-fg: #1f2937;
+  --mermaid-muted: #4b5563;
+  --mermaid-line: #4b5563;
+  --mermaid-surface: #ffffff;
+  --mermaid-surface-alt: #e8ecf5;
+  --mermaid-border: #7b8497;
+  --mermaid-accent: #3451b2;
+}
+.dark {
+  --mermaid-bg: #202127;
+  --mermaid-frame: #3c3f44;
+  --mermaid-fg: #e5e7eb;
+  --mermaid-muted: #a8afbf;
+  --mermaid-line: #a8afbf;
+  --mermaid-surface: #2e3039;
+  --mermaid-surface-alt: #3a3d49;
+  --mermaid-border: #8a93a8;
+  --mermaid-accent: #a8b1ff;
+}
+.mermaid-diagram {
+  --pele-bg: var(--mermaid-bg);
+  --pele-fg: var(--mermaid-fg);
+  --pele-muted: var(--mermaid-muted);
+  --pele-line: var(--mermaid-line);
+  --pele-surface: var(--mermaid-surface);
+  --pele-surface-alt: var(--mermaid-surface-alt);
+  --pele-border: var(--mermaid-border);
+  --pele-accent: var(--mermaid-accent);
+  margin: 16px 0;
+  padding: 16px;
+  overflow-x: auto;
+  background: var(--mermaid-bg);
+  border: 1px solid var(--mermaid-frame);
+  border-radius: 8px;
+}
