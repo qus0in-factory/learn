@@ -1,11 +1,13 @@
-import { chromium } from 'playwright';
+import { launch } from './runtime.mjs';
+import { fonts } from './fonts.mjs';
 import { here, output } from './paths.mjs';
 import { overflowTest } from './overflow-test.mjs';
 import { tableTest } from './table-test.mjs';
 import { layoutTest } from './layout-test.mjs';
-const browser = await chromium.launch({ channel: process.env.PDF_BROWSER || 'chrome' });
+const browser = await launch();
 try {
   const page = await browser.newPage();
+  await fonts(page);
   await page.addStyleTag({ path: here + 'style.css' });
   await page.addScriptTag({ path: output + '/renderer.js' });
   await overflowTest(page);

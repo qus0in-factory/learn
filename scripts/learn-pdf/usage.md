@@ -1,9 +1,18 @@
 # Learn 슬라이드 PDF
 
 저장소 루트에서 `bash scripts/build-learn-pdfs.sh`를 실행한다.
-Node.js/npm, Python 3, Chrome, Poppler(`pdftotext`, `pdftoppm`)가 필요하다.
-기본 브라우저 채널은 `chrome`; Chromium 설치 환경은 `PDF_BROWSER=chromium`을 지정한다.
-한글 폰트는 macOS의 Apple SD Gothic Neo 또는 Linux의 Noto Sans CJK KR을 사용한다.
+Node.js/npm(검증 런타임 26.13.0 LTS), Python 3, Poppler(`pdftotext`, `pdftoppm`, `pdffonts`)가 필요하다.
+Playwright 1.56.1의 번들 Chromium 141.0.7390.37만 사용한다. 시스템 브라우저 override는 실패한다.
+`fonts/`에 고정한 OFL Noto Sans KR·Noto Sans Mono와 SHA256을 검증하고 CDP로 실제 사용 폰트를 검사한다.
+시스템 폰트 fallback이 한 글자라도 감지되면 실패한다. OFL 원문과 upstream commit은 같은 디렉터리에 있다.
+`toolchain.json`은 브라우저·폰트·의존성 lock·Node·OS 버전을 기록한다.
+`node scripts/learn-pdf/font-test.mjs`는 브라우저 override와 폰트 fallback 거부를 검증한다.
+
+두 환경 비교: dev의 `PDF reproducibility` workflow_dispatch를 실행하고 artifact를 내려받는다.
+로컬에서도 `python3 scripts/learn-pdf/repro.py dist/learn-pdfs`를 실행한다.
+양쪽 `repro.json`의 페이지수·규격·공백 정규화 텍스트·임베드 폰트를 비교한다.
+PDF 생성시각·Git 실습 캡처의 임시 커밋 식별자·OS별 rasterization은 바이트 비교 대상에서 제외한다.
+폰트 고정 이후 페이지수는 과거 시스템 폰트 빌드와 달라질 수 있으며, 두 환경의 새 빌드끼리 비교한다.
 
 입력은 `docs/lecture/01-*.md`부터 `12-*.md`까지다. 기존 slides/는 사용하지 않는다.
 출력은 git에서 제외된 `dist/learn-pdfs/`: PDF 12개, 페이지수·대표 페이지 manifest,

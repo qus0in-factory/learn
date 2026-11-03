@@ -1,0 +1,27 @@
+name: PDF reproducibility
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  pdf:
+    if: github.ref == 'refs/heads/dev'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: '26.13.0'
+      - run: sudo apt-get update && sudo apt-get install -y poppler-utils
+      - run: npm ci --no-audit --no-fund
+        working-directory: scripts/learn-pdf
+      - run: npx playwright install --with-deps chromium
+        working-directory: scripts/learn-pdf
+      - run: bash scripts/build-learn-pdfs.sh
+      - run: python3 scripts/learn-pdf/repro.py dist/learn-pdfs
+      - uses: actions/upload-artifact@v7.0.2
+        with:
+          name: pdf-repro-${{ github.sha }}
+          path: dist/learn-pdfs
+          retention-days: 7
