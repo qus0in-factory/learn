@@ -19,8 +19,8 @@ jobs:
       - uses: actions/setup-node@v7.1.0
         with:
           node-version: '26.13.0'
-      - run: sudo apt-get update && sudo apt-get install -y poppler-utils
-      - run: bash scripts/learn-pdf/ci.sh
+      - run: sudo apt-get update && sudo apt-get install -y poppler-utils unzip
+      - run: bash scripts/learn-pdf-ops/ci-bootstrap.sh
       - uses: actions/upload-artifact@v7.0.2
         with:
           name: pdf-repro-${{ github.sha }}
