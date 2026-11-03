@@ -9,6 +9,15 @@
   font-size: 14px;
 }
 .site-footer a:hover { color: var(--vp-c-brand-1); }
+.site-footer-icon {
+  display: inline-flex;
+  align-items: center;
+}
+.site-footer-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
 @media (min-width: 960px) {
   .Layout:has(.VPSidebar) .site-footer { margin-left: var(--vp-sidebar-width); }
 }
