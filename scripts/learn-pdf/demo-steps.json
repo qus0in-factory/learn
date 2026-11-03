@@ -1,0 +1,12 @@
+{
+  "02": {"steps": [["add", "README.md"]], "views": [["status", "--short", "--branch"]]},
+  "03": {"steps": [["add", "README.md"], ["commit", "-qm", "docs: add project guide"]], "views": [["log", "--oneline", "-3"]]},
+  "04": {"steps": [["commit", "--amend", "-qm", "feat: clarify portfolio title"]], "views": [["log", "--oneline", "-1"], ["status", "--short"]]},
+  "05": {"steps": [], "views": [["status", "--short", "--branch"], ["log", "--oneline", "-1"]]},
+  "06": {"steps": [["add", "README.md"], ["commit", "-qm", "feat: document deployed portfolio"]], "views": [["log", "--oneline", "-2"]]},
+  "07": {"steps": [["add", "README.md"], ["commit", "-qm", "docs: add project README"]], "views": [["status", "--short", "--branch"], ["log", "--oneline", "-2"]]},
+  "08": {"steps": [["add", "README.md"], ["commit", "-qm", "docs: record learning notes"]], "views": [["log", "--oneline", "-2"]]},
+  "10": {"steps": [["switch", "-qc", "feature/profile-design"]], "views": [["branch"], ["log", "--oneline", "-1"]]},
+  "11": {"steps": [["branch", "feature/profile-design"]], "views": [["log", "--oneline", "--graph", "--all", "--decorate"]]},
+  "12": {"steps": [["switch", "-qc", "feature/final-polish"], ["add", "README.md"], ["commit", "-qm", "feat: polish portfolio guide"]], "views": [["diff", "--stat", "main...HEAD"], ["log", "--oneline", "-2"]]}
+}

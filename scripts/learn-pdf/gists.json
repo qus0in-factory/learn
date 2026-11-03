@@ -1,0 +1,91 @@
+{
+  "02-local-repository": {
+    "id": "acf800e9844e988ab04c79a117a33c92",
+    "url": "https://gist.github.com/qus0in/acf800e9844e988ab04c79a117a33c92",
+    "files": [
+      "portfolio-1.html",
+      "portfolio-1.css",
+      "git-commands-1.sh"
+    ]
+  },
+  "03-commit-history": {
+    "id": "a189bb4a300350495ffabd0224ce946b",
+    "url": "https://gist.github.com/qus0in/a189bb4a300350495ffabd0224ce946b",
+    "files": [
+      "portfolio-1.html",
+      "git-commands-1.sh"
+    ]
+  },
+  "04-amend-ignore": {
+    "id": "e83804d3ba8c3df3aa9965b651040c97",
+    "url": "https://gist.github.com/qus0in/e83804d3ba8c3df3aa9965b651040c97",
+    "files": [
+      "ignore-rules-1.gitignore",
+      "git-commands-1.sh"
+    ]
+  },
+  "05-remote": {
+    "id": "69ec32548538789a020ec80ca5f882fb",
+    "url": "https://gist.github.com/qus0in/69ec32548538789a020ec80ca5f882fb",
+    "files": [
+      "git-commands-1.sh",
+      "git-commands-2.sh"
+    ]
+  },
+  "06-pages": {
+    "id": "a708f0d3f35c1f5faf4a63f6b43bc91b",
+    "url": "https://gist.github.com/qus0in/a708f0d3f35c1f5faf4a63f6b43bc91b",
+    "files": [
+      "portfolio-1.html",
+      "portfolio-1.css",
+      "git-commands-1.sh"
+    ]
+  },
+  "07-markdown-mermaid": {
+    "id": "3d250f2288c79b98cd6a577ab6b1fb70",
+    "url": "https://gist.github.com/qus0in/3d250f2288c79b98cd6a577ab6b1fb70",
+    "files": [
+      "git-commands-1.sh",
+      "writing-template-1.md"
+    ]
+  },
+  "08-profile-records": {
+    "id": "40b8585194fdeddcaff41ba0c2856976",
+    "url": "https://gist.github.com/qus0in/40b8585194fdeddcaff41ba0c2856976",
+    "files": [
+      "git-commands-1.sh",
+      "writing-template-1.md",
+      "writing-template-2.md"
+    ]
+  },
+  "09-issues": {
+    "id": "0da79a4cd81d8626014f8b4bdbd769bd",
+    "url": "https://gist.github.com/qus0in/0da79a4cd81d8626014f8b4bdbd769bd",
+    "files": [
+      "writing-template-1.md"
+    ]
+  },
+  "10-branches-tags": {
+    "id": "b3a04f60248fb3093e68ad672f185043",
+    "url": "https://gist.github.com/qus0in/b3a04f60248fb3093e68ad672f185043",
+    "files": [
+      "git-commands-1.sh"
+    ]
+  },
+  "11-merge-conflicts": {
+    "id": "32c7a853a3a54422c5821d2510eb8e7b",
+    "url": "https://gist.github.com/qus0in/32c7a853a3a54422c5821d2510eb8e7b",
+    "files": [
+      "git-commands-1.sh"
+    ]
+  },
+  "12-pull-request": {
+    "id": "28d1ecc42ed949ed000fc2f525ea7440",
+    "url": "https://gist.github.com/qus0in/28d1ecc42ed949ed000fc2f525ea7440",
+    "files": [
+      "portfolio-1.html",
+      "git-commands-1.sh",
+      "writing-template-1.md"
+    ]
+  }
+}
