@@ -14,7 +14,7 @@ export const themeConfig = {
 }
 
 export function transformPageData(page) {
-  if (/^lecture\/(0[1-9]|1[0-2])-[\w-]+\.md$/.test(page.relativePath)) {
-    page.frontmatter.pdf = pdfUrl(page.relativePath.replace(/^lecture\//, '').replace(/\.md$/, '.pdf'))
+  if (/^(?:lecture|git)\/(0[1-9]|1[0-2])-[\w-]+\.md$/.test(page.relativePath)) {
+    page.frontmatter.pdf = pdfUrl(page.relativePath.split('/').at(-1).replace(/\.md$/, '.pdf'))
   }
 }
