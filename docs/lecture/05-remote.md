@@ -1,12 +1,11 @@
 ---
-subtitle: "remote·push·pull·clone으로 원격 저장소를 연결하고 동기화한다."
+subtitle: "원격 저장소를 연결하고 동기화한다."
+tags: ["remote", "push", "pull", "clone"]
 day: 1
 schedule: "14:00–14:45 (수업 45분) / 14:45–15:00 (휴식 15분)"
 ---
 
 # 원격 저장소와 동기화
-
-저장소: `portfolio-web`
 
 ## 학습 목표
 
@@ -102,14 +101,14 @@ GitHub 저장소 생성 및 push 전 확인 체크리스트 작성
 clone과 fork 차이 초보자 눈높이 비교 설명
 ```
 
-## 확인법
+## 체크리스트
 
 - [ ] `git remote -v` 실행 시 `origin` 이름으로 fetch, push 두 줄의 올바른 GitHub URL이 표시된다.
 - [ ] `git push -u origin main`이 에러 없이 정상 완료된다.
 - [ ] 브라우저에서 GitHub 저장소 페이지를 새로고침했을 때 내 파일들과 커밋 목록이 보인다.
 - [ ] `git status` 실행 시 `Your branch is up to date with 'origin/main'` 메시지가 나타난다.
 
-## 오류 복구
+## 트러블 슈팅
 
 | 증상 | 원인 | 대응 |
 | --- | --- | --- |
@@ -117,7 +116,7 @@ clone과 fork 차이 초보자 눈높이 비교 설명
 | `error: failed to push some refs ... (non-fast-forward)` | GitHub에서 빈 저장소를 만들지 않고 README 등을 함께 생성함 | GitHub 저장소를 삭제 후 체크박스를 모두 풀고 빈 저장소로 다시 만들거나 강사에게 문의한다. |
 | 인증 실패 또는 403 Forbidden 오류 | 이전 다른 계정 자격 증명이 남아있거나 토큰 만료 | Windows 자격 증명 관리자에서 이전 계정을 삭제하고 재인증한다. 상세 절차는 [부록 1](appendix/01-authentication.md)과 [부록 5](appendix/05-os-differences.md)를 참조한다. |
 
-## 정보 누출 방지
+## 주의할 점
 
 - Personal Access Token이나 비밀번호를 절대 소스 코드 파일이나 공개 채팅, 이슈에 남기지 않습니다.
 - 원격 저장소의 이력을 강제로 덮어쓰는 `git push --force` (또는 `-f`) 명령은 팀원의 작업을 파괴할 수 있으므로 절대 실행하지 않습니다.

@@ -1,0 +1,33 @@
+:root {
+  --step-downloads-padding: 12px 16px;
+  --step-downloads-radius: 8px;
+}
+
+.step-downloads {
+  margin: 16px 0;
+  padding: var(--step-downloads-padding);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: var(--step-downloads-radius);
+  background: var(--vp-c-bg-soft);
+}
+
+.step-downloads__title {
+  margin: 0 0 4px;
+  font-weight: 600;
+}
+
+.step-downloads ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.step-downloads a {
+  color: var(--vp-c-brand-1);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.step-downloads li + li {
+  margin-top: 4px;
+}

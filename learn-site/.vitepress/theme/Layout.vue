@@ -4,7 +4,7 @@ import { useData } from 'vitepress'
 import SiteFooter from './SiteFooter.vue'
 import { site } from '../site.mjs'
 import CourseBreadcrumb from './CourseBreadcrumb.vue'
-import StepHeader from './StepHeader.vue'
+import StepIntro from './StepIntro.vue'
 import PageUpdated from './PageUpdated.vue'
 import { appendixPrefix } from '../appendix-prefix.mjs'
 import './task-list.css'
@@ -22,7 +22,7 @@ const { frontmatter, page } = useData()
     </template>
     <template #doc-before>
       <CourseBreadcrumb v-if="/^git\/(?:\d{2}-|appendix\/)/.test(page.relativePath)" />
-      <StepHeader v-if="frontmatter.pdf" :key="page.relativePath" />
+      <StepIntro v-if="frontmatter.pdf" :key="page.relativePath" />
     </template>
   </DefaultTheme.Layout>
 </template>

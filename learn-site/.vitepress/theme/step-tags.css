@@ -1,0 +1,27 @@
+:root {
+  --step-tag-gap: 6px;
+  --step-tag-padding: 2px 10px;
+  --step-tag-radius: 999px;
+  --step-tag-size: 13px;
+}
+
+.vp-doc .step-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--step-tag-gap);
+  margin: 12px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.vp-doc .step-tags li {
+  margin: 0;
+  list-style: none;
+  padding: var(--step-tag-padding);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: var(--step-tag-radius);
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-text-2);
+  font-size: var(--step-tag-size);
+  line-height: 1.6;
+}

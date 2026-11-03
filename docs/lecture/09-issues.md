@@ -1,12 +1,11 @@
 ---
-subtitle: "Issue·Label·Milestone으로 작업을 나누고 추적한다."
+subtitle: "이슈로 작업을 나누고 추적한다."
+tags: ["Issue", "Label", "Milestone"]
 day: 2
 schedule: "11:00–11:45 (수업 45분) / 11:45–12:00 (휴식 15분)"
 ---
 
 # 이슈로 작업 관리
-
-저장소: `portfolio-web`
 
 ## 학습 목표
 
@@ -68,14 +67,14 @@ Label과 Milestone 차이 설명
 - [ ] README에 사용법이 적혀 있다.
 ```
 
-## 확인법
+## 체크리스트
 
 - [ ] Issues 목록에 라벨 색상이 입혀진 티켓이 2개 이상 있다.
 - [ ] Milestone 게이지가 표시된다.
 - [ ] Issue 본문에 비밀 값이 없다.
 - [ ] `gh`가 실패해도 브라우저에서 같은 작업을 수행할 수 있다.
 
-## 오류 복구
+## 트러블 슈팅
 
 | 증상 | 원인 | 대응 |
 | --- | --- | --- |
@@ -84,7 +83,7 @@ Label과 Milestone 차이 설명
 | Milestone이 보이지 않음 | 메뉴 위치를 찾지 못함 | 저장소 `Issues` 탭의 `Milestones` 메뉴를 다시 확인한다 |
 | Label이 적용되지 않음 | Label 미생성 | `Labels` 메뉴에서 먼저 Label을 만든다 |
 
-## 정보 누출 방지
+## 주의할 점
 
 - Issue와 PR 본문에 비밀 값, 토큰, 비밀번호를 적지 않는다.
 - `gh`와 ChatGPT-GitHub 연동은 선택 심화이며 필수 설치 대상이 아니다.

@@ -3,6 +3,7 @@ import { useData } from 'vitepress'
 import { site } from '../site.mjs'
 import { stepLabel } from '../step-label.mjs'
 import ShareCourse from './ShareCourse.vue'
+import StepTags from './StepTags.vue'
 import './step-header.css'
 
 const { page, frontmatter, theme } = useData()
@@ -17,6 +18,7 @@ const course = { title: page.value.title, summary: frontmatter.value.subtitle ||
     <p v-if="lesson" class="step-header__step">{{ stepLabel(index) }}</p>
     <h1>{{ page.title }}</h1>
     <p v-if="frontmatter.subtitle">{{ frontmatter.subtitle }}</p>
+    <StepTags />
     <small>{{ site.updated }}{{ frontmatter.pageUpdated }}</small>
     <ShareCourse v-if="lesson" :course="course" :lesson="lesson" />
   </header>

@@ -1,12 +1,11 @@
 ---
-subtitle: "Markdown 문법과 Mermaid 다이어그램으로 문서를 작성한다."
+subtitle: "Markdown과 다이어그램으로 문서를 작성한다."
+tags: ["Markdown", "Mermaid"]
 day: 2
 schedule: "09:00–09:45 (수업 45분) / 09:45–10:00 (휴식 15분)"
 ---
 
 # 마크다운과 다이어그램
-
-저장소: `portfolio-web`
 
 ## 학습 목표
 
@@ -99,7 +98,7 @@ README 프로젝트 소개, 배포 링크, Mermaid 흐름도 작성
 Mermaid 다이어그램에 pull 흐름 화살표 추가
 ```
 
-## 확인법
+## 체크리스트
 
 - [ ] VS Code 미리보기에서 제목, 표, 체크리스트가 렌더링된다.
 - [ ] Mermaid 순서도가 미리보기에서 표시된다.
@@ -108,7 +107,7 @@ Mermaid 다이어그램에 pull 흐름 화살표 추가
 - [ ] 배포 주소 링크를 클릭해 사이트가 열린다.
 - [ ] `git status`가 깨끗하다.
 
-## 오류 복구
+## 트러블 슈팅
 
 | 증상 | 원인 | 대응 |
 | --- | --- | --- |
@@ -117,7 +116,7 @@ Mermaid 다이어그램에 pull 흐름 화살표 추가
 | 링크가 열리지 않음 | GitHub Pages URL 오타 | `계정이름.github.io/portfolio-web/` 형식으로 다시 복사한다 |
 | push가 거절됨 | 원격에 없는 커밋이 있음 | `git pull origin main` 후 다시 push 한다 |
 
-## 정보 누출 방지
+## 주의할 점
 
 - README에 비밀 값, 토큰, 비밀번호를 적지 않는다.
 - 공개 저장소이므로 배포 주소와 소개 문구만 노출한다.

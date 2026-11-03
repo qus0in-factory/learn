@@ -1,12 +1,11 @@
 ---
-subtitle: "merge로 변경 사항을 합치고 충돌을 해결한다."
+subtitle: "변경 사항을 합치고 충돌을 해결한다."
+tags: ["merge", "충돌 해결"]
 day: 2
 schedule: "14:00–14:45 (수업 45분) / 14:45–15:00 (휴식 15분)"
 ---
 
 # 병합과 충돌 해결
-
-저장소: `portfolio-web`
 
 ## 학습 목표
 
@@ -74,7 +73,7 @@ git merge --abort
 log graph에서 Fast-forward 가능 이유 설명
 ```
 
-## 확인법
+## 체크리스트
 
 - [ ] 충돌 마커가 파일에 남아 있지 않다.
 - [ ] Merge Commit이 생성되었다.
@@ -82,7 +81,7 @@ log graph에서 Fast-forward 가능 이유 설명
 - [ ] `feature/profile-design` 브랜치가 정리되었다.
 - [ ] `git status`가 깨끗하다.
 
-## 오류 복구
+## 트러블 슈팅
 
 | 증상 | 원인 | 대응 |
 | --- | --- | --- |
@@ -91,7 +90,7 @@ log graph에서 Fast-forward 가능 이유 설명
 | 그래프가 보이지 않음 | 옵션 누락 | `git log --graph --oneline --all`을 실행한다 |
 | 브랜치 삭제 실패 | 병합 미완료 | 병합 커밋을 먼저 완료한다 |
 
-## 정보 누출 방지
+## 주의할 점
 
 - 충돌 파일을 저장하기 전에 강사와 확인한다.
 - `reset --hard`로 충돌을 해결하지 않는다.

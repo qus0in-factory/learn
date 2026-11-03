@@ -31,7 +31,7 @@ Git은 커밋 작성자 정보와 GitHub 로그인 정보를 따로 관리합니
 7. 실제 인증은 `git ls-remote origin` 또는 push 성공, GitHub Settings의 세션 목록, 필요 시 `gh auth status`로 확인합니다.
 8. 조직 SSO나 2FA가 걸린 계정은 브라우저 승인과 자격 증명 재등록을 함께 확인합니다.
 
-## 확인법
+## 체크리스트
 
 - [ ] `git remote -v`의 주소가 내 교육용 저장소다.
 - [ ] 자격 증명 관리자에서 GitHub 관련 항목만 삭제했다.

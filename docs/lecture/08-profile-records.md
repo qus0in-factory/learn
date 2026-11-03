@@ -1,12 +1,11 @@
 ---
-subtitle: "프로필 README·TIL·Post-mortem으로 작업 기록을 남긴다."
+subtitle: "프로필과 작업 기록을 남긴다."
+tags: ["README", "TIL", "Post-mortem"]
 day: 2
 schedule: "10:00–10:45 (수업 45분) / 10:45–11:00 (휴식 15분)"
 ---
 
 # 프로필과 작업 기록
-
-저장소: `portfolio-web` (작업 저장소)와 `<계정ID>/<계정ID>` (별도 Profile 저장소)
 
 ## 학습 목표
 
@@ -92,7 +91,7 @@ Post-mortem 템플릿 작성
 Profile 저장소와 작업 저장소 차이 설명
 ```
 
-## 확인법
+## 체크리스트
 
 - [ ] `https://github.com/<계정ID>` 접속 시 프로필 소개 카드가 노출된다.
 - [ ] `portfolio-web` 저장소에 `docs/post-mortem.md`가 있다.
@@ -100,7 +99,7 @@ Profile 저장소와 작업 저장소 차이 설명
 - [ ] Profile 저장소와 `portfolio-web` 저장소를 구분해서 말할 수 있다.
 - [ ] Wiki 또는 대체 문서 위치를 확인했다.
 
-## 오류 복구
+## 트러블 슈팅
 
 | 증상 | 원인 | 대응 |
 | --- | --- | --- |
@@ -109,7 +108,7 @@ Profile 저장소와 작업 저장소 차이 설명
 | Wiki 탭이 보이지 않음 | 기능 미지원 또는 권한 부족 | `notes/wiki-draft.md`로 대체한다 |
 | push가 거절됨 | 원격에 없는 커밋이 있음 | `git pull origin main` 후 다시 push 한다 |
 
-## 정보 누출 방지
+## 주의할 점
 
 - 공개 프로필에 개인 정보를 과도하게 적지 않는다.
 - Post-mortem에는 비밀 값, 토큰, 비밀번호를 적지 않는다.

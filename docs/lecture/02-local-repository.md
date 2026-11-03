@@ -1,12 +1,11 @@
 ---
-subtitle: "config·init·status·add로 Git 저장소를 만들고 파일을 추적한다."
+subtitle: "Git 저장소를 만들고 파일을 추적한다."
+tags: ["config", "init", "status", "add"]
 day: 1
 schedule: "10:00–10:45 (수업 45분) / 10:45–11:00 (휴식 15분)"
 ---
 
 # 저장소 준비와 파일 추적
-
-저장소: `portfolio-web`
 
 ## 학습 목표
 
@@ -158,14 +157,14 @@ git add .
 index.html 취미 또는 목표 문구 추가
 ```
 
-## 확인법
+## 체크리스트
 
 - [ ] `git config user.name`과 `git config user.email` 입력 시 등록한 정보가 출력된다.
 - [ ] `portfolio-web` 폴더 안에 숨김 폴더 `.git`이 생성되어 있다 (`ls -la`로 확인).
 - [ ] `git status` 결과에서 `index.html`, `style.css`, `images/.gitkeep`이 초록색 staged 상태로 표시된다.
 - [ ] `.gitkeep` 파일이 왜 필요한지 이유를 설명할 수 있다.
 
-## 오류 복구
+## 트러블 슈팅
 
 | 증상 | 원인 | 대응 |
 | --- | --- | --- |
@@ -174,7 +173,7 @@ index.html 취미 또는 목표 문구 추가
 | `git status`에 파일이 안 보임 | 파일이 저장되지 않았거나 다른 폴더에 생성됨 | VS Code에서 파일 저장(`Ctrl + S`)을 확인하고 현재 폴더 경로를 점검한다. |
 | 실수로 원치 않는 파일을 `add`함 | 전체 추가 또는 파일 오입력 | `git restore --staged <파일명>` 명령어로 스테이징을 안전하게 취소한다. |
 
-## 정보 누출 방지
+## 주의할 점
 
 - 민감한 개인정보나 임시 파일을 확인 없이 한 번에 올리는 `git add .`는 입문 단계에서 지양하고, 파일명을 명시적으로 지정하여 add하는 습관을 들입니다.
 - `.git` 폴더 안의 내부 파일들은 Git이 자체적으로 관리하므로 사용자가 직접 수정하거나 삭제하지 않습니다.

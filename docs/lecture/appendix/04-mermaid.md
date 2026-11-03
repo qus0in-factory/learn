@@ -69,7 +69,7 @@ sequenceDiagram
 저장소 Git 흐름 Mermaid flowchart README 추가. 실제 파일 수정 금지, 코드 제안만
 ```
 
-## 확인법
+## 체크리스트
 
 - [ ] 코드 블록 언어가 `mermaid`다.
 - [ ] VS Code 미리보기에서 다이어그램이 보인다.
