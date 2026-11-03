@@ -60,6 +60,12 @@ gitGraph
 
 ## Git 명령
 
+명령 이름의 뜻은 다음과 같다.
+
+- `branch`: 나뭇가지처럼 갈라진 작업 흐름을 뜻한다.
+- `switch`: 다른 브랜치로 전환한다는 뜻이다.
+- `tag`: 특정 커밋에 붙이는 꼬리표를 뜻한다.
+
 명령어 참조: [git add](commands/add.md) · [git commit](commands/commit.md) · [git branch](commands/branch.md) · [git switch](commands/switch.md) · [git tag](commands/tag.md)
 
 ```bash

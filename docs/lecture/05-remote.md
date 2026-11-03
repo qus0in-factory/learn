@@ -80,6 +80,12 @@ flowchart TB
 
 ## Git 명령
 
+명령 이름의 뜻은 다음과 같다.
+
+- `remote`: 멀리 떨어진(원격) 저장소를 뜻한다.
+- `origin`: 처음 가져온 출처라는 뜻의 관례적 별칭이다.
+- `push`는 원격으로 밀어 올리고, `pull`은 원격에서 끌어오며, `clone`은 통째로 복제한다.
+
 명령어 참조: [git remote](commands/remote.md) · [git clone](commands/clone.md) · [git push](commands/push.md) · [git pull](commands/pull.md) · [git branch](commands/branch.md)
 
 ```bash

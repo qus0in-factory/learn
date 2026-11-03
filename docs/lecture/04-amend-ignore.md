@@ -114,6 +114,12 @@ Thumbs.db
 
 ## Git 명령
 
+명령 이름의 뜻은 다음과 같다.
+
+- `amend`: 고쳐 바로잡는다는 뜻이다.
+- `revert`: 되돌린다는 뜻이며, 되돌리는 내용을 새 커밋으로 남긴다.
+- `reset`: 이전 상태로 다시 설정한다는 뜻이다.
+
 명령어 참조: [git status](commands/status.md) · [git add](commands/add.md) · [git commit](commands/commit.md) · [git log](commands/log.md) · [git rm](commands/rm.md) · [git revert](commands/revert.md)
 
 ```bash

@@ -147,6 +147,11 @@ Git 명령은 내 컴퓨터에서 실행되지만, STEP 05부터 쓰는 원격 �
 
 ## Git 명령
 
+명령 이름의 뜻은 다음과 같다.
+
+- `status`: 상태(status)를 보여 준다는 뜻이다.
+- `add`: 변경한 파일을 스테이징 영역에 더한다(add)는 뜻이다.
+
 명령어 참조: [git config](commands/config.md) · [git init](commands/init.md) · [git status](commands/status.md) · [git add](commands/add.md)
 
 작업자 정보 등록은 커밋에 기록될 이름과 이메일을 정하는 단계이다.

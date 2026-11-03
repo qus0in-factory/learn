@@ -65,6 +65,10 @@ flowchart TB
 
 ## Git 명령
 
+명령 이름의 뜻은 다음과 같다.
+
+- Pull Request: 내 브랜치의 변경을 가져가(pull) 합쳐 달라고 요청(request)한다는 뜻이다.
+
 명령어 참조: [git add](commands/add.md) · [git commit](commands/commit.md) · [git diff](commands/diff.md) · [git push](commands/push.md) · [git pull](commands/pull.md) · [git branch](commands/branch.md) · [git switch](commands/switch.md)
 
 ```bash

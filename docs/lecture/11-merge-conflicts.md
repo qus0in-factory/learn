@@ -80,6 +80,10 @@ flowchart TB
 
 ## Git 명령
 
+명령 이름의 뜻은 다음과 같다.
+
+- `merge`: 갈라진 이력을 하나로 합친다는 뜻이다.
+
 명령어 참조: [git add](commands/add.md) · [git commit](commands/commit.md) · [git log](commands/log.md) · [git branch](commands/branch.md) · [git switch](commands/switch.md) · [git merge](commands/merge.md)
 
 ```bash
