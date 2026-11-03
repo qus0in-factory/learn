@@ -10,6 +10,7 @@ export function setup() {
   db.exec(read('0001_init.sql'))
   seed(db)
   db.exec(read('0002_catalog_versions.sql'))
+  db.exec(read('0003_quiz_links.sql'))
   return { db, api: d1(db) }
 }
 

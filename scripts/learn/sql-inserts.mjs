@@ -1,5 +1,6 @@
 import { pdfUrl } from '../../learn-site/.vitepress/pdf-url.mjs'
 import { insert } from './sql-values.mjs'
+import { linkInsert } from './sql-links.mjs'
 
 export function inserts({ version, meta, lectures, quiz }) {
   const v = version
@@ -9,5 +10,6 @@ export function inserts({ version, meta, lectures, quiz }) {
     insert('catalog_lectures', 'catalog_version,slug,day,position,title,schedule', lectures.map((l) => [v, l.slug, l.day, l.position, l.title, l.schedule])),
     insert('catalog_pdfs', 'catalog_version,lesson_slug,file_name,url', pdfs),
     insert('catalog_quiz', 'catalog_version,position,question,answer,lesson_slug', quiz.map((q) => [v, q.position, q.question, q.answer, q.lesson])),
+    linkInsert(v, quiz),
   ].join('\n')
 }

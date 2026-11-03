@@ -1,4 +1,4 @@
-const tables = ['catalog_quiz', 'catalog_pdfs', 'catalog_lectures', 'catalog_versions']
+const tables = ['quiz_links', 'catalog_quiz', 'catalog_pdfs', 'catalog_lectures', 'catalog_versions']
 
 export const cleanup = () =>
   tables
