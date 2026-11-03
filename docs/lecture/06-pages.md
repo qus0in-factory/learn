@@ -37,7 +37,7 @@ flowchart LR
    - GitHub Pages는 지정된 브랜치(`main`)의 루트 폴더에 위치한 `index.html` 파일을 첫 대문 페이지로 인식하여 웹 브라우저에 서비스한다. 파일명이 소문자 `index.html`이어야 올바르게 동작한다.
 2. **배포 주소 체계**
    - 기본적으로 `https://<GitHub계정명>.github.io/<저장소이름>/` 형식의 고유 주소가 생성된다.
-   - 본 실습의 주소는 `https://<GitHub계정명>.github.io/portfolio-web/` 형태가 된다.
+   - 본 실습의 주소는 `https://<GitHub계정명>.github.io/<저장소이름>/` 형태가 된다. 예시 저장소 이름은 `portfolio-web`이다.
 3. **자동 재배포 주기**
    - 로컬에서 코드를 고친 뒤 `push`하면, GitHub 내부의 배포 자동화 로봇(GitHub Actions)이 동작하여 약 1~2분 안에 실제 사이트에 반영한다.
 

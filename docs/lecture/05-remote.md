@@ -30,7 +30,7 @@ schedule: "14:00–14:45 (수업 45분) / 14:45–15:00 (휴식 15분)"
 
 ```mermaid
 flowchart LR
-    LR["로컬 저장소<br/>(내 컴퓨터: portfolio-web)"] -->|git push -u origin main| GH["GitHub 원격 저장소<br/>(클라우드: origin)"]
+    LR["로컬 저장소<br/>(내 컴퓨터, 예: portfolio-web)"] -->|git push -u origin main| GH["GitHub 원격 저장소<br/>(클라우드: origin)"]
     GH -->|git pull origin main| LR
 ```
 
@@ -50,7 +50,7 @@ flowchart LR
 1. 브라우저에서 GitHub(github.com)에 로그인한다.
 2. 우측 상단의 `+` 아이콘을 누르고 `New repository`를 선택한다.
 3. 저장소 정보 입력:
-   - **Repository name**: 반드시 `portfolio-web` 입력
+   - **Repository name**: STEP 02에서 만든 폴더 이름과 같게 입력한다(예: `portfolio-web`). 이후 명령의 `portfolio-web`은 각자 정한 이름으로 바꿔 입력한다.
    - **공개 범위**: `Public` 선택
    - **중요 주의사항**: `Add a README file`, `Add .gitignore`, `Choose a license` 등 초기 파일 생성 체크박스를 <strong>모두 해제(체크 없음)</strong>한다. 이미 로컬에 파일이 있으므로 반드시 완전한 빈 저장소여야 한다.
    - `Create repository` 초록색 버튼 클릭.

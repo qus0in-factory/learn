@@ -133,7 +133,7 @@ Git 명령은 내 컴퓨터에서 실행되지만, STEP 05부터 쓰는 원격 �
 ## 따라하기
 
 1. GitHub 가입 이메일(또는 `noreply` 이메일)로 작업자 이름과 이메일을 전역(`--global`)으로 설정하고, `git config --global --list`로 확인한다.
-2. 실습 전용 폴더인 `portfolio-web`를 생성하고 해당 디렉터리로 이동한다.
+2. 실습 전용 폴더(예: `portfolio-web`)를 생성하고 해당 디렉터리로 이동한다. 폴더 이름은 각자 정해도 되며, 이후 예시는 `portfolio-web`을 쓴다.
 3. `git init`을 실행하여 저장소를 초기화한다.
 4. 예시 산출물의 요청문으로 OpenCode에 첫 웹페이지 생성을 요청해 `index.html`과 `style.css`를 만들고 저장한다. 이후 단계는 각자 만든 파일을 기준으로 진행한다.
 5. 이미지 폴더를 만들고 빈 폴더 추적용 `.gitkeep` 파일을 만든다: `mkdir -p images && touch images/.gitkeep`.

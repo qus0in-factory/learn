@@ -40,6 +40,8 @@ schedule: "11:00–11:45 (수업 45분) / 11:45–12:00 (휴식 15분)"
 
 ## Git/CLI 명령
 
+저장소 이름은 예시이므로 각자 정한 이름으로 바꿔 입력한다(예: `portfolio-web`).
+
 ```bash
 gh issue list --repo 계정이름/portfolio-web
 ```

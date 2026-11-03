@@ -30,7 +30,7 @@ schedule: "09:00–09:45 (수업 45분) / 09:45–10:00 (휴식 15분)"
 
 ## 따라하기
 
-1. `portfolio-web` 폴더를 VS Code로 연다.
+1. 실습 폴더(예: `portfolio-web`)를 VS Code로 연다.
 2. 루트에 `README.md` 파일을 만든다.
 3. VS Code 미리보기를 연다 (`Ctrl + K`, 그다음 `V`).
 4. README에 제목, 소개, 배포 주소, 기술 스택, Git 흐름도를 작성한다.

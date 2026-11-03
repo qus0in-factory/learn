@@ -54,7 +54,7 @@ flowchart TD
 
 ### 상황
 
-`portfolio-web` 폴더에서 `index.html`의 자기소개 문장을 고치고, 같은 김에 `style.css`의 색상도 바꿨다. 폴더에는 운영체제가 만든 `.DS_Store`(또는 `Thumbs.db`)도 생겼다. `git status`에 세 파일이 함께 보인다.
+작업 폴더(예: `portfolio-web`)에서 `index.html`의 자기소개 문장을 고치고, 같은 김에 `style.css`의 색상도 바꿨다. 폴더에는 운영체제가 만든 `.DS_Store`(또는 `Thumbs.db`)도 생겼다. `git status`에 세 파일이 함께 보인다.
 
 ### 목표
 
