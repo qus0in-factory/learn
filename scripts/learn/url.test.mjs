@@ -15,7 +15,7 @@ test('all topic pages and D1 rows use the same revision URLs', async () => {
     quiz: [{ position: 1, question: 'Q', answer: 'A', lesson: lectures[0].slug }],
   })
   for (const lecture of lectures) {
-    const page = { relativePath: `${lecture.slug}.md`, frontmatter: {} }
+    const page = { relativePath: `lecture/${lecture.slug}.md`, frontmatter: {} }
     transformPageData(page)
     const url = pdfUrl(`${lecture.slug}.pdf`)
     assert.equal(page.frontmatter.pdf, url)

@@ -49,7 +49,7 @@ flowchart LR
 3. 저장소 정보 입력:
    - **Repository name**: 반드시 `portfolio-web` 입력
    - **공개 범위**: `Public` 선택
-   - **중요 주의사항**: `Add a README file`, `Add .gitignore`, `Choose a license` 등 초기 파일 생성 체크박스를 **모두 해제(체크 없음)**합니다. 이미 로컬에 파일이 있으므로 반드시 완전한 빈 저장소여야 합니다.
+   - **중요 주의사항**: `Add a README file`, `Add .gitignore`, `Choose a license` 등 초기 파일 생성 체크박스를 <strong>모두 해제(체크 없음)</strong>합니다. 이미 로컬에 파일이 있으므로 반드시 완전한 빈 저장소여야 합니다.
    - `Create repository` 초록색 버튼 클릭.
 4. 생성된 페이지에서 HTTPS 주소를 확인하고 복사합니다 (예: `https://github.com/본인계정/portfolio-web.git`).
 5. VS Code 터미널로 돌아와 기본 브랜치 이름을 `main`으로 지정합니다:

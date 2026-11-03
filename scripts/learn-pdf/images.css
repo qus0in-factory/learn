@@ -1,0 +1,4 @@
+figure { margin: 0 0 12px; }
+figure img { display: block; max-width: 100%; max-height: 330px; margin: auto; }
+figcaption { font-size: 18px; color: #526580; text-align: center; }
+blockquote { margin: 0 0 14px; padding-left: 18px; border-left: 4px solid #aabbd0; }

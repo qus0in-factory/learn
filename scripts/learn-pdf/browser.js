@@ -1,25 +1,23 @@
-import mermaid from 'mermaid';
+import { ready } from './ready.js';
 import { paginate } from './paginate.js';
+import { compact } from './compact.js';
+import { numberPages } from './number.js';
 import { audit } from './audit.js';
 import { sourceText, checkContent } from './content.js';
+window.preview = ready;
 window.prepare = async html => {
   const source = document.createElement('main');
   source.innerHTML = html;
   source.style.width = '1152px';
   document.body.append(source);
-  mermaid.initialize({ startOnLoad: false, securityLevel: 'strict', theme: 'neutral' });
-  await mermaid.run({ nodes: source.querySelectorAll('.mermaid') });
-  await document.fonts.ready;
+  await ready(source);
   const diagrams = source.querySelectorAll('.mermaid svg').length;
   source.remove();
   const expected = sourceText(source);
   paginate(source);
+  compact();
   const pages = [...document.querySelectorAll('.slide')];
   checkContent(pages, expected);
-  pages.forEach((page, i) => {
-    const footer = document.createElement('footer');
-    footer.textContent = `Git · ${i + 1} / ${pages.length}`;
-    page.append(footer);
-  });
+  numberPages(pages);
   return { pages: pages.length, diagrams, samples: audit(pages) };
 };

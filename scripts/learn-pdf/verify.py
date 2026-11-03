@@ -11,6 +11,10 @@ assert len(manifest) == 12
 for lesson in manifest:
     pdf = root / (lesson['name'] + '.pdf')
     check_bounds(pdf, lesson['pages'])
+    info = check_output(['pdfinfo', str(pdf)]).decode()
+    title = next(line.split(':', 1)[1].strip() for line in info.splitlines()
+                 if line.startswith('Title:'))
+    assert title == lesson['title'], (pdf, title)
     text = check_output(['pdftotext', str(pdf), '-']).decode()
     pages = text.split('\f')[:-1]
     assert len(pages) == lesson['pages'] > 1

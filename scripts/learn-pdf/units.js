@@ -1,3 +1,4 @@
+import { codeUnits } from './code.js';
 export function units(element) {
   const tag = element.tagName;
   if (tag === 'UL' || tag === 'OL') {
@@ -9,16 +10,12 @@ export function units(element) {
     });
   }
   if (tag === 'PRE') {
-    const lines = element.textContent.split('\n');
-    return Array.from({ length: Math.ceil(lines.length / 12) }, (_, i) => {
-      const pre = document.createElement('pre');
-      pre.textContent = lines.slice(i * 12, i * 12 + 12).join('\n');
-      return pre;
-    });
+    return codeUnits(element);
   }
   if (tag === 'TABLE') {
     return [...element.querySelectorAll('tbody tr')].map(row => {
       const table = element.cloneNode(true);
+      table.sourceTable = element;
       table.querySelector('tbody').replaceChildren(row.cloneNode(true));
       return table;
     });

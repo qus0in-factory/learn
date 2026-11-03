@@ -1,18 +1,16 @@
-import assert from 'node:assert/strict';
 import { chromium } from 'playwright';
 import { here, output } from './paths.mjs';
-import { render } from './markdown.mjs';
+import { overflowTest } from './overflow-test.mjs';
+import { tableTest } from './table-test.mjs';
+import { layoutTest } from './layout-test.mjs';
 const browser = await chromium.launch({ channel: process.env.PDF_BROWSER || 'chrome' });
 try {
   const page = await browser.newPage();
   await page.addStyleTag({ path: here + 'style.css' });
   await page.addScriptTag({ path: output + '/renderer.js' });
-  const html = render('# Test\n' + '- 항목\n'.repeat(40));
-  const result = await page.evaluate(h => window.prepare(h), html);
-  assert(result.pages > 2);
-  await page.evaluate(() => document.body.replaceChildren());
-  await assert.rejects(page.evaluate(h => window.prepare(h),
-    render('# Too large\n\n```text\n' + '한글 '.repeat(4000) + '\n```')),
-  /Oversized/);
+  await overflowTest(page);
   console.log('pagination and overflow rejection PASS');
+  await tableTest(page);
+  await layoutTest(page);
+  console.log('table grouping/headers/widths, code boundaries and compact PASS');
 } finally { await browser.close(); }
