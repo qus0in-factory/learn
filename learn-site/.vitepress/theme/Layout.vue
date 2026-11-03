@@ -9,18 +9,20 @@ import PageUpdated from './PageUpdated.vue'
 import './task-list.css'
 import './header-logo.css'
 import './header-logotype.css'
+import AdSlot from './AdSlot.vue'
 
 const { frontmatter, page } = useData()
 </script>
 
 <template>
   <DefaultTheme.Layout :style="{ '--vp-nav-logo-height': site.logoHeight }">
+    <template #doc-after><AdSlot /></template>
     <template #layout-bottom><SiteFooter /></template>
     <template #doc-footer-before>
       <PageUpdated />
     </template>
     <template #doc-before>
-      <CourseBreadcrumb v-if="/^git\/(?:\d{2}-|appendix\/)/.test(page.relativePath)" />
+      <CourseBreadcrumb v-if="/^git\/(?:\d{2}-|appendix\/|commands\/|tags)/.test(page.relativePath)" />
       <StepIntro v-if="frontmatter.stepHeader" :key="page.relativePath" />
     </template>
   </DefaultTheme.Layout>

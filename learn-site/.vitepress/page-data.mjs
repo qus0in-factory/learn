@@ -5,6 +5,7 @@ import { labels } from './labels.mjs'
 import { pageUpdated } from './page-updated.mjs'
 import { stepHeaderFlag } from './step-header-flag.mjs'
 import { ogPage } from './og-page.mjs'
+import { seoPage } from './seo-page.mjs'
 
 export function transformPageData(page) {
   pdfData(page)
@@ -22,4 +23,5 @@ export function transformPageData(page) {
     page.frontmatter.titleTemplate = false
   }
   ogPage(page)
+  seoPage(page)
 }

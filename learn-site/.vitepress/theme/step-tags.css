@@ -25,3 +25,13 @@
   font-size: var(--step-tag-size);
   line-height: 1.6;
 }
+
+.vp-doc .step-tags a {
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+}
+
+.vp-doc .step-tags a:hover {
+  color: var(--vp-c-brand-1);
+}

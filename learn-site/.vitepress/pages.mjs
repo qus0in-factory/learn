@@ -3,10 +3,12 @@ export const pages = {
   'lecture/catalog.md': 'git/catalog.md',
   'lecture/:page': 'git/:page',
   'lecture/appendix/:page': 'git/appendix/:page',
+  'lecture/commands/:page': 'git/commands/:page',
+  'lecture/tags.md': 'git/tags.md',
 }
 
 export const excluded = [
-  '261102/**', '261103/**', 'ci.md', 'deployment.md',
+  '261102/**', '261103/**', 'ci.md', 'deployment.md', 'operations/**',
   'setup/**', 'license-notices.md', 'lecture/index.md', 'content-style.md',
 ]
 

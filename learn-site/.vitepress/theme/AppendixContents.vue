@@ -4,7 +4,7 @@ import { labels } from '../labels.mjs'
 import './course-contents.css'
 
 const { theme } = useData()
-const items = theme.value.courseContents.filter(item => !item.pdf)
+const items = theme.value.courseContents.filter(item => item.link.startsWith('/git/appendix/'))
 </script>
 
 <template>

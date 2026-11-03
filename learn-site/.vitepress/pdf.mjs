@@ -4,6 +4,7 @@ import { pdfUrl, revision } from './pdf-url.mjs'
 import { labels } from './labels.mjs'
 import { courseLessons } from './course-data.mjs'
 import { courseContents } from './course-contents.mjs'
+import { tagGroups } from './tag-groups.mjs'
 
 export { revision }
 
@@ -12,6 +13,7 @@ export const themeConfig = {
   nav: [],
   courseLessons,
   courseContents,
+  tagGroups,
   outline: { label: labels.outline },
   docFooter: { prev: labels.previous, next: labels.next },
   sidebarMenuLabel: labels.menu,

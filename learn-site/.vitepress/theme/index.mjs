@@ -7,6 +7,8 @@ import QuizBlank from './QuizBlank.vue'
 import StepDownloads from './StepDownloads.vue'
 import GitStages from './GitStages.vue'
 import AppendixContents from './AppendixContents.vue'
+import TagGroups from './TagGroups.vue'
+import CommandLinks from './CommandLinks.vue'
 import './content-links.css'
 import './mermaid-theme.css'
 import './nav-icons.css'
@@ -25,5 +27,7 @@ export default {
     app.component('StepDownloads', StepDownloads)
     app.component('GitStages', GitStages)
     app.component('AppendixContents', AppendixContents)
+    app.component('TagGroups', TagGroups)
+    app.component('CommandLinks', CommandLinks)
   },
 }

@@ -8,7 +8,7 @@ export function checkLinks(file) {
     if (url.origin !== 'https://learn.test') continue
     const path = url.pathname
     if (path === '/vp-icons.css' || path.startsWith('/api/') || path.startsWith('/assets/') || /\.(svg|png|ico|webmanifest|txt)$/.test(path)) continue
-    assert.ok(path === '/' || path === '/licenses' || path === '/git/' || path.startsWith('/git/'), `${file}: ${href}`)
+    assert.ok(['/', '/licenses', '/privacy', '/git/'].includes(path) || path.startsWith('/git/'), `${file}: ${href}`)
     const target = path.endsWith('/') ? `${path.slice(1)}index.html` : `${path.slice(1)}.html`
     assert.ok(exists(target), `${file}: missing ${target}`)
   }
