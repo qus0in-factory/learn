@@ -32,6 +32,7 @@
 
 - 임의의 `INSERT`가 실패하면 pointer는 이전 버전을 유지한다. 새 dataset의 일부 행은 inactive 상태로 남지만 공개되지 않는다.
 - 같은 명령을 다시 실행하면 시작 정리 단계에서 inactive 잔여 행을 지우고 새 dataset을 만든 뒤 pointer를 전환한다. 재실행 결과는 동일한 12/12/10 카탈로그다.
+- **성공한 동일 SQL 파일을 그대로 재실행**하면 target version이 이미 active이므로 각 dataset INSERT가 skip되고 pointer UPSERT도 같은 값으로 유지된다. 명령은 성공하고 공개 dataset은 변하지 않는다. 반면 target version이 inactive면 시작 cleanup이 잔여 행을 지운 뒤 전체를 다시 적재한다.
 - pointer 전환 뒤 정리 단계가 실패해도 공개 데이터는 완전한 새 dataset이다. 다음 동기화가 inactive 행을 정리한다.
 - migration `0001`만 적용된 기존 DB는 `0002_catalog_versions.sql`이 기존 행을 `legacy-0001` dataset으로 복사한다. 새 동기화 전까지 이전 데이터를 그대로 제공한다.
 - `0003_quiz_links.sql`은 `quiz_links`를 만들고 기존 `catalog_quiz.lesson_slug`를 대표 링크로 seed한다. 이후 동기화가 모든 링크를 다시 채운다.
