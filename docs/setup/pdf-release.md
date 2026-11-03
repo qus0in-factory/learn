@@ -24,7 +24,7 @@ plain 12개 URL의 302/no-store/최신 Location, 그 revision URL의 200/MIME/1�
 
 두 원격 검증 명령은 네트워크·배포 상태·인증에 의존하므로 CI에 넣지 않는다.
 로컬 회귀만 `node --test scripts/learn-pdf-ops/*.test.mjs`로 실행한다. updater CLI opt-in·12개 URL 갱신·멱등, 누락/잘림/동일 크기 변조 시 배포 명령 0회를 검사한다.
-updater 회귀의 격리 fixture는 자식 URL 테스트를 stub하며, 실제 URL 일치는 기존 `scripts/learn/{readme,url}.test.mjs`로 별도 검증한다.
+updater 회귀의 격리 fixture는 자식 URL 테스트를 stub하며, 실제 URL 일치는 기존 `scripts/learn/url.test.mjs`로 별도 검증한다.
 
 ## #5의 검증 범위와 CI 정책
 
