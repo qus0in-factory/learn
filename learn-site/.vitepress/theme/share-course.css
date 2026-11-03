@@ -4,7 +4,7 @@
 }
 .share-course img { width: 120px; height: 120px; }
 .share-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
-.share-actions button, .share-actions a {
+.vp-doc .share-button {
   box-sizing: border-box;
   display: inline-flex;
   align-items: center;
@@ -17,4 +17,4 @@
   color: var(--vp-c-text-1);
   text-decoration: none;
 }
-.share-actions button:disabled { cursor: not-allowed; }
+.share-button:disabled { cursor: not-allowed; }

@@ -5,7 +5,7 @@ defineProps({ kakao: { type: Object, required: true } })
 </script>
 
 <template>
-  <button type="button" :disabled="!kakao.available || kakao.busy.value"
+  <button class="share-button" type="button" :disabled="!kakao.available || kakao.busy.value"
     :aria-label="kakao.available ? share.kakaoReady : share.kakao" @click="kakao.send">
     <ShareIcon name="kakao" />
   </button>

@@ -1,0 +1,15 @@
+.share-course {
+  --share-hover-bg: var(--vp-c-default-soft);
+  --share-active-bg: var(--vp-c-default-2);
+  --share-focus-color: var(--vp-c-brand-1);
+}
+.vp-doc .share-button:not(:disabled):hover {
+  background: var(--share-hover-bg);
+  border-color: var(--share-focus-color);
+  color: var(--vp-c-text-1);
+}
+.vp-doc .share-button:not(:disabled):active { background: var(--share-active-bg); }
+.vp-doc .share-button:focus-visible {
+  outline: 2px solid var(--share-focus-color);
+  outline-offset: 2px;
+}
