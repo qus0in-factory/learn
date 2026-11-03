@@ -1,0 +1,8 @@
+const quote = (value) => {
+  if (value == null) return 'NULL'
+  if (typeof value === 'number') return String(value)
+  return `'${String(value).replaceAll("'", "''")}'`
+}
+
+export const rows = (list) =>
+  list.map((row) => `(${row.map(quote).join(',')})`).join(',\n')
