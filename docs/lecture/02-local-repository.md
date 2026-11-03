@@ -10,7 +10,7 @@ schedule: "10:00–10:45 (수업 45분) / 10:45–11:00 (휴식 15분)"
 ## 학습 목표
 
 - `git config` 명령어로 커밋에 기록될 작업자 이름과 이메일을 등록한다.
-- 실습 폴더 `portfolio-web`를 생성하고 `git init`으로 로컬 저장소를 초기화한다.
+- 실습 폴더를 생성하고 `git init`으로 로컬 저장소를 초기화한다.
 - OpenCode를 활용해 첫 포트폴리오 웹페이지(`index.html`, `style.css`)를 생성한다.
 - `git status`로 추적되지 않은 파일(Untracked)을 확인하고, `git add`로 스테이징 영역에 올린다.
 - 빈 폴더 추적을 위한 `.gitkeep` 파일의 관례를 이해한다.
@@ -19,7 +19,7 @@ schedule: "10:00–10:45 (수업 45분) / 10:45–11:00 (휴식 15분)"
 
 협업 프로젝트에서는 수많은 사람이 코드를 수정한다. 만약 코드에 문제가 생겼거나 중요한 기능이 추가되었을 때, 누가 해당 변경을 만들었는지 기록되어 있지 않다면 원인을 찾거나 소통하기 어렵다.
 
-따라서 Git을 처음 다룰 때는 가장 먼저 "내 컴퓨터에서 작성하는 모든 커밋의 서명자 정보"를 등록해야 한다.
+따라서 Git을 처음 다룰 때는 가장 먼저 "커밋을 작성하는 사람의 정보"를 등록해야 한다.
 
 또한 일반 컴퓨터 폴더는 파일이 추가되거나 수정되어도 스스로 과거 이력을 기억하지 못한다. 우리가 Git에게 "지금부터 이 폴더를 버전 관리 저장소로 선언하고 모든 변화를 감시하라"고 명령하는 절차가 바로 `git init`이다.
 
@@ -45,9 +45,9 @@ flowchart LR
 ### 빈 폴더와 `.gitkeep`
 Git은 파일의 내용을 추적하는 시스템이므로 빈 디렉터리(폴더) 자체는 커밋 대상으로 인식하지 않는다. 하지만 웹 프로젝트에서는 이미지(`images/`)나 폰트(`fonts/`)를 담을 빈 폴더 구조를 미리 만들어 두고 형상 관리에 포함해야 할 때가 많다. 이때 폴더 안에 빈 파일인 `.gitkeep`을 넣어 폴더가 Git에 추적되도록 만드는 것이 개발자들의 표준적인 관례이다.
 
-## 첫 웹페이지 코드
+## 예시 산출물
 
-실습에서 사용할 가벼운 첫 번째 웹 포트폴리오 코드이다.
+각자 OpenCode에 요청해 첫 웹페이지(`index.html`·`style.css`)를 만든다. 아래는 결과물의 한 예시이며 그대로 복사할 필요는 없다.
 
 ### `index.html`
 
@@ -100,12 +100,21 @@ p {
 }
 ```
 
+## GitHub 가입
+
+Git 명령은 내 컴퓨터에서 실행되지만, STEP 05부터 쓰는 원격 저장소와 배포에는 GitHub 계정이 필요하다. 지금 가입해 두면 아래 작업자 정보 등록에 같은 이메일을 쓸 수 있다.
+
+1. [github.com/signup](https://github.com/signup)에서 이메일, 비밀번호, 사용자 이름을 입력해 가입한다.
+2. 사용자 이름은 저장소 주소(`github.com/사용자이름/…`)에 그대로 쓰이므로 알아보기 쉬운 영문 이름으로 정한다.
+3. 가입 이메일로 온 인증 메일을 열어 이메일 인증을 마친다. 메일이 보이지 않으면 [이메일 주소 인증 안내](https://docs.github.com/ko/account-and-profile/how-tos/email-preferences/verifying-your-email-address)를 참조한다.
+4. 이메일을 공개하고 싶지 않으면 GitHub 설정의 [Emails](https://github.com/settings/emails)에서 `Keep my email addresses private`를 켜고, 표시되는 `noreply` 이메일을 확인해 둔다. 자세한 절차는 [커밋 이메일 주소 설정 안내](https://docs.github.com/ko/account-and-profile/how-tos/email-preferences/setting-your-commit-email-address)를 참조한다.
+
 ## 따라하기
 
-1. 터미널에서 작업자 이름과 이메일을 전역(`--global`)으로 설정한다.
+1. GitHub 가입 이메일(또는 `noreply` 이메일)로 작업자 이름과 이메일을 전역(`--global`)으로 설정하고, `git config --global --list`로 확인한다.
 2. 실습 전용 폴더인 `portfolio-web`를 생성하고 해당 디렉터리로 이동한다.
 3. `git init`을 실행하여 저장소를 초기화한다.
-4. VS Code 탐색기나 OpenCode를 활용해 `index.html`과 `style.css`를 생성하고 위의 코드를 입력 후 저장한다.
+4. OpenCode에 첫 웹페이지 생성을 요청해 `index.html`과 `style.css`를 만들고 저장한다. 요청 예시는 `초보자를 위한 1페이지 자기소개 HTML/CSS 생성`이다. 이후 단계는 각자 만든 파일을 기준으로 진행한다.
 5. 이미지 폴더를 만들고 빈 폴더 추적용 `.gitkeep` 파일을 만든다: `mkdir -p images && touch images/.gitkeep`.
 6. `git status`를 실행하여 3개의 파일이 빨간색 Untracked 상태로 표시되는지 확인한다.
 7. `git add index.html style.css images/.gitkeep`을 입력해 스테이징 영역에 파일을 올린다.
@@ -113,8 +122,14 @@ p {
 
 ## Git 명령
 
+작업자 정보 등록은 커밋에 기록될 이름과 이메일을 정하는 단계이다.
+
+- `user.name`과 `user.email`은 모든 커밋에 작성자로 저장되므로, 협업할 때 누가 변경했는지 추적하는 기준이 된다.
+- `--global`은 이 컴퓨터의 모든 저장소에 적용되는 기본값이라는 뜻이며, 한 번만 설정하면 된다.
+- 이메일을 GitHub 가입 이메일(또는 GitHub `noreply` 이메일)과 맞추면 커밋이 내 GitHub 계정에 연결된다. 다르면 커밋은 만들어지지만 계정과 연결되지 않을 수 있다.
+
 ```bash
-# 1. 작업자 정보 등록 (본인 영문 이름과 이메일로 변경)
+# 1. 작업자 정보 등록 (본인 영문 이름과 GitHub 가입 이메일로 변경)
 git config --global user.name "Your Name"
 git config --global user.email "your-email@example.com"
 
@@ -138,6 +153,8 @@ git add index.html style.css images/.gitkeep
 # 7. 파일 상태 재확인 (Staged)
 git status
 ```
+
+작업자 정보는 `git config --global --list`로 확인한다. 이름이나 이메일에 오타를 넣었다면 같은 명령을 다시 실행해 값을 덮어쓴다.
 
 ### 선택 참고 명령
 

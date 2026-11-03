@@ -7374,7 +7374,7 @@ For these and/or other purposes and motivations, and without any expectation of 
 For more information, please see <https://creativecommons.org/publicdomain/zero/1.0>.
 
 
-Lucide link, presentation, code, printer, circle-question-mark, layers, folder-plus, git-commit-horizontal, undo-2, cloud, globe, file-text, user, list-checks, git-branch, git-merge, git-pull-request, key-round, terminal, palette, workflow, monitor, square-terminal icons — ISC; derived from Feather — MIT
+Lucide link, presentation, code, printer, circle-question-mark, layers, folder-plus, git-commit-horizontal, undo-2, cloud, globe, file-text, user, list-checks, git-branch, git-merge, git-pull-request, key-round, terminal, palette, workflow, monitor, square-terminal, route icons — ISC; derived from Feather — MIT
 ISC License
 
 Copyright (c) 2026 Lucide Icons and Contributors
