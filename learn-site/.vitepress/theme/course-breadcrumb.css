@@ -1,0 +1,3 @@
+.course-breadcrumb { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.course-breadcrumb a { color: var(--vp-c-brand-1); }
+.course-breadcrumb span:last-child { color: var(--vp-c-text-2); }
