@@ -7,6 +7,8 @@ import { site } from './site.mjs'
 import { faviconHead } from './favicon.mjs'
 import { courseUpdated } from './updated.mjs'
 import { pages, vueAlias } from './pages.mjs'
+import { cdnVite } from './cdn-vite.mjs'
+import { cdnHead } from './cdn-head.mjs'
 
 export default defineConfig({
   title: site.title,
@@ -20,7 +22,8 @@ export default defineConfig({
   ignoreDeadLinks: true,
   themeConfig: { ...themeConfig, courseUpdated: courseUpdated() },
   transformPageData,
+  transformHead: cdnHead,
   head: [...printHead, ...faviconHead],
-  vite: { resolve: { alias: vueAlias } },
+  vite: { ...cdnVite, resolve: { alias: vueAlias } },
   markdown,
 })
