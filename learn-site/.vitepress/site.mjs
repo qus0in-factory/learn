@@ -11,7 +11,7 @@ export const site = {
   appLicenseNotice: '추후 이곳에 표시합니다.',
   footer: [
     { text: 'License', link: '/licenses' },
-    { text: 'qus0in-factory GitHub', link: 'https://github.com/qus0in-factory' },
-    { text: 'qus0in X', link: 'https://x.com/qus0in' },
+    { text: 'GitHub', link: 'https://github.com/qus0in-factory', icon: 'github' },
+    { text: 'X', link: 'https://x.com/qus0in', icon: 'x' },
   ],
 }
