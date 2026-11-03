@@ -4,7 +4,7 @@ subtitle: "macOS와 Windows의 사용 차이를 확인한다."
 
 # 운영체제별 차이
 
-관련 차시: [1차시 환경 점검](../01-environment.md) · [5차시 GitHub 원격 연동](../05-remote.md)
+관련 STEP: [STEP 01 버전 관리의 세 영역](../01-environment.md) · [STEP 05 원격 저장소와 동기화](../05-remote.md)
 
 같은 Git 명령이라도 터미널, 경로 표기, 인증 저장소가 OS마다 다르다. 수업 본문은 공통 흐름을 유지하고, 설치·경로·인증에서 막힐 때 이 부록을 확인한다. Windows는 Git Bash를, macOS는 기본 터미널(zsh)을 기준으로 한다.
 
@@ -54,5 +54,5 @@ subtitle: "macOS와 Windows의 사용 차이를 확인한다."
 - 비밀번호와 토큰을 채팅·파일·Issue에 노출하지 않는다.
 - OS별 메뉴와 항목명은 버전에 따라 다를 수 있다.
 - 줄바꿈 설정을 임의로 바꾸면 diff가 파일 전체 변경처럼 보일 수 있다.
-- Windows 자격 증명 삭제 절차는 [부록 1](01-authentication.md)을 참조한다.
+- Windows 자격 증명 삭제 절차는 [부록 1. 자격 증명 재인증](01-authentication.md)을 참조한다.
 - `gh`와 인증 창은 학습자가 직접 처리한다. 자동 전체 승인을 켜지 않는다.

@@ -46,7 +46,7 @@ flowchart LR
 - **눈누 (noonnu.com)**: 다양한 한글 폰트를 미리 보고 웹폰트 코드를 복사할 수 있는 사이트이다.
   - **주의**: 눈누의 폰트들이 일괄 상업적 무료인 것은 아니다. 폰트마다 인쇄용, 웹 임베드, BI/CI 등 허용 범위가 다르므로 프로젝트 적용 전 개별 라이선스를 반드시 확인해야 한다.
 - **Coolors (coolors.co)**: 어울리는 색상 팔레트를 탐색하고 HEX 색상 코드(예: `#1a73e8`)를 추천받는 도구이다.
-- 자세한 사용법과 적용 안내는 [부록 3. 웹 보조 도구: 눈누·Bulma·Coolors](appendix/03-web-tools.md)를 참조한다.
+- 자세한 사용법과 적용 안내는 [부록 3. 웹 디자인 보조 도구](appendix/03-web-tools.md)를 참조한다.
 
 ## 푸터 추가 코드
 
@@ -138,6 +138,6 @@ Coolors 색상 코드 추천 및 배경 포인트 색상 적용
 ## 주의할 점
 
 - GitHub Pages로 배포된 사이트는 인터넷에 완전히 공개되는 웹페이지이다. 개인 휴대폰 번호, 주민등록번호, 실제 집 주소 등 민감한 개인정보를 올리지 않는다.
-- 눈누 사이트 등에서 웹폰트를 가져올 때는 라이선스 표기 및 상업적/비상업적 허용 범위를 반드시 확인한다. 세부 안내는 [부록 3. 웹 보조 도구: 눈누·Bulma·Coolors](appendix/03-web-tools.md)를 참조한다.
-- Day 1의 6개 차시 공식 일정이 완료되었다. 남는 버퍼 시간의 추가 심화 실습은 [보충안 심화](supplement/01-advanced-practice.md), 복습 퀴즈는 [보충안 퀴즈](supplement/02-review-quiz.md), 에이전트 주도 Git은 [보충안 에이전트](supplement/03-agent-led-git.md)에서 다룬다.
+- 눈누 사이트 등에서 웹폰트를 가져올 때는 라이선스 표기 및 상업적/비상업적 허용 범위를 반드시 확인한다. 세부 안내는 [부록 3. 웹 디자인 보조 도구](appendix/03-web-tools.md)를 참조한다.
+- Day 1의 STEP 01~06 공식 일정이 완료되었다. 남는 버퍼 시간의 추가 심화 실습은 [보충안 심화](supplement/01-advanced-practice.md), 복습 퀴즈는 [보충안 퀴즈](supplement/02-review-quiz.md), 에이전트 주도 Git은 [보충안 에이전트](supplement/03-agent-led-git.md)에서 다룬다.
 - Day 2에는 Markdown 문서화, Issue 관리, 브랜치와 Pull Request 협업을 이어간다.

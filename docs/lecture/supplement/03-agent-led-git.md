@@ -1,6 +1,6 @@
 # 보충 3. 에이전트 주도 Git
 
-관련 차시: [4차시 이력 수정과 파일 배제](../04-amend-ignore.md) · [12차시 Pull Request](../12-pull-request.md)
+관련 STEP: [STEP 04 되돌리기와 무시 규칙](../04-amend-ignore.md) · [STEP 12 풀 리퀘스트와 협업](../12-pull-request.md)
 
 사람이 직접 명령을 실행하는 기초 실습과 달리, 에이전트가 상태 확인·diff 검토·stage·commit을 제안하고 수행하는 흐름을 체험한다. 에이전트는 학습자를 대신해 결정하지 않는다. 파일 수정, 명령 실행, 원격 변경은 학습자가 승인한다.
 
@@ -117,4 +117,4 @@ push 전 확인 항목: branch, remote, commit hash
 - `reset --hard`, `push --force`, `branch -D`, `clean -fd`는 보충 실습에서도 실행하지 않는다.
 - push 전에는 브랜치, 원격, 커밋 해시를 확인한다.
 - 인증 창과 2FA 승인은 학습자가 직접 처리한다.
-- 명령 옵션은 [부록 2](../appendix/02-git-options.md), OS별 차이는 [부록 5](../appendix/05-os-differences.md)를 참조한다.
+- 명령 옵션은 [부록 2. 명령과 옵션 일람](../appendix/02-git-options.md), OS별 차이는 [부록 5. 운영체제별 차이](../appendix/05-os-differences.md)를 참조한다.

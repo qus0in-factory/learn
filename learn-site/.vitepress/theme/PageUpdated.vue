@@ -6,5 +6,5 @@ const { frontmatter } = useData()
 </script>
 
 <template>
-  <p v-if="frontmatter.pageUpdated" class="page-updated">{{ site.updated }}{{ frontmatter.pageUpdated }}</p>
+  <p v-if="frontmatter.footerUpdated" class="page-updated">{{ site.updated }}{{ frontmatter.footerUpdated }}</p>
 </template>

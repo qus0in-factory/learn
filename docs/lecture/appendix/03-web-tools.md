@@ -4,7 +4,7 @@ subtitle: "눈누·Bulma·Coolors로 폰트·스타일·색상을 고른다."
 
 # 웹 디자인 보조 도구
 
-관련 차시: [6차시 Pages 배포](../06-pages.md) · [7차시 Markdown과 Mermaid](../07-markdown-mermaid.md)
+관련 STEP: [STEP 06 웹사이트 배포](../06-pages.md) · [STEP 07 마크다운과 다이어그램](../07-markdown-mermaid.md)
 
 눈누, Bulma, Coolors는 핵심 Git 흐름이 아닌 선택 참고 도구이다. 포트폴리오의 글꼴, 버튼, 색상을 다듬고 싶을 때 시간이 남으면 하나만 골라 적용한다. 세 도구를 모두 설치하거나 한 번에 바꾸지 않는다.
 

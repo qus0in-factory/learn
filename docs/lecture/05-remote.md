@@ -22,7 +22,7 @@ schedule: "14:00–14:45 (수업 45분) / 14:45–15:00 (휴식 15분)"
 클라우드 기반 Git 저장소 호스팅 서비스인 **GitHub**를 이용하면 다음과 같은 강력한 이점을 얻는다:
 1. **안전한 원격 백업**: 언제 어디서나 다른 PC에서도 내 코드를 그대로 복원할 수 있다.
 2. **동료와의 협업**: 하나의 저장소를 중심으로 여러 사람이 함께 코드를 수정하고 합칠 수 있다.
-3. **전 세계 배포의 기초**: 다음 차시에서 배울 GitHub Pages를 통해 전 세계 누구나 접속할 수 있는 웹사이트로 무료 공개할 수 있다.
+3. **전 세계 배포의 기초**: 다음 STEP에서 배울 GitHub Pages를 통해 전 세계 누구나 접속할 수 있는 웹사이트로 무료 공개할 수 있다.
 
 ## 원격 연결과 동기화 메커니즘
 
@@ -114,11 +114,11 @@ clone과 fork 차이 초보자 눈높이 비교 설명
 | --- | --- | --- |
 | `fatal: remote origin already exists` | 이미 `origin`이라는 이름으로 주소가 등록됨 | `git remote -v`로 확인하고, 주소가 틀렸다면 `git remote set-url origin <올바른주소>`로 변경한다. |
 | `error: failed to push some refs ... (non-fast-forward)` | GitHub에서 빈 저장소를 만들지 않고 README 등을 함께 생성함 | GitHub 저장소를 삭제 후 체크박스를 모두 풀고 빈 저장소로 다시 만들거나 강사에게 문의한다. |
-| 인증 실패 또는 403 Forbidden 오류 | 이전 다른 계정 자격 증명이 남아있거나 토큰 만료 | Windows 자격 증명 관리자에서 이전 계정을 삭제하고 재인증한다. 상세 절차는 [부록 1](appendix/01-authentication.md)과 [부록 5](appendix/05-os-differences.md)를 참조한다. |
+| 인증 실패 또는 403 Forbidden 오류 | 이전 다른 계정 자격 증명이 남아있거나 토큰 만료 | Windows 자격 증명 관리자에서 이전 계정을 삭제하고 재인증한다. 상세 절차는 [부록 1. 자격 증명 재인증](appendix/01-authentication.md)과 [부록 5. 운영체제별 차이](appendix/05-os-differences.md)를 참조한다. |
 
 ## 주의할 점
 
 - Personal Access Token이나 비밀번호를 절대 소스 코드 파일이나 공개 채팅, 이슈에 남기지 않는다.
 - 원격 저장소의 이력을 강제로 덮어쓰는 `git push --force` (또는 `-f`) 명령은 팀원의 작업을 파괴할 수 있으므로 절대 실행하지 않는다.
-- 상세한 인증 문제 해결은 [부록 1. Windows 자격 증명 삭제와 GitHub 재인증](appendix/01-authentication.md)을 참조한다.
+- 상세한 인증 문제 해결은 [부록 1. 자격 증명 재인증](appendix/01-authentication.md)을 참조한다.
 - 추가 심화 실습은 [보충안 심화](supplement/01-advanced-practice.md), 복습 퀴즈는 [보충안 퀴즈](supplement/02-review-quiz.md), 에이전트 주도 Git은 [보충안 에이전트](supplement/03-agent-led-git.md)에서 다룬다.

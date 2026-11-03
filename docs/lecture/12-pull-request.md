@@ -123,4 +123,4 @@ PR diff 목적·안전·재현성 기준 검토
 - `push --force`로 PR 브랜치를 덮어쓰지 않는다.
 - 실제 변경이 없는 PR은 만들지 않는다.
 - 추가 심화는 [보충안 심화](supplement/01-advanced-practice.md), 복습 퀴즈는 [보충안 퀴즈](supplement/02-review-quiz.md), 에이전트 주도 Git은 [보충안 에이전트](supplement/03-agent-led-git.md)에서 다룬다.
-- 상세 명령 옵션은 [부록 2. Git 명령과 옵션 일람](appendix/02-git-options.md)을 참조한다.
+- 상세 명령 옵션은 [부록 2. 명령과 옵션 일람](appendix/02-git-options.md)을 참조한다.

@@ -4,9 +4,9 @@ subtitle: "Windows 자격 증명을 초기화하고 GitHub에 재인증한다."
 
 # 자격 증명 재인증
 
-관련 차시: [5차시 GitHub 원격 연동](../05-remote.md)
+관련 STEP: [STEP 05 원격 저장소와 동기화](../05-remote.md)
 
-Git은 커밋 작성자 정보와 GitHub 로그인 정보를 따로 관리한다. 이 부록은 Windows에서 잘못된 계정으로 인증됐을 때 저장된 GitHub 자격 증명만 찾아 삭제하고 다시 인증하는 절차를 다룬다. macOS의 키체인은 [부록 5](05-os-differences.md)를 참조한다.
+Git은 커밋 작성자 정보와 GitHub 로그인 정보를 따로 관리한다. 이 부록은 Windows에서 잘못된 계정으로 인증됐을 때 저장된 GitHub 자격 증명만 찾아 삭제하고 다시 인증하는 절차를 다룬다. macOS의 키체인은 [부록 5. 운영체제별 차이](05-os-differences.md)를 참조한다.
 
 ## 왜 필요한가
 

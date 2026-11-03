@@ -4,7 +4,7 @@ subtitle: "Mermaid로 다이어그램을 작성한다."
 
 # 다이어그램 작성
 
-관련 차시: [7차시 Markdown과 Mermaid](../07-markdown-mermaid.md) · [11차시 병합과 충돌](../11-merge-conflicts.md)
+관련 STEP: [STEP 07 마크다운과 다이어그램](../07-markdown-mermaid.md) · [STEP 11 병합과 충돌 해결](../11-merge-conflicts.md)
 
 Mermaid는 Markdown 코드 블록 안에 텍스트로 다이어그램을 그리는 도구이다. Git의 3영역, 브랜치 흐름, push와 pull을 그림으로 남길 수 있다. 이미지 파일 대신 텍스트로 저장되므로 README와 함께 버전 관리되고, 변경 내용을 diff로 비교할 수 있다.
 

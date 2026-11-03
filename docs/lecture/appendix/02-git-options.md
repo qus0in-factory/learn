@@ -4,9 +4,9 @@ subtitle: "Git 명령과 옵션을 한눈에 확인한다."
 
 # 명령과 옵션 일람
 
-관련 차시: [2차시 로컬 저장소](../02-local-repository.md) · [3차시 커밋](../03-commit-history.md) · [4차시 이력 수정](../04-amend-ignore.md) · [5차시 원격 연동](../05-remote.md)
+관련 STEP: [STEP 02 저장소 준비와 파일 추적](../02-local-repository.md) · [STEP 03 커밋과 이력 기록](../03-commit-history.md) · [STEP 04 되돌리기와 무시 규칙](../04-amend-ignore.md) · [STEP 05 원격 저장소와 동기화](../05-remote.md)
 
-수업에서 쓰는 Git 명령을 필수, 참고, 실행하지 않는 명령으로 나눈다. 처음에는 필수만 사용하고, 참고는 해당 차시를 마친 뒤 강사 설명과 함께 실행한다. 같은 명령이라도 옵션에 따라 되돌릴 수 있는 범위가 달라지므로, 모르는 옵션은 먼저 `git status`와 `git diff`로 현재 상태를 확인한다.
+수업에서 쓰는 Git 명령을 필수, 참고, 실행하지 않는 명령으로 나눈다. 처음에는 필수만 사용하고, 참고는 해당 STEP을 마친 뒤 강사 설명과 함께 실행한다. 같은 명령이라도 옵션에 따라 되돌릴 수 있는 범위가 달라지므로, 모르는 옵션은 먼저 `git status`와 `git diff`로 현재 상태를 확인한다.
 
 ## 왜 필요한가
 
@@ -73,16 +73,16 @@ subtitle: "Git 명령과 옵션을 한눈에 확인한다."
 | `git clean -fd` | 추적되지 않은 파일 삭제 | `git status`로 확인하고 필요한 파일만 직접 정리 |
 | `git branch -D 이름` | 병합 여부와 관계없이 브랜치 강제 삭제 | 병합 후 `git branch -d 이름` |
 
-## 차시별로 다시 보기
+## STEP별로 다시 보기
 
-- 1–2차시: `git --version`, `git config`, `git init`, `git status`, `git add` → [1차시](../01-environment.md) · [2차시](../02-local-repository.md)
-- 3차시: `git commit`, `git log`, `git reset <파일명>` → [3차시](../03-commit-history.md)
-- 4차시: `git commit --amend`, `git revert`, `.gitignore` → [4차시](../04-amend-ignore.md)
-- 5차시: `git remote`, `git push`, `git pull`, `git clone` → [5차시](../05-remote.md)
-- 6차시: Pages 배포와 갱신 → [6차시](../06-pages.md)
-- 10차시: `git branch`, `git switch`, `git tag` → [10차시](../10-branches-tags.md)
-- 11차시: `git merge`, 충돌 해결, `git log --graph` → [11차시](../11-merge-conflicts.md)
-- 12차시: 브랜치 push와 Pull Request → [12차시](../12-pull-request.md)
+- STEP 01–02: `git --version`, `git config`, `git init`, `git status`, `git add` → [STEP 01](../01-environment.md) · [STEP 02](../02-local-repository.md)
+- STEP 03: `git commit`, `git log`, `git reset <파일명>` → [STEP 03](../03-commit-history.md)
+- STEP 04: `git commit --amend`, `git revert`, `.gitignore` → [STEP 04](../04-amend-ignore.md)
+- STEP 05: `git remote`, `git push`, `git pull`, `git clone` → [STEP 05](../05-remote.md)
+- STEP 06: Pages 배포와 갱신 → [STEP 06](../06-pages.md)
+- STEP 10: `git branch`, `git switch`, `git tag` → [STEP 10](../10-branches-tags.md)
+- STEP 11: `git merge`, 충돌 해결, `git log --graph` → [STEP 11](../11-merge-conflicts.md)
+- STEP 12: 브랜치 push와 Pull Request → [STEP 12](../12-pull-request.md)
 
 ## 주의
 

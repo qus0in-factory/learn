@@ -93,7 +93,7 @@ pwd
 
 | 증상 | 원인 | 대응 |
 | --- | --- | --- |
-| `git: command not found` 에러 | Git이 설치되지 않았거나 환경 변수(PATH) 미등록 | Git 공식 웹사이트에서 재설치하거나 환경 변수를 점검한다. OS별 설정은 [부록 5](appendix/05-os-differences.md)를 참조한다. |
+| `git: command not found` 에러 | Git이 설치되지 않았거나 환경 변수(PATH) 미등록 | Git 공식 웹사이트에서 재설치하거나 환경 변수를 점검한다. OS별 설정은 [부록 5. 운영체제별 차이](appendix/05-os-differences.md)를 참조한다. |
 | VS Code 터미널 창이 열리지 않음 | 터미널 기본 셸 설정 충돌 | VS Code를 재시작하거나 `기본 프로필 선택`에서 Git Bash 또는 zsh를 다시 지정한다. |
 | OpenCode 응답 지연 | 네트워크 일시 지연 또는 세션 만료 | 브라우저 세션을 새로고침하거나 강사에게 네트워크 연결을 문의한다. |
 
@@ -101,5 +101,5 @@ pwd
 
 - 터미널 창이나 에이전트 대화창에 개인 비밀번호나 계정 토큰을 입력하지 않는다.
 - 모든 실습은 교육용 전용 폴더에서 진행하며, 개인 중요 파일이 있는 폴더에서 명령을 실행하지 않는다.
-- 운영체제별 단축키와 경로 표기 차이는 [부록 5. macOS와 Windows 사용 차이](appendix/05-os-differences.md)를 참조한다.
+- 운영체제별 단축키와 경로 표기 차이는 [부록 5. 운영체제별 차이](appendix/05-os-differences.md)를 참조한다.
 - 추가 심화 실습은 [보충안 심화](supplement/01-advanced-practice.md), 복습 퀴즈는 [보충안 퀴즈](supplement/02-review-quiz.md), 에이전트 주도 Git은 [보충안 에이전트](supplement/03-agent-led-git.md)에서 다룬다.

@@ -177,5 +177,5 @@ index.html 취미 또는 목표 문구 추가
 
 - 민감한 개인정보나 임시 파일을 확인 없이 한 번에 올리는 `git add .`는 입문 단계에서 지양하고, 파일명을 명시적으로 지정하여 add하는 습관을 들인다.
 - `.git` 폴더 안의 내부 파일들은 Git이 자체적으로 관리하므로 사용자가 직접 수정하거나 삭제하지 않는다.
-- 상세한 Git 명령 옵션 일람은 [부록 2. Git 명령과 옵션 일람](appendix/02-git-options.md)을 참조한다.
+- 상세한 Git 명령 옵션 일람은 [부록 2. 명령과 옵션 일람](appendix/02-git-options.md)을 참조한다.
 - 추가 심화 실습은 [보충안 심화](supplement/01-advanced-practice.md), 복습 퀴즈는 [보충안 퀴즈](supplement/02-review-quiz.md), 에이전트 주도 Git은 [보충안 에이전트](supplement/03-agent-led-git.md)에서 다룬다.

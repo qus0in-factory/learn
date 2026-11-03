@@ -147,5 +147,5 @@ reset 3가지 모드 soft mixed hard 차이 비교 정리
 
 - `reset --hard` 명령은 작업 중이던 모든 파일의 변경을 영구히 지워버리므로 절대 임의로 실행하지 않는다.
 - 비밀번호, API 키, 인증 토큰은 절대로 커밋에 포함되어서는 안 되며, 반드시 `.gitignore`로 사전에 보호한다.
-- 상세한 Git 옵션과 명령어는 [부록 2. Git 명령과 옵션 일람](appendix/02-git-options.md)을 참조한다.
+- 상세한 Git 옵션과 명령어는 [부록 2. 명령과 옵션 일람](appendix/02-git-options.md)을 참조한다.
 - 추가 심화 실습은 [보충안 심화](supplement/01-advanced-practice.md), 복습 퀴즈는 [보충안 퀴즈](supplement/02-review-quiz.md), 에이전트 주도 Git은 [보충안 에이전트](supplement/03-agent-led-git.md)에서 다룬다.
