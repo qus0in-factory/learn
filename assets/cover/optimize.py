@@ -10,3 +10,6 @@ for width in config['widths']:
     resized = image.resize((width, height), Image.Resampling.LANCZOS)
     resized.save(Path('docs/public') / f'cover-{width}.webp',
                  format='WEBP', quality=config['quality'], method=6)
+    resized.save(Path('docs/public') / f'cover-{width}.avif',
+                 format='AVIF', quality=config['avifQuality'],
+                 speed=6, subsampling='4:4:4')

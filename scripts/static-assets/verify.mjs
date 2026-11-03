@@ -9,5 +9,5 @@ export async function verify(read = remoteObject) {
     prove(readFileSync(`dist/learn${asset.path}`), asset.size, asset.sha256)
     prove(await read(`${settings.bucket}/${asset.key}`), asset.size, asset.sha256)
   }
-  console.log('Static assets: 17/17 remote size/SHA verified')
+  console.log(`Static assets: ${settings.expectedCount}/${settings.expectedCount} remote size/SHA verified`)
 }

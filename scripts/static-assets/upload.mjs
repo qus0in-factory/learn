@@ -5,6 +5,7 @@ import { checkedAssets, settings } from './manifest.mjs'
 
 const apply = process.argv.includes('--apply')
 for (const asset of checkedAssets()) {
+  if (process.argv.includes('--images-only') && !asset.type.startsWith('image/')) continue
   const file = `dist/learn${asset.path}`
   prove(readFileSync(file), asset.size, asset.sha256)
   const key = `${settings.bucket}/${asset.key}`
