@@ -1,5 +1,6 @@
 ---
 subtitle: "CLI와 터미널, 셸의 관계와 Git이 실행되는 흐름을 이해한다."
+tags: ["CLI", "GUI", "터미널", "셸", "커널", "Git Bash", "zsh"]
 ---
 
 # CLI·터미널·셸

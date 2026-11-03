@@ -1,5 +1,6 @@
 ---
 subtitle: "Windows 자격 증명을 초기화하고 GitHub에 재인증한다."
+tags: ["자격 증명", "재인증", "GitHub", "Windows"]
 ---
 
 # 자격 증명 재인증

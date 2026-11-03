@@ -1,5 +1,6 @@
 ---
 subtitle: "macOS와 Windows의 사용 차이를 확인한다."
+tags: ["macOS", "Windows", "경로", "자격 증명"]
 ---
 
 # 운영체제별 차이

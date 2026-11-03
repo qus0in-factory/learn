@@ -1,0 +1,47 @@
+:root {
+  --quiz-blank-bg: #d9dce2;
+  --quiz-blank-open-bg: var(--vp-c-brand-soft);
+  --quiz-blank-open-fg: var(--vp-c-brand-1);
+  --quiz-blank-radius: 4px;
+  --quiz-blank-padding: 0 8px;
+  --quiz-blank-min-width: 3em;
+}
+
+.dark {
+  --quiz-blank-bg: #4a4d57;
+}
+
+.quiz-blank {
+  min-width: var(--quiz-blank-min-width);
+  padding: var(--quiz-blank-padding);
+  border: 0;
+  border-radius: var(--quiz-blank-radius);
+  background: var(--quiz-blank-bg);
+  color: transparent;
+  font: inherit;
+  cursor: pointer;
+  user-select: none;
+}
+
+.quiz-blank.is-open {
+  background: var(--quiz-blank-open-bg);
+  color: var(--quiz-blank-open-fg);
+  font-weight: 600;
+}
+
+.quiz-blank:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 2px;
+}
+
+/* Printed pages keep the answers hidden: the grey box stays visible, the text does not. */
+@media print {
+  .quiz-blank {
+    display: inline-block !important;
+  }
+
+  .quiz-blank:not(.is-open) {
+    background-color: #bdbdbd !important;
+    color: transparent !important;
+  }
+}

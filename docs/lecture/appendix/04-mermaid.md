@@ -1,5 +1,6 @@
 ---
 subtitle: "Mermaid로 다이어그램을 작성한다."
+tags: ["Mermaid", "flowchart", "다이어그램", "README"]
 ---
 
 # 다이어그램 작성

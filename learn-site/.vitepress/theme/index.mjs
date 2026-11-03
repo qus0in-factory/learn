@@ -3,6 +3,7 @@ import Layout from './Layout.vue'
 import CourseList from './CourseList.vue'
 import CourseHeader from './CourseHeader.vue'
 import CourseContents from './CourseContents.vue'
+import QuizBlank from './QuizBlank.vue'
 import './content-links.css'
 import './mermaid-theme.css'
 import './nav-icons.css'
@@ -17,5 +18,6 @@ export default {
     app.component('CourseList', CourseList)
     app.component('CourseHeader', CourseHeader)
     app.component('CourseContents', CourseContents)
+    app.component('QuizBlank', QuizBlank)
   },
 }

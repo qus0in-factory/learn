@@ -1,5 +1,6 @@
 ---
 subtitle: "눈누·Bulma·Coolors로 폰트·스타일·색상을 고른다."
+tags: ["눈누", "Bulma", "Coolors", "폰트", "색상"]
 ---
 
 # 웹 디자인 보조 도구
