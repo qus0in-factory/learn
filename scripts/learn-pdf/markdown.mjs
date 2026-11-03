@@ -1,5 +1,5 @@
 import MarkdownIt from 'markdown-it';
-const md = new MarkdownIt({ html: false });
+const md = new MarkdownIt({ html: true });
 md.renderer.rules.fence = (tokens, i) => {
   const { info, content } = tokens[i];
   return info.trim() === 'mermaid'
