@@ -1,7 +1,7 @@
 import { labels } from './labels.mjs'
 
 export const site = {
-  title: '에코익힘책',
+  title: labels.siteTitle,
   subtitle: 'AI & 코딩 익힘책',
   logo: '/header-logo.png',
   logoHeight: '36px',
