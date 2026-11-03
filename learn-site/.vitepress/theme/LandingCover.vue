@@ -1,12 +1,13 @@
 <script setup>
-import cover from '../cover.json'
+import { cover, coverImage } from '../cover.mjs'
 import { site } from '../site.mjs'
 import './cover.css'
+import './cover-mask.css'
 </script>
 
 <template>
-  <section class="landing-cover" :style="{ '--cover-width': cover.displayWidth }">
-    <img :src="cover.src" :alt="cover.alt" :width="cover.width" :height="cover.height"
+  <section class="landing-cover" :style="cover.style">
+    <img v-bind="coverImage" :sizes="cover.sizes" :alt="cover.alt"
       fetchpriority="high" decoding="async">
     <div class="visually-hidden">
       <h1>{{ site.title }}</h1>

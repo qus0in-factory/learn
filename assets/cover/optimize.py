@@ -5,6 +5,8 @@ from PIL import Image
 
 config = json.loads(Path('learn-site/.vitepress/cover.json').read_text())
 image = Image.open(config['source']).convert('RGB')
-image = image.resize((config['width'], config['height']), Image.Resampling.LANCZOS)
-image.save(Path('docs/public') / config['src'].lstrip('/'),
-           format='WEBP', quality=config['quality'], method=6)
+for width in config['widths']:
+    height = round(width * image.height / image.width)
+    resized = image.resize((width, height), Image.Resampling.LANCZOS)
+    resized.save(Path('docs/public') / f'cover-{width}.webp',
+                 format='WEBP', quality=config['quality'], method=6)

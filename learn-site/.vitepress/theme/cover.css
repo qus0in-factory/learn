@@ -1,8 +1,18 @@
+.landing-cover { margin-bottom: var(--cover-gap); }
+.vp-doc .landing-cover + .course-list { margin-top: 0; }
 .vp-doc .landing-cover img {
   display: block;
   width: min(100%, var(--cover-width));
   height: auto;
   margin: 0 auto;
+  border-radius: var(--cover-radius);
+}
+@media (max-width: 959px) {
+  .vp-doc .landing-cover img { width: min(100%, var(--cover-tablet-width)); }
+}
+@media (max-width: 639px) {
+  .landing-cover { margin-bottom: var(--cover-mobile-gap); }
+  .vp-doc .landing-cover img { width: min(100%, var(--cover-mobile-width)); }
 }
 .visually-hidden {
   position: absolute;

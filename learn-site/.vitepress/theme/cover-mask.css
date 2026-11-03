@@ -1,0 +1,8 @@
+.landing-cover img {
+  mask-image:
+    linear-gradient(to right, transparent, #000 var(--cover-feather),
+      #000 calc(100% - var(--cover-feather)), transparent),
+    linear-gradient(to bottom, transparent, #000 var(--cover-feather),
+      #000 calc(100% - var(--cover-feather)), transparent);
+  mask-composite: intersect;
+}
