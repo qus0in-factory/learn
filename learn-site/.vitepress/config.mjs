@@ -9,7 +9,7 @@ import { courseUpdated } from './updated.mjs'
 import { excluded, pages, vueAlias } from './pages.mjs'
 import { cdnVite } from './cdn-vite.mjs'
 import { cdnHead } from './cdn-head.mjs'
-import { courseQr } from './course-qr.mjs'
+import { sitePlugins } from './site-plugins.mjs'
 
 export default defineConfig({
   title: site.title,
@@ -25,6 +25,6 @@ export default defineConfig({
   transformPageData,
   transformHead: cdnHead,
   head: [...printHead, ...faviconHead],
-  vite: { ...cdnVite, plugins: [courseQr()], resolve: { alias: vueAlias } },
+  vite: { ...cdnVite, plugins: sitePlugins, resolve: { alias: vueAlias } },
   markdown,
 })
