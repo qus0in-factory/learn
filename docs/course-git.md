@@ -7,7 +7,7 @@
 - README, TIL, Issue로 작업과 배운 점을 기록할 수 있다.
 - 브랜치에서 실험하고 Pull Request로 `main`에 합칠 수 있다.
 
-## 차시 목차
+## 강의 목차
 
 <CourseContents />
 

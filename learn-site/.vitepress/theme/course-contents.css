@@ -1,0 +1,5 @@
+.vp-doc table.course-contents { width: 100%; display: table; table-layout: auto; }
+.course-contents th:first-child, .course-contents td:first-child {
+  width: 1%;
+  white-space: nowrap;
+}

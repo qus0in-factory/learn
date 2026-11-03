@@ -1,4 +1,5 @@
 import { readdirSync, readFileSync } from 'node:fs'
+import { displayTitle } from './display-text.mjs'
 
 const DIR = new URL('../../docs/lecture/', import.meta.url)
 const BASE = '/git/'
@@ -13,7 +14,7 @@ function items(dir, pattern) {
     .filter((file) => pattern.test(file))
     .sort()
     .map((file) => ({
-      text: title(`${dir}${file}`).replace(/^\d+차시\.\s*/, ''),
+      text: displayTitle(title(`${dir}${file}`)),
       link: `${BASE}${dir}${file.replace(/\.md$/, '')}`,
     }))
 }
