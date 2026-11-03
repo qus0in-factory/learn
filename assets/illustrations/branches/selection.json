@@ -1,0 +1,9 @@
+{
+  "selected": "candidate-2.png",
+  "reason": "본줄기에서 갈라진 실험 가지가 다시 합쳐지는 구조가 단순하다.",
+  "rejected": "candidate-1.png",
+  "rejectionReason": "여러 사물이 섞여 분기·병합 구조가 흐려진다.",
+  "model": "gemini-3.1-flash-image",
+  "apiDisplayName": "Nano Banana 2",
+  "originalsPreserved": true
+}

@@ -7441,3 +7441,8 @@ Source file used: unofficial mirror https://github.com/item4/kfonts at commit 0b
 SHA-256 163f545e2584d15a8e7b8b7f26524002d03c675c9da9c8f1c07a4ae9785391ce (631,348 bytes).
 Not compared with the original KERIS file (user approved on 2026-11-03).
 Extraction script and record: scripts/logotype/extract.py, scripts/logotype/source.json
+
+
+AI-generated illustrations (git-stages, illust-copies, illust-snapshots, illust-publish, illust-branches, illust-review)
+Generated for this project with Nano Banana 2 (Gemini model gemini-3.1-flash-image) using the course cover images as style references.
+Prompts, model, reference sources and candidate selection are recorded in assets/illustrations/<name>/generation.json and selection.json.

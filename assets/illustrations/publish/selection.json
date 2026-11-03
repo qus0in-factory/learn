@@ -1,0 +1,9 @@
+{
+  "selected": "candidate-1.png",
+  "reason": "닫힌 집과 열린 광장의 대비가 분명하고 Step 01 그림과 같은 아이소메트릭 톤이다.",
+  "rejected": "candidate-2.png",
+  "rejectionReason": "로봇·동물 등 불필요한 요소가 섞였다.",
+  "model": "gemini-3.1-flash-image",
+  "apiDisplayName": "Nano Banana 2",
+  "originalsPreserved": true
+}

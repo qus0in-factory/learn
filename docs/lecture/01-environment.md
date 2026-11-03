@@ -48,6 +48,8 @@ flowchart TB
 
 이러한 문제를 해결하고 코드의 변경 이력을 타임머신처럼 시간순으로 저장하여 언제든 안전한 과거 시점으로 되돌려 주는 도구가 바로 <strong>버전 관리 시스템(VCS, Version Control System)</strong>이다. 그리고 HTML, CSS, 이미지, 문서 등 프로젝트 전체의 구성 요소들을 하나의 유기적인 상태로 추적하고 통제하는 활동을 <strong>형상 관리(SCM, Software Configuration Management)</strong>라고 부른다.
 
+<Illustration name="copies" alt="복사본 파일이 쌓인 책상에서 순서대로 정리된 저장 기록 한 줄로 바뀌는 모습" />
+
 ## 로컬 3단계 구조와 상태 변화
 
 Git은 파일 변경을 무작정 저장하지 않고 확실히 구분되는 3단계를 거친다.

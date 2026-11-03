@@ -1,0 +1,9 @@
+{
+  "selected": "candidate-2.png",
+  "reason": "글자 없이 저장 지점 깃발과 되돌아가는 화살표 하나로 의미가 분명하다.",
+  "rejected": "candidate-1.png",
+  "rejectionReason": "`Checkpoint` 글자가 들어가 글자 금지 조건을 어기고 화살표가 많다.",
+  "model": "gemini-3.1-flash-image",
+  "apiDisplayName": "Nano Banana 2",
+  "originalsPreserved": true
+}

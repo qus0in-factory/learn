@@ -1,0 +1,9 @@
+{
+  "selected": "candidate-2.png",
+  "reason": "복사본이 쌓인 책상과 정리된 저장 기록의 대비가 가장 분명하고 글자·불필요한 화살표가 없다.",
+  "rejected": "candidate-1.png",
+  "rejectionReason": "화살표·장식이 많아 복잡하다.",
+  "model": "gemini-3.1-flash-image",
+  "apiDisplayName": "Nano Banana 2",
+  "originalsPreserved": true
+}
