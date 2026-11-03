@@ -9,8 +9,10 @@ import { excluded, pages, vueAlias } from './pages.mjs'
 import { cdnVite } from './cdn-vite.mjs'
 import { cdnHead } from './cdn-head.mjs'
 import { sitePlugins } from './site-plugins.mjs'
+import { seoOptions } from './seo-options.mjs'
 
 export default defineConfig({
+  ...seoOptions,
   title: site.title,
   lang: 'ko-KR',
   base: '/',
