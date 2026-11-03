@@ -1,12 +1,10 @@
-import { render } from 'pele'
+import { render } from 'pele';
+import { configureMarkdown } from '../../scripts/learn-pdf/markdown-shared.mjs';
 
 export const markdown = {
   config(md) {
-    const fence = md.renderer.rules.fence
-    md.renderer.rules.fence = (tokens, index, options, env, self) => {
-      const token = tokens[index]
-      if (token.info.trim() !== 'mermaid') return fence(tokens, index, options, env, self)
-      return `<div class="mermaid-diagram">${render(token.content).svg}</div>\n`
-    }
-  },
-}
+    configureMarkdown(md, {
+      mermaid: c => `<div class="mermaid-diagram">${render(c).svg}</div>\n`
+    });
+  }
+};

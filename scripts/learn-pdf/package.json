@@ -4,6 +4,10 @@
   "dependencies": {
     "esbuild": "0.25.12",
     "markdown-it": "14.1.0",
+    "markdown-it-cjk-friendly": "^3.0.0",
+    "markdown-it-footnote": "^4.0.0",
+    "markdown-it-github-alerts": "^1.0.1",
+    "markdown-it-task-lists": "^2.1.1",
     "mermaid": "11.12.1",
     "playwright": "1.56.1"
   }
