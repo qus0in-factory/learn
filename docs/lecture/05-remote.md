@@ -45,6 +45,18 @@ flowchart LR
    - **`pull`**: 원격 저장소에 새로 추가된 최신 커밋들을 내 로컬 브랜치로 가져와 병합한다.
    - **`fork`**: 다른 사람의 GitHub 저장소를 내 GitHub 계정의 원격 저장소로 복사해 온다 (오픈소스 기여 시 주로 사용).
 
+### 복제와 가져오기
+
+`fork`, `clone`, `pull`은 저장소 사이에서 코드가 움직이는 방향이 다르다.
+
+```mermaid
+flowchart TB
+    UP["다른 사람의 저장소"] -->|fork| FORK["내 GitHub 저장소"]
+    FORK -->|clone| LOCAL["내 컴퓨터"]
+    LOCAL -->|push| FORK
+    FORK -->|pull| LOCAL
+```
+
 ## 따라하기
 
 1. 브라우저에서 GitHub(github.com)에 로그인한다.

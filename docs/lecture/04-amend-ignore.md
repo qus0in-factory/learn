@@ -51,6 +51,31 @@ flowchart TD
      - `--hard`: **주의!** 작업 공간의 파일 변경 내용까지 전부 강제로 지워버린다.
      - **경고**: `--hard`는 미처 커밋하지 못한 소스코드를 영구적으로 날릴 위험이 있으므로 수업에서는 절대 직접 실행하지 않는다.
 
+### reset 모드 비교
+
+`reset`의 세 모드는 되돌리는 범위가 다르다. 화살표는 각 모드가 되돌리는 영역을 가리킨다.
+
+```mermaid
+flowchart LR
+    SOFT["--soft"] --> HEAD["HEAD(커밋)"]
+    MIXED["--mixed"] --> HEAD
+    MIXED --> STAGE["스테이징 영역"]
+    HARD["--hard"] --> HEAD
+    HARD --> STAGE
+    HARD --> WORK["작업 공간"]
+```
+
+### revert 이력 모양
+
+`revert`는 이력을 지우지 않고 되돌리는 커밋을 하나 더한다.
+
+```mermaid
+gitGraph
+    commit id: "첫 웹페이지"
+    commit id: "잘못된 변경"
+    commit id: "잘못된 변경 되돌리기"
+```
+
 ## `.gitignore` 작성 규칙
 
 저장소 루트에 `.gitignore`라는 이름의 텍스트 파일을 두면, Git은 그 안에 적힌 패턴과 일치하는 파일이나 폴더를 없는 것처럼 취급한다.

@@ -29,6 +29,21 @@ schedule: "15:00–15:45 (수업 45분) / 15:45–16:00 (휴식 및 피날레 15
 - **동기화**: 원격에서 병합된 내용을 `git pull`로 로컬에 가져온다.
 - **브랜치 정리**: 다 쓴 브랜치를 삭제해 저장소를 깔끔하게 유지한다.
 
+### PR 전체 흐름
+
+브랜치를 올린 뒤 PR로 검토하고 병합하며, 로컬을 동기화하고 브랜치를 정리한다.
+
+```mermaid
+flowchart TB
+    BRANCH["브랜치 작업"] --> PUSH["git push"]
+    PUSH --> PR["Pull Request"]
+    PR --> REVIEW["리뷰(diff)"]
+    REVIEW --> MERGE["Merge PR"]
+    MERGE --> PULL["로컬 git pull"]
+    PULL --> CLEAN["브랜치 삭제"]
+    CLEAN --> PAGES["Pages 갱신"]
+```
+
 ## 따라하기
 
 1. 새 브랜치 `feature/final-polish`를 만든다.

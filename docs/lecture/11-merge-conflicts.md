@@ -29,6 +29,41 @@ schedule: "14:00–14:45 (수업 45분) / 14:45–15:00 (휴식 15분)"
   - `>>>>>>> feature/...`: 가져오려는 브랜치의 코드
 - **`git merge --abort`**: 충돌 발생 시 병합을 취소하고 시작 전 안전한 상태로 되돌린다.
 
+### 병합 두 가지 방식
+
+Fast-forward는 포인터만 앞으로 옮기고, 3-way는 새로운 Merge Commit을 만든다.
+
+```mermaid
+flowchart TB
+    A["A"] --> B["B"] --> C["C(feature)"]
+    BEFORE["main(병합 전)"] -.-> A
+    AFTER["main(병합 후)"] ==> C
+```
+
+```mermaid
+gitGraph
+    commit id: "A"
+    branch feature
+    checkout feature
+    commit id: "B"
+    checkout main
+    commit id: "C"
+    merge feature id: "Merge Commit"
+```
+
+### 충돌 해결 흐름
+
+병합 중 충돌이 나면 마커를 고쳐 다시 커밋하고, 꼬이면 `--abort`로 처음 상태로 돌아간다.
+
+```mermaid
+flowchart TB
+    MERGE["git merge"] --> CONFLICT["CONFLICT 발생"]
+    CONFLICT --> EDIT["마커 편집"]
+    EDIT --> ADD["git add"]
+    ADD --> COMMIT["git commit"]
+    CONFLICT -->|막힘| ABORT["git merge --abort"]
+```
+
 ## 따라하기
 
 1. `main` 브랜치에서 `index.html` 5번째 줄 제목을 수정하고 커밋한다.

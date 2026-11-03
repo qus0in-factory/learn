@@ -74,6 +74,19 @@ tags: ["Git 명령", "옵션", "위험도"]
 | `git clean -fd` | 추적되지 않은 파일 삭제 | `git status`로 확인하고 필요한 파일만 직접 정리 |
 | `git branch -D 이름` | 병합 여부와 관계없이 브랜치 강제 삭제 | 병합 후 `git branch -d 이름` |
 
+## 명령 지도
+
+작업 공간, 스테이징 영역, 로컬 저장소, 원격 저장소 사이를 옮기는 명령을 한 장으로 본다.
+
+```mermaid
+flowchart TB
+    WORK["작업 공간"] -->|git add| STAGE["스테이징 영역"]
+    STAGE -->|git commit| LOCAL["로컬 저장소"]
+    LOCAL -->|git push| REMOTE["원격 저장소"]
+    REMOTE -->|git pull| WORK
+    STAGE -->|restore --staged| WORK
+```
+
 ## STEP별로 다시 보기
 
 - STEP 01–02: `git --version`, `git config`, `git init`, `git status`, `git add` → [STEP 01](../01-environment.md) · [STEP 02](../02-local-repository.md)

@@ -29,6 +29,20 @@ schedule: "13:00–13:45 (수업 45분) / 13:45–14:00 (휴식 15분)"
 - **경량 태그**: `git tag v0.1.0`처럼 단순히 이름만 붙인다.
 - **주석 태그**: `git tag -a v0.2.0 -m "Release v0.2.0"`처럼 작성자와 설명을 포함한다.
 
+### 브랜치 분기 그림
+
+`main`에서 갈라진 브랜치는 따로 커밋을 쌓고, 릴리스 지점에는 태그를 붙인다.
+
+```mermaid
+gitGraph
+    commit id: "첫 웹페이지"
+    branch feature/profile-design
+    checkout feature/profile-design
+    commit id: "프로필 디자인"
+    checkout main
+    commit id: "배포 문구 수정" tag: "v0.1.0"
+```
+
 ## 따라하기
 
 1. 터미널에서 현재 브랜치를 확인한다.
