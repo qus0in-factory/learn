@@ -8,7 +8,7 @@ const links = ['/git/01-environment', '/git/02-local-repository', '/git/03-commi
 test('sidebar groups 12 lectures, appendix and supplement under /git', () => {
   assert.deepEqual(group('/git/').slice(0, 12).map((item) => item.link), links)
   assert.equal(sidebar['/git/'][1].items.length, 3)
-  assert.equal(sidebar['/git/'][2].items.length, 5)
+  assert.equal(sidebar['/git/'][2].items.length, 6)
   assert.ok(sidebar['/git/'][1].collapsed && sidebar['/git/'][2].collapsed)
   assert.ok(sidebar['/git/'][1].items.every(item => item.link.startsWith('/git/supplement/')))
 })

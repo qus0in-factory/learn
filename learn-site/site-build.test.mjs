@@ -24,13 +24,13 @@ const expectedPages = [
   'git/index.html',
   'git/catalog.html',
   ...lecturePages,
-  ...[1, 2, 3, 4, 5].map((n) => `git/appendix/0${n}-${['authentication', 'git-options', 'web-tools', 'mermaid', 'os-differences'][n - 1]}.html`),
+  ...[1, 2, 3, 4, 5, 6].map((n) => `git/appendix/0${n}-${['authentication', 'git-options', 'web-tools', 'mermaid', 'os-differences', 'cli-terminal-shell'][n - 1]}.html`),
   ...[1, 2, 3].map((n) => `git/supplement/0${n}-${['advanced-practice', 'review-quiz', 'agent-led-git'][n - 1]}.html`),
 ]
 
-test('build emits landing, 404 and 21 course pages under /git', () => {
-  assert.equal(expectedPages.length, 25)
-  assert.equal(expectedPages.filter((page) => page.startsWith('git/') && page !== 'git/index.html').length, 21)
+test('build emits landing, 404 and 22 course pages under /git', () => {
+  assert.equal(expectedPages.length, 26)
+  assert.equal(expectedPages.filter((page) => page.startsWith('git/') && page !== 'git/index.html').length, 22)
   for (const page of expectedPages) assert.ok(existsSync(new URL(page, dist)), page)
   assert.deepEqual(htmlFiles.sort(), expectedPages.sort())
 })
