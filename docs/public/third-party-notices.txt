@@ -7341,7 +7341,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
-Simple Icons: KakaoTalk, X — CC0 1.0
+Simple Icons: X — CC0 1.0
 # CC0 1.0 Universal
 
 ## Statement of Purpose
@@ -7418,3 +7418,13 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+
+Kakao Talk Share icon — © Kakao Corp.; proprietary trademark/design resource
+Source: https://developers.kakao.com/tool/images/resource/preview/talk-sharing-medium.svg
+Official resource: https://developers.kakao.com/tool/resource/talk
+Usage: Kakao provides this standard icon for services using Kakao Talk Share;
+see https://developers.kakao.com/docs/en/tool/common#resource-download and
+https://developers.kakao.com/docs/en/tutorial/js-share#apply-official-kakaotalk-share-button.
+Kakao terms and trademark rights apply; this is not an open-source license.
+The provided SVG uses #FAE100 and #3C1E1E; the artwork is not recolored.

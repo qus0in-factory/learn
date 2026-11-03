@@ -1,14 +1,25 @@
-.share-course { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; margin: 20px 0; }
+.share-course {
+  --share-button-size: 40px;
+  --share-icon-size: 22px;
+  --share-padding: 8px;
+  display: flex; flex-direction: column; gap: 16px; align-items: flex-start; margin: 20px 0;
+}
 .share-course img { width: 120px; height: 120px; }
 .share-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 .share-actions button, .share-actions a {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--share-button-size);
+  height: var(--share-button-size);
   border: 1px solid var(--vp-c-divider);
   border-radius: 6px;
-  padding: 6px 10px;
+  padding: var(--share-padding);
   color: var(--vp-c-text-1);
   text-decoration: none;
 }
-.share-actions button:disabled { opacity: .55; cursor: not-allowed; }
+.share-actions button:disabled { cursor: not-allowed; }
 .share-icon { display: inline-flex; vertical-align: middle; }
-.share-icon svg { width: 20px; height: 20px; color: currentColor; }
-.share-icon.simple svg { fill: currentColor; }
+.share-icon svg { width: var(--share-icon-size); height: var(--share-icon-size); color: currentColor; }
+.share-icon.x svg { fill: currentColor; }

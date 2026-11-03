@@ -7,5 +7,5 @@ const icons = { kakao, x, link }
 </script>
 
 <template>
-  <span class="share-icon" :class="{ simple: name !== 'link' }" aria-hidden="true" v-html="icons[name]" />
+  <span class="share-icon" :class="name" aria-hidden="true" v-html="icons[name]" />
 </template>
