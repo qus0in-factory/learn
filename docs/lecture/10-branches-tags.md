@@ -91,4 +91,3 @@ git tag -a v0.2.0 -m "Release v0.2.0"
 - `git branch -D`로 브랜치를 강제 삭제하지 않는다.
 - 미커밋 변경이 있는 상태에서 브랜치를 전환하지 않는다.
 - 태그는 릴리스 지점에만 붙인다.
-- 추가 심화는 [보충안 심화](supplement/01-advanced-practice.md), 복습 퀴즈는 [보충안 퀴즈](supplement/02-review-quiz.md), 에이전트 주도 Git은 [보충안 에이전트](supplement/03-agent-led-git.md)에서 다룬다.

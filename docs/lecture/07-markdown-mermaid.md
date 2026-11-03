@@ -121,4 +121,3 @@ Mermaid 다이어그램에 pull 흐름 화살표 추가
 - README에 비밀 값, 토큰, 비밀번호를 적지 않는다.
 - 공개 저장소이므로 배포 주소와 소개 문구만 노출한다.
 - Bulma, 눈누, Coolors는 선택 참고 도구이며 필수 설치 대상이 아니다. 폰트 라이선스는 [부록 3. 웹 디자인 보조 도구](appendix/03-web-tools.md)를 참조한다.
-- 추가 심화는 [보충안 심화](supplement/01-advanced-practice.md), 복습 퀴즈는 [보충안 퀴즈](supplement/02-review-quiz.md), 에이전트 주도 Git은 [보충안 에이전트](supplement/03-agent-led-git.md)에서 다룬다.

@@ -113,4 +113,3 @@ Profile 저장소와 작업 저장소 차이 설명
 - 공개 프로필에 개인 정보를 과도하게 적지 않는다.
 - Post-mortem에는 비밀 값, 토큰, 비밀번호를 적지 않는다.
 - Profile 저장소와 `portfolio-web` 저장소를 섞지 않는다. README와 코드 변경은 `portfolio-web`에서만 커밋한다.
-- 추가 심화는 [보충안 심화](supplement/01-advanced-practice.md), 복습 퀴즈는 [보충안 퀴즈](supplement/02-review-quiz.md), 에이전트 주도 Git은 [보충안 에이전트](supplement/03-agent-led-git.md)에서 다룬다.

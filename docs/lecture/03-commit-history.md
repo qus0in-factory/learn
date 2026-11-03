@@ -163,4 +163,3 @@ vi 에디터 진입 시 저장 종료 및 취소 종료 키 입력 절차 안내
 - 커밋 메시지는 "수정 완료", "test", "asdf"처럼 모호하게 적지 말고, 무엇이 바뀌었는지 명확하게 기록한다.
 - 수업을 마칠 때는 작업 중인 내용을 반드시 커밋해 두거나 저장하여 작업 트리를 안전하게 정리해 둔다.
 - 상세한 Git 명령어 옵션은 [부록 2. 명령과 옵션 일람](appendix/02-git-options.md)을 참조한다.
-- 추가 심화 실습은 [보충안 심화](supplement/01-advanced-practice.md), 복습 퀴즈는 [보충안 퀴즈](supplement/02-review-quiz.md), 에이전트 주도 Git은 [보충안 에이전트](supplement/03-agent-led-git.md)에서 다룬다.

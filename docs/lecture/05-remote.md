@@ -121,4 +121,3 @@ clone과 fork 차이 초보자 눈높이 비교 설명
 - Personal Access Token이나 비밀번호를 절대 소스 코드 파일이나 공개 채팅, 이슈에 남기지 않는다.
 - 원격 저장소의 이력을 강제로 덮어쓰는 `git push --force` (또는 `-f`) 명령은 팀원의 작업을 파괴할 수 있으므로 절대 실행하지 않는다.
 - 상세한 인증 문제 해결은 [부록 1. 자격 증명 재인증](appendix/01-authentication.md)을 참조한다.
-- 추가 심화 실습은 [보충안 심화](supplement/01-advanced-practice.md), 복습 퀴즈는 [보충안 퀴즈](supplement/02-review-quiz.md), 에이전트 주도 Git은 [보충안 에이전트](supplement/03-agent-led-git.md)에서 다룬다.

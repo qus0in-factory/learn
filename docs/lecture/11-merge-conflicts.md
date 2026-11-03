@@ -95,4 +95,3 @@ log graph에서 Fast-forward 가능 이유 설명
 - 충돌 파일을 저장하기 전에 강사와 확인한다.
 - `reset --hard`로 충돌을 해결하지 않는다.
 - `merge --abort`는 병합 중일 때만 사용한다.
-- 추가 심화는 [보충안 심화](supplement/01-advanced-practice.md), 복습 퀴즈는 [보충안 퀴즈](supplement/02-review-quiz.md), 에이전트 주도 Git은 [보충안 에이전트](supplement/03-agent-led-git.md)에서 다룬다.

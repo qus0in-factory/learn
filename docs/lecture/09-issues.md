@@ -88,4 +88,3 @@ Label과 Milestone 차이 설명
 - Issue와 PR 본문에 비밀 값, 토큰, 비밀번호를 적지 않는다.
 - `gh`와 ChatGPT-GitHub 연동은 선택 심화이며 필수 설치 대상이 아니다.
 - AI 연동 시 저장소 권한 범위를 확인한다.
-- 추가 심화는 [보충안 심화](supplement/01-advanced-practice.md), 복습 퀴즈는 [보충안 퀴즈](supplement/02-review-quiz.md), 에이전트 주도 Git은 [보충안 에이전트](supplement/03-agent-led-git.md)에서 다룬다.
