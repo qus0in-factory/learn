@@ -3,6 +3,13 @@
   --content-link-underline-active-opacity: 100%;
   --content-link-underline-thickness: 1px;
   --content-link-underline-offset: 0.18em;
+  --content-word-break: keep-all;
+  --content-overflow-wrap: anywhere;
+}
+
+body {
+  word-break: var(--content-word-break);
+  overflow-wrap: var(--content-overflow-wrap);
 }
 
 .vp-doc a {
