@@ -10,3 +10,7 @@
 ## 강의 목차
 
 <CourseContents />
+
+## {{ appendix }}
+
+<AppendixContents />

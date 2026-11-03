@@ -6,6 +6,9 @@ export function markdownLabels(md) {
       if (token.type === 'inline' && token.content === '{{ learningGoals }}') {
         token.content = labels.learningGoals
       }
+      if (token.type === 'inline' && token.content === '{{ appendix }}') {
+        token.content = labels.appendix
+      }
     }
   })
 }

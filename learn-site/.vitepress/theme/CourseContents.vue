@@ -4,7 +4,7 @@ import { labels } from '../labels.mjs'
 import './course-contents.css'
 import CourseResourceCells from './CourseResourceCells.vue'
 const { theme } = useData()
-const lessons = theme.value.courseContents
+const lessons = theme.value.courseContents.filter(item => item.pdf)
 </script>
 
 <template>

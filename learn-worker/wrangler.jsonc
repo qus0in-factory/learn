@@ -28,7 +28,10 @@
       "/11-*",
       "/12-*",
       "/appendix/*",
-      "/supplement/*"
+      "/supplement",
+      "/supplement/*",
+      "/git/supplement",
+      "/git/supplement/*"
     ]
   },
   "d1_databases": [

@@ -350,6 +350,34 @@
     "type": "image/webp"
   },
   {
+    "path": "/git-stages-1000.avif",
+    "key": "static/2b61ac187caa4034f323605e5b2d8915d536f2665ec542f2406fb01339980061/git-stages-1000.avif",
+    "size": 38346,
+    "sha256": "2b61ac187caa4034f323605e5b2d8915d536f2665ec542f2406fb01339980061",
+    "type": "image/avif"
+  },
+  {
+    "path": "/git-stages-1000.webp",
+    "key": "static/3007366a4cdf6e84c1b8798b252851af1b6cdb45dfe46582cf50b9e508f95445/git-stages-1000.webp",
+    "size": 44890,
+    "sha256": "3007366a4cdf6e84c1b8798b252851af1b6cdb45dfe46582cf50b9e508f95445",
+    "type": "image/webp"
+  },
+  {
+    "path": "/git-stages-600.avif",
+    "key": "static/384a288024cf0d4ea6b0ff4139a3c19ce3e77ba358e9a06eb85808792d63f716/git-stages-600.avif",
+    "size": 18681,
+    "sha256": "384a288024cf0d4ea6b0ff4139a3c19ce3e77ba358e9a06eb85808792d63f716",
+    "type": "image/avif"
+  },
+  {
+    "path": "/git-stages-600.webp",
+    "key": "static/12f77e47629644257c4cad8df67e1c5b2cc85cd715e5ad6d4ae150614c1fff45/git-stages-600.webp",
+    "size": 20896,
+    "sha256": "12f77e47629644257c4cad8df67e1c5b2cc85cd715e5ad6d4ae150614c1fff45",
+    "type": "image/webp"
+  },
+  {
     "path": "/og-echo.jpg",
     "key": "static/3404285fd61e7f77e2eba15ddc7e143df6c2994f62c275dc2614aaef8f2b0fcd/og-echo.jpg",
     "size": 99838,

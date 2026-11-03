@@ -1,6 +1,6 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import { join } from 'node:path'
-import { lectureFiles, ROOT } from './learn/paths.mjs'
+import { lectureFiles, ROOT, QUIZ_SOURCE } from './learn/paths.mjs'
 import { parseLectures } from './learn/lectures.mjs'
 import { parseQuiz } from './learn/quiz.mjs'
 import { buildSql } from './learn/sql.mjs'
@@ -8,7 +8,7 @@ import { courseMeta } from './learn/meta.mjs'
 
 async function main() {
   const lectures = await parseLectures(await lectureFiles())
-  const quizText = await readFile(join(ROOT, 'docs/lecture/supplement/02-review-quiz.md'), 'utf8')
+  const quizText = await readFile(QUIZ_SOURCE, 'utf8')
   const quiz = parseQuiz(quizText)
   const target = join(ROOT, 'dist/learn-d1.sql')
   await mkdir(join(ROOT, 'dist'), { recursive: true })

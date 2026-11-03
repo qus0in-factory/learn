@@ -1,0 +1,9 @@
+{
+  "selected": "candidate-1.png",
+  "reason": "Three clearly separated desk, basket and snapshot-album stages, exactly two left-to-right arrows, restrained teal/cream palette matching the book covers.",
+  "rejected": "candidate-2.png",
+  "rejectionReason": "Four arrows duplicate the two transitions and can confuse the three-stage model.",
+  "model": "gemini-3.1-flash-image",
+  "apiDisplayName": "Nano Banana 2",
+  "originalsPreserved": true
+}

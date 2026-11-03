@@ -11,6 +11,7 @@
   "10-branches-tags": "git-branch",
   "11-merge-conflicts": "git-merge",
   "12-pull-request": "git-pull-request",
+  "appendix/00-installation": "download",
   "appendix/01-authentication": "key-round",
   "appendix/02-git-options": "terminal",
   "appendix/03-web-tools": "palette",

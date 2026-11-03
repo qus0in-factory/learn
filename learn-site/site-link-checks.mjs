@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict'
+import { read, hrefs, pageUrl, exists } from './site-build-fixture.mjs'
+
+export function checkLinks(file) {
+  for (const href of hrefs(read(file))) {
+    if (/^(?:[a-z]+:)?\/\//i.test(href) || href.startsWith('#')) continue
+    const url = new URL(href, pageUrl(file))
+    if (url.origin !== 'https://learn.test') continue
+    const path = url.pathname
+    if (path === '/vp-icons.css' || path.startsWith('/api/') || path.startsWith('/assets/') || /\.(svg|png|ico|webmanifest|txt)$/.test(path)) continue
+    assert.ok(path === '/' || path === '/licenses' || path === '/git/' || path.startsWith('/git/'), `${file}: ${href}`)
+    const target = path.endsWith('/') ? `${path.slice(1)}index.html` : `${path.slice(1)}.html`
+    assert.ok(exists(target), `${file}: missing ${target}`)
+  }
+}

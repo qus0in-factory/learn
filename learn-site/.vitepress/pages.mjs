@@ -3,7 +3,6 @@ export const pages = {
   'lecture/catalog.md': 'git/catalog.md',
   'lecture/:page': 'git/:page',
   'lecture/appendix/:page': 'git/appendix/:page',
-  'lecture/supplement/:page': 'git/supplement/:page',
 }
 
 export const excluded = [

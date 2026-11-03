@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url'
 
 export const ROOT = fileURLToPath(new URL('../../', import.meta.url))
 export const LECTURE_DIR = join(ROOT, 'docs/lecture')
+export const QUIZ_SOURCE = join(ROOT, 'data/learn-quiz.md')
 
 export async function lectureFiles() {
   const names = await readdir(LECTURE_DIR)

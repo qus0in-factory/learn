@@ -2,6 +2,7 @@
 import { useData } from 'vitepress'
 import links from '../install-links.json'
 import { stepLabels } from '../step-labels.mjs'
+import { installPage } from '../install-page.mjs'
 import './step-downloads.css'
 
 const { frontmatter } = useData()
@@ -21,4 +22,5 @@ const items = (frontmatter.value.downloads || []).map((id) => links.find((link) 
       <p>{{ stepLabels.macGit }}</p>
     </template>
   </section>
+  <p v-else-if="frontmatter.installation"><a :href="installPage.link">{{ installPage.title }}</a></p>
 </template>

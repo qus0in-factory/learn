@@ -1,0 +1,13 @@
+{
+  "model": "gemini-3.1-flash-image",
+  "date": "2026-11-03T15:19:08.887Z",
+  "referenceSources": [
+    "assets/cover/source.png",
+    "assets/cover/git-source.png"
+  ],
+  "basePrompt": "Create an original educational illustration matching the warm Korean early-2000s school textbook aesthetic of the two reference book covers, not a cover itself. Wide horizontal 16:9 composition, clean white/cream background, hand-painted watercolor and colored pencil texture, friendly detailed objects, muted teal, amber, warm green. Explain the three Git change-management stages with three clear left-to-right stations: LEFT a tidy wooden desk where someone edits generic code files represented by paper sheets and a small computer; CENTER a shopping basket holding only selected paper sheets ready to save; RIGHT an open archival photo album storing saved snapshots. Exactly TWO large clear arrows: desk to basket, basket to album. Keep all stations fully visible with generous whitespace, equal scale, clear conceptual distinction. Tiny friendly human hands optional, no full people needed. The desk/basket/album analogy must be recognizable, arrows unobstructed. NO text, NO letters, NO numbers, NO filenames, NO logos, NO QR code, NO additional arrows, no dark background. This is an instructional interior textbook figure, not a restaurant scene.",
+  "variants": [
+    "Use three separate vignette islands with objects seen at a gentle isometric angle. Warm restrained editorial textbook drawing. Arrowheads are teal, subtle pencil outlines, uncluttered.",
+    "Use a continuous horizontal cream tabletop with the three stages as separate clear zones. Slightly more playful rounded watercolor objects, strong readable silhouettes, amber arrowheads."
+  ]
+}

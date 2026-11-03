@@ -59,19 +59,15 @@ flowchart TD
 | 60분 | 심화 실습 2개, 복습 퀴즈 6문항 |
 | 120분 | 심화 실습 3개, 복습 퀴즈 10문항, 에이전트 주도 Git |
 
-### 보충 3파트
-
-1. [추가 심화 실습안](supplement/01-advanced-practice.md) — README, 스타일, Mermaid를 한 단계 더 다듬는다.
-2. [복습용 퀴즈](supplement/02-review-quiz.md) — 10문항으로 Git 흐름을 점검한다.
-3. [에이전트 주도 Git](supplement/03-agent-led-git.md) — 에이전트가 제안하고 학습자가 승인하는 경계를 익힌다.
-
 ## 부록
 
-- [부록 1. Windows 자격 증명 삭제와 GitHub 재인증](appendix/01-authentication.md)
-- [부록 2. Git 명령과 옵션 일람](appendix/02-git-options.md)
-- [부록 3. 웹 보조 도구: 눈누·Bulma·Coolors](appendix/03-web-tools.md)
-- [부록 4. Mermaid 시각화](appendix/04-mermaid.md)
-- [부록 5. macOS와 Windows 사용 차이](appendix/05-os-differences.md)
+- [설치 준비](appendix/00-installation.md)
+- [자격 증명 재인증](appendix/01-authentication.md)
+- [명령과 옵션 일람](appendix/02-git-options.md)
+- [웹 디자인 보조 도구](appendix/03-web-tools.md)
+- [다이어그램 작성](appendix/04-mermaid.md)
+- [운영체제별 차이](appendix/05-os-differences.md)
+- [CLI·터미널·셸](appendix/06-cli-terminal-shell.md)
 
 ## 문서 구조
 
@@ -79,15 +75,14 @@ flowchart TD
 flowchart TD
     L["docs/lecture"] --> C["01–12차시 문서<br/>01-environment.md … 12-pull-request.md"]
     L --> A["appendix/<br/>01-authentication.md … 05-os-differences.md"]
-    L --> S["supplement/<br/>01-advanced-practice.md … 03-agent-led-git.md"]
 ```
 
 ## 준비물과 안전 규칙
 
 - VS Code, Git, 터미널(Windows Git Bash 또는 macOS 터미널), GitHub 계정, OpenCode를 준비한다.
-- 눈누, Bulma, Coolors는 선택 참고 도구이다. 필수 설치가 아니며 [부록 3](appendix/03-web-tools.md)에서 라이선스와 사용 범위를 확인한다.
+- 눈누, Bulma, Coolors는 선택 참고 도구이다. 필수 설치가 아니며 [웹 디자인 보조 도구](appendix/03-web-tools.md) 부록에서 라이선스와 사용 범위를 확인한다.
 - 모든 명령은 별도 교육용 폴더에서 한 줄씩 실행한다. 오류가 나면 다음 명령을 이어서 실행하지 않는다.
 - 토큰, 비밀번호, 개인정보를 채팅·파일·Issue에 남기지 않는다.
 - `reset --hard`, `push --force`, `clean -fd`, 브랜치 강제 삭제는 수업에서 실행하지 않는다.
 - 원격 push는 교육용 저장소인지 확인하고 실행한다. 인증 창은 학습자가 직접 처리한다.
-- OS별 경로와 인증 저장소가 다르면 [부록 5](appendix/05-os-differences.md)를 먼저 확인한다.
+- OS별 경로와 인증 저장소가 다르면 [운영체제별 차이](appendix/05-os-differences.md) 부록을 먼저 확인한다.
