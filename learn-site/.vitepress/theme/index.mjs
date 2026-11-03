@@ -3,6 +3,7 @@ import Layout from './Layout.vue'
 import CourseList from './CourseList.vue'
 import CourseHeader from './CourseHeader.vue'
 import CourseContents from './CourseContents.vue'
+import './content-links.css'
 
 export default {
   extends: DefaultTheme,
