@@ -35,6 +35,7 @@ stateDiagram-v2
     Modified --> Staged: git add
     Staged --> Unmodified: git commit
     Staged --> Modified: git restore --staged
+    Staged --> Untracked: git rm --cached
 ```
 
 1. **Untracked (미추적 상태)**
@@ -45,6 +46,7 @@ stateDiagram-v2
    - **Modified**: 이전 저장 상태와 비교해 내용이 변경된 상태.
 3. **Staged (스테이징 상태)**
    - `git add` 명령을 통해 다음 커밋 스냅샷에 포함하기로 확정해 둔 상태이다. `git status` 실행 시 초록색으로 표시된다.
+   - 이미 커밋된 적 있는 파일은 `git restore --staged`로 스테이징만 취소하면 Modified로 돌아간다. 첫 커밋 전 새 파일은 HEAD가 없어 그 명령이 실패한다. 그때는 `git rm --cached -- <파일>`로 인덱스에서만 빼 Untracked로 되돌린다.
 
 ### 빈 폴더와 `.gitkeep`
 Git은 빈 폴더 자체를 추적하지 않는다. 폴더 안에 빈 `.gitkeep` 파일을 두면 파일과 함께 폴더가 기록된다. `.gitkeep`은 특별한 Git 기능이나 유일한 표준이 아닌 이름 관례다. `.gitignore` 파일을 두는 방법도 있지만, 이 파일의 내용은 무시할 파일을 정하므로 규칙에 따라 다른 파일이 추적되지 않을 수 있다.
@@ -55,7 +57,7 @@ Git은 빈 폴더 자체를 추적하지 않는다. 폴더 안에 빈 `.gitkeep`
 
 ### 미리보기 준비
 
-VS Code 확장 메뉴에서 Live Server를 검색해 설치하고, 파일을 만든 뒤 `index.html`을 열어 `Open with Live Server`로 미리 본다. 기본 포트는 5500이며 이미 사용 중이면 설정에서 다른 포트를 지정한다. 파일은 확장 없이도 만들고 브라우저에서 열 수 있다. 대안으로 Python이 설치되어 있다면 작업 폴더에서 `python -m http.server 8000`을 실행해 `http://localhost:8000`으로 접속하거나, Node.js 환경에서는 [http-server](https://github.com/http-party/http-server)를 사용할 수 있다. 서버는 `Ctrl+C`로 중단한다.
+VS Code 확장 메뉴에서 Live Server를 검색해 설치하고, 파일을 만든 뒤 `index.html`을 열어 `Open with Live Server`로 미리 본다. 기본 포트는 5500이다. 확장 변경 기록은 그 포트가 사용 중이면 다른 포트로 넘어갈 수 있다고 적고, 포트를 고정하려면 설정에서 바꾼다. 파일은 확장 없이도 만들고 브라우저에서 열 수 있다. 대안으로 Python이 있으면 작업 폴더에서 `python -m http.server 8000`을 실행한다. 공식 기본 포트는 8000이고, 실행 파일 이름은 설치에 따라 `python3`일 수 있다. Node.js 환경에서는 [http-server](https://github.com/http-party/http-server)를 사용할 수 있다. 서버는 `Ctrl+C`로 중단한다.
 
 ### OpenCode 요청
 
@@ -144,8 +146,8 @@ Git 명령은 로컬에서 실행되지만, STEP 05부터 쓰는 원격 저장�
 
 작업자 정보 등록은 커밋에 기록될 이름과 이메일을 정하는 단계이다.
 
-- `user.name`과 `user.email`은 모든 커밋에 작성자로 저장되므로, 협업할 때 누가 변경했는지 추적하는 기준이 된다.
-- `--global`은 이 컴퓨터의 모든 저장소에 적용되는 기본값이라는 뜻이며, 한 번만 설정하면 된다.
+- `user.name`과 `user.email`은 새 커밋의 작성자·커미터 기본값이다. 저장소별 설정 등이 이 값을 덮어쓸 수 있다.
+- `--global`은 현재 사용자의 저장소에 적용되는 기본값이다. 한 번 설정하면 저장소별 설정이 없는 곳에 쓰인다.
 - 이메일을 GitHub 가입 이메일(또는 GitHub `noreply` 이메일)과 맞추면 커밋이 내 GitHub 계정에 연결된다. 다르면 커밋은 만들어지지만 계정과 연결되지 않을 수 있다.
 
 ```bash
@@ -206,7 +208,7 @@ index.html의 자기소개에 한글 취미 문구 한 줄만 추가
 | `fatal: not a git repository` | `git init`을 실행하지 않은 폴더에서 git 명령 입력 | `pwd`로 위치를 확인하고 `cd portfolio-web` 이동 후 `git init`을 실행한다. |
 | 이름/이메일 오타 발생 | 잘못된 값 등록 | 동일한 `git config --global` 명령으로 올바른 이름과 이메일을 다시 입력하면 덮어써진다. |
 | `git status`에 파일이 안 보임 | 파일이 저장되지 않았거나 다른 폴더에 생성됨 | VS Code에서 파일 저장(`Ctrl + S`)을 확인하고 현재 폴더 경로를 점검한다. |
-| 실수로 원치 않는 파일을 `add`함 | 전체 추가 또는 파일 오입력 | `git restore --staged <파일명>` 명령어로 스테이징을 안전하게 취소한다. |
+| 실수로 원치 않는 파일을 `add`함 | 전체 추가 또는 파일 오입력 | 첫 커밋 전 새 파일은 `git rm --cached -- <파일명>`으로 인덱스에서만 뺀다. 이미 커밋된 파일은 `git restore --staged <파일명>`으로 스테이징만 취소한다. |
 
 ## 주의할 점
 

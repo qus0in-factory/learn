@@ -22,7 +22,7 @@ schedule: "10:00–10:45 (수업 45분) / 10:45–11:00 (휴식 15분)"
 
 ## 핵심 개념
 
-- **Profile 저장소**는 GitHub 사용자명과 이름이 같은 공개 저장소(`https://github.com/<사용자명>/<사용자명>`)다. 루트의 [README](glossary.md#readme)가 `https://github.com/<사용자명>` 프로필에 보인다.
+- **Profile 저장소**는 GitHub 사용자명과 이름이 같은 공개 저장소(`https://github.com/<사용자명>/<사용자명>`)다. 루트 [README](glossary.md#readme)가 비어 있지 않으면 `https://github.com/<사용자명>` 프로필에 보인다. 2020년 7월 전에 만든 저장소는 설정에서 프로필 표시를 켜야 할 수 있다.
 - **개인 사이트 저장소** `<사용자명>.github.io`는 GitHub Pages로 `https://<사용자명>.github.io/`에 기술 블로그나 이력서를 게시하는 곳이다. README가 프로필에 표시되는 특수 저장소와 다르다.
 - **작업 저장소**는 실제 포트폴리오 코드와 문서를 담는 저장소다. 예시 이름은 `portfolio-web`이다.
 - **TIL**(Today I Learned)은 오늘 알게 된 점을 짧게 기록한 글이다.
@@ -155,10 +155,10 @@ Profile 저장소와 작업 저장소 차이 설명
 
 | 증상 | 원인 | 대응 |
 | --- | --- | --- |
-| Profile 저장소가 보이지 않음 | 이름, 공개 설정 또는 README 확인 필요 | 사용자명과 저장소 이름, 공개 여부와 루트 README를 확인한다 |
+| Profile 저장소가 보이지 않음 | 이름, 공개 설정 또는 README 확인 필요 | 사용자명과 저장소 이름, 공개 여부, 비어 있지 않은 루트 README를 확인한다. 2020년 7월 전 저장소는 프로필 표시 설정도 본다 |
 | `docs` 폴더 생성 실패 | 현재 경로가 `portfolio-web`이 아님 | `pwd`로 위치를 확인하고 올바른 폴더로 이동한다 |
 | Wiki 탭이 보이지 않음 | 기능 미지원 또는 권한 부족 | `docs/wiki-draft.md`로 대체한다 |
-| push가 거절됨 | 원격에 없는 커밋이 있음 | `git pull origin main` 후 다시 push 한다 |
+| push가 거절됨 | 원격과 로컬 이력이 다를 수 있음 | `git status`와 `git log`로 양쪽 이력을 먼저 확인한다. 통합 방식은 [STEP 05](05-remote.md)를 참고하고, 바로 `git pull`하지 않는다 |
 
 ## 주의할 점
 

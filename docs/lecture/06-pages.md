@@ -20,7 +20,7 @@ HTML 파일을 브라우저로 바로 열면 주소창에 인터넷 주소 대�
 
 [정적 웹](glossary.md#static-web)은 서버가 요청마다 페이지를 새로 만들지 않고 준비된 HTML·CSS·이미지 등의 파일을 제공하는 웹사이트다. GitHub Pages로 정적 웹을 공개할 수 있다. 다른 배포 서비스는 [웹 디자인·배포 도구](appendix/03-web-tools.md#배포-서비스)에서 살펴본다.
 
-또한 Git으로 코드를 수정하고 원격 저장소에 `push`하기만 하면, GitHub가 변경된 코드를 자동으로 감지하여 실제 운영 웹사이트를 최신 내용으로 알아서 갈아 끼워주는 <strong>지속적 배포(Continuous Deployment)</strong>의 기초를 경험할 수 있다.
+설정된 게시 브랜치에 적절한 권한으로 `push`하면 GitHub가 변경을 감지해 사이트를 갱신할 수 있다. `GITHUB_TOKEN`으로 푸시한 커밋은 Pages 빌드를 시작하지 않을 수 있다. 이 흐름이 <strong>지속적 배포(Continuous Deployment)</strong>의 기초다.
 
 <Illustration name="publish" alt="나만 열 수 있는 집에서 누구나 볼 수 있는 광장의 게시판으로 사이트가 공개되는 모습" />
 
@@ -57,7 +57,7 @@ og:title·og:description·og:image·og:url 포함.
 
 ## 호스팅 원리와 자동 재배포
 
-GitHub Pages는 `push` 한 번으로 사이트가 자동으로 갱신되도록 동작한다.
+설정된 게시 브랜치에 권한 있는 계정으로 `push`하면 Pages가 사이트를 갱신할 수 있다.
 
 ```mermaid
 flowchart TB
@@ -67,12 +67,12 @@ flowchart TB
 ```
 
 1. **호스팅 진입점 (`index.html`)**
-   - GitHub Pages는 지정된 브랜치(`main`)의 루트 폴더에 위치한 `index.html` 파일을 첫 대문 페이지로 인식하여 웹 브라우저에 서비스한다. 파일명이 소문자 `index.html`이어야 올바르게 동작한다.
+   - 이 실습은 지정된 브랜치(`main`) 루트의 `index.html`을 첫 화면으로 쓴다. Pages는 `index.md`와 `README.md`도 진입점으로 찾는다. 파일명은 소문자다.
 2. **배포 주소 체계**
    - 기본적으로 `https://<GitHub계정명>.github.io/<저장소이름>/` 형식의 고유 주소가 생성된다.
    - 본 실습의 주소는 `https://<GitHub계정명>.github.io/<저장소이름>/` 형태가 된다. 예시 저장소 이름은 `portfolio-web`이다.
 3. **자동 재배포 주기**
-   - 로컬에서 코드를 고친 뒤 `push`하면, GitHub의 자동화 기능(GitHub Actions)이 작동해 약 1~2분 안에 실제 사이트에 반영한다.
+   - 로컬에서 코드를 고친 뒤 게시 브랜치에 `push`하면 GitHub Actions가 빌드할 수 있다. 반영은 수 분에서 최대 10분이 걸릴 수 있다. Actions 상태와 Pages 설정을 확인한다.
 
 ### 배포 시간 순서
 
@@ -87,7 +87,7 @@ sequenceDiagram
     L->>G: git push
     G->>A: 빌드 시작
     A->>P: 배포
-    P-->>L: 약 1~2분 뒤 사이트 반영
+    P-->>L: 수 분에서 최대 10분 뒤 반영될 수 있음
 ```
 
 ### 디자인 보조 도구
@@ -136,7 +136,7 @@ footer {
    - **Branch**: 드롭다운에서 `None`을 클릭하여 `main`으로 변경한다. 목록에 `main`이 없으면 [STEP 05](05-remote.md)의 브랜치 이름 확인으로 돌아간다.
    - **Folder**: `/(root)` 선택 상태 유지
    - 우측의 `Save` 버튼을 클릭한다.
-5. 페이지 상단에 파란색/초록색 알림 상자가 뜨며 배포가 시작된다. 약 1~2분 후 새로고침하면 `Your site is live at https://...` 링크가 표시된다.
+5. 배포가 시작되면 알림이 뜰 수 있다. 공식 화면의 확인 링크는 `Visit site`다. 색과 문구는 계정 화면에 따라 다를 수 있다. 수 분에서 최대 10분 뒤 새로고침해 사이트 주소를 확인한다.
 6. 제공된 배포 링크(`https://계정이름.github.io/portfolio-web/`)를 새 탭에서 열어 내 사이트가 정상적으로 열리는지 확인한다.
 7. VS Code로 돌아와 푸터 HTML을 추가하고 저장한다. CSS를 적용하려면 `style.css`를 만들고 HTML에서 연결한다. 예시는 접힌 예시 코드를 참고한다.
 8. 터미널에서 변경 사항을 커밋하고 푸시한다. CSS 파일을 만들었다면 아래 코드 블록의 주석을 풀어 `git add style.css`도 실행한다:
@@ -149,7 +149,7 @@ footer {
    git push origin main
    ```
 9. GitHub 저장소 상단의 `Actions` 탭을 클릭하여 `pages build and deployment` 워크플로가 돌아가는 것을 확인한다.
-10. 초록색 체크 표시가 뜨면(약 1분 소요), 브라우저의 배포 URL 탭을 강력 새로고침(`Ctrl + Shift + R` 또는 `Cmd + Shift + R`)하여 푸터가 반영되었는지 확인한다.
+10. Actions에서 성공 표시를 확인한 뒤, 브라우저의 배포 URL 탭을 강력 새로고침(`Ctrl + Shift + R` 또는 `Cmd + Shift + R`)하여 푸터가 반영되었는지 확인한다. 반영까지 최대 10분이 걸릴 수 있다.
 
 배포가 끝난 사이트는 누구나 공개 주소로 열 수 있다. 아래는 이 과정 사이트의 첫 화면으로, 공개 주소로 열리는 정적 사이트의 예시다. 내 사이트는 `https://계정이름.github.io/portfolio-web/` 주소에서 직접 만든 페이지로 열린다.
 
@@ -187,15 +187,15 @@ Coolors 색상 코드 추천 및 배경 포인트 색상 적용
 
 - [ ] GitHub Pages 설정에서 Branch가 `main` / `/(root)`로 저장되어 있다.
 - [ ] 브라우저에서 `https://<계정이름>.github.io/portfolio-web/` 접속 시 첫 웹페이지가 정상 출력된다.
-- [ ] 코드를 고치고 `git push`한 후 약 1~2분 뒤 새로고침했을 때 수정된 내용이 라이브 사이트에 반영된다.
+- [ ] 게시 브랜치에 `git push`한 뒤 Actions와 Pages를 확인하고, 새로고침했을 때 수정 내용이 라이브 사이트에 반영된다.
 - [ ] GitHub `Actions` 탭에서 배포 빌드 작업의 성공(초록색 체크)을 확인할 수 있다.
 
 ## 트러블 슈팅
 
 | 증상 | 원인 | 대응 |
 | --- | --- | --- |
-| 배포 주소에서 404 Not Found 발생 | 배포 빌드 진행 중이거나 브랜치 설정 미저장 | Settings → Pages에서 Branch가 `main`으로 저장되었는지 확인하고 2~3분 기다린 뒤 다시 접속한다. |
-| 첫 화면 파일 인식 불가 | 파일명이 대문자이거나 이름이 다름 | 파일명이 반드시 소문자 `index.html`인지 확인한다. |
+| 배포 주소에서 404 Not Found 발생 | 배포 빌드 진행 중이거나 브랜치 설정 미저장 | Settings → Pages에서 Branch가 `main`으로 저장되었는지 확인하고 Actions 상태를 본다. 최대 10분까지 걸릴 수 있다. |
+| 첫 화면 파일 인식 불가 | 파일명이 대문자이거나 진입점이 없음 | 이 실습은 소문자 `index.html`을 쓴다. Pages는 `index.md`·`README.md`도 진입점으로 찾는다. |
 | push 후에도 사이트 내용이 안 바뀜 | 브라우저 캐시로 인해 이전 버전 표시 | 브라우저 강력 새로고침(`Ctrl + F5` 또는 `Ctrl + Shift + R`)을 누르거나 시크릿 창에서 접속한다. |
 | CSS 스타일이 적용되지 않고 깨짐 | `link` 태그의 CSS 파일 경로 오류 | `<link rel="stylesheet" href="style.css">`처럼 같은 폴더 상대 경로로 지정되었는지 확인한다. |
 
@@ -209,4 +209,4 @@ Coolors 색상 코드 추천 및 배경 포인트 색상 적용
 
 1. 요청마다 새 페이지를 만들지 않고 준비된 파일을 제공하는 웹사이트는 ::정적 웹::이다.
 2. 워크플로를 설정하면 저장소에 push할 때 사이트 빌드와 배포를 자동 실행할 수 있는 GitHub 기능은 ::GitHub Actions::이다.
-3. GitHub Pages가 지정된 브랜치의 루트에서 첫 화면으로 제공하는 파일은 ::index.html::이다.
+3. 이 실습에서 GitHub Pages 첫 화면으로 쓰는 파일은 ::index.html::이다.

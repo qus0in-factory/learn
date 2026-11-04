@@ -7,7 +7,7 @@ tags: ["GitHub", "협업", "Pull Request"]
 
 ## 초대와 기여
 
-개인 저장소의 소유자는 Settings → Collaborators에서 사람을 초대한다. 초대받은 사람이 수락하면 해당 저장소를 함께 다룰 수 있다. 개인 저장소의 collaborator는 읽기와 쓰기 권한을 갖는다. 조직 저장소에는 역할별 권한이 있으며 조직 정책에 따라 초대가 제한될 수 있다. [개인 저장소 초대](https://docs.github.com/articles/inviting-collaborators-to-a-personal-repository)와 [조직 저장소 역할](https://docs.github.com/en/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/repository-roles-for-an-organization)을 확인한다.
+개인 저장소의 소유자는 Settings → Collaborators에서 사람을 초대한다. 초대받은 사람이 수락하면 해당 저장소를 함께 다룰 수 있다. 개인 저장소의 collaborator는 읽기와 쓰기 권한을 갖는다. 조직 저장소에는 역할별 권한이 있으며 조직 정책에 따라 초대가 제한될 수 있다. [개인 저장소 초대](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/repository-access-and-collaboration/inviting-collaborators-to-a-personal-repository)와 [조직 저장소 역할](https://docs.github.com/en/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/repository-roles-for-an-organization)을 확인한다.
 
 collaborator는 저장소 접근 권한을 받은 사람이고 contributor는 프로젝트에 기여한 사람이다. 기여 이력이 접근 권한을 자동으로 주지는 않는다.
 
@@ -21,7 +21,7 @@ collaborator는 저장소 접근 권한을 받은 사람이고 contributor는 �
 4. PR의 base 저장소와 브랜치를 원본으로, head를 자신의 fork 브랜치로 선택해 제안한다.
 5. 리뷰에 따라 수정하고 원본 관리자의 병합을 기다린다.
 
-설정에 따라 외부 PR 생성이 제한될 수 있다. [fork에서 PR 만들기](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork)를 참고한다.
+설정에 따라 외부 PR 생성이 제한될 수 있다. [fork에서 PR 만들기](https://docs.github.com/en/pull-requests/how-tos/create-pull-requests/creating-a-pull-request-from-a-fork)를 참고한다.
 
 ## PR 리뷰
 

@@ -21,7 +21,7 @@ Mermaid는 Markdown 코드 블록 안에 텍스트로 다이어그램을 그리�
 - [Mermaid 오픈소스 소개](https://mermaid.ai/open-source/intro/): 지금 쓰는 소개 페이지. 다이어그램 종류가 있다
 - [GitHub 다이어그램 안내](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams): GitHub 문서에 다이어그램 표시
 - [Notion 다이어그램 안내](https://www.notion.com/help/code-blocks): 문서에서 다이어그램 표시
-- [draw.io Mermaid 안내](https://www.drawio.com/blog/mermaid-diagrams): 다이어그램 도구에서 Mermaid 사용
+- [draw.io Mermaid 안내](https://www.drawio.com/docs/manual/mermaid/): 다이어그램 도구에서 Mermaid 사용
 
 ## 그릴 수 있는 것
 

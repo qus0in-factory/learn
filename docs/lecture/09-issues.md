@@ -21,7 +21,7 @@ schedule: "11:00–11:45 (수업 45분) / 11:45–12:00 (휴식 15분)"
 ## 핵심 개념
 
 - **Issue**는 작업을 요청하거나 버그를 알리는 티켓이다.
-- **Label**은 이슈의 종류(`bug`, `enhancement`, `documentation`)를 나타내는 색상 태그다.
+- **Label**은 이슈의 종류(`bug`, `enhancement`, `documentation`)를 나타내는 색상 태그다. `enhancement`는 새 기능 요청을 구분할 때 쓴다.
 - **Milestone**은 목표 스프린트와 소속 이슈들의 해결률을 게이지 바로 보여 준다.
 
 | 위치 | 용도 | 공개와 관리 |
@@ -33,7 +33,7 @@ schedule: "11:00–11:45 (수업 45분) / 11:45–12:00 (휴식 15분)"
 
 ### 라벨 관리
 
-저장소의 `Issues` → `Labels`에서 기존 라벨을 `Edit`으로 수정하거나 삭제하고, `New label`로 이름·설명·색상을 정해 새 라벨을 만든다. 삭제 전에 기존 이슈의 분류에 미칠 영향을 확인한다. `bug`는 오류, `enhancement`는 기능 개선, `documentation`은 문서 작업을 구분할 때 쓴다.
+저장소의 `Issues` → `Labels`에서 기존 라벨을 `Edit`으로 수정하거나 삭제하고, `New label`로 이름·설명·색상을 정해 새 라벨을 만든다. 삭제 전에 기존 이슈의 분류에 미칠 영향을 확인한다. `bug`는 오류, `enhancement`는 새 기능 요청, `documentation`은 문서 작업을 구분할 때 쓴다.
 
 ### Issue 관계도
 

@@ -56,7 +56,7 @@ GitHub README에 아래 문법을 쓸 수 있다. 더 자세한 내용은 [GitHu
 
 1. 실습 폴더(예: `portfolio-web`)를 VS Code로 연다.
 2. 루트에 `README.md` 파일을 만든다.
-3. VS Code 미리보기를 연다 (`Ctrl + K`, 그다음 `V`).
+3. VS Code 미리보기를 연다. Windows·Linux는 `Ctrl+K` 다음 `V`, macOS는 `Cmd+K` 다음 `V`다.
 4. README에 제목, 소개, 배포 주소, 기술 스택, Git 흐름도를 작성한다.
 5. Mermaid 블록이 미리보기에서 렌더링되는지 확인한다.
 6. `git status`로 변경 파일을 확인한다.
@@ -97,6 +97,7 @@ Git과 GitHub를 배우며 만든 첫 웹페이지이다.
 https://계정이름.github.io/portfolio-web/
 
 ## 기술 스택
+
 | 구분 | 기술명 |
 | :--- | :--- |
 | 언어 | HTML5, CSS3 |

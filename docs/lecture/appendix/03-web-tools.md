@@ -115,7 +115,7 @@ body {
 ## 배포 서비스
 
 - [Vercel](https://vercel.com/docs): 웹사이트와 웹앱 배포
-- [Cloudflare Pages](https://developers.cloudflare.com/pages/): 정적 사이트 배포
+- [Workers 정적 자산](https://developers.cloudflare.com/workers/static-assets/): 새 정적 사이트 배포. 이미 Pages로 만든 프로젝트는 [Cloudflare Pages](https://developers.cloudflare.com/pages/) 문서를 참고한다
 - [AWS S3 정적 웹 호스팅](https://docs.aws.amazon.com/AmazonS3/latest/userguide/WebsiteHosting.html): 정적 사이트 저장과 공개
 - [Render](https://render.com/docs): 정적 사이트와 웹 서비스 배포
 - [Railway](https://docs.railway.com/): 웹 서비스와 애플리케이션 배포
