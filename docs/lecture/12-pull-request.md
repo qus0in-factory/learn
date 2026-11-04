@@ -9,12 +9,12 @@ schedule: "15:00–15:45 (수업 45분) / 15:45–16:00 (휴식 및 피날레 15
 
 ## 학습 목표
 
-- 기능 브랜치를 원격에 push 한다.
-- GitHub 웹에서 Pull Request를 만든다.
-- Files changed에서 diff를 검토한다.
-- PR을 병합한다.
-- 로컬 `main`을 동기화하고 브랜치를 정리한다.
-- Pages 사이트 갱신을 확인한다.
+- 기능 브랜치를 원격에 push할 수 있다.
+- GitHub 웹에서 Pull Request를 만들 수 있다.
+- Files changed에서 diff를 검토할 수 있다.
+- PR을 병합할 수 있다.
+- 로컬 `main`을 동기화하고 브랜치를 정리할 수 있다.
+- Pages 사이트가 갱신되었는지 확인할 수 있다.
 
 ## 왜 필요한가
 
