@@ -9,7 +9,7 @@ schedule: "11:00–11:45 (수업 45분) / 11:45–12:00 (휴식 15분)"
 
 ## 학습 목표
 
-- GitHub Issue로 작업 요청서를 등록할 수 있다.
+- GitHub [Issue](glossary.md#issue)로 작업 요청서를 등록할 수 있다.
 - Label로 이슈 종류를 분류할 수 있다.
 - Milestone으로 목표와 진행률을 추적할 수 있다.
 - GitHub CLI(`gh`)와 ChatGPT-GitHub 연동이 선택 기능임을 설명할 수 있다.

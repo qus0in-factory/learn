@@ -10,7 +10,7 @@ schedule: "15:00–15:45 (수업 45분) / 15:45–16:00 (휴식 및 피날레 15
 ## 학습 목표
 
 - 기능 브랜치를 원격에 push할 수 있다.
-- GitHub 웹에서 Pull Request를 만들 수 있다.
+- GitHub 웹에서 [Pull Request](glossary.md#pull-request)를 만들 수 있다.
 - Files changed에서 diff를 검토할 수 있다.
 - PR을 병합할 수 있다.
 - 로컬 `main`을 동기화하고 브랜치를 정리할 수 있다.

@@ -1,49 +1,734 @@
 {
   "groups": [
-    { "id": "repo", "text": "저장소와 기록" },
-    { "id": "collab", "text": "브랜치와 협업" },
-    { "id": "env", "text": "환경과 도구" }
+    {
+      "id": "repo",
+      "text": "저장소와 기록"
+    },
+    {
+      "id": "collab",
+      "text": "브랜치와 협업"
+    },
+    {
+      "id": "env",
+      "text": "환경과 도구"
+    }
   ],
   "terms": [
-    { "term": "버전 관리", "slug": "version-control", "group": "repo", "definition": "파일의 변경 이력을 기록하고 원하는 시점으로 되돌릴 수 있게 관리하는 방식이다.", "plain": "파일을 복사해 이름 뒤에 v1, v2를 붙이던 일을 도구가 대신 해 준다. VCS, 형상 관리(SCM)도 같은 뜻으로 쓴다.", "steps": ["01-environment"], "commands": [], "tags": ["VCS", "SCM"] },
-    { "term": "저장소", "slug": "repository", "group": "repo", "definition": "Git이 이력을 관리하는 폴더이며, 숨김 폴더 .git에 모든 기록이 들어 있다.", "plain": "리포지토리라고도 부른다. 내 컴퓨터에 있으면 로컬 저장소, GitHub에 있으면 원격 저장소다.", "steps": ["02-local-repository", "05-remote"], "commands": ["init", "clone"], "tags": ["init", "로컬 저장소"] },
-    { "term": "작업 공간", "slug": "working-directory", "group": "repo", "definition": "파일을 실제로 열어 고치고 저장하는 폴더다.", "plain": "마트의 진열대처럼 물건을 집어 드는 곳이다. 여기서 고친 내용은 아직 Git에 기록되지 않는다.", "steps": ["01-environment", "02-local-repository"], "commands": ["status", "diff"], "tags": ["작업 공간"] },
-    { "term": "스테이징 영역", "slug": "staging-area", "group": "repo", "definition": "다음 커밋에 넣을 파일을 골라 올려 두는 대기 장소다.", "plain": "장바구니다. git add로 담고, 잘못 담았으면 git restore --staged로 뺀다.", "steps": ["01-environment", "02-local-repository", "03-commit-history"], "commands": ["add", "restore"], "tags": ["스테이징 영역", "add", "restore --staged"] },
-    { "term": "로컬 저장소", "slug": "local-repository", "group": "repo", "definition": "내 컴퓨터의 .git 안에 커밋이 쌓이는 곳이다.", "plain": "계산을 마친 영수증을 모아 두는 앨범이다. 커밋하면 여기에 스냅샷이 남는다.", "steps": ["01-environment", "03-commit-history"], "commands": ["commit", "log"], "tags": ["로컬 저장소", "commit"] },
-    { "term": "원격 저장소", "slug": "remote-repository", "group": "repo", "definition": "GitHub 같은 서버에 있는 저장소로, 백업과 협업의 기준점이다.", "plain": "로컬에서 push로 올리고 pull로 받는다. 수업에서는 origin이라는 이름으로 등록한다.", "steps": ["05-remote"], "commands": ["remote", "push", "pull"], "tags": ["remote", "push", "pull"] },
-    { "term": "origin", "slug": "origin", "group": "repo", "definition": "원격 저장소 주소에 붙이는 기본 이름이다.", "plain": "주소를 매번 적지 않으려고 붙인 별명이다. git remote -v로 어느 주소인지 확인한다.", "steps": ["05-remote"], "commands": ["remote"], "tags": ["remote"] },
-    { "term": "커밋", "slug": "commit", "group": "repo", "definition": "스테이징한 파일 상태를 메시지와 함께 저장한 기록 한 건이다.", "plain": "작업을 저장하는 체크포인트다. 커밋마다 고유한 해시와 메시지가 붙는다.", "steps": ["03-commit-history"], "commands": ["commit", "log"], "tags": ["commit", "log"] },
-    { "term": "스냅샷", "slug": "snapshot", "group": "repo", "definition": "커밋 시점의 파일 전체 상태를 찍어 둔 것이다.", "plain": "변경된 줄만 저장하는 것처럼 보이지만, Git은 그 순간의 파일 전체 모습을 기억한다.", "steps": ["01-environment", "03-commit-history"], "commands": ["commit"], "tags": ["commit"] },
-    { "term": "해시", "slug": "hash", "group": "repo", "definition": "커밋 내용을 계산해 만든 40자리 고유 식별자다.", "plain": "커밋의 주민번호다. 보통 앞 7자리(예: a1b2c3d)만으로 구분한다.", "steps": ["03-commit-history"], "commands": ["log", "revert"], "tags": ["log"] },
-    { "term": "HEAD", "slug": "head", "group": "repo", "definition": "현재 작업 중인 브랜치의 가장 최근 커밋을 가리키는 포인터다.", "plain": "지금 내가 서 있는 위치다. HEAD~1은 바로 전 커밋을 뜻한다.", "steps": ["04-amend-ignore"], "commands": ["revert", "reset"], "tags": ["revert", "reset"] },
-    { "term": "파일 상태", "slug": "file-status", "group": "repo", "definition": "git status가 보여 주는 Untracked·modified·staged 구분이다.", "plain": "빨간색 Untracked는 Git이 모르는 새 파일, 빨간색 modified는 고쳤지만 담지 않은 파일, 초록색 staged는 커밋 대기 파일이다.", "steps": ["02-local-repository"], "commands": ["status", "add"], "tags": ["status", "add"] },
-    { "term": ".gitignore", "slug": "gitignore", "group": "repo", "definition": "Git이 추적하지 않을 파일·폴더 패턴을 적는 파일이다.", "plain": "비밀 설정(.env)이나 운영체제 임시 파일을 커밋에서 빼는 목록이다. 이미 추적 중인 파일은 git rm --cached로 먼저 추적을 끊어야 한다.", "steps": ["04-amend-ignore", "appendix/10-gitignore-patterns"], "commands": ["rm"], "tags": [".gitignore"] },
-    { "term": "amend", "slug": "amend", "group": "repo", "definition": "직전 커밋을 새 내용이나 메시지로 바꿔 치우는 commit 옵션이다.", "plain": "방금 한 커밋의 오타를 고칠 때 쓴다. 이미 push한 커밋에는 쓰지 않는다.", "steps": ["04-amend-ignore"], "commands": ["commit"], "tags": ["amend"] },
-    { "term": "되돌리기", "slug": "revert", "group": "repo", "definition": "특정 커밋의 변경을 반대로 적용하는 새 커밋을 만드는 일이다.", "plain": "이력을 지우지 않고 되돌리므로 이미 공유한 커밋에도 안전하다. reset은 포인터를 뒤로 옮기는 다른 방법이다.", "steps": ["04-amend-ignore"], "commands": ["revert", "reset"], "tags": ["revert", "reset"] },
-    { "term": "브랜치", "slug": "branch", "group": "collab", "definition": "커밋 이력에서 갈라져 나온 독립된 작업 줄기다.", "plain": "main을 건드리지 않고 새 기능을 따로 작업하는 길이다. git switch -c로 만들고 이동한다.", "steps": ["10-branches-tags"], "commands": ["branch", "switch"], "tags": ["branch", "switch"] },
-    { "term": "main", "slug": "main", "group": "collab", "definition": "저장소의 기본 브랜치 이름이다.", "plain": "완성된 코드가 모이는 줄기다. 작업 브랜치를 여기에 병합한다.", "steps": ["05-remote", "10-branches-tags"], "commands": ["branch", "merge"], "tags": ["branch", "merge"] },
-    { "term": "태그", "slug": "tag", "group": "collab", "definition": "특정 커밋에 붙이는 v0.1.0 같은 버전 이름표다.", "plain": "제출이나 공개 시점을 표시해 나중에 찾기 쉽게 한다.", "steps": ["10-branches-tags"], "commands": ["tag"], "tags": ["tag"] },
-    { "term": "병합", "slug": "merge", "group": "collab", "definition": "다른 브랜치의 커밋을 현재 브랜치에 합치는 일이다.", "plain": "작업 브랜치의 결과를 main으로 가져온다. 양쪽이 같은 곳을 고쳤으면 충돌이 난다.", "steps": ["11-merge-conflicts"], "commands": ["merge"], "tags": ["merge"] },
-    { "term": "충돌", "slug": "conflict", "group": "collab", "definition": "두 브랜치가 같은 파일의 같은 부분을 다르게 고쳐 Git이 자동으로 합치지 못하는 상태다.", "plain": "파일에 <<<<<<<, =======, >>>>>>> 표시가 생긴다. 남길 내용을 고르고 표시를 지운 뒤 커밋한다. 막히면 git merge --abort.", "steps": ["11-merge-conflicts"], "commands": ["merge", "diff"], "tags": ["충돌 해결"] },
-    { "term": "빨리감기", "slug": "fast-forward", "group": "collab", "definition": "갈라진 커밋이 없을 때 브랜치 포인터만 앞으로 옮겨 끝나는 병합이다.", "plain": "fast-forward라고도 한다. 병합 커밋이 생기지 않는다.", "steps": ["11-merge-conflicts"], "commands": ["merge"], "tags": ["merge"] },
-    { "term": "업스트림", "slug": "upstream", "group": "collab", "definition": "로컬 브랜치가 push·pull할 때 기본으로 연결되는 원격 브랜치다.", "plain": "git push -u origin main을 한 번 하면 다음부터 git push만으로 같은 곳에 올라간다.", "steps": ["05-remote"], "commands": ["push", "pull"], "tags": ["push", "pull"] },
-    { "term": "풀 리퀘스트", "slug": "pull-request", "group": "collab", "definition": "브랜치의 변경을 검토하고 병합해 달라고 GitHub에서 요청하는 절차다.", "plain": "Pull Request, 줄여서 PR이다. 리뷰 기록이 남고 Closes #번호로 이슈를 함께 닫을 수 있다.", "steps": ["12-pull-request"], "commands": ["push", "pull"], "tags": ["Pull Request"] },
-    { "term": "포크", "slug": "fork", "group": "collab", "definition": "남의 GitHub 저장소를 내 계정으로 통째로 복사하는 일이다.", "plain": "쓰기 권한이 없는 저장소에 기여할 때 포크한 뒤 풀 리퀘스트를 보낸다.", "steps": ["12-pull-request"], "commands": ["clone"], "tags": ["Pull Request"] },
-    { "term": "Issue", "slug": "issue", "group": "collab", "definition": "GitHub에서 할 일, 버그, 제안을 번호가 붙은 글로 관리하는 기능이다.", "plain": "Label은 분류 꼬리표, Milestone은 이슈를 묶는 목표 단위다.", "steps": ["09-issues"], "commands": [], "tags": ["Issue", "Label", "Milestone"] },
-    { "term": "README", "slug": "readme", "group": "collab", "definition": "저장소 첫 화면에 보이는 소개 문서다.", "plain": "프로젝트가 무엇이고 어떻게 실행하는지 적는다. Markdown으로 쓴다.", "steps": ["08-profile-records"], "commands": [], "tags": ["README"] },
-    { "term": "Markdown", "slug": "markdown", "group": "collab", "definition": "#, -, ** 같은 기호로 제목·목록·강조를 적는 가벼운 문서 형식이다.", "plain": "README, Issue, Pull Request 본문이 모두 이 형식이다. Mermaid는 그 안에서 다이어그램을 글로 그리는 문법이다.", "steps": ["07-markdown-mermaid"], "commands": [], "tags": ["Markdown", "Mermaid"] },
-    { "term": "GitHub Pages", "slug": "github-pages", "group": "collab", "definition": "저장소의 정적 파일을 웹사이트로 공개하는 GitHub 서비스다.", "plain": "push하면 잠시 뒤 인터넷 주소에서 내 페이지가 열린다.", "steps": ["06-pages"], "commands": ["push"], "tags": ["GitHub Pages"] },
-    { "term": "CLI", "slug": "cli", "group": "env", "definition": "글자 명령을 입력해 프로그램을 조작하는 방식이다.", "plain": "마우스로 누르는 GUI와 반대다. Git은 CLI로 쓴다.", "steps": ["appendix/06-cli-terminal-shell"], "commands": [], "tags": ["CLI", "GUI"] },
-    { "term": "터미널", "slug": "terminal", "group": "env", "definition": "명령을 입력하고 결과를 보여 주는 창이다.", "plain": "VS Code 안의 터미널, macOS 터미널, Windows의 Git Bash 창이 모두 터미널이다.", "steps": ["01-environment", "appendix/06-cli-terminal-shell"], "commands": [], "tags": ["터미널"] },
-    { "term": "셸", "slug": "shell", "group": "env", "definition": "입력한 명령을 해석해 프로그램을 찾아 실행하는 프로그램이다.", "plain": "Bash, zsh가 셸이다. 터미널은 창이고 셸은 그 안에서 일하는 통역사다.", "steps": ["appendix/06-cli-terminal-shell"], "commands": [], "tags": ["셸", "Git Bash", "zsh"] },
-    { "term": "커널", "slug": "kernel", "group": "env", "definition": "파일·메모리·장치를 관리하는 운영체제의 핵심이다.", "plain": "Git이 파일을 읽고 쓸 때 셸이 아니라 커널에 요청한다.", "steps": ["appendix/06-cli-terminal-shell"], "commands": [], "tags": ["커널"] },
-    { "term": "PATH", "slug": "path", "group": "env", "definition": "셸이 명령 이름으로 실행 파일을 찾아보는 폴더 목록이다.", "plain": "git을 쳤는데 못 찾는다고 하면 설치나 PATH 등록 문제다.", "steps": ["appendix/06-cli-terminal-shell", "appendix/05-os-differences"], "commands": [], "tags": ["경로"] },
-    { "term": "환경 변수", "slug": "environment-variable", "group": "env", "definition": "운영체제나 셸이 프로그램에 넘겨 주는 이름=값 설정이다.", "plain": "API 키 같은 비밀은 코드에 적지 않고 환경 변수나 .env 파일에 둔다.", "steps": ["appendix/11-environment-secrets"], "commands": [], "tags": ["환경 변수", ".env"] },
-    { "term": "토큰", "slug": "token", "group": "env", "definition": "비밀번호 대신 쓰는 긴 문자열 인증 수단이다.", "plain": "GitHub의 Personal Access Token이 대표다. 채팅·커밋·Issue에 붙여 넣지 않는다.", "steps": ["05-remote", "appendix/01-authentication"], "commands": [], "tags": ["토큰", "자격 증명"] },
-    { "term": "자격 증명", "slug": "credential", "group": "env", "definition": "운영체제가 저장해 둔 GitHub 로그인 정보다.", "plain": "계정이 바뀌었는데 push가 거부되면 저장된 자격 증명을 지우고 다시 로그인한다.", "steps": ["appendix/01-authentication"], "commands": ["push"], "tags": ["자격 증명", "재인증"] },
-    { "term": "vi", "slug": "vi", "group": "env", "definition": "터미널 안에서 열리는 글자 기반 편집기다.", "plain": "git commit에 -m을 빼먹으면 열린다. Esc 뒤 :q!로 취소하거나 :wq로 저장하고 나온다.", "steps": ["03-commit-history", "appendix/08-vi-editor"], "commands": ["commit"], "tags": ["vi", "편집기"] },
-    { "term": "에이전트", "slug": "agent", "group": "env", "definition": "요청을 읽고 계획을 세워 파일 수정이나 명령 실행을 대신하는 AI 도구다.", "plain": "수업에서는 OpenCode를 쓴다. 계획을 읽고 승인한 범위만 실행하게 하고 결과는 git status·log로 직접 확인한다.", "steps": ["01-environment", "appendix/07-git-scenarios"], "commands": [], "tags": ["OpenCode", "에이전트 승인"] },
-    { "term": "프롬프트", "slug": "prompt", "group": "env", "definition": "에이전트에게 보내는 요청 문장이다.", "plain": "무엇을, 어느 파일에, 어디까지 할지 적을수록 결과가 정확해진다.", "steps": ["02-local-repository", "appendix/07-git-scenarios"], "commands": [], "tags": ["OpenCode"] },
-    { "term": "TIL", "slug": "til", "group": "env", "definition": "Today I Learned, 그날 배운 것을 짧게 남기는 기록이다.", "plain": "Post-mortem은 문제가 생긴 뒤 원인과 재발 방지를 적는 기록이다. 둘 다 저장소에 Markdown으로 쌓는다.", "steps": ["08-profile-records"], "commands": [], "tags": ["TIL", "Post-mortem"] }
-  ]
+    {
+      "term": "버전 관리",
+      "slug": "version-control",
+      "group": "repo",
+      "definition": "파일의 변경 이력을 기록하고 원하는 시점으로 되돌릴 수 있게 관리하는 방식이다.",
+      "plain": "파일을 복사해 이름 뒤에 v1, v2를 붙이던 일을 도구가 대신 해 준다. VCS, 형상 관리(SCM)도 같은 뜻으로 쓴다.",
+      "steps": [
+        "01-environment"
+      ],
+      "commands": [],
+      "tags": [
+        "VCS",
+        "SCM"
+      ]
+    },
+    {
+      "term": "저장소",
+      "slug": "repository",
+      "group": "repo",
+      "definition": "Git이 이력을 관리하는 폴더이며, 숨김 폴더 .git에 모든 기록이 들어 있다.",
+      "plain": "리포지토리라고도 부른다. 내 컴퓨터에 있으면 로컬 저장소, GitHub에 있으면 원격 저장소다.",
+      "steps": [
+        "02-local-repository",
+        "05-remote"
+      ],
+      "commands": [
+        "init",
+        "clone"
+      ],
+      "tags": [
+        "init",
+        "로컬 저장소"
+      ]
+    },
+    {
+      "term": "작업 공간",
+      "slug": "working-directory",
+      "group": "repo",
+      "definition": "파일을 실제로 열어 고치고 저장하는 폴더다.",
+      "plain": "마트의 진열대처럼 물건을 집어 드는 곳이다. 여기서 고친 내용은 아직 Git에 기록되지 않는다.",
+      "steps": [
+        "01-environment",
+        "02-local-repository"
+      ],
+      "commands": [
+        "status",
+        "diff"
+      ],
+      "tags": [
+        "작업 공간"
+      ]
+    },
+    {
+      "term": "스테이징 영역",
+      "slug": "staging-area",
+      "group": "repo",
+      "definition": "다음 커밋에 넣을 파일을 골라 올려 두는 대기 장소다.",
+      "plain": "장바구니다. git add로 담고, 잘못 담았으면 git restore --staged로 뺀다.",
+      "steps": [
+        "01-environment",
+        "02-local-repository",
+        "03-commit-history"
+      ],
+      "commands": [
+        "add",
+        "restore"
+      ],
+      "tags": [
+        "스테이징 영역",
+        "add",
+        "restore --staged"
+      ]
+    },
+    {
+      "term": "로컬 저장소",
+      "slug": "local-repository",
+      "group": "repo",
+      "definition": "내 컴퓨터의 .git 안에 커밋이 쌓이는 곳이다.",
+      "plain": "계산을 마친 영수증을 모아 두는 앨범이다. 커밋하면 여기에 스냅샷이 남는다.",
+      "steps": [
+        "01-environment",
+        "03-commit-history"
+      ],
+      "commands": [
+        "commit",
+        "log"
+      ],
+      "tags": [
+        "로컬 저장소",
+        "commit"
+      ]
+    },
+    {
+      "term": "원격 저장소",
+      "slug": "remote-repository",
+      "group": "repo",
+      "definition": "GitHub 같은 서버에 있는 저장소로, 백업과 협업의 기준점이다.",
+      "plain": "로컬에서 push로 올리고 pull로 받는다. 수업에서는 origin이라는 이름으로 등록한다.",
+      "steps": [
+        "05-remote"
+      ],
+      "commands": [
+        "remote",
+        "push",
+        "pull"
+      ],
+      "tags": [
+        "remote",
+        "push",
+        "pull"
+      ]
+    },
+    {
+      "term": "origin",
+      "slug": "origin",
+      "group": "repo",
+      "definition": "원격 저장소 주소에 붙이는 기본 이름이다.",
+      "plain": "주소를 매번 적지 않으려고 붙인 별명이다. git remote -v로 어느 주소인지 확인한다.",
+      "steps": [
+        "05-remote"
+      ],
+      "commands": [
+        "remote"
+      ],
+      "tags": [
+        "remote"
+      ]
+    },
+    {
+      "term": "커밋",
+      "slug": "commit",
+      "group": "repo",
+      "definition": "스테이징한 파일 상태를 메시지와 함께 저장한 기록 한 건이다.",
+      "plain": "작업을 저장하는 체크포인트다. 커밋마다 고유한 해시와 메시지가 붙는다.",
+      "steps": [
+        "03-commit-history"
+      ],
+      "commands": [
+        "commit",
+        "log"
+      ],
+      "tags": [
+        "commit",
+        "log"
+      ]
+    },
+    {
+      "term": "스냅샷",
+      "slug": "snapshot",
+      "group": "repo",
+      "definition": "커밋 시점의 파일 전체 상태를 찍어 둔 것이다.",
+      "plain": "변경된 줄만 저장하는 것처럼 보이지만, Git은 그 순간의 파일 전체 모습을 기억한다.",
+      "steps": [
+        "01-environment",
+        "03-commit-history"
+      ],
+      "commands": [
+        "commit"
+      ],
+      "tags": [
+        "commit"
+      ]
+    },
+    {
+      "term": "해시",
+      "slug": "hash",
+      "group": "repo",
+      "definition": "커밋 내용을 계산해 만든 40자리 고유 식별자다.",
+      "plain": "커밋의 주민번호다. 보통 앞 7자리(예: a1b2c3d)만으로 구분한다.",
+      "steps": [
+        "03-commit-history"
+      ],
+      "commands": [
+        "log",
+        "revert"
+      ],
+      "tags": [
+        "log"
+      ]
+    },
+    {
+      "term": "HEAD",
+      "slug": "head",
+      "group": "repo",
+      "definition": "현재 작업 중인 브랜치의 가장 최근 커밋을 가리키는 포인터다.",
+      "plain": "지금 내가 서 있는 위치다. HEAD~1은 바로 전 커밋을 뜻한다.",
+      "steps": [
+        "04-amend-ignore"
+      ],
+      "commands": [
+        "revert",
+        "reset"
+      ],
+      "tags": [
+        "revert",
+        "reset"
+      ]
+    },
+    {
+      "term": "파일 상태",
+      "slug": "file-status",
+      "group": "repo",
+      "definition": "git status가 보여 주는 Untracked·modified·staged 구분이다.",
+      "plain": "빨간색 Untracked는 Git이 모르는 새 파일, 빨간색 modified는 고쳤지만 담지 않은 파일, 초록색 staged는 커밋 대기 파일이다.",
+      "steps": [
+        "02-local-repository"
+      ],
+      "commands": [
+        "status",
+        "add"
+      ],
+      "tags": [
+        "status",
+        "add"
+      ]
+    },
+    {
+      "term": ".gitignore",
+      "slug": "gitignore",
+      "group": "repo",
+      "definition": "Git이 추적하지 않을 파일·폴더 패턴을 적는 파일이다.",
+      "plain": "비밀 설정(.env)이나 운영체제 임시 파일을 커밋에서 빼는 목록이다. 이미 추적 중인 파일은 git rm --cached로 먼저 추적을 끊어야 한다.",
+      "steps": [
+        "04-amend-ignore",
+        "appendix/10-gitignore-patterns"
+      ],
+      "commands": [
+        "rm"
+      ],
+      "tags": [
+        ".gitignore"
+      ]
+    },
+    {
+      "term": "amend",
+      "slug": "amend",
+      "group": "repo",
+      "definition": "직전 커밋을 새 내용이나 메시지로 바꿔 치우는 commit 옵션이다.",
+      "plain": "방금 한 커밋의 오타를 고칠 때 쓴다. 이미 push한 커밋에는 쓰지 않는다.",
+      "steps": [
+        "04-amend-ignore"
+      ],
+      "commands": [
+        "commit"
+      ],
+      "tags": [
+        "amend"
+      ]
+    },
+    {
+      "term": "되돌리기",
+      "slug": "revert",
+      "group": "repo",
+      "definition": "특정 커밋의 변경을 반대로 적용하는 새 커밋을 만드는 일이다.",
+      "plain": "이력을 지우지 않고 되돌리므로 이미 공유한 커밋에도 안전하다. reset은 포인터를 뒤로 옮기는 다른 방법이다.",
+      "steps": [
+        "04-amend-ignore"
+      ],
+      "commands": [
+        "revert",
+        "reset"
+      ],
+      "tags": [
+        "revert",
+        "reset"
+      ]
+    },
+    {
+      "term": "브랜치",
+      "slug": "branch",
+      "group": "collab",
+      "definition": "커밋 이력에서 갈라져 나온 독립된 작업 줄기다.",
+      "plain": "main을 건드리지 않고 새 기능을 따로 작업하는 길이다. git switch -c로 만들고 이동한다.",
+      "steps": [
+        "10-branches-tags"
+      ],
+      "commands": [
+        "branch",
+        "switch"
+      ],
+      "tags": [
+        "branch",
+        "switch"
+      ]
+    },
+    {
+      "term": "main",
+      "slug": "main",
+      "group": "collab",
+      "definition": "저장소의 기본 브랜치 이름이다.",
+      "plain": "완성된 코드가 모이는 줄기다. 작업 브랜치를 여기에 병합한다.",
+      "steps": [
+        "05-remote",
+        "10-branches-tags"
+      ],
+      "commands": [
+        "branch",
+        "merge"
+      ],
+      "tags": [
+        "branch",
+        "merge"
+      ]
+    },
+    {
+      "term": "태그",
+      "slug": "tag",
+      "group": "collab",
+      "definition": "특정 커밋에 붙이는 v0.1.0 같은 버전 이름표다.",
+      "plain": "제출이나 공개 시점을 표시해 나중에 찾기 쉽게 한다.",
+      "steps": [
+        "10-branches-tags"
+      ],
+      "commands": [
+        "tag"
+      ],
+      "tags": [
+        "tag"
+      ]
+    },
+    {
+      "term": "병합",
+      "slug": "merge",
+      "group": "collab",
+      "definition": "다른 브랜치의 커밋을 현재 브랜치에 합치는 일이다.",
+      "plain": "작업 브랜치의 결과를 main으로 가져온다. 양쪽이 같은 곳을 고쳤으면 충돌이 난다.",
+      "steps": [
+        "11-merge-conflicts"
+      ],
+      "commands": [
+        "merge"
+      ],
+      "tags": [
+        "merge"
+      ]
+    },
+    {
+      "term": "충돌",
+      "slug": "conflict",
+      "group": "collab",
+      "definition": "두 브랜치가 같은 파일의 같은 부분을 다르게 고쳐 Git이 자동으로 합치지 못하는 상태다.",
+      "plain": "파일에 <<<<<<<, =======, >>>>>>> 표시가 생긴다. 남길 내용을 고르고 표시를 지운 뒤 커밋한다. 막히면 git merge --abort.",
+      "steps": [
+        "11-merge-conflicts"
+      ],
+      "commands": [
+        "merge",
+        "diff"
+      ],
+      "tags": [
+        "충돌 해결"
+      ]
+    },
+    {
+      "term": "빨리감기",
+      "slug": "fast-forward",
+      "group": "collab",
+      "definition": "갈라진 커밋이 없을 때 브랜치 포인터만 앞으로 옮겨 끝나는 병합이다.",
+      "plain": "fast-forward라고도 한다. 병합 커밋이 생기지 않는다.",
+      "steps": [
+        "11-merge-conflicts"
+      ],
+      "commands": [
+        "merge"
+      ],
+      "tags": [
+        "merge"
+      ]
+    },
+    {
+      "term": "업스트림",
+      "slug": "upstream",
+      "group": "collab",
+      "definition": "로컬 브랜치가 push·pull할 때 기본으로 연결되는 원격 브랜치다.",
+      "plain": "git push -u origin main을 한 번 하면 다음부터 git push만으로 같은 곳에 올라간다.",
+      "steps": [
+        "05-remote"
+      ],
+      "commands": [
+        "push",
+        "pull"
+      ],
+      "tags": [
+        "push",
+        "pull"
+      ]
+    },
+    {
+      "term": "풀 리퀘스트",
+      "slug": "pull-request",
+      "group": "collab",
+      "definition": "브랜치의 변경을 검토하고 병합해 달라고 GitHub에서 요청하는 절차다.",
+      "plain": "Pull Request, 줄여서 PR이다. 리뷰 기록이 남고 Closes #번호로 이슈를 함께 닫을 수 있다.",
+      "steps": [
+        "12-pull-request"
+      ],
+      "commands": [
+        "push",
+        "pull"
+      ],
+      "tags": [
+        "Pull Request"
+      ],
+      "aliases": [
+        "Pull Request"
+      ]
+    },
+    {
+      "term": "포크",
+      "slug": "fork",
+      "group": "collab",
+      "definition": "남의 GitHub 저장소를 내 계정으로 통째로 복사하는 일이다.",
+      "plain": "쓰기 권한이 없는 저장소에 기여할 때 포크한 뒤 풀 리퀘스트를 보낸다.",
+      "steps": [
+        "12-pull-request"
+      ],
+      "commands": [
+        "clone"
+      ],
+      "tags": [
+        "Pull Request"
+      ]
+    },
+    {
+      "term": "Issue",
+      "slug": "issue",
+      "group": "collab",
+      "definition": "GitHub에서 할 일, 버그, 제안을 번호가 붙은 글로 관리하는 기능이다.",
+      "plain": "Label은 분류 꼬리표, Milestone은 이슈를 묶는 목표 단위다.",
+      "steps": [
+        "09-issues"
+      ],
+      "commands": [],
+      "tags": [
+        "Issue",
+        "Label",
+        "Milestone"
+      ]
+    },
+    {
+      "term": "README",
+      "slug": "readme",
+      "group": "collab",
+      "definition": "저장소 첫 화면에 보이는 소개 문서다.",
+      "plain": "프로젝트가 무엇이고 어떻게 실행하는지 적는다. Markdown으로 쓴다.",
+      "steps": [
+        "08-profile-records"
+      ],
+      "commands": [],
+      "tags": [
+        "README"
+      ]
+    },
+    {
+      "term": "Markdown",
+      "slug": "markdown",
+      "group": "collab",
+      "definition": "#, -, ** 같은 기호로 제목·목록·강조를 적는 가벼운 문서 형식이다.",
+      "plain": "README, Issue, Pull Request 본문이 모두 이 형식이다. Mermaid는 그 안에서 다이어그램을 글로 그리는 문법이다.",
+      "steps": [
+        "07-markdown-mermaid"
+      ],
+      "commands": [],
+      "tags": [
+        "Markdown",
+        "Mermaid"
+      ]
+    },
+    {
+      "term": "GitHub Pages",
+      "slug": "github-pages",
+      "group": "collab",
+      "definition": "저장소의 정적 파일을 웹사이트로 공개하는 GitHub 서비스다.",
+      "plain": "push하면 잠시 뒤 인터넷 주소에서 내 페이지가 열린다.",
+      "steps": [
+        "06-pages"
+      ],
+      "commands": [
+        "push"
+      ],
+      "tags": [
+        "GitHub Pages"
+      ]
+    },
+    {
+      "term": "CLI",
+      "slug": "cli",
+      "group": "env",
+      "definition": "글자 명령을 입력해 프로그램을 조작하는 방식이다.",
+      "plain": "마우스로 누르는 GUI와 반대다. Git은 CLI로 쓴다.",
+      "steps": [
+        "appendix/06-cli-terminal-shell"
+      ],
+      "commands": [],
+      "tags": [
+        "CLI",
+        "GUI"
+      ]
+    },
+    {
+      "term": "터미널",
+      "slug": "terminal",
+      "group": "env",
+      "definition": "명령을 입력하고 결과를 보여 주는 창이다.",
+      "plain": "VS Code 안의 터미널, macOS 터미널, Windows의 Git Bash 창이 모두 터미널이다.",
+      "steps": [
+        "01-environment",
+        "appendix/06-cli-terminal-shell"
+      ],
+      "commands": [],
+      "tags": [
+        "터미널"
+      ]
+    },
+    {
+      "term": "셸",
+      "slug": "shell",
+      "group": "env",
+      "definition": "입력한 명령을 해석해 프로그램을 찾아 실행하는 프로그램이다.",
+      "plain": "Bash, zsh가 셸이다. 터미널은 창이고 셸은 그 안에서 일하는 통역사다.",
+      "steps": [
+        "appendix/06-cli-terminal-shell"
+      ],
+      "commands": [],
+      "tags": [
+        "셸",
+        "Git Bash",
+        "zsh"
+      ]
+    },
+    {
+      "term": "커널",
+      "slug": "kernel",
+      "group": "env",
+      "definition": "파일·메모리·장치를 관리하는 운영체제의 핵심이다.",
+      "plain": "Git이 파일을 읽고 쓸 때 셸이 아니라 커널에 요청한다.",
+      "steps": [
+        "appendix/06-cli-terminal-shell"
+      ],
+      "commands": [],
+      "tags": [
+        "커널"
+      ]
+    },
+    {
+      "term": "PATH",
+      "slug": "path",
+      "group": "env",
+      "definition": "셸이 명령 이름으로 실행 파일을 찾아보는 폴더 목록이다.",
+      "plain": "git을 쳤는데 못 찾는다고 하면 설치나 PATH 등록 문제다.",
+      "steps": [
+        "appendix/06-cli-terminal-shell",
+        "appendix/05-os-differences"
+      ],
+      "commands": [],
+      "tags": [
+        "경로"
+      ]
+    },
+    {
+      "term": "환경 변수",
+      "slug": "environment-variable",
+      "group": "env",
+      "definition": "운영체제나 셸이 프로그램에 넘겨 주는 이름=값 설정이다.",
+      "plain": "API 키 같은 비밀은 코드에 적지 않고 환경 변수나 .env 파일에 둔다.",
+      "steps": [
+        "appendix/11-environment-secrets"
+      ],
+      "commands": [],
+      "tags": [
+        "환경 변수",
+        ".env"
+      ]
+    },
+    {
+      "term": "토큰",
+      "slug": "token",
+      "group": "env",
+      "definition": "비밀번호 대신 쓰는 긴 문자열 인증 수단이다.",
+      "plain": "GitHub의 Personal Access Token이 대표다. 채팅·커밋·Issue에 붙여 넣지 않는다.",
+      "steps": [
+        "05-remote",
+        "appendix/01-authentication"
+      ],
+      "commands": [],
+      "tags": [
+        "토큰",
+        "자격 증명"
+      ]
+    },
+    {
+      "term": "자격 증명",
+      "slug": "credential",
+      "group": "env",
+      "definition": "운영체제가 저장해 둔 GitHub 로그인 정보다.",
+      "plain": "계정이 바뀌었는데 push가 거부되면 저장된 자격 증명을 지우고 다시 로그인한다.",
+      "steps": [
+        "appendix/01-authentication"
+      ],
+      "commands": [
+        "push"
+      ],
+      "tags": [
+        "자격 증명",
+        "재인증"
+      ]
+    },
+    {
+      "term": "vi",
+      "slug": "vi",
+      "group": "env",
+      "definition": "터미널 안에서 열리는 글자 기반 편집기다.",
+      "plain": "git commit에 -m을 빼먹으면 열린다. Esc 뒤 :q!로 취소하거나 :wq로 저장하고 나온다.",
+      "steps": [
+        "03-commit-history",
+        "appendix/08-vi-editor"
+      ],
+      "commands": [
+        "commit"
+      ],
+      "tags": [
+        "vi",
+        "편집기"
+      ]
+    },
+    {
+      "term": "에이전트",
+      "slug": "agent",
+      "group": "env",
+      "definition": "요청을 읽고 계획을 세워 파일 수정이나 명령 실행을 대신하는 AI 도구다.",
+      "plain": "수업에서는 OpenCode를 쓴다. 계획을 읽고 승인한 범위만 실행하게 하고 결과는 git status·log로 직접 확인한다.",
+      "steps": [
+        "01-environment",
+        "appendix/07-git-scenarios"
+      ],
+      "commands": [],
+      "tags": [
+        "OpenCode",
+        "에이전트 승인"
+      ]
+    },
+    {
+      "term": "프롬프트",
+      "slug": "prompt",
+      "group": "env",
+      "definition": "에이전트에게 보내는 요청 문장이다.",
+      "plain": "무엇을, 어느 파일에, 어디까지 할지 적을수록 결과가 정확해진다.",
+      "steps": [
+        "02-local-repository",
+        "appendix/07-git-scenarios"
+      ],
+      "commands": [],
+      "tags": [
+        "OpenCode"
+      ]
+    },
+    {
+      "term": "TIL",
+      "slug": "til",
+      "group": "env",
+      "definition": "Today I Learned, 그날 배운 것을 짧게 남기는 기록이다.",
+      "plain": "Post-mortem은 문제가 생긴 뒤 원인과 재발 방지를 적는 기록이다. 둘 다 저장소에 Markdown으로 쌓는다.",
+      "steps": [
+        "08-profile-records"
+      ],
+      "commands": [],
+      "tags": [
+        "TIL",
+        "Post-mortem"
+      ]
+    }
+  ],
+  "firstLinks": {
+    "01-environment": [
+      "version-control",
+      "working-directory",
+      "staging-area",
+      "local-repository"
+    ],
+    "02-local-repository": [
+      "repository"
+    ],
+    "03-commit-history": [
+      "commit",
+      "hash",
+      "snapshot"
+    ],
+    "04-amend-ignore": [],
+    "05-remote": [
+      "remote-repository"
+    ],
+    "06-pages": [
+      "github-pages"
+    ],
+    "07-markdown-mermaid": [
+      "markdown"
+    ],
+    "08-profile-records": [
+      "readme",
+      "til"
+    ],
+    "09-issues": [
+      "issue"
+    ],
+    "10-branches-tags": [
+      "branch",
+      "tag"
+    ],
+    "11-merge-conflicts": [
+      "merge",
+      "conflict",
+      "fast-forward"
+    ],
+    "12-pull-request": [
+      "pull-request"
+    ]
+  }
 }

@@ -9,7 +9,7 @@ schedule: "14:00–14:45 (수업 45분) / 14:45–15:00 (휴식 15분)"
 
 ## 학습 목표
 
-- GitHub 웹사이트에서 새 빈 원격 저장소를 만들 수 있다.
+- GitHub 웹사이트에서 새 빈 [원격 저장소](glossary.md#remote-repository)를 만들 수 있다.
 - 로컬 저장소의 기본 브랜치 이름을 `main`으로 맞출 수 있다.
 - `git remote add origin`으로 로컬 저장소와 GitHub 원격 저장소를 연결할 수 있다.
 - `git push -u origin main`으로 로컬 커밋을 처음으로 클라우드에 올릴 수 있다.

@@ -10,7 +10,7 @@ schedule: "10:00–10:45 (수업 45분) / 10:45–11:00 (휴식 15분)"
 ## 학습 목표
 
 - `git config`로 커밋에 기록될 작업자 이름과 이메일을 등록할 수 있다.
-- 실습 폴더를 만들고 `git init`으로 로컬 저장소를 초기화할 수 있다.
+- 실습 폴더를 만들고 `git init`으로 로컬 [저장소](glossary.md#repository)를 초기화할 수 있다.
 - OpenCode로 첫 포트폴리오 웹페이지(`index.html`, `style.css`)를 만들 수 있다.
 - `git status`로 추적되지 않은 파일(Untracked)을 확인하고 `git add`로 스테이징 영역에 올릴 수 있다.
 - 빈 폴더를 추적하려고 `.gitkeep` 파일을 두는 관례를 설명할 수 있다.
