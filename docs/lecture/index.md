@@ -68,13 +68,18 @@ flowchart TD
 - [다이어그램 작성](appendix/04-mermaid.md)
 - [운영체제별 차이](appendix/05-os-differences.md)
 - [CLI·터미널·셸](appendix/06-cli-terminal-shell.md)
+- [Git 실습 시나리오](appendix/07-git-scenarios.md)
+- [vi 편집기](appendix/08-vi-editor.md)
+- [커밋 메시지 규칙](appendix/09-commit-message.md)
+- [.gitignore 패턴](appendix/10-gitignore-patterns.md)
+- [환경 변수와 비밀 정보](appendix/11-environment-secrets.md)
 
 ## 문서 구조
 
 ```mermaid
 flowchart TD
     L["docs/lecture"] --> C["01–12차시 문서<br/>01-environment.md … 12-pull-request.md"]
-    L --> A["appendix/<br/>01-authentication.md … 05-os-differences.md"]
+    L --> A["appendix/<br/>00-installation.md … 11-environment-secrets.md"]
 ```
 
 ## 준비물과 안전 규칙

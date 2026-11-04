@@ -26,6 +26,8 @@ schedule: "13:00–13:45 (수업 45분) / 13:45–14:00 (휴식 15분)"
 - 운영체제 임시 파일: macOS의 `.DS_Store`, Windows의 `Thumbs.db` 등
 - 편집기·빌드 캐시 파일: 자동 생성되는 로그나 임시 파일 (`*.tmp`, `*.log`)
 
+`.env`에는 API 키나 비밀번호 같은 값이 들어간다. 이 파일을 커밋하면 값이 이력에 남고 공개 저장소에서 노출될 수 있다. 환경 변수와 비밀 정보 관리 방법은 [환경 변수와 비밀 정보](appendix/11-environment-secrets.md) 부록을 참고한다.
+
 이러한 파일들이 한 번이라도 커밋되면 저장소 용량이 불필요하게 커지고 보안 사고로 이어질 수 있다. 따라서 Git이 알아서 무시하도록 미리 가드레일을 걸어 두어야 한다.
 
 ## 커밋 교체와 되돌리기
@@ -79,24 +81,7 @@ gitGraph
 
 ## `.gitignore` 작성 규칙
 
-저장소 루트에 `.gitignore`라는 이름의 텍스트 파일을 두면, Git은 그 안에 적힌 패턴과 일치하는 파일이나 폴더를 없는 것처럼 취급한다.
-
-```text
-# 비밀 정보 파일 제외
-.env
-
-# 운영체제 생성 파일 제외
-.DS_Store
-Thumbs.db
-
-# 로그 및 임시 파일 제외
-*.tmp
-*.log
-```
-
-- `#`으로 시작하는 줄은 주석이다.
-- 파일명(`filename.ext`)이나 확장자 패턴(`*.ext`), 폴더명(`folder/`)을 지정한다.
-- **핵심 주의점**: `.gitignore`는 **아직 Git이 추적하지 않은 Untracked 파일**에만 작동한다. 이미 과거에 `git add`나 커밋으로 추적 대상이 된 파일은 `.gitignore`에 추가해도 계속 추적된다. 이미 추적된 파일을 제외하려면 `git rm --cached <파일명>`으로 인덱스 캐시를 먼저 제거해야 한다.
+`.gitignore`는 아직 추적하지 않은 파일을 무시한다. 패턴 문법과 예시는 [.gitignore 패턴](appendix/10-gitignore-patterns.md) 부록을 참고한다.
 
 ## 따라하기
 
@@ -106,7 +91,7 @@ Thumbs.db
 3. 가짜 비밀 파일인 `.env`를 생성해 본다:
    `echo "API_KEY=sample_secret_key_12345" > .env`
 4. `git status`를 실행하여 `.env` 파일이 빨간색 Untracked 파일로 나타나는 것을 확인한다.
-5. VS Code에서 새 파일 `.gitignore`를 만들고 위의 무시 규칙들을 입력한 뒤 저장한다.
+5. VS Code에서 새 파일 `.gitignore`를 만들고 [.gitignore 패턴](appendix/10-gitignore-patterns.md) 부록의 예시 패턴을 입력한 뒤 저장한다.
 6. `git status`를 다시 실행한다. 놀랍게도 방금 보였던 `.env`가 사라지고, 새로 만든 `.gitignore`만 목록에 나타난다.
 7. `.gitignore` 파일을 스테이징 영역에 올리고 커밋한다:
    `git add .gitignore`
