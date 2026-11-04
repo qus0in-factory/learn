@@ -9,11 +9,11 @@ schedule: "11:00–11:45 (수업 45분) / 11:45–12:00 (휴식 15분)"
 
 ## 학습 목표
 
-- 스테이징 영역에 올려둔 파일들을 `git commit`으로 확실한 스냅샷 기록으로 남긴다.
-- 커밋 해시(SHA-1 Hash)의 고유 식별자 의미와 직관적인 커밋 메시지 규칙을 익힌다.
-- `git log --oneline`과 `git diff`로 프로젝트의 변경 이력을 조회한다.
-- vi 에디터가 열렸을 때 당황하지 않고 안전하게 저장하고 빠져나오는 법을 체득한다.
-- 실수로 스테이징에 올린 파일을 안전하게 내리는 `git restore --staged`를 실습한다.
+- 스테이징 영역에 올린 파일을 `git commit`으로 스냅샷 기록으로 남길 수 있다.
+- 커밋 해시(SHA-1)가 무엇을 뜻하는지 설명하고 읽기 쉬운 커밋 메시지를 쓸 수 있다.
+- `git log --oneline`과 `git diff`로 변경 이력을 조회할 수 있다.
+- vi 에디터가 열렸을 때 당황하지 않고 저장하고 빠져나올 수 있다.
+- 실수로 스테이징에 올린 파일을 `git restore --staged`로 내릴 수 있다.
 
 ## 왜 작업 단위로 기록할까
 
@@ -110,10 +110,10 @@ STEP 03에서 소개 문구를 보강하고 스타일을 다듬는 수정 예시
 
 명령 이름이 어떤 뜻인지 알면 외우기 쉽다.
 
-- `commit`: 변경을 이력에 확정해 맡긴다(commit)는 뜻이다.
-- `log`: 기록(log)을 시간순으로 읽는다는 뜻이다.
-- `diff`: 차이(difference)의 줄임말이다.
-- `restore`: 이전 상태로 복원한다는 뜻이다.
+- `commit`: 변경을 이력에 확정해 맡긴다(commit)는 뜻
+- `log`: 기록(log)을 시간순으로 읽는다는 뜻
+- `diff`: 차이(difference)의 줄임말
+- `restore`: 이전 상태로 복원한다는 뜻
 
 명령어 참조: [git add](commands/add.md) · [git commit](commands/commit.md) · [git log](commands/log.md) · [git diff](commands/diff.md) · [git restore](commands/restore.md)
 

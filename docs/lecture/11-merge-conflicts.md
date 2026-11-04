@@ -9,11 +9,11 @@ schedule: "14:00–14:45 (수업 45분) / 14:45–15:00 (휴식 15분)"
 
 ## 학습 목표
 
-- Fast-forward 병합과 3-way 병합의 차이를 이해한다.
-- 의도적으로 충돌을 만들고 직접 해결한다.
-- 충돌 마커의 의미를 읽는다.
-- `git merge --abort`로 병합을 취소하는 방법을 안다.
-- `git log --graph --oneline --all`로 브랜치 흐름을 확인한다.
+- Fast-forward 병합과 3-way 병합의 차이를 설명할 수 있다.
+- 의도적으로 충돌을 만들고 직접 해결할 수 있다.
+- 충돌 마커의 의미를 읽을 수 있다.
+- `git merge --abort`로 병합을 취소할 수 있다.
+- `git log --graph --oneline --all`로 브랜치 흐름을 확인할 수 있다.
 
 ## 왜 필요한가
 
@@ -31,7 +31,7 @@ schedule: "14:00–14:45 (수업 45분) / 14:45–15:00 (휴식 15분)"
 
 ### 병합 두 가지 방식
 
-Fast-forward는 포인터만 앞으로 옮기고, 3-way는 새로운 Merge Commit을 만든다.
+Fast-forward 병합과 3-way 병합의 이력 모양 차이
 
 ```mermaid
 flowchart TB
@@ -53,7 +53,7 @@ gitGraph
 
 ### 충돌 해결 흐름
 
-병합 중 충돌이 나면 마커를 고쳐 다시 커밋하고, 꼬이면 `--abort`로 처음 상태로 돌아간다.
+충돌을 해결하는 순서와 `--abort`로 돌아가는 출구
 
 ```mermaid
 flowchart TB
@@ -82,7 +82,7 @@ flowchart TB
 
 명령 이름이 어떤 뜻인지 알면 외우기 쉽다.
 
-- `merge`: 갈라진 이력을 하나로 합친다는 뜻이다.
+- `merge`: 갈라진 이력을 하나로 합친다는 뜻
 
 명령어 참조: [git add](commands/add.md) · [git commit](commands/commit.md) · [git log](commands/log.md) · [git branch](commands/branch.md) · [git switch](commands/switch.md) · [git merge](commands/merge.md)
 

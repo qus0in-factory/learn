@@ -9,11 +9,11 @@ schedule: "10:00–10:45 (수업 45분) / 10:45–11:00 (휴식 15분)"
 
 ## 학습 목표
 
-- GitHub Profile 저장소를 별도 저장소로 만든다.
-- 포트폴리오 저장소와 Profile 저장소를 구분한다.
-- `docs/post-mortem.md`를 만들어 사후분석을 기록한다.
-- TIL, KPT 회고, Wiki의 쓰임을 안다.
-- 변경을 커밋하고 원격에 반영한다.
+- GitHub Profile 저장소를 따로 만들 수 있다.
+- 포트폴리오 저장소와 Profile 저장소를 구분해 설명할 수 있다.
+- `docs/post-mortem.md`를 만들어 사후분석을 기록할 수 있다.
+- TIL, KPT 회고, Wiki를 어떤 때 쓰는지 설명할 수 있다.
+- 변경을 커밋하고 원격에 반영할 수 있다.
 
 ## 왜 필요한가
 
@@ -30,7 +30,7 @@ schedule: "10:00–10:45 (수업 45분) / 10:45–11:00 (휴식 15분)"
 
 ### 저장소 역할 구분
 
-Profile 저장소와 작업 저장소는 노출되는 곳과 담는 내용이 다르다.
+Profile 저장소와 작업 저장소의 역할 구분
 
 ```mermaid
 flowchart TB
@@ -66,7 +66,7 @@ git push origin main
 
 ## Post-mortem 예시
 
-Post-mortem은 한 번 쓰고 끝내지 않고 다음 작업에 반영한다.
+한 번 쓰고 끝내지 않고 다음 작업에 반영하는 Post-mortem의 고리
 
 ```mermaid
 flowchart TB

@@ -9,11 +9,11 @@ schedule: "11:00–11:45 (수업 45분) / 11:45–12:00 (휴식 15분)"
 
 ## 학습 목표
 
-- GitHub Issue로 작업 요청서를 등록한다.
-- Label로 이슈 종류를 분류한다.
-- Milestone으로 목표와 진행률을 추적한다.
-- GitHub CLI(`gh`)와 ChatGPT-GitHub 연동을 선택 기능으로 이해한다.
-- 비밀 값을 Issue에 남기지 않는다.
+- GitHub Issue로 작업 요청서를 등록할 수 있다.
+- Label로 이슈 종류를 분류할 수 있다.
+- Milestone으로 목표와 진행률을 추적할 수 있다.
+- GitHub CLI(`gh`)와 ChatGPT-GitHub 연동이 선택 기능임을 설명할 수 있다.
+- 비밀 값을 Issue에 남기지 않도록 주의할 수 있다.
 
 ## 왜 필요한가
 
@@ -29,7 +29,7 @@ schedule: "11:00–11:45 (수업 45분) / 11:45–12:00 (휴식 15분)"
 
 ### Issue 관계도
 
-Milestone은 Issue를 묶고, Label은 Issue를 분류하며, Issue는 Open에서 Closed로 바뀐다.
+Milestone, Label, Issue의 관계와 Issue 상태 변화
 
 ```mermaid
 flowchart TB

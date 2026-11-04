@@ -9,12 +9,12 @@ schedule: "15:00–15:45 (수업 45분) / 15:45–16:00 (휴식 및 피날레 15
 
 ## 학습 목표
 
-- 기능 브랜치를 원격에 push 한다.
-- GitHub 웹에서 Pull Request를 만든다.
-- Files changed에서 diff를 검토한다.
-- PR을 병합한다.
-- 로컬 `main`을 동기화하고 브랜치를 정리한다.
-- Pages 사이트 갱신을 확인한다.
+- 기능 브랜치를 원격에 push할 수 있다.
+- GitHub 웹에서 Pull Request를 만들 수 있다.
+- Files changed에서 diff를 검토할 수 있다.
+- PR을 병합할 수 있다.
+- 로컬 `main`을 동기화하고 브랜치를 정리할 수 있다.
+- Pages 사이트가 갱신되었는지 확인할 수 있다.
 
 ## 왜 필요한가
 
@@ -33,7 +33,7 @@ schedule: "15:00–15:45 (수업 45분) / 15:45–16:00 (휴식 및 피날레 15
 
 ### PR 전체 흐름
 
-브랜치를 올린 뒤 PR로 검토하고 병합하며, 로컬을 동기화하고 브랜치를 정리한다.
+브랜치 push부터 병합, 동기화, 브랜치 정리까지의 전체 흐름
 
 ```mermaid
 flowchart TB
@@ -67,7 +67,7 @@ flowchart TB
 
 명령 이름이 어떤 뜻인지 알면 외우기 쉽다.
 
-- Pull Request: 내 브랜치의 변경을 가져가(pull) 합쳐 달라고 요청(request)한다는 뜻이다.
+- Pull Request: 내 브랜치의 변경을 가져가(pull) 합쳐 달라고 요청(request)한다는 뜻
 
 명령어 참조: [git add](commands/add.md) · [git commit](commands/commit.md) · [git diff](commands/diff.md) · [git push](commands/push.md) · [git pull](commands/pull.md) · [git branch](commands/branch.md) · [git switch](commands/switch.md)
 

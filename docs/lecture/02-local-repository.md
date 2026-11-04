@@ -9,11 +9,11 @@ schedule: "10:00–10:45 (수업 45분) / 10:45–11:00 (휴식 15분)"
 
 ## 학습 목표
 
-- `git config` 명령어로 커밋에 기록될 작업자 이름과 이메일을 등록한다.
-- 실습 폴더를 생성하고 `git init`으로 로컬 저장소를 초기화한다.
-- OpenCode를 활용해 첫 포트폴리오 웹페이지(`index.html`, `style.css`)를 생성한다.
-- `git status`로 추적되지 않은 파일(Untracked)을 확인하고, `git add`로 스테이징 영역에 올린다.
-- 빈 폴더 추적을 위한 `.gitkeep` 파일의 관례를 이해한다.
+- `git config`로 커밋에 기록될 작업자 이름과 이메일을 등록할 수 있다.
+- 실습 폴더를 만들고 `git init`으로 로컬 저장소를 초기화할 수 있다.
+- OpenCode로 첫 포트폴리오 웹페이지(`index.html`, `style.css`)를 만들 수 있다.
+- `git status`로 추적되지 않은 파일(Untracked)을 확인하고 `git add`로 스테이징 영역에 올릴 수 있다.
+- 빈 폴더를 추적하려고 `.gitkeep` 파일을 두는 관례를 설명할 수 있다.
 
 ## 작업자 등록과 저장소 초기화
 
@@ -25,7 +25,7 @@ schedule: "10:00–10:45 (수업 45분) / 10:45–11:00 (휴식 15분)"
 
 ## 파일 상태와 스테이징 원리
 
-Git에서 파일은 그냥 놓여 있는 것이 아니라 상태가 바뀌어 간다.
+Git에서 파일 상태가 바뀌는 흐름
 
 ```mermaid
 stateDiagram-v2
@@ -149,8 +149,8 @@ Git 명령은 내 컴퓨터에서 실행되지만, STEP 05부터 쓰는 원격 �
 
 명령 이름이 어떤 뜻인지 알면 외우기 쉽다.
 
-- `status`: 상태(status)를 보여 준다는 뜻이다.
-- `add`: 변경한 파일을 스테이징 영역에 더한다(add)는 뜻이다.
+- `status`: 상태(status)를 보여 준다는 뜻
+- `add`: 변경한 파일을 스테이징 영역에 더한다(add)는 뜻
 
 명령어 참조: [git config](commands/config.md) · [git init](commands/init.md) · [git status](commands/status.md) · [git add](commands/add.md)
 

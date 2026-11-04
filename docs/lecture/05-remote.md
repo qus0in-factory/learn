@@ -9,11 +9,11 @@ schedule: "14:00–14:45 (수업 45분) / 14:45–15:00 (휴식 15분)"
 
 ## 학습 목표
 
-- GitHub 웹사이트에서 새로운 빈 원격 저장소를 생성한다.
-- 로컬 저장소의 기본 브랜치 이름을 표준인 `main`으로 정렬한다.
-- `git remote add origin` 명령으로 로컬 저장소와 GitHub 원격 저장소를 연결한다.
-- `git push -u origin main` 명령으로 내 컴퓨터의 커밋들을 클라우드에 처음으로 업로드한다.
-- `clone`, `pull`, `fork`의 개념과 차이를 이해한다.
+- GitHub 웹사이트에서 새 빈 원격 저장소를 만들 수 있다.
+- 로컬 저장소의 기본 브랜치 이름을 `main`으로 맞출 수 있다.
+- `git remote add origin`으로 로컬 저장소와 GitHub 원격 저장소를 연결할 수 있다.
+- `git push -u origin main`으로 내 컴퓨터의 커밋을 처음으로 클라우드에 올릴 수 있다.
+- `clone`, `pull`, `fork`의 차이를 설명할 수 있다.
 
 ## 클라우드 협업이 필요한 이유
 
@@ -22,8 +22,8 @@ schedule: "14:00–14:45 (수업 45분) / 14:45–15:00 (휴식 15분)"
 클라우드에서 Git 저장소를 호스팅해 주는 서비스가 **GitHub**이다. 쓰면 좋은 점은 세 가지다.
 
 1. 안전한 원격 백업: 어디서든 다른 PC에서 내 코드를 그대로 복원할 수 있다.
-2. 동료와의 협업: 하나의 저장소를 중심으로 여러 사람이 함께 코드를 수정하고 합칠 수 있다.
-3. 배포의 기초: 다음 STEP에서 배울 GitHub Pages로 인터넷에서 접속할 수 있는 웹사이트를 무료로 공개할 수 있다.
+2. 동료와의 협업: 하나의 저장소를 중심으로 여러 사람이 함께 코드를 수정하고 합친다.
+3. 배포의 기초: 다음 STEP에서 배울 GitHub Pages로 웹사이트를 무료로 공개하는 바탕이 된다.
 
 ## 원격 연결과 동기화 메커니즘
 
@@ -48,7 +48,7 @@ flowchart LR
 
 ### 복제와 가져오기
 
-`fork`, `clone`, `pull`은 저장소 사이에서 코드가 움직이는 방향이 다르다.
+`fork`, `clone`, `pull`로 저장소 사이를 오가는 코드의 방향
 
 ```mermaid
 flowchart TB
@@ -84,7 +84,7 @@ flowchart TB
 명령 이름이 어떤 뜻인지 알면 외우기 쉽다.
 
 - `remote`: 멀리 떨어진(원격) 저장소를 뜻한다.
-- `origin`: 처음 가져온 출처라는 뜻의 관례적 별칭이다.
+- `origin`: 처음 가져온 출처라는 뜻의 관례적 별칭
 - `push`는 원격으로 밀어 올리고, `pull`은 원격에서 끌어오며, `clone`은 통째로 복제한다.
 
 명령어 참조: [git remote](commands/remote.md) · [git clone](commands/clone.md) · [git push](commands/push.md) · [git pull](commands/pull.md) · [git branch](commands/branch.md)
@@ -102,6 +102,25 @@ git remote -v
 # 4. 첫 푸시 및 업스트림 등록
 git push -u origin main
 ```
+
+### 원격 등록 실수 대응
+
+`git remote add origin`은 한 번만 입력하지만 실수하기 쉬운 단계다. 흔한 실수는 세 가지다.
+
+| 실수 | 드러나는 모습 | 대응 |
+| --- | --- | --- |
+| 명령어 철자 오타(예: `git remot add …`) | `git: 'remot' is not a git command.` 오류가 나온다. | 아무것도 등록되지 않았으므로 철자를 고쳐 같은 명령을 다시 입력한다. |
+| 원격 이름 오타(예: `orgin`) | 등록은 되지만 `git push -u origin main`에서 `fatal: 'origin' does not appear to be a git repository`가 나온다. | `git remote -v`로 이름을 확인하고 `git remote rename orgin origin`으로 고친다. 이름을 지우고 다시 만들려면 `git remote remove orgin` 뒤에 `git remote add origin 주소`를 입력한다. |
+| 주소 오타(계정·저장소 이름) | `git push`에서 `remote: Repository not found.`나 인증 오류가 나온다. | `git remote set-url origin 올바른주소`로 주소만 고치고 `git remote -v`로 확인한다. |
+
+원격을 다루는 명령은 다음 네 가지다.
+
+| 하려는 일 | 명령 |
+| --- | --- |
+| 조회 | `git remote -v` |
+| 삭제 | `git remote remove 이름` |
+| 이름 변경 | `git remote rename 옛이름 새이름` |
+| 주소 수정 | `git remote set-url 이름 새주소` |
 
 ### 선택 참고 명령
 
@@ -133,7 +152,7 @@ clone과 fork 차이 초보자 눈높이 비교 설명
 
 | 증상 | 원인 | 대응 |
 | --- | --- | --- |
-| `fatal: remote origin already exists` | 이미 `origin`이라는 이름으로 주소가 등록됨 | `git remote -v`로 확인하고, 주소가 틀렸다면 `git remote set-url origin <올바른주소>`로 변경한다. |
+| `fatal: remote origin already exists` | 이미 `origin`이라는 이름으로 주소가 등록됨 | `git remote -v`로 확인하고, 주소가 틀렸다면 `git remote set-url origin 올바른주소`로 바꾼다. 다른 실수는 [원격 등록 실수 대응](#원격-등록-실수-대응)을 참고한다. |
 | `error: failed to push some refs ... (non-fast-forward)` | GitHub에서 빈 저장소를 만들지 않고 README 등을 함께 생성함 | GitHub 저장소를 삭제 후 체크박스를 모두 풀고 빈 저장소로 다시 만들거나 강사에게 문의한다. |
 | 인증 실패 또는 403 Forbidden 오류 | 이전 다른 계정 자격 증명이 남아있거나 토큰 만료 | Windows 자격 증명 관리자에서 이전 계정을 삭제하고 재인증한다. 상세 절차는 [자격 증명 재인증](appendix/01-authentication.md)과 [운영체제별 차이](appendix/05-os-differences.md) 부록을 참고한다. |
 
