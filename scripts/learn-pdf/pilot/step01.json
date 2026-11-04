@@ -1,0 +1,17 @@
+[
+ {"type":"cover","step":"STEP 01","title":"버전 관리의 세 영역"},
+ {"type":"goals","title":"학습 목표","cards":[["기록 목적","변경 이유를 기록하는 목적을 설명할 수 있다"],["세 영역","작업 공간·스테이징·저장소를 구별할 수 있다"],["도구 확인","터미널에서 Git과 도구 실행을 확인할 수 있다"]]},
+ {"type":"section","title":"핵심 개념"},
+ {"type":"table","title":"버전 관리","rows":[["관점","폴더 복사","Git"],["기록 단위","파일명·폴더명","커밋과 메시지"],["차이 확인","사람이 직접 대조","도구가 변경 비교"],["변경 이유","별도 메모 필요","커밋 메시지로 연결"],["역할 구분","Git은 로컬 기록","GitHub는 원격·협업"]]},
+ {"type":"cards","title":"Git의 세 영역","diagram":"assets/areas.svg","cards":[["작업 공간","현재 편집 중인 파일"],["스테이징 영역","다음 기록에 선택한 변경"],["로컬 저장소","커밋으로 남긴 상태"]]},
+ {"type":"flow","title":"변경 기록 흐름","diagram":"assets/record.svg","cards":[["수정","작업 파일을 편집한다"],["선택","git add로 내용을 선택한다"],["기록","git commit으로 남긴다"]]},
+ {"type":"table","title":"파일 상태","rows":[["상태","뜻"],["Untracked","아직 Git이 추적하지 않는 파일"],["Modified","추적 파일이 인덱스와 달라짐"],["Staged","다음 커밋에 반영할 변경이 있음"],["Unmodified","추적 파일에 기록할 차이가 없음"],["실습 위치","STEP 02에서 상태 확인"]]},
+ {"type":"table","title":"변경 비교","rows":[["명령","기준 → 변경"],["git diff","인덱스 → 작업 공간"],["git diff --staged","HEAD → 인덱스"],["git diff HEAD","HEAD → 작업 공간"],["HEAD","현재 커밋 · 첫 커밋 전에는 없음"],["실습 위치","STEP 03에서 diff 확인"]]},
+ {"type":"section","title":"실습 단계"},
+ {"type":"flow","title":"실습 흐름","cards":[["터미널","VS Code에서 입력 위치와 현재 폴더 확인"],["Git","git --version의 버전 출력 확인"],["OpenCode","짧은 요청의 응답을 읽고 검토"]]},
+ {"type":"links","title":"설치 및 사전 준비","cards":[["Git","https://git-scm.com/install/"],["VS Code","https://code.visualstudio.com/download"],["OpenCode","https://opencode.ai/v2/docs/"],["공개 범위","설치와 계정 인증을 구분하고 토큰·비밀 값을 공유하지 않는다"]]},
+ {"type":"code","title":"명령어 한눈에 보기","code":["# Git 설치 확인\ngit --version\n\n# GitHub 인증 확인은 아님","# 저장소 생성 뒤 상태 확인\ngit status\n\n# 설치 확인과 저장소 점검 구분"]},
+ {"type":"cards","title":"트러블 슈팅","cards":[["명령 없음","설치·PATH 인식을 확인한다"],["버전 차이","OS·배포판에 따라 숫자가 다를 수 있다"],["AI 지연·오류","연결·한도·서비스 상태를 확인한다. 웹이면 새로고침해 본다"]]},
+ {"type":"table","title":"한 장 요약","rows":[["개념","확인할 내용"],["기록","변경 상태와 이유를 남김"],["세 영역","작업 공간 · 인덱스 · 로컬 저장소"],["add 이후 편집","다시 add하기 전까지 새 편집은 커밋에 미포함"],["완료 기준","도구 실행 확인 + 세 영역 설명"]]},
+ {"type":"eof","title":"- EOF -"}
+]

@@ -1,0 +1,261 @@
+[
+ {
+  "type": "cover",
+  "step": "STEP 05",
+  "title": "원격 저장소와 동기화",
+  "icon": "assets/data-base.svg"
+ },
+ {
+  "type": "goals",
+  "step": "STEP 05",
+  "title": "학습 목표",
+  "cards": [
+   [
+    "연결",
+    "이름은 main인지 확인"
+   ],
+   [
+    "업로드",
+    "main을 업스트림과 함께 push할 수 있다"
+   ],
+   [
+    "구분",
+    "clone pull fork의 방향을 말할 수 있다"
+   ]
+  ]
+ },
+ {
+  "type": "section",
+  "step": "STEP 05",
+  "title": "핵심 개념 및 구조"
+ },
+ {
+  "type": "cards",
+  "step": "STEP 05",
+  "title": "원격 저장소",
+  "icons": [
+   "assets/save.svg",
+   "assets/checkmark.svg"
+  ],
+  "cards": [
+   [
+    "백업",
+    "다른 PC에서 복원"
+   ],
+   [
+    "협업",
+    "한 저장소로 변경을 모음"
+   ],
+   [
+    "배포 기반",
+    "다음 공개 주소의 출발"
+   ]
+  ]
+ },
+ {
+  "type": "image",
+  "step": "STEP 05",
+  "title": "로컬과 원격",
+  "image": "assets/art-05-remote.png",
+  "caption": "로컬과 원격"
+ },
+ {
+  "type": "table",
+  "step": "STEP 05",
+  "title": "origin · main · -u",
+  "rows": [
+   [
+    "용어",
+    "뜻"
+   ],
+   [
+    "origin",
+    "원격 주소의 관례적 별칭"
+   ],
+   [
+    "main",
+    "GitHub가 기본으로 쓰는 브랜치 이름"
+   ],
+   [
+    "-u",
+    "이후 push·pull의 기본 연결"
+   ],
+   [
+    "init",
+    "기본 이름은 설정마다 다름"
+   ]
+  ]
+ },
+ {
+  "type": "cards",
+  "step": "STEP 05",
+  "title": "fork · clone · pull",
+  "cards": [
+   [
+    "fork",
+    "다른 원격에서 내 원격으로"
+   ],
+   [
+    "clone",
+    "원격에서 새 로컬로"
+   ],
+   [
+    "pull",
+    "통합 방식은 설정"
+   ]
+  ]
+ },
+ {
+  "type": "table",
+  "step": "STEP 05",
+  "title": "인증은 필요할 때",
+  "rows": [
+   [
+    "환경",
+    "준비"
+   ],
+   [
+    "macOS",
+    "gh auth login 후 status"
+   ],
+   [
+    "Windows",
+    "필요하면 브라우저 창"
+   ],
+   [
+    "공통",
+    "미리 인증하면 다시 안 물을 수 있다"
+   ],
+   [
+    "코드",
+    "터미널 표시, 브라우저 입력"
+   ]
+  ]
+ },
+ {
+  "type": "section",
+  "step": "STEP 05",
+  "title": "실습 단계"
+ },
+ {
+  "type": "flow",
+  "step": "STEP 05",
+  "title": "실습 흐름",
+  "icons": [
+   "assets/terminal.svg",
+   "assets/list-checked.svg",
+   "assets/document.svg"
+  ],
+  "cards": [
+   [
+    "01 · 생성",
+    "초기 파일 생성을 모두 끈다"
+   ],
+   [
+    "02 · 연결",
+    "이름을 보고 remote add 한다"
+   ],
+   [
+    "03 · 업로드",
+    "인증 창은 필요할 때만"
+   ]
+  ]
+ },
+ {
+  "type": "code",
+  "step": "STEP 05",
+  "title": "명령어 한눈에 보기",
+  "code": [
+   "# pull은 확인 후\n# Git Bash·zsh\nURL=https://github.com/\\\n<계정>/<저장소>.git\ngit remote add origin \\\n\"$URL\"\ngit remote -v\ngit push -u origin main",
+   "# 주소 오타일 때만\ngit remote set-url \\\norigin \"$URL\"\n# 이름 오타일 때만\ngit remote rename \\\nold origin"
+  ]
+ },
+ {
+  "type": "table",
+  "step": "STEP 05",
+  "title": "등록 실수 세 가지",
+  "rows": [
+   [
+    "실수",
+    "대응"
+   ],
+   [
+    "명령 철자",
+    "명령을 다시 입력"
+   ],
+   [
+    "origin 이름 오타",
+    "remote rename"
+   ],
+   [
+    "주소 오타",
+    "remote set-url"
+   ],
+   [
+    "-M",
+    "기존 main을 덮을 수 있다"
+   ]
+  ]
+ },
+ {
+  "type": "cards",
+  "step": "STEP 05",
+  "title": "트러블 슈팅",
+  "cards": [
+   [
+    "브랜치",
+    "커밋과 이름이 main인지"
+   ],
+   [
+    "이력",
+    "원격 첫 커밋이 있는지"
+   ],
+   [
+    "인증",
+    "강제 push 금지"
+   ]
+  ]
+ },
+ {
+  "type": "table",
+  "step": "STEP 05",
+  "title": "한 장 요약",
+  "rows": [
+   [
+    "개념",
+    "끝난 상태",
+    "명령"
+   ],
+   [
+    "연결",
+    "별칭 origin",
+    "remote add"
+   ],
+   [
+    "확인",
+    "fetch와 push 두 줄",
+    "remote -v"
+   ],
+   [
+    "첫 업로드",
+    "웹에 파일과 이력",
+    "push -u origin main"
+   ],
+   [
+    "가져오기",
+    "확인 후 선택",
+    "git pull"
+   ],
+   [
+    "확인",
+    "웹에 파일과 이력"
+   ]
+  ]
+ },
+ {
+  "type": "eof",
+  "step": "STEP 05",
+  "title": "- EOF -",
+  "icon": "assets/data-base.svg"
+ }
+]

@@ -1,0 +1,16 @@
+{
+  "icons": {
+    "author": "IBM Carbon Design System",
+    "source": "https://github.com/carbon-design-system/carbon/tree/main/packages/icons",
+    "package": "@iconify-json/carbon",
+    "collectionVersion": "11.91.0",
+    "license": "Apache-2.0; carbon-LICENSE.txt",
+    "changes": "currentColor replaced by existing theme-derived ink; original SVG paths retained"
+  },
+  "diagrams": {
+    "generator": "mermaid@12.3.0",
+    "source": "../diagrams.json",
+    "theme": "../diagram-theme.mjs; existing computed PDF tokens",
+    "font": "Learn Sans; existing locked renderer fonts"
+  }
+}

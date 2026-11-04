@@ -1,0 +1,273 @@
+[
+ {
+  "type": "cover",
+  "step": "STEP 06",
+  "title": "웹사이트 배포",
+  "icon": "assets/version.svg"
+ },
+ {
+  "type": "goals",
+  "step": "STEP 06",
+  "title": "학습 목표",
+  "cards": [
+   [
+    "공개",
+    "첫 화면은 index.html"
+   ],
+   [
+    "갱신",
+    "push 뒤 Actions로 반영을 확인할 수 있다"
+   ],
+   [
+    "표시",
+    "Open Graph와 폰트 조건을 말할 수 있다"
+   ]
+  ]
+ },
+ {
+  "type": "section",
+  "step": "STEP 06",
+  "title": "핵심 개념 및 구조"
+ },
+ {
+  "type": "table",
+  "step": "STEP 06",
+  "title": "파일 경로와 공개 주소",
+  "rows": [
+   [
+    "여는 방법",
+    "주소"
+   ],
+   [
+    "직접 열기",
+    "로컬 파일 경로"
+   ],
+   [
+    "정적 호스팅",
+    "준비된 파일을 그대로 제공"
+   ],
+   [
+    "한계",
+    "다른 사람은 PC 경로를 못 연다"
+   ]
+  ]
+ },
+ {
+  "type": "image",
+  "step": "STEP 06",
+  "title": "공개",
+  "image": "assets/art-06-publish.png",
+  "caption": "집에서 공개 게시판으로"
+ },
+ {
+  "type": "table",
+  "step": "STEP 06",
+  "title": "배포 순서",
+  "rows": [
+   [
+    "단계",
+    "확인"
+   ],
+   [
+    "push",
+    "게시 브랜치"
+   ],
+   [
+    "Actions",
+    "빌드 상태"
+   ],
+   [
+    "Pages",
+    "TOKEN push는 빌드가 안 될 수 있다"
+   ]
+  ]
+ },
+ {
+  "type": "table",
+  "step": "STEP 06",
+  "title": "Pages 동작 규칙",
+  "rows": [
+   [
+    "항목",
+    "값"
+   ],
+   [
+    "진입점",
+    "루트 진입점 예시는 index.html"
+   ],
+   [
+    "다른 진입점",
+    "index.md와 README.md도 찾는다"
+   ],
+   [
+    "주소",
+    "계정.github.io/저장소/"
+   ],
+   [
+    "시간",
+    "수 분에서 최대 10분"
+   ],
+   [
+    "실패",
+    "Actions. 10분은 보장 아님"
+   ]
+  ]
+ },
+ {
+  "type": "table",
+  "step": "STEP 06",
+  "title": "HTML head의 Open Graph",
+  "rows": [
+   [
+    "태그",
+    "역할"
+   ],
+   [
+    "og:title",
+    "미리보기 제목"
+   ],
+   [
+    "og:description",
+    "미리보기 설명"
+   ],
+   [
+    "og:image",
+    "외부에서 여는 전체 URL"
+   ],
+   [
+    "og:url",
+    "페이지 주소"
+   ],
+   [
+    "캐시",
+    "예전 미리보기가 남을 수 있다"
+   ]
+  ]
+ },
+ {
+  "type": "table",
+  "step": "STEP 06",
+  "title": "디자인 요소",
+  "rows": [
+   [
+    "요소",
+    "확인"
+   ],
+   [
+    "폰트",
+    "사용 조건·범위 확인"
+   ],
+   [
+    "색상",
+    "가독성"
+   ],
+   [
+    "파비콘",
+    "탭 아이콘"
+   ],
+   [
+    "Open Graph",
+    "공유 미리보기"
+   ]
+  ]
+ },
+ {
+  "type": "section",
+  "step": "STEP 06",
+  "title": "실습 단계"
+ },
+ {
+  "type": "flow",
+  "step": "STEP 06",
+  "title": "실습 흐름",
+  "icons": [
+   "assets/list-checked.svg",
+   "assets/terminal.svg",
+   "assets/checkmark.svg"
+  ],
+  "cards": [
+   [
+    "01 · 설정",
+    "없으면 브랜치 이름부터"
+   ],
+   [
+    "02 · 확인",
+    "사이트 링크를 연다"
+   ],
+   [
+    "03 · 갱신",
+    "푸터를 push하고 Actions를 본다"
+   ]
+  ]
+ },
+ {
+  "type": "code",
+  "step": "STEP 06",
+  "title": "명령어 한눈에 보기",
+  "code": [
+   "# CSS면 commit 전 add\ngit status\ngit add index.html\n# CSS를 만들었으면\ngit add style.css\ngit commit -m \"feat: 푸터\"\ngit push origin main",
+   "# Settings\n# Pages\n# branch main\n# folder root\n# Save"
+  ]
+ },
+ {
+  "type": "cards",
+  "step": "STEP 06",
+  "title": "트러블 슈팅",
+  "cards": [
+   [
+    "404",
+    "설정 저장과 Actions"
+   ],
+   [
+    "첫 화면",
+    "소문자 index.html"
+   ],
+   [
+    "옛 화면",
+    "전화번호·주소는 올리지 않는다"
+   ]
+  ]
+ },
+ {
+  "type": "table",
+  "step": "STEP 06",
+  "title": "한 장 요약",
+  "rows": [
+   [
+    "개념",
+    "끝난 상태",
+    "확인"
+   ],
+   [
+    "공개",
+    "main 루트",
+    "Settings → Pages"
+   ],
+   [
+    "주소",
+    "사이트가 열린다",
+    "브라우저"
+   ],
+   [
+    "갱신",
+    "푸터가 보인다",
+    "Actions, 최대 10분"
+   ],
+   [
+    "미리보기",
+    "og 네 태그",
+    "HTML head"
+   ],
+   [
+    "실패",
+    "없으면 Actions부터"
+   ]
+  ]
+ },
+ {
+  "type": "eof",
+  "step": "STEP 06",
+  "title": "- EOF -",
+  "icon": "assets/version.svg"
+ }
+]
