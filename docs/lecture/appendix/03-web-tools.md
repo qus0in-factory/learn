@@ -7,7 +7,7 @@ tags: ["눈누", "Bulma", "Coolors", "favicon", "폰트", "색상"]
 
 관련 STEP: [STEP 06 웹사이트 배포](../06-pages.md) · [STEP 07 마크다운과 다이어그램](../07-markdown-mermaid.md)
 
-눈누, Bulma, Coolors, favicon 도구는 핵심 Git 흐름이 아닌 선택 참고 도구이다. 포트폴리오의 글꼴, 버튼, 색상, 탭 아이콘을 다듬고 싶을 때 시간이 남으면 하나만 골라 적용한다. 도구를 모두 설치하거나 한 번에 바꾸지 않는다.
+보조 도구로 포트폴리오의 글꼴, 버튼, 색상과 탭 아이콘을 다듬을 수 있다.
 
 ## 왜 필요한가
 
@@ -33,10 +33,8 @@ Git과 배포를 익히는 것이 먼저이다. 다만 같은 HTML/CSS라도 글
 
 ## 따라하기
 
-1. 핵심 실습을 먼저 완료한다.
-2. 도구 하나만 선택해 적용한다.
-3. 라이선스와 출처를 확인한다.
-4. 작은 변경으로 커밋하고 Pages에서 확인한다.
+1. 라이선스와 출처를 확인한다.
+2. 작은 변경으로 커밋하고 Pages에서 확인한다.
 
 ## 적용 예시
 
@@ -96,9 +94,20 @@ body {
 ## 주의
 
 - 눈누 폰트를 모두 같은 라이선스로 가정하지 않는다. 폰트별로 확인한다.
-- Bulma를 쓰지 않아도 괜찮다. 필요한 경우에만 최소 클래스를 적용한다.
 - Coolors 색상은 예쁜 것만 고르지 말고 글자 대비를 확인한다.
 - 파비콘은 브라우저가 저장해 두므로 바꿔도 탭 아이콘이 바로 달라지지 않을 수 있다. 강력 새로고침으로 확인한다.
 - 파비콘 생성기에는 개인정보가 담긴 이미지를 올리지 않고, 이미지·이모지의 사용 조건을 확인한다.
 - 외부 폰트나 라이브러리가 많아지면 페이지가 느려질 수 있다.
 - 비밀번호, 토큰, 개인정보를 예시 코드나 스크린샷에 넣지 않는다.
+
+## 디자인 작업
+
+[Stitch](https://stitch.withgoogle.com/)와 [Figma](https://www.figma.com/)는 화면 디자인을 구상하는 도구다. `DESIGN.md`는 프로젝트의 디자인 원칙과 구성 요소를 문서로 정리할 때 쓸 수 있다.
+
+## 배포 서비스
+
+- [Vercel](https://vercel.com/docs): 웹사이트와 웹앱 배포
+- [Cloudflare Pages](https://developers.cloudflare.com/pages/): 정적 사이트 배포
+- [AWS S3 정적 웹 호스팅](https://docs.aws.amazon.com/AmazonS3/latest/userguide/WebsiteHosting.html): 정적 사이트 저장과 공개
+- [Render](https://render.com/docs): 정적 사이트와 웹 서비스 배포
+- [Railway](https://docs.railway.com/): 웹 서비스와 애플리케이션 배포

@@ -9,6 +9,10 @@
       "text": "브랜치와 협업"
     },
     {
+      "id": "web",
+      "text": "웹과 배포"
+    },
+    {
       "id": "env",
       "text": "환경과 도구"
     }
@@ -381,6 +385,9 @@
       ],
       "tags": [
         "merge"
+      ],
+      "aliases": [
+        "Fast-forward"
       ]
     },
     {
@@ -496,6 +503,36 @@
       ],
       "tags": [
         "GitHub Pages"
+      ]
+    },
+    {
+      "term": "정적 웹",
+      "slug": "static-web",
+      "group": "web",
+      "definition": "서버가 요청마다 페이지를 새로 만들지 않고 준비된 파일을 제공하는 웹사이트다.",
+      "plain": "HTML·CSS·이미지처럼 미리 준비한 파일로 페이지를 구성한다.",
+      "steps": [
+        "06-pages"
+      ],
+      "commands": [],
+      "tags": [
+        "정적 웹",
+        "GitHub Pages"
+      ]
+    },
+    {
+      "term": "호스팅",
+      "slug": "hosting",
+      "group": "web",
+      "definition": "웹사이트 파일을 서버에 두고 인터넷 요청에 따라 제공하는 서비스다.",
+      "plain": "정적 웹 호스팅은 준비된 HTML·CSS·이미지 파일을 제공한다.",
+      "steps": [
+        "06-pages"
+      ],
+      "commands": [],
+      "tags": [
+        "호스팅",
+        "배포"
       ]
     },
     {
@@ -706,7 +743,8 @@
       "remote-repository"
     ],
     "06-pages": [
-      "github-pages"
+      "github-pages",
+      "static-web"
     ],
     "07-markdown-mermaid": [
       "markdown"

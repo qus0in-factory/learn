@@ -10,10 +10,9 @@ schedule: "09:00–09:45 (수업 45분) / 09:45–10:00 (휴식 15분)"
 ## 학습 목표
 
 - 프로젝트를 소개하는 `README.md`를 [Markdown](glossary.md#markdown)으로 작성할 수 있다.
-- Mermaid 코드 블록으로 Git 흐름을 그림으로 나타낼 수 있다.
+- Mermaid로 Git 흐름을 그림으로 나타낼 수 있다.
 - VS Code 미리보기에서 렌더링 결과를 확인할 수 있다.
 - 변경을 커밋하고 원격 저장소에 반영할 수 있다.
-- Bulma, 눈누, Coolors를 선택 참고 도구로 알아 둘 수 있다.
 
 ## 왜 필요한가
 
@@ -22,11 +21,8 @@ schedule: "09:00–09:45 (수업 45분) / 09:45–10:00 (휴식 15분)"
 ## 핵심 개념
 
 - Markdown은 제목, 목록, 링크, 표, 코드 블록, 체크리스트를 표현한다.
-- Mermaid는 `` ```mermaid `` 코드 블록 안에 텍스트로 다이어그램을 작성한다.
-- `flowchart LR`은 왼쪽에서 오른쪽으로 흐르는 순서도를 만든다.
-- 노드는 `[이름]`, 화살표는 `-->`, 라벨은 `-->|텍스트|`로 쓴다.
-- VS Code 미리보기와 GitHub 렌더링 결과가 같아야 한다.
-- 세부 Markdown 문법은 [다이어그램 작성](appendix/04-mermaid.md) 부록을 참고한다.
+- Mermaid는 텍스트로 흐름을 표현해 문서와 함께 관리한다.
+- 편집기와 GitHub에서 다이어그램이 표시되는지 확인한다. [다이어그램 작성](appendix/04-mermaid.md)에서 도구와 원본을 살펴본다.
 
 ## 따라하기
 
@@ -86,6 +82,8 @@ flowchart LR
 
 ## Mermaid 코드
 
+[이 다이어그램의 GitHub 원본 보기](https://github.com/qus0in-factory/learn/blob/dev/docs/lecture/07-markdown-mermaid.md)
+
 ```mermaid
 flowchart LR
     WD[Working Directory] -->|git add| SA[Staging Area]
@@ -113,17 +111,18 @@ Mermaid 다이어그램에 pull 흐름 화살표 추가
 
 | 증상 | 원인 | 대응 |
 | --- | --- | --- |
-| Mermaid가 렌더링되지 않음 | 코드 블록 언어가 `mermaid`가 아님 | 첫 줄을 `` ```mermaid ``로 고친다 |
+| Mermaid가 렌더링되지 않음 | 사용하는 미리보기에서 지원하지 않거나 원본에 오류가 있음 | GitHub에서 확인하고 [공식 문서](https://mermaid.js.org/)를 참고한다 |
 | 표가 깨짐 | 파이프(`\|`) 개수 불일치 | 헤더와 구분선의 열 개수를 맞춘다 |
 | 링크가 열리지 않음 | GitHub Pages URL 오타 | `계정이름.github.io/portfolio-web/` 형식으로 다시 복사한다 |
-| push가 거절됨 | 원격에 없는 커밋이 있음 | `git pull origin main` 후 다시 push 한다 |
+| push가 거절됨 | 원격 이력이 로컬과 다름(로컬에 없는 원격 커밋이 있음) | 원격 이력을 먼저 확인하고 [STEP 05 초기 이력과 오류](05-remote.md#초기-이력과-오류)를 따른다. `git pull`은 원격 이력을 확인한 뒤 필요한 경우에만 실행한다 |
 
 ## 주의할 점
 
 - README에 비밀 값, 토큰, 비밀번호를 적지 않는다.
 - 공개 저장소이므로 배포 주소와 소개 문구만 노출한다.
-- Bulma, 눈누, Coolors는 선택 참고 도구이며 필수 설치 대상이 아니다. 폰트 라이선스는 [웹 디자인 보조 도구](appendix/03-web-tools.md) 부록을 참고한다.
 
-## 핵심 내용 퀴즈 <QuizHelp />
+## 복습 퀴즈 <QuizHelp />
 
-1. Markdown은 ::README, TIL, 회고, Issue 설명:: 등 문서를 작성하는 데 쓴다.
+1. Markdown은 ::기호::를 사용해 텍스트 서식을 표현한다.
+2. 제목은 줄 앞에 ::#:: 기호를 붙여 표현한다.
+3. 목록 항목은 줄 앞에 ::-:: 기호를 붙여 표현할 수 있다.

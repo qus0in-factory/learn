@@ -8,7 +8,7 @@ stepRefs: ["10-branches-tags", "11-merge-conflicts", "12-pull-request", "appendi
 
 ## 용도
 
-작업 브랜치를 바꾼다. `-c`를 붙이면 새 브랜치를 만들면서 바로 이동한다. 작업 공간의 파일은 이동한 브랜치의 마지막 커밋 상태로 바뀌므로, 브랜치마다 다른 작업을 섞이지 않게 나눌 수 있다. 과거의 `git checkout` 브랜치 전환 역할을 이어받은 명령이다.
+작업 브랜치를 바꾼다. `-c`를 붙이면 새 브랜치를 만들면서 바로 이동한다. 작업 공간의 파일은 이동한 브랜치의 커밋 상태로 바뀐다. `git checkout`도 현재 브랜치 전환과 파일 복원에 사용하며, `git restore`는 파일 복원과 stage 해제를 담당한다.
 
 ## 자주 쓰는 옵션
 
@@ -16,6 +16,7 @@ stepRefs: ["10-branches-tags", "11-merge-conflicts", "12-pull-request", "appendi
 | --- | --- | --- |
 | `이름` | 기존 브랜치로 이동 | 없는 이름이면 오류 |
 | `-c 이름` | 새 브랜치를 만들고 이동 | 현재 커밋에서 갈라진다 |
+| `--detach 해시` | 특정 커밋으로 이동 | 브랜치가 아닌 커밋을 직접 가리킨다 |
 
 ## 예시
 
@@ -26,6 +27,8 @@ git switch main
 ```
 
 첫 줄로 새 브랜치에서 작업을 시작하고, `git branch`로 `*`가 새 브랜치에 붙었는지 본 뒤, 마지막 줄로 `main`에 돌아온다.
+
+`git show 해시`는 이동 없이 커밋을 보여 준다. `git switch --detach 해시`로 이동하면 detached HEAD 상태가 된다. 여기서 만든 커밋을 보존하려면 이동 전에 `git switch -c 새브랜치`로 브랜치를 만들고, 돌아갈 때는 `git switch main`을 쓴다.
 
 ## 주의할 점
 

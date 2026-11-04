@@ -11,7 +11,7 @@ schedule: "10:00–10:45 (수업 45분) / 10:45–11:00 (휴식 15분)"
 
 - `git config`로 커밋에 기록될 작업자 이름과 이메일을 등록할 수 있다.
 - 실습 폴더를 만들고 `git init`으로 로컬 [저장소](glossary.md#repository)를 초기화할 수 있다.
-- OpenCode로 첫 포트폴리오 웹페이지(`index.html`, `style.css`)를 만들 수 있다.
+- OpenCode로 첫 포트폴리오 웹페이지를 만들 수 있다.
 - `git status`로 추적되지 않은 파일(Untracked)을 확인하고 `git add`로 스테이징 영역에 올릴 수 있다.
 - 빈 폴더를 추적하려고 `.gitkeep` 파일을 두는 관례를 설명할 수 있다.
 
@@ -47,19 +47,23 @@ stateDiagram-v2
    - `git add` 명령을 통해 다음 커밋 스냅샷에 포함하기로 확정해 둔 상태이다. `git status` 실행 시 초록색으로 표시된다.
 
 ### 빈 폴더와 `.gitkeep`
-Git은 파일의 내용을 추적하는 시스템이므로 빈 디렉터리(폴더) 자체는 커밋 대상으로 인식하지 않는다. 하지만 웹 프로젝트에서는 이미지(`images/`)나 폰트(`fonts/`)를 담을 빈 폴더 구조를 미리 만들어 두고 형상 관리에 포함해야 할 때가 많다. 이때 폴더 안에 빈 파일인 `.gitkeep`을 넣어 폴더가 Git에 추적되도록 만드는 것이 개발자들의 표준적인 관례이다.
+Git은 빈 폴더 자체를 추적하지 않는다. 폴더 안에 빈 `.gitkeep` 파일을 두면 파일과 함께 폴더가 기록된다. `.gitkeep`은 특별한 Git 기능이나 유일한 표준이 아닌 이름 관례다. `.gitignore` 파일을 두는 방법도 있지만, 이 파일의 내용은 무시할 파일을 정하므로 규칙에 따라 다른 파일이 추적되지 않을 수 있다.
 
 ## 예시 산출물
 
-각자 OpenCode에 요청해 첫 웹페이지(`index.html`·`style.css`)를 만든다. 예시 코드는 만들어진 결과물의 한 예일 뿐이며 그대로 복사할 필요는 없다.
+각자 OpenCode에 요청해 첫 웹페이지(`index.html`)를 만든다. 요청은 간결하게, 필요한 내용만 적고 변경 범위를 제한한다. 첫 단계에서는 HTML5만 사용하고 CSS·JavaScript와 외부 라이브러리는 제외한다. 이후 CSS 실습에서 스타일을 추가한다.
+
+### 미리보기 준비
+
+VS Code 확장 메뉴에서 Live Server를 검색해 설치하고, 파일을 만든 뒤 `index.html`을 열어 `Open with Live Server`로 미리 본다. 기본 포트는 5500이며 이미 사용 중이면 설정에서 다른 포트를 지정한다. 파일은 확장 없이도 만들고 브라우저에서 열 수 있다. 대안으로 Python이 설치되어 있다면 작업 폴더에서 `python -m http.server 8000`을 실행해 `http://localhost:8000`으로 접속하거나, Node.js 환경에서는 [http-server](https://github.com/http-party/http-server)를 사용할 수 있다. 서버는 `Ctrl+C`로 중단한다.
 
 ### OpenCode 요청
 
 OpenCode에 아래 요청문을 입력한다. 오른쪽 위의 복사 버튼으로 복사할 수 있다.
 
 ```text
-현재 폴더에 자기소개용 index.html과 style.css 생성.
-제목·소개 문단 포함, 간단한 가운데 정렬 스타일.
+현재 폴더에 index.html만 생성.
+HTML5로 한글 제목과 자기소개 문단을 작성하고 CSS, JavaScript, 외부 라이브러리는 사용하지 않기.
 ```
 
 ### 생성 결과 확인
@@ -81,7 +85,6 @@ OpenCode에 아래 요청문을 입력한다. 오른쪽 위의 복사 버튼으�
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>나의 포트폴리오</title>
-  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main>
@@ -90,37 +93,6 @@ OpenCode에 아래 요청문을 입력한다. 오른쪽 위의 복사 버튼으�
   </main>
 </body>
 </html>
-```
-
-`style.css` 예시:
-
-```css
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  margin: 0;
-  padding: 2rem;
-  background-color: #f7f9fa;
-  color: #333333;
-}
-
-main {
-  max-width: 680px;
-  margin: 2rem auto;
-  background: #ffffff;
-  padding: 2.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-h1 {
-  color: #1a73e8;
-  font-size: 1.75rem;
-  margin-top: 0;
-}
-
-p {
-  line-height: 1.6;
-}
 ```
 
 :::
@@ -139,10 +111,10 @@ Git 명령은 로컬에서 실행되지만, STEP 05부터 쓰는 원격 저장�
 1. GitHub 가입 이메일(또는 `noreply` 이메일)로 작업자 이름과 이메일을 전역(`--global`)으로 설정하고, `git config --global --list`로 확인한다.
 2. 실습 전용 폴더(예: `portfolio-web`)를 생성하고 해당 디렉터리로 이동한다. 폴더 이름은 각자 정해도 되며, 이후 예시는 `portfolio-web`을 쓴다.
 3. `git init`을 실행하여 저장소를 초기화한다.
-4. 예시 산출물의 요청문으로 OpenCode에 첫 웹페이지 생성을 요청해 `index.html`과 `style.css`를 만들고 저장한다. 이후 단계는 각자 만든 파일을 기준으로 진행한다.
+4. 예시 산출물의 요청문으로 OpenCode에 첫 웹페이지 생성을 요청해 `index.html`을 만들고 저장한다. 이후 단계는 각자 만든 파일을 기준으로 진행한다.
 5. 이미지 폴더를 만들고 빈 폴더 추적용 `.gitkeep` 파일을 만든다: `mkdir -p images && touch images/.gitkeep`.
-6. `git status`를 실행하여 3개의 파일이 빨간색 Untracked 상태로 표시되는지 확인한다.
-7. `git add index.html style.css images/.gitkeep`을 입력해 스테이징 영역에 파일을 올린다.
+6. `git status`를 실행하여 생성한 파일이 Untracked 상태로 표시되는지 확인한다. 폴더가 묶여 표시될 수도 있다.
+7. `git add index.html images/.gitkeep`을 입력해 스테이징 영역에 파일을 올린다.
 8. `git status`를 다시 실행하여 파일들이 초록색 `Changes to be committed:` 목록으로 올라갔는지 확인한다.
 
 ## Git 명령
@@ -180,7 +152,7 @@ touch images/.gitkeep
 git status
 
 # 6. 스테이징 영역에 파일 추가
-git add index.html style.css images/.gitkeep
+git add index.html images/.gitkeep
 
 # 7. 파일 상태 재확인 (Staged)
 git status
@@ -201,17 +173,15 @@ git add .
 ## 에이전트 요청 예시
 
 ```text
-초보자를 위한 1페이지 자기소개 HTML/CSS 생성
-파일명은 index.html과 style.css로 고정
-index.html 취미 또는 목표 문구 추가
+index.html의 자기소개에 한글 취미 문구 한 줄만 추가
 ```
 
 ## 체크리스트
 
 - [ ] `git config user.name`과 `git config user.email` 입력 시 등록한 정보가 출력된다.
 - [ ] `portfolio-web` 폴더 안에 숨김 폴더 `.git`이 생성되어 있다 (`ls -la`로 확인).
-- [ ] `git status` 결과에서 `index.html`, `style.css`, `images/.gitkeep`이 초록색 staged 상태로 표시된다.
-- [ ] `.gitkeep` 파일이 왜 필요한지 이유를 설명할 수 있다.
+- [ ] `git status` 결과에서 `index.html`, `images/.gitkeep`이 staged 상태로 표시된다.
+- [ ] 빈 폴더를 기록하는 파일 관례를 설명할 수 있다.
 
 ## 트러블 슈팅
 
@@ -228,7 +198,8 @@ index.html 취미 또는 목표 문구 추가
 - `.git` 폴더 안의 내부 파일들은 Git이 자체적으로 관리하므로 사용자가 직접 수정하거나 삭제하지 않는다.
 - 상세한 Git 명령 옵션 일람은 [명령과 옵션 일람](appendix/02-git-options.md) 부록을 참고한다.
 
-## 핵심 내용 퀴즈 <QuizHelp />
+## 복습 퀴즈 <QuizHelp />
 
 1. `git status`는 현재 변경 파일과 ::스테이징 상태::를 보여준다.
 2. `git add`를 실행하기 전 파일은 untracked 또는 modified이고, 실행한 뒤에는 ::staged::로 바뀐다.
+3. `git init`을 실행하면 저장소 이력이 저장될 숨김 폴더 ::.git::이 만들어진다.

@@ -35,6 +35,7 @@ tags: ["CLI", "GUI", "터미널", "셸", "커널", "Git Bash", "zsh"]
 - 셸은 명령을 해석해 해당 프로그램을 찾아 실행한다. 프로그램이 파일을 읽거나 쓰는 일은 셸이 직접 하지 않고 커널에 요청한다.
 - Windows에서는 Git을 설치할 때 함께 들어오는 Git Bash가 터미널과 Bash 셸 역할을 한다. 수업은 Git Bash를 기준으로 한다.
 - macOS의 기본 터미널은 zsh 셸을 쓴다. PowerShell과 CMD는 Bash와 다른 셸이므로 수업 명령을 그대로 실행한다고 가정하지 않는다.
+- [Tabby](https://tabby.sh/)는 Windows·macOS·Linux에서 사용할 수 있는 터미널 프로그램이다.
 
 ## Git 실행 흐름
 

@@ -10,16 +10,16 @@ schedule: "14:00–14:45 (수업 45분) / 14:45–15:00 (휴식 15분)"
 ## 학습 목표
 
 - GitHub 웹사이트에서 새 빈 [원격 저장소](glossary.md#remote-repository)를 만들 수 있다.
-- 로컬 저장소의 기본 브랜치 이름을 `main`으로 맞출 수 있다.
+- 로컬 저장소의 브랜치 이름을 확인하고 필요하면 `main`으로 맞출 수 있다.
 - `git remote add origin`으로 로컬 저장소와 GitHub 원격 저장소를 연결할 수 있다.
 - `git push -u origin main`으로 로컬 커밋을 처음으로 클라우드에 올릴 수 있다.
 - `clone`, `pull`, `fork`의 차이를 설명할 수 있다.
 
 ## 클라우드 협업이 필요한 이유
 
-지금까지 작성한 커밋과 코드는 로컬 저장소(`.git`)에만 저장되어 있었다. 만약 컴퓨터를 분실하거나 디스크가 고장 나면 그동안 작성한 작업물이 사라질 수 있다.
+지금까지 작성한 커밋과 코드는 로컬 저장소(`.git`)에만 저장되어 있었다. 만약 컴퓨터를 분실하거나 저장 장치에 문제가 생겨 복구하지 못하면 작업물을 잃을 수 있다.
 
-클라우드에서 Git 저장소를 호스팅해 주는 서비스가 **GitHub**이다. 쓰면 좋은 점은 세 가지다.
+호스팅은 서버에 저장소를 두고 네트워크로 접근할 수 있게 제공하는 것이다. Git 저장소를 호스팅하는 서비스가 **GitHub**이다. 쓰면 좋은 점은 세 가지다.
 
 1. 안전한 원격 백업: 어디서든 다른 PC에서 내 코드를 그대로 복원할 수 있다.
 2. 동료와의 협업: 하나의 저장소를 중심으로 여러 사람이 함께 코드를 수정하고 합친다.
@@ -40,7 +40,7 @@ flowchart LR
 2. **기본 브랜치 명칭 (`main` vs `master`)**
    - 과거에는 Git의 기본 브랜치 이름으로 `master`를 주로 사용했으나, 포용적 언어 문화의 확산에 따라 현재는 GitHub를 포함한 많은 서비스에서 `main`을 기본 명칭으로 사용한다.
 3. **업스트림 등록 (`push -u`)**
-   - 처음 푸시할 때 `-u` (또는 `--set-upstream`) 옵션을 주면, 현재 로컬 `main` 브랜치가 원격 저장소의 `origin/main` 브랜치를 바라보도록 연결 고리를 형성한다. 이후에는 단순히 `git push`나 `git pull`만 입력해도 자동으로 동기화된다.
+   - 업스트림은 로컬 브랜치가 기본으로 변경을 주고받는 원격 브랜치다. 처음 푸시할 때 `-u` (또는 `--set-upstream`) 옵션을 주면, 현재 로컬 `main` 브랜치가 원격 저장소의 `origin/main` 브랜치를 바라보도록 연결 고리를 형성한다. 이후에는 단순히 `git push`나 `git pull`만 입력해도 자동으로 동기화된다.
 4. **원격 코드 다루기: clone, pull, fork**
    - **`clone`**: 원격 저장소의 모든 커밋 이력과 코드를 로컬로 통째로 복제해 내려받는다.
    - **`pull`**: 원격 저장소에 새로 추가된 최신 커밋들을 내 로컬 브랜치로 가져와 병합한다.
@@ -83,8 +83,7 @@ flowchart TB
    - **중요 주의사항**: `Add a README file`, `Add .gitignore`, `Choose a license` 등 초기 파일 생성 체크박스를 <strong>모두 해제(체크 없음)</strong>한다. 이미 로컬에 파일이 있으므로 빈 저장소로 만들어야 한다.
    - `Create repository` 초록색 버튼 클릭.
 4. 생성된 페이지에서 HTTPS 주소를 확인하고 복사한다 (예: `https://github.com/본인계정/portfolio-web.git`).
-5. VS Code 터미널로 돌아와 기본 브랜치 이름을 `main`으로 지정한다:
-   `git branch -M main`
+5. VS Code 터미널에서 `git branch --show-current`로 브랜치 이름을 확인한다. 이름이 `main`이면 다음 단계로 넘어간다. `master` 등 다른 이름이면 `git branch -m main`으로 이름을 바꾼다. `-m`은 다른 브랜치가 `main`을 쓰고 있으면 거절하므로, 오류가 나면 `git branch`로 목록을 확인하고 강사에게 문의한다. 이 실습의 뒤 단계는 모두 `main`을 기준으로 한다.
 6. 로컬 저장소에 원격 주소를 등록한다:
    `git remote add origin https://github.com/본인계정/portfolio-web.git`
 7. 원격 주소가 제대로 등록되었는지 확인한다:
@@ -92,7 +91,7 @@ flowchart TB
 8. 로컬의 커밋들을 원격 저장소로 업로드한다:
    `git push -u origin main`
 9. 브라우저 로그인 승인 창이 뜨면 GitHub 로그인을 승인한다.
-10. GitHub 저장소 웹 페이지를 새로고침한다. 내 로컬에 있던 `index.html`, `style.css`, `.gitignore` 파일과 우리가 작성한 커밋 이력들이 화면에 나타나는 것을 확인한다.
+10. GitHub 저장소 웹 페이지를 새로고침한다. 내 로컬에 있던 `index.html`, `.gitignore` 파일과 우리가 작성한 커밋 이력들이 화면에 나타나는 것을 확인한다.
 
 ## Git 명령
 
@@ -105,8 +104,11 @@ flowchart TB
 명령어 참조: [git remote](commands/remote.md) · [git clone](commands/clone.md) · [git push](commands/push.md) · [git pull](commands/pull.md) · [git branch](commands/branch.md)
 
 ```bash
-# 1. 기본 브랜치 이름을 main으로 확실히 지정
-git branch -M main
+# 1. 현재 브랜치 이름 확인
+git branch --show-current
+
+# 1-1. 이름이 main이 아니면 main으로 정리 (-m은 다른 main 브랜치가 있으면 거절)
+git branch -m main
 
 # 2. GitHub 원격 저장소 연결 (본인의 계정명으로 입력)
 git remote add origin https://github.com/본인계정/portfolio-web.git
@@ -149,6 +151,22 @@ git clone https://github.com/본인계정/portfolio-web.git portfolio-web-backup
 cd portfolio-web
 ```
 
+### 초기 이력과 오류
+
+GitHub에서 README, LICENSE 또는 .gitignore를 생성하면 원격에 별도 첫 커밋이 생겨 로컬 첫 push가 거절될 수 있다. 기존 파일과 커밋은 보존한다. 원격 저장소를 별도 폴더에 clone한 뒤 로컬 작업 파일을 복사하고 변경을 확인해 커밋하는 방법이 있다. 양쪽 커밋 이력을 모두 유지하려면 이후 [브랜치와 병합](11-merge-conflicts.md)을 배운 뒤 이력을 확인하고 통합한다. 불확실하면 강사에게 문의한다.
+
+`src refspec main does not match any`는 첫 커밋이 없거나 현재 로컬 브랜치 이름이 `main`이 아닐 때 생길 수 있다. 다음 명령으로 상태를 확인한다.
+
+```bash
+git status
+git log --oneline
+git branch --show-current
+```
+
+커밋이 없다면 필요한 파일을 추가하고 첫 커밋을 만든다. 브랜치 이름이 다르면 확인한 이름으로 `git push -u origin 브랜치이름`을 사용하거나 이름을 바꿀 필요가 있는지 먼저 판단한다. 이 실습은 따라하기 5번에서 `git branch -m main`으로 이름을 맞춘 뒤 `main`으로 push한다. `-m`은 다른 브랜치가 같은 이름을 쓰고 있으면 거절한다. `git branch -M main`은 같은 이름이 있어도 강제로 바꾸므로, 기존 `main`을 덮어써도 되는지 확인한 뒤에만 사용한다. 두 명령 모두 커밋 내용이나 원격 브랜치는 바꾸지 않는다. 자세한 내용은 [git branch](commands/branch.md)를 참고한다.
+
+빈 GitHub 저장소의 연결과 push는 파일을 원격에 올리는 단계다. 웹 공개는 다음 장의 Pages 설정에서 따로 진행한다.
+
 ## 에이전트 요청 예시
 
 ```text
@@ -159,6 +177,7 @@ clone과 fork 차이 초보자 눈높이 비교 설명
 ## 체크리스트
 
 - [ ] `git remote -v` 실행 시 `origin` 이름으로 fetch, push 두 줄의 올바른 GitHub URL이 표시된다.
+- [ ] 브랜치 이름을 확인했고, `main`이 아니었다면 `git branch -m main`으로 정리했다.
 - [ ] `git push -u origin main`이 에러 없이 정상 완료된다.
 - [ ] 브라우저에서 GitHub 저장소 페이지를 새로고침했을 때 내 파일들과 커밋 목록이 보인다.
 - [ ] `git status` 실행 시 `Your branch is up to date with 'origin/main'` 메시지가 나타난다.
@@ -168,16 +187,17 @@ clone과 fork 차이 초보자 눈높이 비교 설명
 | 증상 | 원인 | 대응 |
 | --- | --- | --- |
 | `fatal: remote origin already exists` | 이미 `origin`이라는 이름으로 주소가 등록됨 | `git remote -v`로 확인하고, 주소가 틀렸다면 `git remote set-url origin 올바른주소`로 바꾼다. 다른 실수는 [원격 등록 실수 대응](#원격-등록-실수-대응)을 참고한다. |
-| `error: failed to push some refs ... (non-fast-forward)` | GitHub에서 빈 저장소를 만들지 않고 README 등을 함께 생성함 | GitHub 저장소를 삭제 후 체크박스를 모두 풀고 빈 저장소로 다시 만들거나 강사에게 문의한다. |
+| `error: failed to push some refs` (원격에 없는 이력) | 원격 초기화로 README, LICENSE 또는 .gitignore 커밋이 생김 | 원격 이력을 확인하고 아래 안내를 따른다. 강제 push나 삭제로 해결하지 않는다. |
 | 인증 실패 또는 403 Forbidden 오류 | 이전 다른 계정의 로그인 정보가 남아 있거나 로그인이 만료됨 | Windows 자격 증명 관리자에서 이전 계정을 삭제하고 재인증한다. 상세 절차는 [자격 증명 재인증](appendix/01-authentication.md)과 [운영체제별 차이](appendix/05-os-differences.md) 부록을 참고한다. |
 
 ## 주의할 점
 
 - 비밀번호나 로그인 토큰을 소스 코드 파일, 공개 채팅, 이슈에 남기지 않는다.
-- 원격 저장소의 이력을 강제로 덮어쓰는 `git push --force` (또는 `-f`) 명령은 팀원의 작업을 덮어쓸 수 있으므로 절대 실행하지 않는다.
+- 강제 push는 원격 이력을 덮어쓸 수 있다. 차이는 [git push](commands/push.md)를 참고하고 이 실습에서는 사용하지 않는다.
 - 상세한 인증 문제 해결은 [자격 증명 재인증](appendix/01-authentication.md) 부록을 참고한다.
 
-## 핵심 내용 퀴즈 <QuizHelp />
+## 복습 퀴즈 <QuizHelp />
 
 1. commit은 ::로컬 기록::이고 push는 ::원격 공유::이다.
 2. Git은 ::로컬 버전 관리::이고 GitHub는 ::원격 저장소와 협업 서비스::이다.
+3. `git push -u origin main`에서 `-u`는 로컬 `main`과 원격 ::origin/main::을 기본 연결로 등록한다.

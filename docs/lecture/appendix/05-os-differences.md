@@ -34,6 +34,10 @@ tags: ["macOS", "Windows", "경로", "자격 증명"]
 - 잘못된 계정으로 인증된 경우 해당 GitHub 항목만 삭제하고 재인증한다. 무관한 자격 증명을 일괄 삭제하지 않는다.
 - `gh`는 macOS에서 Homebrew 또는 공식 `.pkg` 파일로, Windows에서 공식 MSI 파일로 설치한다. 로그인 절차는 [STEP 05](../05-remote.md)의 인증 준비를 참고한다. 수업 직전 지원 버전을 확인한다.
 
+### Git Bash 복사·붙여넣기
+
+Git Bash의 창 종류와 버전, 설정에 따라 단축키와 우클릭 동작이 다르다. Mintty 창에서는 글자를 선택한 뒤 `Ctrl+Insert`로 복사하고 `Shift+Insert`로 붙여 넣을 수 있다. 우클릭 메뉴의 Copy·Paste를 쓰거나 Options의 Mouse에서 우클릭 동작을 확인한다. Options의 Keys에서 Ctrl+Shift 단축키를 켰다면 `Ctrl+Shift+C`와 `Ctrl+Shift+V`도 쓸 수 있다. 일반적으로 `Ctrl+C`는 실행 중인 명령을 중단하며, 복사로 재설정한 경우 동작이 달라진다. VS Code 통합 터미널은 해당 터미널의 단축키 설정을 확인한다. 자세한 내용은 [Mintty 설명서](https://mintty.github.io/mintty.1.html)를 참고한다.
+
 ## 따라하기
 
 1. 자신의 OS를 먼저 확인한다.

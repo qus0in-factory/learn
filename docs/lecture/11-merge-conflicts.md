@@ -9,7 +9,7 @@ schedule: "14:00–14:45 (수업 45분) / 14:45–15:00 (휴식 15분)"
 
 ## 학습 목표
 
-- Fast-forward [병합](glossary.md#merge)과 3-way 병합의 차이를 설명할 수 있다.
+- [Fast-forward](glossary.md#fast-forward) [병합](glossary.md#merge)과 3-way 병합의 차이를 설명할 수 있다.
 - 의도적으로 [충돌](glossary.md#conflict)을 만들고 직접 해결할 수 있다.
 - 충돌 마커의 의미를 읽을 수 있다.
 - `git merge --abort`로 병합을 취소할 수 있다.
@@ -72,11 +72,13 @@ flowchart TB
 4. `main`으로 복귀한다.
 5. `git merge feature/profile-design`을 실행한다.
 6. 터미널의 `CONFLICT` 경고를 확인한다.
-7. VS Code 또는 직접 편집으로 충돌 마커를 제거하고 원하는 코드로 정리한다.
-8. `git add index.html`로 해결을 stage 한다.
-9. `git commit`으로 병합을 완료한다.
-10. `git log --graph --oneline --all`로 갈라졌다가 합쳐진 흐름을 확인한다.
-11. 병합이 완료된 뒤 `git branch -d feature/profile-design`으로 브랜치를 정리한다.
+7. `git status`로 충돌 파일을 확인하고 양쪽 변경의 의도를 읽는다.
+8. 관련 범위만 편집해 두 의도에 맞게 정리하고 충돌 마커를 제거한다.
+9. `git diff`와 실행 또는 관련 검사로 결과를 확인한다.
+10. `git add index.html`로 해결을 stage 한다.
+11. `git commit`으로 병합을 완료한다.
+12. `git log --graph --oneline --all`로 갈라졌다가 합쳐진 흐름을 확인한다.
+13. 병합이 완료된 뒤 `git branch -d feature/profile-design`으로 브랜치를 정리한다.
 
 편집기에서 병합 메시지를 작성할 때는 [vi 편집기](appendix/08-vi-editor.md) 부록을 참고한다.
 
@@ -112,8 +114,9 @@ git merge --abort
 ## 에이전트 요청 예시
 
 ```text
-충돌 양쪽 문장 통합 문장 제안, 파일 수정 금지
-log graph에서 Fast-forward 가능 이유 설명
+충돌한 양쪽 변경의 의도를 설명하고 관련 범위만 수정하는 해결안을 제안해 줘.
+변경 이유와 검증 방법을 설명하고 승인 전 수정하지 마. diff와 실행 결과로 검증해 줘.
+비밀정보를 입력하지 않고, 무조건 한쪽을 선택하거나 강제 push로 우회하지 마.
 ```
 
 ## 체크리스트
@@ -137,8 +140,11 @@ log graph에서 Fast-forward 가능 이유 설명
 
 - 충돌 파일을 저장하기 전에 강사와 확인한다.
 - `reset --hard`로 충돌을 해결하지 않는다.
+- AI에 비밀정보를 넣지 않고, 양쪽 의도 확인 없이 한쪽을 선택하거나 강제 push로 충돌을 우회하지 않는다.
 - `merge --abort`는 병합 중일 때만 사용한다.
 
-## 핵심 내용 퀴즈 <QuizHelp />
+## 복습 퀴즈 <QuizHelp />
 
-1. 충돌은 ::같은 파일의 같은 줄::을 다르게 수정했을 때 생긴다.
+1. 충돌은 두 브랜치가 같은 파일의 겹치는 부분을 다르게 고쳐 자동으로 합칠 수 없는 ::상태::다.
+2. 기준 브랜치에 새 커밋이 없어 포인터만 앞으로 옮기는 병합은 ::Fast-forward::다.
+3. 진행 중인 병합을 취소하는 명령은 `git merge ::--abort::`다.

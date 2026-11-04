@@ -11,7 +11,7 @@ schedule: "13:00–13:45 (수업 45분) / 13:45–14:00 (휴식 15분)"
 
 - [브랜치](glossary.md#branch)로 작업을 나눠 메인 코드를 보호할 수 있다.
 - `git switch -c`로 브랜치를 만들고 전환할 수 있다.
-- `checkout`이 과거에 브랜치 전환에 쓰이던 명령임을 설명할 수 있다.
+- `checkout`, `switch`, `restore`의 역할을 구분할 수 있다.
 - [태그](glossary.md#tag)로 릴리스 지점을 기록할 수 있다.
 - 브랜치를 전환하면 파일 내용이 바뀌는 것을 직접 확인할 수 있다.
 
@@ -26,7 +26,7 @@ schedule: "13:00–13:45 (수업 45분) / 13:45–14:00 (휴식 15분)"
 - **브랜치**는 작업 흐름을 나누는 독립된 가지다.
 - `git switch -c`는 새 브랜치를 만들면서 동시에 그 브랜치로 이동한다.
 - `git switch`는 기존 브랜치로 옮겨 갈 때 쓴다.
-- `git checkout`은 과거 Git에서 브랜치 전환에 쓰이던 구 명령어다. 새 코드에서는 `switch`를 우선 사용한다.
+- `git checkout`은 현재도 브랜치 전환과 파일 복원 등에 사용한다. `switch`는 전환, `restore`는 파일 복원과 stage 해제에 역할을 나눈다.
 - **태그**는 특정 커밋에 이름을 붙인 릴리스 지점이다.
 - **경량 태그**는 `git tag v0.1.0`처럼 단순히 이름만 붙인다.
 - **주석 태그**는 `git tag -a v0.2.0 -m "Release v0.2.0"`처럼 작성자와 설명을 포함한다.
@@ -85,6 +85,8 @@ git checkout feature/profile-design
 git tag -a v0.2.0 -m "Release v0.2.0"
 ```
 
+커밋 내용을 보기만 할 때는 `git show <해시>`를 쓴다. 특정 커밋으로 이동하려면 `git switch --detach <해시>` 또는 `git checkout <해시>`를 쓴다. 이때 HEAD가 브랜치가 아닌 커밋을 직접 가리키는 detached HEAD 상태가 된다. 이 상태에서 만든 커밋을 보존하려면 이동 전에 `git switch -c 새브랜치`로 브랜치를 만든다. 기존 브랜치로 돌아갈 때는 `git switch main`을 사용한다. 이동 전 변경 사항을 확인한다.
+
 병합 전에는 `git branch -d feature/profile-design`이 `not fully merged`로 실패한다. 브랜치 삭제는 STEP 11 병합 뒤에 수행한다.
 
 ## 에이전트 요청 예시
@@ -116,6 +118,8 @@ git tag -a v0.2.0 -m "Release v0.2.0"
 - 미커밋 변경이 있는 상태에서 브랜치를 전환하지 않는다.
 - 태그는 릴리스 지점에만 붙인다.
 
-## 핵심 내용 퀴즈 <QuizHelp />
+## 복습 퀴즈 <QuizHelp />
 
 1. 브랜치는 ::작업 흐름::을, tag는 ::릴리스 지점::을 나타낸다.
+2. `git switch -c feature/name`은 새 브랜치를 만들고 그 브랜치로 ::이동::한다.
+3. `git tag v1.0.0`은 현재 커밋에 ::이름표::를 붙인다.
