@@ -1,6 +1,6 @@
 # PDF 배포 가드와 원격 readback
 
-현재 PDF 12개는 revision `0444320a59711d0568077bd9e8ac85daef2d2cda`의 소스 해시 스냅샷으로 고정되어 있으며, live 강의 수정과 분리하고 재생성·revision 갱신을 차단한다. 고정 해제는 #33에서 별도 승인 후 처리한다.
+현재 PDF 12개는 revision `992baeb3737fad565f42860e75bbc5c502eadfb4`의 소스 해시 스냅샷으로 고정되어 있으며, live 강의 수정과 분리하고 재생성·revision 갱신을 차단한다. 고정 해제는 #33에서 별도 승인 후 처리한다.
 
 ## 준비
 
