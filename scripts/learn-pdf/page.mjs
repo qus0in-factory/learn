@@ -4,7 +4,7 @@ import { fonts } from './fonts.mjs';
 export async function createPage(browser, bundle, title) {
   const page = await browser.newPage({ viewport: { width: 1280, height: 720 } });
   await fonts(page);
-  for (const file of ['style.css', 'theme.css', 'images.css']) {
+  for (const file of ['style.css', 'theme.css', 'images.css', 'references.css']) {
     await page.addStyleTag({ path: resolve(here, file) });
   }
   await page.addScriptTag({ path: bundle });

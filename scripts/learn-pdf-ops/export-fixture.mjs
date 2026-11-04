@@ -8,7 +8,7 @@ export async function createPage(browser, bundle, title) {
   calls.push({ event: 'create', browser, bundle, title });
   return page;
 }
-export const lesson = async () => '<h1>Fixture</h1>';
+export const summary = () => '<h1>Fixture</h1>';
 export const inspect = async () => ({ maxCodeLines: 1 });
 export async function auditFonts(actual) {
   if (actual !== page) throw Error('Wrong page audited');

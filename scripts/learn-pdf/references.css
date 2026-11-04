@@ -1,0 +1,10 @@
+.slide[data-reference] { padding-bottom: 100px; }
+.section-reference {
+  position: absolute;
+  left: 64px;
+  right: 64px;
+  bottom: 44px;
+  font-size: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+}
