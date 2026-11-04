@@ -78,6 +78,8 @@ flowchart TB
 10. `git log --graph --oneline --all`로 갈라졌다가 합쳐진 흐름을 확인한다.
 11. 병합이 완료된 뒤 `git branch -d feature/profile-design`으로 브랜치를 정리한다.
 
+편집기에서 병합 메시지를 작성할 때는 [vi 편집기](appendix/08-vi-editor.md) 부록을 참고한다.
+
 ## Git 명령
 
 명령 이름이 어떤 뜻인지 알면 외우기 쉽다.
