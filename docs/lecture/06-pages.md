@@ -26,7 +26,7 @@ schedule: "15:00–15:45 (수업 45분) / 15:45–16:00 (휴식 15분)"
 
 ## 호스팅 원리와 자동 재배포
 
-GitHub Pages는 다음과 같은 자동화 흐름으로 동작한다:
+GitHub Pages는 `push` 한 번으로 사이트가 자동으로 갱신되도록 동작한다.
 
 ```mermaid
 flowchart TB
@@ -41,7 +41,7 @@ flowchart TB
    - 기본적으로 `https://<GitHub계정명>.github.io/<저장소이름>/` 형식의 고유 주소가 생성된다.
    - 본 실습의 주소는 `https://<GitHub계정명>.github.io/<저장소이름>/` 형태가 된다. 예시 저장소 이름은 `portfolio-web`이다.
 3. **자동 재배포 주기**
-   - 로컬에서 코드를 고친 뒤 `push`하면, GitHub 내부의 배포 자동화 로봇(GitHub Actions)이 동작하여 약 1~2분 안에 실제 사이트에 반영한다.
+   - 로컬에서 코드를 고친 뒤 `push`하면, GitHub의 자동화 기능(GitHub Actions)이 작동해 약 1~2분 안에 실제 사이트에 반영한다.
 
 ### 배포 시간 순서
 
