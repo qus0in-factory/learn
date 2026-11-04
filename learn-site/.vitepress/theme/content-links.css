@@ -1,0 +1,23 @@
+:root {
+  --content-link-underline-opacity: 35%;
+  --content-link-underline-active-opacity: 100%;
+  --content-link-underline-thickness: 1px;
+  --content-link-underline-offset: 0.18em;
+  --content-word-break: keep-all;
+  --content-overflow-wrap: anywhere;
+}
+
+body {
+  word-break: var(--content-word-break);
+  overflow-wrap: var(--content-overflow-wrap);
+}
+
+.vp-doc a {
+  text-decoration-color: color-mix(in srgb, currentColor var(--content-link-underline-opacity), transparent);
+  text-decoration-thickness: var(--content-link-underline-thickness);
+  text-underline-offset: var(--content-link-underline-offset);
+}
+
+.vp-doc a:is(:hover, :focus) {
+  text-decoration-color: color-mix(in srgb, currentColor var(--content-link-underline-active-opacity), transparent);
+}

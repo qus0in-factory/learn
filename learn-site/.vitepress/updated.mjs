@@ -1,6 +1,6 @@
 import { execFileSync } from 'node:child_process'
 
-export function courseUpdated() {
+export function courseUpdated(path = 'docs/lecture') {
   const root = new URL('../../', import.meta.url)
   const git = (args) => execFileSync('git', args, { cwd: root, encoding: 'utf8' }).trim()
   if (git(['rev-parse', '--is-shallow-repository']) === 'true') {
@@ -9,7 +9,7 @@ export function courseUpdated() {
     })
   }
   const date = git([
-    'log', '-1', '--format=%cs', '--', 'docs/lecture',
+    'log', '-1', '--format=%cs', '--', path,
   ])
   if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) throw new Error('Missing course source commit')
   return date.slice(2)

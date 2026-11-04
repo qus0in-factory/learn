@@ -1,0 +1,12 @@
+{
+  "source": "assets/illustrations/journey/source.png",
+  "stem": "illust-journey",
+  "widths": [
+    600,
+    1000
+  ],
+  "intrinsic": {
+    "width": 1376,
+    "height": 768
+  }
+}

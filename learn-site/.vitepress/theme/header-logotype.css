@@ -1,0 +1,27 @@
+/* Header logotype: outline of the site name drawn in currentColor; the text stays in the DOM for assistive tech. */
+:root {
+  --header-logotype-height: 23.4px;
+}
+
+.VPNavBarTitle .title {
+  position: relative;
+}
+
+.VPNavBarTitle .title > span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.VPNavBarTitle .title::after {
+  content: '';
+  flex: none;
+  height: var(--header-logotype-height);
+  aspect-ratio: 775 / 186;
+  background: currentColor;
+  -webkit-mask: url('./icons/logotype.svg') center / contain no-repeat;
+  mask: url('./icons/logotype.svg') center / contain no-repeat;
+}

@@ -1,0 +1,25 @@
+:root {
+  --nav-icon-size: 16px;
+  --nav-icon-gap: 8px;
+}
+
+.VPSidebarItem .link .text {
+  display: flex;
+  align-items: center;
+  gap: var(--nav-icon-gap);
+}
+
+.VPSidebarItem .link .text::before {
+  content: '';
+  display: var(--nav-icon-display, none);
+  flex: none;
+  width: var(--nav-icon-size);
+  height: var(--nav-icon-size);
+  background: currentColor;
+  -webkit-mask: var(--nav-icon-image) center / contain no-repeat;
+  mask: var(--nav-icon-image) center / contain no-repeat;
+}
+
+.home-no-search .VPNavBarSearch {
+  display: none;
+}

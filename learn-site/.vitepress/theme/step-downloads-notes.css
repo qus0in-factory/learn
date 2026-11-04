@@ -1,0 +1,16 @@
+.step-downloads__notes {
+  margin-top: 14px;
+  padding-left: 12px;
+  border-left: 2px solid var(--vp-c-divider);
+  color: var(--vp-c-text-2);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.step-downloads__notes p {
+  margin: 0;
+}
+
+.step-downloads__notes p + p {
+  margin-top: 4px;
+}

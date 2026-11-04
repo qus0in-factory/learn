@@ -1,0 +1,7 @@
+Create a polished 16:9 Korean educational infographic for beginners, using a calm navy and light gray palette. Make the Korean text large, short, and clearly legible, with a clean visual hierarchy, simple icons, and clear arrows.
+
+Exactly six steps, spelled exactly as follows: 1 푸시 → 2 PR 생성 → 3 리뷰·수정 → 4 병합 → 5 로컬 동기화 → 6 브랜치 정리.
+
+Show review and revision before merge, local synchronization immediately after merge, and branch cleanup last. Use concise Korean action labels only.
+
+Do not include git commands, command options, code snippets, terminal windows, base/head labels, real branch names, Pages, explanatory paragraphs, logos, or watermarks.

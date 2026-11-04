@@ -1,0 +1,502 @@
+{
+  "sourceCommit": "1a56910e119ef5e6890378dccd089392b2ae7099",
+  "revision": "992baeb3737fad565f42860e75bbc5c502eadfb4",
+  "files": [
+    {
+      "path": "docs/lecture/01-environment.md",
+      "sha256": "d09ad7cf90ac44f370c6fb7055dbcb596107a90b19d89ab688bd0f2bff295e9b"
+    },
+    {
+      "path": "docs/lecture/02-local-repository.md",
+      "sha256": "da83bd16936da25a3a14d2edb5ab12c7074e09b4bda255e82203f2632bd8c714"
+    },
+    {
+      "path": "docs/lecture/03-commit-history.md",
+      "sha256": "45f0eda16207359fb6a7fa3a2682a1d9d3d10ce83cc567fced838bf76d418382"
+    },
+    {
+      "path": "docs/lecture/04-amend-ignore.md",
+      "sha256": "e4ef86f5b4ac14974f5ebbf74b0556f0ad32115f435112a3a374f13e5c451abc"
+    },
+    {
+      "path": "docs/lecture/05-remote.md",
+      "sha256": "efddff36a9423388fe6ff60393c975394d765a979f9d2d0b1a2db046aa8ce3d3"
+    },
+    {
+      "path": "docs/lecture/06-pages.md",
+      "sha256": "b83051dbf577110e658e3b4d79a37865e46eb44b6b8cb515c7d27e0bbbd47b61"
+    },
+    {
+      "path": "docs/lecture/07-markdown-mermaid.md",
+      "sha256": "926941e35f9a2bdb58bb295578ab30eb37168803ce5fd3c2d6c3b46df198f003"
+    },
+    {
+      "path": "docs/lecture/08-profile-records.md",
+      "sha256": "9ea79f102ed015baa135971e617ae3e73a9e69c4d676dc91831b425769677fa1"
+    },
+    {
+      "path": "docs/lecture/09-issues.md",
+      "sha256": "1d6955e620611f2745e4409b2927dd7ed51f097bbfed5e4647a7f5024089552b"
+    },
+    {
+      "path": "docs/lecture/10-branches-tags.md",
+      "sha256": "24772572eaf4370092dcf1bac16ebc43c079b25e2de083edc3448a4720fc1096"
+    },
+    {
+      "path": "docs/lecture/11-merge-conflicts.md",
+      "sha256": "c630b6379c8e52b49eb924a8c2277e2298582adc3cf50e5ad1b0d88d036aa0a5"
+    },
+    {
+      "path": "docs/lecture/12-pull-request.md",
+      "sha256": "4c9f5e011715ba23f41ee7615c667fb514d14cddd83d0a8483cc8a533063daec"
+    },
+    {
+      "path": "docs/lecture/appendix/00-installation.md",
+      "sha256": "7c1f5c58a29fb9b97405178ba49d3cc482ecf71b7765763cda839872276d237d"
+    },
+    {
+      "path": "docs/lecture/appendix/01-authentication.md",
+      "sha256": "d569cb2cbc322d7f98e32db850deb48cdfd5bcf5dc74bdf681e7edc135d6ae79"
+    },
+    {
+      "path": "docs/lecture/appendix/02-git-options.md",
+      "sha256": "bae78fde480c2dc2ab1830d97fd10a6057161a7798e16802fa87847b1411ec59"
+    },
+    {
+      "path": "docs/lecture/appendix/03-web-tools.md",
+      "sha256": "654600eebd6c6305e4f2b562ac0b013451170583ad1712768bca2b7635debb09"
+    },
+    {
+      "path": "docs/lecture/appendix/04-mermaid.md",
+      "sha256": "18ac37ce0abda666fa8479295c8cb3ba40e3541d0e5314febff78f6ad3ff16a3"
+    },
+    {
+      "path": "docs/lecture/appendix/05-os-differences.md",
+      "sha256": "e752a84287dc3a75d11cd45462270223739d9699f2acd8a1a50edca455fe8929"
+    },
+    {
+      "path": "docs/lecture/appendix/06-cli-terminal-shell.md",
+      "sha256": "6e47f011293d567f93b92d03563b9b2241b1aadbef38a4df230f91d217f7b994"
+    },
+    {
+      "path": "docs/lecture/appendix/07-git-scenarios.md",
+      "sha256": "35d9d2086cd7c08be8078d51c684b41f016cb19491be2e242b3cb4d386c01afb"
+    },
+    {
+      "path": "docs/lecture/catalog.md",
+      "sha256": "56a02eac537d49f04ab8ab289484cb3ec2211f59cd7f4819b109eb8309496a3c"
+    },
+    {
+      "path": "docs/lecture/commands/add.md",
+      "sha256": "165c77e3a8679bb214419e93928bd7041242b90d29f9eb4de6361b3a57bbe7ec"
+    },
+    {
+      "path": "docs/lecture/commands/branch.md",
+      "sha256": "266727d70a1a92eba241c17988cd195e0499405ba30eaf6b3942d445a104037d"
+    },
+    {
+      "path": "docs/lecture/commands/clone.md",
+      "sha256": "5b2faedca96a00e1fc1285375041f83ee5a191c8ef729f5a9abc6731d9436c5d"
+    },
+    {
+      "path": "docs/lecture/commands/commit.md",
+      "sha256": "3b17dc7aec012e8c99fc2b944b6a28222651271aabf0779f4893155e72aa8357"
+    },
+    {
+      "path": "docs/lecture/commands/config.md",
+      "sha256": "b86fcf9c5373ffd3d6fc8c213c0300362f3174c06a3a20f04d2f6dd84fd9458f"
+    },
+    {
+      "path": "docs/lecture/commands/diff.md",
+      "sha256": "06f176de69ebedc723703acb91028e2be9fb22fce102e7960d8d848411a8a2cb"
+    },
+    {
+      "path": "docs/lecture/commands/init.md",
+      "sha256": "5f868af235d773f38f618f85375d6d461ed2fb6134991aa6d24534dae019d4fb"
+    },
+    {
+      "path": "docs/lecture/commands/log.md",
+      "sha256": "f5e5ece5b697c2326a743a7c809834913597cf96ff37ff5d581cdf26f2f1ce55"
+    },
+    {
+      "path": "docs/lecture/commands/merge.md",
+      "sha256": "e8b9eab0bddf794199cee88f5bd88f8f099559dfa4a4d92bdc08b696469807bc"
+    },
+    {
+      "path": "docs/lecture/commands/pull.md",
+      "sha256": "761ef08e84a8eeebaf4b81768fa5a28bf5a5a0896208f1ce93ccf8f26a64054d"
+    },
+    {
+      "path": "docs/lecture/commands/push.md",
+      "sha256": "bdb4ce08819b630895823da8e7f694fb56c866c0993c63375e806337854d5eaf"
+    },
+    {
+      "path": "docs/lecture/commands/remote.md",
+      "sha256": "9daeff917c9bd8dee4d7fb9aca53d5e2fd8743d25ea966edd26c296d44901dc4"
+    },
+    {
+      "path": "docs/lecture/commands/reset.md",
+      "sha256": "2ab031173b37cbeaa4e73b737f53a03797ec7bacd8df2b0ef8fc97f3618ff14a"
+    },
+    {
+      "path": "docs/lecture/commands/restore.md",
+      "sha256": "20d3536b9a468e95a9274dca06956131737422b392ef4b538203ab012b1bd294"
+    },
+    {
+      "path": "docs/lecture/commands/revert.md",
+      "sha256": "5cd0252cc038ee7df37482af8f786c4868710ca2ea369918a6b895b92fab429b"
+    },
+    {
+      "path": "docs/lecture/commands/rm.md",
+      "sha256": "f85872ac76a57d4321728d1ed4cadbe2832a41d8cd00772773b84e8f73a2933c"
+    },
+    {
+      "path": "docs/lecture/commands/status.md",
+      "sha256": "b25c35d463c3c3baed2cf512e147d196e795231f6c56b44aedb3d3f474945a5e"
+    },
+    {
+      "path": "docs/lecture/commands/switch.md",
+      "sha256": "caa4b5021bdda5be0bca2c7d613c8770f2b00115135e719c22a30cd1f61342ba"
+    },
+    {
+      "path": "docs/lecture/commands/tag.md",
+      "sha256": "e8ef0f663ad4ec9b1986427c4ceef43f4c89dd88e103b503c92ba9d6988764bc"
+    },
+    {
+      "path": "docs/lecture/index.md",
+      "sha256": "e33db02c6a17644dc177cccb7d1cdd40ae97bc64d90e6ae3cda892d8a8a9edd0"
+    },
+    {
+      "path": "docs/lecture/tags.md",
+      "sha256": "787a1f15e15bfa20af07af15ef6323b3d491f090f7cbea0ae541b481fbe15015"
+    },
+    {
+      "path": "scripts/learn-pdf/.gitignore",
+      "sha256": "32dae3052f331ee34d628ef535709b301259a45df7c7522c4d35dcf49873f00b"
+    },
+    {
+      "path": "scripts/learn-pdf/artifact.mjs",
+      "sha256": "55eeab219b63b7085bdc86d829d2f9f79f803549bfda096f916aeb69ea0a9f41"
+    },
+    {
+      "path": "scripts/learn-pdf/artifact.test.mjs",
+      "sha256": "71008984c1fba3af93699ea8d6c4ce1f7faf981839ccef9e3f584f6680602ff6"
+    },
+    {
+      "path": "scripts/learn-pdf/audit.js",
+      "sha256": "0b86c58c96cd6c15b1b06c2432a0404d317676f9dc682d44004b460ee5ddbda9"
+    },
+    {
+      "path": "scripts/learn-pdf/bounds.py",
+      "sha256": "5f5a03c9e7072e8cb5669cb32b6a22e0327898695d7dc91dc2dfc6b22b09be34"
+    },
+    {
+      "path": "scripts/learn-pdf/browser.js",
+      "sha256": "62b2b72946c2ddf89fa8945d1646067aafe4cc03121ab1a47e7e928183878bff"
+    },
+    {
+      "path": "scripts/learn-pdf/build.mjs",
+      "sha256": "fad1ce3d28cafff38922ab8ec1c3b250872a3f7d9ada858eb76dfd7cbf78ff72"
+    },
+    {
+      "path": "scripts/learn-pdf/bundle.mjs",
+      "sha256": "ef76aa2438b7eced6dd3a31e5b10a6e62697f09c65d7c93e9a0e7fcdfaf35b91"
+    },
+    {
+      "path": "scripts/learn-pdf/capture.css",
+      "sha256": "ffec88f176326f64d8add5f383e9d4d21bf2f07c19b629bf3d0b144c8a684a8f"
+    },
+    {
+      "path": "scripts/learn-pdf/capture.mjs",
+      "sha256": "9c7c707ce47db10fef21e751d1254ff0c4805f69464151428d21e56ef0bfe819"
+    },
+    {
+      "path": "scripts/learn-pdf/ci.sh",
+      "sha256": "d3698e0c8852ab825e981e619339494c3710142be4f5577f0cc1c120ec114d3d"
+    },
+    {
+      "path": "scripts/learn-pdf/code.js",
+      "sha256": "05f00885740f679747a2dcb5da7a888b151174c93df37e4e251695739d46a02f"
+    },
+    {
+      "path": "scripts/learn-pdf/compact.js",
+      "sha256": "052f589fd134e4547df9aff14847912c8485ef54f07cba0d1342701db27980cc"
+    },
+    {
+      "path": "scripts/learn-pdf/content.js",
+      "sha256": "fb5c12fe45756761af242431e5937b209f440013b2e4f4630744fae144c994d6"
+    },
+    {
+      "path": "scripts/learn-pdf/demo-output.mjs",
+      "sha256": "5130b31a2342698260b1eed9ee6fbe8eb9bb5b0cb41da19cca2024587249a615"
+    },
+    {
+      "path": "scripts/learn-pdf/demo-steps.json",
+      "sha256": "27d1d9178a653f939d32ab3f8a14ef2e2201b5226b43c52b4f5e61b50bcc43a5"
+    },
+    {
+      "path": "scripts/learn-pdf/demo.mjs",
+      "sha256": "60205b69755a90ab5db6d5ebe10b1b563cfb9c9d99871d5f9ca88dba374be6b0"
+    },
+    {
+      "path": "scripts/learn-pdf/evidence.mjs",
+      "sha256": "ea8a10fcb2dde4ff93b209d577c31d75183cd972352ade46db4e9549aed88eb5"
+    },
+    {
+      "path": "scripts/learn-pdf/example-html.mjs",
+      "sha256": "e2045669eddd0ef3cffe7f73744155061815f4c877dce6b491a2e4e0ee447c01"
+    },
+    {
+      "path": "scripts/learn-pdf/example-names.mjs",
+      "sha256": "c5c126fa712cc79277f685124ad1698d74fed716ea180f91d92b8e6edcfb894f"
+    },
+    {
+      "path": "scripts/learn-pdf/examples.mjs",
+      "sha256": "80a8dc2563fb3b540ddd647b827e04d5e9350da74645db1bd8ff86f2b4f44450"
+    },
+    {
+      "path": "scripts/learn-pdf/export.mjs",
+      "sha256": "5262fb855a18e61c7a42b6628f6d8ba04bc1650be6f2584fea89342cbbb24920"
+    },
+    {
+      "path": "scripts/learn-pdf/font-audit.mjs",
+      "sha256": "8c21d80622045a664123c1eb5604e456aab2de46ee72edbef8928f0a834bbb14"
+    },
+    {
+      "path": "scripts/learn-pdf/font-test.mjs",
+      "sha256": "44c8a4ea1ea986d24f20613144a8f65cde7399d600207eb73be1e8ae208f504e"
+    },
+    {
+      "path": "scripts/learn-pdf/fonts/lock.json",
+      "sha256": "c36ece457192b72f42cfc2d7f8f234b42a68f0ab9cf9e9184a03f5beb74a14af"
+    },
+    {
+      "path": "scripts/learn-pdf/fonts/notosanskr-OFL.txt",
+      "sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9"
+    },
+    {
+      "path": "scripts/learn-pdf/fonts/NotoSansKR.ttf",
+      "sha256": "194018e6b2b293a7964f037b25c0249ce1418bc9ab3c971060a03aa57861e252"
+    },
+    {
+      "path": "scripts/learn-pdf/fonts/notosansmono-OFL.txt",
+      "sha256": "cee9892f9f0cc8fe882c9e9537ee6a89621d86ee7ceaf70b02e2b2b1c25c061a"
+    },
+    {
+      "path": "scripts/learn-pdf/fonts/NotoSansMono.ttf",
+      "sha256": "2cb2adb378a8f574213e23df697050b83c54c27df465a2015552740b2769a081"
+    },
+    {
+      "path": "scripts/learn-pdf/fonts.mjs",
+      "sha256": "81ab7b9f85b7a22c1426dbac99b1610805b6ed5225fe8f50b06eb4992f36fece"
+    },
+    {
+      "path": "scripts/learn-pdf/freeze-fixture.mjs",
+      "sha256": "20a0138d5e0ab419ffd6e207a2363596dc83d6b98d71d2aeaeda3eea53c940fa"
+    },
+    {
+      "path": "scripts/learn-pdf/freeze-state.mjs",
+      "sha256": "d9d2220dd80eb007ecd68e08e48b4abe4b6109a9aee3e9b4df338df4942c30ab"
+    },
+    {
+      "path": "scripts/learn-pdf/gist-publish.mjs",
+      "sha256": "eaacdf807e3efcac9f6e3b9011bdb954c18baf950544972fd4a31deac4331292"
+    },
+    {
+      "path": "scripts/learn-pdf/gist-store.mjs",
+      "sha256": "cc7c68d0d5575ff756ebb782d14b9892c6943b85184733b975969ed4835209c7"
+    },
+    {
+      "path": "scripts/learn-pdf/gists.json",
+      "sha256": "b1cd0f427cbaf3b8df9ecc8b46318dfa9c4f08c2ab6df013090b320549f7c015"
+    },
+    {
+      "path": "scripts/learn-pdf/illustrate.mjs",
+      "sha256": "d93cd20dee32b966cf294c5d4c41df68fc23617155ee8ac07317efd86e2a5e57"
+    },
+    {
+      "path": "scripts/learn-pdf/images.css",
+      "sha256": "04e69f0d00ca6f74c27061912fa176ebc14c72e3be8c40b7bdf0b73bb4d4cc3a"
+    },
+    {
+      "path": "scripts/learn-pdf/immutable-put.mjs",
+      "sha256": "5f1b207f5d978e5cec76fa1de6f5159d6b4e8aaa038b95acf0db8a4f1d12b49c"
+    },
+    {
+      "path": "scripts/learn-pdf/immutable.test.mjs",
+      "sha256": "7edfcc90293062bfe4373d15c1b2bca66c8d0bfdcd6b35da3b064d5175ea9865"
+    },
+    {
+      "path": "scripts/learn-pdf/inspect.mjs",
+      "sha256": "4dc272f33747262c7558d774ef25fa0fbd3e160d5e4707d19cd1efeaddda9d59"
+    },
+    {
+      "path": "scripts/learn-pdf/layout-test.mjs",
+      "sha256": "133027c1360d0d2ca2c7269aefb303f8ed49306a9e279e3fe303f8d41c89229f"
+    },
+    {
+      "path": "scripts/learn-pdf/lesson.mjs",
+      "sha256": "b5bf0d426328d073a0d42b46b3a737714cd454965c35c29263163c37e685b3f6"
+    },
+    {
+      "path": "scripts/learn-pdf/markdown-shared.mjs",
+      "sha256": "2f576a1e2260c2e6395de785a764e58c64b51def45e28a2f5a2125c01ecde806"
+    },
+    {
+      "path": "scripts/learn-pdf/markdown.mjs",
+      "sha256": "32e1b82f4598869d80eb830369e68925510f72f4f3713044b2ced15842faa166"
+    },
+    {
+      "path": "scripts/learn-pdf/move.js",
+      "sha256": "1f11644f8ab314f81867d89e7b2fc116d93e6729778bf332d6b582ed01353f9b"
+    },
+    {
+      "path": "scripts/learn-pdf/number.js",
+      "sha256": "ad6dbaff30a9874424ae54ab837cbed381c83a619b17d806736c434c8f42bf81"
+    },
+    {
+      "path": "scripts/learn-pdf/overflow-test.mjs",
+      "sha256": "a6b3dac0160934b5c64448b50fa74e6cae589a423d53fe769e0eab6b67c1aa9c"
+    },
+    {
+      "path": "scripts/learn-pdf/package-lock.json",
+      "sha256": "1b9eebea01477d3ee3115cb51161994026cf419087028e1c87f41c23b7b5022a"
+    },
+    {
+      "path": "scripts/learn-pdf/package.json",
+      "sha256": "614008d11db39b2dff5114a588b30a1166dead8be39d8c3689517d2b4a358b26"
+    },
+    {
+      "path": "scripts/learn-pdf/page.mjs",
+      "sha256": "720ed71ea73d9367b8c7b73aefe12a3e46e302db8c90b4745cc145b0d3edbed7"
+    },
+    {
+      "path": "scripts/learn-pdf/paginate.js",
+      "sha256": "2a77269c860dc02c7ef6499067e314ba41d64dffa41787995f2948c4ae758be2"
+    },
+    {
+      "path": "scripts/learn-pdf/paths.mjs",
+      "sha256": "d53fbfb76ff3a78f22c9d9494523a9af01cb74a1fe63195b67fb8dcb10243122"
+    },
+    {
+      "path": "scripts/learn-pdf/place.js",
+      "sha256": "b744ea5c096479632756ee49b11280e9f3a3b96fa370d88eef0faff55bf80295"
+    },
+    {
+      "path": "scripts/learn-pdf/pnpm-lock.yaml",
+      "sha256": "90f1c42b97c09a2802727e011be1320630c04d26b7efb50c3a43577006386901"
+    },
+    {
+      "path": "scripts/learn-pdf/provenance.mjs",
+      "sha256": "567c4abe35d2914327ca10848946df1320ab79e600c441d344b887eb2f1859dc"
+    },
+    {
+      "path": "scripts/learn-pdf/ready.js",
+      "sha256": "b4b954b02ecb17bd8bbb92462045ff0214510d9ec03ffc6f2ecae53725b89711"
+    },
+    {
+      "path": "scripts/learn-pdf/remote-demo.mjs",
+      "sha256": "48d5e862edf36b7837a50c266f7896b4210ff9a784604bfb2fb893bf8be7c3c9"
+    },
+    {
+      "path": "scripts/learn-pdf/repro.py",
+      "sha256": "a8958d70d19847cca5caa3732aa413eca13669d77bf2aad6ec45c5f76714c133"
+    },
+    {
+      "path": "scripts/learn-pdf/revision-check.mjs",
+      "sha256": "ede396175d8554c9e64a8aa35a4fe950de1da881a71ad34d3c88bddc586d2b6d"
+    },
+    {
+      "path": "scripts/learn-pdf/revision-fixture.mjs",
+      "sha256": "4a4804c484f400d8e6e2747cd2b7c800aff7a660037d63ce6f34fe9bb19ce9b7"
+    },
+    {
+      "path": "scripts/learn-pdf/revision-seed.mjs",
+      "sha256": "7995035fcda4a280e5cd773ba2b4cb7e6612dcdc7c449b36d01ce710ef07d291"
+    },
+    {
+      "path": "scripts/learn-pdf/revision-update.mjs",
+      "sha256": "5f7c485ac42365e90198c69c5e14ab6ddb726c939778ca83b9b59e8edec71bb8"
+    },
+    {
+      "path": "scripts/learn-pdf/revision-write.mjs",
+      "sha256": "64a52de2ebea2191e58fc35f019fa80f6b75252e49bf9b74e24e1cf24ff967fe"
+    },
+    {
+      "path": "scripts/learn-pdf/revision.test.mjs",
+      "sha256": "d0aab8acbcddcc9f7c00a545abf3a2099835f948fdb63e4e08dc4a229730ed75"
+    },
+    {
+      "path": "scripts/learn-pdf/runtime.mjs",
+      "sha256": "bd6adaf74fffd5785bcfc61cb84c56b1f8a28df22318a4f9085bff7c430945cd"
+    },
+    {
+      "path": "scripts/learn-pdf/samples.py",
+      "sha256": "a5552b7f78a340ede17359ed1e1bb29b1c7a9142d06cc52bfde4aa29bbf3f6ad"
+    },
+    {
+      "path": "scripts/learn-pdf/short-code.mjs",
+      "sha256": "334e7586546d68d88df36675a48eb89f8c0d0fbc545e70c798917ff18da881e8"
+    },
+    {
+      "path": "scripts/learn-pdf/site-links.json",
+      "sha256": "d074eb5b68e97fa645af0bca0d33b7b8155437cc7b00244f5e9c02d609070a5a"
+    },
+    {
+      "path": "scripts/learn-pdf/site-links.mjs",
+      "sha256": "595f1e3f59a16753ff66cea2a91d33c841f1b798e7ebc9a5e0e55d2691c33f4d"
+    },
+    {
+      "path": "scripts/learn-pdf/slide.js",
+      "sha256": "279d7dfed6d114611a442809122fbef178f37f6812d54a9ca240481598a9aacb"
+    },
+    {
+      "path": "scripts/learn-pdf/source-revision.mjs",
+      "sha256": "678e5f1e6ca8393b15c31f44856a231cc32231b71b5100380482729fe2f44eb4"
+    },
+    {
+      "path": "scripts/learn-pdf/source-snapshot.mjs",
+      "sha256": "a5ddc8917ef9f15c91a0df4a846dad7b3c9f1edbc5dcd4b2dd4c43d616c56c0f"
+    },
+    {
+      "path": "scripts/learn-pdf/source-text.mjs",
+      "sha256": "d4f79883e6fee97cd92dea93f1bddbd3ee420e9f50aa827ae7c458e17782b653"
+    },
+    {
+      "path": "scripts/learn-pdf/style.css",
+      "sha256": "487fe69b52d05ddf9041c92bea69e165a9e0f522c3b2def7dcada3dca1b45829"
+    },
+    {
+      "path": "scripts/learn-pdf/table-test.mjs",
+      "sha256": "ee5c0e15e3dbff482a93adf87a8c3a05777d5bb2e01f08b90157bc12b2634cef"
+    },
+    {
+      "path": "scripts/learn-pdf/test.mjs",
+      "sha256": "8ffb29ead64ac5b36d9da91efe94b655b599f2af0230d83c7384d1244a7b6bc4"
+    },
+    {
+      "path": "scripts/learn-pdf/theme.css",
+      "sha256": "fff258518ad4df8333ddcb4998c014eaecc7dc03e09deeff7ced0722954a6f1a"
+    },
+    {
+      "path": "scripts/learn-pdf/units.js",
+      "sha256": "eeb96b63f9364221245a298571defc293875b27f38e1e6501ed79a18ec0e5543"
+    },
+    {
+      "path": "scripts/learn-pdf/upload-files.mjs",
+      "sha256": "2661554611694f4df5ae22ec7361bca52db094c7ca8a9c4896c3d694095f64d5"
+    },
+    {
+      "path": "scripts/learn-pdf/usage.md",
+      "sha256": "1c817d73bbb0931579e3f63af73da773d9cc3fbc8d7ee66fd73dfb781c8b5d08"
+    },
+    {
+      "path": "scripts/learn-pdf/verify.py",
+      "sha256": "6dc86a2af94acab508b6f8d56af9a2820166df46e1eafaf06d9cc42a033dc2b8"
+    },
+    {
+      "path": "scripts/learn-pdf/web-preview.mjs",
+      "sha256": "3cd791eac4993a3eb967dfb0fa400c458b4f8125454d82b43f720639b2be33e5"
+    }
+  ]
+}

@@ -1,12 +1,29 @@
 import { sidebar } from './nav.mjs'
 import { site } from './site.mjs'
 import { pdfUrl, revision } from './pdf-url.mjs'
+import { labels } from './labels.mjs'
+import { courseLessons } from './course-data.mjs'
+import { courseContents } from './course-contents.mjs'
+import { tagGroups } from './tag-groups.mjs'
 
 export { revision }
 
 export const themeConfig = {
   logo: site.logo,
   nav: [],
+  courseLessons,
+  courseContents,
+  tagGroups,
+  outline: { label: labels.outline },
+  docFooter: { prev: labels.previous, next: labels.next },
+  sidebarMenuLabel: labels.menu,
+  returnToTopLabel: labels.top,
+  darkModeSwitchLabel: labels.appearance,
+  darkModeSwitchTitle: labels.dark,
+  lightModeSwitchTitle: labels.light,
+  lastUpdated: false,
+  skipToContentLabel: labels.skip,
+  langMenuLabel: labels.language,
   sidebar,
 }
 

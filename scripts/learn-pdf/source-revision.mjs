@@ -2,7 +2,10 @@ import { readdirSync, readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { resolve } from 'node:path';
 import { root } from './paths.mjs';
+import { frozenRevision } from './source-snapshot.mjs';
 export function sourceRevision() {
+  const frozen = frozenRevision();
+  if (frozen) return frozen;
   const hash = createHash('sha1');
   function walk(dir) {
     for (const entry of readdirSync(resolve(root, dir), { withFileTypes: true })

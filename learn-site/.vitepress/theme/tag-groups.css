@@ -1,0 +1,26 @@
+:root {
+  --tag-index-gap: 6px;
+  --tag-index-padding: 2px 10px;
+}
+
+.vp-doc .tag-index {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--tag-index-gap);
+  margin: 16px 0 24px;
+}
+
+.vp-doc .tag-index a {
+  padding: var(--tag-index-padding);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: var(--step-tag-radius, 999px);
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-text-2);
+  font-size: var(--step-tag-size, 13px);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.vp-doc .tag-group h2 {
+  margin-top: 32px;
+}

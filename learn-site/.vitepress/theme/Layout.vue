@@ -3,17 +3,27 @@ import DefaultTheme from 'vitepress/theme'
 import { useData } from 'vitepress'
 import SiteFooter from './SiteFooter.vue'
 import { site } from '../site.mjs'
+import CourseBreadcrumb from './CourseBreadcrumb.vue'
+import StepIntro from './StepIntro.vue'
+import PageUpdated from './PageUpdated.vue'
+import './task-list.css'
+import './header-logo.css'
+import './header-logotype.css'
+import AdSlot from './AdSlot.vue'
 
-const { frontmatter } = useData()
+const { frontmatter, page } = useData()
 </script>
 
 <template>
   <DefaultTheme.Layout :style="{ '--vp-nav-logo-height': site.logoHeight }">
+    <template #doc-after><AdSlot /></template>
     <template #layout-bottom><SiteFooter /></template>
+    <template #doc-footer-before>
+      <PageUpdated />
+    </template>
     <template #doc-before>
-      <p v-if="frontmatter.pdf" class="pdf-download">
-        <a :href="frontmatter.pdf">이 주제 PDF 다운로드</a>
-      </p>
+      <CourseBreadcrumb v-if="/^git\/(?:\d{2}-|appendix\/|commands\/|tags|glossary)/.test(page.relativePath)" />
+      <StepIntro v-if="frontmatter.stepHeader" :key="page.relativePath" />
     </template>
   </DefaultTheme.Layout>
 </template>

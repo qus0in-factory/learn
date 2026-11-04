@@ -1,16 +1,18 @@
-# 9차시. Issue, Label, Milestone
+---
+subtitle: "이슈로 작업을 나누고 추적한다."
+tags: ["Issue", "Label", "Milestone"]
+day: 2
+schedule: "11:00–11:45 (수업 45분) / 11:45–12:00 (휴식 15분)"
+---
 
-Day 2 · 11:00–11:45 (수업 45분) / 11:45–12:00 (휴식 15분)  
-저장소: `portfolio-web`  
-선수: 8차시 프로필과 기록
+# 이슈로 작업 관리
 
-## 이 차시에서 하는 일
+## 학습 목표
 
-- GitHub Issue로 작업 요청서를 등록한다.
-- Label로 이슈 종류를 분류한다.
-- Milestone으로 목표와 진행률을 추적한다.
-- GitHub CLI(`gh`)와 ChatGPT-GitHub 연동을 선택 기능으로 이해한다.
-- 비밀 값을 Issue에 남기지 않는다.
+- GitHub [Issue](glossary.md#issue)로 작업 요청서를 등록할 수 있다.
+- Label로 이슈 종류를 분류할 수 있다.
+- Milestone으로 목표와 진행률을 추적할 수 있다.
+- 비밀 값을 Issue에 남기지 않도록 주의할 수 있다.
 
 ## 왜 필요한가
 
@@ -18,11 +20,32 @@ Day 2 · 11:00–11:45 (수업 45분) / 11:45–12:00 (휴식 15분)
 
 ## 핵심 개념
 
-- **Issue**: 작업 요청서 및 버그 리포트 티켓이다.
-- **Label**: 이슈의 종류(`bug`, `enhancement`, `documentation`)를 나타내는 색상 태그다.
-- **Milestone**: 목표 스프린트와 소속 이슈들의 해결률을 게이지 바로 표시한다.
-- **GitHub CLI (`gh`)**: 터미널에서 `gh issue list` 등을 실행하는 공식 CLI 도구다. 설치와 인증은 선택 사항이다.
-- **ChatGPT-GitHub 연동**: 저장소 코드를 AI로 질의하는 기능이다. 권한과 보안을 먼저 확인한다.
+- **Issue**는 작업을 요청하거나 버그를 알리는 티켓이다.
+- **Label**은 이슈의 종류(`bug`, `enhancement`, `documentation`)를 나타내는 색상 태그다.
+- **Milestone**은 목표 스프린트와 소속 이슈들의 해결률을 게이지 바로 보여 준다.
+
+| 위치 | 용도 | 공개와 관리 |
+| --- | --- | --- |
+| `docs/*.md` | 배운 내용과 해결 과정 기록 | 저장소 공개 범위를 따르고 커밋으로 변경 이력을 남긴다 |
+| Issue | 작업 요청과 진행 상황 관리 | 저장소 공개 범위를 따르고 라벨과 마일스톤으로 분류한다 |
+
+예를 들어 오류 해결 과정을 `docs/post-mortem.md`에 기록하고, 재발 방지 작업 Issue에 해당 문서 링크를 붙인다. 문서에도 Issue 주소를 적으면 기록과 작업을 함께 찾을 수 있다.
+
+### 라벨 관리
+
+저장소의 `Issues` → `Labels`에서 기존 라벨을 `Edit`으로 수정하거나 삭제하고, `New label`로 이름·설명·색상을 정해 새 라벨을 만든다. 삭제 전에 기존 이슈의 분류에 미칠 영향을 확인한다. `bug`는 오류, `enhancement`는 기능 개선, `documentation`은 문서 작업을 구분할 때 쓴다.
+
+### Issue 관계도
+
+Milestone, Label, Issue의 관계와 Issue 상태 변화
+
+```mermaid
+flowchart TB
+    MS["Milestone<br/>(목표 묶음)"] --> I1["Issue<br/>(작업 요청)"]
+    LB["Label<br/>(분류 표시)"] -.->|붙인다| I1
+    I1 --> OPEN["Open"]
+    OPEN -->|해결| CLOSED["Closed"]
+```
 
 ## 따라하기
 
@@ -32,14 +55,8 @@ Day 2 · 11:00–11:45 (수업 45분) / 11:45–12:00 (휴식 15분)
    - 1건: `[기능] 다크모드 토글 버튼 추가` (Label: `enhancement`, Milestone 할당)
    - 1건: `[문서] README에 라이선스 표기 보완` (Label: `documentation`, Milestone 할당)
 4. Milestones 탭에서 0% 진척도 게이지를 확인한다.
-5. 강사 시연으로 `gh issue list` 명령을 관찰한다.
-6. 필요하면 ChatGPT-GitHub 연동의 역할과 보안 주의점을 이해한다.
-
-## Git/CLI 명령
-
-```bash
-gh issue list --repo 계정이름/portfolio-web
-```
+5. `Labels`에서 라벨을 만들거나 수정하고 이슈에 적용한다.
+6. 관련 기록 문서의 링크를 이슈에 적는다.
 
 ## 에이전트 요청 예시
 
@@ -64,25 +81,27 @@ Label과 Milestone 차이 설명
 - [ ] README에 사용법이 적혀 있다.
 ```
 
-## 확인법
+## 체크리스트
 
 - [ ] Issues 목록에 라벨 색상이 입혀진 티켓이 2개 이상 있다.
 - [ ] Milestone 게이지가 표시된다.
 - [ ] Issue 본문에 비밀 값이 없다.
-- [ ] `gh`가 실패해도 브라우저에서 같은 작업을 수행할 수 있다.
+- [ ] 기록 문서와 관련 이슈를 링크했다.
 
-## 오류 복구
+## 트러블 슈팅
 
 | 증상 | 원인 | 대응 |
 | --- | --- | --- |
-| `gh` 명령 실패 | CLI 미설치 또는 인증 안 됨 | 브라우저로 동일 작업을 수행한다 |
 | Issue 권한 없음 | 저장소 권한 부족 | 개인 저장소에서 재시도한다 |
 | Milestone이 보이지 않음 | 메뉴 위치를 찾지 못함 | 저장소 `Issues` 탭의 `Milestones` 메뉴를 다시 확인한다 |
 | Label이 적용되지 않음 | Label 미생성 | `Labels` 메뉴에서 먼저 Label을 만든다 |
 
-## 안전 주의
+## 주의할 점
 
 - Issue와 PR 본문에 비밀 값, 토큰, 비밀번호를 적지 않는다.
-- `gh`와 ChatGPT-GitHub 연동은 선택 심화이며 필수 설치 대상이 아니다.
-- AI 연동 시 저장소 권한 범위를 확인한다.
-- 추가 심화는 [보충안 심화](supplement/01-advanced-practice.md), 복습 퀴즈는 [보충안 퀴즈](supplement/02-review-quiz.md), 에이전트 주도 Git은 [보충안 에이전트](supplement/03-agent-led-git.md)에서 다룬다.
+
+## 복습 퀴즈 <QuizHelp />
+
+1. Issue는 작업 요청이나 버그를 번호가 붙은 ::글::로 관리한다.
+2. Label은 Issue의 ::종류::를 나타내는 표시다.
+3. Milestone은 목표와 관련 Issue의 ::해결 진행률::을 보여 준다.

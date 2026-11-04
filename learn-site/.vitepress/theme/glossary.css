@@ -1,0 +1,29 @@
+:root {
+  --glossary-term-gap: 20px;
+  --glossary-links-size: 14px;
+}
+
+.vp-doc .glossary-term {
+  margin-top: var(--glossary-term-gap);
+}
+
+.vp-doc .glossary-term h3 {
+  margin: 0 0 6px;
+}
+
+.vp-doc .glossary-term p {
+  margin: 4px 0;
+}
+
+.vp-doc .glossary-links {
+  font-size: var(--glossary-links-size);
+  color: var(--vp-c-text-2);
+}
+
+.vp-doc .glossary-links > span {
+  margin-right: 4px;
+}
+
+.vp-doc .glossary-links > span:not(:first-child) {
+  margin-left: 12px;
+}

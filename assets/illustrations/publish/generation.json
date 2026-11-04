@@ -1,0 +1,16 @@
+{
+  "model": "gemini-3.1-flash-image",
+  "apiDisplayName": "Nano Banana 2",
+  "date": "2026-11-03T23:54:09Z",
+  "referenceSources": [
+    "assets/cover/source.png",
+    "assets/cover/git-source.png",
+    "assets/illustrations/git-stages/candidate-1.png"
+  ],
+  "basePrompt": "Create an original educational illustration matching the warm Korean early-2000s school textbook aesthetic of the reference images (two book covers and one finished interior figure), not a cover itself. Wide horizontal 16:9 composition, clean white/cream background, hand-painted watercolor and colored pencil texture, friendly detailed objects, muted teal, amber, warm green. NO text, NO letters, NO numbers, NO filenames, NO logos, NO QR code, no dark background. Instructional interior textbook figure with generous whitespace and clearly readable silhouettes. ",
+  "subjectPrompt": "Contrast a private address and a public address. LEFT: a small home desk with a computer inside a closed little house whose door only the owner can open (private, local only). RIGHT: the same page shown on a big open town square billboard seen by many tiny friendly visitors around the world (public website). One clear arrow from the house to the open square.",
+  "variants": [
+    "Use separate vignette islands with objects seen at a gentle isometric angle. Warm restrained editorial textbook drawing. Arrowheads are teal.",
+    "Use one continuous cream tabletop with clear zones. Slightly more playful rounded watercolor objects. Arrowheads are amber."
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "selected": "candidate-2.png",
+  "reason": "동료가 문서의 바뀐 부분을 함께 보는 장면이 단순하고 군더더기가 없다.",
+  "rejected": "candidate-1.png",
+  "rejectionReason": "휴지통 등 의미가 다른 아이콘이 섞여 오해를 줄 수 있다.",
+  "model": "gemini-3.1-flash-image",
+  "apiDisplayName": "Nano Banana 2",
+  "originalsPreserved": true
+}

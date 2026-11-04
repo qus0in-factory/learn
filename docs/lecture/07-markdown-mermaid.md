@@ -1,16 +1,18 @@
-# 7차시. Markdown과 Mermaid
+---
+subtitle: "Markdown과 다이어그램으로 문서를 작성한다."
+tags: ["Markdown", "Mermaid"]
+day: 2
+schedule: "09:00–09:45 (수업 45분) / 09:45–10:00 (휴식 15분)"
+---
 
-Day 2 · 09:00–09:45 (수업 45분) / 09:45–10:00 (휴식 15분)  
-저장소: `portfolio-web`  
-선수: 6차시 Pages 배포 완료
+# 마크다운과 다이어그램
 
-## 이 차시에서 하는 일
+## 학습 목표
 
-- 프로젝트 얼굴인 `README.md`를 Markdown으로 작성한다.
-- Mermaid 코드 블록으로 Git 흐름을 시각화한다.
-- VS Code 미리보기에서 렌더링을 확인한다.
-- 변경을 커밋하고 원격 저장소에 반영한다.
-- Bulma, 눈누, Coolors는 선택 참고 도구로만 소개한다.
+- 프로젝트를 소개하는 `README.md`를 [Markdown](glossary.md#markdown)으로 작성할 수 있다.
+- Mermaid로 Git 흐름을 그림으로 나타낼 수 있다.
+- VS Code 미리보기에서 렌더링 결과를 확인할 수 있다.
+- 변경을 커밋하고 원격 저장소에 반영할 수 있다.
 
 ## 왜 필요한가
 
@@ -19,15 +21,12 @@ Day 2 · 09:00–09:45 (수업 45분) / 09:45–10:00 (휴식 15분)
 ## 핵심 개념
 
 - Markdown은 제목, 목록, 링크, 표, 코드 블록, 체크리스트를 표현한다.
-- Mermaid는 ` ```mermaid ` 코드 블록 안에 텍스트로 다이어그램을 작성한다.
-- `flowchart LR`은 왼쪽에서 오른쪽으로 흐르는 순서도를 만든다.
-- 노드는 `[이름]`, 화살표는 `-->`, 라벨은 `-->|텍스트|`로 표현한다.
-- VS Code 미리보기와 GitHub 렌더링 결과가 같아야 한다.
-- 세부 Markdown 문법은 [부록 4. Mermaid 시각화](appendix/04-mermaid.md)를 참조한다.
+- Mermaid는 텍스트로 흐름을 표현해 문서와 함께 관리한다.
+- 편집기와 GitHub에서 다이어그램이 표시되는지 확인한다. [다이어그램 작성](appendix/04-mermaid.md)에서 도구와 원본을 살펴본다.
 
 ## 따라하기
 
-1. `portfolio-web` 폴더를 VS Code로 연다.
+1. 실습 폴더(예: `portfolio-web`)를 VS Code로 연다.
 2. 루트에 `README.md` 파일을 만든다.
 3. VS Code 미리보기를 연다 (`Ctrl + K`, 그다음 `V`).
 4. README에 제목, 소개, 배포 주소, 기술 스택, Git 흐름도를 작성한다.
@@ -39,6 +38,8 @@ Day 2 · 09:00–09:45 (수업 45분) / 09:45–10:00 (휴식 15분)
 10. GitHub 저장소 메인 화면에서 README와 Mermaid가 렌더링되는지 확인한다.
 
 ## Git 명령
+
+명령어 참조: [git status](commands/status.md) · [git add](commands/add.md) · [git commit](commands/commit.md) · [git push](commands/push.md)
 
 ```bash
 git status
@@ -53,7 +54,7 @@ git push origin main
 # 나의 포트폴리오
 
 ## 소개
-Git과 GitHub를 배우며 만든 첫 웹페이지입니다.
+Git과 GitHub를 배우며 만든 첫 웹페이지이다.
 
 ## 배포 주소
 https://계정이름.github.io/portfolio-web/
@@ -81,6 +82,8 @@ flowchart LR
 
 ## Mermaid 코드
 
+[이 다이어그램의 GitHub 원본 보기](https://github.com/qus0in-factory/learn/blob/dev/docs/lecture/07-markdown-mermaid.md)
+
 ```mermaid
 flowchart LR
     WD[Working Directory] -->|git add| SA[Staging Area]
@@ -95,7 +98,7 @@ README 프로젝트 소개, 배포 링크, Mermaid 흐름도 작성
 Mermaid 다이어그램에 pull 흐름 화살표 추가
 ```
 
-## 확인법
+## 체크리스트
 
 - [ ] VS Code 미리보기에서 제목, 표, 체크리스트가 렌더링된다.
 - [ ] Mermaid 순서도가 미리보기에서 표시된다.
@@ -104,18 +107,22 @@ Mermaid 다이어그램에 pull 흐름 화살표 추가
 - [ ] 배포 주소 링크를 클릭해 사이트가 열린다.
 - [ ] `git status`가 깨끗하다.
 
-## 오류 복구
+## 트러블 슈팅
 
 | 증상 | 원인 | 대응 |
 | --- | --- | --- |
-| Mermaid가 렌더링되지 않음 | 코드 블록 언어가 `mermaid`가 아님 | 첫 줄을 ` ```mermaid `로 고친다 |
+| Mermaid가 렌더링되지 않음 | 사용하는 미리보기에서 지원하지 않거나 원본에 오류가 있음 | GitHub에서 확인하고 [공식 문서](https://mermaid.js.org/)를 참고한다 |
 | 표가 깨짐 | 파이프(`\|`) 개수 불일치 | 헤더와 구분선의 열 개수를 맞춘다 |
 | 링크가 열리지 않음 | GitHub Pages URL 오타 | `계정이름.github.io/portfolio-web/` 형식으로 다시 복사한다 |
-| push가 거절됨 | 원격에 없는 커밋이 있음 | `git pull origin main` 후 다시 push 한다 |
+| push가 거절됨 | 원격 이력이 로컬과 다름(로컬에 없는 원격 커밋이 있음) | 원격 이력을 먼저 확인하고 [STEP 05 초기 이력과 오류](05-remote.md#초기-이력과-오류)를 따른다. `git pull`은 원격 이력을 확인한 뒤 필요한 경우에만 실행한다 |
 
-## 안전 주의
+## 주의할 점
 
 - README에 비밀 값, 토큰, 비밀번호를 적지 않는다.
 - 공개 저장소이므로 배포 주소와 소개 문구만 노출한다.
-- Bulma, 눈누, Coolors는 선택 참고 도구이며 필수 설치 대상이 아니다. 폰트 라이선스는 [부록 3. 웹 보조 도구](appendix/03-web-tools.md)를 참조한다.
-- 추가 심화는 [보충안 심화](supplement/01-advanced-practice.md), 복습 퀴즈는 [보충안 퀴즈](supplement/02-review-quiz.md), 에이전트 주도 Git은 [보충안 에이전트](supplement/03-agent-led-git.md)에서 다룬다.
+
+## 복습 퀴즈 <QuizHelp />
+
+1. Markdown은 ::기호::를 사용해 텍스트 서식을 표현한다.
+2. 제목은 줄 앞에 ::#:: 기호를 붙여 표현한다.
+3. 목록 항목은 줄 앞에 ::-:: 기호를 붙여 표현할 수 있다.

@@ -1,0 +1,20 @@
+.share-course {
+  --share-x-scale: .82;
+  display: flex; flex-direction: column; gap: 16px; align-items: flex-start; margin: 20px 0;
+}
+.share-course img { width: 120px; height: 120px; }
+.share-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.vp-doc .share-button {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--share-button-size);
+  height: var(--share-button-size);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 6px;
+  padding: var(--share-padding);
+  color: var(--vp-c-text-1);
+  text-decoration: none;
+}
+.share-button:disabled { cursor: not-allowed; }

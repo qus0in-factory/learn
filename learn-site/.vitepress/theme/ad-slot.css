@@ -1,0 +1,4 @@
+.ad-slot { margin-block: 24px; padding: 16px; border: 1px solid var(--vp-c-divider); }
+.ad-slot > a { display: block; }
+.ad-slot img { display: block; max-width: 100%; height: auto; }
+@media print { .ad-slot { display: none !important; } }

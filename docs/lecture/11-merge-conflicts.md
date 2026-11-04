@@ -1,16 +1,19 @@
-# 11차시. 병합과 충돌 해결
+---
+subtitle: "변경 사항을 합치고 충돌을 해결한다."
+tags: ["merge", "충돌 해결"]
+day: 2
+schedule: "14:00–14:45 (수업 45분) / 14:45–15:00 (휴식 15분)"
+---
 
-Day 2 · 14:00–14:45 (수업 45분) / 14:45–15:00 (휴식 15분)  
-저장소: `portfolio-web`  
-선수: 10차시 브랜치 `feature/profile-design`와 태그 `v0.1.0`
+# 병합과 충돌 해결
 
-## 이 차시에서 하는 일
+## 학습 목표
 
-- Fast-forward 병합과 3-way 병합의 차이를 이해한다.
-- 의도적으로 충돌을 만들고 직접 해결한다.
-- 충돌 마커의 의미를 읽는다.
-- `git merge --abort`로 병합을 취소하는 방법을 안다.
-- `git log --graph --oneline --all`로 브랜치 흐름을 확인한다.
+- [Fast-forward](glossary.md#fast-forward) [병합](glossary.md#merge)과 3-way 병합의 차이를 설명할 수 있다.
+- 의도적으로 [충돌](glossary.md#conflict)을 만들고 직접 해결할 수 있다.
+- 충돌 마커의 의미를 읽을 수 있다.
+- `git merge --abort`로 병합을 취소할 수 있다.
+- `git log --graph --oneline --all`로 브랜치 흐름을 확인할 수 있다.
 
 ## 왜 필요한가
 
@@ -18,13 +21,48 @@ Day 2 · 14:00–14:45 (수업 45분) / 14:45–15:00 (휴식 15분)
 
 ## 핵심 개념
 
-- **Fast-forward 병합**: 기준 브랜치에 새 커밋이 없어 포인터만 앞으로 이동하는 경우다.
-- **3-way 병합**: 기준 브랜치와 분기 브랜치 양쪽에 새 커밋이 있어 공통 조상을 바탕으로 합쳐지며 새로운 Merge Commit이 생성된다.
+- **Fast-forward 병합**은 기준 브랜치에 새 커밋이 없어 포인터만 앞으로 이동하는 경우다.
+- **3-way 병합**은 기준 브랜치와 분기 브랜치 양쪽에 새 커밋이 있는 경우다. 공통 조상을 바탕으로 합쳐지고 새로운 Merge Commit이 생성된다.
 - **충돌 마커**:
   - `<<<<<<< HEAD`: 현재 브랜치의 코드
   - `=======`: 경계선
   - `>>>>>>> feature/...`: 가져오려는 브랜치의 코드
-- **`git merge --abort`**: 충돌 발생 시 병합을 취소하고 시작 전 안전한 상태로 되돌린다.
+- `git merge --abort`는 충돌이 났을 때 병합을 취소하고 시작 전 상태로 되돌린다.
+
+### 병합 두 가지 방식
+
+Fast-forward 병합과 3-way 병합의 이력 모양 차이
+
+```mermaid
+flowchart TB
+    A["A"] --> B["B"] --> C["C(feature)"]
+    BEFORE["main(병합 전)"] -.-> A
+    AFTER["main(병합 후)"] ==> C
+```
+
+```mermaid
+gitGraph
+    commit id: "A"
+    branch feature
+    checkout feature
+    commit id: "B"
+    checkout main
+    commit id: "C"
+    merge feature id: "Merge Commit"
+```
+
+### 충돌 해결 흐름
+
+충돌을 해결하는 순서와 `--abort`로 돌아가는 출구
+
+```mermaid
+flowchart TB
+    MERGE["git merge"] --> CONFLICT["CONFLICT 발생"]
+    CONFLICT --> EDIT["마커 편집"]
+    EDIT --> ADD["git add"]
+    ADD --> COMMIT["git commit"]
+    CONFLICT -->|막힘| ABORT["git merge --abort"]
+```
 
 ## 따라하기
 
@@ -34,13 +72,23 @@ Day 2 · 14:00–14:45 (수업 45분) / 14:45–15:00 (휴식 15분)
 4. `main`으로 복귀한다.
 5. `git merge feature/profile-design`을 실행한다.
 6. 터미널의 `CONFLICT` 경고를 확인한다.
-7. VS Code 또는 직접 편집으로 충돌 마커를 제거하고 원하는 코드로 정리한다.
-8. `git add index.html`로 해결을 stage 한다.
-9. `git commit`으로 병합을 완료한다.
-10. `git log --graph --oneline --all`로 갈라졌다가 합쳐진 흐름을 확인한다.
-11. 병합이 완료된 뒤 `git branch -d feature/profile-design`으로 브랜치를 정리한다.
+7. `git status`로 충돌 파일을 확인하고 양쪽 변경의 의도를 읽는다.
+8. 관련 범위만 편집해 두 의도에 맞게 정리하고 충돌 마커를 제거한다.
+9. `git diff`와 실행 또는 관련 검사로 결과를 확인한다.
+10. `git add index.html`로 해결을 stage 한다.
+11. `git commit`으로 병합을 완료한다.
+12. `git log --graph --oneline --all`로 갈라졌다가 합쳐진 흐름을 확인한다.
+13. 병합이 완료된 뒤 `git branch -d feature/profile-design`으로 브랜치를 정리한다.
+
+편집기에서 병합 메시지를 작성할 때는 [vi 편집기](appendix/08-vi-editor.md) 부록을 참고한다.
 
 ## Git 명령
+
+명령 이름이 어떤 뜻인지 알면 외우기 쉽다.
+
+- `merge`: 갈라진 이력을 하나로 합친다는 뜻
+
+명령어 참조: [git add](commands/add.md) · [git commit](commands/commit.md) · [git log](commands/log.md) · [git branch](commands/branch.md) · [git switch](commands/switch.md) · [git merge](commands/merge.md)
 
 ```bash
 git switch main
@@ -66,11 +114,12 @@ git merge --abort
 ## 에이전트 요청 예시
 
 ```text
-충돌 양쪽 문장 통합 문장 제안, 파일 수정 금지
-log graph에서 Fast-forward 가능 이유 설명
+충돌한 양쪽 변경의 의도를 설명하고 관련 범위만 수정하는 해결안을 제안해 줘.
+변경 이유와 검증 방법을 설명하고 승인 전 수정하지 마. diff와 실행 결과로 검증해 줘.
+비밀정보를 입력하지 않고, 무조건 한쪽을 선택하거나 강제 push로 우회하지 마.
 ```
 
-## 확인법
+## 체크리스트
 
 - [ ] 충돌 마커가 파일에 남아 있지 않다.
 - [ ] Merge Commit이 생성되었다.
@@ -78,7 +127,7 @@ log graph에서 Fast-forward 가능 이유 설명
 - [ ] `feature/profile-design` 브랜치가 정리되었다.
 - [ ] `git status`가 깨끗하다.
 
-## 오류 복구
+## 트러블 슈팅
 
 | 증상 | 원인 | 대응 |
 | --- | --- | --- |
@@ -87,9 +136,15 @@ log graph에서 Fast-forward 가능 이유 설명
 | 그래프가 보이지 않음 | 옵션 누락 | `git log --graph --oneline --all`을 실행한다 |
 | 브랜치 삭제 실패 | 병합 미완료 | 병합 커밋을 먼저 완료한다 |
 
-## 안전 주의
+## 주의할 점
 
 - 충돌 파일을 저장하기 전에 강사와 확인한다.
 - `reset --hard`로 충돌을 해결하지 않는다.
+- AI에 비밀정보를 넣지 않고, 양쪽 의도 확인 없이 한쪽을 선택하거나 강제 push로 충돌을 우회하지 않는다.
 - `merge --abort`는 병합 중일 때만 사용한다.
-- 추가 심화는 [보충안 심화](supplement/01-advanced-practice.md), 복습 퀴즈는 [보충안 퀴즈](supplement/02-review-quiz.md), 에이전트 주도 Git은 [보충안 에이전트](supplement/03-agent-led-git.md)에서 다룬다.
+
+## 복습 퀴즈 <QuizHelp />
+
+1. 충돌은 두 브랜치가 같은 파일의 겹치는 부분을 다르게 고쳐 자동으로 합칠 수 없는 ::상태::다.
+2. 기준 브랜치에 새 커밋이 없어 포인터만 앞으로 옮기는 병합은 ::Fast-forward::다.
+3. 진행 중인 병합을 취소하는 명령은 `git merge ::--abort::`다.

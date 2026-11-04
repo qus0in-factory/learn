@@ -1,0 +1,4 @@
+{
+  "sizes": "72px",
+  "style": { "--card-thumb-width": "72px", "--card-thumb-radius": "8px" }
+}

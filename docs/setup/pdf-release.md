@@ -1,16 +1,22 @@
 # PDF 배포 가드와 원격 readback
 
+현재 PDF 12개는 revision `992baeb3737fad565f42860e75bbc5c502eadfb4`로 배포·재고정됐다(#33). live 강의 수정과 분리하며 이후 재생성·고정 해제·revision 갱신은 새로운 명시 승인이 필요하다. `pdf-source.json`의 frozen=true와 `assets/pdf-frozen/source-manifest.json`을 유지한다.
+
+제품 정식 릴리스는 v0.2.1이고 PDF namespace는 계속 `v0.1.0/`이다. 이전 revision `0444320a59711d0568077bd9e8ac85daef2d2cda`의 객체·URL도 보존한다. 최신 plain URL은 992baeb revision으로 이동한다.
+
 ## 준비
 
 고정 Chromium·폰트 빌드와 revision 갱신은 `scripts/learn-pdf/usage.md`를 따른다.
 Node 최신 지원 LTS, curl, Wrangler 인증, 봉인된 `dist/learn-pdfs/artifact.json`과 PDF 12개가 필요하다.
 운영 도구는 `scripts/learn-pdf-ops/`에 두어 문서·운영 테스트 변경만으로 PDF revision이 변하지 않게 한다.
 
-## 배포 전
+## 승인된 PDF 교체 때만
 
 1. `node scripts/upload-learn-pdfs.mjs`: 새 revision의 불변 R2 키를 채운다. 같은 키의 다른 바이트는 거부한다.
 2. `node scripts/verify-learn-r2.mjs`: R2에서 12개 키를 직접 읽어 로컬 seal의 SHA256·크기와 비교한다. 누락·읽기 실패·크기/해시 불일치 중 하나라도 있으면 실패한다.
 3. `node scripts/deploy-learn-pdfs.mjs`: 같은 원격 완전성 검사를 **먼저** 수행한 뒤에만 사이트 빌드·D1 SQL 생성·learn Worker 배포·D1 적용을 차례로 실행한다.
+
+PDF namespace를 올릴 때는 `/v0.1.0/*`가 쓰인 `learn-site/.vitepress/pdf.json`의 `version`, `learn-worker/wrangler.jsonc`의 `routes`(`files.qus0in.dev/v0.1.0/*`), 같은 파일의 `assets.run_worker_first`(`/v0.1.0/*`) 세 곳을 함께 바꾼다.
 
 실패 시 사이트·D1 갱신 명령은 시작되지 않는다. 업로드가 일부만 성공했다면 원래 봉인된 산출물로 업로더를 재실행한다.
 수동 `wrangler deploy`/`d1 execute`로 이 가드를 우회하지 않는다. 로컬 SQL 생성만 하는 `sync-learn-d1.mjs`는 원격을 변경하지 않으므로 CI에서도 쓸 수 있다.
@@ -44,3 +50,8 @@ Ubuntu 전용 `bootstrap-browser.mjs`는 같은 Playwright manifest의 Chromium1
 `browser-assets.json`의 SHA256과 manifest revision을 확인한 뒤 unzip으로 설치하며 시스템 Chrome으로 대체하지 않는다.
 그 후 기존 Playwright 의존성 설치·PDF 빌드·fallback 검사를 그대로 실행한다. ZIP이 바뀌거나 manifest가 다르면 실패한다.
 이 설치·PDF 빌드·두 OS 비교는 CI에서 실행하지 않는다. 별도 로컬 Linux 검증은 보조 근거이며 필수 완료 조건이 아니다.
+
+## 관련 문서
+
+- [현행 정적 사이트 배포](../deployment.md) · [운영 목차](../operations/index.md)
+- [D1 동기화](d1-sync.md) · [콘텐츠 규칙](../content-style.md)

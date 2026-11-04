@@ -1,20 +1,26 @@
-# 부록 4. Mermaid 시각화
+---
+subtitle: "Mermaid로 다이어그램을 작성한다."
+tags: ["Mermaid", "flowchart", "다이어그램", "README"]
+---
 
-관련 차시: [7차시 Markdown과 Mermaid](../07-markdown-mermaid.md) · [11차시 병합과 충돌](../11-merge-conflicts.md)
+# 다이어그램 작성
 
-Mermaid는 Markdown 코드 블록 안에 텍스트로 다이어그램을 그리는 도구입니다. Git의 3영역, 브랜치 흐름, push와 pull을 그림으로 남길 수 있습니다. 이미지 파일 대신 텍스트로 저장되므로 README와 함께 버전 관리되고, 변경 내용을 diff로 비교할 수 있습니다.
+관련 STEP: [STEP 07 마크다운과 다이어그램](../07-markdown-mermaid.md) · [STEP 11 병합과 충돌 해결](../11-merge-conflicts.md)
+
+Mermaid는 Markdown 코드 블록 안에 텍스트로 다이어그램을 그리는 도구이다. Git의 3영역, 브랜치 흐름, push와 pull을 그림으로 남길 수 있다. 이미지 파일 대신 텍스트로 저장되므로 README와 함께 버전 관리되고, 변경 내용을 diff로 비교할 수 있다.
 
 ## 왜 필요한가
 
-그림을 이미지로만 만들면 수정할 때 원본 파일이 필요하고, 변경 이력을 비교하기 어렵습니다. Mermaid는 다이어그램의 원본이 Markdown 안에 있으므로 Git으로 함께 커밋할 수 있습니다. README에 Git 흐름도를 넣어 두면 처음 보는 사람도 저장소의 작업 순서를 빠르게 이해합니다.
+그림을 이미지로만 만들면 수정할 때 원본 파일이 필요하고, 변경 이력을 비교하기 어렵다. Mermaid는 다이어그램의 원본이 Markdown 안에 있으므로 Git으로 함께 커밋할 수 있다. README에 Git 흐름도를 넣어 두면 처음 보는 사람도 저장소의 작업 순서를 빠르게 이해한다.
 
-## 핵심 개념
+## 참고 자료
 
-- 코드 블록 언어를 `mermaid`로 지정하면 GitHub와 VS Code 미리보기가 다이어그램으로 렌더링합니다.
-- `flowchart`는 순서도, `sequenceDiagram`은 시간 순서의 메시지, `gitGraph`는 커밋과 브랜치 흐름을 그립니다.
-- 노드는 `[이름]`, 화살표는 `-->`, 화살표 라벨은 `-->|텍스트|`로 표현합니다.
-- 노드 ID는 영문으로 두고, 화면에 보이는 이름은 대괄호 안에 적습니다.
-- 렌더링이 되지 않으면 코드 블록 첫 줄이 `mermaid`인지 먼저 확인합니다.
+이 페이지의 [GitHub 원본](https://github.com/qus0in-factory/learn/blob/dev/docs/lecture/appendix/04-mermaid.md)에서 각 그림의 텍스트를 볼 수 있다.
+
+- [Mermaid 공식 문서](https://mermaid.js.org/): 다이어그램 종류와 작성법 확인
+- [GitHub 다이어그램 안내](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams): GitHub 문서에 다이어그램 표시
+- [Notion 다이어그램 안내](https://www.notion.com/help/code-blocks): 문서에서 다이어그램 표시
+- [draw.io Mermaid 안내](https://www.drawio.com/blog/mermaid-diagrams): 다이어그램 도구에서 Mermaid 사용
 
 ## Git 흐름도
 
@@ -43,7 +49,7 @@ gitGraph
 
 ```mermaid
 sequenceDiagram
-  participant L as 내 컴퓨터
+  participant L as 로컬 저장소
   participant G as GitHub
   L->>G: git push
   G-->>L: git pull
@@ -51,13 +57,7 @@ sequenceDiagram
 
 ## README에 넣기
 
-1. `README.md`를 엽니다.
-2. 다이어그램을 넣을 위치에 빈 줄을 만들고, 언어 이름을 `mermaid`로 지정한 코드 블록을 엽니다.
-3. 위 코드 중 필요한 하나를 붙여 넣습니다.
-4. 코드 블록을 닫습니다.
-5. VS Code 미리보기(`Ctrl + K`, 그다음 `V`)에서 렌더링을 확인합니다.
-6. `git add README.md`, `git commit`, `git push`로 반영합니다.
-7. GitHub 저장소 메인 화면에서도 다이어그램이 보이는지 확인합니다.
+GitHub 원본에서 필요한 예시를 확인하고 README에 적용한다. 편집기 미리보기와 GitHub 저장소 화면에서 결과를 확인한다.
 
 ## 에이전트 요청 예시
 
@@ -65,9 +65,8 @@ sequenceDiagram
 저장소 Git 흐름 Mermaid flowchart README 추가. 실제 파일 수정 금지, 코드 제안만
 ```
 
-## 확인법
+## 체크리스트
 
-- [ ] 코드 블록 언어가 `mermaid`다.
 - [ ] VS Code 미리보기에서 다이어그램이 보인다.
 - [ ] GitHub 저장소 화면에서도 같은 다이어그램이 보인다.
 - [ ] 노드 이름과 화살표 라벨이 읽기 쉽다.
@@ -75,8 +74,6 @@ sequenceDiagram
 
 ## 주의
 
-- 노드 ID에 공백이나 특수 문자를 넣지 않습니다. 화면에 보이는 이름은 `[ ]` 안에 적습니다.
-- `end`는 Mermaid 예약어와 충돌할 수 있으므로 노드 ID로 쓰지 않습니다.
-- 다이어그램이 너무 커지면 한 장에 모든 내용을 넣지 말고 두세 개로 나눕니다.
-- README에 비밀값이나 내부 주소를 넣지 않습니다.
-- 렌더링 결과는 GitHub와 VS Code에서 확인합니다. 코드만 보고 통과로 판단하지 않습니다.
+- 다이어그램이 너무 커지면 한 장에 모든 내용을 넣지 말고 두세 개로 나눈다.
+- README에 비밀값이나 내부 주소를 넣지 않는다.
+- 렌더링 결과는 GitHub와 VS Code에서 확인한다. 코드만 보고 통과로 판단하지 않는다.

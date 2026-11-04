@@ -1,0 +1,10 @@
+{
+  "groups": {
+    "setup": ["config", "init"],
+    "record": ["status", "add", "commit", "log", "diff"],
+    "undo": ["restore", "rm", "reset", "revert"],
+    "remote": ["remote", "clone", "push", "pull"],
+    "branch": ["branch", "switch", "merge", "tag"]
+  },
+  "docs": "https://git-scm.com/docs/git-"
+}

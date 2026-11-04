@@ -5,11 +5,12 @@ import { lesson } from './lesson.mjs';
 import { createPage } from './page.mjs';
 import { inspect } from './inspect.mjs';
 import { auditFonts } from './font-audit.mjs';
+import { prepareSource } from './source-text.mjs';
 export async function exportLesson(browser, file, bundle) {
-  const text = await readFile(file, 'utf8');
-  const title = text.split('\n')[0].replace(/^# (\d+)차시\./, '$1.');
-  const page = await createPage(browser, bundle, title);
   const name = file.split('/').at(-1).replace('.md', '');
+  const text = prepareSource(await readFile(file, 'utf8'), name);
+  const title = text.match(/^# (.+)$/m)[1];
+  const page = await createPage(browser, bundle, title);
   const result = await page.evaluate(html => window.prepare(html),
     await lesson(browser, text, name));
   Object.assign(result, await inspect(page, title));

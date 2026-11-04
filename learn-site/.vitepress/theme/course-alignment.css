@@ -1,0 +1,9 @@
+.course-header {
+  --course-cover-align: 0;
+  --course-text-align: left;
+  text-align: var(--course-text-align);
+}
+.vp-doc .course-header .course-cover img,
+.vp-doc .course-header .share-course > img {
+  margin-inline: var(--course-cover-align);
+}

@@ -1,0 +1,33 @@
+.step-install-cta {
+  margin: 20px 0 0;
+}
+
+.step-install-cta a.step-install-cta__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 16px;
+  border: 1px solid var(--vp-c-brand-1);
+  border-radius: 8px;
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.step-install-cta a.step-install-cta__link:hover {
+  background: var(--vp-c-brand-1);
+  color: var(--vp-c-bg);
+}
+
+.step-install-cta a.step-install-cta__link:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 2px;
+}
+
+@media print {
+  .step-install-cta {
+    display: none;
+  }
+}
