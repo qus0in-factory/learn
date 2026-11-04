@@ -162,8 +162,6 @@ Coolors 색상 코드 추천 및 배경 포인트 색상 적용
 - Day 1의 STEP 01~06 공식 일정이 완료되었다.
 - Day 2에는 Markdown 문서화, Issue 관리, 브랜치와 Pull Request 협업을 이어간다.
 
-## 퀴즈 풀기
-
-빈칸을 누르거나 Enter·Space 키를 눌러 정답을 확인한다.
+## 핵심 내용 퀴즈 <QuizHelp />
 
 1. GitHub Pages 변경 반영은 ::Pages URL::과 저장소의 ::Actions/Pages 상태::에서 확인한다.

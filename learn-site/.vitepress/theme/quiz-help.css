@@ -1,0 +1,25 @@
+.quiz-help {
+  --share-button-size: 32px;
+  --share-icon-size: 18px;
+  --share-padding: 6px;
+  display: inline-block;
+  margin-left: 8px;
+  vertical-align: middle;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.vp-doc h2:has(.quiz-help) {
+  position: relative;
+}
+
+.quiz-help .button-help {
+  display: block;
+  top: calc(100% + 4px);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+@media print {
+  .quiz-help { display: none !important; }
+}

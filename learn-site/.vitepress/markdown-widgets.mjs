@@ -5,6 +5,6 @@ import { markdownLinks } from './markdown-links.mjs'
 export function markdownWidgets(text, page) {
   const refs = (page.stepRefs || []).map(ref => courseOrder.find(item => item.link === `/git/${ref}`)).filter(Boolean)
   const groups = tagGroups.map(group => `## ${group.tag}\n\n${markdownLinks([...group.pages, ...group.commands])}`).join('\n\n')
-  return text.replace('<CourseHeader />', '').replace('<TagGroups />', groups)
+  return text.replace('<CourseHeader />', '').replace(' <QuizHelp />', '').replace('<TagGroups />', groups)
     .replace('<CommandLinks />', markdownLinks(refs))
 }

@@ -228,9 +228,7 @@ index.html 취미 또는 목표 문구 추가
 - `.git` 폴더 안의 내부 파일들은 Git이 자체적으로 관리하므로 사용자가 직접 수정하거나 삭제하지 않는다.
 - 상세한 Git 명령 옵션 일람은 [명령과 옵션 일람](appendix/02-git-options.md) 부록을 참조한다.
 
-## 퀴즈 풀기
-
-빈칸을 누르거나 Enter·Space 키를 눌러 정답을 확인한다.
+## 핵심 내용 퀴즈 <QuizHelp />
 
 1. `git status`는 현재 변경 파일과 ::스테이징 상태::를 보여준다.
 2. `git add`를 실행하기 전 파일은 untracked 또는 modified이고, 실행한 뒤에는 ::staged::로 바뀐다.

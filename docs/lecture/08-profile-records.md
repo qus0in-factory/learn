@@ -136,8 +136,6 @@ Profile 저장소와 작업 저장소 차이 설명
 - Post-mortem에는 비밀 값, 토큰, 비밀번호를 적지 않는다.
 - Profile 저장소와 `portfolio-web` 저장소를 섞지 않는다. README와 코드 변경은 `portfolio-web`에서만 커밋한다.
 
-## 퀴즈 풀기
-
-빈칸을 누르거나 Enter·Space 키를 눌러 정답을 확인한다.
+## 핵심 내용 퀴즈 <QuizHelp />
 
 1. GitHub Wiki는 ::프로젝트 지식베이스(매뉴얼·용어집)::를 정리하는 데 적합하다.

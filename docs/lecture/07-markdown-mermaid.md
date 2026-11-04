@@ -124,8 +124,6 @@ Mermaid 다이어그램에 pull 흐름 화살표 추가
 - 공개 저장소이므로 배포 주소와 소개 문구만 노출한다.
 - Bulma, 눈누, Coolors는 선택 참고 도구이며 필수 설치 대상이 아니다. 폰트 라이선스는 [웹 디자인 보조 도구](appendix/03-web-tools.md) 부록을 참조한다.
 
-## 퀴즈 풀기
-
-빈칸을 누르거나 Enter·Space 키를 눌러 정답을 확인한다.
+## 핵심 내용 퀴즈 <QuizHelp />
 
 1. Markdown은 ::README, TIL, 회고, Issue 설명:: 등 문서를 작성하는 데 쓴다.
