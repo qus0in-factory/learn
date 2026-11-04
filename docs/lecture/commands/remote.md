@@ -8,7 +8,7 @@ stepRefs: ["05-remote", "appendix/02-git-options"]
 
 ## 용도
 
-로컬 저장소가 push·pull할 원격 저장소의 주소를 이름(보통 `origin`)으로 등록하고 확인한다. GitHub에 만든 빈 저장소와 내 컴퓨터의 저장소를 연결하는 첫 단계다.
+로컬 저장소가 push·pull할 원격 저장소의 주소를 이름(보통 `origin`)으로 등록하고 확인한다. GitHub에 만든 빈 저장소와 로컬 저장소를 연결하는 첫 단계다.
 
 ## 자주 쓰는 옵션
 

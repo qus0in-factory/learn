@@ -16,13 +16,13 @@ schedule: "15:00–15:45 (수업 45분) / 15:45–16:00 (휴식 15분)"
 
 ## 정적 웹 배포의 목적
 
-내가 내 컴퓨터에서 개발한 웹페이지는 주소창에 `file:///` 또는 `http://localhost:5500`으로 뜬다. 이는 오직 내 컴퓨터 안에서만 볼 수 있는 로컬 주소이므로, 친구나 채용 담당자에게 링크를 보내주어도 상대방 컴퓨터에서는 열리지 않는다.
+HTML 파일을 브라우저로 바로 열면 주소창이 `file:///`로 시작한다. 파일이 저장된 경로를 그대로 연 상태라서 이 주소는 지금 쓰는 PC에서만 열린다. 친구나 채용 담당자에게 링크를 보내도 상대방 컴퓨터에서는 열리지 않는다.
 
 내 웹사이트를 전 세계에 공개하려면 인터넷 서버 컴퓨터를 빌리고 도메인을 연결해야 하지만, HTML·CSS·이미지로 구성된 정적 웹(Static Web)은 GitHub가 제공하는 **GitHub Pages** 서비스를 사용하면 무료로 공개할 수 있다.
 
 또한 Git으로 코드를 수정하고 원격 저장소에 `push`하기만 하면, GitHub가 변경된 코드를 자동으로 감지하여 실제 운영 웹사이트를 최신 내용으로 알아서 갈아 끼워주는 <strong>지속적 배포(Continuous Deployment)</strong>의 기초를 경험할 수 있다.
 
-<Illustration name="publish" alt="내 컴퓨터에서만 열리는 집에서 누구나 볼 수 있는 광장의 게시판으로 사이트가 공개되는 모습" />
+<Illustration name="publish" alt="나만 열 수 있는 집에서 누구나 볼 수 있는 광장의 게시판으로 사이트가 공개되는 모습" />
 
 ## 호스팅 원리와 자동 재배포
 
@@ -49,7 +49,7 @@ flowchart TB
 
 ```mermaid
 sequenceDiagram
-    participant L as 내 컴퓨터
+    participant L as 로컬 저장소
     participant G as GitHub 저장소
     participant A as GitHub Actions
     participant P as GitHub Pages

@@ -48,7 +48,7 @@ gitGraph
 
 ```mermaid
 sequenceDiagram
-  participant L as 내 컴퓨터
+  participant L as 로컬 저장소
   participant G as GitHub
   L->>G: git push
   G-->>L: git pull
