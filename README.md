@@ -23,10 +23,10 @@ flowchart TD
 
 ## 주요 구성 요소
 
-- **VitePress 정적 사이트** (`learn-site`): 강의 마크다운과 반응형 컴포넌트를 빌드하여 정적 웹페이지를 생성합니다.
-- **Cloudflare Worker learn** (`learn-worker`): 에지 환경에서 라우팅, API 서빙, 구 경로 리다이렉트, 캐시 헤더를 처리합니다.
-- **Cloudflare D1 learn**: 카탈로그·PDF 레지스트리·퀴즈 데이터를 관리하는 서버리스 관계형 데이터베이스입니다.
-- **Cloudflare R2 learn-files** (`files.qus0in.dev`): 버전별 PDF 문서 및 `static/<sha256>` 해시 경로 기반 정적 자산(폰트, 표지 이미지)을 불변 캐시로 서빙합니다.
+- **VitePress 정적 사이트** (`learn-site`): 강의 마크다운과 반응형 컴포넌트를 빌드해 정적 웹페이지를 만든다.
+- **Cloudflare Worker learn** (`learn-worker`): 에지에서 라우팅, API, 구 경로 리다이렉트, 캐시 헤더를 처리한다.
+- **Cloudflare D1 learn**: 카탈로그·PDF 레지스트리·퀴즈 데이터를 관리하는 서버리스 관계형 데이터베이스다.
+- **Cloudflare R2 learn-files** (`files.qus0in.dev`): 버전별 PDF와 `static/<sha256>` 정적 자산(폰트, 표지 이미지)을 불변 캐시로 제공한다.
 
 ## 디렉터리 구조
 
@@ -34,6 +34,9 @@ flowchart TD
 - `learn-worker`: Cloudflare Worker 라우팅, API 및 D1/R2/ASSETS 바인딩 설정 (`wrangler.jsonc`)
 - `scripts`: D1 동기화, PDF 운용, 검증 및 린트 자동화 스크립트
 - `docs`: 강의 마크다운 문서(`lecture/`), 공용 정적 자산(`public/`), 운영 가이드(`setup/`)
+- PDF 원본은 `scripts/learn-pdf/pilot/step01.json`–`step12.json`이다. 강의 사실 대조는 `docs/lecture`다.
+- 개념 장은 비교·분할·단계·행(`compare`, `split`, `steps`, `rows`)과 수치·문장(`stat`, `statement`), 기존 표·코드를 섞는다. PDF는 12개이고 STEP 03은 14장, 나머지는 15장, 합계 179장이다.
+- 고정·교체·readback은 [운영 목차](docs/operations/index.md)를 따른다. 현재 고정 revision은 `f793e72b02b584cc167dd53c92da9736ded7de7a`다.
 
 ## 라이선스
 
