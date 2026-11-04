@@ -73,7 +73,7 @@ flowchart TB
 
 <Illustration name="stages" alt="작업 공간에서 스테이징 영역을 거쳐 로컬 저장소로 파일 변경이 옮겨지는 3단계 흐름" />
 
-터미널은 명령으로 조작하는 인터페이스(CLI)를 띄우는 창이다. 셸(Bash 등)은 입력한 명령을 해석하고 커널을 통해 실행하며, Git은 이 셸에서 실행하는 프로그램이다. 자세한 관계는 [CLI·터미널·셸](appendix/06-cli-terminal-shell.md) 부록을 참조한다.
+터미널은 명령으로 조작하는 인터페이스(CLI)를 띄우는 창이다. 셸(Bash 등)은 입력한 명령을 해석하고 커널을 통해 실행하며, Git은 이 셸에서 실행하는 프로그램이다. 자세한 관계는 [CLI·터미널·셸](appendix/06-cli-terminal-shell.md) 부록을 참고한다.
 
 ## 따라하기
 
@@ -113,7 +113,7 @@ pwd
 
 | 증상 | 원인 | 대응 |
 | --- | --- | --- |
-| `git: command not found` 에러 | Git 미설치 또는 환경 변수(PATH) 미등록 | [설치 준비](appendix/00-installation.md)를 확인하고 PATH를 점검한다. 터미널 차이는 [운영체제별 차이](appendix/05-os-differences.md) 부록을 참조한다. |
+| `git: command not found` 에러 | Git 미설치 또는 환경 변수(PATH) 미등록 | [설치 준비](appendix/00-installation.md)를 확인하고 PATH를 점검한다. 터미널 차이는 [운영체제별 차이](appendix/05-os-differences.md) 부록을 참고한다. |
 | VS Code 터미널 창이 열리지 않음 | 터미널 기본 셸 설정 충돌 | VS Code를 재시작하거나 `기본 프로필 선택`에서 Git Bash 또는 zsh를 다시 지정한다. |
 | OpenCode 응답 지연 | 네트워크 일시 지연 또는 세션 만료 | 브라우저 세션을 새로고침하거나 강사에게 네트워크 연결을 문의한다. |
 
@@ -121,7 +121,7 @@ pwd
 
 - 터미널 창이나 에이전트 대화창에 개인 비밀번호나 계정 토큰을 입력하지 않는다.
 - 모든 실습은 교육용 전용 폴더에서 진행하며, 개인 중요 파일이 있는 폴더에서 명령을 실행하지 않는다.
-- 운영체제별 단축키와 경로 표기 차이는 [운영체제별 차이](appendix/05-os-differences.md) 부록을 참조한다.
+- 운영체제별 단축키와 경로 표기 차이는 [운영체제별 차이](appendix/05-os-differences.md) 부록을 참고한다.
 
 ## 핵심 내용 퀴즈 <QuizHelp />
 
