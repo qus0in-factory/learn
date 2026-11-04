@@ -95,19 +95,19 @@
   "type": "stat",
   "items": [
    {
-    "figure": "index",
-    "label": "진입점",
-    "detail": "예시는 index.html. md도 찾음"
+    "figure": "html",
+    "label": "첫 화면",
+    "detail": "index.html. md·README도 찾음"
    },
    {
-    "figure": "10분",
+    "figure": "≤10분",
     "label": "반영",
-    "detail": "보장이 아니다. Actions 확인"
+    "detail": "수 분에서 최대 10분"
    },
    {
     "figure": "main",
     "label": "원본",
-    "detail": "루트 폴더. 권한 있는 push"
+    "detail": "루트. 권한 있는 push"
    }
   ],
   "step": "STEP 06",
@@ -259,7 +259,8 @@
    ],
    [
     "실패",
-    "없으면 Actions부터"
+    "없으면 Actions부터",
+    ""
    ]
   ]
  },

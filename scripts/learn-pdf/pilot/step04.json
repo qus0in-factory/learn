@@ -99,7 +99,7 @@
  {
   "type": "split",
   "image": "assets/art-04-undo.png",
-  "caption": "되돌린 파일",
+  "caption": "커밋 위치 이동",
   "items": [
    {
     "term": "--soft",
@@ -107,7 +107,7 @@
    },
    {
     "term": "--mixed",
-    "detail": "HEAD와 인덱스. 생략 시 기본"
+    "detail": "HEAD·인덱스. 작업 트리는 남김"
    },
    {
     "term": "--hard",
@@ -115,7 +115,7 @@
    }
   ],
   "step": "STEP 04",
-  "title": "되돌리기"
+  "title": "reset 세 모드"
  },
  {
   "type": "statement",
@@ -126,27 +126,24 @@
   "title": "revert"
  },
  {
-  "type": "stat",
-  "mono": true,
-  "items": [
-   {
-    "figure": ".env*",
-    "label": "비밀",
-    "detail": "추적 전 이름 패턴"
-   },
-   {
-    "figure": "deps/",
-    "label": "의존성",
-    "detail": "node_modules 폴더"
-   },
-   {
-    "figure": "!example",
-    "label": "예외",
-    "detail": "무시 규칙 뒤에 둔다"
-   }
-  ],
+  "type": "rows",
+  "numbered": true,
   "step": "STEP 04",
-  "title": ".gitignore 패턴"
+  "title": ".gitignore 패턴",
+  "rows": [
+   {
+    "term": ".env*",
+    "detail": "아직 추적하지 않은 비밀 파일 이름"
+   },
+   {
+    "term": "node_modules/",
+    "detail": "의존성 폴더를 통째로 제외"
+   },
+   {
+    "term": "!.env.example",
+    "detail": "무시 규칙 뒤에 두는 예외"
+   }
+  ]
  },
  {
   "type": "section",
@@ -240,7 +237,8 @@
    ],
    [
     "기록",
-    "커밋은 규칙 파일"
+    "커밋은 규칙 파일",
+    ""
    ]
   ]
  },

@@ -81,7 +81,7 @@
    {
     "figure": "main",
     "label": "브랜치",
-    "detail": "GitHub 기본 이름. init은 설정"
+    "detail": "GitHub 기본 이름. init은 설정별"
    },
    {
     "figure": "-u",
@@ -257,7 +257,8 @@
    ],
    [
     "확인",
-    "웹에 파일과 이력"
+    "웹에 파일과 이력",
+    ""
    ]
   ]
  },

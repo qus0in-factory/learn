@@ -61,12 +61,12 @@
   "type": "stat",
   "items": [
    {
-    "figure": "40",
+    "figure": "40자리",
     "label": "SHA-1",
     "detail": "SHA-256은 더 길다"
    },
    {
-    "figure": "7",
+    "figure": "7자리",
     "label": "로그",
     "detail": "설정에 따라 더 길다"
    },
@@ -129,7 +129,8 @@
    ],
    [
     "빈 diff",
-    "add 직후 인자 없는 diff"
+    "add 직후 인자 없는 diff",
+    ""
    ]
   ]
  },
@@ -181,17 +182,17 @@
    {
     "figure": ":wq",
     "label": "저장 종료",
-    "detail": "Esc 다음 입력"
+    "detail": "고친 메시지를 남긴다"
    },
    {
     "figure": ":q!",
     "label": "편집 포기",
-    "detail": "메시지가 있으면 진행될 수 있다"
+    "detail": "편집만 취소"
    },
    {
     "figure": ":cq",
     "label": "커밋 중단",
-    "detail": "편집기 오류로 중단"
+    "detail": "커밋 자체를 멈춘다"
    }
   ],
   "step": "STEP 03",
@@ -229,7 +230,8 @@
    ],
    [
     "확인",
-    "커밋 2개와 clean"
+    "커밋 2개와 clean",
+    ""
    ]
   ]
  },
