@@ -3,7 +3,7 @@ subtitle: "눈누·Bulma·Coolors·favicon 도구로 폰트·스타일·색상·
 tags: ["눈누", "Bulma", "Coolors", "favicon", "폰트", "색상"]
 ---
 
-# 웹 디자인 보조 도구
+# 웹 디자인·배포 도구
 
 관련 STEP: [STEP 06 웹사이트 배포](../06-pages.md) · [STEP 07 마크다운과 다이어그램](../07-markdown-mermaid.md)
 
