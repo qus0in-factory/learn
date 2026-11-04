@@ -62,13 +62,15 @@
 - [AI 서비스 연결](appendix/12-nvidia-nim.md)
 - [프로필과 기록 작성](appendix/13-profile-records.md)
 - [GitHub 협업](appendix/14-github-collaboration.md)
+- [Git 호스팅과 버전 관리 도구](appendix/15-hosting-vcs.md)
+- [기록 작성 예시](appendix/16-record-examples.md)
 
 ## 문서 구조
 
 ```mermaid
 flowchart TD
     L["docs/lecture"] --> C["01–12차시 문서<br/>01-environment.md … 12-pull-request.md"]
-    L --> A["appendix/<br/>00-installation.md … 14-github-collaboration.md"]
+    L --> A["appendix/<br/>00-installation.md … 14-github-collaboration.md<br/>15-hosting-vcs.md · 16-record-examples.md"]
 ```
 
 ## 준비물과 안전 규칙
