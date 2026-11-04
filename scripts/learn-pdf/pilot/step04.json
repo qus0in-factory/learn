@@ -20,10 +20,9 @@
    ],
    [
     "제외",
-    "비밀·임시 파일을 추적에서 뺄 수 있다"
+    "추적 중이면 목록만으로 안 빠진다"
    ]
-  ],
-  "note": "이미 추적 중인 파일은 무시 목록만으로 빠지지 않는다."
+  ]
  },
  {
   "type": "section",
@@ -46,9 +45,12 @@
    [
     "남기면 안 됨",
     ".env와 임시 파일"
+   ],
+   [
+    "더",
+    "캐시와 로그"
    ]
-  ],
-  "note": "캐시와 로그도 기록 대상에서 뺀다."
+  ]
  },
  {
   "type": "table",
@@ -74,9 +76,12 @@
     "--amend --no-edit",
     "안 연다",
     "add 뒤 메시지는 유지"
+   ],
+   [
+    "조건",
+    "push 전. 새 해시"
    ]
-  ],
-  "note": "직전 커밋을 새 해시로 바꾼다. push 전에만 쓴다."
+  ]
  },
  {
   "type": "table",
@@ -102,30 +107,37 @@
     "reset",
     "대상에 맞춤",
     "로컬 정리"
+   ],
+   [
+    "대상",
+    "생략하면 HEAD"
    ]
-  ],
-  "note": "reset 대상을 생략하면 HEAD다."
+  ]
  },
  {
   "type": "cards",
   "step": "STEP 04",
   "title": "reset 모드가 건드리는 범위",
-  "cards": [
+  "image": "assets/art-04-undo.png",
+  "caption": "되돌린 파일",
+  "rows": [
+   [
+    "모드",
+    "범위"
+   ],
    [
     "soft",
-    "HEAD만 옮긴다"
+    "HEAD만"
    ],
    [
     "mixed",
-    "HEAD와 인덱스를 맞춘다"
+    "HEAD와 인덱스"
    ],
    [
     "hard",
-    "작업 트리까지 맞춘다"
+    "작업 트리. 실행하지 않음"
    ]
-  ],
-  "note": "인자 없는 reset은 커밋을 취소하지 않는다. hard는 실행하지 않는다.",
-  "image": "assets/art-04-undo.png"
+  ]
  },
  {
   "type": "table",
@@ -143,9 +155,12 @@
    [
     "되돌림",
     "반대 변경을 새 커밋으로"
+   ],
+   [
+    "때",
+    "공유된 변경 취소"
    ]
-  ],
-  "note": "이미 공유된 변경을 취소할 때 쓴다."
+  ]
  },
  {
   "type": "cards",
@@ -162,10 +177,9 @@
    ],
    [
     "!.env.example",
-    "무시 규칙 뒤의 예외"
+    "예외는 규칙 뒤. 가짜 값만"
    ]
-  ],
-  "note": "example에는 가짜 값만. 이미 커밋된 비밀은 키를 폐기한다."
+  ]
  },
  {
   "type": "section",
@@ -187,24 +201,22 @@
    ],
    [
     "02 · 규칙",
-    ".env를 보고 .gitignore를 저장한다"
+    "저장해야 .env가 사라진다"
    ],
    [
     "03 · 기록",
     ".gitignore만 커밋한다"
    ]
-  ],
-  "note": "규칙을 저장하기 전에는 .env가 목록에서 사라지지 않는다."
+  ]
  },
  {
   "type": "code",
   "step": "STEP 04",
   "title": "명령어 한눈에 보기",
   "code": [
-   "# 메시지 교체만\ngit commit --amend \\\n-m \"docs: 메시지\"\ngit log --oneline\n# 파일 보충은 대안\ngit add 파일\ngit commit --amend \\\n--no-edit",
+   "# amend 둘은 대안\n# 메시지 교체만\ngit commit --amend \\\n-m \"docs: 메시지\"\ngit log --oneline\n# 파일 보충은 대안\ngit add 파일\ngit commit --amend \\\n--no-edit",
    "echo \"KEY=sample\" > .env\ngit status\n# 규칙 저장 후\ngit status\ngit add .gitignore\ngit commit -m \"chore: ignore\""
-  ],
-  "note": "두 amend는 같이 실행하는 순서가 아니다. hard는 실행하지 않는다."
+  ]
  },
  {
   "type": "cards",
@@ -223,8 +235,7 @@
     "hard",
     "추적 파일의 미커밋 변경을 잃을 수 있다"
    ]
-  ],
-  "note": ".env만 막으면 .env.local은 남을 수 있다."
+  ]
  },
  {
   "type": "table",
@@ -255,9 +266,12 @@
     "제외",
     ".env가 목록에서 사라짐",
     ".gitignore"
+   ],
+   [
+    "기록",
+    "커밋은 규칙 파일"
    ]
-  ],
-  "note": "커밋되는 것은 규칙 파일이고 .env는 아니다."
+  ]
  },
  {
   "type": "eof",

@@ -12,7 +12,7 @@
   "cards": [
    [
     "연결",
-    "빈 원격과 origin을 이을 수 있다"
+    "이름은 main인지 확인"
    ],
    [
     "업로드",
@@ -22,8 +22,7 @@
     "구분",
     "clone pull fork의 방향을 말할 수 있다"
    ]
-  ],
-  "note": "브랜치 이름이 main인지 먼저 확인한다."
+  ]
  },
  {
   "type": "section",
@@ -41,7 +40,7 @@
   "cards": [
    [
     "백업",
-    "다른 PC에서 이력을 복원"
+    "다른 PC에서 복원"
    ],
    [
     "협업",
@@ -51,29 +50,32 @@
     "배포 기반",
     "다음 공개 주소의 출발"
    ]
-  ],
-  "note": "GitHub 밖에도 Git 호스팅은 있다."
+  ]
  },
  {
   "type": "cards",
   "step": "STEP 05",
   "title": "로컬과 origin 사이",
-  "cards": [
+  "image": "assets/art-05-remote.png",
+  "caption": "로컬과 원격",
+  "rows": [
+   [
+    "방향",
+    "뜻"
+   ],
    [
     "올리기",
     "push -u origin main"
    ],
    [
     "별칭",
-    "origin은 원격 주소의 짧은 이름"
+    "origin은 짧은 이름"
    ],
    [
     "가져오기",
-    "pull은 설정된 방식으로 통합"
+    "갈라지면 거절될 수 있다"
    ]
-  ],
-  "note": "이력이 갈라지면 거절되거나 충돌할 수 있다.",
-  "image": "assets/art-05-remote.png"
+  ]
  },
  {
   "type": "table",
@@ -95,9 +97,12 @@
    [
     "-u",
     "이후 push·pull의 기본 연결"
+   ],
+   [
+    "init",
+    "기본 이름은 설정마다 다름"
    ]
-  ],
-  "note": "로컬 init의 기본 이름은 설정에 따라 다를 수 있다."
+  ]
  },
  {
   "type": "cards",
@@ -114,10 +119,9 @@
    ],
    [
     "pull",
-    "원격에서 기존 로컬로 통합"
+    "통합 방식은 설정"
    ]
-  ],
-  "note": "pull은 항상 같은 방식의 병합이 아니다."
+  ]
  },
  {
   "type": "table",
@@ -139,9 +143,12 @@
    [
     "공통",
     "미리 인증하면 다시 안 물을 수 있다"
+   ],
+   [
+    "코드",
+    "터미널 표시, 브라우저 입력"
    ]
-  ],
-  "note": "일회용 코드는 터미널에 나오고 브라우저에 입력한다."
+  ]
  },
  {
   "type": "section",
@@ -168,20 +175,18 @@
    ],
    [
     "03 · 업로드",
-    "push -u 뒤 웹에서 파일과 이력을 본다"
+    "인증 창은 필요할 때만"
    ]
-  ],
-  "note": "인증 창은 필요할 때만 뜬다."
+  ]
  },
  {
   "type": "code",
   "step": "STEP 05",
   "title": "명령어 한눈에 보기",
   "code": [
-   "# Git Bash·zsh\nURL=https://github.com/\\\n<계정>/<저장소>.git\ngit remote add origin \\\n\"$URL\"\ngit remote -v\ngit push -u origin main",
+   "# pull은 확인 후\n# Git Bash·zsh\nURL=https://github.com/\\\n<계정>/<저장소>.git\ngit remote add origin \\\n\"$URL\"\ngit remote -v\ngit push -u origin main",
    "# 주소 오타일 때만\ngit remote set-url \\\norigin \"$URL\"\n# 이름 오타일 때만\ngit remote rename \\\nold origin"
-  ],
-  "note": "URL은 본인 저장소 HTTPS 주소다. pull은 이력 확인 후에만 고른다."
+  ]
  },
  {
   "type": "table",
@@ -203,9 +208,12 @@
    [
     "주소 오타",
     "remote set-url"
+   ],
+   [
+    "-M",
+    "기존 main을 덮을 수 있다"
    ]
-  ],
-  "note": "-M은 기존 main을 덮을 수 있어 확인 후에만 쓴다."
+  ]
  },
  {
   "type": "cards",
@@ -222,10 +230,9 @@
    ],
    [
     "인증",
-    "만료·권한·남은 자격 증명"
+    "강제 push 금지"
    ]
-  ],
-  "note": "강제 push로 풀지 않는다. 등록 오류는 앞 장이다."
+  ]
  },
  {
   "type": "table",
@@ -256,9 +263,12 @@
     "가져오기",
     "확인 후 선택",
     "git pull"
+   ],
+   [
+    "확인",
+    "웹에 파일과 이력"
    ]
-  ],
-  "note": "빈 원격이면 첫 push 뒤에 파일이 보여야 한다."
+  ]
  },
  {
   "type": "eof",

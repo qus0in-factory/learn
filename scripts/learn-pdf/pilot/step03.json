@@ -12,7 +12,7 @@
   "cards": [
    [
     "기록",
-    "git commit으로 스냅샷을 남길 수 있다"
+    "commit으로 스냅샷. 메시지는 한 줄"
    ],
    [
     "조회",
@@ -22,8 +22,7 @@
     "구별",
     "stage 해제와 편집기 종료를 나눌 수 있다"
    ]
-  ],
-  "note": "메시지는 무엇을 바꿨는지 한 줄로 적는다."
+  ]
  },
  {
   "type": "section",
@@ -41,7 +40,7 @@
   "cards": [
    [
     "스냅샷",
-    "그 시점의 기록 단위"
+    "파일 저장과 다른 기록"
    ],
    [
     "메시지",
@@ -51,8 +50,7 @@
     "기준점",
     "다시 확인할 지점"
    ]
-  ],
-  "note": "파일 저장과 커밋은 다른 동작이다."
+  ]
  },
  {
   "type": "cards",
@@ -69,10 +67,9 @@
    ],
    [
     "병합 커밋",
-    "부모가 둘 이상이다"
+    "부모가 둘 이상"
    ]
   ],
-  "note": "세 종류는 순서가 아니라 부모 개수다.",
   "diagram": "assets/parents.svg"
  },
  {
@@ -99,9 +96,12 @@
     "인자",
     "앞 4자리 이상",
     "저장소 안에서 유일"
+   ],
+   [
+    "주의",
+    "짧으면 겹칠 수 있다"
    ]
-  ],
-  "note": "짧을수록 다른 커밋과 겹칠 수 있다."
+  ]
  },
  {
   "type": "table",
@@ -119,9 +119,12 @@
    [
     "접두어",
     "feat docs style fix"
+   ],
+   [
+    "피할 말",
+    "수정 완료, test, asdf"
    ]
-  ],
-  "note": "수정 완료, test, asdf처럼 내용을 숨기지 않는다."
+  ]
  },
  {
   "type": "table",
@@ -147,9 +150,12 @@
     "git diff HEAD",
     "HEAD",
     "작업 공간"
+   ],
+   [
+    "빈 diff",
+    "add 직후 인자 없는 diff"
    ]
-  ],
-  "note": "add 직후면 인자 없는 diff가 비어 보일 수 있다."
+  ]
  },
  {
   "type": "section",
@@ -176,10 +182,9 @@
    ],
    [
     "03 · 둘째",
-    "내렸다가 다시 add하고 커밋한다"
+    "다시 add한 뒤 커밋"
    ]
-  ],
-  "note": "restore --staged는 커밋이 있는 추적 파일에서 쓴다."
+  ]
  },
  {
   "type": "code",
@@ -188,8 +193,7 @@
   "code": [
    "git commit -m \"feat: 첫 페이지\"\ngit log --oneline\ngit log",
    "git diff\ngit diff --staged\ngit add index.html\ngit restore --staged \\\nindex.html\ngit status\ngit add index.html\ngit commit -m \"docs: 문구\""
-  ],
-  "note": "그래프가 필요하면 log --oneline --graph를 쓴다."
+  ]
  },
  {
   "type": "cards",
@@ -208,8 +212,7 @@
     "커밋 중단",
     "Esc 다음 :cq"
    ]
-  ],
-  "note": "메시지가 있으면 :q!만으로 커밋이 멈춘다고 보지 않는다."
+  ]
  },
  {
   "type": "table",
@@ -240,9 +243,12 @@
     "내리기",
     "다시 add 후 커밋",
     "restore --staged"
+   ],
+   [
+    "확인",
+    "커밋 2개와 clean"
    ]
-  ],
-  "note": "log의 커밋 2개와 working tree clean을 함께 본다."
+  ]
  },
  {
   "type": "eof",

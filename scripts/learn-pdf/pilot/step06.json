@@ -12,7 +12,7 @@
   "cards": [
    [
     "공개",
-    "Pages로 사이트 주소를 열 수 있다"
+    "첫 화면은 index.html"
    ],
    [
     "갱신",
@@ -22,8 +22,7 @@
     "표시",
     "Open Graph와 폰트 조건을 말할 수 있다"
    ]
-  ],
-  "note": "이 실습의 첫 화면 파일은 index.html이다."
+  ]
  },
  {
   "type": "section",
@@ -46,30 +45,37 @@
    [
     "정적 호스팅",
     "준비된 파일을 그대로 제공"
+   ],
+   [
+    "한계",
+    "다른 사람은 PC 경로를 못 연다"
    ]
-  ],
-  "note": "다른 사람은 내 PC 경로를 열 수 없다."
+  ]
  },
  {
   "type": "cards",
   "step": "STEP 06",
   "title": "배포 순서",
-  "cards": [
+  "image": "assets/art-06-publish.png",
+  "caption": "집에서 공개 게시판으로",
+  "rows": [
+   [
+    "단계",
+    "확인"
+   ],
    [
     "push",
-    "게시 브랜치에 올린다"
+    "게시 브랜치"
    ],
    [
     "Actions",
-    "빌드 상태를 본다"
+    "빌드 상태"
    ],
    [
     "Pages",
-    "공개 주소에서 확인한다"
+    "TOKEN push는 빌드가 안 될 수 있다"
    ]
-  ],
-  "note": "GITHUB_TOKEN push는 빌드를 시작하지 않을 수 있다.",
-  "image": "assets/art-06-publish.png"
+  ]
  },
  {
   "type": "table",
@@ -95,9 +101,12 @@
    [
     "시간",
     "수 분에서 최대 10분"
+   ],
+   [
+    "실패",
+    "Actions. 10분은 보장 아님"
    ]
-  ],
-  "note": "실패하면 Actions를 본다. 10분은 보장이 아니다."
+  ]
  },
  {
   "type": "table",
@@ -123,9 +132,12 @@
    [
     "og:url",
     "페이지 주소"
+   ],
+   [
+    "캐시",
+    "예전 미리보기가 남을 수 있다"
    ]
-  ],
-  "note": "고친 뒤에도 예전 미리보기가 한동안 남을 수 있다."
+  ]
  },
  {
   "type": "table",
@@ -151,9 +163,12 @@
    [
     "Open Graph",
     "공유 미리보기"
+   ],
+   [
+    "폰트",
+    "사용 범위가 다르다"
    ]
-  ],
-  "note": "폰트마다 사용 범위가 다르다."
+  ]
  },
  {
   "type": "section",
@@ -172,7 +187,7 @@
   "cards": [
    [
     "01 · 설정",
-    "branch main, 루트, Save"
+    "없으면 브랜치 이름부터"
    ],
    [
     "02 · 확인",
@@ -182,18 +197,16 @@
     "03 · 갱신",
     "푸터를 push하고 Actions를 본다"
    ]
-  ],
-  "note": "main이 없으면 브랜치 이름부터 확인한다."
+  ]
  },
  {
   "type": "code",
   "step": "STEP 06",
   "title": "명령어 한눈에 보기",
   "code": [
-   "git status\ngit add index.html\n# CSS를 만들었으면\ngit add style.css\ngit commit -m \"feat: 푸터\"\ngit push origin main",
+   "# CSS면 commit 전 add\ngit status\ngit add index.html\n# CSS를 만들었으면\ngit add style.css\ngit commit -m \"feat: 푸터\"\ngit push origin main",
    "# Settings\n# Pages\n# branch main\n# folder root\n# Save"
-  ],
-  "note": "CSS를 쓰면 HTML 연결과 두 파일 stage가 commit 전에 필요하다."
+  ]
  },
  {
   "type": "cards",
@@ -210,10 +223,9 @@
    ],
    [
     "옛 화면",
-    "캐시 또는 대기"
+    "전화번호·주소는 올리지 않는다"
    ]
-  ],
-  "note": "공개 페이지에 전화번호·주소·위치 정보를 올리지 않는다."
+  ]
  },
  {
   "type": "table",
@@ -244,9 +256,12 @@
     "미리보기",
     "og 네 태그",
     "HTML head"
+   ],
+   [
+    "실패",
+    "없으면 Actions부터"
    ]
-  ],
-  "note": "반영이 없으면 Actions부터 본다."
+  ]
  },
  {
   "type": "eof",
