@@ -41,7 +41,6 @@ schedule: "15:00–15:45 (수업 45분) / 15:45–16:00 (휴식 및 피날레 15
 
 <Illustration name="prflow" alt="푸시, PR 생성, 리뷰와 수정, 병합, 로컬 동기화, 브랜치 정리의 여섯 단계" />
 
-<a href="https://raw.githubusercontent.com/qus0in-factory/learn/20056c9d5ce381574c260bca370566f4d1604fea/review-assets/83-pr-flow-v2.png" target="_blank" rel="noopener noreferrer">원본 크게 보기 (새 창)</a>
 
 ## 따라하기
 

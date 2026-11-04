@@ -11,7 +11,6 @@
 
 <Illustration name="journey" alt="도구 점검과 Git 설정에서 커밋, 원격 연동, 배포, 기록, 브랜치와 Pull Request 협업까지 이어지는 12단계 학습 흐름" />
 
-<a href="https://raw.githubusercontent.com/qus0in-factory/learn/73c7250d0f277bf54cdec29eb4af6a0e10847a01/review-assets/82-journey.png" target="_blank" rel="noopener noreferrer">원본 크게 보기 (새 창)</a>
 
 ## 강의 목차
 
