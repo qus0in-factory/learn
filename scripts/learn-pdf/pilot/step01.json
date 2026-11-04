@@ -10,7 +10,7 @@
  {"type":"section","title":"실습 단계"},
  {"type":"flow","title":"실습 흐름","cards":[["터미널","VS Code에서 입력 위치와 현재 폴더 확인"],["Git","git --version의 버전 출력 확인"],["OpenCode","짧은 요청의 응답을 읽고 검토"]]},
  {"type":"links","title":"설치 및 사전 준비","cards":[["Git","https://git-scm.com/install/"],["VS Code","https://code.visualstudio.com/download"],["OpenCode","https://opencode.ai/v2/docs/"],["공개 범위","설치와 계정 인증을 구분하고 토큰·비밀 값을 공유하지 않는다"]]},
- {"type":"code","title":"명령어 한눈에 보기","code":["# 지금 실행: 설치 확인\ngit --version\n\n# GitHub 인증 확인은 아님","# STEP 02: 저장소 생성 뒤\ngit status\n\n# 이번 단계는 환경 점검"]},
+ {"type":"code","title":"명령어 한눈에 보기","code":["# Git 설치 확인\ngit --version\n\n# GitHub 인증 확인은 아님","# 저장소 생성 뒤 상태 확인\ngit status\n\n# 설치 확인과 저장소 점검 구분"]},
  {"type":"cards","title":"트러블 슈팅","cards":[["명령 없음","설치·PATH 인식을 확인한다"],["버전 차이","OS·배포판에 따라 숫자가 다를 수 있다"],["AI 지연·오류","연결·한도·서비스 상태를 확인한다. 웹이면 새로고침해 본다"]]},
  {"type":"table","title":"한 장 요약","rows":[["개념","확인할 내용"],["기록","변경 상태와 이유를 남김"],["세 영역","작업 공간 · 인덱스 · 로컬 저장소"],["add 이후 편집","다시 add하기 전까지 새 편집은 커밋에 미포함"],["완료 기준","도구 실행 확인 + 세 영역 설명"]]},
  {"type":"eof","title":"- EOF -"}

@@ -1,5 +1,6 @@
 {
- "author": "IBM Carbon Design System",
+ "author": "IBM Carbon Design System (except STEP01)",
+ "overrides": {"01": {"collection": "Simple Icons", "icon": "git", "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/git.svg", "license": "CC0-1.0", "changes": "Original path and viewBox retained; title omitted to keep EOF text clean. No wordmark. Existing currentColor and opacity retained."}},
  "source": "https://github.com/carbon-design-system/carbon/tree/main/packages/icons",
  "package": "@iconify-json/carbon@1.2.29",
  "collectionVersion": "11.91.0",
