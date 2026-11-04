@@ -68,9 +68,11 @@ sequenceDiagram
 
 ## 푸터 추가 코드
 
-실시간 배포 갱신 실습을 위해 `index.html` 하단에 추가할 푸터 마크업과 스타일이다.
+실시간 배포 갱신 실습을 위해 `index.html` 하단에 추가할 푸터 마크업과 스타일 예시
 
-### `index.html` 하단
+::: details 예시 코드 보기
+
+`index.html` 하단 예시:
 
 ```html
 <!-- </main> 닫는 태그 바로 아래에 추가 -->
@@ -80,7 +82,7 @@ sequenceDiagram
 </footer>
 ```
 
-### `style.css` 하단
+`style.css` 하단 예시:
 
 ```css
 footer {
@@ -94,6 +96,8 @@ footer {
 }
 ```
 
+:::
+
 ## 따라하기
 
 1. 브라우저에서 GitHub의 `portfolio-web` 저장소 페이지를 연다.
@@ -106,7 +110,7 @@ footer {
    - 우측의 `Save` 버튼을 클릭한다.
 5. 페이지 상단에 파란색/초록색 알림 상자가 뜨며 배포가 시작된다. 약 1~2분 후 새로고침하면 `Your site is live at https://...` 링크가 표시된다.
 6. 제공된 배포 링크(`https://계정이름.github.io/portfolio-web/`)를 새 탭에서 열어 내 사이트가 정상적으로 열리는지 확인한다.
-7. VS Code로 돌아와 OpenCode 또는 직접 편집으로 위의 푸터 HTML과 CSS 코드를 추가하고 저장한다.
+7. VS Code로 돌아와 OpenCode 또는 직접 편집으로 푸터 HTML과 CSS를 추가하고 저장한다. 예시는 접힌 예시 코드를 참고한다.
 8. 터미널에서 변경 사항을 커밋하고 푸시한다:
    `git add index.html style.css`
    `git commit -m "feat: 푸터 연락처 및 저작권 영역 추가"`
