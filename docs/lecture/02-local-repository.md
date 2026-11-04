@@ -99,6 +99,8 @@ HTML5로 한글 제목과 자기소개 문단을 작성하고 CSS, JavaScript, �
 
 ## GitHub 가입
 
+GitHub는 Git 저장소를 보관하고 협업하는 서비스 중 하나이며, GitLab·Bitbucket도 Git 원격 저장소를 제공한다. 이 과정은 GitHub 화면으로 실습하고, 서비스별 차이와 Git이 아닌 버전 관리 도구는 [호스팅과 버전 관리](appendix/15-hosting-vcs.md)를 참고한다.
+
 Git 명령은 로컬에서 실행되지만, STEP 05부터 쓰는 원격 저장소와 배포에는 GitHub 계정이 필요하다. 지금 가입해 두면 아래 작업자 정보 등록에 같은 이메일을 쓸 수 있다.
 
 1. [github.com/signup](https://github.com/signup)에서 이메일, 비밀번호, 사용자 이름을 입력해 가입한다.
