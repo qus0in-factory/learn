@@ -73,13 +73,14 @@ flowchart TD
 - [커밋 메시지 규칙](appendix/09-commit-message.md)
 - [.gitignore 패턴](appendix/10-gitignore-patterns.md)
 - [환경 변수와 비밀 정보](appendix/11-environment-secrets.md)
+- [NVIDIA NIM 연결](appendix/12-nvidia-nim.md)
 
 ## 문서 구조
 
 ```mermaid
 flowchart TD
     L["docs/lecture"] --> C["01–12차시 문서<br/>01-environment.md … 12-pull-request.md"]
-    L --> A["appendix/<br/>00-installation.md … 11-environment-secrets.md"]
+    L --> A["appendix/<br/>00-installation.md … 12-nvidia-nim.md"]
 ```
 
 ## 준비물과 안전 규칙
