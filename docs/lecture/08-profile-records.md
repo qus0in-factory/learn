@@ -40,7 +40,7 @@ flowchart TB
     WORK["작업 저장소<br/>(예: portfolio-web)"] --> CODE["포트폴리오 코드와 docs"]
 ```
 
-프로필에는 소개, 관심·학습 내용, 프로젝트, 이력, 구직 정보를 필요한 만큼 적는다. [강사 프로필](https://github.com/qus0in)처럼 간결하게 작성할 수 있다. 프로필의 `Customize your pins`에서 대표 저장소를 고정(Pin)할 수 있다.
+프로필에는 소개, 관심·학습 내용, 프로젝트, 이력, 구직 정보를 필요한 만큼 적는다. [본 자료 작성자](https://github.com/qus0in)처럼 간결하게 작성할 수 있다. 프로필의 `Customize your pins`에서 대표 저장소를 고정(Pin)할 수 있다.
 
 TIL·회고·부검은 기록의 종류이고 KPT·Why-What-How·4F·STAR는 내용을 정리하는 작성 틀이다. 용도와 예시, 작성 프롬프트는 [프로필과 기록 작성](appendix/13-profile-records.md)을 참고한다. 회고와 부검은 향후 하네스 엔지니어링의 자가개선 루프로 연결할 수 있다.
 
