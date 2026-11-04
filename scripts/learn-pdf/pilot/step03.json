@@ -2,8 +2,7 @@
  {
   "type": "cover",
   "step": "STEP 03",
-  "title": "커밋과 이력 기록",
-  "icon": "assets/save.svg"
+  "title": "커밋과 이력 기록"
  },
  {
   "type": "goals",
@@ -238,7 +237,6 @@
  {
   "type": "eof",
   "step": "STEP 03",
-  "title": "- EOF -",
-  "icon": "assets/save.svg"
+  "title": "- EOF -"
  }
 ]

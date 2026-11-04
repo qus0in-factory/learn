@@ -2,8 +2,7 @@
  {
   "type": "cover",
   "step": "STEP 06",
-  "title": "웹사이트 배포",
-  "icon": "assets/version.svg"
+  "title": "웹사이트 배포"
  },
  {
   "type": "goals",
@@ -267,7 +266,6 @@
  {
   "type": "eof",
   "step": "STEP 06",
-  "title": "- EOF -",
-  "icon": "assets/version.svg"
+  "title": "- EOF -"
  }
 ]
