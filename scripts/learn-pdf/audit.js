@@ -1,5 +1,7 @@
 import { fits } from './slide.js';
+import { auditReferences } from './reference-audit.js';
 export function audit(pages) {
+  auditReferences(pages);
   for (const page of pages) {
     if (!fits(page.querySelector('.content'))) throw Error('Final overflow');
   }
