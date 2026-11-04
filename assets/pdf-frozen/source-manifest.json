@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "5c7be8f505c89b1344c049f62d978908abf78bbb",
-  "revision": "affb92ef003a45fc641e0197401e23e37ccb0e21",
+  "sourceCommit": "4381bd299746e35f888c7b37b8262d44ea6126f7",
+  "revision": "f793e72b02b584cc167dd53c92da9736ded7de7a",
   "files": [
     {
       "path": "docs/lecture/01-environment.md",
@@ -483,6 +483,10 @@
       "sha256": "80ee6388bb8a975321aeb638ffd8e12a8f07b79457161d3449fe29c1656924b5"
     },
     {
+      "path": "scripts/learn-pdf/pilot/assets/fork.svg",
+      "sha256": "50ba577279bb5f88982e313e92d701796b73008b62833db2658f862fb6265db8"
+    },
+    {
       "path": "scripts/learn-pdf/pilot/assets/issue-relations.svg",
       "sha256": "f4b269f92c6a793da0dfec808cfa66daf45b9e1cc1a58031d19d6a953ddf02f0"
     },
@@ -607,6 +611,34 @@
       "sha256": "1e586fbb0cf9cccd1e1955d5c3af095edf7f2f183f8390f59bf12149656ba88e"
     },
     {
+      "path": "scripts/learn-pdf/pilot/assets/variety-areas.svg",
+      "sha256": "a34f9c3fd28fca9277c2bd8ab629f739a7c59c65816d19ab92de286966f793bb"
+    },
+    {
+      "path": "scripts/learn-pdf/pilot/assets/variety-branch.svg",
+      "sha256": "f2e56592d184fa4dc741598b8752a2cb69cba9bd2b769f2eef95dc7c64f1d298"
+    },
+    {
+      "path": "scripts/learn-pdf/pilot/assets/variety-docs.svg",
+      "sha256": "7ebc8f903bc186f72f0eeacfbeb1f7208d3defa40c536b9e42faea78e53cdb0b"
+    },
+    {
+      "path": "scripts/learn-pdf/pilot/assets/variety-issue.svg",
+      "sha256": "723238ee8d8301ba72091010f711e84ea9f946ef75b681ef6df14cca062e1ab5"
+    },
+    {
+      "path": "scripts/learn-pdf/pilot/assets/variety-merge.svg",
+      "sha256": "b2edb096b5c1023e595e6c9655cdc45f3a0bb68ebf475a8ea8d8122dd58b3019"
+    },
+    {
+      "path": "scripts/learn-pdf/pilot/assets/variety-pr.svg",
+      "sha256": "287e9631abe67a905f9cd11af98a2f78e091dbaf68d46b3d5e11cd94ce13f9a3"
+    },
+    {
+      "path": "scripts/learn-pdf/pilot/assets/variety-profile.svg",
+      "sha256": "3f0ec8077d17df43110945dad5ea5f83d98e6c9f2c4855789519609d8725d2fd"
+    },
+    {
       "path": "scripts/learn-pdf/pilot/assets/version.svg",
       "sha256": "7548201c2c00bad65618cebc531c8566b4e1bfb03af0ecce07a14b17546046e0"
     },
@@ -624,19 +656,23 @@
     },
     {
       "path": "scripts/learn-pdf/pilot/bounds.mjs",
-      "sha256": "a4c7d6b0b1c5af81ae94f21cd2227843e292dbcd28dfdec6bf116fab80aa28ef"
+      "sha256": "05a3c5156abffca791b71b43fee2f5e451ce6c640ffb00479e0275674a458083"
     },
     {
       "path": "scripts/learn-pdf/pilot/build-diagrams.mjs",
       "sha256": "9682f62e85562e33f2c2f4472caa7883e1632ea96c56ded9817b947849d288b0"
     },
     {
+      "path": "scripts/learn-pdf/pilot/compare.css",
+      "sha256": "0243d721f1e6a03019f64ada52da349bb6664e9132e8ece5435cc82536305924"
+    },
+    {
       "path": "scripts/learn-pdf/pilot/content.mjs",
-      "sha256": "6e9a2f9046aac4cd3c648524429d8c3997134ee8c64e3a3072802ce2221ea707"
+      "sha256": "3dc6a06fa851302a5fe3572ca416d33f4de3d6132c630110a1fbb92a095198c6"
     },
     {
       "path": "scripts/learn-pdf/pilot/contract.mjs",
-      "sha256": "a0d9edaac3d22267295c25864de7a1ee556a85927fba283fac5b597a535d6217"
+      "sha256": "8ab6e2f0c0e205846446c578769d07e9f05cf8b3255f1ff0df08711862605b61"
     },
     {
       "path": "scripts/learn-pdf/pilot/diagram-size.mjs",
@@ -648,7 +684,7 @@
     },
     {
       "path": "scripts/learn-pdf/pilot/diagrams.json",
-      "sha256": "8f57d1f075a3a9840c6d73b52de8ddc0007f995825f89b152a6449033deb8b11"
+      "sha256": "ac4f9e9bcfc3730db4f1152d72419cbd1031f2c61633825ff4b5591a1982e5fe"
     },
     {
       "path": "scripts/learn-pdf/pilot/export.mjs",
@@ -680,7 +716,7 @@
     },
     {
       "path": "scripts/learn-pdf/pilot/overlap.mjs",
-      "sha256": "1224571b56ab78aaccd15035310c00a8f163ce1b16ba5c997ae53e9dd684f090"
+      "sha256": "f56697eb77f704775e9e6c2b1c233bfd6ff9f82bc49694da55e2d9f9ca1bb44b"
     },
     {
       "path": "scripts/learn-pdf/pilot/page.mjs",
@@ -688,7 +724,7 @@
     },
     {
       "path": "scripts/learn-pdf/pilot/prepare.mjs",
-      "sha256": "c1f601620bad11d880e412b0ca27c3efaf76d0c25d7f6842904ef16503214455"
+      "sha256": "56c522be152f695541ec0a88e6dca7190a5b553db614cfb3e1d61ce95087fa59"
     },
     {
       "path": "scripts/learn-pdf/pilot/presentation-audit.mjs",
@@ -707,60 +743,80 @@
       "sha256": "97de60804fd5361f4712241f00d3a93d6023559e93c9ec2c6f93cfffbe87c40d"
     },
     {
+      "path": "scripts/learn-pdf/pilot/rows.css",
+      "sha256": "bf0c54214d9772e666896fc336de6d26432d576bdeaa837a97d6961abae80bda"
+    },
+    {
       "path": "scripts/learn-pdf/pilot/safety.css",
       "sha256": "2ad7ca92b06e58f8b94de0609c420327f0aee2037017a1147dfb295934eef47a"
     },
     {
       "path": "scripts/learn-pdf/pilot/schema.json",
-      "sha256": "2ed4fb9b013bcd3fa05127fc746a5900c53fabdc2b64f6af14424e9b8f8d316f"
+      "sha256": "9dbd35500c341df3413d1e21b1bf4b269652b12557249f49a7cbc5fd2c6cf002"
+    },
+    {
+      "path": "scripts/learn-pdf/pilot/split.css",
+      "sha256": "f013ad42e67fc77689b7b15edf8aee56c0636c5482263e9fd325861252dbe901"
+    },
+    {
+      "path": "scripts/learn-pdf/pilot/stat.css",
+      "sha256": "db51c3eac460b6152a8f6ce930a28c29e1a59d897fa650c935a39257568ff57a"
+    },
+    {
+      "path": "scripts/learn-pdf/pilot/statement.css",
+      "sha256": "6b2f6ef295cde653d36d89547e07e87434f8d7f8294fa788deef96911d5fb9a8"
     },
     {
       "path": "scripts/learn-pdf/pilot/step01.json",
-      "sha256": "655bdef501a0da9ffbda25d7139d7f57999078a216ad91e394e1ab25a5bfb4b7"
+      "sha256": "c7904b797ff3adde7b1b70470693887f66b46a92f8713e24c87c52609ed856fa"
     },
     {
       "path": "scripts/learn-pdf/pilot/step02.json",
-      "sha256": "aa29bc7e898940d416e39039eba8e0fbe09378db0068f6acefc66fe5b4701afa"
+      "sha256": "c8049440ce34ae42bd7e02ab068e5bc8de3437d02cf5281447c62aa179bb0da5"
     },
     {
       "path": "scripts/learn-pdf/pilot/step03.json",
-      "sha256": "4ee04bdbfe60257c50b8cf55e447dc922ca8053b037d50d2eb8705015c4b91e1"
+      "sha256": "d5bc6d4e51ecae41779aa781d56d3627380d880c3b896e66183e656a8e1d4690"
     },
     {
       "path": "scripts/learn-pdf/pilot/step04.json",
-      "sha256": "56ebb667f5d1c2acb67e9c52bfdcf6fd7b5c72d8470f311232fbba1554959f65"
+      "sha256": "dd883a065d7fe4c3df0b01d4658e518c3221331e6319ec254a3ef6cbae20e1b2"
     },
     {
       "path": "scripts/learn-pdf/pilot/step05.json",
-      "sha256": "985d20cc35d0b980b536cdf83675905f74d3120b9f078098b250a6488eaf9dc7"
+      "sha256": "2e0f5cac67cb71a02ec390c84d2c0398c7fcc941e7f9dbd36e57bce79ea6dc39"
     },
     {
       "path": "scripts/learn-pdf/pilot/step06.json",
-      "sha256": "1142d40d2ae902d97d7951860bdedba4ee433d05016006b30e961b8899446b91"
+      "sha256": "cb634a442accbfd6151b864662afaba237b6354c03422cd9f7444beb67363df6"
     },
     {
       "path": "scripts/learn-pdf/pilot/step07.json",
-      "sha256": "6284b81bcda6f7c22e4136489295d3dd68fbfc39773d271c71f0189f6f3051c9"
+      "sha256": "06b7178e58977d17af20ff45c4d7fbe33ff9ff201c014d14f97294d991fbdb24"
     },
     {
       "path": "scripts/learn-pdf/pilot/step08.json",
-      "sha256": "b673c39bee10ec62161489797bee1f6874ac463312cdc9ecbb84d494612a68c6"
+      "sha256": "2c0a75bc6245c86372c347687e2f77dc29783ad82c8f2fd700d980caa4da6bba"
     },
     {
       "path": "scripts/learn-pdf/pilot/step09.json",
-      "sha256": "76de2230dbbfe8c28aa53bea595f0fee6b420083a02b13d3f84e9e75767a2ef6"
+      "sha256": "45b0e1380962e3fc7fd7c24db31da2422af07c44bb5a26503eadc12e7316f118"
     },
     {
       "path": "scripts/learn-pdf/pilot/step10.json",
-      "sha256": "f47aa5897c8d42962e86c0d3f7b04559aa870314db478fab51c42a699de8fd03"
+      "sha256": "3c89b93726b878a8feb04ffc858c205ce923680536e06c0ee7e775408a9f8b13"
     },
     {
       "path": "scripts/learn-pdf/pilot/step11.json",
-      "sha256": "b4e60246ee2a442df247a215f838d12e24ec4a84472e395592295ff51d5e7ac7"
+      "sha256": "34cd385590bb73324fdecf817ca34d72c45a633262fd3f2802f76bf9604fae0a"
     },
     {
       "path": "scripts/learn-pdf/pilot/step12.json",
-      "sha256": "749fa591e77c7c0709882c32b9603f373f4c9a0ecfa12719870e3245b08aa0f5"
+      "sha256": "f503f1329b75874dcd1bc9fdfe25883f3fc64ae9b90313f5380851994251eb96"
+    },
+    {
+      "path": "scripts/learn-pdf/pilot/steps.css",
+      "sha256": "f97718f49aa165bb2d694fc341604c5958f41d1ddc9561d87fa71b87d6812253"
     },
     {
       "path": "scripts/learn-pdf/pilot/subject.mjs",
@@ -777,6 +833,30 @@
     {
       "path": "scripts/learn-pdf/pilot/tokens.mjs",
       "sha256": "ea29e13483e135ef3bdc87893d37f45c56ce4af69707db8309f4e84cab5d784e"
+    },
+    {
+      "path": "scripts/learn-pdf/pilot/variety-contract.mjs",
+      "sha256": "ab758038aea32a7e89f7502db21e19ac32047b26bc561371869dda50d8311848"
+    },
+    {
+      "path": "scripts/learn-pdf/pilot/variety-diagrams.json",
+      "sha256": "b3c219caca2981a964f9128076fbde2ea8322af9344b2e1850522cfe376cd857"
+    },
+    {
+      "path": "scripts/learn-pdf/pilot/variety-emphasis.mjs",
+      "sha256": "937973ffeac1e653bd268bad6c36a0a8b1e3c382e232b68341dda685d48cd19a"
+    },
+    {
+      "path": "scripts/learn-pdf/pilot/variety-list.mjs",
+      "sha256": "e7a2fd2bc856c78e1c6a24f9674126ce636594b07dc802274ba7e1a006d958df"
+    },
+    {
+      "path": "scripts/learn-pdf/pilot/variety-process.mjs",
+      "sha256": "defb32b24f82b77ff2649b41acac962089ac6de3e53b401c93d89b2ead833f6d"
+    },
+    {
+      "path": "scripts/learn-pdf/pilot/variety.mjs",
+      "sha256": "723a6f7ba37c8174af920a609bf4c1d16192c71871ab052a88223d6e94282ca1"
     },
     {
       "path": "scripts/learn-pdf/place.js",

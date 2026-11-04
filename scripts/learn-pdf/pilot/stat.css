@@ -1,0 +1,7 @@
+.stat-body { flex:1; display:grid; grid-template-columns:repeat(var(--count),1fr); gap:24px; align-items:center; }
+.stat-item { min-width:0; }
+.stat-item strong { display:block; font-size:112px; line-height:1; color:var(--brand); margin-bottom:16px; }
+.stat-body[style*="4"] strong { font-size:88px; }
+.stat-body.mono strong { font:700 72px/1 'Learn Mono'; }
+.stat-item b { font-size:32px; }
+.stat-item p { margin:8px 0 0; }

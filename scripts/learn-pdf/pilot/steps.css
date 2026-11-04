@@ -1,0 +1,8 @@
+.steps-body { flex:1; display:grid; grid-template-columns:repeat(var(--count),1fr); align-content:center; gap:24px; }
+.step-item { position:relative; min-width:0; }
+.step-item:not(:last-child)::after { content:''; position:absolute; height:4px; background:var(--soft); left:64px; right:0; top:30px; }
+.number { display:flex; align-items:center; justify-content:center; border-radius:50%; background:var(--brand); color:white; font-weight:700; }
+.step-item .number { width:64px; height:64px; font-size:32px; margin-bottom:24px; }
+.step-item b { font-size:32px; }
+.step-item p { margin:20px 0 16px; white-space:pre-line; }
+.step-item code { display:inline-block; padding:6px 12px; border-radius:10px; background:var(--soft); font:26px 'Learn Mono'; }
