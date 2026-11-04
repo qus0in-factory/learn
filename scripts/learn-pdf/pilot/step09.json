@@ -1,0 +1,17 @@
+[
+ {"type":"cover","step":"STEP 09","title":"할 일을 추적 가능한 약속으로","text":"목적·범위·완료 조건을 적고 해결 상태를 함께 관리한다.","note":"Issue · Label · Milestone · gh"},
+ {"type":"goals","step":"STEP 09","title":"작업을 만들고 추적한다","cards":[["정의","완료 조건이 있는 Issue를 작성할 수 있다"],["분류","Label과 Milestone을 구별할 수 있다"],["관리","웹과 gh로 등록·확인·종료할 수 있다"]]},
+ {"type":"section","step":"STEP 09","title":"핵심 개념 및 구조","text":"본문은 작업의 계약, 분류와 목표 묶음은 찾고 추적하는 기준이다."},
+ {"type":"cards","step":"STEP 09","title":"작업·분류·목표 묶음","icons":["assets/document.svg","assets/list-checked.svg","assets/data-base.svg"],"cards":[["Issue","무엇을 끝낼지 정한 작업"],["Label","종류를 구분하는 표시"],["Milestone","목표에 속한 작업과 해결률"]],"note":"라벨을 붙였다고 작업이 끝나거나 마일스톤에 자동 포함되는 것은 아니다."},
+ {"type":"table","step":"STEP 09","title":"라벨은 의미로 고른다","rows":[["라벨 예","분류 목적"],["bug","오류 보고"],["enhancement","새 기능 요청"],["documentation","문서 작업"],["기록","학습·작업 기록용 사용자 정의 예"]],"note":"기존 라벨을 먼저 확인한다. 수정·삭제는 이미 붙은 이슈의 분류에도 영향을 준다."},
+ {"type":"table","step":"STEP 09","title":"문서와 이슈를 연결한다","rows":[["공간","역할"],["docs/*.md","근거·배운 점·해결 과정 보관"],["Issue","요청·진행·완료 상태 관리"],["양방향 링크","분석 문서와 후속 작업 연결"]],"note":"둘 다 저장소 공개 범위를 따른다. 비공개 공간이라도 유효한 비밀 값을 본문에 적지 않는다."},
+ {"type":"cards","step":"STEP 09","title":"본문에 담을 세 가지","icons":["assets/edit.svg","assets/checkmark.svg","assets/save.svg"],"cards":[["목적","왜 필요한 변경인가"],["범위","무엇을 하고 무엇은 제외하는가"],["완료 조건","어떤 관찰로 끝났다고 판단하는가"]],"note":"TIL·회고·부검을 이슈로 남겨도 종류와 작성 틀은 따로 고른다."},
+ {"type":"section","step":"STEP 09","title":"실습 단계","text":"웹에서 목표와 작업을 만들고, CLI로도 같은 생명주기를 읽는다."},
+ {"type":"flow","step":"STEP 09","title":"웹에서 목표를 묶는다","icons":["assets/terminal.svg","assets/version.svg","assets/chat.svg"],"cards":[["목표 생성","v1.0 포트폴리오 완성 마일스톤"],["작업 등록","다크모드 기능·라이선스 문서 이슈"],["분류·연결","라벨·마일스톤·관련 문서 링크 적용"]],"note":"새로 만든 두 이슈가 모두 열려 있으면 해당 마일스톤 해결률은 0%다."},
+ {"type":"code","step":"STEP 09","title":"CLI 준비와 대상 확인","code":["gh auth status\ngh repo view\ngh label list","# 편집기로 til.md 작성\n# 본문과 공개 범위 검토\n\n# 다른 저장소를 지정할 때\n# --repo 소유자/저장소"],"note":"GitHub CLI 설치·인증·저장소 권한이 필요하다. 대상 저장소의 로컬 폴더에서 실행한다."},
+ {"type":"code","step":"STEP 09","title":"본문 파일로 등록한다","code":["# 라벨이 없을 때만 생성\ngh label create 기록 \\\n  --description \"학습 기록\"","gh issue create \\\n  --title \"TIL: stage 해제\" \\\n  --body-file til.md \\\n  --label 기록"],"note":"라벨 생성과 이슈 등록은 원격 쓰기다. 실습 권한과 내용을 확인한 뒤 수행한다."},
+ {"type":"code","step":"STEP 09","title":"생성 번호로 상태를 읽는다","code":["gh issue list\ngh issue view 123\ngh issue comment 123 \\\n  --body \"검증 결과 추가\"","# 완료 조건을 확인한 뒤\ngh issue close 123\n\n# 닫힌 이슈까지 조회\ngh issue list --state all"],"note":"123은 생성 결과의 실제 번호로 바꾼다. list는 기본적으로 열린 이슈를 보여 준다."},
+ {"type":"table","step":"STEP 09","title":"막혔을 때 확인할 경계","rows":[["증상","확인할 대상"],["인증·등록 실패","gh 인증과 저장소 권한"],["라벨 적용 실패","대상 저장소에 라벨이 존재하는지"],["마일스톤 미표시","생성 위치와 이슈 할당 여부"],["종료 판단 불가","완료 조건과 실제 검증 결과"]],"note":"웹과 CLI는 같은 저장소 상태를 다룬다. 명령 성공만으로 작업 내용의 완성을 판단하지 않는다."},
+ {"type":"table","step":"STEP 09","title":"한 장 요약","rows":[["대상","완료 상태"],["Issue","목적·제외 범위·확인 조건 명시"],["Label·Milestone","작업 종류와 목표에 맞게 할당"],["기록","관련 문서·근거를 링크"],["관리","실제 번호로 조회하고 확인 후 종료"]]},
+ {"type":"eof","step":"STEP 09","title":"다음: 작업의 가지를 나누기","text":"정의한 작업을 독립된 브랜치에서 진행한다.","note":"EOF · 이슈로 작업 관리"}
+]
