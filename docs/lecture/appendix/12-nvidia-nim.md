@@ -11,10 +11,10 @@ OpenCode의 기본 모델이 없거나 느릴 때 NVIDIA NIM의 무료 엔드포
 
 ## 학습 목표
 
-- NVIDIA NIM을 언제 대체 모델로 쓰는지 설명할 수 있다.
-- build.nvidia.com에서 API 키를 발급할 수 있다.
+- NVIDIA NIM을 대체 모델로 쓰는 상황을 설명할 수 있다.
+- build.nvidia.com에서 API 키를 발급한다.
 - OpenCode V2의 `providers` 설정으로 NVIDIA 엔드포인트를 연결할 수 있다.
-- 모델 ID와 무료 엔드포인트의 사용량·데이터 주의를 확인할 수 있다.
+- 모델 ID와 무료 엔드포인트의 사용량·데이터 주의를 확인한다.
 
 ## 왜 필요한가
 
@@ -71,7 +71,7 @@ OpenCode V2는 `opencode.jsonc`의 `providers` 객체에 사용자 정의 공급
 - `models`의 키는 OpenCode에서 쓰는 모델 ID이고, `modelID`는 NVIDIA에 보내는 실제 모델 ID다.
 - 전역 설정으로 쓰려면 `~/.config/opencode/opencode.jsonc`에 같은 `providers`를 둔다. 프로젝트 설정이 전역보다 우선한다.
 
-설정을 저장한 뒤 OpenCode에서 `/models`를 실행하고 `nvidia/nemotron-3.5-lightning-30b-a3b`를 고른다. 목록에 보이지 않으면 OpenCode를 다시 시작하고, 키·`baseURL`·모델 ID를 확인한다. `/connect`는 카탈로그 공급자의 계정을 연결할 때 쓰는 명령이며, 이 사용자 정의 공급자는 위 설정과 환경 변수로 연결한다. 화면 구성은 [OpenCode V2 providers 문서](https://opencode.ai/v2/docs/providers)를 참고한다.
+설정을 저장한 뒤 OpenCode에서 `/models`를 실행하고 `nvidia/nemotron-3.5-lightning-30b-a3b`를 고른다. 목록에 바로 보이지 않으면 OpenCode에서 `/reload`를 실행하고, 키·`baseURL`·모델 ID를 확인한다. `/connect`는 카탈로그 공급자의 계정을 연결할 때 쓰는 명령이며, 이 사용자 정의 공급자는 위 설정과 환경 변수로 연결한다. 화면 구성은 [OpenCode V2 providers 문서](https://opencode.ai/v2/docs/providers)를 참고한다.
 
 ## 모델 선택
 
