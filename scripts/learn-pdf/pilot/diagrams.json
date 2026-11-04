@@ -10,5 +10,9 @@
   "review": "flowchart LR\n D[변경 비교] --> F[피드백]\n F --> C[추가 커밋]\n C --> D",
   "docs-flow": "flowchart LR\n A[원본 작성] --> B[미리보기]\n B --> C[표시 확인]\n C --> D[커밋]",
   "profile-records": "flowchart LR\n P[프로필 저장소] --> H[프로필 첫 화면]\n W[작업 저장소] --> D[코드와 작업 기록]",
-  "issue-relations": "flowchart LR\n M[Milestone] --> I[Issue]\n L[Label] -.-> I\n I --> O[Open]\n O -->|해결 확인| C[Closed]"
+  "issue-relations": "flowchart LR\n M[Milestone] --> I[Issue]\n L[Label] -.-> I\n I --> O[Open]\n O -->|해결 확인| C[Closed]",
+  "parents": "flowchart LR\n C1[첫 커밋] --> C2[일반] --> C3[병합]",
+  "reset": "flowchart LR\n H[HEAD] --- I[인덱스] --- W[작업]",
+  "remote": "flowchart LR\n L[로컬] <--> O[origin]",
+  "pages": "flowchart LR\n P[push] --> S[사이트]"
 }

@@ -1,17 +1,268 @@
 [
- {"type":"cover","step":"STEP 04","title":"되돌리기와 무시 규칙","text":"실수를 고치고 올리면 안 되는 파일을 막는다."},
- {"type":"goals","step":"STEP 04","title":"끝나고 확인할 세 가지","cards":[["고치기","push 전 직전 커밋을 바꿀 수 있다"],["구분","공유된 변경과 로컬 정리를 나눌 수 있다"],["제외","비밀·임시 파일을 추적에서 뺄 수 있다"]],"note":"이미 추적 중인 파일은 무시 목록만으로 빠지지 않는다."},
- {"type":"section","step":"STEP 04","title":"핵심 개념 및 구조","text":"직전 수정, 공유 취소, 무시 규칙을 나눈다."},
- {"type":"table","step":"STEP 04","title":"고치는 이유와 막는 이유","rows":[["목적","예"],["이력 정리","push 전 오타 커밋을 하나로"],["남기면 안 됨",".env와 임시 파일"]],"note":"캐시와 로그도 기록 대상에서 뺀다."},
- {"type":"table","step":"STEP 04","title":"amend 세 가지 형태","rows":[["형태","편집기","용도"],["--amend","연다","기존 메시지 수정"],["--amend -m","안 연다","메시지 교체"],["--amend --no-edit","안 연다","add 뒤 메시지는 유지"]],"note":"직전 커밋을 새 해시로 바꾼다. push 전에만 쓴다."},
- {"type":"table","step":"STEP 04","title":"amend · revert · reset","rows":[["명령","이력","공유 후"],["amend","직전 커밋 교체","쓰지 않는다"],["revert","반대 커밋 추가","쓸 수 있다"],["reset","대상에 맞춤","로컬 정리"]],"note":"reset 대상을 생략하면 HEAD다."},
- {"type":"cards","step":"STEP 04","title":"reset 모드가 건드리는 범위","cards":[["soft","HEAD만 옮긴다"],["mixed","HEAD와 인덱스를 맞춘다"],["hard","작업 트리까지 맞춘다"]],"note":"인자 없는 reset은 커밋을 취소하지 않는다. hard는 실행하지 않는다."},
- {"type":"table","step":"STEP 04","title":"revert는 위에 되돌림을 쌓는다","rows":[["대상","결과"],["기존 커밋","지우지 않는다"],["되돌림","반대 변경을 새 커밋으로"]],"note":"이미 공유된 변경을 취소할 때 쓴다."},
- {"type":"cards","step":"STEP 04","title":"패턴과 비밀 값을 구분한다","cards":[[".env*","아직 추적하지 않은 이름 패턴"],["node_modules/","의존성 폴더"],["!.env.example","무시 규칙 뒤의 예외"]],"note":"example에는 가짜 값만. 이미 커밋된 비밀은 키를 폐기한다."},
- {"type":"section","step":"STEP 04","title":"실습 단계","text":"메시지 교체 → 무시 규칙 저장 → 규칙만 커밋."},
- {"type":"flow","step":"STEP 04","title":"메시지 수정 다음 무시","icons":["assets/edit.svg","assets/terminal.svg","assets/checkmark.svg"],"cards":[["01 · amend","직전 메시지를 바꾸고 해시를 본다"],["02 · 규칙",".env를 보고 .gitignore를 저장한다"],["03 · 기록",".gitignore만 커밋한다"]],"note":"규칙을 저장하기 전에는 .env가 목록에서 사라지지 않는다."},
- {"type":"code","step":"STEP 04","title":"명령어 한눈에 보기","code":["# 메시지 교체만\ngit commit --amend \\\n-m \"docs: 메시지\"\ngit log --oneline\n# 파일 보충은 대안\ngit add 파일\ngit commit --amend \\\n--no-edit","echo \"KEY=sample\" > .env\ngit status\n# 규칙 저장 후\ngit status\ngit add .gitignore\ngit commit -m \"chore: ignore\""],"note":"두 amend는 같이 실행하는 순서가 아니다. hard는 실행하지 않는다."},
- {"type":"cards","step":"STEP 04","title":"안 빠지거나 이미 올렸으면","cards":[["계속 보임","rm --cached 후 커밋"],["이미 push","amend 대신 새 커밋"],["hard","추적 파일의 미커밋 변경을 잃을 수 있다"]],"note":".env만 막으면 .env.local은 남을 수 있다."},
- {"type":"table","step":"STEP 04","title":"한 장 요약","rows":[["개념","끝난 상태","명령"],["직전 수정","해시가 바뀜","--amend"],["공유 취소","반대 커밋","git revert"],["로컬 맞춤","모드별 범위","git reset"],["제외",".env가 목록에서 사라짐",".gitignore"]],"note":"커밋되는 것은 규칙 파일이고 .env는 아니다."},
- {"type":"eof","step":"STEP 04","title":"다음: 기록을 원격에 올린다","text":"로컬 커밋을 빈 원격 저장소와 연결한다.","note":"EOF · STEP 04"}
+ {
+  "type": "cover",
+  "step": "STEP 04",
+  "title": "되돌리기와 무시 규칙",
+  "icon": "assets/edit.svg"
+ },
+ {
+  "type": "goals",
+  "step": "STEP 04",
+  "title": "학습 목표",
+  "cards": [
+   [
+    "고치기",
+    "push 전 직전 커밋을 바꿀 수 있다"
+   ],
+   [
+    "구분",
+    "공유된 변경과 로컬 정리를 나눌 수 있다"
+   ],
+   [
+    "제외",
+    "비밀·임시 파일을 추적에서 뺄 수 있다"
+   ]
+  ],
+  "note": "이미 추적 중인 파일은 무시 목록만으로 빠지지 않는다."
+ },
+ {
+  "type": "section",
+  "step": "STEP 04",
+  "title": "핵심 개념 및 구조"
+ },
+ {
+  "type": "table",
+  "step": "STEP 04",
+  "title": "되돌리는 이유",
+  "rows": [
+   [
+    "목적",
+    "예"
+   ],
+   [
+    "이력 정리",
+    "push 전 오타 커밋을 하나로"
+   ],
+   [
+    "남기면 안 됨",
+    ".env와 임시 파일"
+   ]
+  ],
+  "note": "캐시와 로그도 기록 대상에서 뺀다."
+ },
+ {
+  "type": "table",
+  "step": "STEP 04",
+  "title": "amend 세 가지 형태",
+  "rows": [
+   [
+    "형태",
+    "편집기",
+    "용도"
+   ],
+   [
+    "--amend",
+    "연다",
+    "기존 메시지 수정"
+   ],
+   [
+    "--amend -m",
+    "안 연다",
+    "메시지 교체"
+   ],
+   [
+    "--amend --no-edit",
+    "안 연다",
+    "add 뒤 메시지는 유지"
+   ]
+  ],
+  "note": "직전 커밋을 새 해시로 바꾼다. push 전에만 쓴다."
+ },
+ {
+  "type": "table",
+  "step": "STEP 04",
+  "title": "amend · revert · reset",
+  "rows": [
+   [
+    "명령",
+    "이력",
+    "공유 후"
+   ],
+   [
+    "amend",
+    "직전 커밋 교체",
+    "쓰지 않는다"
+   ],
+   [
+    "revert",
+    "반대 커밋 추가",
+    "쓸 수 있다"
+   ],
+   [
+    "reset",
+    "대상에 맞춤",
+    "로컬 정리"
+   ]
+  ],
+  "note": "reset 대상을 생략하면 HEAD다."
+ },
+ {
+  "type": "cards",
+  "step": "STEP 04",
+  "title": "reset 모드가 건드리는 범위",
+  "cards": [
+   [
+    "soft",
+    "HEAD만 옮긴다"
+   ],
+   [
+    "mixed",
+    "HEAD와 인덱스를 맞춘다"
+   ],
+   [
+    "hard",
+    "작업 트리까지 맞춘다"
+   ]
+  ],
+  "note": "인자 없는 reset은 커밋을 취소하지 않는다. hard는 실행하지 않는다.",
+  "image": "assets/art-04-undo.png"
+ },
+ {
+  "type": "table",
+  "step": "STEP 04",
+  "title": "revert",
+  "rows": [
+   [
+    "대상",
+    "결과"
+   ],
+   [
+    "기존 커밋",
+    "지우지 않는다"
+   ],
+   [
+    "되돌림",
+    "반대 변경을 새 커밋으로"
+   ]
+  ],
+  "note": "이미 공유된 변경을 취소할 때 쓴다."
+ },
+ {
+  "type": "cards",
+  "step": "STEP 04",
+  "title": "패턴과 비밀 값을 구분한다",
+  "cards": [
+   [
+    ".env*",
+    "아직 추적하지 않은 이름 패턴"
+   ],
+   [
+    "node_modules/",
+    "의존성 폴더"
+   ],
+   [
+    "!.env.example",
+    "무시 규칙 뒤의 예외"
+   ]
+  ],
+  "note": "example에는 가짜 값만. 이미 커밋된 비밀은 키를 폐기한다."
+ },
+ {
+  "type": "section",
+  "step": "STEP 04",
+  "title": "실습 단계"
+ },
+ {
+  "type": "flow",
+  "step": "STEP 04",
+  "title": "실습 흐름",
+  "icons": [
+   "assets/terminal.svg",
+   "assets/checkmark.svg"
+  ],
+  "cards": [
+   [
+    "01 · amend",
+    "직전 메시지를 바꾸고 해시를 본다"
+   ],
+   [
+    "02 · 규칙",
+    ".env를 보고 .gitignore를 저장한다"
+   ],
+   [
+    "03 · 기록",
+    ".gitignore만 커밋한다"
+   ]
+  ],
+  "note": "규칙을 저장하기 전에는 .env가 목록에서 사라지지 않는다."
+ },
+ {
+  "type": "code",
+  "step": "STEP 04",
+  "title": "명령어 한눈에 보기",
+  "code": [
+   "# 메시지 교체만\ngit commit --amend \\\n-m \"docs: 메시지\"\ngit log --oneline\n# 파일 보충은 대안\ngit add 파일\ngit commit --amend \\\n--no-edit",
+   "echo \"KEY=sample\" > .env\ngit status\n# 규칙 저장 후\ngit status\ngit add .gitignore\ngit commit -m \"chore: ignore\""
+  ],
+  "note": "두 amend는 같이 실행하는 순서가 아니다. hard는 실행하지 않는다."
+ },
+ {
+  "type": "cards",
+  "step": "STEP 04",
+  "title": "트러블 슈팅",
+  "cards": [
+   [
+    "계속 보임",
+    "rm --cached 후 커밋"
+   ],
+   [
+    "이미 push",
+    "amend 대신 새 커밋"
+   ],
+   [
+    "hard",
+    "추적 파일의 미커밋 변경을 잃을 수 있다"
+   ]
+  ],
+  "note": ".env만 막으면 .env.local은 남을 수 있다."
+ },
+ {
+  "type": "table",
+  "step": "STEP 04",
+  "title": "한 장 요약",
+  "rows": [
+   [
+    "개념",
+    "끝난 상태",
+    "명령"
+   ],
+   [
+    "직전 수정",
+    "해시가 바뀜",
+    "--amend"
+   ],
+   [
+    "공유 취소",
+    "반대 커밋",
+    "git revert"
+   ],
+   [
+    "로컬 맞춤",
+    "모드별 범위",
+    "git reset"
+   ],
+   [
+    "제외",
+    ".env가 목록에서 사라짐",
+    ".gitignore"
+   ]
+  ],
+  "note": "커밋되는 것은 규칙 파일이고 .env는 아니다."
+ },
+ {
+  "type": "eof",
+  "step": "STEP 04",
+  "title": "- EOF -",
+  "icon": "assets/edit.svg"
+ }
 ]
