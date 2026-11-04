@@ -14,11 +14,11 @@ tags: ["Profile", "TIL", "회고", "부검"]
 
 ## 기록과 작성 틀
 
-TIL은 오늘 배운 내용을 적고, 회고는 경험의 느낌과 성찰을 남긴다. 부검은 문제의 원인과 개선·재발 방지를 다룬다. 작성 틀은 이런 기록을 정리하는 방법이며 목적에 맞게 고른다.
+TIL은 배운 내용을 남기고, 회고는 경험을 돌아보며 다음 행동을 정하고, 부검은 문제의 원인과 재발 방지를 다룬다. 이들은 기록의 종류다. 작성 틀은 내용을 배열하는 방법으로, 종류와 별개로 상황에 맞게 고른다. 특정 종류에 한 틀만 써야 하는 것은 아니다.
 
 ### KPT
 
-회고에서 Keep(유지), Problem(문제), Try(시도)를 나눈다. 예: Keep은 매일 기록, Problem은 복습 부족, Try는 주말 복습이다.
+[KPT](https://agilejourney.uzabase.com/entry/2022/10/18/103000)는 Keep(유지할 점), Problem(문제), Try(다음 시도)로 정리하는 틀이다.
 
 ```text
 다음 작업 기록을 KPT로 간결하게 정리해 줘: [기록]
@@ -26,7 +26,7 @@ TIL은 오늘 배운 내용을 적고, 회고는 경험의 느낌과 성찰을 �
 
 ### Why-What-How
 
-제안이나 작업의 이유, 내용, 방법을 정리한다. 예: Why는 문서 찾기 어려움, What은 목차 추가, How는 주제별 링크 정리다.
+Why→What→How는 이유, 내용, 방법 순으로 정리하는 틀이다. [Golden Circle](https://simonsinek.com/golden-circle)의 Why·How·What 질문을 글의 설명 순서에 맞게 바꿔 쓴 것으로, 원래 순서와는 다르다.
 
 ```text
 다음 제안을 Why-What-How로 간결하게 정리해 줘: [내용]
@@ -34,7 +34,7 @@ TIL은 오늘 배운 내용을 적고, 회고는 경험의 느낌과 성찰을 �
 
 ### 4F
 
-회고에서 Fact(사실), Feeling(느낌), Finding(배운 점), Future(앞으로의 행동)를 쓴다. 예: 배포 오류 발생, 당황함, 설정 확인의 중요성 발견, 다음에는 설정부터 점검한다. 항목을 줄이거나 늘린 3~5F 변형도 있다.
+[4F](https://reflection.ed.ac.uk/reflectors-toolkit/reflecting-on-experience/four-f)는 Facts(사실), Feelings(느낌), Findings(배운 점), Future(앞으로의 행동)로 경험을 살피는 틀이다.
 
 ```text
 다음 경험을 사실·느낌·배운 점·다음 행동으로 정리해 줘: [경험]
@@ -42,7 +42,7 @@ TIL은 오늘 배운 내용을 적고, 회고는 경험의 느낌과 성찰을 �
 
 ### STAR
 
-경험을 Situation(상황), Task(과제), Action(행동), Result(결과)로 설명한다. 예: 배포 오류 상황에서 원인 확인을 맡아 설정을 수정하고 정상 배포를 확인했다.
+[STAR](https://nationalcareers.service.gov.uk/careers-advice/interview-advice/the-star-method)는 Situation(상황), Task(과제), Action(행동), Result(결과)로 경험을 설명하는 틀이다.
 
 ```text
 다음 경험을 STAR 형식으로 간결하게 정리해 줘: [경험]
