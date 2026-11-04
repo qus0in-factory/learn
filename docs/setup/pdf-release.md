@@ -1,8 +1,8 @@
 # PDF 배포 가드와 원격 readback
 
-현재 PDF 12개는 revision `992baeb3737fad565f42860e75bbc5c502eadfb4`로 배포·재고정됐다(#33). live 강의 수정과 분리하며 이후 재생성·고정 해제·revision 갱신은 새로운 명시 승인이 필요하다. `pdf-source.json`의 frozen=true와 `assets/pdf-frozen/source-manifest.json`을 유지한다.
+현재 PDF 12개의 고정 revision·장수·namespace는 [운영 목차](../operations/index.md)가 단일 현재값이다. 이번 값은 `f793e72b02b584cc167dd53c92da9736ded7de7a`, 12개/179장(STEP 03은 14장)이다. live 강의 수정과 분리하며 이후 재생성·고정 해제·revision 갱신은 새로운 명시 승인이 필요하다. `pdf-source.json`의 frozen=true와 `assets/pdf-frozen/source-manifest.json`을 유지한다.
 
-제품 정식 릴리스는 v0.2.1이고 PDF namespace는 계속 `v0.1.0/`이다. 이전 revision `0444320a59711d0568077bd9e8ac85daef2d2cda`의 객체·URL도 보존한다. 최신 plain URL은 992baeb revision으로 이동한다.
+제품 정식 릴리스는 v0.2.1이고 PDF namespace는 계속 `v0.1.0/`이다. 보존 객체는 `992baeb3737fad565f42860e75bbc5c502eadfb4`와 `0444320a59711d0568077bd9e8ac85daef2d2cda`다. 최신 plain URL은 현재 revision으로 이동한다.
 
 ## 준비
 
@@ -35,14 +35,16 @@ updater 회귀의 격리 fixture는 자식 URL 테스트를 stub하며, 실제 U
 ## #5의 검증 범위와 CI 정책
 
 사용자 결정으로 **두 OS PDF e2e는 완료 조건에서 제외하고 단위 테스트로 대체**했다.
-`pdf-repro.yml`과 전용 CI bootstrap entry를 제거했다. 기존 로컬 고정 환경의 12개/114장 검증은 근거로 유지한다.
+`pdf-repro.yml`과 전용 CI bootstrap entry를 제거했다. 12개/114장은 과거 고정 환경의 근거이고 현재 장수가 아니다.
 `scripts/learn/pdf-*.test.mjs`는 기존 CI test 스텝의 `scripts/learn/*.test.mjs` glob에서 자동 실행된다.
 브라우저·네트워크 없이 mock과 순수 계산으로 Chromium 경로/버전, 고정 폰트 CSS, fallback 거부, 페이지 크기·분절·경계, 설정 결정성, ZIP SHA 거부를 확인한다.
 PDF 소스 revision·updater·R2 guard 로컬 회귀도 같은 glob에 연결했다. ci.yml은 수정하지 않는다.
 기존 usage.md의 workflow_dispatch/두 환경 비교 안내는 이 결정으로 폐기됐으며 이 문서의 단위 테스트 절차가 우선한다.
-운영 문서까지 포함하는 기존 source hash 계약을 깨지 않기 위해 이번 CI 정책 변경만으로 PDF revision을 갱신하지 않는다.
+`scripts/learn-pdf/source-revision.mjs`는 `docs/lecture`와 `scripts/learn-pdf`만 걷는다. 운영 문서 수정은 그 hash와 PDF revision을 바꾸지 않는다.
 
-## 로컬 Linux 설치 관찰(선택 검증)
+## Linux 설치 관찰
+
+아래는 선택 검증이다.
 
 run 41587181496은 Chromium 다운로드 100% 직후 더 진행하지 못해 20분 제한으로 취소됐다. PDF 생성까지 도달하지 않았다.
 따라서 일반 Playwright 설치기의 성공이나 Linux 재현성 검증으로 취급하지 않는다. Node 전체 문제라고 단정하지도 않는다.

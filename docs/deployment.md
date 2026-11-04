@@ -7,9 +7,9 @@ audience: user
 ## 현재 구성
 
 - `https://echo.qus0in.dev/`는 자료 목록, `/git/`은 Git 과정이다. `/git/slides/`·`/git/docs/`·hdai 배포 예시는 현행 절차가 아니다.
-- `learn-worker/wrangler.jsonc`의 `learn` Worker와 `dist/learn` ASSETS를 쓴다. STEP 12개·부록 12개(환경 준비/Git 활용/문서·웹)·명령어 19개·태그·내장 검색을 제공한다.
-- 폰트·표지·OG·삽화는 `https://files.qus0in.dev/static/<sha256>/...`의 불변 R2 자산이다. 현재 256개이며 `scripts/static-assets/settings.json`이 개수 기준이다.
-- PDF namespace는 `v0.1.0/`, 고정 revision은 `992baeb3737fad565f42860e75bbc5c502eadfb4`이다. 제품 릴리스 번호와 구분한다.
+- `learn-worker/wrangler.jsonc`의 `learn` Worker와 `dist/learn` ASSETS를 쓴다. STEP 12개·부록 17개(환경 6/Git 7/문서·웹 4)·명령어 19개·태그·내장 검색을 제공한다. 부록 수는 [운영 목차](operations/index.md)와 같은 사이드바 원본이다.
+- 폰트·표지·OG·삽화는 `https://files.qus0in.dev/static/<sha256>/...`의 불변 R2 자산이다. 개수 기준은 `scripts/static-assets/settings.json`의 256이며 라이브 실측값은 아니다.
+- PDF namespace는 `v0.1.0/`이다. 현재 고정 revision과 보존 revision은 [운영 목차](operations/index.md)에만 적는다. 제품 릴리스 번호와 구분한다.
 - 보충 원본은 제거했고 `/git/supplement/*`·`/supplement/*`는 `/git/`로 301 이동한다. 강의 본문은 D1을 매번 조회하지 않는 정적 HTML이다.
 
 ## 작업 환경
