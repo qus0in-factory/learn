@@ -1,22 +1,22 @@
-import { ref } from 'vue'
+import { onMounted, ref } from 'vue'
 import { share } from '../course-share.mjs'
-import { ogImage } from '../og-image.mjs'
 import { loadKakao } from './kakao-loader.mjs'
+import { prepared, whenIdle } from './kakao-ready.mjs'
+import { sendFeed } from './kakao-share.mjs'
 
 const key = import.meta.env.VITE_KAKAO_JS_KEY || ''
+
 export function useKakao(course, url, notify) {
   const busy = ref(false)
+  // Load the SDK in advance so the click opens the share window inside the user gesture
+  // (Safari and in-app browsers block windows opened after an async load).
+  onMounted(() => { if (key) whenIdle(() => loadKakao().then(k => prepared(k, key)).catch(() => {})) })
   async function send() {
     if (!key || busy.value) return
-    busy.value = true
     try {
-      const kakao = await loadKakao()
-      if (!kakao.isInitialized()) kakao.init(key)
-      const link = { mobileWebUrl: url, webUrl: url }
-      kakao.Share.sendDefault({ objectType: 'feed', content: {
-        title: course.title, description: course.summary,
-        imageUrl: ogImage(url, import.meta.env.VITE_ASSET_CDN_BASE_URL), link,
-      } })
+      if (window.Kakao?.isInitialized()) return sendFeed(window.Kakao, course, url)
+      busy.value = true
+      sendFeed(prepared(await loadKakao(), key), course, url)
     } catch {
       notify(share.kakaoFailed)
     } finally {
