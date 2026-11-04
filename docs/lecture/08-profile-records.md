@@ -108,6 +108,7 @@ TIL은 오늘 배운 내용 중 다시 참고할 점을 짧게 남기는 기록�
 8. 커밋한다.
 9. `git push origin main`으로 `portfolio-web`에 반영한다.
 10. 저장소의 `Wiki` 탭을 열고 `Create the first page`로 첫 페이지를 만든 뒤 저장한다. `Edit`으로 내용을 고치고 다른 페이지 이름을 `[[페이지 이름]]`으로 적어 연결한다. Wiki가 지원되지 않거나 권한이 없으면 `docs/wiki-draft.md`에 기록한다.
+
 Profile 저장소의 `README.md`를 렌더링하면 소개 문구와 관심 기술이 아래처럼 보인다.
 
 <Screenshot name="step08-profile-readme" alt="Demo User 소개와 관심 분야, 학습 내용" />

@@ -45,6 +45,7 @@ flowchart TB
    - 제목은 한 줄로 요약하고, 본문에는 무엇을 왜 바꿨는지 적는다. 대표 접두어와 작성 예시는 [커밋 메시지 규칙](appendix/09-commit-message.md) 부록을 참고한다.
 
 `git commit`에 `-m "메시지"`를 붙이면 명령줄에서 메시지를 바로 넘길 수 있다. `-m`을 빠뜨리면 Git의 기본 편집기(vim, nano 등)가 열려 메시지를 입력하게 된다. vi 화면에서 빠져나오는 법과 VS Code 전환은 [vi 편집기](appendix/08-vi-editor.md) 부록을 참고한다.
+
 `-m` 없이 `git commit`을 실행하면 아래처럼 커밋 메시지를 입력하는 편집기가 열린다. 첫 줄에 메시지를 적고 저장한 뒤 종료한다.
 
 <Screenshot name="step03-commit-editor" alt="vim 커밋 메시지 화면에 `docs: add index`와 스테이징된 `index.html` 안내가 보인다." />
@@ -100,6 +101,7 @@ STEP 03에서 소개 문구를 보강하고 스타일을 다듬는 수정 예시
    `git commit -m "docs: 학습 목표 섹션 및 문구 추가"`
 10. `git log --oneline`으로 누적된 2개의 커밋 이력을 확인한다.
 11. 깨끗한 작업 트리 상태(`working tree clean`)를 확인한다.
+
 첫 커밋을 만들면 아래처럼 커밋이 만들어졌다는 출력이 나온다. 메시지와 파일 이름은 각자 정한 값으로 나타난다.
 
 <Screenshot name="step02-first-commit" alt="`$ git commit -m &quot;docs: add index&quot;`와 그 커밋이 만들어졌다는 완료 출력이 보인다." />

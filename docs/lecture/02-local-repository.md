@@ -69,9 +69,10 @@ HTML5로 한글 제목과 자기소개 문단을 작성하고 CSS, JavaScript, �
 ### 생성 결과 확인
 
 생성이 끝나면 파일 탐색기에서 `index.html`을 브라우저로 열어 제목과 소개 문단이 보이는지 확인한다.
+
 브라우저에서 열면 제목과 소개 문단이 아래처럼 보인다. 문구와 모양은 요청 결과에 따라 달라질 수 있다.
 
-<Screenshot name="step01-first-page" alt="안녕하세요 제목과 첫 웹페이지라는 문장이 표시된 화면" />
+<Screenshot name="step01-first-page" alt="인사말 제목과 첫 웹페이지라는 문장이 표시된 화면" />
 
 
 ### 예시 코드 참고
@@ -122,6 +123,7 @@ Git 명령은 로컬에서 실행되지만, STEP 05부터 쓰는 원격 저장�
 6. `git status`를 실행하여 생성한 파일이 Untracked 상태로 표시되는지 확인한다. 폴더가 묶여 표시될 수도 있다.
 7. `git add index.html images/.gitkeep`을 입력해 스테이징 영역에 파일을 올린다.
 8. `git status`를 다시 실행하여 파일들이 초록색 `Changes to be committed:` 목록으로 올라갔는지 확인한다.
+
 `git status`를 처음 실행하면 아직 추적하지 않는 파일이 `Untracked files:` 아래에 나열된다. 아래 화면은 `index.html`만 있는 저장소의 예시다.
 
 <Screenshot name="step02-status-untracked" alt="`$ git status`에 커밋이 없고, 추적되지 않은 파일로 `index.html`이 보인다." />

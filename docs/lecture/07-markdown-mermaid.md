@@ -64,6 +64,7 @@ GitHub README에 아래 문법을 쓸 수 있다. 더 자세한 내용은 [GitHu
 8. 커밋 메시지를 작성하고 커밋한다.
 9. `git push origin main`으로 원격에 반영한다.
 10. GitHub 저장소 메인 화면에서 README와 Mermaid가 렌더링되는지 확인한다.
+
 `README.md`를 미리 보면 제목, 목록 같은 마크다운 문법이 서식이 적용된 화면으로 보인다.
 
 <Screenshot name="step07-readme" alt="첫 프로젝트 소개와 시작하기, 프로젝트 구성 목록" />

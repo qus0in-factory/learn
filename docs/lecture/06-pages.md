@@ -150,6 +150,7 @@ footer {
    ```
 9. GitHub 저장소 상단의 `Actions` 탭을 클릭하여 `pages build and deployment` 워크플로가 돌아가는 것을 확인한다.
 10. 초록색 체크 표시가 뜨면(약 1분 소요), 브라우저의 배포 URL 탭을 강력 새로고침(`Ctrl + Shift + R` 또는 `Cmd + Shift + R`)하여 푸터가 반영되었는지 확인한다.
+
 배포가 끝난 사이트는 누구나 공개 주소로 열 수 있다. 아래는 이 과정 사이트의 첫 화면으로, 공개 주소로 열리는 정적 사이트의 예시다. 내 사이트는 `https://계정이름.github.io/portfolio-web/` 주소에서 직접 만든 페이지로 열린다.
 
 <Screenshot name="step06-public-page" alt="과정 사이트 예시: Go Git 과정의 제목과 표지, 왼쪽 강의 목차" />

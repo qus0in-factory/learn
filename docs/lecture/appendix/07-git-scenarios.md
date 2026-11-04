@@ -73,6 +73,7 @@ flowchart TD
 9. 직접 실행: `git log --oneline`으로 커밋 세 개가 의도한 순서로 쌓였는지 본다.
 
 실수로 `git add .`를 눌러 세 파일이 함께 stage됐다면 `git restore --staged style.css`처럼 파일 단위로 stage를 해제한다. 작업 파일은 그대로 남는다.
+
 시작 화면의 예시다. 새 파일 세 개가 `git status`에 추적되지 않은 파일로 보인다. 파일 이름과 상태는 각자의 저장소에 따라 다르다.
 
 <Screenshot name="appendix07-start" alt="`$ git status`에 추적되지 않은 `index.html`, `about.html`, `style.css`가 보인다." />

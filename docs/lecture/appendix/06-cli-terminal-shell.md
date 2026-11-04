@@ -64,6 +64,7 @@ flowchart TB
 3. `pwd`를 입력해 현재 폴더를 확인한다.
 4. `which git`을 입력해 셸이 찾은 Git 프로그램의 위치를 확인한다.
 5. `git --version`을 입력해 Git이 실행되는지 확인한다.
+
 `echo $SHELL`은 사용 중인 셸을, `which git`은 셸이 찾은 Git 프로그램의 위치를 보여 준다. 위치는 설치 방식에 따라 다를 수 있다.
 
 <Screenshot name="appendix06-shell-which" alt="`$ echo $SHELL`은 `/bin/zsh`, `$ which git`은 `/usr/bin/git`이다." />

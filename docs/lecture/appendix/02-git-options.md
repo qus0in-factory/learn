@@ -45,6 +45,7 @@ Git 명령을 필수 명령, 참고 명령, 수업에서 쓰지 않는 위험 �
 | `git remote add origin 주소` | 원격 저장소 주소 등록 |
 | `git remote -v` | 등록된 원격 주소 확인 |
 | `git push -u origin main` | 첫 업로드와 업스트림 설정 |
+
 `git status`, `git diff`, `git log --oneline`을 이어서 실행하면 수정 파일, 바뀐 줄, 커밋 이력을 차례로 확인할 수 있다.
 
 <Screenshot name="appendix02-commands" alt="`$ git status`의 수정된 `index.html`, `$ git diff`의 추가 줄 `&lt;p>Card&lt;/p>`, `$ git log --oneline`의 `docs: add index`가 차례로 보인다. push는 없다." />

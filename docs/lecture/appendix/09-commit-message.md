@@ -55,6 +55,7 @@ feat: 로그인 실패 메시지 추가
 - 첫 줄은 제목이다. 무엇을 했는지 한눈에 보인다.
 - 빈 줄 뒤의 두 줄은 본문이다. 무엇이 문제였고 왜 바꿨는지 적었다.
 - `수정`, `업데이트`, `ㅇㅇ`처럼 짧기만 한 제목은 피한다.
+
 접두어와 내용이 있는 제목은 `git log --oneline`에서 무엇을 바꿨는지 바로 읽힌다.
 
 <Screenshot name="appendix09-log-good" alt="`$ git log --oneline`에 `docs: add index`, `feat: add card`, `fix: correct title`이 보인다." />

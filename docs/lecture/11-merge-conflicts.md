@@ -92,6 +92,7 @@ flowchart TB
 13. 병합이 완료된 뒤 `git branch -d feature/profile-design`으로 브랜치를 정리한다.
 
 편집기에서 병합 메시지를 작성할 때는 [vi 편집기](appendix/08-vi-editor.md) 부록을 참고한다.
+
 충돌이 난 파일을 열면 `<<<<<<<`, `=======`, `>>>>>>>` 마커 사이에 양쪽 변경이 함께 들어 있다. 두 변경의 의도를 읽고 마커를 지워 정리한다.
 
 <Screenshot name="step11-conflict-markers" alt="`$ cat index.html` 결과에 `&lt;&lt;&lt;&lt;&lt;&lt;&lt;`, `=======`, `>>>>>>>` 충돌 마커가 보인다." />

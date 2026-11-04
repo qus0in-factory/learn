@@ -69,6 +69,7 @@ flowchart LR
     HARD --> STAGE
     HARD --> WORK["작업 공간"]
 ```
+
 `git reset`은 기본값인 `--mixed`로 스테이징만 취소하고 수정한 내용은 작업 공간에 남긴다. 아래 화면에서 `reset` 뒤에도 `index.html`이 수정된 상태로 남아 있다.
 
 <Screenshot name="step04-reset" alt="`$ git reset` 다음에 `Unstaged changes after reset:`와 `M index.html`이 보이고, 이어서 `$ git status`에 스테이징되지 않은 `index.html` 수정이 보인다. `--hard`는 없다." />
@@ -84,6 +85,7 @@ gitGraph
     commit id: "잘못된 변경"
     commit id: "잘못된 변경 되돌리기"
 ```
+
 `git revert --no-edit HEAD`를 실행하면 기존 커밋은 그대로 두고, 변경을 되돌리는 새 커밋이 이력 맨 위에 쌓인다.
 
 <Screenshot name="step04-revert" alt="`$ git revert --no-edit HEAD`의 되돌림 커밋 완료 출력 뒤에 `$ git log --oneline`이 있고, 맨 위가 `Revert &quot;docs: edit index&quot;`다." />
@@ -124,6 +126,7 @@ node_modules/
    git commit -m "chore: .gitignore 파일 추가"
    ```
 8. `git status`로 모든 작업 트리가 깨끗해진 것을 확인한다.
+
 `.gitignore`를 만들기 전에는 `.env`가 추적되지 않은 파일로 나타난다. 파일 안의 값은 `git status` 화면에 표시되지 않는다.
 
 <Screenshot name="step04-status-before-gitignore" alt="`$ git status`에 추적되지 않은 `.env`가 보인다. 파일 값은 화면에 없다." />

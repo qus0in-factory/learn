@@ -57,6 +57,7 @@ gitGraph
 8. 현재 `main`에 `v0.1.0` 태그를 부여한다.
 9. 태그 목록을 확인한다.
 10. 브랜치 삭제는 아직 하지 않는다. 병합 뒤 STEP 11에서 수행한다.
+
 `git branch`, `git tag`, `git log --graph --oneline --all`을 차례로 실행하면 브랜치 목록과 태그, 브랜치와 태그가 달린 커밋이 보인다. 아직 병합하지 않은 상태라 그래프는 갈라지지 않는다.
 
 <Screenshot name="step10-log-graph" alt="`$ git branch`에 `feature/profile-design`과 현재 브랜치 `main`, `$ git tag`에 `v0.1.0`, `$ git log --graph --oneline --all`에 그 브랜치와 태그가 달린 두 커밋이 보인다. 병합 그래프는 아니다." />
