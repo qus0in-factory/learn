@@ -4,5 +4,5 @@
 .number { display:flex; align-items:center; justify-content:center; border-radius:50%; background:var(--brand); color:white; font-weight:700; }
 .step-item .number { width:64px; height:64px; font-size:32px; margin-bottom:24px; }
 .step-item b { font-size:32px; }
-.step-item p { margin:20px 0 16px; }
+.step-item p { margin:20px 0 16px; white-space:pre-line; }
 .step-item code { display:inline-block; padding:6px 12px; border-radius:10px; background:var(--soft); font:26px 'Learn Mono'; }
