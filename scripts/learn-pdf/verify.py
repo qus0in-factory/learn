@@ -4,6 +4,7 @@ from pathlib import Path
 from subprocess import check_output
 from bounds import check_bounds
 from samples import render_samples
+from verify_text import check_text
 
 root = Path(sys.argv[1])
 manifest = json.loads((root / 'manifest.json').read_text())
@@ -16,9 +17,7 @@ for lesson in manifest:
                  if line.startswith('Title:'))
     assert title == lesson['title'], (pdf, title)
     text = check_output(['pdftotext', str(pdf), '-']).decode()
-    pages = text.split('\f')[:-1]
-    assert len(pages) == lesson['pages'] > 1
-    assert all(len(p.strip()) > 15 and '\ufffd' not in p for p in pages)
+    check_text(lesson['name'], text, lesson['pages'])
     (root / (lesson['name'] + '.txt')).write_text(text)
     render_samples(root, lesson, pdf)
-    print(lesson['name'], len(pages), '16:9/text/bounds OK')
+    print(lesson['name'], lesson['pages'], '16:9/text/bounds OK')
