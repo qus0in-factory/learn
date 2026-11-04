@@ -62,7 +62,11 @@
     "id": "0da79a4cd81d8626014f8b4bdbd769bd",
     "url": "https://gist.github.com/qus0in/0da79a4cd81d8626014f8b4bdbd769bd",
     "files": [
-      "writing-template-1.md"
+      "git-commands-1.sh",
+      "writing-template-1.md",
+      "writing-template-2.md",
+      "writing-template-3.md",
+      "writing-template-4.md"
     ]
   },
   "10-branches-tags": {
