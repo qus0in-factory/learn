@@ -1,0 +1,9 @@
+{
+ "author": "IBM Carbon Design System",
+ "source": "https://github.com/carbon-design-system/carbon/tree/main/packages/icons",
+ "package": "@iconify-json/carbon@1.2.29",
+ "collectionVersion": "11.91.0",
+ "license": "Apache-2.0; carbon-LICENSE.txt",
+ "mapping": "../subjects.json",
+ "changes": "Original SVG paths and viewBox retained. currentColor inherits the existing deck theme. Cover opacity and size are layout properties, not new brand colors."
+}
