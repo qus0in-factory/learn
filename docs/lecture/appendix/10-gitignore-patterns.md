@@ -72,6 +72,11 @@ git commit -m "chore: 추적하지 않을 환경 파일 제거"
 - `git rm --cached`는 인덱스에서만 제거한다. 작업 폴더의 파일은 지우지 않는다.
 - 폴더를 통째로 제거하려면 `git rm -r --cached <폴더>`를 쓴다.
 
+`git check-ignore -v .env`는 `.env`를 무시하는 규칙의 위치와 패턴을 `.gitignore:1:.env`처럼 보여 준다.
+
+<Screenshot name="appendix10-check-ignore" alt="`$ git check-ignore -v .env` 결과가 `.gitignore:1:.env`와 `.env`로 보인다." />
+
+
 ## 체크리스트
 
 - [ ] 주석과 빈 줄이 패턴으로 해석되지 않는지 확인했다.

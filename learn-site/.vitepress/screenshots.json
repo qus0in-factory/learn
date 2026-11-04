@@ -1,0 +1,174 @@
+{
+  "appendix00-git-version": {
+    "width": 1280,
+    "height": 122
+  },
+  "appendix02-commands": {
+    "width": 1280,
+    "height": 532
+  },
+  "appendix03-after": {
+    "width": 1280,
+    "height": 800
+  },
+  "appendix03-before": {
+    "width": 1280,
+    "height": 800
+  },
+  "appendix04-mermaid": {
+    "width": 1280,
+    "height": 800
+  },
+  "appendix05-macos-path": {
+    "width": 1280,
+    "height": 176
+  },
+  "appendix06-shell-which": {
+    "width": 1280,
+    "height": 176
+  },
+  "appendix07-done": {
+    "width": 1280,
+    "height": 252
+  },
+  "appendix07-mid": {
+    "width": 1280,
+    "height": 330
+  },
+  "appendix07-start": {
+    "width": 1280,
+    "height": 380
+  },
+  "appendix08-vi-command": {
+    "width": 1280,
+    "height": 860
+  },
+  "appendix08-vi-insert": {
+    "width": 1280,
+    "height": 860
+  },
+  "appendix08-vi-normal": {
+    "width": 1280,
+    "height": 860
+  },
+  "appendix08-vi-wq": {
+    "width": 1280,
+    "height": 860
+  },
+  "appendix09-log-bad": {
+    "width": 1280,
+    "height": 176
+  },
+  "appendix09-log-good": {
+    "width": 1280,
+    "height": 176
+  },
+  "appendix10-check-ignore": {
+    "width": 1280,
+    "height": 122
+  },
+  "appendix11-env-example": {
+    "width": 1280,
+    "height": 860
+  },
+  "appendix11-env": {
+    "width": 1280,
+    "height": 860
+  },
+  "appendix11-gitignore": {
+    "width": 1280,
+    "height": 860
+  },
+  "step01-first-page": {
+    "width": 1280,
+    "height": 800
+  },
+  "step01-git-version": {
+    "width": 1280,
+    "height": 122
+  },
+  "step02-first-commit": {
+    "width": 1280,
+    "height": 176
+  },
+  "step02-local-page": {
+    "width": 1280,
+    "height": 800
+  },
+  "step02-status-staged": {
+    "width": 1280,
+    "height": 302
+  },
+  "step02-status-untracked": {
+    "width": 1280,
+    "height": 330
+  },
+  "step03-commit-editor": {
+    "width": 1280,
+    "height": 834
+  },
+  "step03-diff": {
+    "width": 1280,
+    "height": 278
+  },
+  "step03-log-oneline": {
+    "width": 1280,
+    "height": 150
+  },
+  "step04-reset": {
+    "width": 1280,
+    "height": 354
+  },
+  "step04-revert": {
+    "width": 1280,
+    "height": 278
+  },
+  "step04-status-after-gitignore": {
+    "width": 1280,
+    "height": 330
+  },
+  "step04-status-before-gitignore": {
+    "width": 1280,
+    "height": 330
+  },
+  "step06-public-page": {
+    "width": 1280,
+    "height": 710
+  },
+  "step07-mermaid": {
+    "width": 1280,
+    "height": 800
+  },
+  "step07-readme": {
+    "width": 1280,
+    "height": 800
+  },
+  "step08-post-mortem": {
+    "width": 1280,
+    "height": 800
+  },
+  "step08-profile-readme": {
+    "width": 1280,
+    "height": 800
+  },
+  "step08-til": {
+    "width": 1280,
+    "height": 800
+  },
+  "step10-log-graph": {
+    "width": 1280,
+    "height": 278
+  },
+  "step11-conflict-markers": {
+    "width": 1280,
+    "height": 226
+  },
+  "step11-merge-graph": {
+    "width": 1280,
+    "height": 252
+  },
+  "step11-status-resolved": {
+    "width": 1280,
+    "height": 278
+  }
+}

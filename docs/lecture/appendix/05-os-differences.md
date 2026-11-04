@@ -46,6 +46,11 @@ Git Bash의 창 종류와 버전, 설정에 따라 단축키와 우클릭 동작
 4. 인증 실패 시 해당 OS의 자격 증명 저장소에서 GitHub 항목만 확인한다.
 5. 수업 도구의 설치 링크와 순서는 [설치 준비](00-installation.md)를 참고한다. 이 부록은 OS별 경로와 인증 차이를 확인할 때 사용한다.
 
+macOS 터미널에서 `pwd`로 현재 폴더를, `echo $SHELL`로 사용 중인 셸을 확인한 예시다. 폴더 경로는 사람마다 다르고 셸은 보통 `/bin/zsh`로 나온다.
+
+<Screenshot name="appendix05-macos-path" alt="`$ pwd`는 `/tmp/demo-project`, `$ echo $SHELL`은 `/bin/zsh`다. 기기 임시 경로와 홈 경로는 없다." />
+
+
 ## 체크리스트
 
 - [ ] `pwd`가 내 교육용 폴더를 가리킨다.

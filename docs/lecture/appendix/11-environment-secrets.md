@@ -56,6 +56,19 @@ DATABASE_URL=
 - `.env.example`은 키 목록을 설명하는 문서 역할을 한다. 실제 값을 넣지 않는다.
 - `.env`를 이미 커밋했다면 `.gitignore`에 추가하는 것만으로는 부족하다. `git rm --cached .env`로 인덱스에서 제거하고 키를 교체한다.
 
+`.env`에는 실제 값을 넣는다. 아래 화면의 값은 별표로 가린 예시이며 실제 비밀이 아니다.
+
+<Screenshot name="appendix11-env" alt="vi로 연 `.env`에 `API_KEY=********`와 `TOKEN=********`만 있다. 실제 비밀을 가린 값이 아니라 처음부터 적은 예시 값이다." />
+
+`.env.example`에는 키 이름만 적고 값은 비워 둔다.
+
+<Screenshot name="appendix11-env-example" alt="vi로 연 `.env.example`에 값이 비어 있는 `API_KEY=`와 `TOKEN=`만 있다." />
+
+`.gitignore`에 `.env` 한 줄을 적어 실제 값이 든 파일을 커밋에서 제외한다.
+
+<Screenshot name="appendix11-gitignore" alt="vi로 연 `.gitignore`에 `.env` 한 줄이 있다." />
+
+
 ## 체크리스트
 
 - [ ] 비밀 정보에 해당하는 값을 코드에 직접 적지 않았다.

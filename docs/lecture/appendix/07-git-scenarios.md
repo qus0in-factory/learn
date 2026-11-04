@@ -74,6 +74,19 @@ flowchart TD
 
 실수로 `git add .`를 눌러 세 파일이 함께 stage됐다면 `git restore --staged style.css`처럼 파일 단위로 stage를 해제한다. 작업 파일은 그대로 남는다.
 
+시작 화면의 예시다. 새 파일 세 개가 `git status`에 추적되지 않은 파일로 보인다. 파일 이름과 상태는 각자의 저장소에 따라 다르다.
+
+<Screenshot name="appendix07-start" alt="`$ git status`에 추적되지 않은 `index.html`, `about.html`, `style.css`가 보인다." />
+
+커밋을 하나 만든 뒤에는 `git log --oneline`에 그 커밋이 보이고, `git status`에는 아직 커밋하지 않은 파일만 남는다.
+
+<Screenshot name="appendix07-mid" alt="`$ git log --oneline`에 `docs: add index`가 있고, `$ git status`에는 아직 추적되지 않은 `about.html`과 `style.css`만 보인다." />
+
+변경을 나누어 모두 커밋하면 커밋이 차례로 쌓이고 `git status`가 `nothing to commit, working tree clean`을 보여 준다.
+
+<Screenshot name="appendix07-done" alt="`$ git log --oneline`에 `docs: add index`, `docs: add about`, `style: add stylesheet`가 있고, `$ git status`는 `nothing to commit, working tree clean`이다." />
+
+
 ### 확인
 
 - [ ] `git status`가 깨끗하다(커밋할 변경 없음).
