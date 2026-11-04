@@ -28,6 +28,8 @@ HTML 파일을 브라우저로 바로 열면 주소창에 인터넷 주소 대�
 
 링크를 공유하면 서비스가 페이지의 제목·설명·이미지를 먼저 보여 준다. 이 미리보기 값을 정하는 meta 태그가 Open Graph다. `index.html`의 `<head>`에 `og:title`·`og:description`·`og:image`·`og:url`을 넣으면 카카오톡·X 같은 서비스가 이 값을 읽어 미리보기를 만든다.
 
+태그 설명은 [Open Graph 프로토콜](https://ogp.me/)을 참고한다. 카카오톡 공유 미리보기는 [카카오 공유 디버거](https://developers.kakao.com/tool/debugger/sharing)에서 확인할 수 있으며 로그인이 필요하다.
+
 ### OpenCode 요청
 
 OpenCode에 아래 요청문을 입력한다. 오른쪽 위의 복사 버튼으로 복사할 수 있다.
