@@ -2,7 +2,9 @@ import { readFile } from 'node:fs/promises';
 import { diagramSize } from './diagram-size.mjs';
 import { subject } from './subject.mjs';
 import { loadImage } from './media.mjs';
+import { contract } from './contract.mjs';
 export async function assets(deck) {
+  await contract(deck);
   await subject(deck);
   const uri = async path => 'data:image/svg+xml;base64,' +
     (await readFile(new URL(path, import.meta.url))).toString('base64');

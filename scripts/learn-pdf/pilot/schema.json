@@ -5,7 +5,7 @@
     "type": "object",
     "required": ["type", "title"],
     "properties": {
-      "type": {"enum": ["cover", "goals", "section", "table", "cards", "flow", "links", "code", "eof"]},
+      "type": {"enum": ["cover", "goals", "section", "table", "cards", "flow", "links", "code", "image", "eof"]},
       "title": {"type": "string"},
       "step": {"type": "string"},
       "label": {"type": "string"},
