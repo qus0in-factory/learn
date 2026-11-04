@@ -30,7 +30,7 @@ schedule: "10:00–10:45 (수업 45분) / 10:45–11:00 (휴식 15분)"
 
 ### 저장소 역할 구분
 
-Profile 저장소와 작업 저장소는 노출되는 곳과 담는 내용이 다르다.
+Profile 저장소와 작업 저장소의 역할 구분
 
 ```mermaid
 flowchart TB
@@ -66,7 +66,7 @@ git push origin main
 
 ## Post-mortem 예시
 
-Post-mortem은 한 번 쓰고 끝내지 않고 다음 작업에 반영한다.
+한 번 쓰고 끝내지 않고 다음 작업에 반영하는 Post-mortem의 고리
 
 ```mermaid
 flowchart TB

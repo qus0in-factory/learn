@@ -22,8 +22,8 @@ schedule: "14:00–14:45 (수업 45분) / 14:45–15:00 (휴식 15분)"
 클라우드에서 Git 저장소를 호스팅해 주는 서비스가 **GitHub**이다. 쓰면 좋은 점은 세 가지다.
 
 1. 안전한 원격 백업: 어디서든 다른 PC에서 내 코드를 그대로 복원할 수 있다.
-2. 동료와의 협업: 하나의 저장소를 중심으로 여러 사람이 함께 코드를 수정하고 합칠 수 있다.
-3. 배포의 기초: 다음 STEP에서 배울 GitHub Pages로 인터넷에서 접속할 수 있는 웹사이트를 무료로 공개할 수 있다.
+2. 동료와의 협업: 하나의 저장소를 중심으로 여러 사람이 함께 코드를 수정하고 합친다.
+3. 배포의 기초: 다음 STEP에서 배울 GitHub Pages로 웹사이트를 무료로 공개하는 바탕이 된다.
 
 ## 원격 연결과 동기화 메커니즘
 
@@ -48,7 +48,7 @@ flowchart LR
 
 ### 복제와 가져오기
 
-`fork`, `clone`, `pull`은 저장소 사이에서 코드가 움직이는 방향이 다르다.
+`fork`, `clone`, `pull`로 저장소 사이를 오가는 코드의 방향
 
 ```mermaid
 flowchart TB
@@ -84,7 +84,7 @@ flowchart TB
 명령 이름이 어떤 뜻인지 알면 외우기 쉽다.
 
 - `remote`: 멀리 떨어진(원격) 저장소를 뜻한다.
-- `origin`: 처음 가져온 출처라는 뜻의 관례적 별칭이다.
+- `origin`: 처음 가져온 출처라는 뜻의 관례적 별칭
 - `push`는 원격으로 밀어 올리고, `pull`은 원격에서 끌어오며, `clone`은 통째로 복제한다.
 
 명령어 참조: [git remote](commands/remote.md) · [git clone](commands/clone.md) · [git push](commands/push.md) · [git pull](commands/pull.md) · [git branch](commands/branch.md)

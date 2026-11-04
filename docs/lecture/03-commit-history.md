@@ -110,10 +110,10 @@ STEP 03에서 소개 문구를 보강하고 스타일을 다듬는 수정 예시
 
 명령 이름이 어떤 뜻인지 알면 외우기 쉽다.
 
-- `commit`: 변경을 이력에 확정해 맡긴다(commit)는 뜻이다.
-- `log`: 기록(log)을 시간순으로 읽는다는 뜻이다.
-- `diff`: 차이(difference)의 줄임말이다.
-- `restore`: 이전 상태로 복원한다는 뜻이다.
+- `commit`: 변경을 이력에 확정해 맡긴다(commit)는 뜻
+- `log`: 기록(log)을 시간순으로 읽는다는 뜻
+- `diff`: 차이(difference)의 줄임말
+- `restore`: 이전 상태로 복원한다는 뜻
 
 명령어 참조: [git add](commands/add.md) · [git commit](commands/commit.md) · [git log](commands/log.md) · [git diff](commands/diff.md) · [git restore](commands/restore.md)
 

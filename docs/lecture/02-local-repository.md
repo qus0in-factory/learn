@@ -25,7 +25,7 @@ schedule: "10:00–10:45 (수업 45분) / 10:45–11:00 (휴식 15분)"
 
 ## 파일 상태와 스테이징 원리
 
-Git에서 파일은 그냥 놓여 있는 것이 아니라 상태가 바뀌어 간다.
+Git에서 파일 상태가 바뀌는 흐름
 
 ```mermaid
 stateDiagram-v2
@@ -149,8 +149,8 @@ Git 명령은 내 컴퓨터에서 실행되지만, STEP 05부터 쓰는 원격 �
 
 명령 이름이 어떤 뜻인지 알면 외우기 쉽다.
 
-- `status`: 상태(status)를 보여 준다는 뜻이다.
-- `add`: 변경한 파일을 스테이징 영역에 더한다(add)는 뜻이다.
+- `status`: 상태(status)를 보여 준다는 뜻
+- `add`: 변경한 파일을 스테이징 영역에 더한다(add)는 뜻
 
 명령어 참조: [git config](commands/config.md) · [git init](commands/init.md) · [git status](commands/status.md) · [git add](commands/add.md)
 

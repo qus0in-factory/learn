@@ -54,7 +54,7 @@ flowchart TD
 
 ### reset 모드 비교
 
-`reset`의 세 모드는 되돌리는 범위가 다르다. 화살표는 각 모드가 되돌리는 영역을 가리킨다.
+`reset`의 세 모드와 각 모드가 되돌리는 영역
 
 ```mermaid
 flowchart LR
@@ -68,7 +68,7 @@ flowchart LR
 
 ### revert 이력 모양
 
-`revert`는 이력을 지우지 않고 되돌리는 커밋을 하나 더한다.
+`revert`로 되돌리는 커밋이 하나 더해지는 이력 모양
 
 ```mermaid
 gitGraph
@@ -117,9 +117,9 @@ Thumbs.db
 
 명령 이름이 어떤 뜻인지 알면 외우기 쉽다.
 
-- `amend`: 고쳐 바로잡는다는 뜻이다.
+- `amend`: 고쳐 바로잡는다는 뜻
 - `revert`: 되돌린다는 뜻이며, 되돌리는 내용을 새 커밋으로 남긴다.
-- `reset`: 이전 상태로 다시 설정한다는 뜻이다.
+- `reset`: 이전 상태로 다시 설정한다는 뜻
 
 명령어 참조: [git status](commands/status.md) · [git add](commands/add.md) · [git commit](commands/commit.md) · [git log](commands/log.md) · [git rm](commands/rm.md) · [git revert](commands/revert.md)
 

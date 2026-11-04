@@ -29,7 +29,7 @@ schedule: "11:00–11:45 (수업 45분) / 11:45–12:00 (휴식 15분)"
 
 ### Issue 관계도
 
-Milestone은 Issue를 묶고, Label은 Issue를 분류하며, Issue는 Open에서 Closed로 바뀐다.
+Milestone, Label, Issue의 관계와 Issue 상태 변화
 
 ```mermaid
 flowchart TB
