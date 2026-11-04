@@ -1,0 +1,16 @@
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.card { background: var(--soft); padding: 28px; border-radius: 18px; }
+.card b { display: block; font-size: 30px; color: var(--brand); }
+.card p { margin-bottom: 0; }
+.flow .card { text-align: center; }
+.flow .card:not(:last-child)::after { content: '→'; display: block;
+  font-size: 40px; color: var(--brand); }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 16px 20px; text-align: left; }
+th { background: var(--ink); color: var(--paper); }
+td { background: var(--soft); border-bottom: 4px solid var(--paper); }
+.code .grid, .links .grid { grid-template-columns: 1fr 1fr; }
+pre { padding: 28px; background: var(--ink); color: var(--paper);
+  font-size: 25px; white-space: pre-wrap; border-radius: 18px; }
+a { overflow-wrap: anywhere; }
+tr:first-child td { background: var(--ink); color: var(--paper); }

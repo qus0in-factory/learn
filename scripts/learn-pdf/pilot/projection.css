@@ -1,0 +1,18 @@
+.deck { display: flex; flex-direction: column; padding: 44px 64px 58px; gap: 16px; }
+h1 { font-size: 50px; margin: 0 0 8px; flex-shrink: 0; }
+p, td { font-size: 28px; line-height: 1.35; }
+.eyebrow { font-size: 20px; }
+.deck > .grid, .deck > table { flex: 1; min-height: 0; }
+.card { display: flex; flex-direction: column; justify-content: center; padding: 24px; }
+.card b { font-size: 32px; }
+.card p { margin: 16px 0 0; }
+.note { margin: 0; padding: 0; font-size: 24px; background: transparent; flex-shrink: 0; }
+pre { font-size: 28px; margin: 0; display: flex; align-items: center; }
+td { padding: 12px 20px; }
+.icon { width: 52px; height: 52px; margin-bottom: 16px; }
+.diagram { width: 100%; height: 220px; flex-shrink: 0; display: flex;
+  align-items: center; justify-content: center; }
+.diagram svg { max-width: 100%; max-height: 220px; }
+.flow .card::after { display: none !important; }
+.cover h1, .section h1, .eof h1 { font-size: 76px; }
+.cover > p, .section > p, .eof > p { font-size: 34px; max-width: 1000px; }

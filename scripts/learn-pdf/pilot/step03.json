@@ -1,0 +1,255 @@
+[
+ {
+  "type": "cover",
+  "step": "STEP 03",
+  "title": "커밋과 이력 기록",
+  "icon": "assets/save.svg"
+ },
+ {
+  "type": "goals",
+  "step": "STEP 03",
+  "title": "학습 목표",
+  "cards": [
+   [
+    "기록",
+    "commit으로 스냅샷. 메시지는 한 줄"
+   ],
+   [
+    "조회",
+    "로그와 diff로 차이와 이력을 읽을 수 있다"
+   ],
+   [
+    "구별",
+    "stage 해제와 편집기 종료를 나눌 수 있다"
+   ]
+  ]
+ },
+ {
+  "type": "section",
+  "step": "STEP 03",
+  "title": "핵심 개념 및 구조"
+ },
+ {
+  "type": "cards",
+  "step": "STEP 03",
+  "title": "커밋",
+  "icons": [
+   "assets/document.svg",
+   "assets/version.svg"
+  ],
+  "cards": [
+   [
+    "스냅샷",
+    "파일 저장과 다른 기록"
+   ],
+   [
+    "메시지",
+    "무엇을 바꿨는지 한 줄"
+   ],
+   [
+    "기준점",
+    "다시 확인할 지점"
+   ]
+  ]
+ },
+ {
+  "type": "cards",
+  "step": "STEP 03",
+  "title": "커밋의 부모",
+  "cards": [
+   [
+    "첫 커밋",
+    "부모가 없다"
+   ],
+   [
+    "일반 커밋",
+    "부모가 하나다"
+   ],
+   [
+    "병합 커밋",
+    "부모가 둘 이상"
+   ]
+  ],
+  "diagram": "assets/parents.svg"
+ },
+ {
+  "type": "table",
+  "step": "STEP 03",
+  "title": "해시 읽는 법",
+  "rows": [
+   [
+    "항목",
+    "값",
+    "주의"
+   ],
+   [
+    "전체",
+    "SHA-1은 40자리",
+    "SHA-256은 더 길다"
+   ],
+   [
+    "로그",
+    "보통 앞 7자리",
+    "설정에 따라 더 길다"
+   ],
+   [
+    "인자",
+    "앞 4자리 이상",
+    "짧으면 겹칠 수 있다"
+   ]
+  ]
+ },
+ {
+  "type": "table",
+  "step": "STEP 03",
+  "title": "커밋 메시지",
+  "rows": [
+   [
+    "부분",
+    "예"
+   ],
+   [
+    "한 줄",
+    "무엇을 바꿨는지"
+   ],
+   [
+    "접두어",
+    "feat docs style fix"
+   ],
+   [
+    "피할 말",
+    "수정 완료, test, asdf"
+   ]
+  ]
+ },
+ {
+  "type": "table",
+  "step": "STEP 03",
+  "title": "diff의 기준과 변경",
+  "rows": [
+   [
+    "명령",
+    "기준",
+    "변경"
+   ],
+   [
+    "git diff",
+    "스테이징",
+    "작업 공간"
+   ],
+   [
+    "git diff --staged",
+    "HEAD",
+    "스테이징"
+   ],
+   [
+    "git diff HEAD",
+    "HEAD",
+    "작업 공간"
+   ],
+   [
+    "빈 diff",
+    "add 직후 인자 없는 diff"
+   ]
+  ]
+ },
+ {
+  "type": "section",
+  "step": "STEP 03",
+  "title": "실습 단계"
+ },
+ {
+  "type": "flow",
+  "step": "STEP 03",
+  "title": "실습 흐름",
+  "icons": [
+   "assets/checkmark.svg",
+   "assets/terminal.svg",
+   "assets/edit.svg"
+  ],
+  "cards": [
+   [
+    "01 · 첫 커밋",
+    "올린 파일을 메시지로 확정한다"
+   ],
+   [
+    "02 · 비교",
+    "고친 뒤 status와 diff를 읽는다"
+   ],
+   [
+    "03 · 둘째",
+    "다시 add한 뒤 커밋"
+   ]
+  ]
+ },
+ {
+  "type": "code",
+  "step": "STEP 03",
+  "title": "명령어 한눈에 보기",
+  "code": [
+   "git commit -m \"feat: 첫 페이지\"\ngit log --oneline\ngit log",
+   "git diff\ngit diff --staged\ngit add index.html\ngit restore --staged \\\nindex.html\ngit status\ngit add index.html\ngit commit -m \"docs: 문구\""
+  ]
+ },
+ {
+  "type": "cards",
+  "step": "STEP 03",
+  "title": "vi에서 종료와 중단",
+  "cards": [
+   [
+    "저장 종료",
+    "Esc 다음 :wq"
+   ],
+   [
+    "편집 포기",
+    "Esc 다음 :q!"
+   ],
+   [
+    "커밋 중단",
+    "Esc 다음 :cq"
+   ]
+  ]
+ },
+ {
+  "type": "table",
+  "step": "STEP 03",
+  "title": "한 장 요약",
+  "rows": [
+   [
+    "개념",
+    "끝난 상태",
+    "명령"
+   ],
+   [
+    "커밋",
+    "스냅샷과 메시지",
+    "git commit -m"
+   ],
+   [
+    "이력",
+    "커밋이 둘",
+    "git log --oneline"
+   ],
+   [
+    "차이",
+    "기준에서 변경으로",
+    "git diff"
+   ],
+   [
+    "내리기",
+    "다시 add 후 커밋",
+    "restore --staged"
+   ],
+   [
+    "확인",
+    "커밋 2개와 clean"
+   ]
+  ]
+ },
+ {
+  "type": "eof",
+  "step": "STEP 03",
+  "title": "- EOF -",
+  "icon": "assets/save.svg"
+ }
+]

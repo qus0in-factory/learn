@@ -1,0 +1,253 @@
+[
+ {
+  "type": "cover",
+  "step": "STEP 02",
+  "title": "저장소 준비와 파일 추적",
+  "icon": "assets/document.svg"
+ },
+ {
+  "type": "goals",
+  "step": "STEP 02",
+  "title": "학습 목표",
+  "cards": [
+   [
+    "등록",
+    "작성자·커미터 기본값을 둘 수 있다"
+   ],
+   [
+    "준비",
+    "git init으로 저장소를 만들 수 있다"
+   ],
+   [
+    "추적",
+    "status와 add로 고른다"
+   ]
+  ]
+ },
+ {
+  "type": "section",
+  "step": "STEP 02",
+  "title": "핵심 개념 및 구조"
+ },
+ {
+  "type": "image",
+  "step": "STEP 02",
+  "title": "세 영역의 흐름",
+  "image": "assets/art-02-stages.png",
+  "caption": "편집, 선택, 기록"
+ },
+ {
+  "type": "table",
+  "step": "STEP 02",
+  "title": "작업자 정보",
+  "rows": [
+   [
+    "항목",
+    "뜻"
+   ],
+   [
+    "이름·이메일",
+    "작성자·커미터 기본값"
+   ],
+   [
+    "--global",
+    "사용자 기본값. 저장소 설정이 덮음"
+   ],
+   [
+    "계정",
+    "가입 메일과 맞추면 연결"
+   ]
+  ]
+ },
+ {
+  "type": "table",
+  "step": "STEP 02",
+  "title": ".git 폴더가 하는 일",
+  "rows": [
+   [
+    "폴더",
+    "기억"
+   ],
+   [
+    "일반 폴더",
+    "과거 상태를 기억하지 않는다"
+   ],
+   [
+    "git init 후",
+    "숨김 폴더에 이력이 쌓인다"
+   ],
+   [
+    "주의",
+    ".git 안은 직접 고치지 않는다"
+   ]
+  ]
+ },
+ {
+  "type": "cards",
+  "step": "STEP 02",
+  "title": "새 파일과 수정 파일의 해제",
+  "cards": [
+   [
+    "올리기",
+    "git add로 Staged가 된다"
+   ],
+   [
+    "새 파일",
+    "HEAD에 없으면 인덱스에서만 뺀다"
+   ],
+   [
+    "수정 파일",
+    "HEAD에 있으면 staged만 푼다"
+   ]
+  ]
+ },
+ {
+  "type": "table",
+  "step": "STEP 02",
+  "title": "상태별 git status 표시",
+  "rows": [
+   [
+    "상태",
+    "보이는 곳"
+   ],
+   [
+    "Untracked",
+    "Untracked files"
+   ],
+   [
+    "Modified",
+    "Changes not staged"
+   ],
+   [
+    "Staged",
+    "Changes to be committed"
+   ],
+   [
+    "Unmodified",
+    "변경 목록에 없음"
+   ],
+   [
+    "clean",
+    "변경이 전혀 없을 때"
+   ]
+  ]
+ },
+ {
+  "type": "table",
+  "step": "STEP 02",
+  "title": "빈 폴더와 .gitkeep",
+  "rows": [
+   [
+    "항목",
+    "뜻"
+   ],
+   [
+    "추적 단위",
+    "빈 폴더 자체는 기록되지 않는다"
+   ],
+   [
+    ".gitkeep",
+    "폴더를 남기는 이름 관례다"
+   ],
+   [
+    "주의",
+    ".gitignore를 두면 무시 규칙"
+   ]
+  ]
+ },
+ {
+  "type": "section",
+  "step": "STEP 02",
+  "title": "실습 단계"
+ },
+ {
+  "type": "flow",
+  "step": "STEP 02",
+  "title": "실습 흐름",
+  "icons": [
+   "assets/terminal.svg",
+   "assets/edit.svg",
+   "assets/save.svg"
+  ],
+  "cards": [
+   [
+    "01 · 등록",
+    "이름·이메일을 확인하고 폴더를 만든다"
+   ],
+   [
+    "02 · 파일",
+    "init 뒤 페이지와 .gitkeep을 둔다"
+   ],
+   [
+    "03 · 선택",
+    "status로 읽고 add한 뒤 다시 본다"
+   ]
+  ]
+ },
+ {
+  "type": "code",
+  "step": "STEP 02",
+  "title": "명령어 한눈에 보기",
+  "code": [
+   "# 2.46+는 set·list도 동작\ngit config --global \\\nuser.name \"이름\"\ngit config --global \\\nuser.email \"메일\"\ngit config --global \\\n--list\nmkdir portfolio-web\ncd portfolio-web\ngit init",
+   "# index.html 저장 후\nmkdir -p images\ntouch images/.gitkeep\ngit status\ngit add index.html\ngit add images/.gitkeep\ngit status"
+  ]
+ },
+ {
+  "type": "cards",
+  "step": "STEP 02",
+  "title": "트러블 슈팅",
+  "cards": [
+   [
+    "오타",
+    "같은 config 명령으로 덮어쓴다"
+   ],
+   [
+    "명령 실패",
+    "폴더와 git init 여부를 확인한다"
+   ],
+   [
+    "잘못 올림",
+    "파일 이름을 지정해 add"
+   ]
+  ]
+ },
+ {
+  "type": "table",
+  "step": "STEP 02",
+  "title": "한 장 요약",
+  "rows": [
+   [
+    "개념",
+    "끝난 상태",
+    "명령"
+   ],
+   [
+    "작업자",
+    "작성자·커미터 기본값",
+    "git config --global"
+   ],
+   [
+    "저장소",
+    ".git이 생긴다",
+    "git init"
+   ],
+   [
+    "상태",
+    "목록으로 읽는다",
+    "git status"
+   ],
+   [
+    "선택",
+    "두 파일이 staged",
+    "git add 파일"
+   ]
+  ]
+ },
+ {
+  "type": "eof",
+  "step": "STEP 02",
+  "title": "- EOF -",
+  "icon": "assets/document.svg"
+ }
+]

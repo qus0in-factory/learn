@@ -8,7 +8,8 @@ export function exportCase() {
     + '교안: [STEP 01 §Fixture](https://echo.qus0in.dev/git/01-fixture#fixture)\n\n'
     + '- Fixture content\n');
   const fixture = new URL('./export-fixture.mjs', import.meta.url).href;
-  const hooks = reexportMocks(['summary.mjs', 'page.mjs', 'inspect.mjs', 'font-audit.mjs'],
+  const hooks = reexportMocks(['pilot/prepare.mjs', 'font-audit.mjs',
+    'pilot/bounds.mjs', 'pilot/geometry.mjs', 'pilot/presentation-audit.mjs', 'pilot/overlap.mjs'],
     fixture, new URL('../learn-pdf/', import.meta.url));
   return { dir, file, hooks };
 }

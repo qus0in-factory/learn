@@ -1,0 +1,11 @@
+{
+ "author": "IBM Carbon Design System (except Simple Icons STEP01,05,07)",
+ "releaseOverrides": {"07": {"collection": "Simple Icons", "icon": "markdown", "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/markdown.svg", "license": "CC0-1.0", "changes": "Original path/viewBox; title omitted; no wordmark."}, "11": {"collection": "Carbon", "icon": "warning--alt", "source": "https://raw.githubusercontent.com/carbon-design-system/carbon/main/packages/icons/src/svg/32/warning--alt.svg", "license": "Apache-2.0", "meaning": "Conflict requires attention and resolution", "changes": "Original visible paths/rect/viewBox; transparent artboard omitted."}},
+ "overrides": {"01": {"collection": "Simple Icons", "icon": "git", "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/git.svg", "license": "CC0-1.0", "changes": "Original path and viewBox retained; title omitted to keep EOF text clean. No wordmark. Existing currentColor and opacity retained."}},
+ "source": "https://github.com/carbon-design-system/carbon/tree/main/packages/icons",
+ "package": "@iconify-json/carbon@1.2.29",
+ "collectionVersion": "11.91.0",
+ "license": "Apache-2.0; carbon-LICENSE.txt",
+ "mapping": "../subjects.json",
+ "changes": "Carbon paths retained except subject-05, which uses the Simple Icons GitHub mark path only (no wordmark or title). currentColor inherits the deck theme. Cover opacity and size are layout properties."
+}
