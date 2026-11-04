@@ -12,12 +12,12 @@ schedule: "14:00–14:45 (수업 45분) / 14:45–15:00 (휴식 15분)"
 - GitHub 웹사이트에서 새 빈 원격 저장소를 만들 수 있다.
 - 로컬 저장소의 기본 브랜치 이름을 `main`으로 맞출 수 있다.
 - `git remote add origin`으로 로컬 저장소와 GitHub 원격 저장소를 연결할 수 있다.
-- `git push -u origin main`으로 내 컴퓨터의 커밋을 처음으로 클라우드에 올릴 수 있다.
+- `git push -u origin main`으로 로컬 커밋을 처음으로 클라우드에 올릴 수 있다.
 - `clone`, `pull`, `fork`의 차이를 설명할 수 있다.
 
 ## 클라우드 협업이 필요한 이유
 
-지금까지 작성한 커밋과 코드는 내 컴퓨터(`.git`)에만 저장되어 있었다. 만약 컴퓨터를 분실하거나 디스크가 고장 나면 그동안 작성한 작업물이 사라질 수 있다.
+지금까지 작성한 커밋과 코드는 로컬 저장소(`.git`)에만 저장되어 있었다. 만약 컴퓨터를 분실하거나 디스크가 고장 나면 그동안 작성한 작업물이 사라질 수 있다.
 
 클라우드에서 Git 저장소를 호스팅해 주는 서비스가 **GitHub**이다. 쓰면 좋은 점은 세 가지다.
 
@@ -31,7 +31,7 @@ schedule: "14:00–14:45 (수업 45분) / 14:45–15:00 (휴식 15분)"
 
 ```mermaid
 flowchart LR
-    LR["로컬 저장소<br/>(내 컴퓨터, 예: portfolio-web)"] -->|git push -u origin main| GH["GitHub 원격 저장소<br/>(클라우드: origin)"]
+    LR["로컬 저장소<br/>(로컬, 예: portfolio-web)"] -->|git push -u origin main| GH["GitHub 원격 저장소<br/>(클라우드: origin)"]
     GH -->|git pull origin main| LR
 ```
 
@@ -42,7 +42,7 @@ flowchart LR
 3. **업스트림 등록 (`push -u`)**
    - 처음 푸시할 때 `-u` (또는 `--set-upstream`) 옵션을 주면, 현재 로컬 `main` 브랜치가 원격 저장소의 `origin/main` 브랜치를 바라보도록 연결 고리를 형성한다. 이후에는 단순히 `git push`나 `git pull`만 입력해도 자동으로 동기화된다.
 4. **원격 코드 다루기: clone, pull, fork**
-   - **`clone`**: 원격 저장소의 모든 커밋 이력과 코드를 내 컴퓨터로 통째로 복제하여 다운로드한다.
+   - **`clone`**: 원격 저장소의 모든 커밋 이력과 코드를 로컬로 통째로 복제해 내려받는다.
    - **`pull`**: 원격 저장소에 새로 추가된 최신 커밋들을 내 로컬 브랜치로 가져와 병합한다.
    - **`fork`**: 다른 사람의 GitHub 저장소를 내 GitHub 계정의 원격 저장소로 복사해 온다 (오픈소스 기여 시 주로 사용).
 
@@ -53,7 +53,7 @@ flowchart LR
 ```mermaid
 flowchart TB
     UP["다른 사람의 저장소"] -->|fork| FORK["내 GitHub 저장소"]
-    FORK -->|clone| LOCAL["내 컴퓨터"]
+    FORK -->|clone| LOCAL["로컬 저장소"]
     LOCAL -->|push| FORK
     FORK -->|pull| LOCAL
 ```
