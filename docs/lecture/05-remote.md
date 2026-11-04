@@ -58,6 +58,21 @@ flowchart TB
     FORK -->|pull| LOCAL
 ```
 
+## 인증 준비
+
+첫 `git push`에서 GitHub가 로그인을 요구한다. 비밀번호나 토큰을 직접 입력하지 않고 브라우저 로그인으로 인증한다. 원격 저장소를 연결하기 전에 운영체제에 맞게 한 번만 준비한다.
+
+### macOS
+
+1. [GitHub CLI(`gh`)](https://cli.github.com)를 설치한다. Homebrew를 쓴다면 `brew install gh`를 입력한다. 설치 파일을 쓰려면 [릴리스 페이지](https://github.com/cli/cli/releases/latest)에서 `.pkg` 파일을 받는다. 공식 문서 기준으로 `.pkg`는 서명되지 않은 파일일 수 있어 macOS가 경고할 수 있다. 자세한 방법은 [macOS 설치 안내](https://github.com/cli/cli/blob/trunk/docs/install_macos.md)를 참고한다.
+2. 터미널에서 `gh auth login`을 입력하고 `GitHub.com`, `HTTPS`, `Login with a web browser` 순서로 고른다. Git 자격 증명을 함께 설정할지 물으면 `Y`를 입력한다. 브라우저에 나오는 일회용 코드를 입력해 승인한다. 단계별 설명은 [gh auth login 안내](https://cli.github.com/manual/gh_auth_login)를 참고한다.
+3. `gh auth status`로 로그인 상태를 확인한다.
+
+### Windows
+
+- Git for Windows에는 Git Credential Manager가 들어 있다. 첫 `git push`를 하면 브라우저 로그인 창이 뜨며, GitHub 계정으로 로그인해 승인한다. [Git Credential Manager](https://github.com/git-ecosystem/git-credential-manager)와 [GitHub 자격 증명 저장 안내](https://docs.github.com/ko/get-started/git-basics/caching-your-github-credentials-in-git)를 참고한다.
+- GitHub CLI(`gh`)가 필요하면 [Windows 설치 안내](https://github.com/cli/cli/blob/trunk/docs/install_windows.md)의 공식 MSI 파일로 설치한 뒤 `gh auth login`을 실행한다. 선택 사항이다.
+
 ## 따라하기
 
 1. 브라우저에서 GitHub(github.com)에 로그인한다.
@@ -154,11 +169,11 @@ clone과 fork 차이 초보자 눈높이 비교 설명
 | --- | --- | --- |
 | `fatal: remote origin already exists` | 이미 `origin`이라는 이름으로 주소가 등록됨 | `git remote -v`로 확인하고, 주소가 틀렸다면 `git remote set-url origin 올바른주소`로 바꾼다. 다른 실수는 [원격 등록 실수 대응](#원격-등록-실수-대응)을 참고한다. |
 | `error: failed to push some refs ... (non-fast-forward)` | GitHub에서 빈 저장소를 만들지 않고 README 등을 함께 생성함 | GitHub 저장소를 삭제 후 체크박스를 모두 풀고 빈 저장소로 다시 만들거나 강사에게 문의한다. |
-| 인증 실패 또는 403 Forbidden 오류 | 이전 다른 계정 자격 증명이 남아있거나 토큰 만료 | Windows 자격 증명 관리자에서 이전 계정을 삭제하고 재인증한다. 상세 절차는 [자격 증명 재인증](appendix/01-authentication.md)과 [운영체제별 차이](appendix/05-os-differences.md) 부록을 참고한다. |
+| 인증 실패 또는 403 Forbidden 오류 | 이전 다른 계정의 로그인 정보가 남아 있거나 로그인이 만료됨 | Windows 자격 증명 관리자에서 이전 계정을 삭제하고 재인증한다. 상세 절차는 [자격 증명 재인증](appendix/01-authentication.md)과 [운영체제별 차이](appendix/05-os-differences.md) 부록을 참고한다. |
 
 ## 주의할 점
 
-- Personal Access Token이나 비밀번호를 절대 소스 코드 파일이나 공개 채팅, 이슈에 남기지 않는다.
+- 비밀번호나 로그인 토큰을 소스 코드 파일, 공개 채팅, 이슈에 남기지 않는다.
 - 원격 저장소의 이력을 강제로 덮어쓰는 `git push --force` (또는 `-f`) 명령은 팀원의 작업을 덮어쓸 수 있으므로 절대 실행하지 않는다.
 - 상세한 인증 문제 해결은 [자격 증명 재인증](appendix/01-authentication.md) 부록을 참고한다.
 
