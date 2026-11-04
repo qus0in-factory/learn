@@ -22,7 +22,7 @@ const { frontmatter, page } = useData()
       <PageUpdated />
     </template>
     <template #doc-before>
-      <CourseBreadcrumb v-if="/^git\/(?:\d{2}-|appendix\/|commands\/|tags)/.test(page.relativePath)" />
+      <CourseBreadcrumb v-if="/^git\/(?:\d{2}-|appendix\/|commands\/|tags|glossary)/.test(page.relativePath)" />
       <StepIntro v-if="frontmatter.stepHeader" :key="page.relativePath" />
     </template>
   </DefaultTheme.Layout>

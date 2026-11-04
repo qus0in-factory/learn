@@ -9,6 +9,6 @@ const appendices = ['00-installation', '01-authentication', '02-git-options',
 export const commandPages = commandOrder
 
 export const expectedPages = ['index.html', '404.html', 'licenses.html', 'privacy.html', 'git/index.html',
-  'git/catalog.html', 'git/tags.html', ...lectures.map(name => `git/${name}.html`),
+  'git/catalog.html', 'git/tags.html', 'git/glossary.html', ...lectures.map(name => `git/${name}.html`),
   ...appendices.map(name => `git/appendix/${name}.html`),
   ...commandPages.map(name => `git/commands/${name}.html`)]

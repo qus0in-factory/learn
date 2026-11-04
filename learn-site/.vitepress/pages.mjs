@@ -5,6 +5,7 @@ export const pages = {
   'lecture/appendix/:page': 'git/appendix/:page',
   'lecture/commands/:page': 'git/commands/:page',
   'lecture/tags.md': 'git/tags.md',
+  'lecture/glossary.md': 'git/glossary.md',
 }
 
 export const excluded = [
