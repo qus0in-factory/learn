@@ -17,10 +17,28 @@ Mermaid는 Markdown 코드 블록 안에 텍스트로 다이어그램을 그리�
 
 이 페이지의 [GitHub 원본](https://github.com/qus0in-factory/learn/blob/dev/docs/lecture/appendix/04-mermaid.md)에서 각 그림의 텍스트를 볼 수 있다.
 
-- [Mermaid 공식 문서](https://mermaid.js.org/): 다이어그램 종류와 작성법 확인
+- [Mermaid 공식 문서](https://mermaid.js.org/): 같은 오픈소스의 예전 주소. 첫 화면이 아래 소개로 안내한다
+- [Mermaid 오픈소스 소개](https://mermaid.ai/open-source/intro/): 지금 쓰는 소개 페이지. 다이어그램 종류가 있다
 - [GitHub 다이어그램 안내](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams): GitHub 문서에 다이어그램 표시
 - [Notion 다이어그램 안내](https://www.notion.com/help/code-blocks): 문서에서 다이어그램 표시
 - [draw.io Mermaid 안내](https://www.drawio.com/blog/mermaid-diagrams): 다이어그램 도구에서 Mermaid 사용
+
+## 그릴 수 있는 것
+
+README와 Git 설명에는 flowchart, sequence, gitGraph가 잘 맞는다. 아래는 [오픈소스 소개](https://mermaid.ai/open-source/intro/)에 나온 종류 가운데 이 과정에서 쓸 만한 것이다. 소개 페이지에는 사용자 여정·사분면·XY 차트와 베타 종류도 더 있다.
+
+| 종류 | 용도 |
+| --- | --- |
+| flowchart | 작업 순서와 갈림길. 아래 Git 흐름도에 쓴다 |
+| sequence | 로컬과 GitHub가 명령을 주고받는 순서 |
+| gitGraph | 커밋, 브랜치, 병합. 브랜치 설명에 맞다 |
+| class | 개념을 상자와 관계로 정리 |
+| state | 한 상태가 다른 상태로 바뀌는 흐름 |
+| ER | 데이터 항목의 관계. 소개 본문은 실험적이라고 적는다 |
+| gantt | 기간이 있는 일정 |
+| pie | 전체에서 차지하는 비율 |
+| mindmap | 한 주제에서 뻗는 가지 |
+| timeline | 시간순으로 늘어놓은 사건 |
 
 ## Git 흐름도
 
