@@ -1,4 +1,5 @@
-export function slide(title) {
+import { referenceFooter } from './reference.js';
+export function slide(title, reference) {
   const page = document.createElement('section');
   page.className = 'slide';
   const heading = document.createElement('h1');
@@ -6,6 +7,7 @@ export function slide(title) {
   const content = document.createElement('div');
   content.className = 'content';
   page.append(heading, content);
+  referenceFooter(page, reference);
   document.body.append(page);
   return content;
 }
