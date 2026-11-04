@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["type", "title"],
+    "properties": {
+      "type": {"enum": ["cover", "goals", "section", "table", "cards", "flow", "links", "code", "eof"]},
+      "title": {"type": "string"},
+      "step": {"type": "string"},
+      "label": {"type": "string"},
+      "text": {"type": "string"},
+      "note": {"type": "string"},
+      "cards": {"type": "array", "items": {"type": "array", "items": {"type": "string"}, "minItems": 2, "maxItems": 2}},
+      "rows": {"type": "array", "items": {"type": "array", "items": {"type": "string"}}},
+      "code": {"type": "array", "items": {"type": "string"}},
+      "diagram": {"type": "string"},
+      "icons": {"type": "array", "items": {"type": "string"}}
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@page { size: 1280px 720px; margin: 0; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+.deck { width: 1280px; height: 720px; padding: 52px 64px; position: relative;
+  break-after: page; background: var(--paper); color: var(--ink); }
+h1 { font-size: 46px; margin: 12px 0 30px; line-height: 1.2; }
+p, li, td, th { font-size: 25px; line-height: 1.5; }
+.eyebrow, footer { font-size: 18px; color: var(--muted); }
+footer { position: absolute; bottom: 24px; right: 64px; }
+.cover, .section, .eof { background: var(--ink); color: var(--paper);
+  display: flex; flex-direction: column; justify-content: center; }
+.cover h1, .section h1, .eof h1 { color: inherit; font-size: 64px; }
+.cover .eyebrow, .section .eyebrow, .eof .eyebrow { color: inherit; }
+.note { padding: 18px 24px; background: var(--soft); font-size: 25px; }
+.cover .note, .section .note, .eof .note { background: transparent; padding: 0; }
+.cover footer, .section footer, .eof footer { color: inherit; }

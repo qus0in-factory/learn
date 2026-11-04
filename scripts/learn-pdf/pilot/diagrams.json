@@ -1,0 +1,5 @@
+{
+  "areas": "flowchart LR\n W[작업 공간] -->|git add| I[스테이징 영역]\n I -->|git commit| R[로컬 저장소]",
+  "record": "flowchart LR\n E[파일 수정] --> S[변경 선택]\n S --> C[상태 기록]",
+  "diff": "flowchart LR\n W[작업 공간] ---|git diff| I[스테이징 영역]\n I ---|git diff --cached| H[HEAD]"
+}
