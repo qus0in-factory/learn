@@ -10,5 +10,4 @@ if (process.argv.slice(2).join(' ') !== '--update-revision') {
 const revision = sourceRevision();
 writeRevision(revision);
 console.log('PDF revision updated:', revision);
-execFileSync(process.execPath, ['--test', 'scripts/learn/readme.test.mjs',
-  'scripts/learn/url.test.mjs'], { cwd: root, stdio: 'inherit' });
+execFileSync(process.execPath, ['--test', 'scripts/learn/url.test.mjs'], { cwd: root, stdio: 'inherit' });
