@@ -24,6 +24,35 @@ HTML 파일을 브라우저로 바로 열면 주소창이 `file:///`로 시작�
 
 <Illustration name="publish" alt="나만 열 수 있는 집에서 누구나 볼 수 있는 광장의 게시판으로 사이트가 공개되는 모습" />
 
+## 링크 미리보기
+
+링크를 공유하면 서비스가 페이지의 제목·설명·이미지를 먼저 보여 준다. 이 미리보기 값을 정하는 meta 태그가 Open Graph다. `index.html`의 `<head>`에 `og:title`·`og:description`·`og:image`·`og:url`을 넣으면 카카오톡·X 같은 서비스가 이 값을 읽어 미리보기를 만든다.
+
+### OpenCode 요청
+
+OpenCode에 아래 요청문을 입력한다. 오른쪽 위의 복사 버튼으로 복사할 수 있다.
+
+```text
+index.html head에 Open Graph 메타 태그 추가.
+og:title·og:description·og:image·og:url 포함.
+이미지는 저장소의 images 폴더 파일 사용.
+```
+
+::: details 예시 코드 보기
+
+`index.html`의 `<head>` 예시:
+
+```html
+<meta property="og:title" content="나의 포트폴리오">
+<meta property="og:description" content="Git과 GitHub로 만든 첫 웹사이트">
+<meta property="og:image" content="https://계정이름.github.io/portfolio-web/images/preview.png">
+<meta property="og:url" content="https://계정이름.github.io/portfolio-web/">
+```
+
+`og:image`에는 외부에서 접근할 수 있는 전체 URL을 넣는다.
+
+:::
+
 ## 호스팅 원리와 자동 재배포
 
 GitHub Pages는 `push` 한 번으로 사이트가 자동으로 갱신되도록 동작한다.
@@ -112,9 +141,12 @@ footer {
 6. 제공된 배포 링크(`https://계정이름.github.io/portfolio-web/`)를 새 탭에서 열어 내 사이트가 정상적으로 열리는지 확인한다.
 7. VS Code로 돌아와 OpenCode 또는 직접 편집으로 푸터 HTML과 CSS를 추가하고 저장한다. 예시는 접힌 예시 코드를 참고한다.
 8. 터미널에서 변경 사항을 커밋하고 푸시한다:
-   `git add index.html style.css`
-   `git commit -m "feat: 푸터 연락처 및 저작권 영역 추가"`
-   `git push origin main`
+
+   ```bash
+   git add index.html style.css
+   git commit -m "feat: 푸터 연락처 및 저작권 영역 추가"
+   git push origin main
+   ```
 9. GitHub 저장소 상단의 `Actions` 탭을 클릭하여 `pages build and deployment` 워크플로가 돌아가는 것을 확인한다.
 10. 초록색 체크 표시가 뜨면(약 1분 소요), 브라우저의 배포 URL 탭을 강력 새로고침(`Ctrl + Shift + R` 또는 `Cmd + Shift + R`)하여 푸터가 반영되었는지 확인한다.
 
@@ -161,10 +193,9 @@ Coolors 색상 코드 추천 및 배경 포인트 색상 적용
 
 ## 주의할 점
 
-- GitHub Pages로 배포된 사이트는 인터넷에 공개되는 웹페이지이다. 개인 휴대폰 번호, 주민등록번호, 실제 집 주소 등 민감한 개인정보를 올리지 않는다.
+- GitHub Pages로 배포된 사이트는 인터넷에 공개되는 웹페이지이다. 개인 휴대폰 번호, 개인 이메일, 집 주소, 이력서 PDF에 적힌 생년월일·연락처, 사진의 위치 정보(EXIF), 회사·학교 내부 자료처럼 민감한 정보를 올리지 않는다.
 - 눈누 사이트 등에서 웹폰트를 가져올 때는 라이선스 표기 및 상업적/비상업적 허용 범위를 반드시 확인한다. 세부 안내는 [웹 디자인 보조 도구](appendix/03-web-tools.md) 부록을 참고한다.
-- Day 1의 STEP 01~06 공식 일정이 완료되었다.
-- Day 2에는 Markdown 문서화, Issue 관리, 브랜치와 Pull Request 협업을 이어간다.
+- 카카오톡·X 등은 링크 미리보기를 캐시하므로 Pages를 고쳐도 한동안 예전 미리보기가 보일 수 있다. 카카오톡은 [공유 디버거](https://developers.kakao.com/tool/debugger/sharing)에서 캐시를 초기화한 뒤 확인한다.
 
 ## 핵심 내용 퀴즈 <QuizHelp />
 

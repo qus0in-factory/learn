@@ -94,8 +94,11 @@ gitGraph
 5. VS Code에서 새 파일 `.gitignore`를 만들고 [.gitignore 패턴](appendix/10-gitignore-patterns.md) 부록의 예시 패턴을 입력한 뒤 저장한다.
 6. `git status`를 다시 실행한다. 놀랍게도 방금 보였던 `.env`가 사라지고, 새로 만든 `.gitignore`만 목록에 나타난다.
 7. `.gitignore` 파일을 스테이징 영역에 올리고 커밋한다:
-   `git add .gitignore`
-   `git commit -m "chore: .gitignore 파일 추가"`
+
+   ```bash
+   git add .gitignore
+   git commit -m "chore: .gitignore 파일 추가"
+   ```
 8. `git status`로 모든 작업 트리가 깨끗해진 것을 확인한다.
 
 ## Git 명령
