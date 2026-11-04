@@ -24,7 +24,7 @@ tags: ["macOS", "Windows", "경로", "자격 증명"]
 | 줄바꿈 | LF/CRLF가 섞일 수 있음 | LF 중심 |
 | 자격 증명 | 자격 증명 관리자 → Windows 자격 증명 | 키체인 접근 → 로그인 → `github.com` |
 | `code` 명령 | PATH에 등록된 경우에만 동작 | PATH에 등록된 경우에만 동작 |
-| `gh` 설치 | 공식 설치 파일 | Homebrew 등 공식 안내 경로 |
+| `gh` 설치 | 공식 MSI 파일(선택) | Homebrew 또는 공식 `.pkg` 파일 |
 
 - `cd /c/Users/이름/Projects` 같은 POSIX 경로는 Windows Git Bash 기준이다. macOS에서는 `/Users/이름/Projects`를 사용한다.
 - 따옴표는 명령 전체를 감싸는 방식과 셸 차이를 확인한다. 공백이 있는 경로는 따옴표로 감싼다.
@@ -32,7 +32,7 @@ tags: ["macOS", "Windows", "경로", "자격 증명"]
 - VS Code의 `code` 명령은 PATH에 등록된 경우에만 터미널에서 동작한다. 등록되지 않으면 VS Code에서 폴더를 연다.
 - Windows 인증 정보는 자격 증명 관리자에 저장될 수 있다. macOS는 키체인 접근의 `로그인` 항목에서 `github.com` 관련 비밀번호를 확인한다.
 - 잘못된 계정으로 인증된 경우 해당 GitHub 항목만 삭제하고 재인증한다. 무관한 자격 증명을 일괄 삭제하지 않는다.
-- `gh`는 Windows에서 공식 설치 파일, macOS에서 Homebrew 등 공식 안내 경로로 설치한다. 수업 직전 지원 버전을 확인한다.
+- `gh`는 macOS에서 Homebrew 또는 공식 `.pkg` 파일로, Windows에서 공식 MSI 파일로 설치한다. 로그인 절차는 [STEP 05](../05-remote.md)의 인증 준비를 참고한다. 수업 직전 지원 버전을 확인한다.
 
 ## 따라하기
 

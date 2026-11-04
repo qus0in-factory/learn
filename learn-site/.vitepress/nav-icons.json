@@ -38,5 +38,9 @@
   "commands/tag": "terminal",
   "commands/reset": "terminal",
   "commands/revert": "terminal",
-  "tags": "tags"
+  "tags": "tags",
+  "appendix/08-vi-editor": "file-pen",
+  "appendix/09-commit-message": "message-square-text",
+  "appendix/10-gitignore-patterns": "file-x",
+  "appendix/11-environment-secrets": "key-round"
 }
