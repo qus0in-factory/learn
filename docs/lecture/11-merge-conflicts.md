@@ -92,6 +92,18 @@ flowchart TB
 13. 병합이 완료된 뒤 `git branch -d feature/profile-design`으로 브랜치를 정리한다.
 
 편집기에서 병합 메시지를 작성할 때는 [vi 편집기](appendix/08-vi-editor.md) 부록을 참고한다.
+충돌이 난 파일을 열면 `<<<<<<<`, `=======`, `>>>>>>>` 마커 사이에 양쪽 변경이 함께 들어 있다. 두 변경의 의도를 읽고 마커를 지워 정리한다.
+
+<Screenshot name="step11-conflict-markers" alt="`$ cat index.html` 결과에 `&lt;&lt;&lt;&lt;&lt;&lt;&lt;`, `=======`, `>>>>>>>` 충돌 마커가 보인다." />
+
+충돌을 정리해 `git add`를 하면 `git status`에 `All conflicts fixed but you are still merging.`이 나타난다. 병합 커밋을 만들기 전 상태다.
+
+<Screenshot name="step11-status-resolved" alt="`$ git status`에 `All conflicts fixed but you are still merging.`과 커밋 대기 중인 `index.html`이 보인다. 병합 커밋 전이다." />
+
+병합 커밋을 만든 뒤에는 `git log --graph --oneline --all`에서 갈라졌던 이력이 한 커밋으로 합쳐진 모양이 보인다.
+
+<Screenshot name="step11-merge-graph" alt="`$ git log --graph --oneline --all`에 갈라졌다가 한 커밋으로 합쳐진 그래프가 보인다." />
+
 
 ## Git 명령
 

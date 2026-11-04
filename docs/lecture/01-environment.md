@@ -84,6 +84,10 @@ flowchart TB
 5. `pwd` 명령어로 현재 열려 있는 기본 폴더 위치를 확인한다.
 6. OpenCode 인터페이스를 열어 질문을 입력해 보고 정상적으로 응답하는지 확인한다.
 7. 작업 공간, 스테이징 영역, 로컬 저장소의 3단계 흐름을 정리한다.
+`git --version`을 실행하면 아래처럼 `git version` 다음에 버전 숫자가 출력된다. 숫자와 괄호 안 표기는 설치한 Git에 따라 다를 수 있다.
+
+<Screenshot name="step01-git-version" alt="`$ git --version` 다음에 `git version 2.50.1 (Apple Git-155)`가 보인다." />
+
 
 ## Git 명령
 

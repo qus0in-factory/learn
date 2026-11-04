@@ -5,7 +5,7 @@ import settings from './settings.json' with { type: 'json' }
 
 const root = 'dist/learn'
 const files = readdirSync(root, { recursive: true }).filter((p) =>
-  /^assets\/inter-[^/]+\.woff2$/.test(p) || /^(?:(?:git-)?cover|git-stages|illust-[a-z]+)-\d+\.(webp|avif)$/.test(p) || /^og-\w+\.jpg$/.test(p))
+  /^assets\/inter-[^/]+\.woff2$/.test(p) || /^(?:(?:git-)?cover|git-stages|illust-[a-z]+|shot-[a-z0-9-]+)-\d+\.(webp|avif)$/.test(p) || /^og-\w+\.jpg$/.test(p))
 if (files.length !== settings.expectedCount) throw Error('Unexpected asset count')
 const assets = files.sort().map((path) => {
   const bytes = readFileSync(`${root}/${path}`)

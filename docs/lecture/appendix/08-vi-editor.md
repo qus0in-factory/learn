@@ -58,6 +58,22 @@ vi는 입력하는 즉시 글자가 들어가는 편집기가 아니다. 현재 
 | `u` | 일반 | 마지막 변경을 취소한다. |
 | `/검색어` | 일반 | 아래 방향으로 검색한다. `n`은 다음 결과로 이동한다. |
 | `h` `j` `k` `l` | 일반 | 왼쪽·아래·위·오른쪽으로 이동한다. 방향키도 같은 역할을 한다. |
+`notes.txt`를 vi로 열면 일반 모드로 시작한다. 화면 아래에 모드 표시가 없다.
+
+<Screenshot name="appendix08-vi-normal" alt="vi가 `notes.txt`를 연 일반 모드 화면이다. 하단에 입력 모드 표시는 없다." />
+
+`i`를 누르면 화면 아래에 `-- INSERT --`가 나타나고 글을 입력할 수 있다.
+
+<Screenshot name="appendix08-vi-insert" alt="같은 vi 화면 하단에 `-- INSERT --`가 보인다." />
+
+`Esc`로 일반 모드로 돌아온 뒤 `:`를 누르면 화면 아래에 명령행이 열린다.
+
+<Screenshot name="appendix08-vi-command" alt="vi 하단에 명령행 시작 문자 `:`가 보인다." />
+
+`:wq`를 입력한 상태다. `Enter`를 누르면 저장하고 종료한다.
+
+<Screenshot name="appendix08-vi-wq" alt="vi 하단에 `:wq`가 입력된 상태다. Enter 전이라 저장·종료 결과는 보이지 않는다." />
+
 
 ## 기본 편집기 바꾸기
 
