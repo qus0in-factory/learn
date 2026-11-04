@@ -5,5 +5,5 @@
  "collectionVersion": "11.91.0",
  "license": "Apache-2.0; carbon-LICENSE.txt",
  "mapping": "../subjects.json",
- "changes": "Original SVG paths and viewBox retained. currentColor inherits the existing deck theme. Cover opacity and size are layout properties, not new brand colors."
+ "changes": "Carbon paths retained except subject-05, which uses the Simple Icons GitHub mark path only (no wordmark or title). currentColor inherits the deck theme. Cover opacity and size are layout properties."
 }
