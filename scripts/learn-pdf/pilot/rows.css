@@ -1,0 +1,5 @@
+.rows-body { flex:1; display:flex; flex-direction:column; justify-content:center; gap:12px; }
+.row-item { display:flex; align-items:center; gap:24px; min-height:calc(224px - var(--count)*32px); padding:16px 28px; background:var(--soft); border-radius:14px; }
+.row-item .number { flex-shrink:0; width:48px; height:48px; font-size:28px; }
+.row-item b { flex:0 0 280px; font-size:32px; }
+.row-item p { margin:0; flex:1; }

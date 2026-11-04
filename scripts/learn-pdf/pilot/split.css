@@ -1,0 +1,11 @@
+.split-body { flex:1; min-height:0; display:grid; grid-template-columns:640px 488px; gap:24px; align-items:center; }
+.visual-panel { background:var(--soft); border-radius:18px; padding:24px; max-height:500px; }
+.split-body.reverse { grid-template-columns:488px 640px; }
+.split-body.reverse .visual-panel { order:2; }
+.split-body .diagram { height:auto; min-height:300px; }
+.split-body .diagram svg { max-height:452px; }
+.split-body figure { margin:0; height:452px; }
+.split-body pre { font-size:26px; line-height:1.45; white-space:pre-wrap; background:transparent; color:var(--ink); padding:0; }
+.split-items { display:flex; flex-direction:column; gap:24px; }
+.split-item b { font-size:32px; color:var(--brand); }
+.split-item p { margin:8px 0 0; }

@@ -1,6 +1,6 @@
 export const overlap = page => page.locator('.deck:not(.cover):not(.eof)').evaluateAll(slides =>
   slides.flatMap(s => {
-    const nodes = [...s.querySelectorAll('h1,table,.grid,.diagram,figure,img,image,figcaption,.figure-art')];
+    const nodes = [...s.querySelectorAll('h1,table,.grid,.diagram,figure,img,image,figcaption,.figure-art,.stat-body,.stat-item,.statement-body,.split-body,.visual-panel,.split-item,.panel,.result,.steps-body,.step-item,.rows-body,.row-item')];
     const issues = [];
     for (let i = 0; i < nodes.length; i++) for (let j = i + 1; j < nodes.length; j++) {
       const a = nodes[i], b = nodes[j];

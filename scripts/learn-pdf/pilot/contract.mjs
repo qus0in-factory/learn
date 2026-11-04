@@ -1,4 +1,5 @@
 import { readFile } from 'node:fs/promises';
+import { checkVariety } from './variety-contract.mjs';
 export async function contract(deck) {
   const subjects = JSON.parse(await readFile(new URL('subjects.json', import.meta.url), 'utf8'));
   const id = deck[0]?.step?.match(/\d+/)?.[0] || '01';
@@ -6,6 +7,7 @@ export async function contract(deck) {
   if (deck[0].title !== subjects[id][0] || deck.at(-1).title !== '- EOF -')
     throw Error('Canonical cover title and EOF required');
   for (const s of deck) {
+    checkVariety(s);
     if (s.image && (s.rows || s.type === 'table')) throw Error('Image and table require separate slides');
     if (['label', 'text', 'note'].some(k => k in s)) throw Error('Move auxiliary text into body');
     if (/^다음[:：]/.test(s.title)) throw Error('Use a factual section title');
