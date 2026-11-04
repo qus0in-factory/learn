@@ -2,8 +2,7 @@
  {
   "type": "cover",
   "step": "STEP 04",
-  "title": "되돌리기와 무시 규칙",
-  "icon": "assets/edit.svg"
+   "title": "되돌리기와 무시 규칙"
  },
  {
   "type": "goals",
@@ -114,8 +113,8 @@
   "type": "image",
   "step": "STEP 04",
   "title": "되돌리기",
-  "image": "assets/art-04-undo.png",
-  "caption": "되돌린 파일"
+   "image": "assets/undo-scope.svg",
+   "caption": "restore는 파일 복원, revert는 반대 커밋 추가"
  },
  {
   "type": "table",
@@ -168,10 +167,6 @@
   "type": "flow",
   "step": "STEP 04",
   "title": "실습 흐름",
-  "icons": [
-   "assets/terminal.svg",
-   "assets/checkmark.svg"
-  ],
   "cards": [
    [
     "01 · amend",
@@ -254,7 +249,6 @@
  {
   "type": "eof",
   "step": "STEP 04",
-  "title": "- EOF -",
-  "icon": "assets/edit.svg"
+   "title": "- EOF -"
  }
 ]

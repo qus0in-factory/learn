@@ -1,5 +1,7 @@
 {
-  "areas": "flowchart LR\n W[작업 공간] -->|git add| I[스테이징 영역]\n I -->|git commit| R[로컬 저장소]",
+  "areas": "flowchart LR\n W[작업 공간] --> A([git add]) --> I[스테이징 영역]\n I --> C([git commit]) --> R[로컬 저장소]",
+  "remote-directions": "flowchart LR\n L1[내 컴퓨터: 로컬 저장소] --> P([push]) --> R1[GitHub: origin]\n R2[GitHub: origin] --> F([fetch]) --> L2[내 컴퓨터: 원격 추적 브랜치]\n R3[GitHub: origin] --> U([pull: 가져온 뒤 통합]) --> L3[내 컴퓨터: 현재 브랜치와 작업 공간]\n R4[GitHub: origin] --> C([clone]) --> L4[내 컴퓨터: 새 저장소와 작업 공간]",
+  "undo-scope": "flowchart LR\n A[추적 파일의 미커밋 변경] --> S([git restore]) --> B[작업 공간의 파일 복원]\n C[이미 기록한 커밋] --> V([git revert]) --> D[반대 변경을 새 커밋으로 기록]",
   "record": "flowchart LR\n E[파일 수정] --> S[변경 선택]\n S --> C[상태 기록]",
   "diff": "flowchart LR\n W[작업 공간] ---|git diff| I[스테이징 영역]\n I ---|git diff --cached| H[HEAD]",
   "branch": "flowchart LR\n A[기존 커밋] --> B[기능 커밋]\n M[main] -.-> A\n F[feature] -.-> B",

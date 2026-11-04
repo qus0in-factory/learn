@@ -2,8 +2,7 @@
  {
   "type": "cover",
   "step": "STEP 05",
-  "title": "원격 저장소와 동기화",
-  "icon": "assets/data-base.svg"
+   "title": "원격 저장소와 동기화"
  },
  {
   "type": "goals",
@@ -33,10 +32,6 @@
   "type": "cards",
   "step": "STEP 05",
   "title": "원격 저장소",
-  "icons": [
-   "assets/save.svg",
-   "assets/checkmark.svg"
-  ],
   "cards": [
    [
     "백업",
@@ -56,8 +51,8 @@
   "type": "image",
   "step": "STEP 05",
   "title": "로컬과 원격",
-  "image": "assets/art-05-remote.png",
-  "caption": "로컬과 원격"
+   "image": "assets/remote-directions.svg",
+   "caption": "push는 업로드, fetch·pull·clone은 원격에서 가져오기"
  },
  {
   "type": "table",
@@ -141,11 +136,6 @@
   "type": "flow",
   "step": "STEP 05",
   "title": "실습 흐름",
-  "icons": [
-   "assets/terminal.svg",
-   "assets/list-checked.svg",
-   "assets/document.svg"
-  ],
   "cards": [
    [
     "01 · 생성",
@@ -255,7 +245,6 @@
  {
   "type": "eof",
   "step": "STEP 05",
-  "title": "- EOF -",
-  "icon": "assets/data-base.svg"
+   "title": "- EOF -"
  }
 ]
