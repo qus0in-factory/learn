@@ -1,5 +1,5 @@
 {
-  "frozen": true,
+  "frozen": false,
   "sourceCommit": "2315808720cc46e2e36e7a7605f24bff73386808",
   "revision": "79e08ecfed7d5697c8bd588869d37d1e053ec1f4",
   "manifest": "assets/pdf-frozen/source-manifest.json",
