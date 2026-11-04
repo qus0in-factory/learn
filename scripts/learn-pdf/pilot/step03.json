@@ -1,0 +1,14 @@
+[
+ {"type":"cover","step":"STEP 03","title":"커밋과 이력 기록","text":"작업 단위를 스냅샷으로 남기고 되짚는다.","note":"STEP 03 · 커밋과 이력 기록"},
+ {"type":"goals","step":"STEP 03","title":"오늘 확인할 세 가지","cards":[["기록","git commit으로 스냅샷을 남길 수 있다"],["조회","로그와 diff로 차이와 이력을 읽을 수 있다"],["취소","스테이징만 내리고 편집기를 구별할 수 있다"]],"note":"메시지는 무엇을 바꿨는지 한 줄로 적는다."},
+ {"type":"cards","step":"STEP 03","title":"커밋은 저장이 아니라 체크포인트","icons":["assets/save.svg","assets/document.svg","assets/version.svg"],"cards":[["스냅샷","그 시점의 기록 단위"],["메시지","무엇을 바꿨는지 한 줄"],["기준점","다시 확인할 지점"]],"note":"파일 저장과 커밋은 다른 동작이다."},
+ {"type":"flow","step":"STEP 03","title":"부모 수는 커밋 종류마다 다르다","diagram":"assets/record.svg","cards":[["첫 커밋","부모가 없다"],["일반 커밋","부모가 하나다"],["병합 커밋","부모가 둘 이상이다"]],"note":"부모가 있으면 바로 앞 기록을 가리킨다."},
+ {"type":"table","step":"STEP 03","title":"해시 읽는 법","rows":[["항목","값","주의"],["전체","SHA-1은 40자리","SHA-256은 더 길다"],["로그","보통 앞 7자리","설정에 따라 더 길다"],["인자","앞 4자리 이상","저장소 안에서 유일"]],"note":"짧을수록 다른 커밋과 겹칠 수 있다."},
+ {"type":"cards","step":"STEP 03","title":"메시지는 제목으로 남긴다","icons":["assets/edit.svg","assets/list-checked.svg"],"cards":[["한 줄","무엇을 바꿨는지 적는다"],["접두어","feat docs style fix chore"]],"note":"수정 완료, test, asdf처럼 내용을 숨기지 않는다."},
+ {"type":"table","step":"STEP 03","title":"diff는 양쪽을 먼저 정한다","rows":[["명령","왼쪽","오른쪽"],["git diff","작업 공간","스테이징"],["git diff --staged","스테이징","HEAD"],["git diff HEAD","작업 공간","HEAD"]],"note":"add 직후면 인자 없는 diff가 비어 보일 수 있다."},
+ {"type":"flow","step":"STEP 03","title":"실습은 두 번의 기록","icons":["assets/checkmark.svg","assets/terminal.svg","assets/chat.svg"],"cards":[["01 · 첫 커밋","올린 파일을 메시지로 확정한다"],["02 · 비교","고친 뒤 status와 diff를 읽는다"],["03 · 둘째","내렸다가 다시 올리고 커밋한다"]],"note":"restore --staged는 커밋이 있는 추적 파일에서 쓴다."},
+ {"type":"code","step":"STEP 03","title":"명령어 한눈에 보기","code":["git commit -m \"feat: 첫 웹페이지 추가\"\ngit log --oneline\ngit log","git diff\ngit diff --staged\ngit add index.html\ngit restore --staged index.html\ngit commit -m \"docs: 학습 목표 섹션 추가\""],"note":"그래프가 필요하면 log --oneline --graph --all을 쓴다."},
+ {"type":"cards","step":"STEP 03","title":"편집기와 빈 diff를 구별한다","cards":[["저장 종료",":wq"],["편집 포기",":q!"],["커밋 중단",":cq"]],"note":"메시지가 있으면 :q!만으로 커밋이 멈춘다고 보지 않는다."},
+ {"type":"table","step":"STEP 03","title":"한 장 요약","rows":[["개념","핵심","명령"],["커밋","스냅샷과 메시지","git commit -m"],["이력","최신이 위","git log --oneline"],["차이","작업 공간과 스테이징","git diff"],["내리기","파일은 유지","git restore --staged"]],"note":"실습 순서는 교안 STEP 03을 따른다."},
+ {"type":"eof","step":"STEP 03","title":"다음: 직전 기록을 고친다","text":"공유 전과 공유 후의 되돌리기를 나눈다.","note":"EOF · STEP 03"}
+]
