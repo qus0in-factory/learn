@@ -1,0 +1,17 @@
+[
+ {"type":"cover","step":"STEP 12","label":"풀 리퀘스트와 협업","title":"변경에 검토의 경로를 만든다","text":"커밋을 올리는 일과 함께 합치기로 결정하는 일을 구별한다.","note":"push → PR → 리뷰 → 병합 → 동기화"},
+ {"type":"goals","step":"STEP 12","title":"제안부터 반영 확인까지 연결한다","cards":[["제안","기능 브랜치를 올리고 PR을 만들 수 있다"],["검토","diff에서 의도·변경·검증 근거를 확인할 수 있다"],["동기화","병합 후 로컬과 사이트 상태를 확인할 수 있다"]],"note":"전제: 원격 연결·접근 권한과 앞선 Pages 배포 설정이 있다."},
+ {"type":"section","step":"STEP 12","title":"핵심 개념 및 구조","text":"PR은 명령 한 번이 아니라 변경에 대한 합의 과정이다.","note":"브랜치 · 비교 기준 · 리뷰 · 반영"},
+ {"type":"cards","step":"STEP 12","title":"push와 PR은 서로 다른 단계다","diagram":"assets/pr.svg","icons":["assets/document.svg","assets/list-checked.svg","assets/data-base.svg"],"cards":[["push","로컬 커밋을 원격에 전송"],["PR","기준 브랜치로 병합 제안"],["merge","검토한 변경을 합침"]],"note":"push 성공만으로 PR 생성·병합·사이트 갱신까지 완료되지는 않는다."},
+ {"type":"table","step":"STEP 12","title":"어디로 합칠지 먼저 확인한다","rows":[["대상","확인할 내용"],["base","변경을 받을 기준 브랜치"],["compare / head","변경을 제안하는 기능 브랜치"],["Files changed","실제로 달라지는 파일과 코드"],["검토 상태","리뷰·필수 검사·병합 허용 여부"]],"note":"이번 실습은 main이 기준이다. 모든 저장소의 기본 브랜치가 자동으로 main인 것은 아니다."},
+ {"type":"flow","step":"STEP 12","title":"피드백은 같은 제안에 쌓는다","diagram":"assets/review.svg","icons":["assets/edit.svg","assets/checkmark.svg","assets/save.svg"],"cards":[["읽기","목적에 맞는 변경인지 검토"],["수정","기능 브랜치에 추가 커밋"],["재검토","같은 PR의 diff와 검사 확인"]],"note":"혼자 작업해도 셀프 리뷰를 한다. 승인 버튼이 실행 검증을 대신하지는 않는다."},
+ {"type":"table","step":"STEP 12","title":"PR 본문은 판단의 근거다","rows":[["항목","적을 내용"],["목적","해결하려는 문제와 범위"],["변경","달라진 파일·동작"],["확인 결과","실제로 수행한 검사와 관찰"],["남은 한계","미확인 조건과 제외 범위"]],"note":"비밀 값·토큰·비밀번호를 본문이나 diff에 넣지 않는다."},
+ {"type":"section","step":"STEP 12","title":"실습 단계","text":"작은 변경 하나로 검토와 반영의 전체 경로를 경험한다.","note":"로컬 변경 → 원격 제안 → 병합 후 확인"},
+ {"type":"flow","step":"STEP 12","title":"실제 변경에서 제안을 시작한다","icons":["assets/terminal.svg","assets/version.svg","assets/chat.svg"],"cards":[["작업","feature/final-polish에서 문구 수정"],["전송","diff 확인 후 커밋·push"],["제안","GitHub에서 base·compare 확인 후 PR 생성"]],"note":"AI 요청 뒤 변경이 없다면 실제 파일 한 줄을 고친다. 빈 PR을 목표로 만들지 않는다."},
+ {"type":"code","step":"STEP 12","title":"명령어 한눈에 보기","code":["B=feature/final-polish\ngit switch -c \"$B\"\n# index.html 문구 수정\ngit status\ngit diff","git add index.html\ngit commit -m \"feat: polish\"\ngit push -u origin \"$B\""],"note":"Git Bash·zsh 기준. B는 브랜치 이름이다. diff와 대상 저장소를 확인한 뒤 push한다."},
+ {"type":"table","step":"STEP 12","title":"웹에서 검토하고 병합한다","rows":[["단계","확인할 상태"],["Create pull request","제목·본문·비교 브랜치가 맞음"],["Files changed","의도한 코드만 있고 비밀 값 없음"],["Reviewers / 셀프 리뷰","피드백과 실제 확인 결과 검토"],["Merge pull request","허용된 병합 방식·완료 상태 확인"]],"note":"버튼 이름과 병합 가능 여부는 저장소 권한·정책·UI에 따라 달라질 수 있다."},
+ {"type":"cards","step":"STEP 12","title":"병합 완료와 배포 완료를 나눈다","cards":[["원격","PR이 Merged인지 확인"],["로컬","main으로 전환해 최신 이력 받기"],["사이트","배포 결과와 공개 페이지 확인"]],"note":"원격 병합만으로 로컬 파일이나 Pages 화면이 즉시 바뀌는 것은 아니다."},
+ {"type":"code","step":"STEP 12","title":"병합 뒤 로컬 상태를 맞춘다","code":["git switch main\ngit pull origin main\ngit status\ngit log --oneline","# 병합·동기화 확인 뒤\nB=feature/final-polish\ngit branch -d \"$B\"\n\n# 거부되면 이력부터 확인"],"note":"Git Bash·zsh 기준. B는 브랜치 이름이다. -d 거부 시 병합 이력을 확인하고 강사와 정리한다."},
+ {"type":"table","step":"STEP 12","title":"한 장 요약","rows":[["단계","남길 이해"],["push","커밋을 원격 브랜치에 전송"],["PR·리뷰","변경과 근거를 검토하고 합의"],["merge·pull","원격에 합친 뒤 로컬 동기화"],["완료 상태","병합·로컬 상태·브랜치·공개 사이트 확인"]]},
+ {"type":"eof","step":"STEP 12","title":"작은 변경을 함께 완성하기","text":"수정 · 기록 · 공유 · 검토 · 반영을 하나의 작업 습관으로","note":"EOF · 풀 리퀘스트와 협업"}
+]
