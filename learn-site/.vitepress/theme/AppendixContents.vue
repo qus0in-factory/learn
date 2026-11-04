@@ -4,7 +4,8 @@ import { labels } from '../labels.mjs'
 import './course-contents.css'
 
 const { theme } = useData()
-const items = theme.value.courseContents.filter(item => item.link.startsWith('/git/appendix/'))
+const props = defineProps({ group: { type: String, required: true } })
+const items = theme.value.appendixNavigation.find(group => group.id === props.group)?.items || []
 </script>
 
 <template>
