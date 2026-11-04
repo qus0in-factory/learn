@@ -25,7 +25,7 @@ Mermaid는 Markdown 코드 블록 안에 텍스트로 다이어그램을 그리�
 
 ## 그릴 수 있는 것
 
-README와 Git 설명에는 flowchart, sequence, gitGraph가 잘 맞는다. 아래는 [오픈소스 소개](https://mermaid.ai/open-source/intro/)에 나온 종류 가운데 이 과정에서 쓸 만한 것이다. 소개 페이지에는 사용자 여정·사분면·XY 차트와 베타 종류도 더 있다.
+README와 Git 설명에는 flowchart, sequence, gitGraph가 잘 맞는다. 아래는 [오픈소스 소개](https://mermaid.ai/open-source/intro/)에 나온 종류 가운데 이 과정에서 쓸 만한 것. 소개 페이지에는 사용자 여정·사분면·XY 차트와 베타 종류도 더 있다.
 
 | 종류 | 용도 |
 | --- | --- |
