@@ -1,6 +1,6 @@
-# qus0in-factory/learn
-
-에코익힘책(echo.qus0in.dev)은 Git과 GitHub 실습 과정을 제공하는 웹 학습 플랫폼입니다.
+# 에코익힘책 (AI & 코딩 익힘책)
+> AI & 코딩 웹 학습 플랫폼
+- https://echo.qus0in.dev/
 
 ## 아키텍처
 
@@ -34,3 +34,11 @@ flowchart TD
 - `learn-worker`: Cloudflare Worker 라우팅, API 및 D1/R2/ASSETS 바인딩 설정 (`wrangler.jsonc`)
 - `scripts`: D1 동기화, PDF 운용, 검증 및 린트 자동화 스크립트
 - `docs`: 강의 마크다운 문서(`lecture/`), 공용 정적 자산(`public/`), 운영 가이드(`setup/`)
+
+## 라이선스
+
+- 코드: [MIT](LICENSE). 상업적 사용·수정·재배포를 포함해 MIT 조건에 따라 사용할 수 있다.
+- 교안 콘텐츠: [CC BY-NC-SA 4.0](LICENSE-CONTENT). 출처를 표시하고 비상업적으로 사용하며, 변경본은 같은 조건으로 공유한다.
+- 사이트 이름·로고·표지·OG 이미지·고유 디자인: 비상업적 이용을 포함해 별도 허락 없이 사용할 수 없다. 자세한 범위는 [라이선스 안내](docs/licenses.md)를 참고한다.
+- 제3자 의존성·폰트·아이콘: [docs/license-notices.md](docs/license-notices.md) · [전문](docs/public/third-party-notices.txt)
+- 문의: qus0in@gmail.com

@@ -1,6 +1,10 @@
-사이트 및 빌드 도구의 직접·간접 의존성입니다. 설치된 고정 lockfile 기준 목록이며 검색 기능은 활성화하지 않습니다.
+사이트 및 빌드 도구의 직접·간접 의존성과 저장소에서 확인한 외부 자원을 정리한다. 패키지 목록은 설치된 고정 lockfile을 기준으로 하며 검색 기능은 활성화하지 않는다.
 
 [라이선스 전문 및 저작권 고지](/third-party-notices.txt)
+
+이 목록은 제3자 자료의 전체 권리관계나 누락 없음을 보장하지 않는다. 표의 SPDX 표기는 설치된 패키지의 메타데이터를 따르며, 각 패키지의 예외·전문·실제 적용 조건은 원문을 우선한다. 패키지 버전은 이 문서에서 변경하지 않는다.
+
+### 패키지 의존성
 
 | 패키지 | 버전 | 라이선스 |
 | --- | --- | --- |
@@ -143,3 +147,14 @@
 | vitepress | 1.6.4 | MIT |
 | vue | 3.5.44 | MIT |
 | zwitch | 2.0.4 | MIT |
+
+### 폰트·아이콘·이미지
+
+- 리디바탕(RIDIBatang) — © RIDI Corp. 개인 및 기업 사용자를 포함한 모든 사용자에게 무료로 제공되며 자유롭게 수정·재배포할 수 있다. 글꼴 자체를 유료로 판매하는 것은 금지한다. 폰트 파일을 번들·재배포할 때는 저작권 안내와 라이선스 전문을 포함하고, 어려우면 출처를 표기한다. `course-site/.vitepress/theme/style.css`와 `slides/style.css`에서는 CDN 웹폰트로 불러오며 폰트 파일을 저장소에 포함하지 않는다. 출처: https://ridicorp.com/ridibatang/
+- 학교안심 맑은날 B — © KERIS, SIL Open Font License 1.1. `learn-site/.vitepress/theme/icons/logotype.svg`의 로고타입 윤곽선 생성에 사용했으며 폰트 파일은 저장소와 배포본에 포함하지 않는다. 원본 공지와 미러·검증 기록은 `scripts/logotype/source.json`과 `/third-party-notices.txt`를 참고한다.
+- Noto Sans KR·Noto Sans Mono — © Adobe, SIL Open Font License 1.1. PDF 렌더링에 사용하며 `scripts/learn-pdf/fonts/`에 폰트 파일과 OFL 전문이 포함되어 있다. 고정 출처와 해시는 같은 디렉터리의 `lock.json`을 참고한다.
+- Kakao Talk 공유 아이콘과 Kakao JavaScript SDK — © Kakao Corp. 또는 제공자. 오픈소스 라이선스가 아니며 Kakao 약관·상표 조건을 따른다. SDK는 `learn-site/.vitepress/kakao-sdk.mjs`에서 외부 URL로 불러온다.
+- Lucide·Feather 아이콘 — Lucide는 ISC, Feather 유래 아이콘은 MIT. 전문은 `/third-party-notices.txt`를 참고한다.
+- Bulma 1.0.4 — MIT. `example-site/index.html`에서 CDN으로 불러온다. 전문: https://github.com/jgthms/bulma/blob/main/LICENSE
+- 교안 삽화 — 이 프로젝트에서 Gemini 이미지 모델로 생성했다. 생성 모델·프롬프트·참조 자료·후보 선택은 `assets/illustrations/*/generation.json`과 `selection.json`에 기록되어 있다. 생성 도구 약관과 결과물의 권리 조건은 별도로 확인한다.
+- 그 밖의 외부 이미지·폰트·코드는 확인되는 대로 이 목록과 `/third-party-notices.txt`에 추가한다. 이 문서는 제3자 자료의 누락 없음을 보장하지 않는다.
