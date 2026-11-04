@@ -30,76 +30,78 @@
   "title": "핵심 개념 및 구조"
  },
  {
-  "type": "image",
-  "step": "STEP 02",
-  "title": "세 영역의 흐름",
+  "type": "split",
   "image": "assets/art-02-stages.png",
-  "caption": "편집, 선택, 기록"
+  "caption": "편집, 선택, 기록",
+  "items": [
+   {
+    "term": "편집",
+    "detail": "작업 파일을 고친다"
+   },
+   {
+    "term": "선택",
+    "detail": "다음 기록에 넣을 변경"
+   },
+   {
+    "term": "기록",
+    "detail": "커밋으로 남긴다"
+   }
+  ],
+  "step": "STEP 02",
+  "title": "세 영역의 흐름"
  },
  {
-  "type": "table",
+  "type": "stat",
+  "mono": true,
+  "items": [
+   {
+    "figure": "name",
+    "label": "작성자",
+    "detail": "user.name 기본값"
+   },
+   {
+    "figure": "email",
+    "label": "이메일",
+    "detail": "user.email 기본값"
+   },
+   {
+    "figure": "global",
+    "label": "범위",
+    "detail": "저장소 설정이 덮을 수 있다"
+   }
+  ],
   "step": "STEP 02",
-  "title": "작업자 정보",
-  "rows": [
-   [
-    "항목",
-    "뜻"
-   ],
-   [
-    "이름·이메일",
-    "작성자·커미터 기본값"
-   ],
-   [
-    "--global",
-    "사용자 기본값. 저장소 설정이 덮음"
-   ],
-   [
-    "계정",
-    "가입 메일과 맞추면 연결"
-   ]
-  ]
+  "title": "작업자 정보"
  },
  {
-  "type": "table",
+  "type": "statement",
+  "statement": "git init 뒤 .git에 이력이 쌓인다",
+  "basis": ".git 안은 직접 고치지 않는다",
+  "emphasis": ".git",
   "step": "STEP 02",
-  "title": ".git 폴더가 하는 일",
-  "rows": [
-   [
-    "폴더",
-    "기억"
-   ],
-   [
-    "일반 폴더",
-    "과거 상태를 기억하지 않는다"
-   ],
-   [
-    "git init 후",
-    "숨김 폴더에 이력이 쌓인다"
-   ],
-   [
-    "주의",
-    ".git 안은 직접 고치지 않는다"
-   ]
-  ]
+  "title": ".git 폴더가 하는 일"
  },
  {
-  "type": "cards",
+  "type": "compare",
+  "left": {
+   "label": "새 파일",
+   "lines": [
+    "HEAD에 없는 파일",
+    "인덱스에서만 뺀다"
+   ],
+   "cmd": "git rm --cached"
+  },
+  "right": {
+   "label": "수정 파일",
+   "lines": [
+    "이미 커밋된 파일",
+    "스테이징만 푼다"
+   ],
+   "cmd": "git restore --staged"
+  },
+  "result": "HEAD가 없으면 restore --staged는 실패한다",
   "step": "STEP 02",
-  "title": "새 파일과 수정 파일의 해제",
-  "cards": [
-   [
-    "올리기",
-    "git add로 Staged가 된다"
-   ],
-   [
-    "새 파일",
-    "HEAD에 없으면 인덱스에서만 뺀다"
-   ],
-   [
-    "수정 파일",
-    "HEAD에 있으면 staged만 푼다"
-   ]
-  ]
+  "title": "새 파일과 수정 파일의 해제"
  },
  {
   "type": "table",
@@ -133,27 +135,24 @@
   ]
  },
  {
-  "type": "table",
-  "step": "STEP 02",
-  "title": "빈 폴더와 .gitkeep",
+  "type": "rows",
+  "numbered": true,
   "rows": [
-   [
-    "항목",
-    "뜻"
-   ],
-   [
-    "추적 단위",
-    "빈 폴더 자체는 기록되지 않는다"
-   ],
-   [
-    ".gitkeep",
-    "폴더를 남기는 이름 관례다"
-   ],
-   [
-    "주의",
-    ".gitignore를 두면 무시 규칙"
-   ]
-  ]
+   {
+    "term": "추적 단위",
+    "detail": "빈 폴더는 기록되지 않는다"
+   },
+   {
+    "term": ".gitkeep",
+    "detail": "폴더를 남기는 이름 관례"
+   },
+   {
+    "term": "주의",
+    "detail": ".gitignore를 두면 무시 규칙"
+   }
+  ],
+  "step": "STEP 02",
+  "title": "빈 폴더와 .gitkeep"
  },
  {
   "type": "section",
@@ -161,28 +160,30 @@
   "title": "실습 단계"
  },
  {
-  "type": "flow",
-  "step": "STEP 02",
-  "title": "실습 흐름",
-  "icons": [
-   "assets/terminal.svg",
-   "assets/edit.svg",
-   "assets/save.svg"
+  "type": "steps",
+  "steps": [
+   {
+    "label": "등록",
+    "detail": "이름과 이메일",
+    "tag": "git config"
+   },
+   {
+    "label": "초기화",
+    "detail": "폴더와 git init",
+    "tag": "git init"
+   },
+   {
+    "label": "파일",
+    "detail": "페이지와 .gitkeep"
+   },
+   {
+    "label": "선택",
+    "detail": "status 다음 add",
+    "tag": "git add"
+   }
   ],
-  "cards": [
-   [
-    "01 · 등록",
-    "이름·이메일을 확인하고 폴더를 만든다"
-   ],
-   [
-    "02 · 파일",
-    "init 뒤 페이지와 .gitkeep을 둔다"
-   ],
-   [
-    "03 · 선택",
-    "status로 읽고 add한 뒤 다시 본다"
-   ]
-  ]
+  "step": "STEP 02",
+  "title": "실습 흐름"
  },
  {
   "type": "code",
@@ -194,23 +195,24 @@
   ]
  },
  {
-  "type": "cards",
+  "type": "rows",
+  "numbered": true,
+  "rows": [
+   {
+    "term": "오타",
+    "detail": "같은 config 명령으로 덮어쓴다"
+   },
+   {
+    "term": "명령 실패",
+    "detail": "폴더와 git init을 확인한다"
+   },
+   {
+    "term": "잘못 올림",
+    "detail": "파일 이름을 지정해 add"
+   }
+  ],
   "step": "STEP 02",
-  "title": "트러블 슈팅",
-  "cards": [
-   [
-    "오타",
-    "같은 config 명령으로 덮어쓴다"
-   ],
-   [
-    "명령 실패",
-    "폴더와 git init 여부를 확인한다"
-   ],
-   [
-    "잘못 올림",
-    "파일 이름을 지정해 add"
-   ]
-  ]
+  "title": "트러블 슈팅"
  },
  {
   "type": "table",

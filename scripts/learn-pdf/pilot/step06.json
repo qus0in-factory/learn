@@ -30,88 +30,88 @@
   "title": "핵심 개념 및 구조"
  },
  {
-  "type": "table",
-  "step": "STEP 06",
-  "title": "파일 경로와 공개 주소",
-  "rows": [
-   [
-    "여는 방법",
-    "주소"
-   ],
-   [
-    "직접 열기",
-    "로컬 파일 경로"
-   ],
-   [
-    "정적 호스팅",
-    "준비된 파일을 그대로 제공"
-   ],
-   [
-    "한계",
-    "다른 사람은 PC 경로를 못 연다"
+  "type": "compare",
+  "left": {
+   "label": "직접 열기",
+   "lines": [
+    "로컬 파일 경로",
+    "그 PC에서만 열린다"
    ]
-  ]
+  },
+  "right": {
+   "label": "정적 호스팅",
+   "lines": [
+    "준비된 파일을 제공",
+    "계정.github.io/저장소"
+   ]
+  },
+  "result": "다른 사람은 로컬 경로를 열 수 없다",
+  "step": "STEP 06",
+  "title": "파일 경로와 공개 주소"
  },
  {
-  "type": "image",
-  "step": "STEP 06",
-  "title": "공개",
+  "type": "split",
   "image": "assets/art-06-publish.png",
-  "caption": "집에서 공개 게시판으로"
+  "caption": "집에서 공개 게시판으로",
+  "items": [
+   {
+    "term": "파일",
+    "detail": "준비된 HTML·CSS·이미지"
+   },
+   {
+    "term": "브랜치",
+    "detail": "설정된 게시 브랜치"
+   },
+   {
+    "term": "주소",
+    "detail": "계정.github.io/저장소"
+   }
+  ],
+  "step": "STEP 06",
+  "title": "공개"
  },
  {
-  "type": "table",
+  "type": "steps",
+  "steps": [
+   {
+    "label": "push",
+    "detail": "게시 브랜치에 올린다",
+    "tag": "git push"
+   },
+   {
+    "label": "Actions",
+    "detail": "빌드 상태를 본다"
+   },
+   {
+    "label": "Pages",
+    "detail": "수 분에서 최대 10분",
+    "tag": "Visit site"
+   }
+  ],
   "step": "STEP 06",
-  "title": "배포 순서",
-  "rows": [
-   [
-    "단계",
-    "확인"
-   ],
-   [
-    "push",
-    "게시 브랜치"
-   ],
-   [
-    "Actions",
-    "빌드 상태"
-   ],
-   [
-    "Pages",
-    "TOKEN push는 빌드가 안 될 수 있다"
-   ]
-  ]
+  "title": "배포 순서"
  },
  {
-  "type": "table",
+  "type": "stat",
+  "items": [
+   {
+    "figure": "index",
+    "label": "진입점",
+    "detail": "예시는 index.html. md도 찾음"
+   },
+   {
+    "figure": "10분",
+    "label": "반영",
+    "detail": "보장이 아니다. Actions 확인"
+   },
+   {
+    "figure": "main",
+    "label": "원본",
+    "detail": "루트 폴더. 권한 있는 push"
+   }
+  ],
   "step": "STEP 06",
-  "title": "Pages 동작 규칙",
-  "rows": [
-   [
-    "항목",
-    "값"
-   ],
-   [
-    "진입점",
-    "루트 진입점 예시는 index.html"
-   ],
-   [
-    "다른 진입점",
-    "index.md와 README.md도 찾는다"
-   ],
-   [
-    "주소",
-    "계정.github.io/저장소/"
-   ],
-   [
-    "시간",
-    "수 분에서 최대 10분"
-   ],
-   [
-    "실패",
-    "Actions. 10분은 보장 아님"
-   ]
-  ]
+  "title": "Pages 동작 규칙"
  },
  {
   "type": "table",
@@ -145,31 +145,28 @@
   ]
  },
  {
-  "type": "table",
-  "step": "STEP 06",
-  "title": "디자인 요소",
+  "type": "rows",
+  "numbered": true,
   "rows": [
-   [
-    "요소",
-    "확인"
-   ],
-   [
-    "폰트",
-    "사용 조건·범위 확인"
-   ],
-   [
-    "색상",
-    "가독성"
-   ],
-   [
-    "파비콘",
-    "탭 아이콘"
-   ],
-   [
-    "Open Graph",
-    "공유 미리보기"
-   ]
-  ]
+   {
+    "term": "폰트",
+    "detail": "사용 조건과 범위를 확인"
+   },
+   {
+    "term": "색상",
+    "detail": "가독성을 본다"
+   },
+   {
+    "term": "파비콘",
+    "detail": "브라우저 탭 아이콘"
+   },
+   {
+    "term": "Open Graph",
+    "detail": "공유 미리보기"
+   }
+  ],
+  "step": "STEP 06",
+  "title": "디자인 요소"
  },
  {
   "type": "section",
@@ -177,28 +174,29 @@
   "title": "실습 단계"
  },
  {
-  "type": "flow",
-  "step": "STEP 06",
-  "title": "실습 흐름",
-  "icons": [
-   "assets/list-checked.svg",
-   "assets/terminal.svg",
-   "assets/checkmark.svg"
+  "type": "steps",
+  "steps": [
+   {
+    "label": "설정",
+    "detail": "Pages, main, 루트",
+    "tag": "Save"
+   },
+   {
+    "label": "주소",
+    "detail": "사이트 링크를 연다"
+   },
+   {
+    "label": "푸터",
+    "detail": "고친 뒤 push",
+    "tag": "git push"
+   },
+   {
+    "label": "확인",
+    "detail": "Actions와 새로고침"
+   }
   ],
-  "cards": [
-   [
-    "01 · 설정",
-    "없으면 브랜치 이름부터"
-   ],
-   [
-    "02 · 확인",
-    "사이트 링크를 연다"
-   ],
-   [
-    "03 · 갱신",
-    "푸터를 push하고 Actions를 본다"
-   ]
-  ]
+  "step": "STEP 06",
+  "title": "실습 흐름"
  },
  {
   "type": "code",
@@ -210,23 +208,24 @@
   ]
  },
  {
-  "type": "cards",
+  "type": "rows",
+  "numbered": true,
+  "rows": [
+   {
+    "term": "404",
+    "detail": "설정 저장과 Actions"
+   },
+   {
+    "term": "첫 화면",
+    "detail": "소문자 index.html"
+   },
+   {
+    "term": "옛 화면",
+    "detail": "캐시 또는 대기. 민감정보 금지"
+   }
+  ],
   "step": "STEP 06",
-  "title": "트러블 슈팅",
-  "cards": [
-   [
-    "404",
-    "설정 저장과 Actions"
-   ],
-   [
-    "첫 화면",
-    "소문자 index.html"
-   ],
-   [
-    "옛 화면",
-    "전화번호·주소는 올리지 않는다"
-   ]
-  ]
+  "title": "트러블 슈팅"
  },
  {
   "type": "table",

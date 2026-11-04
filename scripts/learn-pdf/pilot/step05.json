@@ -2,7 +2,7 @@
  {
   "type": "cover",
   "step": "STEP 05",
-   "title": "원격 저장소와 동기화"
+  "title": "원격 저장소와 동기화"
  },
  {
   "type": "goals",
@@ -29,103 +29,109 @@
   "title": "핵심 개념 및 구조"
  },
  {
-  "type": "cards",
-  "step": "STEP 05",
-  "title": "원격 저장소",
-  "cards": [
-   [
-    "백업",
-    "다른 PC에서 복원"
-   ],
-   [
-    "협업",
-    "한 저장소로 변경을 모음"
-   ],
-   [
-    "배포 기반",
-    "다음 공개 주소의 출발"
-   ]
-  ]
- },
- {
-  "type": "image",
-  "step": "STEP 05",
-  "title": "로컬과 원격",
-   "image": "assets/remote-directions.svg",
-   "caption": "push는 업로드, fetch·pull·clone은 원격에서 가져오기"
- },
- {
-  "type": "table",
-  "step": "STEP 05",
-  "title": "origin · main · -u",
+  "type": "rows",
+  "numbered": true,
   "rows": [
-   [
-    "용어",
-    "뜻"
-   ],
-   [
-    "origin",
-    "원격 주소의 관례적 별칭"
-   ],
-   [
-    "main",
-    "GitHub가 기본으로 쓰는 브랜치 이름"
-   ],
-   [
-    "-u",
-    "이후 push·pull의 기본 연결"
-   ],
-   [
-    "init",
-    "기본 이름은 설정마다 다름"
-   ]
-  ]
+   {
+    "term": "백업",
+    "detail": "다른 PC에서 이력을 복원"
+   },
+   {
+    "term": "협업",
+    "detail": "한 저장소로 변경을 모음"
+   },
+   {
+    "term": "배포 기반",
+    "detail": "공개 주소의 출발"
+   }
+  ],
+  "step": "STEP 05",
+  "title": "원격 저장소"
  },
  {
-  "type": "cards",
+  "type": "split",
+  "image": "assets/art-05-remote.png",
+  "caption": "로컬과 원격",
+  "items": [
+   {
+    "term": "올리기",
+    "detail": "push -u origin main"
+   },
+   {
+    "term": "별칭",
+    "detail": "origin은 원격 주소의 짧은 이름"
+   },
+   {
+    "term": "가져오기",
+    "detail": "설정된 방식으로 통합"
+   }
+  ],
   "step": "STEP 05",
-  "title": "fork · clone · pull",
-  "cards": [
-   [
-    "fork",
-    "다른 원격에서 내 원격으로"
-   ],
-   [
-    "clone",
-    "원격에서 새 로컬로"
-   ],
-   [
-    "pull",
-    "통합 방식은 설정"
-   ]
-  ]
+  "title": "로컬과 원격"
  },
  {
-  "type": "table",
+  "type": "stat",
+  "mono": true,
+  "items": [
+   {
+    "figure": "origin",
+    "label": "별칭",
+    "detail": "원격 주소의 짧은 이름"
+   },
+   {
+    "figure": "main",
+    "label": "브랜치",
+    "detail": "GitHub 기본 이름. init은 설정"
+   },
+   {
+    "figure": "-u",
+    "label": "연결",
+    "detail": "이후 push·pull의 기본"
+   }
+  ],
   "step": "STEP 05",
-  "title": "인증은 필요할 때",
-  "rows": [
-   [
-    "환경",
-    "준비"
+  "title": "origin · main · -u"
+ },
+ {
+  "type": "split",
+  "diagram": "assets/fork.svg",
+  "items": [
+   {
+    "term": "fork",
+    "detail": "다른 원격에서 내 원격으로"
+   },
+   {
+    "term": "clone",
+    "detail": "원격에서 새 로컬로"
+   },
+   {
+    "term": "pull",
+    "detail": "원격에서 기존 로컬로 통합"
+   }
+  ],
+  "step": "STEP 05",
+  "title": "fork · clone · pull"
+ },
+ {
+  "type": "compare",
+  "left": {
+   "label": "macOS",
+   "lines": [
+    "gh auth login",
+    "코드는 터미널에 표시"
    ],
-   [
-    "macOS",
-    "gh auth login 후 status"
-   ],
-   [
-    "Windows",
-    "필요하면 브라우저 창"
-   ],
-   [
-    "공통",
-    "미리 인증하면 다시 안 물을 수 있다"
-   ],
-   [
-    "코드",
-    "터미널 표시, 브라우저 입력"
+   "cmd": "gh auth status"
+  },
+  "right": {
+   "label": "Windows",
+   "lines": [
+    "필요하면 브라우저 창",
+    "이미 있으면 안 뜰 수 있다"
    ]
-  ]
+  },
+  "result": "미리 인증하면 다시 묻지 않을 수 있다",
+  "step": "STEP 05",
+  "title": "인증은 필요할 때"
  },
  {
   "type": "section",
@@ -133,23 +139,35 @@
   "title": "실습 단계"
  },
  {
-  "type": "flow",
+  "type": "steps",
+  "steps": [
+   {
+    "label": "생성",
+    "detail": "초기 파일 생성 끔"
+   },
+   {
+    "label": "이름",
+    "detail": "main인지 확인",
+    "tag": "branch"
+   },
+   {
+    "label": "연결",
+    "detail": "origin 등록",
+    "tag": "remote add"
+   },
+   {
+    "label": "확인",
+    "detail": "fetch와 push",
+    "tag": "remote -v"
+   },
+   {
+    "label": "업로드",
+    "detail": "첫 push",
+    "tag": "push -u"
+   }
+  ],
   "step": "STEP 05",
-  "title": "실습 흐름",
-  "cards": [
-   [
-    "01 · 생성",
-    "초기 파일 생성을 모두 끈다"
-   ],
-   [
-    "02 · 연결",
-    "이름을 보고 remote add 한다"
-   ],
-   [
-    "03 · 업로드",
-    "인증 창은 필요할 때만"
-   ]
-  ]
+  "title": "실습 흐름"
  },
  {
   "type": "code",
@@ -188,23 +206,24 @@
   ]
  },
  {
-  "type": "cards",
+  "type": "rows",
+  "numbered": true,
+  "rows": [
+   {
+    "term": "브랜치",
+    "detail": "커밋과 이름이 main인지"
+   },
+   {
+    "term": "이력",
+    "detail": "원격 첫 커밋이 있는지"
+   },
+   {
+    "term": "인증",
+    "detail": "강제 push로 풀지 않는다"
+   }
+  ],
   "step": "STEP 05",
-  "title": "트러블 슈팅",
-  "cards": [
-   [
-    "브랜치",
-    "커밋과 이름이 main인지"
-   ],
-   [
-    "이력",
-    "원격 첫 커밋이 있는지"
-   ],
-   [
-    "인증",
-    "강제 push 금지"
-   ]
-  ]
+  "title": "트러블 슈팅"
  },
  {
   "type": "table",
@@ -245,6 +264,6 @@
  {
   "type": "eof",
   "step": "STEP 05",
-   "title": "- EOF -"
+  "title": "- EOF -"
  }
 ]

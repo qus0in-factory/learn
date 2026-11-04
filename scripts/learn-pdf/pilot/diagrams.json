@@ -16,5 +16,6 @@
   "parents": "flowchart LR\n C1[첫 커밋] --> C2[일반] --> C3[병합]",
   "reset": "flowchart LR\n H[HEAD] --- I[인덱스] --- W[작업]",
   "remote": "flowchart LR\n L[로컬] <--> O[origin]",
-  "pages": "flowchart LR\n P[push] --> S[사이트]"
+  "pages": "flowchart LR\n P[push] --> S[사이트]",
+  "fork": "flowchart TB\n U[다른 원격] --> F[내 원격] --> L[로컬]"
 }
