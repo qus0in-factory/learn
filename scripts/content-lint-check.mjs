@@ -7,7 +7,7 @@ const bnida = s => [...s.matchAll(/(.)니[다까][.!?:]?(\s|$)/g)].some(m => (m[
 export function checkLine(raw) {
   const out = [], s = raw.replace(/`[^`]*`/g, "").replace(/\]\([^)]*\)/g, "]");
   const h = /^##{1,2} (.*)/.exec(raw.replace(/`/g, "").replace(/<[A-Za-z][^>]*\/>/g, ""));
-  if (h && [...h[1].trim()].length > R.headingMax) out.push([`heading>${R.headingMax}`, h[1]]);
+  if (h && !/^\{\{(?:(?!\{\{|\}\}).)+\}\}$/.test(h[1].trim()) && [...h[1].trim()].length > R.headingMax) out.push([`heading>${R.headingMax}`, h[1]]);
   if (bnida(s) || pol.test(s)) out.push(["polite", s]);
   bad.forEach((re, k) => re.test(s) && out.push([`forbidden ${R.forbiddenTerms[k]}`, s]));
   return out;
