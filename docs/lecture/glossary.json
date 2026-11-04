@@ -712,7 +712,7 @@
       "slug": "til",
       "group": "env",
       "definition": "Today I Learned, 그날 배운 것을 짧게 남기는 기록이다.",
-      "plain": "Post-mortem은 문제가 생긴 뒤 원인과 재발 방지를 적는 기록이다. 둘 다 저장소에 Markdown으로 쌓는다.",
+      "plain": "회고는 경험을 돌아보고 다음 행동을 정하고, 부검(Post-mortem)은 문제 원인과 재발 방지를 다룬다. 이들은 기록의 종류이며 KPT·STAR·4F 같은 작성 틀은 종류와 별개로 상황에 맞게 고른다.",
       "steps": [
         "08-profile-records"
       ],

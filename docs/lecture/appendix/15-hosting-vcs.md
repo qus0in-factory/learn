@@ -32,7 +32,7 @@ PR과 MR은 브랜치의 변경을 검토하고 병합하는 제안이라는 역
 
 ## Git이 아닌 도구
 
-- [Mercurial](https://www.mercurial-scm.org/)은 `hg` 명령을 사용하는 분산 버전 관리 시스템이다. Git 호스팅 서비스나 Git의 다른 이름이 아니며, 이름은 Mercury가 아니라 Mercurial이다.
+- [Mercurial](https://www.mercurial-scm.org/)은 `hg` 명령을 사용하는 분산 버전 관리 시스템으로 Git과 별개의 도구다.
 - [Apache Subversion(SVN)](https://subversion.apache.org/)은 중앙 저장소를 중심으로 이력을 관리하는 버전 관리 시스템이다. Git과 별개의 도구이므로 명령과 협업 절차를 따로 익힌다.
 
 호스팅 서비스를 바꾸는 일과 버전 관리 시스템을 바꾸는 일을 구분한다. Git 저장소를 GitLab으로 옮겨도 Git을 쓰지만, Mercurial이나 SVN으로 바꾸려면 이력 변환과 작업 방식도 검토해야 한다.
