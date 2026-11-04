@@ -1,33 +1,46 @@
-:root {
-  --step-downloads-padding: 12px 16px;
-  --step-downloads-radius: 8px;
-}
-
 .step-downloads {
-  margin: 16px 0;
-  padding: var(--step-downloads-padding);
+  margin: 20px 0 0;
+  padding: 16px;
   border: 1px solid var(--vp-c-divider);
-  border-radius: var(--step-downloads-radius);
+  border-radius: 8px;
   background: var(--vp-c-bg-soft);
 }
 
 .step-downloads__title {
-  margin: 0 0 4px;
+  margin: 0;
+  font-size: 14px;
   font-weight: 600;
 }
 
-.step-downloads ul {
-  margin: 0;
+.step-downloads__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0 0;
   padding: 0;
   list-style: none;
 }
 
-.step-downloads a {
-  color: var(--vp-c-brand-1);
-  text-decoration: underline;
-  text-underline-offset: 2px;
+.step-downloads__list li {
+  margin: 0;
 }
 
-.step-downloads li + li {
-  margin-top: 4px;
+.step-downloads a.step-downloads__link {
+  display: inline-flex;
+  padding: 7px 12px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 6px;
+  background: var(--vp-c-bg);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.step-downloads a.step-downloads__link:hover {
+  border-color: var(--vp-c-brand-1);
+  color: var(--vp-c-brand-1);
+}
+
+.step-downloads a.step-downloads__link:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 2px;
 }

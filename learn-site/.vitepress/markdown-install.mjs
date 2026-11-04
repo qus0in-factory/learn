@@ -8,5 +8,5 @@ export function markdownInstall(page) {
   if (!page.downloads?.length) return ''
   const items = page.downloads.map(id => links.find(link => link.id === id)).filter(Boolean)
   return items.map(item => `- [${item.name}](${item.url})`).join('\n')
-    + `\n\n${stepLabels.installOrder}\n\n${stepLabels.macGit}\n\n`
+    + `\n\n${stepLabels.installNotes.join('\n\n')}\n\n`
 }

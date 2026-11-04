@@ -1,6 +1,7 @@
 ---
 layout: doc
 aside: false
+pageClass: home-no-search
 ---
 
 <script setup>
