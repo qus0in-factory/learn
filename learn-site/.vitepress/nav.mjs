@@ -1,8 +1,12 @@
 import { navGroups } from './nav-groups.mjs'
 import { navItems } from './nav-items.mjs'
 
-export const sidebar = { '/git/': navGroups.map(group => ({
-  text: group.text, ...(group.collapsed === undefined ? {} : { collapsed: group.collapsed }),
-  items: navItems(group),
-})) }
-export const courseOrder = sidebar['/git/'].flatMap(group => group.items)
+function node(group) {
+  return { text: group.text, id: group.id,
+    ...(group.collapsed === undefined ? {} : { collapsed: group.collapsed }),
+    items: group.groups ? group.groups.map(node) : navItems(group) }
+}
+const flatten = items => items.flatMap(item => item.items ? flatten(item.items) : [item])
+export const sidebar = { '/git/': navGroups.map(node) }
+export const courseOrder = flatten(sidebar['/git/'])
+export const appendixNavigation = sidebar['/git/'].find(group => group.id === 'appendix').items
