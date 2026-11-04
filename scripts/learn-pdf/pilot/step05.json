@@ -53,29 +53,11 @@
   ]
  },
  {
-  "type": "cards",
+  "type": "image",
   "step": "STEP 05",
-  "title": "로컬과 origin 사이",
+  "title": "로컬과 원격",
   "image": "assets/art-05-remote.png",
-  "caption": "로컬과 원격",
-  "rows": [
-   [
-    "방향",
-    "뜻"
-   ],
-   [
-    "올리기",
-    "push -u origin main"
-   ],
-   [
-    "별칭",
-    "origin은 짧은 이름"
-   ],
-   [
-    "가져오기",
-    "갈라지면 거절될 수 있다"
-   ]
-  ]
+  "caption": "로컬과 원격"
  },
  {
   "type": "table",

@@ -30,11 +30,16 @@
   "title": "핵심 개념 및 구조"
  },
  {
+  "type": "image",
+  "step": "STEP 02",
+  "title": "세 영역의 흐름",
+  "image": "assets/art-02-stages.png",
+  "caption": "편집, 선택, 기록"
+ },
+ {
   "type": "table",
   "step": "STEP 02",
   "title": "작업자 정보",
-  "image": "assets/art-02-stages.png",
-  "caption": "편집, 선택, 기록",
   "rows": [
    [
     "항목",
@@ -130,7 +135,7 @@
  {
   "type": "table",
   "step": "STEP 02",
-  "title": "빈 폴더는 파일이 있어야 기록된다",
+  "title": "빈 폴더와 .gitkeep",
   "rows": [
    [
     "항목",

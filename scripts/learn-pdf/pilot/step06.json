@@ -53,11 +53,16 @@
   ]
  },
  {
-  "type": "cards",
+  "type": "image",
+  "step": "STEP 06",
+  "title": "공개",
+  "image": "assets/art-06-publish.png",
+  "caption": "집에서 공개 게시판으로"
+ },
+ {
+  "type": "table",
   "step": "STEP 06",
   "title": "배포 순서",
-  "image": "assets/art-06-publish.png",
-  "caption": "집에서 공개 게시판으로",
   "rows": [
    [
     "단계",
@@ -150,7 +155,7 @@
    ],
    [
     "폰트",
-    "사용 조건"
+    "사용 조건·범위 확인"
    ],
    [
     "색상",
@@ -163,10 +168,6 @@
    [
     "Open Graph",
     "공유 미리보기"
-   ],
-   [
-    "폰트",
-    "사용 범위가 다르다"
    ]
   ]
  },

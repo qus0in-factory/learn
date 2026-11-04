@@ -47,8 +47,8 @@
     ".env와 임시 파일"
    ],
    [
-    "더",
-    "캐시와 로그"
+    "캐시·로그",
+    "기록하지 않는다"
    ]
   ]
  },
@@ -107,37 +107,15 @@
     "reset",
     "대상에 맞춤",
     "로컬 정리"
-   ],
-   [
-    "대상",
-    "생략하면 HEAD"
    ]
   ]
  },
  {
-  "type": "cards",
+  "type": "image",
   "step": "STEP 04",
-  "title": "reset 모드가 건드리는 범위",
+  "title": "되돌리기",
   "image": "assets/art-04-undo.png",
-  "caption": "되돌린 파일",
-  "rows": [
-   [
-    "모드",
-    "범위"
-   ],
-   [
-    "soft",
-    "HEAD만"
-   ],
-   [
-    "mixed",
-    "HEAD와 인덱스"
-   ],
-   [
-    "hard",
-    "작업 트리. 실행하지 않음"
-   ]
-  ]
+  "caption": "되돌린 파일"
  },
  {
   "type": "table",
@@ -165,7 +143,7 @@
  {
   "type": "cards",
   "step": "STEP 04",
-  "title": "패턴과 비밀 값을 구분한다",
+  "title": ".gitignore 패턴",
   "cards": [
    [
     ".env*",
