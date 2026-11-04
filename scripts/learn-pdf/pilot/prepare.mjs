@@ -6,7 +6,7 @@ export async function prepare(browser, read) {
   await page.addStyleTag({ content: await read('../theme.css') });
   await tokens(page);
   await fonts(page);
-  for (const file of ['layout.css', 'blocks.css', 'projection.css'])
+  for (const file of ['layout.css', 'blocks.css', 'projection.css', 'safety.css'])
     await page.addStyleTag({ content: await read(file) });
   return page;
 }

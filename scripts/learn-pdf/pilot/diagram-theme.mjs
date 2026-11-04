@@ -9,7 +9,7 @@ export async function diagramTheme(page) {
       node.remove();
       return color;
     };
-    return { startOnLoad: false, theme: 'base', flowchart: { htmlLabels: false },
+    return { startOnLoad: false, theme: 'base', flowchart: { htmlLabels: false, wrappingWidth: 360 },
       themeVariables: { fontFamily: 'Learn Sans', fontSize: '30px',
         primaryColor: get('--soft'), primaryTextColor: get('--ink'),
         primaryBorderColor: get('--brand'), lineColor: get('--brand'),

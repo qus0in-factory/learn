@@ -9,6 +9,7 @@ const out = process.argv[2];
 if (!out || !out.includes('/T/opencode/')) throw Error('Temporary pilot output only');
 await mkdir(out, { recursive: true });
 const deck = await assets(JSON.parse(await read(process.argv[3] || 'step01.json')));
+deck[0].label ||= deck[0].note?.replace(/^STEP \d+\s*·\s*/, '') || deck[0].title;
 const browser = await launch();
 try {
   const page = await prepare(browser, read);
