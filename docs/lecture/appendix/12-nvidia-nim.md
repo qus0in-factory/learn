@@ -42,7 +42,7 @@ NIM은 NVIDIA Inference Microservices의 줄임말이다. NVIDIA가 호스팅하
 ## OpenCode 연결
 
 1. OpenCode에서 `/connect`를 입력한다.
-2. 공급자 목록에서 NVIDIA를 찾는다. 표시 이름은 버전에 따라 다를 수 있다.
+2. 공급자 목록에서 `Nvidia`를 고른다.
 3. API 키를 붙여 넣는다. OpenCode가 자격 증명으로 저장한다.
 4. `/models`를 입력하고 목록에서 `Nvidia` 공급자의 `Nemotron 3.5 Lightning 30B A3B`를 고른다.
 5. 짧은 질문을 보내 응답이 오는지 확인한다.

@@ -21,12 +21,12 @@ stepRefs: ["10-branches-tags", "appendix/02-git-options"]
 ## 예시
 
 ```bash
-git tag v0.1.0
+git tag -a v0.1.0 -m "Release v0.1.0"
 git tag
-git tag -a v0.2.0 -m "Release v0.2.0"
+git tag temp-mark
 ```
 
-`git tag`에 `v0.1.0`이 보이면 성공이다. 주석 태그는 `git log --oneline`에서 커밋 옆에 `tag: v0.2.0`으로 표시된다.
+`git tag`에 `v0.1.0`이 보이면 주석 태그가 붙은 것이다. `temp-mark`처럼 이름만 붙이는 경량 태그는 임시 표시에 쓴다.
 
 ## 주의할 점
 
