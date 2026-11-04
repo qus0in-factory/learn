@@ -22,3 +22,9 @@
 3. `ga4MeasurementId`에 `G-` 형식의 ID를 넣고 승인 후 `analyticsEnabled`를 true로 바꾼다. 둘 다 있어야 스크립트가 출력된다.
 4. 배포 후 태그·네트워크·GA4 실시간 보고서를 소유자가 확인한다. 앱 내 페이지 이동 추적이나 동의 관리 플랫폼은 이번 최소 구현 범위에 없다.
 5. 비활성화할 때 `analyticsEnabled`를 false로 바꾸고 배포한다. ID가 비어 있어도 분석 태그는 출력하지 않는다.
+
+## 관련 문서
+
+- [운영 목차](index.md) · [배포](../deployment.md) · [카카오 도메인](kakao-sharing.md)
+- [광고·개인정보 초안](advertising.md)
+- [소유자 체크리스트 #21](https://github.com/qus0in-factory/learn/issues/21#issuecomment-6608251650)

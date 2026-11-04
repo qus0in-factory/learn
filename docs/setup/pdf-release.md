@@ -1,6 +1,8 @@
 # PDF 배포 가드와 원격 readback
 
-현재 PDF 12개는 revision `992baeb3737fad565f42860e75bbc5c502eadfb4`의 소스 해시 스냅샷으로 고정되어 있으며, live 강의 수정과 분리하고 재생성·revision 갱신을 차단한다. 고정 해제는 #33에서 별도 승인 후 처리한다.
+현재 PDF 12개는 revision `992baeb3737fad565f42860e75bbc5c502eadfb4`로 배포·재고정됐다(#33). live 강의 수정과 분리하며 이후 재생성·고정 해제·revision 갱신은 새로운 명시 승인이 필요하다. `pdf-source.json`의 frozen=true와 `assets/pdf-frozen/source-manifest.json`을 유지한다.
+
+제품 정식 릴리스는 v0.2.1이고 PDF namespace는 계속 `v0.1.0/`이다. 이전 revision `0444320a59711d0568077bd9e8ac85daef2d2cda`의 객체·URL도 보존한다. 최신 plain URL은 992baeb revision으로 이동한다.
 
 ## 준비
 
@@ -8,7 +10,7 @@
 Node 최신 지원 LTS, curl, Wrangler 인증, 봉인된 `dist/learn-pdfs/artifact.json`과 PDF 12개가 필요하다.
 운영 도구는 `scripts/learn-pdf-ops/`에 두어 문서·운영 테스트 변경만으로 PDF revision이 변하지 않게 한다.
 
-## 배포 전
+## 승인된 PDF 교체 때만
 
 1. `node scripts/upload-learn-pdfs.mjs`: 새 revision의 불변 R2 키를 채운다. 같은 키의 다른 바이트는 거부한다.
 2. `node scripts/verify-learn-r2.mjs`: R2에서 12개 키를 직접 읽어 로컬 seal의 SHA256·크기와 비교한다. 누락·읽기 실패·크기/해시 불일치 중 하나라도 있으면 실패한다.
@@ -48,3 +50,8 @@ Ubuntu 전용 `bootstrap-browser.mjs`는 같은 Playwright manifest의 Chromium1
 `browser-assets.json`의 SHA256과 manifest revision을 확인한 뒤 unzip으로 설치하며 시스템 Chrome으로 대체하지 않는다.
 그 후 기존 Playwright 의존성 설치·PDF 빌드·fallback 검사를 그대로 실행한다. ZIP이 바뀌거나 manifest가 다르면 실패한다.
 이 설치·PDF 빌드·두 OS 비교는 CI에서 실행하지 않는다. 별도 로컬 Linux 검증은 보조 근거이며 필수 완료 조건이 아니다.
+
+## 관련 문서
+
+- [현행 정적 사이트 배포](../deployment.md) · [운영 목차](../operations/index.md)
+- [D1 동기화](d1-sync.md) · [콘텐츠 규칙](../content-style.md)

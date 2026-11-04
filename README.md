@@ -6,17 +6,17 @@
 
 ```mermaid
 flowchart TD
-    Client["클라이언트 브라우저"]
+    Client["클라이언트 브라우저 · local search"]
     CDN["Cloudflare Edge (echo.qus0in.dev / files.qus0in.dev)"]
-    Static["Cloudflare 정적 자산 (ASSETS / dist/learn)"]
+    Static["VitePress 정적 자산 (STEP·부록·명령 19·태그 / dist/learn)"]
     Worker["Cloudflare Worker (learn)"]
     D1["Cloudflare D1 (learn)"]
     R2["Cloudflare R2 (learn-files)"]
 
     Client -->|HTTPS 요청| CDN
-    CDN -->|HTML · /assets 등 정적 파일| Static
+    CDN -->|HTML · 검색 인덱스 · Markdown · /assets| Static
     CDN -->|옛 주소 301 · /api/* · /v0.1.0/* PDF| Worker
-    CDN -->|폰트 · 표지 /static/*| R2
+    CDN -->|폰트 · 표지 · OG · 삽화 /static/sha256/*| R2
     Worker -->|카탈로그 · 퀴즈 조회| D1
     Worker -->|PDF 객체 조회| R2
 ```

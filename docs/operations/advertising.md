@@ -7,3 +7,9 @@
 - 링크는 `rel="sponsored noopener noreferrer"`를 사용하고 광고 표시를 붙인다. 인쇄에서는 숨긴다.
 - 공급자가 제공한 실제 ads.txt 값이 있을 때 adsTxt에 넣는다. 비어 있으면 파일을 생성하지 않는다. 임의 판매자 ID나 샘플 광고 계정은 배포하지 않는다.
 - 운영자·개인정보 담당 검토와 필요한 동의 방식 확인 후 활성화한다. `/privacy`는 초안이다. 광고사별 스크립트·맞춤 광고·동의 관리 플랫폼은 별도 승인 범위이다.
+
+## 관련 문서
+
+- [운영 목차](index.md) · [배포](../deployment.md) · [분석 설정](search-analytics.md)
+- [개인정보처리방침 초안 원본](../privacy.md) · [운영 초안](https://echo.qus0in.dev/privacy)
+- [소유자 체크리스트 #20](https://github.com/qus0in-factory/learn/issues/20#issuecomment-6618504571)
