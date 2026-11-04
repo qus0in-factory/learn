@@ -1,0 +1,9 @@
+{
+  "variety-areas": "flowchart TB\n W[작업 공간] --> I[스테이징 영역] --> R[로컬 저장소]",
+  "variety-docs": "flowchart TB\n A[원본 작성] --> B[미리보기] --> C[표시 확인] --> D[커밋]",
+  "variety-profile": "flowchart TB\n P[프로필 저장소] --> H[프로필 첫 화면]\n W[작업 저장소] --> D[코드와 작업 기록]",
+  "variety-issue": "flowchart TB\n M[Milestone] --> I[Issue]\n L[Label] -.-> I\n I --> O[Open] --> C[Closed]",
+  "variety-branch": "flowchart TB\n A[기존 커밋] --> B[기능 커밋]\n M[main] -.-> A\n F[feature] -.-> B",
+  "variety-merge": "flowchart TB\n A[공통 조상] --> M[main 변경]\n A --> F[기능 변경]\n M --> R[병합 결과]\n F --> R",
+  "variety-pr": "flowchart TB\n L[로컬 기능 브랜치] --> R[원격 기능 브랜치] --> M[기준 브랜치]"
+}
