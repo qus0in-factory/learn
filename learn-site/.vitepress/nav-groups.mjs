@@ -1,11 +1,11 @@
 import { labels } from './labels.mjs'
 import { tagLabels } from './tag-labels.mjs'
-import commands from './commands.json' with { type: 'json' }
+import { commandGroups } from './command-nav.mjs'
 import { appendixGroups } from './appendix-nav.mjs'
 
 export const navGroups = [
   { text: labels.courseTitle, directory: '' },
   { id: 'appendix', text: labels.appendix, groups: appendixGroups, collapsed: true },
-  { text: labels.commands, directory: 'commands/', collapsed: true, order: commands.order },
+  { id: 'commands', text: labels.commands, groups: commandGroups, collapsed: true },
   { text: labels.tags, items: [{ text: tagLabels.title, link: '/git/tags' }] },
 ]

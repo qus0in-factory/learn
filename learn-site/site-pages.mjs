@@ -1,4 +1,4 @@
-import commands from './.vitepress/commands.json' with { type: 'json' }
+import { commandOrder } from './.vitepress/command-nav.mjs'
 
 const lectures = ['01-environment', '02-local-repository', '03-commit-history',
   '04-amend-ignore', '05-remote', '06-pages', '07-markdown-mermaid',
@@ -6,7 +6,7 @@ const lectures = ['01-environment', '02-local-repository', '03-commit-history',
 const appendices = ['00-installation', '01-authentication', '02-git-options',
   '03-web-tools', '04-mermaid', '05-os-differences', '06-cli-terminal-shell', '07-git-scenarios', '08-vi-editor',
   '09-commit-message', '10-gitignore-patterns', '11-environment-secrets']
-export const commandPages = commands.order
+export const commandPages = commandOrder
 
 export const expectedPages = ['index.html', '404.html', 'licenses.html', 'privacy.html', 'git/index.html',
   'git/catalog.html', 'git/tags.html', ...lectures.map(name => `git/${name}.html`),
