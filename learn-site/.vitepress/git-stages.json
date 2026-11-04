@@ -1,7 +1,0 @@
-{
-  "source": "assets/illustrations/git-stages/candidate-1.png",
-  "stem": "git-stages",
-  "widths": [600, 1000],
-  "intrinsic": { "width": 1376, "height": 768 },
-  "sizes": "(max-width: 639px) calc(100vw - 48px), 688px"
-}
