@@ -9,14 +9,9 @@
 
 ## 학습 흐름
 
-12개 STEP은 네 묶음으로 이어진다.
+<Illustration name="journey" alt="도구 점검과 Git 설정에서 커밋, 원격 연동, 배포, 기록, 브랜치와 Pull Request 협업까지 이어지는 12단계 학습 흐름" />
 
-```mermaid
-flowchart TB
-    LOCAL["로컬 기초<br/>STEP 01~04"] --> REMOTE["원격과 배포<br/>STEP 05~06"]
-    REMOTE --> RECORD["기록과 관리<br/>STEP 07~09"]
-    RECORD --> TEAM["협업<br/>STEP 10~12"]
-```
+<a href="https://raw.githubusercontent.com/qus0in-factory/learn/73c7250d0f277bf54cdec29eb4af6a0e10847a01/review-assets/82-journey.png" target="_blank" rel="noopener noreferrer">원본 크게 보기 (새 창)</a>
 
 ## 강의 목차
 

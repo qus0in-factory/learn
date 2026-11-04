@@ -8,6 +8,8 @@ export const navGroups = [
   { text: labels.courseTitle, directory: '' },
   { id: 'appendix', text: labels.appendix, groups: appendixGroups, collapsed: true },
   { id: 'commands', text: labels.commands, groups: commandGroups, collapsed: true },
-  { text: labels.tags, items: [{ text: tagLabels.title, link: '/git/tags' }] },
-  { text: labels.glossary, items: [{ text: glossaryLabels.title, link: '/git/glossary' }] },
+  { items: [
+    { text: tagLabels.title, link: '/git/tags' },
+    { text: glossaryLabels.title, link: '/git/glossary' },
+  ] },
 ]

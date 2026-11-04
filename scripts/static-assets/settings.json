@@ -1,7 +1,7 @@
 {
   "bucket": "learn-files",
   "prefix": "static",
-  "expectedCount": 76,
+  "expectedCount": 84,
   "cacheControl": "public, max-age=31536000, immutable",
   "origin": "https://echo.qus0in.dev",
   "types": { ".woff2": "font/woff2", ".webp": "image/webp", ".avif": "image/avif", ".jpg": "image/jpeg" }

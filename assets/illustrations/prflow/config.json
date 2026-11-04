@@ -1,0 +1,12 @@
+{
+  "source": "assets/illustrations/prflow/source.png",
+  "stem": "illust-prflow",
+  "widths": [
+    600,
+    1000
+  ],
+  "intrinsic": {
+    "width": 1376,
+    "height": 768
+  }
+}

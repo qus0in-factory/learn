@@ -27,8 +27,6 @@ export const labels = {
   step: 'STEP',
   appendix: '부록',
   commands: '명령어',
-  tags: '태그',
-  glossary: '사전',
   stepDigits: 2,
   stepPad: '0',
   learningGoals: '학습 목표',

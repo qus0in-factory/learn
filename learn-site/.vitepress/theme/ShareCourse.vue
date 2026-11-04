@@ -2,6 +2,7 @@
 import { share } from '../course-share.mjs'
 import ShareLinks from './ShareLinks.vue'
 import KakaoButton from './KakaoButton.vue'
+import CourseQr from './CourseQr.vue'
 import { useShare } from './useShare.mjs'
 import LessonLinks from './LessonLinks.vue'
 import PrintHelp from './PrintHelp.vue'
@@ -21,7 +22,7 @@ const { message, xUrl, copy, kakao } = useShare(props.course)
       <ShareLinks :x-url="xUrl" @copy="copy" />
       <PrintHelp />
     </div>
-    <img v-if="!lesson" :src="share.qr" :alt="share.qrAlt" width="120" height="120">
+    <CourseQr v-if="!lesson" />
     <span v-if="message" class="share-toast" role="status" aria-live="polite">{{ message }}</span>
   </div>
 </template>
