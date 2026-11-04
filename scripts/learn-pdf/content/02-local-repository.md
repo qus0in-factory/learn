@@ -22,6 +22,13 @@ lecture: 02-local-repository.md
 - 추적 파일을 수정하면 변경된 상태로 나타난다.
 - 기록할 변경을 스테이징하고 커밋으로 남긴다.
 
+## 빈 폴더 기록
+교안: [STEP 02 §빈 폴더와 `.gitkeep`](https://echo.qus0in.dev/git/02-local-repository#빈-폴더와-gitkeep)
+
+- Git은 빈 폴더 자체를 추적하지 않는다.
+- 폴더 안에 파일을 두면 파일과 함께 폴더가 기록된다.
+- 빈 파일의 이름은 관례이며 특별한 Git 기능이 아니다.
+
 ## 첫 웹페이지 만들기
 교안: [STEP 02 §예시 산출물](https://echo.qus0in.dev/git/02-local-repository#예시-산출물)
 
@@ -29,12 +36,11 @@ lecture: 02-local-repository.md
 - 첫 단계에서는 HTML5만 사용한다.
 - CSS·JavaScript·외부 라이브러리는 제외하고 결과를 확인한다.
 
-## 빈 폴더 기록
-교안: [STEP 02 §빈 폴더와 `.gitkeep`](https://echo.qus0in.dev/git/02-local-repository#빈-폴더와-gitkeep)
+## GitHub 계정 준비
+교안: [STEP 02 §GitHub 가입](https://echo.qus0in.dev/git/02-local-repository#github-가입)
 
-- Git은 빈 폴더 자체를 추적하지 않는다.
-- 폴더 안에 파일을 두면 파일과 함께 폴더가 기록된다.
-- 빈 파일의 이름은 관례이며 특별한 Git 기능이 아니다.
+- GitHub 계정을 만들고 이메일 인증을 마친다.
+- 가입 이메일 또는 비공개용 이메일을 작업자 정보에 사용한다.
 
 ## 변경 선택 순서
 교안: [STEP 02 §따라하기](https://echo.qus0in.dev/git/02-local-repository#따라하기)
@@ -43,9 +49,13 @@ lecture: 02-local-repository.md
 - 기록할 파일을 골라 스테이징한다.
 - 상태를 다시 확인해 선택한 파일이 준비되었는지 살펴본다.
 
-## 완료와 주의
+## 완료 기준
 교안: [STEP 02 §체크리스트](https://echo.qus0in.dev/git/02-local-repository#체크리스트)
 
 - 작업자 정보와 저장소 초기화를 확인한다.
 - 선택한 파일이 스테이징되었는지 확인한다.
+
+## 민감 파일 확인
+교안: [STEP 02 §주의할 점](https://echo.qus0in.dev/git/02-local-repository#주의할-점)
+
 - 민감한 파일이 포함되지 않도록 변경을 확인한다.

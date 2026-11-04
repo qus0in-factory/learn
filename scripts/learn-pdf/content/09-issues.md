@@ -43,19 +43,19 @@ flowchart LR
 3. 진척도 게이지를 확인한다.
 4. 관련 기록 문서의 링크를 Issue에 적는다.
 
-## Issue에 담을 정보
-교안: [STEP 09 §Issue 초안 예시](https://echo.qus0in.dev/git/09-issues#issue-초안-예시)
-
-- 목적: 무엇을 왜 하는가.
-- 하지 않을 일: 범위의 경계.
-- 완료 조건: 확인할 수 있는 기준.
-
 ## 기록용 Issue
 교안: [STEP 09 §Issue로 기록하기](https://echo.qus0in.dev/git/09-issues#issue로-기록하기)
 
 - TIL·회고·부검 등 기록 종류에 맞는 틀을 고른다.
 - 본문과 공개 범위를 검토한 뒤 등록한다.
 - 웹 대신 GitHub CLI로도 만들고 닫을 수 있다.
+
+## Issue에 담을 정보
+교안: [STEP 09 §Issue 초안 예시](https://echo.qus0in.dev/git/09-issues#issue-초안-예시)
+
+- 목적: 무엇을 왜 하는가.
+- 하지 않을 일: 범위의 경계.
+- 완료 조건: 확인할 수 있는 기준.
 
 ## 완료 기준
 교안: [STEP 09 §체크리스트](https://echo.qus0in.dev/git/09-issues#체크리스트)

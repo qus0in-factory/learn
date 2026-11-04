@@ -51,16 +51,16 @@ flowchart LR
     C --> D[GitHub]
 ```
 
-## 주의할 점
-교안: [STEP 07 §주의할 점](https://echo.qus0in.dev/git/07-markdown-mermaid#주의할-점)
-
-- README에 비밀 값, 토큰, 비밀번호를 적지 않는다.
-- 공개 저장소이므로 배포 주소와 소개 문구만 노출한다.
-- 렌더링 실패나 push 거절은 교안 트러블 슈팅으로 확인한다.
-
 ## 완료 기준
 교안: [STEP 07 §체크리스트](https://echo.qus0in.dev/git/07-markdown-mermaid#체크리스트)
 
 - 미리보기와 GitHub에서 README와 Mermaid가 표시된다.
 - 배포 주소 링크가 열린다.
 - 작업 상태가 깨끗하다.
+
+## 주의할 점
+교안: [STEP 07 §주의할 점](https://echo.qus0in.dev/git/07-markdown-mermaid#주의할-점)
+
+- README에 비밀 값, 토큰, 비밀번호를 적지 않는다.
+- 공개 저장소이므로 배포 주소와 소개 문구만 노출한다.
+- 렌더링 실패나 push 거절은 교안 트러블 슈팅으로 확인한다.

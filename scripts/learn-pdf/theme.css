@@ -5,3 +5,4 @@ pre, code { font-family: "Learn Mono", "Learn Sans"; }
 svg text, svg foreignObject { font-family: "Learn Sans" !important; }
 td, th { border: 1px solid #aabbd0; }
 footer { color: #526580; }
+.mermaid .flowchart-link { stroke: #172b46 !important; stroke-width: 2px !important; }
