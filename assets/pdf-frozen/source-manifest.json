@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "43ab8e8c2646640cc4c22a1779718fced27daf33",
-  "revision": "01e9c4d5515981a3b7e01acf99858c8092f08b2a",
+  "sourceCommit": "5c7be8f505c89b1344c049f62d978908abf78bbb",
+  "revision": "affb92ef003a45fc641e0197401e23e37ccb0e21",
   "files": [
     {
       "path": "docs/lecture/01-environment.md",
@@ -428,7 +428,7 @@
     },
     {
       "path": "scripts/learn-pdf/pilot/assets/areas.svg",
-      "sha256": "49a86ed0835043e31cde8c19e739a2eea0ca160fa697f9bdd9b33be3aea6dca4"
+      "sha256": "e102609fdff7755fcb95995099b27e7bfa466d293f1a48b7133b179827734654"
     },
     {
       "path": "scripts/learn-pdf/pilot/assets/art-02-stages.png",
@@ -519,6 +519,10 @@
       "sha256": "261f963867f5150cbe3d799d41c690613f3b7e75bf55d702492b759ec0d2d609"
     },
     {
+      "path": "scripts/learn-pdf/pilot/assets/remote-directions.svg",
+      "sha256": "e44f2592c57b2f9dd5658e1c17466ca161bd5b072eaf7a9422cad5309468ae72"
+    },
+    {
       "path": "scripts/learn-pdf/pilot/assets/remote.svg",
       "sha256": "ab3804d61add829727cf8da5fa08c86c70a373457fde7a42a631495f4ce3c8ed"
     },
@@ -564,7 +568,7 @@
     },
     {
       "path": "scripts/learn-pdf/pilot/assets/subject-07.svg",
-      "sha256": "662b7c0286703720fc4c2cb6a89abb4cf8225497b9b1bc60282551230b4d6e84"
+      "sha256": "b89816177940aadab554fa28475be7fedab541e27f0cb2418bfba7c09092436b"
     },
     {
       "path": "scripts/learn-pdf/pilot/assets/subject-08.svg",
@@ -580,7 +584,7 @@
     },
     {
       "path": "scripts/learn-pdf/pilot/assets/subject-11.svg",
-      "sha256": "7e55824ba41b0dc654081c2407a45de9fb8d9297fde90f93162db73da8956741"
+      "sha256": "3e3dff3dc3f212edc5dc22314e92bb9389201ec803180bdf1417d4c4ca3a7449"
     },
     {
       "path": "scripts/learn-pdf/pilot/assets/subject-12.svg",
@@ -588,7 +592,7 @@
     },
     {
       "path": "scripts/learn-pdf/pilot/assets/subjects-provenance.json",
-      "sha256": "deb4d506a33b5a724746700255ec11d29ebb725bbc0e5a59483069f8028deb20"
+      "sha256": "5c8a4cb0fa5f19d4d26327b1d09b9e9958f781f8732d9a5b655504b907b4496e"
     },
     {
       "path": "scripts/learn-pdf/pilot/assets/switch.svg",
@@ -597,6 +601,10 @@
     {
       "path": "scripts/learn-pdf/pilot/assets/terminal.svg",
       "sha256": "0d10bd0c8cc16084ae6f66a62deaf4703eb08492bd4093b421daa14845fb9b01"
+    },
+    {
+      "path": "scripts/learn-pdf/pilot/assets/undo-scope.svg",
+      "sha256": "1e586fbb0cf9cccd1e1955d5c3af095edf7f2f183f8390f59bf12149656ba88e"
     },
     {
       "path": "scripts/learn-pdf/pilot/assets/version.svg",
@@ -640,7 +648,7 @@
     },
     {
       "path": "scripts/learn-pdf/pilot/diagrams.json",
-      "sha256": "ab1f2384a71fe0eecb52824944ef5cbab63fee42ed9a481099c3e5cd31c95621"
+      "sha256": "8f57d1f075a3a9840c6d73b52de8ddc0007f995825f89b152a6449033deb8b11"
     },
     {
       "path": "scripts/learn-pdf/pilot/export.mjs",
@@ -720,11 +728,11 @@
     },
     {
       "path": "scripts/learn-pdf/pilot/step04.json",
-      "sha256": "8cbae37698bb63c234a121f81d2803608a011dabd89241e8433d51b847bac8ec"
+      "sha256": "56ebb667f5d1c2acb67e9c52bfdcf6fd7b5c72d8470f311232fbba1554959f65"
     },
     {
       "path": "scripts/learn-pdf/pilot/step05.json",
-      "sha256": "c7220974906a91610c5b7de76d4b2509cf04287bcdb0bdc44738e9d9eafbcc4e"
+      "sha256": "985d20cc35d0b980b536cdf83675905f74d3120b9f078098b250a6488eaf9dc7"
     },
     {
       "path": "scripts/learn-pdf/pilot/step06.json",
@@ -760,7 +768,7 @@
     },
     {
       "path": "scripts/learn-pdf/pilot/subjects.json",
-      "sha256": "a605cf304d5c494fb4cffa14008365197b849c834fa0bc2b08d8e601de4cd941"
+      "sha256": "85b614bfcd4d326d17cd295d0134fdcc7fd1ba083c5bafc69199bffd643b4c9e"
     },
     {
       "path": "scripts/learn-pdf/pilot/text.mjs",
