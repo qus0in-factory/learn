@@ -65,7 +65,7 @@ flowchart TB
 
 ## Git 명령
 
-명령 이름의 뜻은 다음과 같다.
+명령 이름이 어떤 뜻인지 알면 외우기 쉽다.
 
 - Pull Request: 내 브랜치의 변경을 가져가(pull) 합쳐 달라고 요청(request)한다는 뜻이다.
 
