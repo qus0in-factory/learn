@@ -21,11 +21,11 @@ schedule: "11:00–11:45 (수업 45분) / 11:45–12:00 (휴식 15분)"
 
 ## 핵심 개념
 
-- **Issue**: 작업 요청서 및 버그 리포트 티켓이다.
-- **Label**: 이슈의 종류(`bug`, `enhancement`, `documentation`)를 나타내는 색상 태그다.
-- **Milestone**: 목표 스프린트와 소속 이슈들의 해결률을 게이지 바로 표시한다.
-- **GitHub CLI (`gh`)**: 터미널에서 `gh issue list` 등을 실행하는 공식 CLI 도구다. 설치와 인증은 선택 사항이다.
-- **ChatGPT-GitHub 연동**: 저장소 코드를 AI로 질의하는 기능이다. 권한과 보안을 먼저 확인한다.
+- **Issue**는 작업을 요청하거나 버그를 알리는 티켓이다.
+- **Label**은 이슈의 종류(`bug`, `enhancement`, `documentation`)를 나타내는 색상 태그다.
+- **Milestone**은 목표 스프린트와 소속 이슈들의 해결률을 게이지 바로 보여 준다.
+- **GitHub CLI**(`gh`)는 터미널에서 `gh issue list` 등을 실행하는 공식 CLI 도구다. 설치와 인증은 선택 사항이다.
+- **ChatGPT-GitHub 연동**은 저장소 코드를 AI로 질의하는 기능이다. 권한과 보안을 먼저 확인한다.
 
 ### Issue 관계도
 
