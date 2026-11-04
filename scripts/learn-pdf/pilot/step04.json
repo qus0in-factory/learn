@@ -2,7 +2,7 @@
  {
   "type": "cover",
   "step": "STEP 04",
-   "title": "되돌리기와 무시 규칙"
+  "title": "되돌리기와 무시 규칙"
  },
  {
   "type": "goals",
@@ -29,58 +29,45 @@
   "title": "핵심 개념 및 구조"
  },
  {
-  "type": "table",
+  "type": "compare",
+  "left": {
+   "label": "이력 정리",
+   "lines": [
+    "push 전 오타·누락",
+    "한 커밋으로 교체"
+   ],
+   "cmd": "git commit --amend"
+  },
+  "right": {
+   "label": "기록 금지",
+   "lines": [
+    "비밀·임시·캐시",
+    "아직 추적 전 파일"
+   ],
+   "cmd": ".gitignore"
+  },
   "step": "STEP 04",
-  "title": "되돌리는 이유",
-  "rows": [
-   [
-    "목적",
-    "예"
-   ],
-   [
-    "이력 정리",
-    "push 전 오타 커밋을 하나로"
-   ],
-   [
-    "남기면 안 됨",
-    ".env와 임시 파일"
-   ],
-   [
-    "캐시·로그",
-    "기록하지 않는다"
-   ]
-  ]
+  "title": "되돌리는 이유"
  },
  {
-  "type": "table",
-  "step": "STEP 04",
-  "title": "amend 세 가지 형태",
+  "type": "rows",
+  "numbered": true,
   "rows": [
-   [
-    "형태",
-    "편집기",
-    "용도"
-   ],
-   [
-    "--amend",
-    "연다",
-    "기존 메시지 수정"
-   ],
-   [
-    "--amend -m",
-    "안 연다",
-    "메시지 교체"
-   ],
-   [
-    "--amend --no-edit",
-    "안 연다",
-    "add 뒤 메시지는 유지"
-   ],
-   [
-    "조건",
-    "push 전. 새 해시"
-   ]
-  ]
+   {
+    "term": "--amend",
+    "detail": "편집기에서 기존 메시지를 고친다"
+   },
+   {
+    "term": "--amend -m",
+    "detail": "편집기 없이 메시지를 교체한다"
+   },
+   {
+    "term": "--no-edit",
+    "detail": "add 뒤 메시지는 유지. push 전만"
+   }
+  ],
+  "step": "STEP 04",
+  "title": "amend 세 가지 형태"
  },
  {
   "type": "table",
@@ -110,52 +97,52 @@
   ]
  },
  {
-  "type": "image",
+  "type": "split",
+  "image": "assets/art-04-undo.png",
+  "caption": "커밋 위치 이동",
+  "items": [
+   {
+    "term": "--soft",
+    "detail": "HEAD만 대상 커밋으로 옮긴다"
+   },
+   {
+    "term": "--mixed",
+    "detail": "HEAD·인덱스. 작업 트리는 남김"
+   },
+   {
+    "term": "--hard",
+    "detail": "미커밋 변경을 잃을 수 있다"
+   }
+  ],
   "step": "STEP 04",
-  "title": "되돌리기",
-   "image": "assets/undo-scope.svg",
-   "caption": "restore는 파일 복원, revert는 반대 커밋 추가"
+  "title": "reset 세 모드"
  },
  {
-  "type": "table",
+  "type": "statement",
+  "statement": "revert는 반대 커밋을 쌓는다",
+  "basis": "이력을 지우지 않는다. 공유된 변경 취소",
+  "emphasis": "revert",
   "step": "STEP 04",
-  "title": "revert",
-  "rows": [
-   [
-    "대상",
-    "결과"
-   ],
-   [
-    "기존 커밋",
-    "지우지 않는다"
-   ],
-   [
-    "되돌림",
-    "반대 변경을 새 커밋으로"
-   ],
-   [
-    "때",
-    "공유된 변경 취소"
-   ]
-  ]
+  "title": "revert"
  },
  {
-  "type": "cards",
+  "type": "rows",
+  "numbered": true,
   "step": "STEP 04",
   "title": ".gitignore 패턴",
-  "cards": [
-   [
-    ".env*",
-    "아직 추적하지 않은 이름 패턴"
-   ],
-   [
-    "node_modules/",
-    "의존성 폴더"
-   ],
-   [
-    "!.env.example",
-    "예외는 규칙 뒤. 가짜 값만"
-   ]
+  "rows": [
+   {
+    "term": ".env*",
+    "detail": "아직 추적하지 않은 비밀 파일 이름"
+   },
+   {
+    "term": "node_modules/",
+    "detail": "의존성 폴더를 통째로 제외"
+   },
+   {
+    "term": "!.env.example",
+    "detail": "무시 규칙 뒤에 두는 예외"
+   }
   ]
  },
  {
@@ -164,23 +151,30 @@
   "title": "실습 단계"
  },
  {
-  "type": "flow",
+  "type": "steps",
+  "steps": [
+   {
+    "label": "amend",
+    "detail": "직전 메시지 교체",
+    "tag": "--amend -m"
+   },
+   {
+    "label": ".env",
+    "detail": "가짜 비밀 파일"
+   },
+   {
+    "label": "규칙",
+    "detail": ".gitignore 저장",
+    "tag": ".env*"
+   },
+   {
+    "label": "커밋",
+    "detail": "규칙 파일만",
+    "tag": "git add"
+   }
+  ],
   "step": "STEP 04",
-  "title": "실습 흐름",
-  "cards": [
-   [
-    "01 · amend",
-    "직전 메시지를 바꾸고 해시를 본다"
-   ],
-   [
-    "02 · 규칙",
-    "저장해야 .env가 사라진다"
-   ],
-   [
-    "03 · 기록",
-    ".gitignore만 커밋한다"
-   ]
-  ]
+  "title": "실습 흐름"
  },
  {
   "type": "code",
@@ -192,23 +186,24 @@
   ]
  },
  {
-  "type": "cards",
+  "type": "rows",
+  "numbered": true,
+  "rows": [
+   {
+    "term": "계속 보임",
+    "detail": "rm --cached 후 커밋"
+   },
+   {
+    "term": "이미 push",
+    "detail": "amend 대신 새 커밋이나 revert"
+   },
+   {
+    "term": "hard",
+    "detail": "수업에서 실행하지 않는다"
+   }
+  ],
   "step": "STEP 04",
-  "title": "트러블 슈팅",
-  "cards": [
-   [
-    "계속 보임",
-    "rm --cached 후 커밋"
-   ],
-   [
-    "이미 push",
-    "amend 대신 새 커밋"
-   ],
-   [
-    "hard",
-    "추적 파일의 미커밋 변경을 잃을 수 있다"
-   ]
-  ]
+  "title": "트러블 슈팅"
  },
  {
   "type": "table",
@@ -242,13 +237,14 @@
    ],
    [
     "기록",
-    "커밋은 규칙 파일"
+    "커밋은 규칙 파일",
+    ""
    ]
   ]
  },
  {
   "type": "eof",
   "step": "STEP 04",
-   "title": "- EOF -"
+  "title": "- EOF -"
  }
 ]
