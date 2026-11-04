@@ -100,7 +100,7 @@ ChatGPT Plus·Pro는 `/connect`에서 `OpenAI`를 고르고 `Sign in with ChatGP
 
 1. OpenCode에서 공급자 계정을 연결하는 명령은 ::/connect::이다.
 2. 연결한 공급자의 모델을 고르는 명령은 ::/models::이다.
-3. `/models`에서 고른 모델은 현재 세션에 적용되고 설정 파일의 기본 모델은 ::바뀌지 않는다::.
+3. `/models`에서 고른 모델이 적용되는 범위는 ::현재 세션::이다.
 
 ## 참고 자료
 
