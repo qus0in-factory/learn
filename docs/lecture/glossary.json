@@ -202,7 +202,7 @@
       "term": "HEAD",
       "slug": "head",
       "group": "repo",
-      "definition": "현재 작업 중인 브랜치의 가장 최근 커밋을 가리키는 포인터다.",
+      "definition": "작업 중인 브랜치, 또는 이동해 둔 커밋을 가리키는 참조다. 보통 그 브랜치의 최신 커밋을 따라간다.",
       "plain": "지금 내가 서 있는 위치다. HEAD~1은 바로 전 커밋을 뜻한다.",
       "steps": [
         "04-amend-ignore"
@@ -307,7 +307,7 @@
       "term": "main",
       "slug": "main",
       "group": "collab",
-      "definition": "저장소의 기본 브랜치 이름이다.",
+      "definition": "이 수업과 GitHub가 기본으로 쓰는 브랜치 이름이다. 로컬 git init의 기본 이름은 설정에 따라 다르다.",
       "plain": "완성된 코드가 모이는 줄기다. 작업 브랜치를 여기에 병합한다.",
       "steps": [
         "05-remote",
