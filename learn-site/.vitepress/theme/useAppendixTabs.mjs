@@ -5,7 +5,7 @@ export function useAppendixTabs(groups) {
   const ids = ['', ...groups.map(group => group.id)]
   const items = computed(() => groups
     .filter(group => !selected.value || group.id === selected.value)
-    .flatMap(group => group.items))
+    .flatMap(group => group.items.map(item => ({ ...item, topic: group.text }))))
   function move(event) {
     const index = ids.indexOf(selected.value)
     const next = { ArrowRight: (index + 1) % ids.length,

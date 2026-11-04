@@ -44,5 +44,9 @@
   "appendix/10-gitignore-patterns": "file-x",
   "appendix/11-environment-secrets": "key-round",
   "appendix/12-nvidia-nim": "cpu",
-  "glossary": "book-open"
+  "glossary": "book-open",
+  "appendix/13-profile-records": "user",
+  "appendix/14-github-collaboration": "git-pull-request",
+  "appendix/15-hosting-vcs": "cloud",
+  "appendix/16-record-examples": "message-square-text"
 }

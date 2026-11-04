@@ -51,6 +51,17 @@ gitGraph
     merge feature id: "Merge Commit"
 ```
 
+### 이력을 합치는 방법
+
+| 방법 | 이력에 반영되는 방식 |
+| --- | --- |
+| merge | 갈라진 이력을 합친다. 3-way 병합에서는 병합 커밋이 생긴다. |
+| squash merge | `git merge --squash`로 변경을 모은 뒤 커밋한다. GitHub에서는 `Squash and merge`를 선택할 수 있다. |
+| rebase | `git rebase`로 커밋을 다른 기준 위에 다시 적용해 이력을 재작성한다. 공유 브랜치에서는 사용하지 않는다. |
+| 대화형 rebase | `git rebase -i`로 커밋을 정리한다. `pick`은 유지, `squash`는 앞 커밋과 합치기, `reword`는 메시지 수정이다. 이력 재작성에 주의하고 공유 브랜치에서는 사용하지 않는다. |
+
+명령의 자세한 설명은 Git 공식 문서의 [merge](https://git-scm.com/docs/git-merge)와 [rebase](https://git-scm.com/docs/git-rebase)를 참고한다. GitHub에서 PR을 병합하는 흐름은 [STEP 12 풀 리퀘스트와 협업](12-pull-request.md)을 참고한다.
+
 ### 충돌 해결 흐름
 
 충돌을 해결하는 순서와 `--abort`로 돌아가는 출구
@@ -147,4 +158,4 @@ git merge --abort
 
 1. 충돌은 두 브랜치가 같은 파일의 겹치는 부분을 다르게 고쳐 자동으로 합칠 수 없는 ::상태::다.
 2. 기준 브랜치에 새 커밋이 없어 포인터만 앞으로 옮기는 병합은 ::Fast-forward::다.
-3. 진행 중인 병합을 취소하는 명령은 `git merge ::--abort::`다.
+3. 진행 중인 병합을 취소하는 명령은 `git merge` ::--abort::다.

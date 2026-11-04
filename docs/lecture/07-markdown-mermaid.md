@@ -24,6 +24,34 @@ schedule: "09:00–09:45 (수업 45분) / 09:45–10:00 (휴식 15분)"
 - Mermaid는 텍스트로 흐름을 표현해 문서와 함께 관리한다.
 - 편집기와 GitHub에서 다이어그램이 표시되는지 확인한다. [다이어그램 작성](appendix/04-mermaid.md)에서 도구와 원본을 살펴본다.
 
+## 마크다운 기본 문법
+
+GitHub README에 아래 문법을 쓸 수 있다. 더 자세한 내용은 [GitHub의 기본 작성 및 서식 문법](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)을 참고한다.
+
+~~~markdown
+# 제목
+**굵게**와 *기울임*
+
+- 순서 없는 목록
+1. 순서 있는 목록
+
+[링크 이름](https://example.com)
+![이미지 설명](image.png)
+`인라인 코드`
+
+```text
+코드 블록
+```
+
+> 인용문
+
+| 항목 | 설명 |
+| --- | --- |
+| 문서 | README |
+
+- [ ] 할 일
+~~~
+
 ## 따라하기
 
 1. 실습 폴더(예: `portfolio-web`)를 VS Code로 연다.

@@ -50,7 +50,7 @@
 - [설치 준비](appendix/00-installation.md)
 - [자격 증명 재인증](appendix/01-authentication.md)
 - [명령과 옵션 일람](appendix/02-git-options.md)
-- [웹 디자인 보조 도구](appendix/03-web-tools.md)
+- [웹 디자인·배포 도구](appendix/03-web-tools.md)
 - [다이어그램 작성](appendix/04-mermaid.md)
 - [운영체제별 차이](appendix/05-os-differences.md)
 - [CLI·터미널·셸](appendix/06-cli-terminal-shell.md)
@@ -62,19 +62,21 @@
 - [AI 서비스 연결](appendix/12-nvidia-nim.md)
 - [프로필과 기록 작성](appendix/13-profile-records.md)
 - [GitHub 협업](appendix/14-github-collaboration.md)
+- [Git 호스팅과 버전 관리 도구](appendix/15-hosting-vcs.md)
+- [기록 작성 예시](appendix/16-record-examples.md)
 
 ## 문서 구조
 
 ```mermaid
 flowchart TD
     L["docs/lecture"] --> C["01–12차시 문서<br/>01-environment.md … 12-pull-request.md"]
-    L --> A["appendix/<br/>00-installation.md … 14-github-collaboration.md"]
+    L --> A["appendix/<br/>00-installation.md … 14-github-collaboration.md<br/>15-hosting-vcs.md · 16-record-examples.md"]
 ```
 
 ## 준비물과 안전 규칙
 
 - VS Code, Git, 터미널(Windows Git Bash 또는 macOS 터미널), GitHub 계정, OpenCode를 준비한다.
-- 눈누, Bulma, Coolors 등 [웹 디자인 보조 도구](appendix/03-web-tools.md)의 사용 범위와 라이선스를 확인한다.
+- 눈누, Bulma, Coolors 등 [웹 디자인·배포 도구](appendix/03-web-tools.md)의 사용 범위와 라이선스를 확인한다.
 - 모든 명령은 별도 교육용 폴더에서 한 줄씩 실행한다. 오류가 나면 다음 명령을 이어서 실행하지 않는다.
 - 토큰, 비밀번호, 개인정보를 채팅·파일·Issue에 남기지 않는다.
 - `reset --hard`, `push --force`, `clean -fd`, 브랜치 강제 삭제는 수업에서 실행하지 않는다.

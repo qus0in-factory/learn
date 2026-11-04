@@ -58,6 +58,102 @@ flowchart TB
 5. `Labels`에서 라벨을 만들거나 수정하고 이슈에 적용한다.
 6. 관련 기록 문서의 링크를 이슈에 적는다.
 
+## GitHub CLI로 관리
+
+웹 화면 대신 GitHub CLI를 사용할 수도 있다. GitHub CLI가 설치된 터미널에서 인증 상태를 확인한다. 인증되지 않았다면 안내에 따라 로그인한다.
+
+```bash
+gh auth status
+```
+
+작업할 GitHub 저장소의 로컬 폴더에서 실행한다. 다른 저장소를 지정하려면 명령에 `--repo 소유자/저장소`를 붙인다. Issue 작성과 라벨 생성에는 해당 저장소의 권한이 필요하다. 아래 파일 이름과 Issue 번호는 예시다.
+
+먼저 편집기로 `til.md`를 만들고 아래 TIL 본문을 저장한다. 라벨이 없으면 만든 뒤 Issue를 등록한다.
+
+```bash
+gh label create 기록 --description "학습과 작업 기록"
+gh issue create --title "TIL: stage 해제" --body-file til.md --label 기록
+```
+
+생성된 Issue 번호를 확인하고 `123` 대신 입력한다. 목록은 기본적으로 열린 Issue만 보여 준다. 기록이나 후속 작업을 확인한 뒤 닫는다.
+
+```bash
+gh issue list
+gh issue view 123
+gh issue comment 123 --body "확인한 내용을 추가했다."
+gh issue close 123
+```
+
+옵션은 [GitHub CLI Issue 작성 매뉴얼](https://cli.github.com/manual/gh_issue_create)과 각 명령의 `--help`에서 확인한다.
+
+## Issue로 기록하기
+
+TIL은 배운 내용을, KPT 회고는 유지할 점·문제·다음 시도를, 부검은 문제의 영향과 원인·조치를 남긴다. 작성한 내용과 공개 범위를 검토한 뒤 파일을 Issue 본문으로 등록한다. 자세한 기록 구성은 [기록 작성 예시](appendix/16-record-examples.md)를 참고한다.
+
+### TIL
+
+에이전트에게 요청하는 예시
+
+```text
+stage 해제 실습에서 확인한 내용으로 TIL Issue 초안을 짧게 작성해 줘. 확인하지 않은 내용은 구분해 줘.
+```
+
+`til.md`에 저장할 본문 예시
+
+```markdown
+## 배운 점
+git restore --staged로 파일을 stage에서 뺀다.
+
+## 확인
+git status에서 수정 파일이 unstaged로 표시됐다.
+```
+
+### KPT 회고
+
+에이전트에게 요청하는 예시
+
+```text
+첫 커밋 실습을 Keep, Problem, Try로 나눈 Issue 초안을 작성해 줘. Try는 확인할 수 있는 행동으로 적어 줘.
+```
+
+`kpt.md`에 저장할 본문 예시
+
+```markdown
+## Keep
+커밋 전에 diff를 확인한다.
+## Problem
+편집기 종료 방법을 몰라 시간이 걸렸다.
+## Try
+다음 실습 전에 편집기 저장과 종료를 연습한다.
+```
+
+```bash
+gh issue create --title "회고: 첫 커밋" --body-file kpt.md --label 기록
+```
+
+### 부검
+
+에이전트에게 요청하는 예시
+
+```text
+커밋 편집기 종료 지연에 관한 부검 Issue 초안을 작성해 줘. 확인된 사실과 미확인 원인을 구분해 줘.
+```
+
+`post-mortem.md`에 저장할 본문 예시
+
+```markdown
+## 상황과 영향
+편집기 종료 방법을 몰라 커밋이 늦어졌다.
+## 원인과 조치
+종료 방법을 확인하고 저장했다. 원인은 실행 기록으로 확인한다.
+## 후속 작업
+- [ ] 다음 실습 전에 편집기 종료를 연습한다.
+```
+
+```bash
+gh issue create --title "부검: 커밋 지연" --body-file post-mortem.md --label 기록
+```
+
 ## 에이전트 요청 예시
 
 ```text
