@@ -57,3 +57,4 @@ Ubuntu 전용 `bootstrap-browser.mjs`는 같은 Playwright manifest의 Chromium1
 
 - [현행 정적 사이트 배포](../deployment.md) · [운영 목차](../operations/index.md)
 - [D1 동기화](d1-sync.md) · [콘텐츠 규칙](../content-style.md)
+- [Git 교안과 PDF 보강 회고 및 부검](../operations/pdf-training-retrospective.md)

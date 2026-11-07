@@ -7,6 +7,7 @@
 - [카카오 공유](kakao-sharing.md): Web 도메인·키 주입·사전 로드 확인
 - [광고 슬롯](advertising.md): 기본 꺼짐, ads.txt 조건부 생성, 개인정보 초안
 - [콘텐츠 규칙](../content-style.md): 원본 문체·형식과 수동 린트
+- [Git 교안과 PDF 보강 회고 및 부검](pdf-training-retrospective.md): 편집 재작업·명령 검토·렌더링·배포 완료 기준
 
 ## 현재 상태
 
