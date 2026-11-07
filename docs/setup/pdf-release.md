@@ -1,8 +1,8 @@
 # PDF 배포 가드와 원격 readback
 
-현재 PDF 12개의 고정 revision·장수·namespace는 [운영 목차](../operations/index.md)가 단일 현재값이다. 이번 값은 `f793e72b02b584cc167dd53c92da9736ded7de7a`, 12개/179장(STEP 03은 14장)이다. live 강의 수정과 분리하며 이후 재생성·고정 해제·revision 갱신은 새로운 명시 승인이 필요하다. `pdf-source.json`의 frozen=true와 `assets/pdf-frozen/source-manifest.json`을 유지한다.
+현재 PDF 12개의 고정 revision·장수·namespace는 [운영 목차](../operations/index.md)가 단일 현재값이다. 이번 값은 `dd849e121a06f0e6e0c414bef600541f97991af3`, 12개/268장(각 20–24장)이다. live 강의 수정과 분리하며 이후 재생성·고정 해제·revision 갱신은 새로운 명시 승인이 필요하다. `pdf-source.json`의 frozen=true와 `assets/pdf-frozen/source-manifest.json`을 유지한다.
 
-제품 정식 릴리스는 v0.2.1이고 PDF namespace는 계속 `v0.1.0/`이다. 보존 객체는 `992baeb3737fad565f42860e75bbc5c502eadfb4`와 `0444320a59711d0568077bd9e8ac85daef2d2cda`다. 최신 plain URL은 현재 revision으로 이동한다.
+제품 정식 릴리스는 v0.2.1이고 PDF namespace는 계속 `v0.1.0/`이다. 보존 객체는 `f793e72b02b584cc167dd53c92da9736ded7de7a`·`992baeb3737fad565f42860e75bbc5c502eadfb4`와 `0444320a59711d0568077bd9e8ac85daef2d2cda`다. 최신 plain URL은 현재 revision으로 이동한다.
 
 ## 준비
 
