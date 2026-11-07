@@ -1,5 +1,24 @@
 # Learn 슬라이드 PDF
 
+## 교안 보강 미리보기
+
+작업 중인 `pilot/step01.json`–`step12.json`은 아래 명령으로 로컬 PDF를 만든다.
+고정된 배포 revision과 봉인된 `dist/learn-pdfs`를 교체하지 않으며,
+결과 PDF·manifest·검증용 PNG는 `dist/learn-pdfs-preview`에 저장한다.
+
+```bash
+node scripts/learn-pdf/preview.mjs
+python3 scripts/learn-pdf/verify.py dist/learn-pdfs-preview
+```
+
+명령은 설치된 고정 Chromium과 폰트를 사용한다. 폰트 fallback·넘침·요소 겹침은
+미리보기에서도 거부한다. 설명이 빠지지 않도록 덱은 12–30장을 허용하고,
+개념 그림과 실제 실습 화면은 합계 1–8장까지 배치한다.
+기본 글자 크기를 줄여 내용을 한 장에 밀어 넣지 않고 설명과 실습을 나눈다.
+공개 PDF 교체는 [PDF 배포 가드](../../docs/setup/pdf-release.md)를 따른다.
+
+## 배포용 빌드
+
 저장소 루트에서 `bash scripts/build-learn-pdfs.sh`를 실행한다.
 Node.js/npm(검증 런타임 26.13.0 LTS), Python 3, Poppler(`pdftotext`, `pdftoppm`, `pdffonts`)가 필요하다.
 Playwright 1.56.1의 번들 Chromium 141.0.7390.37만 사용한다. 시스템 브라우저 override는 실패한다.

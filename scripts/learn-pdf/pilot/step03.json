@@ -10,16 +10,16 @@
   "title": "학습 목표",
   "cards": [
    [
-    "기록",
-    "commit으로 스냅샷. 메시지는 한 줄"
+    "커밋",
+    "스테이징 상태를 메시지와 함께 스냅샷으로 기록한다"
    ],
    [
     "조회",
-    "로그와 diff로 차이와 이력을 읽을 수 있다"
+    "git log로 이력, git diff로 변경 줄을 확인한다"
    ],
    [
-    "구별",
-    "stage 해제와 편집기 종료를 나눌 수 있다"
+    "복구",
+    "스테이징 해제와 편집기 저장·취소를 구분한다"
    ]
   ]
  },
@@ -30,9 +30,9 @@
  },
  {
   "type": "statement",
-  "statement": "커밋은 저장이 아니라 체크포인트",
-  "basis": "스냅샷과 메시지, 되돌아갈 기준점",
-  "emphasis": "체크포인트",
+  "statement": "커밋은 프로젝트 상태를 스냅샷으로 남긴다",
+  "basis": "메시지는 작업 단위와 변경 이유를 알려 주는 이력 설명이다",
+  "emphasis": "스냅샷",
   "step": "STEP 03",
   "title": "커밋"
  },
@@ -42,15 +42,15 @@
   "items": [
    {
     "term": "첫 커밋",
-    "detail": "부모가 없다"
+    "detail": "이전 커밋이 없어 부모가 없다"
    },
    {
-    "term": "일반",
-    "detail": "부모가 하나다"
+    "term": "일반 커밋",
+    "detail": "바로 앞 커밋 하나를 부모로 둔다"
    },
    {
-    "term": "병합",
-    "detail": "부모가 둘 이상이다"
+    "term": "병합 커밋",
+    "detail": "합쳐진 이력을 가리키는 부모가 둘 이상이다"
    }
   ],
   "step": "STEP 03",
@@ -62,17 +62,17 @@
    {
     "figure": "40자리",
     "label": "SHA-1",
-    "detail": "SHA-256은 더 길다"
+    "detail": "SHA-256 저장소의 해시는 더 길다"
    },
    {
     "figure": "7자리",
-    "label": "로그",
-    "detail": "설정에 따라 더 길다"
+    "label": "oneline",
+    "detail": "앞부분을 줄여 표시하며 길이는 달라질 수 있다"
    },
    {
-    "figure": "4+",
+    "figure": "유일값",
     "label": "인자",
-    "detail": "저장소 안에서 유일"
+    "detail": "저장소 안에서 다른 커밋과 구별되어야 한다"
    }
   ],
   "step": "STEP 03",
@@ -85,19 +85,23 @@
   "rows": [
    [
     "부분",
-    "예"
+    "기준"
    ],
    [
-    "한 줄",
-    "무엇을 바꿨는지"
+    "제목",
+    "무엇을 바꿨는지 한 줄로 쓴다"
    ],
    [
     "접두어",
-    "feat docs style fix"
+    "feat·docs·style·fix처럼 작업 종류를 표시한다"
+   ],
+   [
+    "구체성",
+    "docs: 학습 목표 안내 추가처럼 범위를 드러낸다"
    ],
    [
     "피할 말",
-    "수정 완료, test, asdf"
+    "수정 완료·test·asdf처럼 내용이 모호한 표현"
    ]
   ]
  },
@@ -108,28 +112,23 @@
   "rows": [
    [
     "명령",
-    "기준",
-    "변경"
+    "기준 → 비교 대상"
    ],
    [
     "git diff",
-    "스테이징",
-    "작업 공간"
+    "인덱스 → 작업 공간"
    ],
    [
     "git diff --staged",
-    "HEAD",
-    "스테이징"
+    "HEAD → 스테이징 영역"
    ],
    [
     "git diff HEAD",
-    "HEAD",
-    "작업 공간"
+    "HEAD → 작업 공간 전체"
    ],
    [
-    "빈 diff",
-    "add 직후 인자 없는 diff",
-    ""
+    "빈 결과",
+    "변경이 없거나 add 이후 작업 공간에 새 수정이 없음"
    ]
   ]
  },
@@ -142,24 +141,28 @@
   "type": "steps",
   "steps": [
    {
-    "label": "첫 커밋",
-    "detail": "올린 파일을 확정",
+    "label": "첫 기록",
+    "detail": "스테이징 파일을 첫 커밋으로 확정한다",
     "tag": "git commit"
    },
    {
-    "label": "로그",
-    "detail": "해시와 메시지",
-    "tag": "git log"
+    "label": "이력",
+    "detail": "해시와 메시지를 읽는다",
+    "tag": "git log --oneline"
    },
    {
-    "label": "비교",
-    "detail": "고친 뒤 diff",
+    "label": "수정",
+    "detail": "파일을 고치고 변경 줄을 확인한다",
     "tag": "git diff"
    },
    {
-    "label": "둘째",
-    "detail": "내린 뒤 다시 add",
-    "tag": "restore"
+    "label": "해제",
+    "detail": "실수로 올린 파일을 인덱스에서 내린다",
+    "tag": "git restore --staged"
+   },
+   {
+    "label": "재기록",
+    "detail": "다시 add한 뒤 두 번째 커밋을 만든다"
    }
   ],
   "step": "STEP 03",
@@ -170,8 +173,8 @@
   "step": "STEP 03",
   "title": "명령어 한눈에 보기",
   "code": [
-   "git commit -m \"feat: 첫 페이지\"\ngit log --oneline\ngit log",
-   "git diff\ngit diff --staged\ngit add index.html\ngit restore --staged \\\nindex.html\ngit status\ngit add index.html\ngit commit -m \"docs: 문구\""
+   "git commit -m \\\n  \"feat: 첫 웹페이지 추가\"\ngit log --oneline\n\n# 파일을 고친 뒤 비교\ngit status\ngit diff",
+   "git diff --staged\ngit add index.html\ngit restore --staged \\\n  index.html\ngit status\ngit add index.html\ngit commit -m \\\n  \"docs: 문구 보완\""
   ]
  },
  {
@@ -198,40 +201,176 @@
   "title": "vi에서 종료와 중단"
  },
  {
+  "type": "compare",
+  "step": "STEP 03",
+  "title": "작업 공간과 스테이징 비교",
+  "left": {
+   "label": "git diff",
+   "lines": [
+    "마지막 add 뒤 작업 파일을 고쳤을 때",
+    "아직 스테이징하지 않은 줄을 보여 준다"
+   ],
+   "cmd": "git diff"
+  },
+  "right": {
+   "label": "git diff --staged",
+   "lines": [
+    "변경을 add한 뒤 커밋 전 상태",
+    "다음 커밋에 들어갈 줄을 보여 준다"
+   ],
+   "cmd": "git diff --staged"
+  },
+  "result": "기준은 마지막 커밋(HEAD)이다. add 전 변경은 git diff, add 뒤 커밋 전 변경은 git diff --staged에서 본다."
+ },
+ {
+  "type": "rows",
+  "step": "STEP 03",
+  "title": "읽기 쉬운 커밋 메시지",
+  "rows": [
+   {
+    "term": "작업 단위",
+    "detail": "한 커밋에는 하나의 논리적 변경을 담는다"
+   },
+   {
+    "term": "제목",
+    "detail": "무엇이 바뀌었는지 짧고 구체적으로 쓴다"
+   },
+   {
+    "term": "접두어 예",
+    "detail": "feat 기능 · docs 문서 · style 서식 · fix 오류 수정"
+   },
+   {
+    "term": "본문",
+    "detail": "필요하면 변경 배경과 이유를 덧붙인다"
+   }
+  ]
+ },
+ {
+  "type": "code",
+  "step": "STEP 03",
+  "title": "커밋 만들고 결과 확인",
+  "code": [
+   "git status\ngit add index.html\ngit commit -m \\\n  \"feat: 첫 웹페이지 추가\"\ngit log --oneline",
+   "# log에는 해시와 제목이 보인다\n# 작업 트리도 확인한다\ngit status\n# clean이면 커밋할 변경이 없다"
+  ]
+ },
+ {
+  "type": "steps",
+  "step": "STEP 03",
+  "title": "편집기에서 커밋 마치기",
+  "steps": [
+   {
+    "label": "열기",
+    "detail": "-m 없이 commit하면 기본 편집기가 열린다"
+   },
+   {
+    "label": "메시지",
+    "detail": "주석 기호가 없는 첫 줄에 제목을 쓴다"
+   },
+   {
+    "label": "저장",
+    "detail": "Esc 다음 :wq로 저장하고 편집기를 닫는다",
+    "tag": ":wq"
+   },
+   {
+    "label": "취소",
+    "detail": "HEAD가 있는 파일을 스테이징 해제하고 다시 add한다",
+    "tag": ":cq"
+   }
+  ]
+ },
+ {
+  "type": "rows",
+  "step": "STEP 03",
+  "title": "커밋·diff 오류 확인",
+  "rows": [
+   {
+    "term": "nothing to commit",
+    "detail": "git status로 스테이징 변경이 있는지 살핀다"
+   },
+   {
+    "term": "diff가 비어 있음",
+    "detail": "파일을 수정했는지 또는 이미 add했는지 확인한다"
+   },
+   {
+    "term": "편집기에서 멈춤",
+    "detail": "저장은 :wq, 커밋 취소는 :cq로 끝낸다"
+   },
+   {
+    "term": "해시가 안 보임",
+    "detail": "커밋 성공 여부와 현재 저장소를 확인한다"
+   }
+  ]
+ },
+ {
+  "type": "rows",
+  "step": "STEP 03",
+  "title": "첫 커밋 확인",
+  "rows": [
+   {
+    "term": "이력",
+    "detail": "최신 커밋의 해시와 제목을 확인한다."
+   },
+   {
+    "term": "내용",
+    "detail": "의도한 변경만 기록됐는지 diff를 읽는다."
+   },
+   {
+    "term": "상태",
+    "detail": "남은 수정이나 스테이징 변경이 있는지 확인한다."
+   }
+  ]
+ },
+ {
   "type": "table",
   "step": "STEP 03",
   "title": "한 장 요약",
   "rows": [
    [
     "개념",
-    "끝난 상태",
+    "결과",
     "명령"
    ],
    [
     "커밋",
-    "스냅샷과 메시지",
+    "인덱스 상태를 스냅샷으로 저장",
     "git commit -m"
    ],
    [
     "이력",
-    "커밋이 둘",
+    "최신 순 해시와 제목",
     "git log --oneline"
    ],
    [
-    "차이",
-    "기준에서 변경으로",
+    "비교",
+    "기준과 변경 대상을 선택",
     "git diff"
    ],
    [
-    "내리기",
-    "다시 add 후 커밋",
-    "restore --staged"
-   ],
-   [
-    "확인",
-    "커밋 2개와 clean",
-    ""
+    "언스테이지",
+    "작업 내용은 두고 인덱스에서 내림",
+    "git restore --staged"
    ]
+  ]
+ },
+ {
+  "type": "split",
+  "step": "STEP 03",
+  "title": "소개 문구 수정 요청",
+  "code": "소개 문단을 AI 엔지니어 중심으로\n64자로 작성해줘.\n그 밖의 수정은 하지 마.",
+  "items": [
+   {
+    "term": "범위",
+    "detail": "소개 문단만 바꾸도록 요청한다."
+   },
+   {
+    "term": "조건",
+    "detail": "주제와 글자 수를 함께 지정한다."
+   },
+   {
+    "term": "검토",
+    "detail": "diff로 다른 변경이 없는지 살핀다."
+   }
   ]
  },
  {

@@ -136,6 +136,16 @@ README 프로젝트 소개, 배포 링크, Mermaid 흐름도 작성
 Mermaid 다이어그램에 pull 흐름 화살표 추가
 ```
 
+## 2026년 11월 실습 사례
+
+11월 6일 [프로필 README](https://github.com/ilovejava26/ilovejava26/blob/main/README.md)에는 `#` 제목과 이미지 문법으로 만든 기술 배지가 있다. 원본 Markdown과 렌더링된 화면을 비교하며 문법이 어떻게 표시되는지 살펴본다. [실습 기록](https://github.com/ilovejava26/memo/blob/main/261106.md)의 `git add .`, `git commit`, `git push origin main`은 작성한 내용을 공개하는 흐름이다.
+
+[first-repo의 syntax.md](https://github.com/ilovejava26/first-repo/blob/main/syntax.md)는 실습 메모를 바탕으로 제목·목록·표·체크리스트와 Mermaid 문법을 정리한 문서다. 같은 저장소의 [README 원본](https://github.com/ilovejava26/first-repo/blob/main/README.md)과 비교해 입력 문법이 어떻게 렌더링되는지 확인한다.
+
+![프로필 README의 제목과 기술 배지가 렌더링된 화면](/screenshots/ilovejava26/profile-readme.png)
+
+화면 출처: [memo 스크린샷](https://github.com/ilovejava26/memo/blob/main/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202026-11-06%20134138.png).
+
 ## 체크리스트
 
 - [ ] VS Code 미리보기에서 제목, 표, 체크리스트가 렌더링된다.

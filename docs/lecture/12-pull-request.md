@@ -119,6 +119,16 @@ PR diff 목적·안전·재현성 기준 검토
 - 반응형 레이아웃은 다음 작업으로 남긴다.
 ```
 
+## 2026년 11월 실습 사례
+
+11월 6일 [실습 기록](https://github.com/ilovejava26/memo/blob/main/261106.md)에서 `release` 브랜치에 `5.txt`를 커밋하고 `git push origin release`로 올렸다. [PR #1](https://github.com/ilovejava26/merge/pull/1)은 이 변경을 제안했고, [병합 커밋](https://github.com/ilovejava26/merge/commit/a3df131aa91b2d406c193bc58cbe85851aa78449)으로 `main`에 반영됐다.
+
+이어서 README와 실습 문서를 추가하는 [PR #2](https://github.com/ilovejava26/merge/pull/2)를 만들었다. 2026년 11월 7일 확인 시 이 PR은 열려 있어, 문서 변경까지 병합됐다고 해석하지 않는다. [fork 저장소](https://github.com/ilovejava26/fork)는 `ilovegit26/fork`를 실습 계정으로 복사한 사례로, 같은 저장소의 브랜치 사이에서 만든 위 PR과 출발점이 다르다.
+
+![5.txt 커밋과 충돌 없음 상태 및 Merge pull request 버튼](/screenshots/ilovejava26/pull-request.png)
+
+화면은 병합 전 충돌이 없다는 확인 상태다. 출처: [memo 스크린샷](https://github.com/ilovejava26/memo/blob/main/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202026-11-06%20172602.png).
+
 ## 체크리스트
 
 - [ ] GitHub에 Merged PR이 보인다.
