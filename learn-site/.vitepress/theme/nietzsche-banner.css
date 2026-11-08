@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/caveat-nietzsche.woff2') format('woff2');
+}
+.ad-nietzsche {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100px;
+  padding: 6px 10px 4px;
+  background: var(--vp-c-bg-mute);
+  border-radius: 4px;
+  text-decoration: none;
+}
+.ad-nietzsche-text {
+  font-family: 'Caveat', cursive, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.22;
+  text-align: center;
+  color: #262626;
+  transition: opacity .3s ease;
+}
+:root.dark .ad-nietzsche-text { color: #f3f4f6; }
+.ad-nietzsche-src {
+  margin-top: 3px;
+  font-size: 10px;
+  color: var(--vp-c-text-3);
+  transition: opacity .3s ease;
+}
+.ad-nietzsche-fade { opacity: 0; }
+@media (prefers-reduced-motion: reduce) {
+  .ad-nietzsche-text, .ad-nietzsche-src { transition: none; }
+}

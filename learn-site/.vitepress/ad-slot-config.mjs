@@ -17,6 +17,6 @@ export function getSlotSpec(slotName, config = adsConfig) {
     width: slot.width || 320,
     height: slot.height || 100,
     provider: config.provider || 'placeholder',
-    quote: config.quote || null,
+    nietzsche: config.nietzsche || null,
   }
 }

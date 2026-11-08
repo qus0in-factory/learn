@@ -9,10 +9,35 @@
     "/privacy",
     "/licenses"
   ],
-  "quote": {
-    "text": "Siehe! Ich bin meiner Weisheit überdrüssig, wie die Biene, die des Honigs zu viel gesammelt hat, ich bedarf der Hände, die sich ausstrecken.",
-    "mobile": "/quote-mobile.png",
-    "desktop": "/quote-desktop.png"
+  "nietzsche": {
+    "link": "https://ko.wikipedia.org/wiki/프리드리히_니체",
+    "intervalMs": 8000,
+    "quotes": [
+      {
+        "text": "Siehe! Ich bin meiner Weisheit überdrüssig, wie die Biene, die des Honigs zu viel gesammelt hat, ich bedarf der Hände, die sich ausstrecken.",
+        "source": "Also sprach Zarathustra"
+      },
+      {
+        "text": "Man muss noch Chaos in sich haben, um einen tanzenden Stern gebären zu können.",
+        "source": "Also sprach Zarathustra"
+      },
+      {
+        "text": "Was mich nicht umbringt, macht mich stärker.",
+        "source": "Götzen-Dämmerung"
+      },
+      {
+        "text": "Ohne Musik wäre das Leben ein Irrthum.",
+        "source": "Götzen-Dämmerung"
+      },
+      {
+        "text": "Hat man sein warum? des Lebens, so verträgt man sich fast mit jedem wie?",
+        "source": "Götzen-Dämmerung"
+      },
+      {
+        "text": "Und wenn du lange in einen Abgrund blickst, blickt der Abgrund auch in dich hinein.",
+        "source": "Jenseits von Gut und Böse"
+      }
+    ]
   },
   "slots": {
     "docBottom": {
