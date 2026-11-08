@@ -1,7 +1,8 @@
 {
   "enabled": true,
-  "provider": "placeholder",
+  "provider": "adfit",
   "placeholderEnabled": true,
+  "adfitScriptUrl": "https://t1.kakaocdn.net/kas/static/ba.min.js",
   "adsTxt": "",
   "adsenseClientId": "",
   "excludedPaths": [
@@ -43,7 +44,8 @@
     "docBottom": {
       "enabled": true,
       "width": 320,
-      "height": 100
+      "height": 100,
+      "adfitUnit": "DAN-nY46UKb91MZ4L7mi"
     },
     "asideRail": {
       "enabled": false,
