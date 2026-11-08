@@ -7448,8 +7448,8 @@ Generated for this project with Nano Banana 2 (Gemini model gemini-3.1-flash-ima
 Prompts, model, reference sources and candidate selection are recorded in assets/illustrations/<name>/generation.json and selection.json.
 
 
-Quote banner artwork (quote-mobile.png, quote-desktop.png) — rendered using Caveat
+Quote banner text — rendered using self-hosted Caveat subset (docs/public/fonts/caveat-nietzsche.woff2)
 Font: Copyright 2014 The Caveat Project Authors (https://github.com/googlefonts/caveat)
 Licensed under the SIL Open Font License, Version 1.1 (http://scripts.sil.org/OFL).
-Font file is not distributed; images are rendered artwork.
+Font file distributed at docs/public/fonts/caveat-nietzsche.woff2 (served as /fonts/caveat-nietzsche.woff2).
 Full license text available at docs/public/licenses/caveat.txt.

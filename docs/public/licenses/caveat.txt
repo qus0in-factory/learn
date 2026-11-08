@@ -1,6 +1,6 @@
-Quote banner images rendered using Caveat (Google Fonts).
+Quote banner text rendered using self-hosted Caveat subset (Google Fonts).
 Source: https://github.com/google/fonts/tree/main/ofl/caveat
-Font not distributed; images are rendered artwork.
+Font file distributed at docs/public/fonts/caveat-nietzsche.woff2 (served as /fonts/caveat-nietzsche.woff2).
 
 Copyright 2014 The Caveat Project Authors (https://github.com/googlefonts/caveat)
 

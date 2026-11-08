@@ -28,7 +28,7 @@
 .ad-nietzsche-src {
   margin-top: 3px;
   font-size: 10px;
-  color: var(--vp-c-text-3);
+  color: var(--vp-c-text-2);
   transition: opacity .3s;
 }
 .ad-nietzsche-fade { opacity: 0; }
