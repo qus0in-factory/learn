@@ -11,8 +11,6 @@ export function seoPage(page) {
     ['link', { rel: 'canonical', href: absolute(record.path) }],
     ['link', { rel: 'alternate', type: 'text/markdown', href: absolute(markdownPath(record.path)) }],
   ]
-  if (record.path === '/' || record.path.startsWith('/git/')) {
-    head.push(['script', { type: 'application/ld+json' }, JSON.stringify(schemas(record)).replace(/</g, '\\u003c')])
-  }
+  head.push(['script', { type: 'application/ld+json' }, JSON.stringify(schemas(record)).replace(/</g, '\\u003c')])
   page.frontmatter.head = [...(page.frontmatter.head || []), ...head]
 }
