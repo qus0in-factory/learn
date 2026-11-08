@@ -3,6 +3,7 @@ import { computed } from 'vue'
 import { useData } from 'vitepress'
 import { adLabels } from '../ad-labels.mjs'
 import { isSlotVisible, getSlotSpec } from '../ad-slot-config.mjs'
+import NietzscheBanner from './NietzscheBanner.vue'
 import './ad-slot.css'
 
 const p = defineProps({ slotName: { type: String, default: 'docBottom' } })
@@ -17,11 +18,6 @@ const s = computed(() => getSlotSpec(p.slotName))
       <span>{{ adLabels.badge }}</span>
       <a :href="adLabels.privacyPath">{{ adLabels.privacy }}</a>
     </div>
-    <div v-if="s.quote" class="ad-placeholder">
-      <picture>
-        <source media="(min-width: 768px)" :srcset="s.quote.desktop">
-        <img :src="s.quote.mobile" :alt="s.quote.text" :width="s.width" :height="s.height">
-      </picture>
-    </div>
+    <NietzscheBanner v-if="s.nietzsche" :data="s.nietzsche" />
   </aside>
 </template>
