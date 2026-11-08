@@ -1,5 +1,6 @@
 # 광고 슬롯 운영
 
+- 교안별 설정은 frontmatter `ads`로 한다. `ads: off`는 슬롯을 렌더하지 않고, `ads: quote`는 실광고 대신 니체 인용문을 유지한다(실광고 활성화 후에도 인용문). 미지정 시 `ads.json` 기본 동작과 `excludedPaths`를 따른다.
 - `learn-site/.vitepress/ads.json`은 기본 `enabled: false`, `banners: []`, `adsTxt: ""`이다. 외부 광고 SDK나 계정 연결은 하지 않는다.
 - 직접 업로드 배너 파일을 `docs/public/` 아래에 두고 image에는 `/파일명.webp` 같은 동일 출처 경로를 쓴다. 외부 이미지 URL·데이터 URL은 허용하지 않는다.
 - 배너 항목은 image, HTTPS link, alt, 선택적인 start/end를 가진다. 기간은 시간대가 명확한 ISO 8601(예: `2030-01-01T00:00:00Z`)로 지정한다. 시작 시각 포함·종료 시각 제외이며 잘못된 값이면 표시하지 않는다.

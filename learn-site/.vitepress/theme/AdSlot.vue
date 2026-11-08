@@ -7,9 +7,9 @@ import NietzscheBanner from './NietzscheBanner.vue'
 import './ad-slot.css'
 
 const p = defineProps({ slotName: { type: String, default: 'docBottom' } })
-const { page } = useData()
-const show = computed(() => isSlotVisible(p.slotName, page.value?.relativePath))
-const s = computed(() => getSlotSpec(p.slotName))
+const { page, frontmatter } = useData()
+const show = computed(() => isSlotVisible(p.slotName, page.value?.relativePath, undefined, frontmatter.value?.ads))
+const s = computed(() => getSlotSpec(p.slotName, undefined, frontmatter.value?.ads))
 </script>
 
 <template>
@@ -18,6 +18,6 @@ const s = computed(() => getSlotSpec(p.slotName))
       <span>{{ adLabels.badge }}</span>
       <a :href="adLabels.privacyPath">{{ adLabels.privacy }}</a>
     </div>
-    <NietzscheBanner v-if="s.nietzsche" :data="s.nietzsche" />
+    <NietzscheBanner v-if="s.forceQuote || s.nietzsche" :data="s.nietzsche" />
   </aside>
 </template>

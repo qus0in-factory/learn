@@ -1,6 +1,13 @@
 import adsConfig from './ads.json' with { type: 'json' }
 
-export function isSlotVisible(slotName, relativePath, config = adsConfig) {
+export function resolveAdsMode(ads) {
+  if (ads === 'off') return 'off'
+  if (ads === 'quote') return 'quote'
+  return 'default'
+}
+
+export function isSlotVisible(slotName, relativePath, config = adsConfig, ads) {
+  if (resolveAdsMode(ads) === 'off') return false
   if (!config.enabled) return false
   const slot = config.slots?.[slotName]
   if (!slot?.enabled) return false
@@ -11,12 +18,14 @@ export function isSlotVisible(slotName, relativePath, config = adsConfig) {
   return true
 }
 
-export function getSlotSpec(slotName, config = adsConfig) {
+export function getSlotSpec(slotName, config = adsConfig, ads) {
   const slot = config.slots?.[slotName] || {}
   return {
     width: slot.width || 320,
     height: slot.height || 100,
     provider: config.provider || 'placeholder',
     nietzsche: config.nietzsche || null,
+    // 실광고 렌더 분기가 추가되면 실광고 대신 인용문을 유지한다.
+    forceQuote: resolveAdsMode(ads) === 'quote',
   }
 }
