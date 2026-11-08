@@ -18,10 +18,7 @@ const s = computed(() => getSlotSpec(p.slotName))
       <a :href="adLabels.privacyPath">{{ adLabels.privacy }}</a>
     </div>
     <div v-if="s.quote" class="ad-placeholder">
-      <picture>
-        <source media="(min-width: 768px)" :srcset="s.quote.desktop">
-        <img :src="s.quote.mobile" :alt="s.quote.text" :width="s.width" :height="s.height">
-      </picture>
+      <img :src="s.quote.mobile" :alt="s.quote.text" :width="s.width" :height="s.height">
     </div>
   </aside>
 </template>
