@@ -7446,3 +7446,10 @@ Extraction script and record: scripts/logotype/extract.py, scripts/logotype/sour
 AI-generated illustrations (git-stages, illust-copies, illust-snapshots, illust-publish, illust-branches, illust-review)
 Generated for this project with Nano Banana 2 (Gemini model gemini-3.1-flash-image) using the course cover images as style references.
 Prompts, model, reference sources and candidate selection are recorded in assets/illustrations/<name>/generation.json and selection.json.
+
+
+Quote banner artwork (quote-mobile.png, quote-desktop.png) — rendered using Caveat
+Font: Copyright 2014 The Caveat Project Authors (https://github.com/googlefonts/caveat)
+Licensed under the SIL Open Font License, Version 1.1 (http://scripts.sil.org/OFL).
+Font file is not distributed; images are rendered artwork.
+Full license text available at docs/public/licenses/caveat.txt.

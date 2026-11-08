@@ -1,6 +1,31 @@
 {
-  "enabled": false,
+  "enabled": true,
+  "provider": "placeholder",
+  "placeholderEnabled": true,
   "adsTxt": "",
+  "adsenseClientId": "",
+  "excludedPaths": [
+    "/404",
+    "/privacy",
+    "/licenses"
+  ],
+  "quote": {
+    "text": "Siehe! Ich bin meiner Weisheit überdrüssig, wie die Biene, die des Honigs zu viel gesammelt hat, ich bedarf der Hände, die sich ausstrecken.",
+    "mobile": "/quote-mobile.png",
+    "desktop": "/quote-desktop.png"
+  },
+  "slots": {
+    "docBottom": {
+      "enabled": true,
+      "width": 320,
+      "height": 100
+    },
+    "asideRail": {
+      "enabled": false,
+      "width": 160,
+      "height": 600
+    }
+  },
   "banners": [],
   "imageWidth": 800,
   "imageHeight": 200

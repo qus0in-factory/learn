@@ -16,7 +16,8 @@ const { frontmatter, page } = useData()
 
 <template>
   <DefaultTheme.Layout :style="{ '--vp-nav-logo-height': site.logoHeight }">
-    <template #doc-after><AdSlot /></template>
+    <template #doc-after><AdSlot slot-name="docBottom" /></template>
+    <template #aside-ads-before><AdSlot slot-name="asideRail" /></template>
     <template #layout-bottom><SiteFooter /></template>
     <template #doc-footer-before>
       <PageUpdated />
