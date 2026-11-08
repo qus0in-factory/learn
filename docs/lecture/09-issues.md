@@ -179,6 +179,16 @@ Label과 Milestone 차이 설명
 - [ ] README에 사용법이 적혀 있다.
 ```
 
+## 2026년 11월 실습 사례
+
+11월 6일 [실습 기록](https://github.com/ilovejava26/memo/blob/main/261106.md)은 `gh auth status`로 인증을 확인한 뒤 가상의 Python 통계 프로젝트에 이슈와 마일스톤을 작성하도록 요청한 과정을 담는다. 예를 들어 [이슈 #12](https://github.com/ilovejava26/ai-issue/issues/12)는 배경, 작업 내용과 완료 조건으로 나뉜다. 해당 프로젝트의 회고·성과 수치는 가상 시나리오이므로 실제 수행 결과로 해석하지 않는다.
+
+이슈 #12는 분산 계산의 오차 개선을 다룬다. `type: bug`, `area: descriptive`, `priority: medium` 라벨로 종류·영역·우선순위를 나누고, `Sprint 1 · Week 2 — 분석 기능 확장` 마일스톤에 연결했다. 2026년 11월 7일 확인 시 이슈는 열린 상태로, 계획과 완료 여부를 구분해 읽는다.
+
+![memo 저장소의 빈 이슈 목록과 New issue 버튼](/screenshots/ilovejava26/memo-issues.png)
+
+화면은 이슈를 만들기 전 `memo` 저장소의 목록이다. 출처: [memo 스크린샷](https://github.com/ilovejava26/memo/blob/main/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202026-11-06%20144319.png).
+
 ## 체크리스트
 
 - [ ] Issues 목록에 라벨 색상이 입혀진 티켓이 2개 이상 있다.

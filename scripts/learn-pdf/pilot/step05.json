@@ -174,7 +174,7 @@
   "step": "STEP 05",
   "title": "명령어 한눈에 보기",
   "code": [
-   "# pull은 확인 후\n# Git Bash·zsh\nURL=https://github.com/\\\n<계정>/<저장소>.git\ngit remote add origin \\\n\"$URL\"\ngit remote -v\ngit push -u origin main",
+   "# Git Bash·zsh: 자신의 값으로 변경\nACCOUNT=your-account\nREPO=portfolio-web\nBASE=https://github.com\nURL=\"$BASE/$ACCOUNT/$REPO.git\"\ngit remote add origin \"$URL\"\ngit remote -v\ngit push -u origin main",
    "# 주소 오타일 때만\ngit remote set-url \\\norigin \"$URL\"\n# 이름 오타일 때만\ngit remote rename \\\nold origin"
   ]
  },
@@ -224,6 +224,114 @@
   ],
   "step": "STEP 05",
   "title": "트러블 슈팅"
+ },
+ {
+  "type": "steps",
+  "title": "첫 연결의 조건",
+  "steps": [
+   {
+    "label": "생성",
+    "detail": "GitHub에 README 등 초기 파일 없이 빈 저장소를 만든다."
+   },
+   {
+    "label": "로컬",
+    "detail": "git status와 git branch로 커밋과 현재 브랜치를 확인한다."
+   },
+   {
+    "label": "등록",
+    "detail": "주소를 origin으로 등록하고 remote -v로 확인한다."
+   },
+   {
+    "label": "전송",
+    "detail": "main을 push하고 GitHub에서 파일과 이력을 확인한다."
+   }
+  ],
+  "step": "STEP 05"
+ },
+ {
+  "type": "code",
+  "title": "브랜치와 원격 확인",
+  "code": [
+   "git status\ngit branch\ngit remote -v",
+   "# 현재 브랜치가 main이고\n# origin 주소가 맞는지 확인\ngit log --oneline -1"
+  ],
+  "step": "STEP 05"
+ },
+ {
+  "type": "rows",
+  "title": "첫 push의 -u",
+  "numbered": true,
+  "rows": [
+   {
+    "term": "전송",
+    "detail": "git push -u origin main은 main을 원격에 올린다."
+   },
+   {
+    "term": "연결",
+    "detail": "로컬 브랜치에 업스트림을 설정한다."
+   },
+   {
+    "term": "확인",
+    "detail": "git branch -vv로 추적 대상이 설정됐는지 본다."
+   }
+  ],
+  "step": "STEP 05"
+ },
+ {
+  "type": "rows",
+  "title": "push가 거절될 때",
+  "numbered": true,
+  "rows": [
+   {
+    "term": "원격 이력",
+    "detail": "원격에 다른 커밋이 있는지 fetch 후 비교한다."
+   },
+   {
+    "term": "인증",
+    "detail": "로그인 상태와 저장소 쓰기 권한을 확인한다."
+   },
+   {
+    "term": "브랜치",
+    "detail": "현재 브랜치와 대상 이름을 확인하고 원인을 구분한다."
+   }
+  ],
+  "step": "STEP 05"
+ },
+ {
+  "type": "code",
+  "title": "원격 이력 확인",
+  "code": [
+   "git fetch origin\ngit branch -vv\ngit log --oneline --all \\\n  --graph --decorate",
+   "# 원격 변경을 확인한 뒤\n# 통합 방법을 결정한다.\n# 강제 push로 덮지 않는다."
+  ],
+  "step": "STEP 05"
+ },
+ {
+  "type": "rows",
+  "title": "인증과 결과",
+  "numbered": true,
+  "rows": [
+   {
+    "term": "로그인",
+    "detail": "Git Credential Manager에서 브라우저 로그인을 선택한다."
+   },
+   {
+    "term": "권한",
+    "detail": "업로드할 저장소에 쓰기 권한이 있는지 확인한다."
+   },
+   {
+    "term": "결과",
+    "detail": "push 후 원격에서 파일과 커밋 이력을 확인한다."
+   }
+  ],
+  "step": "STEP 05"
+ },
+ {
+  "type": "image",
+  "title": "GitHub 로그인 선택",
+  "image": "assets/classroom-day1-auth-window.png",
+  "caption": "인증을 시작하기 전 로그인 방법 선택",
+  "step": "STEP 05"
  },
  {
   "type": "table",

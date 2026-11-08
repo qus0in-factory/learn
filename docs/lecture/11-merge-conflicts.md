@@ -143,6 +143,14 @@ git merge --abort
 비밀정보를 입력하지 않고, 무조건 한쪽을 선택하거나 강제 push로 우회하지 마.
 ```
 
+## 2026년 11월 실습 사례
+
+11월 6일 [실습 기록](https://github.com/ilovejava26/memo/blob/main/261106.md)에서 `feat/awesome2`에 `feat/awesome1`을 병합할 때 `4.txt`의 같은 위치가 충돌했다. `git merge feat/awesome1` 후 내용을 선택하거나 직접 편집하고 `git add . && git commit`으로 해결을 기록했다. [병합 커밋](https://github.com/ilovejava26/merge/commit/5fa92a83ee3b4292de71585577bce58521a4a78a)도 확인한다.
+
+![4.txt에 현재 변경과 들어오는 변경의 충돌 표시가 보이는 편집기](/screenshots/ilovejava26/merge-conflict.png)
+
+화면의 `HEAD`는 현재 브랜치, `feat/awesome1`은 들어오는 변경을 가리킨다. 출처: [memo 스크린샷](https://github.com/ilovejava26/memo/blob/main/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202026-11-06%20165917.png).
+
 ## 체크리스트
 
 - [ ] 충돌 마커가 파일에 남아 있지 않다.

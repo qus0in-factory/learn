@@ -102,6 +102,14 @@ git tag temp-mark
 브랜치와 태그 차이 설명
 ```
 
+## 2026년 11월 실습 사례
+
+11월 6일 [실습 기록](https://github.com/ilovejava26/memo/blob/main/261106.md)에서 `git branch dev`로 브랜치를 만들고 `git switch dev`로 이동해 `2.txt`를 커밋했다. 이후 `main`에서 `git merge dev`를 실행했다. [커밋 9c98243](https://github.com/ilovejava26/merge/commit/9c9824392db124759761ad73bc60afef41fe5006)과 아래 화면을 함께 보면 `main`이 해당 커밋으로 전진한 fast-forward 병합을 확인할 수 있다.
+
+![main에서 git merge dev를 실행한 fast-forward 결과](/screenshots/ilovejava26/fast-forward.png)
+
+계정·기기 식별 정보는 가렸다. 화면 출처: [memo 스크린샷](https://github.com/ilovejava26/memo/blob/main/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202026-11-06%20164036.png).
+
 ## 체크리스트
 
 - [ ] `git switch`로 두 브랜치를 오간다.

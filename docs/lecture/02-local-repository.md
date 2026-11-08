@@ -134,6 +134,22 @@ Git 명령은 로컬에서 실행되지만, STEP 05부터 쓰는 원격 저장�
 
 <Screenshot name="step02-status-staged" alt="`$ git status`에 커밋이 없고, `Changes to be committed` 아래 새 파일 `index.html`이 보인다." />
 
+### 2026년 11월 실습 사례
+
+2026년 11월 5일 `hello-git` 폴더에서 저장소를 초기화하고 `index.html`을 스테이징했다. 다음 화면에는 `git init`의 성공 메시지와 `git status`의 `Changes to be committed`가 보인다. [hello-git 저장소](https://github.com/ilovejava26/hello-git)에는 이후 `index.html`과 `.gitignore` 등이 첫 커밋으로 기록됐다([커밋 보기](https://github.com/ilovejava26/hello-git/commit/bc0db58f2a929105524d08384305aaf89fc0f1cb)).
+
+```bash
+git init
+git add index.html
+git status
+```
+
+원본 화면: [저장소 초기화](https://github.com/ilovejava26/memo/blob/main/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202026-11-05%20112422.png) · [스테이징 상태](https://github.com/ilovejava26/memo/blob/main/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202026-11-05%20115815.png)
+
+![2026년 11월 5일 hello-git에서 git init을 실행한 결과. 계정과 기기 식별 정보는 가렸다.](/screenshots/ilovejava26/day1-hello-git-init.png)
+
+![같은 저장소에서 git status로 index.html이 커밋 대기 중임을 확인한 화면. 계정과 기기 식별 정보는 가렸다.](/screenshots/ilovejava26/day1-hello-git-staged.png)
+
 
 ## Git 명령
 

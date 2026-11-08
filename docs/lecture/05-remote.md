@@ -73,6 +73,12 @@ flowchart TB
 - Git for Windows에는 Git Credential Manager가 들어 있다. 인증이 필요한 HTTPS 작업에서 브라우저 로그인 창이 뜰 수 있다. 이미 자격 증명이 있으면 창이 뜨지 않을 수 있다. [Git Credential Manager](https://github.com/git-ecosystem/git-credential-manager)와 [GitHub 자격 증명 저장 안내](https://docs.github.com/ko/get-started/git-basics/caching-your-github-credentials-in-git)를 참고한다.
 - GitHub CLI(`gh`)가 필요하면 [Windows 설치 안내](https://github.com/cli/cli/blob/trunk/docs/install_windows.md)의 공식 MSI 파일로 설치한 뒤 `gh auth login`을 실행한다. 선택 사항이다.
 
+### 2026년 11월 실습 사례
+
+2026년 11월 5일 Git Credential Manager 창에 GitHub 브라우저 인증 옵션이 표시됐다. 이 로그인 단계 화면과 뒤이은 원격 저장소 결과를 구분해 확인한다. [hello-git의 원격 첫 커밋](https://github.com/ilovejava26/hello-git/commit/bc0db58f2a929105524d08384305aaf89fc0f1cb)에는 `index.html`과 `.gitignore`가 기록되어 있다. [당시 스크린샷](https://github.com/ilovejava26/memo/blob/main/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202026-11-05%20174216.png)은 인증 완료가 아니라 로그인 방법 선택 단계다.
+
+![Git Credential Manager에서 GitHub 브라우저 로그인을 고르는 창](/screenshots/ilovejava26/day1-github-signin.png)
+
 ## 따라하기
 
 1. 브라우저에서 GitHub(github.com)에 로그인한다.

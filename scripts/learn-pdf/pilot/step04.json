@@ -206,6 +206,116 @@
   "title": "트러블 슈팅"
  },
  {
+  "type": "rows",
+  "title": "amend 전 확인",
+  "numbered": true,
+  "rows": [
+   {
+    "term": "대상",
+    "detail": "가장 최근 커밋만 새 커밋으로 교체한다."
+   },
+   {
+    "term": "시점",
+    "detail": "아직 공유하지 않은 커밋에서 오타와 누락을 고친다."
+   },
+   {
+    "term": "확인",
+    "detail": "git log --oneline으로 변경 전후 해시를 비교한다."
+   }
+  ],
+  "step": "STEP 04"
+ },
+ {
+  "type": "code",
+  "title": "누락 파일 보충",
+  "code": [
+   "# 편집한 파일을 추가\ngit add index.html\ngit commit --amend --no-edit",
+   "# 메시지는 유지하되\n# 직전 커밋 해시는 바뀐다.\ngit log -1 --oneline\ngit status"
+  ],
+  "step": "STEP 04"
+ },
+ {
+  "type": "rows",
+  "title": "reset과 revert 구분",
+  "numbered": true,
+  "rows": [
+   {
+    "term": "soft",
+    "detail": "HEAD를 옮기고 변경을 스테이징 상태로 남긴다."
+   },
+   {
+    "term": "mixed",
+    "detail": "HEAD와 인덱스를 옮기고 파일 수정은 작업 트리에 남긴다."
+   },
+   {
+    "term": "revert",
+    "detail": "기존 커밋을 보존하며 반대 변경을 새 커밋으로 기록한다."
+   }
+  ],
+  "step": "STEP 04"
+ },
+ {
+  "type": "code",
+  "title": "되돌리기 명령 읽기",
+  "code": [
+   "# 연습 저장소에서만 실행\n# 커밋이 두 개 이상일 때\ngit log --oneline\ngit reset --soft HEAD~1\ngit status",
+   "# 공유된 일반 커밋 취소 예\n# 해시를 지정한다\ngit revert 커밋해시\ngit log --oneline"
+  ],
+  "step": "STEP 04"
+ },
+ {
+  "type": "steps",
+  "title": "무시 규칙 확인",
+  "steps": [
+   {
+    "label": "작성",
+    "detail": ".gitignore에 .env*를 추가한다."
+   },
+   {
+    "label": "확인",
+    "detail": "git status에서 추적 전 .env가 제외됐는지 본다."
+   },
+   {
+    "label": "기록",
+    "detail": ".gitignore만 add하고 커밋한다."
+   },
+   {
+    "label": "주의",
+    "detail": "이미 기록된 비밀은 규칙 추가만으로 지워지지 않는다."
+   }
+  ],
+  "step": "STEP 04"
+ },
+ {
+  "type": "code",
+  "title": "이미 추적한 파일 제외",
+  "code": [
+   "# .gitignore에 .env*를 저장한 뒤\ngit rm --cached .env\ngit status",
+   "# 로컬 파일은 유지하고\n# 추적 제거와 규칙을 기록\ngit add .gitignore\ngit commit -m \\\n  \"chore: ignore env\""
+  ],
+  "step": "STEP 04"
+ },
+ {
+  "type": "rows",
+  "title": "자주 생기는 문제",
+  "numbered": true,
+  "rows": [
+   {
+    "term": "파일이 계속 표시",
+    "detail": "이미 추적 중인지 확인하고 추적 제거를 별도 커밋한다."
+   },
+   {
+    "term": "공유한 커밋",
+    "detail": "amend 대신 새 커밋이나 revert를 검토한다."
+   },
+   {
+    "term": "비밀 노출",
+    "detail": "기존 이력은 남는다. 노출된 키는 발급처에서 폐기하고 재발급한다."
+   }
+  ],
+  "step": "STEP 04"
+ },
+ {
   "type": "table",
   "step": "STEP 04",
   "title": "한 장 요약",
@@ -240,6 +350,26 @@
     "커밋은 규칙 파일",
     ""
    ]
+  ]
+ },
+ {
+  "type": "split",
+  "step": "STEP 04",
+  "title": "무시 규칙 작성 요청",
+  "code": "이 프로젝트에 필요한 일반적인\nGit 무시 규칙을 작성해줘.\n환경 설정과 의존성 폴더를 고려해줘.",
+  "items": [
+   {
+    "term": "검토",
+    "detail": "프로젝트에 맞는 규칙인지 확인한다."
+   },
+   {
+    "term": "추적",
+    "detail": "이미 추적 중인 파일은 별도로 처리한다."
+   },
+   {
+    "term": "보안",
+    "detail": "노출된 비밀은 무시 규칙만으로 지워지지 않는다."
+   }
   ]
  },
  {

@@ -10,16 +10,16 @@
   "title": "학습 목표",
   "cards": [
    [
-    "등록",
-    "작성자·커미터 기본값을 둘 수 있다"
+    "작업자 등록",
+    "커밋에 기록할 이름·이메일 기본값과 범위를 설명한다"
    ],
    [
-    "준비",
-    "git init으로 저장소를 만들 수 있다"
+    "저장소 준비",
+    "git init을 실행하고 .git 생성을 확인한다"
    ],
    [
-    "추적",
-    "status와 add로 고른다"
+    "파일 추적",
+    "git status로 상태를 읽고 git add로 변경을 선택한다"
    ]
   ]
  },
@@ -55,18 +55,18 @@
   "items": [
    {
     "figure": "name",
-    "label": "작성자",
-    "detail": "user.name 기본값"
+    "label": "이름",
+    "detail": "user.name은 새 커밋의 작성자·커미터 기본값이다"
    },
    {
     "figure": "email",
     "label": "이메일",
-    "detail": "user.email 기본값"
+    "detail": "user.email은 커밋에 기록되는 기본 이메일이다"
    },
    {
     "figure": "global",
     "label": "범위",
-    "detail": "현재 사용자 기본값. 저장소가 덮음"
+    "detail": "--global은 사용자 기본값이며 저장소별 값이 우선한다"
    }
   ],
   "step": "STEP 02",
@@ -74,8 +74,8 @@
  },
  {
   "type": "statement",
-  "statement": "git init 뒤 .git에 이력이 쌓인다",
-  "basis": ".git 안은 직접 고치지 않는다",
+  "statement": "git init은 현재 폴더 안에 .git 저장소를 만든다",
+  "basis": "이력과 인덱스가 저장되므로 내부 파일을 직접 수정하지 않는다",
   "emphasis": ".git",
   "step": "STEP 02",
   "title": ".git 폴더가 하는 일"
@@ -109,15 +109,15 @@
   "rows": [
    [
     "상태",
-    "보이는 곳"
+    "git status에서 보이는 곳"
    ],
    [
     "Untracked",
-    "Untracked files"
+    "Untracked files 아래의 새 파일"
    ],
    [
     "Modified",
-    "Changes not staged"
+    "Changes not staged for commit"
    ],
    [
     "Staged",
@@ -125,11 +125,7 @@
    ],
    [
     "Unmodified",
-    "변경 목록에 없음"
-   ],
-   [
-    "clean",
-    "변경이 전혀 없을 때"
+    "변경 목록 없음. 작업 트리는 clean"
    ]
   ]
  },
@@ -139,15 +135,15 @@
   "rows": [
    {
     "term": "추적 단위",
-    "detail": "빈 폴더는 기록되지 않는다"
+    "detail": "Git은 빈 폴더 자체를 기록하지 않는다"
    },
    {
     "term": ".gitkeep",
-    "detail": "폴더를 남기는 이름 관례"
+    "detail": "빈 파일을 두어 폴더 경로를 남기는 관례다"
    },
    {
-    "term": "주의",
-    "detail": ".gitignore를 두면 무시 규칙"
+    "term": ".gitignore",
+    "detail": "무시 규칙이 폴더 안 파일에도 적용될 수 있다"
    }
   ],
   "step": "STEP 02",
@@ -162,23 +158,26 @@
   "type": "steps",
   "steps": [
    {
-    "label": "등록",
-    "detail": "이름과 이메일",
+    "label": "이름·이메일",
+    "detail": "공개 또는 GitHub noreply 이메일 기본값",
     "tag": "git config"
    },
    {
-    "label": "초기화",
-    "detail": "폴더와 git init",
+    "label": "폴더",
+    "detail": "교육용 프로젝트 폴더를 만들고 이동한다"
+   },
+   {
+    "label": "저장소",
+    "detail": "현재 폴더에서 .git을 만든다",
     "tag": "git init"
    },
    {
     "label": "파일",
-    "detail": "페이지와 .gitkeep"
+    "detail": "index.html과 필요한 폴더를 준비한다"
    },
    {
     "label": "선택",
-    "detail": "status 다음 add",
-    "tag": "git add"
+    "detail": "status를 보고 add한 뒤 상태를 다시 확인한다"
    }
   ],
   "step": "STEP 02",
@@ -189,8 +188,8 @@
   "step": "STEP 02",
   "title": "명령어 한눈에 보기",
   "code": [
-   "# 2.46+는 set·list도 동작\ngit config --global \\\nuser.name \"이름\"\ngit config --global \\\nuser.email \"메일\"\ngit config --global \\\n--list\nmkdir portfolio-web\ncd portfolio-web\ngit init",
-   "# index.html 저장 후\nmkdir -p images\ntouch images/.gitkeep\ngit status\ngit add index.html\ngit add images/.gitkeep\ngit status"
+   "git config --global \\\n  user.name \"Your Name\"\ngit config --global \\\n  user.email \"you@example.com\"\ngit config --global --list\nmkdir portfolio-web\ncd portfolio-web\ngit init",
+   "mkdir -p images\ntouch images/.gitkeep\ngit status\ngit add \\\n  index.html \\\n  images/.gitkeep\ngit status"
   ]
  },
  {
@@ -198,20 +197,105 @@
   "numbered": true,
   "rows": [
    {
-    "term": "오타",
-    "detail": "같은 config 명령으로 덮어쓴다"
+    "term": "이름·이메일 오타",
+    "detail": "git config를 다시 실행하면 해당 값이 바뀐다"
    },
    {
-    "term": "명령 실패",
-    "detail": "폴더와 git init을 확인한다"
+    "term": "not a git repository",
+    "detail": "저장소 폴더로 이동했는지와 git init을 확인한다"
    },
    {
-    "term": "잘못 올림",
-    "detail": "파일 이름을 지정해 add"
+    "term": "새 파일이 안 보임",
+    "detail": "git status와 .gitignore 패턴을 확인한다"
+   },
+   {
+    "term": "잘못 스테이징",
+    "detail": "파일이 새 파일인지 커밋된 파일인지 먼저 구분한다"
    }
   ],
   "step": "STEP 02",
   "title": "트러블 슈팅"
+ },
+ {
+  "type": "image",
+  "step": "STEP 02",
+  "title": "저장소 초기화",
+  "image": "assets/classroom-day1-repository-init.png",
+  "caption": "git init으로 저장소를 초기화한 결과"
+ },
+ {
+  "type": "image",
+  "step": "STEP 02",
+  "title": "스테이징 상태",
+  "image": "assets/classroom-day1-staged-index.png",
+  "caption": "index.html이 스테이징되어 커밋을 기다리는 상태"
+ },
+ {
+  "type": "compare",
+  "step": "STEP 02",
+  "title": "전역 설정과 저장소 설정",
+  "left": {
+   "label": "전역 --global",
+   "lines": [
+    "사용자 저장소의 기본값",
+    "새 저장소에 기본 적용"
+   ],
+   "cmd": "git config --global \\\n  user.name \"Your Name\""
+  },
+  "right": {
+   "label": "저장소별 --local",
+   "lines": [
+    "현재 저장소에만 적용",
+    "전역 설정을 덮어쓴다"
+   ],
+   "cmd": "git config --local \\\n  user.name \"Project Name\""
+  },
+  "result": "이메일 공개를 원하지 않으면 GitHub noreply 주소를 확인해 등록한다."
+ },
+ {
+  "type": "compare",
+  "step": "STEP 02",
+  "title": "add와 commit의 경계",
+  "left": {
+   "label": "git add",
+   "lines": [
+    "파일 변경을 인덱스에 올린다",
+    "커밋은 아직 만들지 않는다"
+   ],
+   "cmd": "git add index.html"
+  },
+  "right": {
+   "label": "git commit",
+   "lines": [
+    "인덱스의 스냅샷을 저장한다",
+    "저장소 이력에 새 커밋을 추가한다"
+   ],
+   "cmd": "git commit -m \\\n  \"feat: 첫 웹페이지 추가\""
+  },
+  "result": "Changes to be committed가 보이면 커밋하기 전 상태다."
+ },
+ {
+  "type": "rows",
+  "step": "STEP 02",
+  "title": "초기화와 추적 오류",
+  "rows": [
+   {
+    "term": "엉뚱한 폴더에서 실행",
+    "detail": "pwd와 cd로 현재 위치를 확인한다"
+   },
+   {
+    "term": "첫 커밋 전 restore 실패",
+    "detail": "HEAD가 없으면 git rm --cached로 새 파일을 인덱스에서 뺀다"
+   },
+   {
+    "term": "추적 파일의 스테이징 해제",
+    "detail": "git restore --staged 파일명으로 인덱스만 되돌린다"
+   },
+   {
+    "term": "빈 폴더가 기록되지 않음",
+    "detail": ".gitkeep 같은 파일을 폴더 안에 둔다"
+   }
+  ]
  },
  {
   "type": "table",

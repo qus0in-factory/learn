@@ -183,6 +183,14 @@ index.html 하단 연락처 이메일과 카피라이트 푸터 HTML 추가
 Coolors 색상 코드 추천 및 배경 포인트 색상 적용
 ```
 
+## 2026년 11월 실습 사례
+
+[실습 기록](https://github.com/ilovejava26/memo/blob/main/261106.md)에서는 11월 6일 `index.html`을 만든 뒤 `ilovejava26.github.io` 저장소에 `git push -u origin main`으로 올렸다. [소스 파일](https://github.com/ilovejava26/ilovejava26.github.io/blob/main/index.html)과 [공개 사이트](https://ilovejava26.github.io/)를 비교해 본다. 계정 사이트 저장소는 주소에 저장소 이름이 반복되지 않는다.
+
+![GitHub Pages 설정에서 main과 root 및 공개 주소가 보이는 화면](/screenshots/ilovejava26/pages-settings.png)
+
+화면에서 배포 소스 `main`과 `/(root)`, 공개 주소를 확인할 수 있다. 화면 출처: [memo 스크린샷](https://github.com/ilovejava26/memo/blob/main/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202026-11-06%20135451.png).
+
 ## 체크리스트
 
 - [ ] GitHub Pages 설정에서 Branch가 `main` / `/(root)`로 저장되어 있다.

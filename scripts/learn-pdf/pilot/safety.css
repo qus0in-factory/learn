@@ -1,10 +1,11 @@
-h1, p, td, b { word-break: keep-all; overflow-wrap: normal; }
+.deck, .deck * { word-break: keep-all; overflow-wrap: normal; }
 .deck > .grid { flex-shrink: 0; }
 .card { min-width: 0; min-height: min-content; }
 .grid:has(> .card:nth-child(2):last-child),
 .grid:has(> .card:nth-child(4):last-child) { grid-template-columns: repeat(2, 1fr); }
 .grid > pre { min-width: 0; white-space: pre; display: block; align-content: center; }
+.code .grid:has(> pre:only-child) { grid-template-columns: 1fr; }
 .links .card p { font-size: 26px; }
-a { overflow-wrap: normal; word-break: normal; }
+a { overflow-wrap: normal; word-break: keep-all; }
 .deck:has(.diagram) .card { padding: 16px 24px; }
 .deck:has(.diagram) .card p { margin-top: 10px; }

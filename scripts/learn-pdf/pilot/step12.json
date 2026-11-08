@@ -1,17 +1,392 @@
 [
- {"type":"cover","step":"STEP 12","title":"풀 리퀘스트와 협업"},
- {"type":"goals","step":"STEP 12","title":"학습 목표","cards":[["제안","기능 브랜치를 올리고 PR을 만들 수 있다"],["검토","diff에서 의도·변경·근거를 확인할 수 있다"],["동기화","병합 후 로컬과 사이트를 확인할 수 있다"]]},
- {"type":"section","step":"STEP 12","title":"핵심 개념"},
- {"type":"split","step":"STEP 12","title":"Pull Request 흐름","diagram":"assets/variety-pr.svg","items":[{"term":"push","detail":"커밋을 원격 브랜치로 전송"},{"term":"PR","detail":"기준 브랜치로 병합 제안"},{"term":"merge","detail":"검토한 변경을 결합"}]},
- {"type":"compare","step":"STEP 12","title":"비교 브랜치","left":{"label":"base","lines":["변경을 받을 기준 브랜치","예: main"]},"right":{"label":"compare / head","lines":["변경을 제안하는 기능 브랜치","Files changed로 파일·코드 비교"]},"result":"리뷰·필수 검사·병합 허용을 확인한다. main은 모든 저장소의 기본 이름이 아니다"},
- {"type":"steps","step":"STEP 12","title":"리뷰와 수정","steps":[{"label":"읽기","detail":"목적에 맞는 변경인지 검토"},{"label":"수정","detail":"기능 브랜치에 추가 커밋"},{"label":"재검토","detail":"같은 PR의 diff·검사 확인"}]},
- {"type":"table","step":"STEP 12","title":"PR 본문","rows":[["항목","내용"],["목적","해결할 문제와 범위"],["변경","달라진 파일·동작"],["확인 결과","실제로 수행한 검사와 관찰"],["한계","미확인 조건·제외 범위"],["비밀 값","토큰·비밀번호를 본문·diff에서 제외"]]},
- {"type":"section","step":"STEP 12","title":"실습 단계"},
- {"type":"steps","step":"STEP 12","title":"실습 흐름","steps":[{"label":"작업","detail":"feature/final-polish\n문구 수정"},{"label":"전송","detail":"실제 diff 확인 후\n커밋·push"},{"label":"제안","detail":"base·compare 확인\n빈 변경은 먼저 수정"},{"label":"병합 확인","detail":"PR 생성 뒤\n검토·병합 상태 확인"}]},
- {"type":"code","step":"STEP 12","title":"명령어 한눈에 보기","code":["# Git Bash·zsh 기준\n# B: 브랜치 이름\nB=feature/final-polish\ngit switch -c \"$B\"\n# index.html 문구 수정\ngit status\ngit diff","git add index.html\ngit commit -m \"feat: polish\"\ngit push -u origin \"$B\""]},
- {"type":"table","step":"STEP 12","title":"PR 검토와 병합","rows":[["단계","상태"],["Create pull request","제목·본문·비교 브랜치 확인"],["Files changed","의도한 코드만 있고 비밀 값 없음"],["리뷰·셀프 리뷰","피드백·실제 확인 결과 검토"],["Merge pull request","허용된 방식·완료 상태 확인"],["환경 차이","권한·정책·UI에 따라 버튼·허용 여부가 다름"]]},
- {"type":"rows","step":"STEP 12","title":"병합 후 확인","numbered":true,"rows":[{"term":"원격","detail":"PR이 Merged인지 확인"},{"term":"로컬","detail":"main으로 전환해 최신 이력 받기"},{"term":"사이트","detail":"배포 성공과 공개 페이지 변경 확인"}]},
- {"type":"code","step":"STEP 12","title":"동기화와 브랜치 정리","code":["git switch main\ngit pull origin main\ngit status\ngit log --oneline","# Git Bash·zsh 기준\n# 병합·동기화 확인 뒤\n# B: 브랜치 이름\nB=feature/final-polish\ngit branch -d \"$B\"\n# 거부되면 이력부터 확인"]},
- {"type":"table","step":"STEP 12","title":"한 장 요약","rows":[["단계","확인"],["push","전송이 PR 생성·병합·배포 완료를 뜻하지 않음"],["리뷰","변경과 실제 근거 검토"],["merge·pull","원격 병합 뒤 로컬 동기화"],["정리","squash 등으로 -d 거부 시 강제 삭제하지 말고 확인"],["완료","병합·로컬·브랜치·공개 사이트 상태 확인"]]},
- {"type":"eof","step":"STEP 12","title":"- EOF -"}
+ {
+  "type": "cover",
+  "step": "STEP 12",
+  "title": "풀 리퀘스트와 협업"
+ },
+ {
+  "type": "goals",
+  "step": "STEP 12",
+  "title": "학습 목표",
+  "cards": [
+   [
+    "제안",
+    "기능 브랜치를 올리고 PR을 만들 수 있다"
+   ],
+   [
+    "검토",
+    "diff에서 의도·변경·근거를 확인할 수 있다"
+   ],
+   [
+    "동기화",
+    "병합 후 로컬과 사이트를 확인할 수 있다"
+   ]
+  ]
+ },
+ {
+  "type": "section",
+  "step": "STEP 12",
+  "title": "핵심 개념"
+ },
+ {
+  "type": "split",
+  "step": "STEP 12",
+  "title": "Pull Request 흐름",
+  "diagram": "assets/variety-pr.svg",
+  "items": [
+   {
+    "term": "push",
+    "detail": "커밋을 원격 브랜치로 전송"
+   },
+   {
+    "term": "PR",
+    "detail": "기준 브랜치로 병합 제안"
+   },
+   {
+    "term": "merge",
+    "detail": "검토한 변경을 결합"
+   }
+  ]
+ },
+ {
+  "type": "compare",
+  "step": "STEP 12",
+  "title": "비교 브랜치",
+  "left": {
+   "label": "base",
+   "lines": [
+    "변경을 받을 기준 브랜치",
+    "예: main"
+   ]
+  },
+  "right": {
+   "label": "compare / head",
+   "lines": [
+    "변경을 제안하는 기능 브랜치",
+    "Files changed로 파일·코드 비교"
+   ]
+  },
+  "result": "리뷰·필수 검사·병합 허용을 확인한다. main은 모든 저장소의 기본 이름이 아니다"
+ },
+ {
+  "type": "steps",
+  "step": "STEP 12",
+  "title": "리뷰와 수정",
+  "steps": [
+   {
+    "label": "읽기",
+    "detail": "목적에 맞는 변경인지 검토"
+   },
+   {
+    "label": "수정",
+    "detail": "기능 브랜치에 추가 커밋"
+   },
+   {
+    "label": "재검토",
+    "detail": "같은 PR의 diff·검사 확인"
+   }
+  ]
+ },
+ {
+  "type": "table",
+  "step": "STEP 12",
+  "title": "PR 본문",
+  "rows": [
+   [
+    "항목",
+    "내용"
+   ],
+   [
+    "목적",
+    "해결할 문제와 범위"
+   ],
+   [
+    "변경",
+    "달라진 파일·동작"
+   ],
+   [
+    "확인 결과",
+    "직접 수행한 검사와 관찰"
+   ],
+   [
+    "한계",
+    "미확인 조건·제외 범위"
+   ],
+   [
+    "비밀 값",
+    "토큰·비밀번호를 본문·diff에서 제외"
+   ]
+  ]
+ },
+ {
+  "type": "section",
+  "step": "STEP 12",
+  "title": "실습 단계"
+ },
+ {
+  "type": "steps",
+  "step": "STEP 12",
+  "title": "실습 흐름",
+  "steps": [
+   {
+    "label": "작업",
+    "detail": "feature/final-polish\n문구 수정"
+   },
+   {
+    "label": "전송",
+    "detail": "diff 확인 후\n커밋·push"
+   },
+   {
+    "label": "제안",
+    "detail": "base·compare 확인\n빈 변경은 먼저 수정"
+   },
+   {
+    "label": "병합 확인",
+    "detail": "PR 생성 뒤\n검토·병합 상태 확인"
+   }
+  ]
+ },
+ {
+  "type": "code",
+  "step": "STEP 12",
+  "title": "명령어 한눈에 보기",
+  "code": [
+   "# Git Bash·zsh 기준\n# B: 브랜치 이름\nB=feature/final-polish\ngit switch -c \"$B\"\n# index.html 문구 수정\ngit status\ngit diff",
+   "git add index.html\ngit commit -m \"feat: polish\"\ngit push -u origin \"$B\""
+  ]
+ },
+ {
+  "type": "table",
+  "step": "STEP 12",
+  "title": "PR 검토와 병합",
+  "rows": [
+   [
+    "단계",
+    "상태"
+   ],
+   [
+    "Create pull request",
+    "제목·본문·비교 브랜치 확인"
+   ],
+   [
+    "Files changed",
+    "의도한 코드만 있고 비밀 값 없음"
+   ],
+   [
+    "리뷰·셀프 리뷰",
+    "피드백·확인 결과 검토"
+   ],
+   [
+    "Merge pull request",
+    "허용된 방식·완료 상태 확인"
+   ],
+   [
+    "환경 차이",
+    "권한·정책·UI에 따라 버튼·허용 여부가 다름"
+   ]
+  ]
+ },
+ {
+  "type": "rows",
+  "step": "STEP 12",
+  "title": "병합 후 확인",
+  "numbered": true,
+  "rows": [
+   {
+    "term": "원격",
+    "detail": "PR이 Merged인지 확인"
+   },
+   {
+    "term": "로컬",
+    "detail": "main으로 전환해 최신 이력 받기"
+   },
+   {
+    "term": "사이트",
+    "detail": "배포 성공과 공개 페이지 변경 확인"
+   }
+  ]
+ },
+ {
+  "type": "code",
+  "step": "STEP 12",
+  "title": "동기화와 브랜치 정리",
+  "code": [
+   "git switch main\ngit pull origin main\ngit status\ngit log --oneline",
+   "# Git Bash·zsh 기준\n# 병합·동기화 확인 뒤\n# B: 브랜치 이름\nB=feature/final-polish\ngit branch -d \"$B\"\n# 거부되면 이력부터 확인"
+  ]
+ },
+ {
+  "type": "split",
+  "title": "학습 문서와 PR 요청",
+  "step": "STEP 12",
+  "code": "프로젝트 소개와 지금까지의\n실습을 따라 할 학습 문서를 작성해줘.\nrelease에서 main으로\nPull Request를 만들어줘.",
+  "items": [
+   {
+    "term": "확인",
+    "detail": "문서의 명령과 설명이 따라 할 수 있는지 살핀다."
+   },
+   {
+    "term": "검토",
+    "detail": "PR의 base와 compare, 변경 내용을 확인한다."
+   }
+  ]
+ },
+ {
+  "type": "steps",
+  "title": "PR 생성 화면",
+  "steps": [
+   {
+    "label": "기준",
+    "detail": "base가 변경을 받을 브랜치인지 확인한다."
+   },
+   {
+    "label": "제안",
+    "detail": "compare가 작업 브랜치인지 확인한다."
+   },
+   {
+    "label": "본문",
+    "detail": "목적·변경·확인 결과를 작성한다."
+   },
+   {
+    "label": "생성",
+    "detail": "Create pull request를 눌러 제안한다."
+   }
+  ],
+  "step": "STEP 12"
+ },
+ {
+  "type": "rows",
+  "title": "Files changed 읽기",
+  "numbered": true,
+  "rows": [
+   {
+    "term": "범위",
+    "detail": "의도한 파일만 변경됐는지 확인한다."
+   },
+   {
+    "term": "내용",
+    "detail": "추가와 삭제가 요구한 동작에 맞는지 읽는다."
+   },
+   {
+    "term": "공개",
+    "detail": "비밀번호와 토큰이 포함되지 않았는지 살핀다."
+   }
+  ],
+  "step": "STEP 12"
+ },
+ {
+  "type": "code",
+  "title": "release 브랜치",
+  "code": [
+   "git switch -c release\n# 프로젝트 문서를 편집\ngit status\ngit diff\ngit add .\ngit commit -m \"docs: 문서 작성\"",
+   "git push origin release\n\n# main을 기준으로 PR 생성"
+  ],
+  "step": "STEP 12"
+ },
+ {
+  "type": "rows",
+  "step": "STEP 12",
+  "title": "PR #1 읽기",
+  "numbered": true,
+  "rows": [
+   {
+    "term": "제안",
+    "detail": "release의 변경을 main에 병합하도록 제안한다."
+   },
+   {
+    "term": "화면",
+    "detail": "병합 전 No conflicts와 Merge pull request 버튼을 확인한다."
+   },
+   {
+    "term": "검토",
+    "detail": "No conflicts만으로 코드의 정확성이나 검사 성공을 보장하지 않는다."
+   }
+  ]
+ },
+ {
+  "type": "image",
+  "title": "PR #1",
+  "image": "assets/pull-request.png",
+  "caption": "실습 화면",
+  "step": "STEP 12"
+ },
+ {
+  "type": "rows",
+  "title": "PR 상태 확인",
+  "numbered": true,
+  "rows": [
+   {
+    "term": "Open",
+    "detail": "제안이 열려 있고 검토 또는 병합을 기다린다."
+   },
+   {
+    "term": "Merged",
+    "detail": "변경이 기준 브랜치에 병합됐다."
+   },
+   {
+    "term": "확인",
+    "detail": "PR 생성과 병합 완료를 구분해 상태를 확인한다."
+   }
+  ],
+  "step": "STEP 12"
+ },
+ {
+  "type": "steps",
+  "title": "병합 후 마무리",
+  "steps": [
+   {
+    "label": "확인",
+    "detail": "PR이 Merged인지 살핀다."
+   },
+   {
+    "label": "동기화",
+    "detail": "main으로 이동해 원격 변경을 받는다."
+   },
+   {
+    "label": "정리",
+    "detail": "병합과 이력을 확인한 후 로컬 브랜치를 삭제한다."
+   },
+   {
+    "label": "배포",
+    "detail": "사이트가 있다면 배포 상태와 공개 결과를 확인한다."
+   }
+  ],
+  "step": "STEP 12"
+ },
+ {
+  "type": "table",
+  "step": "STEP 12",
+  "title": "한 장 요약",
+  "rows": [
+   [
+    "단계",
+    "확인"
+   ],
+   [
+    "push",
+    "전송이 PR 생성·병합·배포 완료를 뜻하지 않음"
+   ],
+   [
+    "리뷰",
+    "변경과 검토 근거 검토"
+   ],
+   [
+    "merge·pull",
+    "원격 병합 뒤 로컬 동기화"
+   ],
+   [
+    "정리",
+    "squash 등으로 -d 거부 시 강제 삭제하지 말고 확인"
+   ],
+   [
+    "완료",
+    "병합·로컬·브랜치·공개 사이트 상태 확인"
+   ]
+  ]
+ },
+ {
+  "type": "eof",
+  "step": "STEP 12",
+  "title": "- EOF -"
+ }
 ]

@@ -143,6 +143,16 @@ Post-mortem 템플릿 작성
 Profile 저장소와 작업 저장소 차이 설명
 ```
 
+## 2026년 11월 실습 사례
+
+11월 6일 계정 이름과 같은 [ilovejava26 저장소의 README](https://github.com/ilovejava26/ilovejava26/blob/main/README.md)를 자기소개와 기술 배지로 구성했다. [실습 기록](https://github.com/ilovejava26/memo/blob/main/261106.md)에는 `git add . && git commit -m "AI 엔지니어 프로필" && git push origin main`이 남아 있다. 소개 문구와 배지가 [프로필](https://github.com/ilovejava26)에 표시되는 방식을 확인한다.
+
+학습 기록은 별도 저장소 `ai-issue`의 [TIL](https://github.com/ilovejava26/ai-issue/blob/main/docs/til.md), [회고](https://github.com/ilovejava26/ai-issue/blob/main/docs/retrospective.md), [부검](https://github.com/ilovejava26/ai-issue/blob/main/docs/postmortem.md)으로 작성했다. TIL은 Why·What·How로 배운 이유, 한 일, 적용 방법을 구분한다. 이 문서들은 가상의 2주 프로젝트가 완료됐다고 가정한 작성 연습이며, 실제 14일간의 작업 실적이 아니다.
+
+![GitHub 프로필에 표시된 README와 기술 배지](/screenshots/ilovejava26/profile-readme.png)
+
+화면 출처: [memo 스크린샷](https://github.com/ilovejava26/memo/blob/main/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202026-11-06%20134138.png).
+
 ## 체크리스트
 
 - [ ] `https://github.com/<계정ID>` 접속 시 프로필 소개 카드가 노출된다.

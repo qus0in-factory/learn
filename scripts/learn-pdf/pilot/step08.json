@@ -1,17 +1,361 @@
 [
- {"type":"cover","step":"STEP 08","title":"프로필과 작업 기록"},
- {"type":"goals","step":"STEP 08","title":"학습 목표","cards":[["위치","프로필·사이트·작업 저장소를 구별할 수 있다"],["선택","기록 종류와 작성 틀을 따로 고를 수 있다"],["기록","근거와 후속 행동을 문서에 남길 수 있다"]]},
- {"type":"section","step":"STEP 08","title":"핵심 개념"},
- {"type":"split","step":"STEP 08","title":"저장소 역할 구분","diagram":"assets/variety-profile.svg","items":[{"term":"프로필","detail":"사용자명과 같은 공개 저장소의 루트 README. 빈 내용 제외"},{"term":"개인 사이트","detail":"사용자명.github.io 저장소의 Pages 사이트"},{"term":"작업 저장소","detail":"프로젝트 코드와 docs 문서"}]},
- {"type":"rows","step":"STEP 08","title":"기록의 종류","numbered":true,"rows":[{"term":"TIL","detail":"배운 점과 직접 확인한 결과"},{"term":"회고","detail":"경험을 돌아보고 다음 행동 결정"},{"term":"부검","detail":"원인의 근거와 재발 방지책 분석"}]},
- {"type":"table","step":"STEP 08","title":"기록과 작성 틀","rows":[["틀","내용 순서"],["Why → What → How","이유 → 내용 → 방법"],["STAR","상황 → 과제 → 행동 → 결과"],["KPT","유지 → 문제 → 다음 시도"],["4F","사실 → 느낌 → 배운 점 → 다음 행동"]]},
- {"type":"compare","step":"STEP 08","title":"기록 종류와 작성 틀","left":{"label":"종류는 목적","lines":["TIL: 학습","회고: 경험","부검: 원인 분석"]},"right":{"label":"틀은 배열 방법","lines":["TIL: Why→What→How·STAR","회고: KPT·4F","부검: STAR·Why→What→How"]},"result":"두 축은 독립적이다. 예시는 고정 짝이 아니다"},
- {"type":"steps","step":"STEP 08","title":"부검","steps":[{"label":"관찰","detail":"발생 시점·현상·영향"},{"label":"판단","detail":"사실과 추정 원인 구분"},{"label":"조치","detail":"재발 방지 작업·담당·확인 방법"}]},
- {"type":"section","step":"STEP 08","title":"실습 단계"},
- {"type":"steps","step":"STEP 08","title":"실습 흐름","steps":[{"label":"프로필","detail":"프로필 저장소의 소개 README"},{"label":"작업 기록","detail":"portfolio-web의\ndocs/post-mortem.md"},{"label":"Wiki","detail":"미지원·권한 부족이면\ndocs/wiki-draft.md"}]},
- {"type":"code","step":"STEP 08","title":"기록 작성 예","code":["## 상황과 영향\n공개 페이지의 링크 오류\n\n## 근거\nREADME 주소와 실제 주소 비교","## 조치와 결과\n주소 수정 후 링크 재확인\n\n## 재발 방지\n게시 전 링크를 열어 확인"]},
- {"type":"code","step":"STEP 08","title":"명령어 한눈에 보기","code":["# 작업 저장소 위치 확인\npwd\nmkdir -p docs\n# 편집기로 사후분석 작성\ngit status\ngit diff","git add docs/post-mortem.md\ngit commit -m \"docs: analysis\"\ngit push origin main\ngit status"]},
- {"type":"table","step":"STEP 08","title":"주의할 점","rows":[["대상","확인"],["프로필","이름·공개 설정·비어 있지 않은 루트 README"],["2020년 7월 전 저장소","프로필 표시 설정 확인"],["push 거절","이력부터 확인, 바로 pull하지 않음"],["민감정보","토큰·비밀번호·과도한 개인정보 제외"],["기록 위치","프로필과 작업 저장소를 나눠 커밋"]]},
- {"type":"table","step":"STEP 08","title":"한 장 요약","rows":[["선택","기준"],["위치","소개인지 프로젝트 기록인지"],["종류","학습·경험·문제 분석의 목적"],["틀","내용을 읽기 좋은 순서로 배열"],["완료","공개 결과·문서 위치·원격 반영 확인"]]},
- {"type":"eof","step":"STEP 08","title":"- EOF -"}
+ {
+  "type": "cover",
+  "step": "STEP 08",
+  "title": "프로필과 작업 기록"
+ },
+ {
+  "type": "goals",
+  "step": "STEP 08",
+  "title": "학습 목표",
+  "cards": [
+   [
+    "위치",
+    "프로필·사이트·작업 저장소를 구별할 수 있다"
+   ],
+   [
+    "선택",
+    "기록 종류와 작성 틀을 따로 고를 수 있다"
+   ],
+   [
+    "기록",
+    "근거와 후속 행동을 문서에 남길 수 있다"
+   ]
+  ]
+ },
+ {
+  "type": "section",
+  "step": "STEP 08",
+  "title": "핵심 개념"
+ },
+ {
+  "type": "split",
+  "step": "STEP 08",
+  "title": "저장소 역할 구분",
+  "diagram": "assets/variety-profile.svg",
+  "items": [
+   {
+    "term": "프로필",
+    "detail": "사용자명과 같은 공개 저장소의 루트 README. 빈 내용 제외"
+   },
+   {
+    "term": "개인 사이트",
+    "detail": "사용자명.github.io 저장소의 Pages 사이트"
+   },
+   {
+    "term": "작업 저장소",
+    "detail": "프로젝트 코드와 docs 문서"
+   }
+  ]
+ },
+ {
+  "type": "rows",
+  "step": "STEP 08",
+  "title": "기록의 종류",
+  "numbered": true,
+  "rows": [
+   {
+    "term": "TIL",
+    "detail": "배운 점과 직접 확인한 결과"
+   },
+   {
+    "term": "회고",
+    "detail": "경험을 돌아보고 다음 행동 결정"
+   },
+   {
+    "term": "부검",
+    "detail": "원인의 근거와 재발 방지책 분석"
+   }
+  ]
+ },
+ {
+  "type": "table",
+  "step": "STEP 08",
+  "title": "기록과 작성 틀",
+  "rows": [
+   [
+    "틀",
+    "내용 순서"
+   ],
+   [
+    "Why → What → How",
+    "이유 → 내용 → 방법"
+   ],
+   [
+    "STAR",
+    "상황 → 과제 → 행동 → 결과"
+   ],
+   [
+    "KPT",
+    "유지 → 문제 → 다음 시도"
+   ],
+   [
+    "4F",
+    "사실 → 느낌 → 배운 점 → 다음 행동"
+   ]
+  ]
+ },
+ {
+  "type": "compare",
+  "step": "STEP 08",
+  "title": "기록 종류와 작성 틀",
+  "left": {
+   "label": "종류는 목적",
+   "lines": [
+    "TIL: 학습",
+    "회고: 경험",
+    "부검: 원인 분석"
+   ]
+  },
+  "right": {
+   "label": "틀은 배열 방법",
+   "lines": [
+    "TIL: Why→What→How·STAR",
+    "회고: KPT·4F",
+    "부검: STAR·Why→What→How"
+   ]
+  },
+  "result": "두 축은 독립적이다. 예시는 고정 짝이 아니다"
+ },
+ {
+  "type": "steps",
+  "step": "STEP 08",
+  "title": "부검",
+  "steps": [
+   {
+    "label": "관찰",
+    "detail": "발생 시점·현상·영향"
+   },
+   {
+    "label": "판단",
+    "detail": "사실과 추정 원인 구분"
+   },
+   {
+    "label": "조치",
+    "detail": "재발 방지 작업·담당·확인 방법"
+   }
+  ]
+ },
+ {
+  "type": "section",
+  "step": "STEP 08",
+  "title": "실습 단계"
+ },
+ {
+  "type": "steps",
+  "step": "STEP 08",
+  "title": "실습 흐름",
+  "steps": [
+   {
+    "label": "프로필",
+    "detail": "프로필 저장소의 소개 README"
+   },
+   {
+    "label": "작업 기록",
+    "detail": "portfolio-web의\ndocs/post-mortem.md"
+   },
+   {
+    "label": "Wiki",
+    "detail": "미지원·권한 부족이면\ndocs/wiki-draft.md"
+   }
+  ]
+ },
+ {
+  "type": "code",
+  "step": "STEP 08",
+  "title": "기록 작성 예",
+  "code": [
+   "## 상황과 영향\n공개 페이지의 링크 오류\n\n## 근거\n문서의 링크와 배포 주소 비교",
+   "## 조치와 결과\n주소 수정 후 링크 재확인\n\n## 재발 방지\n게시 전 링크를 열어 확인"
+  ]
+ },
+ {
+  "type": "code",
+  "step": "STEP 08",
+  "title": "명령어 한눈에 보기",
+  "code": [
+   "# 작업 저장소 위치 확인\npwd\nmkdir -p docs\n# 편집기로 사후분석 작성\ngit status\ngit diff",
+   "git add docs/post-mortem.md\ngit commit -m \"docs: analysis\"\ngit push origin main\ngit status"
+  ]
+ },
+ {
+  "type": "table",
+  "step": "STEP 08",
+  "title": "주의할 점",
+  "rows": [
+   [
+    "대상",
+    "확인"
+   ],
+   [
+    "프로필",
+    "이름·공개 설정·비어 있지 않은 루트 README"
+   ],
+   [
+    "2020년 7월 전 저장소",
+    "프로필 표시 설정 확인"
+   ],
+   [
+    "push 거절",
+    "이력부터 확인, 바로 pull하지 않음"
+   ],
+   [
+    "민감정보",
+    "토큰·비밀번호·과도한 개인정보 제외"
+   ],
+   [
+    "기록 위치",
+    "프로필과 작업 저장소를 나눠 커밋"
+   ]
+  ]
+ },
+ {
+  "type": "split",
+  "title": "프로필 소개 요청",
+  "step": "STEP 08",
+  "code": "구직 중인 주니어 AI 엔지니어의\n자기소개를 256자로 작성하고\n기술 배지로 꾸며줘.",
+  "items": [
+   {
+    "term": "내용",
+    "detail": "소개가 목적과 기술을 간결하게 전달하는지 확인한다."
+   },
+   {
+    "term": "검토",
+    "detail": "사실과 다른 경력이나 기술은 수정한다."
+   }
+  ]
+ },
+ {
+  "type": "code",
+  "title": "TIL 예시",
+  "code": [
+   "## Why\nstage 상태를 이해한다.\n\n## What\n파일을 add했다.",
+   "## How\ngit status로 상태를 확인했다.\n\n다음에는 변경 내용을 diff로 본다."
+  ],
+  "step": "STEP 08"
+ },
+ {
+  "type": "rows",
+  "title": "회고에서 행동으로",
+  "numbered": true,
+  "rows": [
+   {
+    "term": "Keep",
+    "detail": "계속할 좋은 작업 방식을 적는다."
+   },
+   {
+    "term": "Problem",
+    "detail": "불편이나 반복된 문제를 구체적으로 적는다."
+   },
+   {
+    "term": "Try",
+    "detail": "다음에 시도할 행동과 확인 방법을 정한다."
+   }
+  ],
+  "step": "STEP 08"
+ },
+ {
+  "type": "split",
+  "title": "학습 기록 요청",
+  "step": "STEP 08",
+  "code": "가상 프로젝트를 가정해\nTIL 14일, 두 스프린트 회고와\n가상 사고의 부검을 작성해줘.\nSTAR 또는 Why·What·How로 정리해줘.",
+  "items": [
+   {
+    "term": "구분",
+    "detail": "가상 프로젝트의 성과와 수치는 가정임을 명시한다."
+   },
+   {
+    "term": "검토",
+    "detail": "근거와 다음 행동이 명확한지 확인한다."
+   }
+  ]
+ },
+ {
+  "type": "rows",
+  "step": "STEP 08",
+  "title": "프로필 README 읽기",
+  "numbered": true,
+  "rows": [
+   {
+    "term": "저장소",
+    "detail": "사용자명과 같은 저장소의 README를 작성한다."
+   },
+   {
+    "term": "화면",
+    "detail": "소개와 기술 배지가 프로필에 표시된다."
+   },
+   {
+    "term": "반영",
+    "detail": "변경을 커밋하고 push한 뒤 프로필을 새로고침한다."
+   }
+  ]
+ },
+ {
+  "type": "image",
+  "title": "프로필 README",
+  "image": "assets/profile-readme.png",
+  "caption": "실습 화면",
+  "step": "STEP 08"
+ },
+ {
+  "type": "code",
+  "title": "프로필 저장소 반영",
+  "code": [
+   "# 본인 계정명으로 수정한다.\n# 프로필 저장소를 먼저 만든다.\nBASE=https://github.com\nACCOUNT=my-github-id\ngit clone \\\n  \"$BASE/$ACCOUNT/$ACCOUNT\"\ncd \"$ACCOUNT\"",
+   "# README.md를 수정한 뒤 실행\ngit diff -- README.md\ngit add README.md\ngit commit -m \"AI 엔지니어 프로필\"\ngit push origin main"
+  ],
+  "step": "STEP 08"
+ },
+ {
+  "type": "rows",
+  "title": "기록 공개 전 점검",
+  "numbered": true,
+  "rows": [
+   {
+    "term": "근거",
+    "detail": "직접 확인한 내용인지 점검한다."
+   },
+   {
+    "term": "정보",
+    "detail": "토큰과 개인 연락처는 공개 문서에서 제외한다."
+   },
+   {
+    "term": "위치",
+    "detail": "자기소개는 프로필, 프로젝트 근거는 작업 저장소에 둔다."
+   }
+  ],
+  "step": "STEP 08"
+ },
+ {
+  "type": "table",
+  "step": "STEP 08",
+  "title": "한 장 요약",
+  "rows": [
+   [
+    "선택",
+    "기준"
+   ],
+   [
+    "위치",
+    "소개인지 프로젝트 기록인지"
+   ],
+   [
+    "종류",
+    "학습·경험·문제 분석의 목적"
+   ],
+   [
+    "틀",
+    "내용을 읽기 좋은 순서로 배열"
+   ],
+   [
+    "완료",
+    "공개 결과·문서 위치·원격 반영 확인"
+   ]
+  ]
+ },
+ {
+  "type": "eof",
+  "step": "STEP 08",
+  "title": "- EOF -"
+ }
 ]
