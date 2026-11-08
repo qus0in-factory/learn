@@ -1,0 +1,16 @@
+{
+  "author": { "@type": "Person", "name": "변영인", "url": "https://qus0in.dev" },
+  "publisher": {
+    "@type": "Organization", "name": "에코익힘책", "url": "https://echo.qus0in.dev/",
+    "logo": "https://echo.qus0in.dev/header-logo.png",
+    "sameAs": ["https://github.com/qus0in-factory", "https://x.com/qus0in"]
+  },
+  "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ko",
+  "licenseLabel": "코드 MIT / 교안 CC BY-NC-SA 4.0",
+  "descriptions": {
+    "/licenses": "코드·교안·브랜드·제3자 자료의 사용 조건과 라이선스를 안내한다.",
+    "/git/catalog": "Git 과정의 STEP별 교안과 PDF, 퀴즈 자료를 찾아본다.",
+    "/git/tags": "주제별 태그로 Git 교안과 명령어 참조를 찾아본다."
+  },
+  "sections": ["과정 및 STEP", "부록", "명령어 참조", "사전 및 안내"]
+}

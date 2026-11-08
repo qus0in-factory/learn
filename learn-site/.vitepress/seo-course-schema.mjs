@@ -1,18 +1,18 @@
-import { site } from './site.mjs'
-import { courses } from './courses.mjs'
 import { absolute } from './seo-paths.mjs'
+import { pageProperties } from './seo-page-properties.mjs'
+import { courseParts } from './seo-course-parts.mjs'
+import { breadcrumbs } from './seo-breadcrumbs.mjs'
+import meta from './seo-meta.json' with { type: 'json' }
 
-export function courseGraph(p, u) {
-  const isGit = p.path === '/git/', c = absolute(courses[0].link)
+export function courseGraph(p, url) {
+  const course = p.path === '/git/'
+  const lesson = /^\/git\/(\d|appendix\/|commands\/)/.test(p.path)
   const item = {
-    '@type': isGit ? 'Course' : 'LearningResource',
-    name: p.title, description: p.description, url: u, inLanguage: 'ko-KR',
-    ...(isGit ? { provider: { '@type': 'Organization', name: site.title, url: absolute('/') } }
-      : { isPartOf: { '@type': 'Course', '@id': c, name: courses[0].title } }),
+    '@type': course ? 'Course' : lesson ? 'LearningResource' : 'WebPage',
+    name: p.title, description: p.description, url, inLanguage: 'ko-KR',
+    ...pageProperties(p), ...courseParts(p),
+    ...(course ? { provider: meta.publisher } : lesson
+      ? { isPartOf: { '@type': 'Course', '@id': absolute('/git/') } } : {}),
   }
-  const crumbs = [[site.title, '/'], ...(isGit ? [] : [[courses[0].title, '/git/']]), [p.title, p.path]]
-  const items = crumbs.map(([t, path], i) => ({
-    '@type': 'ListItem', position: i + 1, name: t, item: absolute(path),
-  }))
-  return [item, { '@type': 'BreadcrumbList', itemListElement: items }]
+  return [item, breadcrumbs(p)]
 }
