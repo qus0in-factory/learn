@@ -156,6 +156,6 @@
 - Kakao Talk 공유 아이콘과 Kakao JavaScript SDK — © Kakao Corp. 또는 제공자. 오픈소스 라이선스가 아니며 Kakao 약관·상표 조건을 따릅니다. SDK는 `learn-site/.vitepress/kakao-sdk.mjs`에서 외부 URL로 불러옵니다.
 - Lucide·Feather 아이콘 — Lucide는 ISC, Feather 유래 아이콘은 MIT. 전문은 `/third-party-notices.txt`를 참고하세요.
 - Bulma 1.0.4 — MIT. `example-site/index.html`에서 CDN으로 불러옵니다. 전문: https://github.com/jgthms/bulma/blob/main/LICENSE
-- 인용문 배너(Caveat) — Google Fonts 제공, SIL Open Font License 1.1. 광고 슬롯 플레이스홀더 이미지(`docs/public/quote-mobile.png`, `quote-desktop.png`)의 텍스트 렌더링에 사용했습니다. 폰트 파일 자체는 배포하지 않으며 라이선스 전문은 `/licenses/caveat.txt`와 `/third-party-notices.txt`를 참고하세요.
+- 인용문 배너(Caveat) — Google Fonts 제공, SIL Open Font License 1.1. `docs/public/fonts/caveat-nietzsche.woff2`에 자체 호스팅 서브셋을 배포하며 인용문 배너 텍스트 렌더링에 사용합니다. 라이선스 전문은 `/licenses/caveat.txt`와 `/third-party-notices.txt`를 참고하세요.
 - 교안 삽화 — 이 프로젝트에서 Gemini 이미지 모델로 생성했습니다. 생성 모델·프롬프트·참조 자료·후보 선택은 `assets/illustrations/*/generation.json`과 `selection.json`에 기록되어 있습니다. 생성 도구의 약관 조건이 함께 적용될 수 있습니다.
 - 그 밖의 외부 이미지·폰트·코드는 확인되는 대로 이 목록과 `/third-party-notices.txt`에 추가합니다.
