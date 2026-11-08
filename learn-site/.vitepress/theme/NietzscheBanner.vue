@@ -5,7 +5,7 @@ import './nietzsche-banner.css'
 
 const props = defineProps({ data: { type: Object, required: true } })
 const quotes = computed(() => props.data?.quotes || [])
-const { idx, fading } = useRotatingQuotes(quotes, props.data?.intervalMs)
+const { idx, fading, ready } = useRotatingQuotes(quotes, props.data?.intervalMs)
 const cur = computed(() => quotes.value[idx.value] || { text: '', source: '' })
 </script>
 
@@ -15,7 +15,7 @@ const cur = computed(() => quotes.value[idx.value] || { text: '', source: '' })
     :href="data.link"
     target="_blank"
     rel="noopener noreferrer"
-    class="ad-nietzsche"
+    :class="['ad-nietzsche', { 'ad-nietzsche-ready': ready }]"
     :aria-label="cur.text"
   >
     <div :class="['ad-nietzsche-text', { 'ad-nietzsche-fade': fading }]">

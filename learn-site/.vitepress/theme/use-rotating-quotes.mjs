@@ -1,9 +1,9 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 
-export function useRotatingQuotes(quotesRef, intervalMs) {
-  const idx = ref(0)
-  const fading = ref(false)
-  let timer = null
+export function useRotatingQuotes(quotesRef, ms) {
+  const idx = ref(0), fading = ref(false), ready = ref(false)
+  let timer = null, tout = null
+  const show = () => { ready.value = true; if (tout) clearTimeout(tout) }
 
   function next() {
     const list = quotesRef.value || []
@@ -19,11 +19,18 @@ export function useRotatingQuotes(quotesRef, intervalMs) {
     const list = quotesRef.value || []
     if (!list.length) return
     idx.value = Math.floor(Math.random() * list.length)
-    const stop = window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches
-    if (!stop && intervalMs > 0) timer = setInterval(next, intervalMs)
+    if (window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches) {
+      show(); return
+    }
+    if (ms > 0) timer = setInterval(next, ms)
+    tout = setTimeout(show, 1500)
+    document.fonts?.load?.('1em Caveat').then(show, show) ?? show()
   })
 
-  onUnmounted(() => { if (timer) clearInterval(timer) })
+  onUnmounted(() => {
+    clearInterval(timer)
+    clearTimeout(tout)
+  })
 
-  return { idx, fading }
+  return { idx, fading, ready }
 }
