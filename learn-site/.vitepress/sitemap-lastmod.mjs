@@ -1,33 +1,30 @@
-import { execFileSync } from 'node:child_process'
+import { runGit } from './updated.mjs'
+import { pages } from './pages.mjs'
 
-let cached
-
+let cache
 export function gitCommitDates() {
-  if (cached) return cached
-  const root = new URL('../../', import.meta.url)
-  const out = execFileSync('git', ['log', '--name-only', '--format=COMMIT:%cI'], {
-    cwd: root, encoding: 'utf8',
-  })
+  if (cache) return cache
+  const out = runGit(['log', '--name-only', '--format=COMMIT:%cI'])
   const map = new Map()
-  let current = ''
-  for (const line of out.split('\n')) {
-    if (line.startsWith('COMMIT:')) current = line.slice(7)
-    else if (line.trim()) {
-      const f = line.trim()
-      if (!map.has(f)) map.set(f, current)
-    }
+  let cur = ''
+  for (const l of out.split('\n')) {
+    if (l.startsWith('COMMIT:')) cur = l.slice(7)
+    else if (l.trim() && !map.has(l.trim())) map.set(l.trim(), cur)
   }
-  return (cached = map)
+  return (cache = map)
+}
+
+const p = Object.entries(pages)
+const rev = Object.fromEntries(p.filter(([, d]) => !d.endsWith(':page')).map(([s, d]) => [d, s]))
+const pfx = p.filter(([, d]) => d.endsWith(':page')).map(([s, d]) => [d.slice(0, -5), s.slice(0, -5)])
+
+export function urlToDoc(url) {
+  const r = url.replace(/(^|\/)$/, '$1index').replace(/(\.html)?$/, '.md')
+  if (rev[r]) return `docs/${rev[r]}`
+  for (const [d, s] of pfx) if (r.startsWith(d)) return `docs/${s}${r.slice(d.length)}`
+  return `docs/${r}`
 }
 
 export function pageLastmod(url) {
-  const map = gitCommitDates()
-  const c = url.replace(/^\//, '').replace(/\/$/, '')
-  const list = [
-    c === '' ? 'docs/index.md' : null,
-    c === 'git' ? 'docs/course-git.md' : null,
-    c.startsWith('git/') ? `docs/lecture/${c.slice(4)}.md` : null,
-    `docs/${c}.md`,
-  ].filter(Boolean)
-  for (const f of list) if (map.has(f)) return map.get(f)
+  return gitCommitDates().get(urlToDoc(url))
 }
