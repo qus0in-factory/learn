@@ -1,4 +1,5 @@
 import { commandOrder } from './.vitepress/command-nav.mjs'
+import { easyPages } from './easy-pages.mjs'
 
 const lectures = ['01-environment', '02-local-repository', '03-commit-history',
   '04-amend-ignore', '05-remote', '06-pages', '07-markdown-mermaid',
@@ -11,4 +12,4 @@ export const commandPages = commandOrder
 export const expectedPages = ['index.html', '404.html', 'licenses.html', 'privacy.html', 'git/index.html',
   'git/catalog.html', 'git/tags.html', 'git/glossary.html', ...lectures.map(name => `git/${name}.html`),
   ...appendices.map(name => `git/appendix/${name}.html`),
-  ...commandPages.map(name => `git/commands/${name}.html`)]
+  ...commandPages.map(name => `git/commands/${name}.html`), ...easyPages]
