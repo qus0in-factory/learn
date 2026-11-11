@@ -1,5 +1,6 @@
 ---
 subtitle: "GitHub 가입, 저장소 만들기, 마크다운과 TIL을 실습한다."
+tags: ["GitHub 가입", "Markdown", "TIL", "ChatGPT"]
 ---
 
 # GitHub 실습

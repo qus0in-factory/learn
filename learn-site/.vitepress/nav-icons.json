@@ -48,5 +48,12 @@
   "appendix/13-profile-records": "user",
   "appendix/14-github-collaboration": "git-pull-request",
   "appendix/15-hosting-vcs": "cloud",
-  "appendix/16-record-examples": "message-square-text"
+  "appendix/16-record-examples": "message-square-text",
+  "/git-easy/": "book-open",
+  "/git-easy/01-what-is-github": "cloud",
+  "/git-easy/02-ai-and-github": "cpu",
+  "/git-easy/03-github-practice": "file-text",
+  "/git-easy/04-what-is-git-cli": "square-terminal",
+  "/git-easy/05-git-principle": "git-commit-horizontal",
+  "/git-easy/06-git-practice": "terminal"
 }

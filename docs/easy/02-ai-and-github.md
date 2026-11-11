@@ -1,5 +1,6 @@
 ---
 subtitle: "AI에게 요청하고 GitHub로 기록을 남기는 흐름을 본다."
+tags: ["AI", "에이전트", "README", "커밋"]
 ---
 
 # AI와 GitHub

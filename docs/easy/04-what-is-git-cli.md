@@ -1,5 +1,6 @@
 ---
 subtitle: "터미널과 셸에서 Git을 실행하는 방식을 알아본다."
+tags: ["CLI", "터미널", "셸", "Git Bash"]
 ---
 
 # Git CLI란?

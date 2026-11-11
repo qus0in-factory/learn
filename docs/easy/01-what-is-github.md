@@ -1,5 +1,6 @@
 ---
 subtitle: "소스 코드 공유, 이슈 기록, CI/CD로 GitHub를 이해한다."
+tags: ["GitHub", "원격 저장소", "Pull Request", "Issue", "CI/CD"]
 ---
 
 # GitHub란?

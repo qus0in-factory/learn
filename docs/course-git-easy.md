@@ -1,5 +1,6 @@
 ---
 subtitle: "기존 Git 과정보다 쉬운 입문 버전"
+tags: ["GitHub", "Git", "입문"]
 ---
 
 # {{ easyTitle }}

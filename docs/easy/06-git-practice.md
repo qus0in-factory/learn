@@ -1,5 +1,6 @@
 ---
 subtitle: "Git 설치 확인, 저장소 만들기, VS Code 소스 제어를 실습한다."
+tags: ["Git Bash", "VS Code", "소스 제어", "init", "add", "commit", "push"]
 ---
 
 # Git 실습
