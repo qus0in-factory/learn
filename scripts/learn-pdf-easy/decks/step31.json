@@ -1,30 +1,70 @@
 [
- { "type": "cover", "step": "STEP 31", "title": "원격 연결" },
+ {
+  "type": "cover",
+  "step": "STEP 31",
+  "title": "원격 연결"
+ },
  {
   "type": "goals",
   "title": "학습 목표",
   "cards": [
-   ["빈 저장소", "로컬 파일을 올릴 빈 원격 저장소를 만든다"],
-   ["원격 등록", "git remote add로 origin 별칭을 등록한다"],
-   ["push와 pull", "-u 옵션으로 업스트림을 연결하고 동기화한다"]
+   [
+    "빈 저장소",
+    "로컬 파일을 올릴 빈 원격 저장소를 만든다"
+   ],
+   [
+    "원격 등록",
+    "git remote add로 origin 별칭을 등록한다"
+   ],
+   [
+    "push와 pull",
+    "-u 옵션으로 업스트림을 연결하고 동기화한다"
+   ]
   ]
  },
- { "type": "section", "title": "빈 원격 저장소" },
+ {
+  "type": "section",
+  "title": "빈 원격 저장소"
+ },
  {
   "type": "steps",
   "title": "GitHub에서 새 저장소",
   "steps": [
-   { "label": "저장소 만들기", "detail": "오른쪽 위의 + 아이콘에서 New repository를 고른다" },
-   { "label": "이름과 범위", "detail": "로컬 폴더와 같은 이름을 쓰고 Public을 고른다" },
-   { "label": "빈으로 유지", "detail": "Add a README file 등 초기 파일 체크박스를 모두 해제한다" },
-   { "label": "주소 복사", "detail": "Create repository 뒤에 HTTPS 주소를 복사한다" }
+   {
+    "label": "저장소 만들기",
+    "detail": "오른쪽 위의 + 아이콘에서 New repository를 고른다"
+   },
+   {
+    "label": "이름과 범위",
+    "detail": "로컬 폴더와 같은 이름을 쓰고 Public을 고른다"
+   },
+   {
+    "label": "빈으로 유지",
+    "detail": "Add a README file 등 초기 파일 체크박스를 모두 해제한다"
+   },
+   {
+    "label": "주소 복사",
+    "detail": "Create repository 뒤에 HTTPS 주소를 복사한다"
+   }
   ]
  },
  {
   "type": "compare",
   "title": "저장소 두 종류",
-  "left": { "label": "README 포함 저장소", "lines": ["웹에서 문서를 고치는 용도", "원격에 커밋이 먼저 생긴다"] },
-  "right": { "label": "빈 저장소", "lines": ["내 컴퓨터 파일을 올리는 용도", "로컬 커밋을 온전히 받는다"] },
+  "left": {
+   "label": "README 포함 저장소",
+   "lines": [
+    "웹에서 문서를 고치는 용도",
+    "원격에 커밋이 먼저 생긴다"
+   ]
+  },
+  "right": {
+   "label": "빈 저장소",
+   "lines": [
+    "내 컴퓨터 파일을 올리는 용도",
+    "로컬 커밋을 온전히 받는다"
+   ]
+  },
   "result": "README가 있는 같은 이름 저장소에 올리면 첫 push가 거절될 수 있다"
  },
  {
@@ -34,11 +74,16 @@
   "image": "assets/classroom-day1-auth-window.png",
   "caption": "push 시 나타나는 브라우저 로그인 인증 창"
  },
- { "type": "section", "title": "원격 등록" },
+ {
+  "type": "section",
+  "title": "원격 주소 등록"
+ },
  {
   "type": "code",
   "title": "원격 주소 등록",
-  "code": ["git branch --show-current\ngit branch -m main\ngit remote add origin https://github.com/본인계정/portfolio-web.git\ngit remote -v"]
+  "code": [
+   "git branch --show-current\ngit branch -m main\ngit remote add origin https://github.com/본인계정/portfolio-web.git\ngit remote -v"
+  ]
  },
  {
   "type": "split",
@@ -46,52 +91,145 @@
   "title": "로컬과 원격",
   "diagram": "assets/remote.svg",
   "items": [
-   { "term": "origin", "detail": "원격 주소의 짧은 별칭" },
-   { "term": "push", "detail": "원격으로 밀어 올린다" },
-   { "term": "pull", "detail": "원격에서 끌어온다" }
+   {
+    "term": "origin",
+    "detail": "원격 주소의 짧은 별칭"
+   },
+   {
+    "term": "push",
+    "detail": "원격으로 밀어 올린다"
+   },
+   {
+    "term": "pull",
+    "detail": "원격에서 끌어온다"
+   }
   ]
  },
  {
   "type": "steps",
   "title": "첫 push 절차",
   "steps": [
-   { "label": "브랜치 확인", "detail": "브랜치 이름이 main인지 확인한다. 아니면 -m으로 바꾼다" },
-   { "label": "등록", "detail": "origin 별칭으로 원격 주소를 등록하고 -v로 확인한다", "tag": "git remote add" },
-   { "label": "업로드", "detail": "git push -u origin main으로 올린다", "tag": "git push -u" },
-   { "label": "인증", "detail": "인증 창이 뜨면 브라우저 로그인으로 승인한다" },
-   { "label": "반영 확인", "detail": "GitHub 저장소 페이지를 새로고침해 파일과 이력을 확인한다" }
+   {
+    "label": "브랜치 확인",
+    "detail": "브랜치 이름이 main인지 확인한다. 아니면 -m으로 바꾼다"
+   },
+   {
+    "label": "등록",
+    "detail": "origin 별칭으로 원격 주소를 등록하고 -v로 확인한다",
+    "tag": "git remote add"
+   },
+   {
+    "label": "업로드",
+    "detail": "git push -u origin main으로 올린다",
+    "tag": "git push -u"
+   },
+   {
+    "label": "인증",
+    "detail": "인증 창이 뜨면 브라우저 로그인으로 승인한다"
+   },
+   {
+    "label": "반영 확인",
+    "detail": "GitHub 저장소 페이지를 새로고침해 파일과 이력을 확인한다"
+   }
   ]
  },
  {
   "type": "rows",
   "title": "macOS 인증 준비",
   "rows": [
-   { "term": "gh 설치", "detail": "Homebrew로 GitHub CLI를 설치한다", "tag": "brew install gh" },
-   { "term": "로그인", "detail": "gh auth login에서 GitHub.com, HTTPS, 웹 브라우저 순서로 고른다" },
-   { "term": "승인", "detail": "일회용 코드를 브라우저에 입력해 승인한다" },
-   { "term": "Windows", "detail": "Git Credential Manager가 브라우저 로그인 창을 대신 연다" }
+   {
+    "term": "gh 설치",
+    "detail": "Homebrew로 GitHub CLI를 설치한다",
+    "tag": "brew install gh"
+   },
+   {
+    "term": "로그인",
+    "detail": "gh auth login에서 GitHub.com, HTTPS, 웹 브라우저 순서로 고른다"
+   },
+   {
+    "term": "승인",
+    "detail": "일회용 코드를 브라우저에 입력해 승인한다"
+   },
+   {
+    "term": "Windows",
+    "detail": "Git Credential Manager가 브라우저 로그인 창을 대신 연다"
+   }
+  ]
+ },
+ {
+  "type": "section",
+  "step": "STEP 31",
+  "title": "GitHub Pages 웹사이트 배포"
+ },
+ {
+  "type": "steps",
+  "step": "STEP 31",
+  "title": "Pages 배포 절차",
+  "steps": [
+   {
+    "label": "설정",
+    "detail": "Settings의 Pages에서 Branch와 폴더를 확인한다"
+   },
+   {
+    "label": "주소",
+    "detail": "배포 후 사용자명.github.io로 접속한다"
+   },
+   {
+    "label": "갱신",
+    "detail": "push하면 Pages가 배포 사이트를 갱신한다"
+   }
   ]
  },
  {
   "type": "rows",
   "title": "push 거절 시",
   "rows": [
-   { "term": "거절 원인", "detail": "원격에 내 로컬에 없는 커밋이 있을 때 거절된다" },
-   { "term": "해결", "detail": "git pull origin main으로 먼저 내려받은 뒤 다시 push한다" },
-   { "term": "금지", "detail": "강제 push로 우회하지 않는다" },
-   { "term": "VS Code", "detail": "소스 제어의 변경 내용 동기화 버튼도 같은 push와 pull을 한다" }
+   {
+    "term": "거절 원인",
+    "detail": "원격에 내 로컬에 없는 커밋이 있을 때 거절된다"
+   },
+   {
+    "term": "해결",
+    "detail": "git pull origin main으로 먼저 내려받은 뒤 다시 push한다"
+   },
+   {
+    "term": "금지",
+    "detail": "강제 push로 우회하지 않는다"
+   },
+   {
+    "term": "VS Code",
+    "detail": "소스 제어의 변경 내용 동기화 버튼도 같은 push와 pull을 한다"
+   }
   ]
  },
  {
   "type": "table",
   "title": "한 장 요약",
   "rows": [
-   ["항목", "확인할 내용"],
-   ["빈 저장소", "초기 파일 체크박스를 해제한다"],
-   ["remote", "origin 별칭 등록을 -v로 본다"],
-   ["push", "-u 옵션으로 업스트림을 연결한다"],
-   ["완료 기준", "원격 화면에 커밋이 보인다"]
+   [
+    "항목",
+    "확인할 내용"
+   ],
+   [
+    "빈 저장소",
+    "초기 파일 체크박스를 해제한다"
+   ],
+   [
+    "remote",
+    "origin 별칭 등록을 -v로 본다"
+   ],
+   [
+    "push",
+    "-u 옵션으로 업스트림을 연결한다"
+   ],
+   [
+    "완료 기준",
+    "원격 화면에 커밋이 보인다"
+   ]
   ]
  },
- { "type": "eof", "title": "- EOF -" }
+ {
+  "type": "eof",
+  "title": "- EOF -"
+ }
 ]

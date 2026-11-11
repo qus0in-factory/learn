@@ -1,54 +1,130 @@
 [
- { "type": "cover", "step": "STEP 26", "title": "마크다운 작성" },
+ {
+  "type": "cover",
+  "step": "STEP 26",
+  "title": "마크다운 작성"
+ },
  {
   "type": "goals",
   "title": "학습 목표",
   "cards": [
-   ["두 README", "프로젝트 README와 Profile README의 차이를 말한다"],
-   ["문법 확인", "제목·강조·목록·링크·표가 서식으로 보이는지 확인한다"],
-   ["프로필 저장소", "사용자명과 같은 이름의 저장소를 만들어 프로필에 보인다"]
+   [
+    "두 README",
+    "프로젝트 README와 Profile README의 차이를 말한다"
+   ],
+   [
+    "문법 확인",
+    "제목·강조·목록·링크·표가 서식으로 보이는지 확인한다"
+   ],
+   [
+    "프로필 저장소",
+    "사용자명과 같은 이름의 저장소를 만들어 프로필에 보인다"
+   ]
   ]
  },
- { "type": "section", "title": "두 README" },
+ {
+  "type": "section",
+  "title": "두 README"
+ },
  {
   "type": "compare",
   "title": "README의 두 종류",
-  "left": { "label": "프로젝트 README", "lines": ["작업 저장소의 설명서", "목적과 사용 방법을 적는다"] },
-  "right": { "label": "Profile README", "lines": ["사용자명과 같은 이름의 저장소", "github.com/사용자명 프로필에 보인다"] },
+  "left": {
+   "label": "프로젝트 README",
+   "lines": [
+    "작업 저장소의 설명서",
+    "목적과 사용 방법을 적는다"
+   ]
+  },
+  "right": {
+   "label": "Profile README",
+   "lines": [
+    "사용자명과 같은 이름의 저장소",
+    "github.com/사용자명 프로필에 보인다"
+   ]
+  },
   "result": "Profile 저장소의 루트 README가 비어 있지 않으면 프로필 화면에 소개가 표시된다"
  },
  {
   "type": "rows",
   "title": "저장소 구분",
   "rows": [
-   { "term": "Profile 저장소", "detail": "github.com/사용자명/사용자명 형태의 공개 저장소다" },
-   { "term": "Pages 저장소", "detail": "사용자명.github.io는 웹사이트 용도라서 Profile README와 다르다" },
-   { "term": "표시 조건", "detail": "루트 README가 비어 있으면 프로필에 보이지 않는다" },
-   { "term": "공개 여부", "detail": "비공개 저장소의 README는 프로필에 표시되지 않는다" }
+   {
+    "term": "Profile 저장소",
+    "detail": "github.com/사용자명/사용자명 형태의 공개 저장소다"
+   },
+   {
+    "term": "Pages 저장소",
+    "detail": "사용자명.github.io는 웹사이트 용도라서 Profile README와 다르다"
+   },
+   {
+    "term": "표시 조건",
+    "detail": "루트 README가 비어 있으면 프로필에 보이지 않는다"
+   },
+   {
+    "term": "공개 여부",
+    "detail": "비공개 저장소의 README는 프로필에 표시되지 않는다"
+   }
   ]
  },
- { "type": "section", "title": "README 고치기" },
+ {
+  "type": "section",
+  "title": "웹 편집기로 README 수정"
+ },
  {
   "type": "steps",
-  "title": "웹 편집기에서 고친다",
+  "title": "README 수정 단계",
   "steps": [
-   { "label": "편집기 열기", "detail": "저장소에서 . 키로 웹 편집기를 연다" },
-   { "label": "내용 작성", "detail": "README.md에 제목과 한 줄 소개, 사용 방법을 적는다" },
-   { "label": "서식 확인", "detail": "미리보기에서 문법이 서식으로 보이는지 확인한다" },
-   { "label": "커밋", "detail": "docs: README에 소개와 사용법 추가처럼 메시지를 남긴다" },
-   { "label": "렌더 확인", "detail": "저장소 첫 화면을 새로고침해 반영을 확인한다" }
+   {
+    "label": "편집기 열기",
+    "detail": "저장소에서 . 키로 웹 편집기를 연다"
+   },
+   {
+    "label": "내용 작성",
+    "detail": "README.md에 제목과 한 줄 소개, 사용 방법을 적는다"
+   },
+   {
+    "label": "서식 확인",
+    "detail": "미리보기에서 문법이 서식으로 보이는지 확인한다"
+   },
+   {
+    "label": "커밋",
+    "detail": "docs: README에 소개와 사용법 추가처럼 메시지를 남긴다"
+   },
+   {
+    "label": "렌더 확인",
+    "detail": "저장소 첫 화면을 새로고침해 반영을 확인한다"
+   }
   ]
  },
  {
   "type": "table",
   "title": "기본 문법",
   "rows": [
-   ["문법", "보이는 모습"],
-   ["# 제목", "문서 제목"],
-   ["**굵게** *기울임*", "강조 텍스트"],
-   ["- 항목 / 1. 항목", "순서 없는 목록과 순서 있는 목록"],
-   ["[링크](URL) ![설명](image.png)", "링크와 이미지"],
-   ["| 항목 | 설명 |", "표와 - [ ] 할 일 목록"]
+   [
+    "문법",
+    "보이는 모습"
+   ],
+   [
+    "# 제목",
+    "문서 제목"
+   ],
+   [
+    "**굵게** *기울임*",
+    "강조 텍스트"
+   ],
+   [
+    "- 항목 / 1. 항목",
+    "순서 없는 목록과 순서 있는 목록"
+   ],
+   [
+    "[링크](URL) ![설명](image.png)",
+    "링크와 이미지"
+   ],
+   [
+    "| 항목 | 설명 |",
+    "표와 - [ ] 할 일 목록"
+   ]
   ]
  },
  {
@@ -57,20 +133,44 @@
   "title": "README 예시",
   "code": "# 나의 포트폴리오\n- 소개: Git과 GitHub를 배우고 있습니다\n- 사용 방법: README를 참고한다\n## 배운 점\n**굵게**와 *기울임* 표시",
   "items": [
-   { "term": "구성", "detail": "제목, 소개, 사용 방법, 배운 점 순으로 적는다." },
-   { "term": "확인", "detail": "미리보기에서 서식이 적용되는지 본다." },
-   { "term": "참고", "detail": "자세한 문법 표는 GitHub 공식 서식 문법을 본다." }
+   {
+    "term": "구성",
+    "detail": "제목, 소개, 사용 방법, 배운 점 순으로 적는다."
+   },
+   {
+    "term": "확인",
+    "detail": "미리보기에서 서식이 적용되는지 본다."
+   },
+   {
+    "term": "참고",
+    "detail": "자세한 문법 표는 GitHub 공식 서식 문법을 본다."
+   }
   ]
  },
- { "type": "section", "title": "프로필 README" },
+ {
+  "type": "section",
+  "title": "프로필 README"
+ },
  {
   "type": "steps",
   "title": "프로필 저장소 만들기",
   "steps": [
-   { "label": "이름 결정", "detail": "본인 사용자명과 정확히 같은 이름의 공개 저장소를 만든다" },
-   { "label": "README 포함", "detail": "Add a README file을 켜고 저장소를 만든다" },
-   { "label": "소개 작성", "detail": "루트 README.md에 소개 문구와 관심 기술만 짧게 적고 커밋한다" },
-   { "label": "표시 확인", "detail": "github.com/사용자명 프로필을 새로고침해 README가 보이는지 확인한다" }
+   {
+    "label": "이름 결정",
+    "detail": "본인 사용자명과 정확히 같은 이름의 공개 저장소를 만든다"
+   },
+   {
+    "label": "README 포함",
+    "detail": "Add a README file을 켜고 저장소를 만든다"
+   },
+   {
+    "label": "소개 작성",
+    "detail": "루트 README.md에 소개 문구와 관심 기술만 짧게 적고 커밋한다"
+   },
+   {
+    "label": "표시 확인",
+    "detail": "github.com/사용자명 프로필을 새로고침해 README가 보이는지 확인한다"
+   }
   ]
  },
  {
@@ -84,32 +184,74 @@
   "type": "rows",
   "title": "표시가 안 될 때",
   "rows": [
-   { "term": "저장소 이름", "detail": "사용자명과 같은지 다시 확인한다" },
-   { "term": "공개 여부", "detail": "Public인지 확인한다" },
-   { "term": "빈 README", "detail": "루트 README가 비어 있지 않은지 확인한다" },
-   { "term": "오래된 저장소", "detail": "설정에서 프로필 표시를 켜야 할 수 있다" }
+   {
+    "term": "저장소 이름",
+    "detail": "사용자명과 같은지 다시 확인한다"
+   },
+   {
+    "term": "공개 여부",
+    "detail": "Public인지 확인한다"
+   },
+   {
+    "term": "빈 README",
+    "detail": "루트 README가 비어 있지 않은지 확인한다"
+   },
+   {
+    "term": "오래된 저장소",
+    "detail": "설정에서 프로필 표시를 켜야 할 수 있다"
+   }
   ]
  },
  {
   "type": "rows",
   "title": "주의할 점",
   "rows": [
-   { "term": "다른 사람 프로필", "detail": "예시 모음은 참고만 하고 통째로 복사하지 않는다" },
-   { "term": "배지", "detail": "배지 생성 사이트에서 필요한 것만 고른다" },
-   { "term": "비밀 값", "detail": "비밀 값과 개인 연락처를 함부로 적지 않는다" },
-   { "term": "화면 차이", "detail": "화면과 메뉴 이름은 버전에 따라 다를 수 있다" }
+   {
+    "term": "다른 사람 프로필",
+    "detail": "예시 모음은 참고만 하고 통째로 복사하지 않는다"
+   },
+   {
+    "term": "배지",
+    "detail": "배지 생성 사이트에서 필요한 것만 고른다"
+   },
+   {
+    "term": "비밀 값",
+    "detail": "비밀 값과 개인 연락처를 함부로 적지 않는다"
+   },
+   {
+    "term": "화면 차이",
+    "detail": "화면과 메뉴 이름은 버전에 따라 다를 수 있다"
+   }
   ]
  },
  {
   "type": "table",
   "title": "한 장 요약",
   "rows": [
-   ["항목", "확인할 내용"],
-   ["프로젝트 README", "목적과 사용 방법을 적는다"],
-   ["Profile README", "사용자명 저장소의 루트 README다"],
-   ["문법", "미리보기에서 서식으로 확인한다"],
-   ["완료 기준", "프로필 화면에서 소개가 보인다"]
+   [
+    "항목",
+    "확인할 내용"
+   ],
+   [
+    "프로젝트 README",
+    "목적과 사용 방법을 적는다"
+   ],
+   [
+    "Profile README",
+    "사용자명 저장소의 루트 README다"
+   ],
+   [
+    "문법",
+    "미리보기에서 서식으로 확인한다"
+   ],
+   [
+    "완료 기준",
+    "프로필 화면에서 소개가 보인다"
+   ]
   ]
  },
- { "type": "eof", "title": "- EOF -" }
+ {
+  "type": "eof",
+  "title": "- EOF -"
+ }
 ]
