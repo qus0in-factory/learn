@@ -1,14 +1,10 @@
 ---
 stepHeader: true
-subtitle: "GitHub 빈 저장소를 만들고 로컬 저장소에 연결해 올린다."
+subtitle: "원격 저장소를 연결하고 동기화한다."
 tags: ["remote", "origin", "push", "GitHub"]
 ---
 
 # 원격 연결
-
-{{ easyNotice }}
-
-출처: [STEP 05 원격 저장소와 동기화](/git/05-remote)
 
 커밋은 지금까지 내 컴퓨터(`.git`)에만 저장되어 있다. [GitHub란?](/git-easy/01-what-is-github)에서 본 공유와 백업을 위해 로컬 저장소를 GitHub 원격 저장소와 연결한다.
 
@@ -66,6 +62,19 @@ git push -u origin main
 
 VS Code 소스 제어 창의 `변경 내용 동기화` 버튼도 같은 push/pull을 실행한다.
 
+## GitHub Pages 웹사이트 배포
+
+저장소 이름을 `<사용자명>.github.io`로 만들면 GitHub Pages로 본인 웹사이트를 직접 운영할 수 있다.
+
+1. 저장소의 `Settings` → `Pages`에서 `Branch`가 `main`, 폴더가 `/(root)`로 지정되어 있는지 배포 브랜치를 확인한다.
+2. 배포가 완료되면 `https://<사용자명>.github.io` 주소로 접속할 수 있으며, 루트의 `index.html` 또는 `README.md`가 첫 화면으로 열린다.
+3. 이후 로컬에서 코드를 수정해 `push`하면 GitHub Pages가 변경 사항을 감지해 배포 사이트를 자동으로 갱신한다.
+
 ## push 거절 시
 
 원격에 내 로컬에 없는 커밋이 있으면 push가 거절된다. `git pull origin main`으로 원격 변경을 먼저 내려받은 뒤 다시 push한다. 강제 push(`--force`)로 우회하지 않는다.
+
+## 추가자료
+
+- [STEP 05 원격 저장소와 동기화](/git/05-remote)
+- [STEP 06 정적 웹 배포의 목적](/git/06-pages)

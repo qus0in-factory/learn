@@ -1,20 +1,16 @@
 ---
 stepHeader: true
-subtitle: "웹 편집기로 프로젝트 README와 프로필 README를 작성한다."
+subtitle: "마크다운으로 README 문서를 작성한다."
 tags: ["Markdown", "README", "Profile", "github.dev"]
 ---
 
 # 마크다운 작성
 
-{{ easyNotice }}
-
-출처: [STEP 07 마크다운과 다이어그램](/git/07-markdown-mermaid), [STEP 08 프로필과 작업 기록](/git/08-profile-records), [프로필과 기록 작성](/git/appendix/13-profile-records)
-
 프로젝트 설명과 나를 소개하는 글은 둘 다 README지만 저장소가 다르다. 작업 저장소 README는 그 프로젝트의 목적과 사용법을 보여 준다. Profile 저장소는 사용자명과 이름이 같은 공개 저장소(`https://github.com/<사용자명>/<사용자명>`)이고, 루트 README가 비어 있지 않으면 `https://github.com/<사용자명>` 프로필에 보인다. `<사용자명>.github.io`는 Pages로 사이트를 올리는 저장소라서 프로필 README와 다르다.
 
 문법의 자세한 표는 [GitHub의 기본 작성 및 서식 문법](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)을 참고한다. 배지 예시는 [Shields.io](https://shields.io/)와 [Markdown Badges](https://github.com/Ileriayo/markdown-badges)에서 필요한 것만 고른다. 다른 사람 프로필은 [Awesome GitHub Profile README](https://github.com/abhisheknaiidu/awesome-github-profile-readme)에서 보고, 통째로 복사하지 않는다.
 
-## 웹 편집기로 README 고치기
+## 웹 편집기로 README 수정
 
 1. [가입과 저장소 만들기](01-signup-and-repo.md)의 저장소를 열고 `.` 키로 웹 편집기를 연다. 화면은 버전에 따라 다를 수 있다.
 2. `README.md`에 제목, 한 줄 소개, 사용 방법, 기술 또는 배운 점을 적는다.
@@ -49,3 +45,9 @@ tags: ["Markdown", "README", "Profile", "github.dev"]
 4. `https://github.com/<사용자명>`을 새로고침해 README가 프로필에 보이는지 확인한다.
 
 보이지 않으면 저장소 이름, 공개 여부, 비어 있지 않은 루트 README를 확인한다. 2020년 7월 전에 만든 저장소는 설정에서 프로필 표시를 켜야 할 수 있다. 비밀 값과 개인 연락처를 함부로 적지 않는다.
+
+## 추가자료
+
+- [STEP 07 마크다운과 다이어그램](/git/07-markdown-mermaid)
+- [STEP 08 프로필과 작업 기록](/git/08-profile-records)
+- [프로필과 기록 작성](/git/appendix/13-profile-records)

@@ -1,14 +1,10 @@
 ---
 stepHeader: true
-subtitle: "ChatGPT에 GitHub를 연결해 프로필과 기록을 고치고 리뷰한다."
+subtitle: "ChatGPT를 연결해 작업 기록을 검토하고 보완한다."
 tags: ["ChatGPT", "커넥터", "리뷰", "Profile"]
 ---
 
 # ChatGPT로 기록 고도화
-
-{{ easyNotice }}
-
-출처: [STEP 08 프로필과 작업 기록](/git/08-profile-records), [STEP 09 이슈와 마일스톤](/git/09-issues), [OpenAI 도움말 센터](https://help.openai.com)
 
 ChatGPT는 GitHub 계정을 연결(커넥터)해 저장소의 파일과 문서를 읽고 질문에 답하게 할 수 있다. 예전의 플러그인 방식이 아니라 연결 기능을 기준으로 설명한다. 요금제와 계정 종류에 따라 쓸 수 있는 기능이 다를 수 있다. 화면과 메뉴 이름은 버전에 따라 다를 수 있다. 정확한 절차는 [OpenAI 도움말 센터](https://help.openai.com)에서 "ChatGPT 커넥터"를 검색해 확인한다.
 
@@ -21,7 +17,7 @@ ChatGPT는 GitHub 계정을 연결(커넥터)해 저장소의 파일과 문서�
 
 비밀정보, 토큰, 비밀번호가 든 파일은 접근시키지 않는다. 생성된 문장에 그런 값이 있으면 커밋하지 않고 지운다.
 
-## 고치고 리뷰하기
+## 수정과 리뷰
 
 연결한 뒤 대화에서 파일을 지정해 요청한다. 초안을 그대로 커밋하지 않고, 사실과 다른 문장·확인하지 않은 메뉴 이름·과장된 성과를 지운 뒤에 웹 편집기에서 커밋한다.
 
@@ -32,3 +28,9 @@ ChatGPT는 GitHub 계정을 연결(커넥터)해 저장소의 파일과 문서�
 5. 고친 뒤 저장소 화면에서 README와 기록 파일이 렌더링되는지 확인하고, 관련 이슈에 리뷰한 사실을 한 줄 남긴다.
 
 요청 예: "내 저장소의 README와 docs/til.md를 읽고, 확인하지 않은 사실은 단정하지 말고 고칠 문장만 제안해 줘."
+
+## 추가자료
+
+- [STEP 08 프로필과 작업 기록](/git/08-profile-records)
+- [STEP 09 이슈와 마일스톤](/git/09-issues)
+- [OpenAI 도움말 센터](https://help.openai.com)
