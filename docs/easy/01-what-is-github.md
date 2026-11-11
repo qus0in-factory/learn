@@ -1,4 +1,5 @@
 ---
+stepHeader: true
 subtitle: "소스 코드 공유, 이슈 기록, CI/CD가 GitHub를 쓰는 이유다."
 tags: ["GitHub", "협업", "Issue", "CI/CD"]
 ---

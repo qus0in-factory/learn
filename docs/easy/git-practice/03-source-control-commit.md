@@ -1,4 +1,5 @@
 ---
+stepHeader: true
 subtitle: "VS Code 소스 제어 GUI로 파일을 스테이징하고 커밋한다."
 tags: ["소스 제어", "add", "commit", "GUI"]
 ---

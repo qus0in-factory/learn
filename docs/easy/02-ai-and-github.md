@@ -1,4 +1,5 @@
 ---
+stepHeader: true
 subtitle: "마크다운, 이슈와 마일스톤, TIL·회고·부검 등 AI와 협업하는 데 필요한 핵심 개념을 이해한다."
 tags: ["AI", "Markdown", "Issue", "Milestone", "Label", "TIL", "회고", "부검"]
 ---

@@ -6,10 +6,10 @@ import { site } from '../site.mjs'
 import CourseBreadcrumb from './CourseBreadcrumb.vue'
 import StepIntro from './StepIntro.vue'
 import PageUpdated from './PageUpdated.vue'
+import AdSlot from './AdSlot.vue'
 import './task-list.css'
 import './header-logo.css'
 import './header-logotype.css'
-import AdSlot from './AdSlot.vue'
 
 const { frontmatter, page } = useData()
 </script>
@@ -19,11 +19,9 @@ const { frontmatter, page } = useData()
     <template #doc-after><AdSlot slot-name="docBottom" /></template>
     <template #aside-ads-before><AdSlot slot-name="asideRail" /></template>
     <template #layout-bottom><SiteFooter /></template>
-    <template #doc-footer-before>
-      <PageUpdated />
-    </template>
+    <template #doc-footer-before><PageUpdated /></template>
     <template #doc-before>
-      <CourseBreadcrumb v-if="/^git\/(?:\d{2}-|appendix\/|commands\/|tags|glossary)/.test(page.relativePath)" />
+      <CourseBreadcrumb />
       <StepIntro v-if="frontmatter.stepHeader" :key="page.relativePath" />
     </template>
   </DefaultTheme.Layout>

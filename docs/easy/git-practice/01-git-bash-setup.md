@@ -1,6 +1,9 @@
 ---
+stepHeader: true
 subtitle: "Git Bash를 설치하고 터미널과 작업자 정보를 설정한다."
 tags: ["Git Bash", "설치", "config", "환경설정"]
+installation: true
+downloads: ["gitWindows"]
 ---
 
 # Git Bash 설치와 설정

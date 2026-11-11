@@ -1,4 +1,5 @@
 ---
+stepHeader: true
 subtitle: "로컬 커밋을 원격 저장소에 등록하고 동기화한다."
 tags: ["원격 동기화", "remote", "push", "GitHub"]
 ---

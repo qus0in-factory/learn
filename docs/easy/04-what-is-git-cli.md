@@ -1,4 +1,5 @@
 ---
+stepHeader: true
 subtitle: "복사본 대신 Git을 쓰는 이유와 터미널에서 명령으로 쓰는 이유를 알아본다."
 tags: ["VCS", "SCM", "CLI", "터미널"]
 ---

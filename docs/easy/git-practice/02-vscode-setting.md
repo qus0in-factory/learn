@@ -1,6 +1,9 @@
 ---
+stepHeader: true
 subtitle: "VS Code 통합 터미널을 설정하고 새 저장소를 초기화한다."
 tags: ["VS Code", "init", "저장소 초기화"]
+installation: true
+downloads: ["vscode"]
 ---
 
 # VS Code 세팅
