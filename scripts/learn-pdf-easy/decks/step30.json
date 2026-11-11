@@ -164,7 +164,7 @@
   "type": "code",
   "title": "스테이징 취소",
   "code": [
-   "# 스테이징만 취소\ngit restore --staged <파일>\ngit rm --cached -- <파일>"
+   "# 이미 커밋된 적 있는 파일: 스테이징만 취소\ngit restore --staged <파일>\n\n# 첫 커밋 전 새 파일: 인덱스에서만 빼기\ngit rm --cached -- <파일>"
   ]
  },
  {
