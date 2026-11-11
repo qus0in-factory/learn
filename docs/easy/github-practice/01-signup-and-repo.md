@@ -10,7 +10,7 @@ tags: ["GitHub 가입", "저장소 만들기", "README", "github.dev"]
 
 출처: [STEP 02 GitHub 가입](/git/02-local-repository), [STEP 05 따라하기](/git/05-remote), [GitHub 웹 편집기 안내](https://docs.github.com/en/codespaces/the-githubdev-web-based-editor)
 
-[GitHub란?](/git-easy/01-what-is-github)에서 본 공유와 기록을 직접 시작한다. 이 페이지의 저장소는 웹에서 문서를 고치기 위한 것이다. 나중에 내 컴퓨터의 파일을 올릴 빈 저장소는 [원격과 동기화](/git-easy/git-practice/04-remote-sync)에서 따로 만든다. 이름이 같으면 원격에 먼저 생긴 README 커밋 때문에 첫 push가 거절될 수 있다.
+[GitHub란?](/git-easy/01-what-is-github)에서 본 공유와 기록을 직접 시작한다. 이 페이지의 저장소는 웹에서 문서를 고치기 위한 것이다. 나중에 내 컴퓨터의 파일을 올릴 빈 저장소는 [원격 연결](/git-easy/git-practice/03-remote-connect)에서 따로 만든다. 이름이 같으면 원격에 먼저 생긴 README 커밋 때문에 첫 push가 거절될 수 있다.
 
 ## GitHub 가입
 
