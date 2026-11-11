@@ -1,6 +1,6 @@
 import { readFile } from 'node:fs/promises';
 import { gh } from '../learn-pdf/gist-store.mjs';
-import { publish } from '../learn-pdf/gist-publish.mjs';
+import { publish } from './gist-publish.mjs';
 
 export async function publishGists({ items, extract, prefix, dry }) {
   if (!dry && gh(['api', 'user', '--jq', '.login']) !== 'qus0in') throw Error('Expected qus0in');
