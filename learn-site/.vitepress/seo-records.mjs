@@ -9,7 +9,7 @@ export function recordPage(page) {
   if (!page.filePath || page.relativePath === '404.md') return
   const path = pagePath(page.relativePath)
   const record = { path, source: page.filePath, title: page.title,
-    description: page.frontmatter.subtitle || meta.descriptions[path] || (path.startsWith('/git/') ? courses[0].summary : site.subtitle),
+    description: page.frontmatter.subtitle || meta.descriptions[path] || (path.startsWith('/git/') && !path.startsWith('/git-easy/') ? courses[0].summary : site.subtitle),
     updated: pageLastmod(path.slice(1)), tags: page.frontmatter.tags || [],
     downloads: page.frontmatter.downloads, installation: page.frontmatter.installation,
     stepRefs: page.frontmatter.stepRefs }

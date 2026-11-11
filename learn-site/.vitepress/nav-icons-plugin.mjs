@@ -16,7 +16,7 @@ export function navIcons() {
     load(id) {
       if (id !== `\0${ID}`) return
       return Object.entries(icons)
-        .map(([slug, name]) => `.VPSidebarItem .link[href="/git/${slug}"] { --nav-icon-image: ${dataUri(name)}; --nav-icon-display: block; }`)
+        .map(([slug, name]) => `.VPSidebarItem .link[href="${slug.startsWith('/') ? slug : '/git/' + slug}"] { --nav-icon-image: ${dataUri(name)}; --nav-icon-display: block; }`)
         .join('\n')
     },
   }
