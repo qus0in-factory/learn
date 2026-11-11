@@ -23,7 +23,8 @@
   ]},
   {"type": "rows", "title": "도서관 비유", "rows": [
     {"term": "SVN", "detail": "본관에만 있는 대출 대장. 확인과 기록은 본관 창구에서 한다"},
-    {"term": "Git", "detail": "각자 책상에 복사본 대장이 있다. 필요할 때 변경을 맞춘다"}
+    {"term": "Git", "detail": "각자 책상에 복사본 대장이 있다. 필요할 때 변경을 맞춘다"},
+    {"term": "공통점", "detail": "둘 다 변경 이력을 기록하는 버전 관리다"}
   ]},
   {"type": "section", "title": "CLI"},
   {"type": "table", "title": "화면과 명령", "rows": [
