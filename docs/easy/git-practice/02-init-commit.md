@@ -29,6 +29,13 @@ git config --global --list
 
 이메일을 GitHub 계정과 맞추면 커밋이 내 계정에 연결된다. 오타가 있으면 같은 명령을 다시 실행해 덮어쓴다.
 
+등록한 값은 개별 키로도 확인한다.
+
+```bash
+git config user.name
+git config user.email
+```
+
 ## 저장소 초기화
 
 ```bash

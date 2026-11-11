@@ -31,6 +31,29 @@ git remote -v                # 등록 확인
 
 `origin`은 긴 URL에 붙이는 관례적 별칭이다.
 
+## macOS 인증 준비 (gh CLI)
+
+macOS는 push 인증을 위해 GitHub CLI(gh)를 미리 준비해 둔다.
+
+1. [Homebrew](https://brew.sh)가 있다면 터미널에서 설치한다.
+
+```bash
+brew install gh
+```
+
+2. 설치를 확인하고 로그인한다.
+
+```bash
+gh --version
+gh auth login
+```
+
+3. 질문에 `GitHub.com` → `HTTPS` → `Login with a web browser` 순서로 고른다. Git 자격 증명을 함께 설정할지 물으면 `Y`를 입력한다.
+4. 터미널에 나온 일회용 코드를 브라우저에 입력해 승인하면 인증이 끝난다.
+5. `gh auth status`로 로그인 상태를 확인한다.
+
+Windows는 Git for Windows에 Git Credential Manager가 들어 있어, 인증이 필요할 때 브라우저 로그인 창이 뜨면 승인하면 된다. 자세한 준비는 [인증 준비](/git/05-remote)를 참고한다.
+
 ## 올리고 내려받기
 
 ```bash

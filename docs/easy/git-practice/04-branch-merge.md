@@ -60,3 +60,26 @@ main에서 고친 제목
 ## 병합이 꼬이면
 
 `git merge --abort`로 병합을 취소해 병합 전 상태로 돌아간다. 커밋된 상태에서 시작했다면 변경이 사라지지 않는다. 충돌을 `reset --hard`로 해결하거나 마커를 지우지 않은 채 커밋하지 않는다.
+
+## GitHub 웹에서 PR로 합치기
+
+실제 협업에서는 브랜치를 `main`에 직접 머지하지 않고, GitHub 웹에서 풀 리퀘스트(PR)로 올려 검토한 뒤 합친다. 흐름은 [STEP 12 풀 리퀘스트와 협업](/git/12-pull-request)을 따른다.
+
+1. 브랜치에서 작업을 커밋한 뒤 원격에 올린다.
+
+```bash
+git push -u origin feature/profile-design
+```
+
+2. 브라우저에서 내 저장소 페이지를 열면 노란 배너의 `Compare & pull request` 버튼이 보인다. 누른다. 사라졌다면 `Contribute` → `Open pull request`로 열 수 있다.
+3. PR 제목과 설명을 확인하고 `Create pull request`를 누른다.
+4. `Files changed` 탭에서 바뀐 부분(diff)을 확인한다.
+5. `Merge pull request` → `Confirm merge`를 눌러 병합한다. 변경이 양쪽에서 겹치면 웹에서도 충돌 해결을 요구한다.
+6. 로컬 터미널로 돌아와 받아 둔다.
+
+```bash
+git switch main
+git pull origin main
+```
+
+7. GitHub의 녹색 `Delete branch` 버튼으로 병합된 브랜치를 정리한다. 로컬에서는 `git branch -d feature/profile-design`으로 지운다.
