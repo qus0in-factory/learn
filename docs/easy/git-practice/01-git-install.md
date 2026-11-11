@@ -10,7 +10,7 @@ downloads: ["gitWindows"]
 
 [Git이란?](/git-easy/04-what-is-git-cli)에서 본 버전 관리 도구를 내 컴퓨터에 설치한다. Windows는 Git Bash가 함께 설치되는 Git for Windows를 쓰고, macOS는 `git --version` 입력 시 나오는 안내나 [Homebrew](https://brew.sh)로 설치한다.
 
-## 설치하기
+## 설치
 
 1. Windows는 [gitforwindows.org](https://gitforwindows.org/)에서 설치 파일을 내려받아 실행한다. 설치 화면의 항목과 기본값은 [설치 준비](/git/appendix/00-installation)의 Windows Git 설치 절을 따른다.
 2. macOS는 터미널에 `git --version`을 입력한다. 설치 안내 창이 뜨면 안내대로 설치한다.

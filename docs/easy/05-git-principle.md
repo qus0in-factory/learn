@@ -148,7 +148,7 @@ flowchart TB
 4. 💾 수정한 파일을 저장한 뒤 `git add`로 스테이징하고, `git commit`을 실행해 병합을 완료한다.
 5. ↩️ 만약 해결 과정이 너무 꼬여 병합 시작 전으로 안전하게 되돌아가고 싶다면 언제든 `git merge --abort`를 입력하면 된다.
 
-이제 이론적 원리를 모두 이해했으므로, [Git 실습](/git-easy/git-practice/01-git-install)으로 넘어가 내 컴퓨터에 Git을 설치하고 직접 명령을 다뤄보자.
+이제 이론적 원리를 모두 이해했으므로, [Git 실습](/git-easy/git-practice/01-git-install)으로 넘어가 내 컴퓨터에 Git을 설치하고 직접 명령을 다룬다.
 
 ## 추가자료
 
