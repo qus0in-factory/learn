@@ -9,7 +9,7 @@ tags: ["Issue", "Label", "Milestone", "TIL", "회고", "부검"]
 
 출처: [STEP 09 이슈와 마일스톤](/git/09-issues), [STEP 08 프로필과 작업 기록](/git/08-profile-records), [기록 작성 예시](/git/appendix/16-record-examples), [프로필과 기록 작성](/git/appendix/13-profile-records)
 
-할 일을 머릿속에만 두면 빼먹기 쉽다. Issue는 작업 요청과 버그를 적는 티켓이다. Label은 `bug`(오류), `enhancement`(새 기능), `documentation`(문서)처럼 종류를 색으로 나누는 표식이다. Milestone은 목표 날짜나 버전으로 이슈를 묶고 진척을 보여 준다. 화면 이름은 버전에 따라 다를 수 있다.
+할 일을 머릿속에만 두면 빼먹기 쉽다. Issue는 작업 요청과 버그를 적는 티켓이다. Label은 `bug`(오류), `enhancement`(새 기능 요청), `documentation`(문서)처럼 종류를 색으로 나누는 표식이다. Milestone은 목표 날짜나 버전으로 이슈를 묶고 진척을 보여 준다. 화면 이름은 버전에 따라 다를 수 있다.
 
 ## 라벨·이슈·마일스톤
 
