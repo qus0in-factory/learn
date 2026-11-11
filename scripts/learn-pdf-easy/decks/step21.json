@@ -1,0 +1,44 @@
+[
+  {"type": "cover", "step": "STEP 21", "title": "GitHub란?"},
+  {"type": "goals", "title": "학습 목표", "cards": [
+    ["공유", "코드를 서버에 두고 다른 PC에서 복원할 수 있다"],
+    ["기록", "이슈로 할 일과 버그를 남겨 빠뜨리지 않는다"],
+    ["자동화", "코드가 올라오면 검사와 배포를 맞춰 둘 수 있다"]
+  ]},
+  {"type": "section", "title": "GitHub를 쓰는 이유"},
+  {"type": "rows", "title": "세 가지 이유", "rows": [
+    {"term": "공유와 기여", "detail": "저장소를 중심으로 코드를 고치고 합친다"},
+    {"term": "이슈 기록", "detail": "할 일과 버그를 카드로 남긴다"},
+    {"term": "CI/CD", "detail": "올라온 코드를 정해 둔 검사와 배포에 연결한다"}
+  ]},
+  {"type": "compare", "title": "내 컴퓨터와 GitHub", "left": {"label": "내 컴퓨터만", "lines": ["분실하면 작업물을 잃을 수 있다", "혼자만 코드를 본다", "파일 경로는 그 PC에서만 열린다"]}, "right": {"label": "GitHub", "lines": ["다른 PC에서 코드를 복원할 수 있다", "여러 사람이 한 저장소를 고친다", "올린 코드로 웹 주소를 만들 수 있다"]}, "result": "GitHub는 Git 저장소를 서버에 두고 함께 쓰게 하는 서비스다"},
+  {"type": "image", "title": "함께 검토", "image": "docs/public/illust-review-600.webp", "caption": "동료들이 문서에서 바뀐 부분을 함께 보며 검토하는 모습"},
+  {"type": "rows", "title": "기여", "rows": [
+    {"term": "바로 합치지 않음", "detail": "동료가 먼저 읽으면 의도와 오류를 함께 확인한다"},
+    {"term": "혼자 작업", "detail": "내가 바꾼 내용을 다시 읽어 보는 습관이 도움이 된다"},
+    {"term": "오픈소스", "detail": "남의 코드를 고쳐 원래 주인에게 반영을 제안할 수 있다"}
+  ]},
+  {"type": "rows", "title": "이슈", "rows": [
+    {"term": "머릿속만", "detail": "기능과 버그를 기억만 하면 빠뜨릴 수 있다"},
+    {"term": "카드", "detail": "종류와 마감일별로 남은 일을 본다"},
+    {"term": "공용 게시판", "detail": "나중에 해결 방법을 찾고, 지금 하는 일을 알린다"}
+  ]},
+  {"type": "rows", "title": "CI/CD", "rows": [
+    {"term": "손으로", "detail": "매번 검사하고 올리면 실수하기 쉽고 시간이 든다"},
+    {"term": "자동", "detail": "코드가 올라오면 정해 둔 검사와 배포가 실행되게 맞춘다"},
+    {"term": "이름", "detail": "이런 자동화를 CI/CD라고 부른다"}
+  ]},
+  {"type": "image", "title": "공개되는 사이트", "image": "docs/public/illust-publish-600.webp", "caption": "나만 열 수 있는 집에서 누구나 볼 수 있는 광장의 게시판으로 사이트가 공개되는 모습"},
+  {"type": "rows", "title": "파일 경로와 웹 주소", "rows": [
+    {"term": "브라우저로 열기", "detail": "주소창에 내 PC 파일 경로가 보인다"},
+    {"term": "공유 한계", "detail": "그 주소는 상대방 컴퓨터에서 열리지 않는다"},
+    {"term": "올린 뒤", "detail": "누구나 접속할 수 있는 웹 주소가 생기면 공유가 쉬워진다"}
+  ]},
+  {"type": "table", "title": "한 장 요약", "rows": [
+    ["개념", "확인할 내용"],
+    ["서비스", "Git 저장소를 서버에 두고 함께 쓴다"],
+    ["비슷한 서비스", "GitLab·Bitbucket. 차이는 호스팅 부록"],
+    ["다음", "구성과 AI는 AI와 GitHub, 절차는 GitHub 실습"]
+  ]},
+  {"type": "eof", "title": "- EOF -"}
+]
