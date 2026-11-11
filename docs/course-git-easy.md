@@ -1,5 +1,5 @@
 ---
-subtitle: "기존 Git 과정보다 쉬운 입문 버전"
+subtitle: "프로그래밍 비숙련자를 위한 Git & GitHub"
 tags: ["GitHub", "Git", "입문"]
 ---
 
