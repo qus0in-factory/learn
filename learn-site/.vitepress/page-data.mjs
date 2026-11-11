@@ -6,6 +6,7 @@ import { pageUpdated } from './page-updated.mjs'
 import { stepHeaderFlag } from './step-header-flag.mjs'
 import { ogPage } from './og-page.mjs'
 import { seoPage } from './seo-page.mjs'
+import { easy } from './easy.mjs'
 
 export function transformPageData(page) {
   pdfData(page)
@@ -17,6 +18,7 @@ export function transformPageData(page) {
     page.title = labels.courseTitle
     page.frontmatter.title = labels.courseTitle
   }
+  easy(page)
   if (page.relativePath === 'index.md') {
     page.title = site.title
     page.frontmatter.title = site.title

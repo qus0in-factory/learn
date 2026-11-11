@@ -6,6 +6,8 @@ export const pages = {
   'lecture/commands/:page': 'git/commands/:page',
   'lecture/tags.md': 'git/tags.md',
   'lecture/glossary.md': 'git/glossary.md',
+  'course-git-easy.md': 'git-easy/index.md',
+  'easy/:page': 'git-easy/:page',
 }
 
 export const excluded = [
