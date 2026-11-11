@@ -1,6 +1,6 @@
 ---
 stepHeader: true
-subtitle: "ChatGPT에 GitHub를 연결해 프로필과 기록을 고치고 리뷰한다."
+subtitle: "ChatGPT를 연결해 작업 기록을 검토하고 보완한다."
 tags: ["ChatGPT", "커넥터", "리뷰", "Profile"]
 ---
 

@@ -1,6 +1,6 @@
 ---
 stepHeader: true
-subtitle: "브랜치로 작업을 나누고 머지로 합친다."
+subtitle: "브랜치를 만들어 작업을 나누고 병합한다."
 tags: ["branch", "switch", "merge", "충돌"]
 ---
 

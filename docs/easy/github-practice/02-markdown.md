@@ -1,6 +1,6 @@
 ---
 stepHeader: true
-subtitle: "웹 편집기로 프로젝트 README와 프로필 README를 작성한다."
+subtitle: "마크다운으로 README 문서를 작성한다."
 tags: ["Markdown", "README", "Profile", "github.dev"]
 ---
 

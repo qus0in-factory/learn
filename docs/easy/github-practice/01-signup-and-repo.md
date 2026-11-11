@@ -1,6 +1,6 @@
 ---
 stepHeader: true
-subtitle: "GitHub에 가입하고 README가 있는 저장소를 만든 뒤 웹 편집기를 연다."
+subtitle: "GitHub에 가입하고 첫 저장소를 만든다."
 tags: ["GitHub 가입", "저장소 만들기", "README", "github.dev"]
 ---
 

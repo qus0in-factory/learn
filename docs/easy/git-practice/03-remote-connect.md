@@ -1,6 +1,6 @@
 ---
 stepHeader: true
-subtitle: "GitHub 빈 저장소를 만들고 로컬 저장소에 연결해 올린다."
+subtitle: "원격 저장소를 연결하고 동기화한다."
 tags: ["remote", "origin", "push", "GitHub"]
 ---
 

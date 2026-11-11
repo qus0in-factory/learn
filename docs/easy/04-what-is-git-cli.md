@@ -1,6 +1,6 @@
 ---
 stepHeader: true
-subtitle: "VCS와 SCM의 개념, SVN과의 차이, 그리고 CLI와 터미널을 쓰는 이유를 이해한다."
+subtitle: "버전 관리 도구와 Git CLI가 필요한 이유를 이해한다."
 tags: ["Git", "CLI", "VCS", "SCM", "SVN", "터미널"]
 ---
 

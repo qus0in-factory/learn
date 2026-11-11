@@ -1,6 +1,6 @@
 ---
 stepHeader: true
-subtitle: "폴더를 저장소로 초기화하고 첫 커밋을 기록한다."
+subtitle: "Git 저장소를 초기화하고 첫 커밋을 기록한다."
 tags: ["init", "add", "commit", "status"]
 installation: true
 downloads: ["vscode"]
