@@ -16,7 +16,7 @@ tags: ["GitHub", "Git", "입문"]
 - GitHub 실습
   - [가입과 저장소 만들기](github-practice/01-signup-and-repo.md)
   - [마크다운 작성](github-practice/02-markdown.md)
-  - [TIL 작성](github-practice/03-til.md)
+  - [라벨·이슈·기록 작성](github-practice/03-til.md)
   - [ChatGPT 연결](github-practice/04-chatgpt-connection.md)
 
 ## Git
