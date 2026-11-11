@@ -16,4 +16,8 @@ VS Code의 소스 제어 화면을 이용하면 마우스 클릭으로 `git add`
 3. 위쪽 입력칸에 커밋 메시지를 쓴다. 예: `feat: 첫 웹페이지 추가`
 4. 체크 표시 또는 `커밋` 버튼을 눌러 로컬 저장소에 영구 기록한다. (`git commit -m`)
 
-터미널에서 직접 실행하려면 `git add index.html`, `git commit -m "메시지"`를 차례로 입력한다.
+터미널에서는 아래 순서로 확인한다.
+
+3. `git status`를 실행하여 생성한 파일이 Untracked 상태로 표시되는지 확인한다.
+4. `git add index.html`을 입력해 스테이징 영역에 파일을 올린다.
+5. `git status`를 다시 실행하여 파일이 `Changes to be committed:` 목록으로 올라갔는지 확인한다.
