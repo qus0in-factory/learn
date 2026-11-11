@@ -22,7 +22,7 @@ const { message, xUrl, copy, kakao } = useShare(props.course)
       <ShareLinks :x-url="xUrl" @copy="copy" />
       <PrintHelp />
     </div>
-    <CourseQr v-if="!lesson" />
+    <CourseQr v-if="!lesson" :course="course" />
     <span v-if="message" class="share-toast" role="status" aria-live="polite">{{ message }}</span>
   </div>
 </template>
