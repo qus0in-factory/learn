@@ -28,7 +28,7 @@ GitHub에서 작업을 요청하고 진행 상태를 공유하는 대표 도구�
 ```mermaid
 flowchart TB
     MS["Milestone<br/>(목표 기한과 묶음)"] --> I1["Issue<br/>(작업 요청과 문제 기록)"]
-    LB["Label<br/>(분류와 상태 태그)"] -.->|부착| I1
+    LB["Label<br/>(분류와 종류 태그)"] -.->|부착| I1
     I1 --> OPEN["Open (진행 중)"]
     OPEN -->|해결| CLOSED["Closed (완료)"]
 ```
@@ -38,7 +38,7 @@ flowchart TB
    - 배경, 작업 내용, 완료 조건을 명확히 적으면 AI가 목표를 오해하지 않고 코드를 작성할 수 있다.
 2. **Label (라벨)**
    - 이슈와 PR을 색상 태그로 분류한다.
-   - 예: `bug`(오류), `enhancement`(기능 개선), `documentation`(문서), `good first issue`(초보자 추천) 등.
+   - 예: `bug`(오류), `enhancement`(새 기능 요청), `documentation`(문서), `good first issue`(초보자 추천) 등.
 3. **Milestone (마일스톤)**
    - 여러 이슈를 하나의 목표나 일정 단위(예: `v1.0 배포`, `1차 스프린트`)로 묶고 마감일을 지정한다.
    - 전체 이슈 중 몇 개가 닫혔는지 달성률(진행률 %)을 한눈에 파악할 수 있다.
