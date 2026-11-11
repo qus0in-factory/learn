@@ -11,7 +11,7 @@ tags: ["GitHub", "Git", "입문"]
 
 ## {{ learningGoals }}
 
-- 프로그래밍 비숙련자가 Git과 GitHub의 핵심 개념과 협업 흐름을 이해한다.
+- Git과 GitHub의 핵심 개념과 협업 흐름을 이해한다.
 - GitHub 웹에서 저장소 생성, 마크다운 문서 작성, 이슈 기록, AI 협업을 실습한다.
 - 로컬 환경(Git Bash, VS Code)에서 GUI와 CLI로 커밋하고 원격 저장소와 동기화한다.
 
