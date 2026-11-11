@@ -1,24 +1,24 @@
 [
   {"type": "cover", "step": "STEP 22", "title": "AI와 GitHub"},
   {"type": "goals", "title": "학습 목표", "cards": [
-    ["문서", "README·프로필·이슈 본문이 마크다운으로 쓰인다"],
-    ["작업", "이슈·라벨·마일스톤으로 요청과 분류를 나눈다"],
-    ["기록", "TIL·회고·부검과 작성 틀로 배운 점과 실패를 남긴다"]
+    ["마크다운", "README·프로필·이슈 본문을 마크다운으로 작성한다"],
+    ["협업 도구", "이슈·라벨·마일스톤으로 작업 요청과 분류를 나눈다"],
+    ["작업 기록", "TIL·회고·부검과 작성 틀로 배운 점과 개선책을 남긴다"]
   ]},
-  {"type": "section", "title": "마크다운"},
-  {"type": "rows", "title": "마크다운의 쓰임", "rows": [
-    {"term": "형식", "detail": "기호로 제목, 목록, 코드, 표, 링크를 적는 문서 형식이다"},
-    {"term": "README", "detail": "저장소 첫 화면의 설명서다. 목표와 실행 규칙을 알린다"},
-    {"term": "프로필", "detail": "사용자명과 같은 저장소 README가 프로필 화면에 나온다"},
-    {"term": "이슈와 PR", "detail": "작업 요청과 변경 사항을 구조로 남긴다"}
+  {"type": "section", "title": "마크다운의 쓰임새"},
+  {"type": "rows", "title": "마크다운의 쓰임새", "rows": [
+    {"term": "형식", "detail": "기호로 제목, 목록, 코드, 표, 링크를 표현하는 문서 형식이다"},
+    {"term": "README", "detail": "저장소 첫 화면의 대표 설명서. AI에게 프로젝트 규칙을 알린다"},
+    {"term": "프로필", "detail": "계정 이름 저장소의 README로 소개와 기술 스택을 노출한다"},
+    {"term": "이슈와 PR", "detail": "작업 요청이나 변경 사항을 구조화하여 남긴다"}
   ]},
-  {"type": "section", "title": "이슈, 라벨, 마일스톤"},
+  {"type": "section", "title": "AI 협업 개념: 이슈, 라벨, 마일스톤"},
   {"type": "split", "title": "세 도구의 관계", "diagram": "assets/variety-issue.svg", "items": [
-    {"term": "Milestone", "detail": "목표 기한과 이슈 묶음"},
+    {"term": "Milestone", "detail": "목표 기한과 묶음"},
     {"term": "Issue", "detail": "작업 요청과 문제 기록"},
-    {"term": "Label", "detail": "분류와 종류 태그. 상태가 아니다"}
+    {"term": "Label", "detail": "분류와 종류 태그"}
   ]},
-  {"type": "table", "title": "라벨 예", "rows": [
+  {"type": "table", "title": "라벨 예시", "rows": [
     ["라벨", "구분"],
     ["bug", "오류"],
     ["enhancement", "새 기능 요청"],
@@ -26,22 +26,22 @@
     ["good first issue", "초보자 추천"]
   ]},
   {"type": "rows", "title": "이슈와 마일스톤", "rows": [
-    {"term": "이슈", "detail": "버그, 구현, AI에게 맡길 과제를 티켓으로 적는다"},
-    {"term": "완료 조건", "detail": "배경과 완료 조건을 적으면 목표를 오해하지 않고 제안할 수 있다"},
-    {"term": "마일스톤", "detail": "여러 이슈를 목표나 일정으로 묶고 닫힌 비율을 본다"}
+    {"term": "이슈", "detail": "버그, 작업, AI에게 요청할 과제를 티켓 형태로 기록한다"},
+    {"term": "완료 조건", "detail": "배경과 완료 조건을 명확히 적으면 AI가 오해 없이 코드를 작성한다"},
+    {"term": "마일스톤", "detail": "여러 이슈를 목표 단위로 묶고 마감일과 달성률(진행률 %)을 본다"}
   ]},
-  {"type": "section", "title": "TIL, 회고, 부검"},
-  {"type": "rows", "title": "기록의 종류", "rows": [
+  {"type": "section", "title": "AI 학습과 프로젝트 기록"},
+  {"type": "rows", "title": "TIL, 회고, 부검", "rows": [
     {"term": "TIL", "detail": "오늘 알게 된 개념, 실행한 명령, 직접 확인한 결과를 짧게 남긴다"},
-    {"term": "회고", "detail": "잘된 점은 유지하고 아쉬운 점은 고쳐 다음 행동을 정한다"},
-    {"term": "부검", "detail": "책임을 묻기보다 상황과 원인, 재발 방지를 적는다"}
+    {"term": "회고", "detail": "작업 경험을 돌아보며 잘된 점을 유지하고 아쉬운 점을 개선한다"},
+    {"term": "부검", "detail": "책임을 묻는 대신 상황과 원인을 분석하고 재발 방지책을 세운다"}
   ]},
-  {"type": "compare", "title": "작성 틀", "left": {"label": "이유·내용·방법", "lines": ["왜 이 학습이 필요한가", "무엇을 알게 되었는가", "어떤 절차로 확인하고 적용하는가"]}, "right": {"label": "STAR", "lines": ["Situation: 배경", "Task: 풀어야 할 과제", "Action·Result: 조치와 확인한 변화"]}, "result": "한 틀은 이유, 내용, 방법 순서다. 다른 틀은 상황, 과제, 행동, 결과다"},
+  {"type": "compare", "title": "기록을 돕는 작성 틀", "left": {"label": "Why→What→How", "lines": ["Why (왜): 이 작업이나 학습이 왜 필요한가", "What (무엇): 구체적으로 무엇을 알게 되었는가", "How (어떻게): 어떤 절차와 명령으로 적용하는가"]}, "right": {"label": "STAR", "lines": ["Situation (상황)·Task (과제): 배경과 목표", "Action (행동): 문제를 해결하기 위한 구체적 조치", "Result (결과): 변화와 직접 확인한 결과"]}, "result": "Why→What→How와 STAR 틀로 논리적 기록을 작성한다"},
   {"type": "table", "title": "한 장 요약", "rows": [
     ["개념", "확인할 내용"],
-    ["절차", "가입과 파일 작성은 뒤 실습에서 한다"],
-    ["상태", "Open에서 Closed로 닫는다. 라벨은 종류다"],
-    ["다음", "GitHub 실습에서 저장소와 기록을 만든다"]
+    ["마크다운", "README·프로필·이슈 본문의 표준 문서 형식"],
+    ["협업 도구", "Issue(요청), Label(분류 태그), Milestone(목표 묶음)"],
+    ["다음 과정", "GitHub 실습에서 저장소 생성과 기록 작성을 실습한다"]
   ]},
   {"type": "eof", "title": "- EOF -"}
 ]
