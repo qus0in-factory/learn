@@ -17,19 +17,19 @@
   "diagram": "assets/variety-issue.svg",
   "items": [
    { "term": "Issue", "detail": "작업 요청과 버그를 적는 티켓" },
-   { "term": "Label", "detail": "bug·enhancement·documentation처럼 종류를 색으로 나누는 표식" },
-   { "term": "Milestone", "detail": "목표 날짜나 버전으로 이슈를 묶고 진척을 보여 준다" }
+   { "term": "Label", "detail": "종류를 색으로 나누는 표식" },
+   { "term": "Milestone", "detail": "이슈를 묶고 진척을 보여 준다" }
   ]
  },
  {
   "type": "steps",
   "title": "이슈 등록 절차",
   "steps": [
-   { "label": "마일스톤", "detail": "Milestones에서 v1.0 첫 기록을 만들고 마감일을 잡는다" },
-   { "label": "라벨", "detail": "Labels에서 documentation과 enhancement를 확인하거나 만든다" },
-   { "label": "이슈 작성", "detail": "Issues 탭에서 이슈 2건을 등록한다" },
-   { "label": "표식 붙이기", "detail": "각 이슈에 라벨과 마일스톤을 붙인다" },
-   { "label": "진척 확인", "detail": "Milestones 화면에서 닫기 전 이슈의 진척을 확인한다" }
+   { "label": "마일스톤", "detail": "v1.0 첫 기록을 만들고 마감일을 잡는다" },
+   { "label": "라벨", "detail": "문서·기능 라벨을 확인" },
+   { "label": "이슈 작성", "detail": "Issues 탭에서 2건을 등록한다" },
+   { "label": "표식 붙이기", "detail": "라벨과 마일스톤을 붙인다" },
+   { "label": "진척 확인", "detail": "닫기 전 이슈의 진척을 본다" }
   ]
  },
  {
@@ -78,10 +78,10 @@
   "type": "steps",
   "title": "기록 파일 커밋",
   "steps": [
-   { "label": "til", "detail": "docs/til.md에 배운 점과 확인 결과를 적는다" },
-   { "label": "회고", "detail": "docs/retrospective.md에 Keep과 Problem, Try를 적는다" },
-   { "label": "부검", "detail": "docs/postmortem.md에 사실과 추측을 나눠 적고 원인을 모르면 미확인으로 남긴다" },
-   { "label": "링크", "detail": "각 파일을 대응 이슈에 링크하고 커밋한다" }
+   { "label": "til", "detail": "docs/til.md에 배운 점" },
+   { "label": "회고", "detail": "retrospective에 KPT" },
+   { "label": "부검", "detail": "postmortem에 사실·추측" },
+   { "label": "링크", "detail": "대응 이슈에 링크하고 커밋" }
   ]
  },
  {

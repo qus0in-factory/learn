@@ -44,11 +44,11 @@
   "type": "split",
   "step": "STEP 31",
   "title": "로컬과 원격",
-  "diagram": "assets/remote-directions.svg",
+  "diagram": "assets/remote.svg",
   "items": [
-   { "term": "origin", "detail": "긴 원격 주소에 붙이는 관례적 별칭" },
-   { "term": "push", "detail": "로컬 커밋을 원격으로 밀어 올린다" },
-   { "term": "pull", "detail": "원격 변경을 로컬로 끌어온다" }
+   { "term": "origin", "detail": "원격 주소의 짧은 별칭" },
+   { "term": "push", "detail": "원격으로 밀어 올린다" },
+   { "term": "pull", "detail": "원격에서 끌어온다" }
   ]
  },
  {
