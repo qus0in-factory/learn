@@ -32,7 +32,7 @@ tags: ["GitHub", "Git", "입문"]
 - [Git CLI란?](04-what-is-git-cli.md): 왜 CLI와 로컬 Git이 필요한가
 - [Git의 원리](05-git-principle.md): 세 영역과 버전 관리
 - Git 실습
-  - [Git Bash 설치와 설정](git-practice/01-git-bash-setup.md)
-  - [VS Code 세팅](git-practice/02-vscode-setting.md)
-  - [소스 제어로 커밋](git-practice/03-source-control-commit.md)
-  - [원격과 동기화](git-practice/04-remote-sync.md)
+  - [Git 설치](git-practice/01-git-install.md)
+  - [초기화와 커밋](git-practice/02-init-commit.md)
+  - [원격 연결](git-practice/03-remote-connect.md)
+  - [브랜치와 머지](git-practice/04-branch-merge.md)
