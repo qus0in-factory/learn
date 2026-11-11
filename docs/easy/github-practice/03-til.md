@@ -6,10 +6,6 @@ tags: ["Issue", "Label", "Milestone", "TIL", "회고", "부검"]
 
 # 라벨·이슈·기록 작성
 
-{{ easyNotice }}
-
-출처: [STEP 09 이슈와 마일스톤](/git/09-issues), [STEP 08 프로필과 작업 기록](/git/08-profile-records), [기록 작성 예시](/git/appendix/16-record-examples), [프로필과 기록 작성](/git/appendix/13-profile-records)
-
 할 일을 머릿속에만 두면 빼먹기 쉽다. Issue는 작업 요청과 버그를 적는 티켓이다. Label은 `bug`(오류), `enhancement`(새 기능 요청), `documentation`(문서)처럼 종류를 색으로 나누는 표식이다. Milestone은 목표 날짜나 버전으로 이슈를 묶고 진척을 보여 준다. 화면 이름은 버전에 따라 다를 수 있다.
 
 ## 라벨·이슈·마일스톤
@@ -46,3 +42,10 @@ Why→What→How는 이유, 내용, 방법 순으로 적는 작성 틀이다. [G
 - 확인: 저장소를 만든 뒤 프로필을 새로고침하니 제목이 보였다.
 - 다음 질문: 비공개 저장소로 만들면 어떻게 달라지는가?
 ~~~
+
+## 추가자료
+
+- [STEP 09 이슈와 마일스톤](/git/09-issues)
+- [STEP 08 프로필과 작업 기록](/git/08-profile-records)
+- [기록 작성 예시](/git/appendix/16-record-examples)
+- [프로필과 기록 작성](/git/appendix/13-profile-records)

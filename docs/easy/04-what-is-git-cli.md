@@ -6,10 +6,6 @@ tags: ["Git", "CLI", "VCS", "SCM", "SVN", "터미널"]
 
 # Git CLI란?
 
-{{ easyNotice }}
-
-출처: [STEP 01 왜 버전·형상 관리를 할까](/git/01-environment), [STEP 03 커밋과 이력 기록](/git/03-commit-history), [부록 CLI·터미널·셸](/git/appendix/06-cli-terminal-shell), [부록 호스팅과 버전 관리](/git/appendix/15-hosting-vcs)
-
 프로그래밍을 시작하면 누구나 "코드를 고치다 망쳤을 때 어떻게 이전 상태로 되돌릴까?"라는 고민을 하게 된다. 이 문제를 해결해 주는 도구가 바로 Git이며, 개발자들은 주로 터미널에서 글자 명령을 입력하는 CLI 방식으로 Git을 다룬다.
 
 ## 복사본 대신 Git을 쓰는 이유: VCS와 SCM
@@ -122,3 +118,10 @@ flowchart TB
 <Illustration name="snapshots" alt="작업 중간에 저장한 지점들을 따라 원하는 시점으로 되돌아가는 모습" />
 
 각 도구의 구체적인 역할을 알면 "명령을 찾을 수 없습니다" 같은 오류가 났을 때 어디를 점검해야 할지 명확해진다. Git의 내부 저장 원리는 [Git의 원리](/git-easy/05-git-principle)에서 살펴보고, 실제 도구 설치와 환경 설정은 [Git 실습](/git-easy/git-practice/01-git-install)에서 진행한다.
+
+## 추가자료
+
+- [STEP 01 왜 버전·형상 관리를 할까](/git/01-environment)
+- [STEP 03 커밋과 이력 기록](/git/03-commit-history)
+- [부록 CLI·터미널·셸](/git/appendix/06-cli-terminal-shell)
+- [부록 호스팅과 버전 관리](/git/appendix/15-hosting-vcs)

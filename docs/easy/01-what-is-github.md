@@ -6,10 +6,6 @@ tags: ["GitHub", "협업", "Issue", "CI/CD"]
 
 # GitHub란?
 
-{{ easyNotice }}
-
-출처: [STEP 05 클라우드 협업이 필요한 이유](/git/05-remote), [STEP 12 왜 필요한가](/git/12-pull-request), [STEP 09 왜 필요한가](/git/09-issues), [STEP 06 정적 웹 배포의 목적](/git/06-pages)
-
 GitHub는 Git 저장소를 서버에 두고 여러 사람이 함께 쓰게 해 주는 서비스다. GitLab·Bitbucket도 비슷한 일을 하며, 서비스별 차이는 [호스팅과 버전 관리](/git/appendix/15-hosting-vcs)에서 볼 수 있다. 개발자들이 GitHub를 쓰는 이유는 크게 세 가지다.
 
 1. 소스 코드를 공유하고 기여하기 위해서다.
@@ -41,3 +37,10 @@ HTML 파일을 브라우저로 바로 열면 주소창에 인터넷 주소 대�
 <Illustration name="publish" alt="나만 열 수 있는 집에서 누구나 볼 수 있는 광장의 게시판으로 사이트가 공개되는 모습" />
 
 GitHub가 무엇으로 이루어져 있고 AI가 이것을 어떻게 다루는지는 [AI와 GitHub](02-ai-and-github.md)에서, 직접 해 보는 일은 [GitHub 실습](github-practice/01-signup-and-repo.md)에서 다룬다.
+
+## 추가자료
+
+- [STEP 05 클라우드 협업이 필요한 이유](/git/05-remote)
+- [STEP 12 왜 필요한가](/git/12-pull-request)
+- [STEP 09 왜 필요한가](/git/09-issues)
+- [STEP 06 정적 웹 배포의 목적](/git/06-pages)

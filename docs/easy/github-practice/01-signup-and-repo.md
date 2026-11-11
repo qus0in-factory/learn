@@ -6,10 +6,6 @@ tags: ["GitHub 가입", "저장소 만들기", "README", "github.dev"]
 
 # 가입과 저장소 만들기
 
-{{ easyNotice }}
-
-출처: [STEP 02 GitHub 가입](/git/02-local-repository), [STEP 05 따라하기](/git/05-remote), [GitHub 웹 편집기 안내](https://docs.github.com/en/codespaces/the-githubdev-web-based-editor)
-
 [GitHub란?](/git-easy/01-what-is-github)에서 본 공유와 기록을 직접 시작한다. 이 페이지의 저장소는 웹에서 문서를 고치기 위한 것이다. 나중에 내 컴퓨터의 파일을 올릴 빈 저장소는 [원격 연결](/git-easy/git-practice/03-remote-connect)에서 따로 만든다. 이름이 같으면 원격에 먼저 생긴 README 커밋 때문에 첫 push가 거절될 수 있다.
 
 ## GitHub 가입
@@ -43,3 +39,9 @@ README는 저장소 첫 화면에 자동으로 보이는 설명서다. 목적, �
 4. 편집기를 닫아도 저장소의 커밋은 그대로 남는다. 고친 글을 남기려면 편집기에서 커밋해야 한다.
 
 비밀번호, 토큰, 비밀 키는 README와 커밋 메시지에 적지 않는다.
+
+## 추가자료
+
+- [STEP 02 GitHub 가입](/git/02-local-repository)
+- [STEP 05 따라하기](/git/05-remote)
+- [GitHub 웹 편집기 안내](https://docs.github.com/en/codespaces/the-githubdev-web-based-editor)

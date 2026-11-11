@@ -6,10 +6,6 @@ tags: ["작업 공간", "스테이징 영역", "로컬 저장소", "커밋 해�
 
 # Git의 원리
 
-{{ easyNotice }}
-
-출처: [STEP 01 버전 관리의 세 영역](/git/01-environment), [STEP 03 커밋과 이력 기록](/git/03-commit-history), [STEP 05 원격 저장소와 동기화](/git/05-remote), [STEP 10 브랜치와 태그](/git/10-branches-tags), [STEP 11 병합과 충돌 해결](/git/11-merge-conflicts)
-
 Git은 단순한 파일 백업 프로그램이 아니라, 정교한 내부 데이터 구조와 흐름을 통해 버전과 협업을 관리한다. 여기서는 실습에 들어가기 전 반드시 알아야 할 Git의 다섯 가지 핵심 원리를 차례대로 살펴본다.
 
 ## 로컬 3단계 구조: 작업 공간, 스테이지, 저장소
@@ -153,3 +149,11 @@ flowchart TB
 5. ↩️ 만약 해결 과정이 너무 꼬여 병합 시작 전으로 안전하게 되돌아가고 싶다면 언제든 `git merge --abort`를 입력하면 된다.
 
 이제 이론적 원리를 모두 이해했으므로, [Git 실습](/git-easy/git-practice/01-git-install)으로 넘어가 내 컴퓨터에 Git을 설치하고 직접 명령을 다뤄보자.
+
+## 추가자료
+
+- [STEP 01 버전 관리의 세 영역](/git/01-environment)
+- [STEP 03 커밋과 이력 기록](/git/03-commit-history)
+- [STEP 05 원격 저장소와 동기화](/git/05-remote)
+- [STEP 10 브랜치와 태그](/git/10-branches-tags)
+- [STEP 11 병합과 충돌 해결](/git/11-merge-conflicts)

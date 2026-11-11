@@ -8,10 +8,6 @@ downloads: ["gitWindows"]
 
 # Git 설치
 
-{{ easyNotice }}
-
-출처: [STEP 01 따라하기](/git/01-environment), [부록 설치 준비](/git/appendix/00-installation)
-
 [Git이란?](/git-easy/04-what-is-git-cli)에서 본 버전 관리 도구를 내 컴퓨터에 설치한다. Windows는 Git Bash가 함께 설치되는 Git for Windows를 쓰고, macOS는 `git --version` 입력 시 나오는 안내나 [Homebrew](https://brew.sh)로 설치한다.
 
 ## 설치하기
@@ -43,3 +39,8 @@ Git 명령은 VS Code 안의 통합 터미널에서 실행한다. 터미널이 �
 5. `pwd`로 현재 폴더 위치를 확인한다. Git Bash에서는 `/c/Users/…`처럼 보이는 것이 정상이다.
 
 이후 예시는 모두 이 통합 터미널에서 실행한다.
+
+## 추가자료
+
+- [STEP 01 따라하기](/git/01-environment)
+- [부록 설치 준비](/git/appendix/00-installation)

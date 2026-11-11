@@ -8,10 +8,6 @@ downloads: ["vscode"]
 
 # 초기화와 커밋
 
-{{ easyNotice }}
-
-출처: [STEP 02 따라하기](/git/02-local-repository), [STEP 03 커밋과 이력 기록](/git/03-commit-history)
-
 새 폴더는 Git에게 버전 관리를 명령하기 전까지는 그냥 폴더다. [Git의 원리](/git-easy/05-git-principle)에서 본 세 영역이 이 절차 안에서 움직이기 시작한다.
 
 1. VS Code에서 `파일` → `폴더 열기`로 실습 전용 폴더(예: `portfolio-web`)를 연다.
@@ -69,3 +65,8 @@ git log --oneline    # 커밋 이력 확인
 - 첫 커밋 전 새 파일: `git rm --cached -- <파일>`로 인덱스에서만 빼 Untracked로 되돌린다.
 
 `git add .`로 한 번에 올리면 민감한 파일이나 임시 파일도 같이 올라갈 수 있다. 입문 단계에서는 파일명을 지정해 올리는 습관을 들인다.
+
+## 추가자료
+
+- [STEP 02 따라하기](/git/02-local-repository)
+- [STEP 03 커밋과 이력 기록](/git/03-commit-history)

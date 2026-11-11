@@ -6,10 +6,6 @@ tags: ["remote", "origin", "push", "GitHub"]
 
 # 원격 연결
 
-{{ easyNotice }}
-
-출처: [STEP 05 원격 저장소와 동기화](/git/05-remote)
-
 커밋은 지금까지 내 컴퓨터(`.git`)에만 저장되어 있다. [GitHub란?](/git-easy/01-what-is-github)에서 본 공유와 백업을 위해 로컬 저장소를 GitHub 원격 저장소와 연결한다.
 
 ## 빈 원격 저장소 만들기
@@ -69,3 +65,7 @@ VS Code 소스 제어 창의 `변경 내용 동기화` 버튼도 같은 push/pul
 ## push 거절 시
 
 원격에 내 로컬에 없는 커밋이 있으면 push가 거절된다. `git pull origin main`으로 원격 변경을 먼저 내려받은 뒤 다시 push한다. 강제 push(`--force`)로 우회하지 않는다.
+
+## 추가자료
+
+- [STEP 05 원격 저장소와 동기화](/git/05-remote)

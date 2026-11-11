@@ -6,10 +6,6 @@ tags: ["AI", "Markdown", "Issue", "Milestone", "Label", "TIL", "회고", "부검
 
 # AI와 GitHub
 
-{{ easyNotice }}
-
-출처: [STEP 07 마크다운과 다이어그램](/git/07-markdown-mermaid), [STEP 08 프로필과 작업 기록](/git/08-profile-records), [STEP 09 핵심 개념](/git/09-issues), [부록 프로필과 기록 작성](/git/appendix/13-profile-records), [부록 기록 작성 예시](/git/appendix/16-record-examples)
-
 GitHub는 단순한 파일 저장소를 넘어 AI와 함께 작업 흐름을 정리하고 기록을 남기는 협업 공간이다. 절차와 실습은 뒤쪽 실습 페이지에서 다루며, 여기서는 AI와 협업할 때 꼭 알아야 할 핵심 개념을 먼저 살펴본다.
 
 ## 마크다운의 쓰임새
@@ -81,3 +77,11 @@ flowchart LR
 - **Result (결과)**: 그 결과 어떤 변화가 생겼고 무엇을 확인했는가?
 
 이러한 개념들을 바탕으로 이어지는 [GitHub 실습](/git-easy/github-practice/01-signup-and-repo)에서 저장소를 만들고 기록을 남기는 방법을 실습한다.
+
+## 추가자료
+
+- [STEP 07 마크다운과 다이어그램](/git/07-markdown-mermaid)
+- [STEP 08 프로필과 작업 기록](/git/08-profile-records)
+- [STEP 09 핵심 개념](/git/09-issues)
+- [부록 프로필과 기록 작성](/git/appendix/13-profile-records)
+- [부록 기록 작성 예시](/git/appendix/16-record-examples)

@@ -6,10 +6,6 @@ tags: ["branch", "switch", "merge", "충돌"]
 
 # 브랜치와 머지
 
-{{ easyNotice }}
-
-출처: [STEP 10 브랜치와 태그](/git/10-branches-tags), [STEP 11 병합과 충돌 해결](/git/11-merge-conflicts)
-
 배포 중인 `main`에서 직접 실험하다 코드가 망가지면 사이트에도 영향을 준다. 독립된 가지인 [브랜치](/git/glossary#branch)로 나눠 작업하면 마음껏 실험하고, 성공했을 때만 메인에 합치면 된다.
 
 ## 브랜치 만들고 전환
@@ -83,3 +79,8 @@ git pull origin main
 ```
 
 7. GitHub의 녹색 `Delete branch` 버튼으로 병합된 브랜치를 정리한다. 로컬에서는 `git branch -d feature/profile-design`으로 지운다.
+
+## 추가자료
+
+- [STEP 10 브랜치와 태그](/git/10-branches-tags)
+- [STEP 11 병합과 충돌 해결](/git/11-merge-conflicts)

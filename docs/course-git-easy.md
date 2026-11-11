@@ -5,8 +5,6 @@ tags: ["GitHub", "Git", "입문"]
 
 <CourseHeader />
 
-{{ easyNotice }}
-
 표지는 [기존 Git 과정](/git/)과 같다. 새로 쓴 내용 없이 기존 강의의 문단·그림·명령을 골라 옮기거나 링크한다. 개념 페이지에서 먼저 이해하고, 가입·설치·설정은 실습 페이지에서 한다.
 
 ## {{ learningGoals }}
