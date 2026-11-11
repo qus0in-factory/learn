@@ -5,7 +5,6 @@ const texts = {
   '{{ learningGoals }}': labels.learningGoals,
   '{{ appendix }}': labels.appendix,
   '{{ easyTitle }}': easyLabels.title,
-  '{{ easyNotice }}': easyLabels.notice,
 }
 
 export function markdownLabels(md) {

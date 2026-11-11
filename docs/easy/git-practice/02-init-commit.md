@@ -1,16 +1,12 @@
 ---
 stepHeader: true
-subtitle: "폴더를 저장소로 초기화하고 첫 커밋을 기록한다."
+subtitle: "Git 저장소를 초기화하고 첫 커밋을 기록한다."
 tags: ["init", "add", "commit", "status"]
 installation: true
 downloads: ["vscode"]
 ---
 
 # 초기화와 커밋
-
-{{ easyNotice }}
-
-출처: [STEP 02 따라하기](/git/02-local-repository), [STEP 03 커밋과 이력 기록](/git/03-commit-history)
 
 새 폴더는 Git에게 버전 관리를 명령하기 전까지는 그냥 폴더다. [Git의 원리](/git-easy/05-git-principle)에서 본 세 영역이 이 절차 안에서 움직이기 시작한다.
 
@@ -45,7 +41,7 @@ ls -la    # .git 숨김 폴더 확인
 
 `init`은 initialization(초기화)의 줄임말이다. 실행하면 숨김 폴더 `.git`이 만들어지고 이력이 그 안에 저장된다. `.git` 폴더 안은 사용자가 직접 고치지 않는다.
 
-## 파일을 스테이징하고 커밋
+## 파일 스테이징과 커밋
 
 VS Code의 소스 제어 화면으로도 처리할 수 있지만, 여기서는 터미널 명령으로 진행한다.
 
@@ -63,9 +59,14 @@ git log --oneline    # 커밋 이력 확인
 
 명령의 의미를 알면 외우기 쉽다. `status`는 상태, `add`는 스테이징 영역에 더한다(add), `commit`은 확정한다는 뜻이다.
 
-## 스테이징 실수 되돌리기
+## 스테이징 취소
 
 - 이미 커밋된 적 있는 파일: `git restore --staged <파일>`로 스테이징만 취소한다.
 - 첫 커밋 전 새 파일: `git rm --cached -- <파일>`로 인덱스에서만 빼 Untracked로 되돌린다.
 
 `git add .`로 한 번에 올리면 민감한 파일이나 임시 파일도 같이 올라갈 수 있다. 입문 단계에서는 파일명을 지정해 올리는 습관을 들인다.
+
+## 추가자료
+
+- [STEP 02 따라하기](/git/02-local-repository)
+- [STEP 03 커밋과 이력 기록](/git/03-commit-history)
