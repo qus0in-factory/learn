@@ -1,1 +1,44 @@
-{}
+{
+  "git-easy/github-practice/02-markdown": {
+    "id": "9a0c16771a77f3a500fe145a22247031",
+    "url": "https://gist.github.com/qus0in/9a0c16771a77f3a500fe145a22247031",
+    "files": [
+      "writing-template.md"
+    ]
+  },
+  "git-easy/github-practice/03-til": {
+    "id": "d9b6fd65cef16161902bd8e7d0bc1099",
+    "url": "https://gist.github.com/qus0in/d9b6fd65cef16161902bd8e7d0bc1099",
+    "files": [
+      "writing-template.md"
+    ]
+  },
+  "git-easy/git-practice/01-git-install": {
+    "id": "25b0d1c6ed2717f2b57270e77362caf1",
+    "url": "https://gist.github.com/qus0in/25b0d1c6ed2717f2b57270e77362caf1",
+    "files": [
+      "git-commands.sh"
+    ]
+  },
+  "git-easy/git-practice/02-init-commit": {
+    "id": "a06cfcd609671452c86b6cc3ed128904",
+    "url": "https://gist.github.com/qus0in/a06cfcd609671452c86b6cc3ed128904",
+    "files": [
+      "git-commands.sh"
+    ]
+  },
+  "git-easy/git-practice/03-remote-connect": {
+    "id": "514d9b25c3dab7bfd14ea40de7c44c73",
+    "url": "https://gist.github.com/qus0in/514d9b25c3dab7bfd14ea40de7c44c73",
+    "files": [
+      "git-commands.sh"
+    ]
+  },
+  "git-easy/git-practice/04-branch-merge": {
+    "id": "fcbad6797b2d2eda1ad6a819b5532759",
+    "url": "https://gist.github.com/qus0in/fcbad6797b2d2eda1ad6a819b5532759",
+    "files": [
+      "git-commands.sh"
+    ]
+  }
+}
