@@ -1,14 +1,17 @@
 import { labels } from './labels.mjs'
+import { easyLabels } from './easy-labels.mjs'
+
+const texts = {
+  '{{ learningGoals }}': labels.learningGoals,
+  '{{ appendix }}': labels.appendix,
+  '{{ easyTitle }}': easyLabels.title,
+  '{{ easyNotice }}': easyLabels.notice,
+}
 
 export function markdownLabels(md) {
   md.core.ruler.before('inline', 'course-labels', (state) => {
     for (const token of state.tokens) {
-      if (token.type === 'inline' && token.content === '{{ learningGoals }}') {
-        token.content = labels.learningGoals
-      }
-      if (token.type === 'inline' && token.content === '{{ appendix }}') {
-        token.content = labels.appendix
-      }
+      if (token.type === 'inline' && token.content in texts) token.content = texts[token.content]
     }
   })
 }
