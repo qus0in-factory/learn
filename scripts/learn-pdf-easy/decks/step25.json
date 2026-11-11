@@ -1,0 +1,92 @@
+[
+ { "type": "cover", "step": "STEP 25", "title": "가입과 저장소 만들기" },
+ {
+  "type": "goals",
+  "title": "학습 목표",
+  "cards": [
+   ["GitHub 가입", "이메일 인증과 사용자 이름 규칙을 확인하며 가입한다"],
+   ["저장소 만들기", "README가 포함된 공개 저장소를 만든다"],
+   ["웹 편집기", "github.dev로 README를 열어 고칠 준비를 한다"]
+  ]
+ },
+ { "type": "section", "title": "GitHub 가입" },
+ {
+  "type": "steps",
+  "title": "가입 절차",
+  "steps": [
+   { "label": "가입 페이지", "detail": "github.com/signup에서 이메일과 비밀번호, 사용자 이름을 입력한다" },
+   { "label": "사용자 이름", "detail": "저장소 주소에 그대로 쓰이므로 알아보기 쉬운 영문 이름으로 정한다" },
+   { "label": "이메일 인증", "detail": "가입 이메일의 인증 메일을 열어 인증을 마친다" },
+   { "label": "noreply 이메일", "detail": "이메일을 공개하고 싶지 않으면 설정에서 비공개 이메일을 켠다" }
+  ]
+ },
+ {
+  "type": "rows",
+  "title": "가입 확인",
+  "rows": [
+   { "term": "인증 메일이 안 보임", "detail": "메일함의 스팸 폴더를 확인하고 재발송을 요청한다" },
+   { "term": "사용자 이름이 거절됨", "detail": "이미 쓰이는 이름이나 형식 제한에 걸린 것이므로 다른 이름을 고른다" },
+   { "term": "이메일 공개", "detail": "설정의 Emails에서 Keep my email addresses private을 켠다" },
+   { "term": "사용처", "detail": "가입 이메일이나 noreply 이메일은 커밋 작업자 정보에도 쓴다" }
+  ]
+ },
+ { "type": "section", "title": "README가 있는 저장소" },
+ {
+  "type": "steps",
+  "title": "저장소 만들기",
+  "steps": [
+   { "label": "새 저장소", "detail": "오른쪽 위의 + 아이콘에서 New repository를 고른다" },
+   { "label": "이름", "detail": "실습용 이름을 입력한다. 예: hello-github" },
+   { "label": "공개 범위", "detail": "Public을 고른다", "tag": "Public" },
+   { "label": "README 포함", "detail": "Add a README file을 켠다. 웹에서 고칠 파일이 필요한 저장소다" },
+   { "label": "생성", "detail": "Create repository를 누르고 README.md가 보이는지 확인한다" }
+  ]
+ },
+ {
+  "type": "compare",
+  "title": "저장소의 두 역할",
+  "left": { "label": "README 포함 저장소", "lines": ["웹에서 문서를 고치는 용도", "커밋이 원격에 먼저 생긴다"] },
+  "right": { "label": "빈 저장소", "lines": ["내 컴퓨터 파일을 올리는 용도", "원격 연결 페이지에서 따로 만든다"] },
+  "result": "이름이 같은 저장소에 README 커밋이 먼저 생기면 첫 push가 거절될 수 있다"
+ },
+ { "type": "section", "title": "웹 편집기" },
+ {
+  "type": "steps",
+  "title": "github.dev 열기",
+  "steps": [
+   { "label": "저장소 페이지", "detail": "방금 만든 저장소 첫 화면을 연다" },
+   { "label": "마침표 키", "detail": ". 키를 눌러 브라우저 편집기를 연다", "tag": "." },
+   { "label": "주소로 열기", "detail": "github.com을 github.dev로 바꾼 주소로도 들어갈 수 있다" },
+   { "label": "파일 열기", "detail": "왼쪽 파일 목록에서 README.md를 연다" }
+  ]
+ },
+ {
+  "type": "image",
+  "step": "STEP 25",
+  "title": "웹에서 다루는 문서",
+  "image": "assets/variety-docs.svg",
+  "caption": "웹 편집기에서 README 문서를 고치는 실습 대상"
+ },
+ {
+  "type": "rows",
+  "title": "웹 편집기 확인",
+  "rows": [
+   { "term": "편집기 화면", "detail": "버전에 따라 화면과 단축키가 다를 수 있다" },
+   { "term": "커밋 보존", "detail": "편집기를 닫아도 저장소의 커밋은 남는다" },
+   { "term": "고친 글 저장", "detail": "고친 내용을 남기려면 편집기에서 커밋한다" },
+   { "term": "단축키 안내", "detail": "정확한 설명은 웹 기반 편집기 공식 안내를 참고한다" }
+  ]
+ },
+ {
+  "type": "table",
+  "title": "한 장 요약",
+  "rows": [
+   ["항목", "확인할 내용"],
+   ["가입", "이메일 인증과 영문 사용자 이름"],
+   ["저장소", "Public과 README 포함으로 만든다"],
+   ["웹 편집기", "저장소 페이지에서 . 키로 연다"],
+   ["보안", "비밀번호와 토큰을 문서에 적지 않는다"]
+  ]
+ },
+ { "type": "eof", "title": "- EOF -" }
+]

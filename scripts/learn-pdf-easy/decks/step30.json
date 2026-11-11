@@ -1,0 +1,108 @@
+[
+ { "type": "cover", "step": "STEP 30", "title": "초기화와 커밋" },
+ {
+  "type": "goals",
+  "title": "학습 목표",
+  "cards": [
+   ["작업자 등록", "git config로 커밋에 기록될 이름과 이메일을 등록한다"],
+   ["저장소 초기화", "git init으로 .git 폴더를 만든다"],
+   ["커밋 기록", "add와 commit으로 변경을 영구 기록한다"]
+  ]
+ },
+ { "type": "section", "title": "저장소 초기화" },
+ {
+  "type": "steps",
+  "title": "폴더 준비",
+  "steps": [
+   { "label": "폴더 열기", "detail": "VS Code에서 파일 → 폴더 열기로 실습 전용 폴더를 연다. 예: portfolio-web" },
+   { "label": "터미널", "detail": "터미널 → 새 터미널을 열고 기본 셸을 확인한다" },
+   { "label": "초기화", "detail": "git init으로 저장소를 초기화한다", "tag": "git init" },
+   { "label": "생성 확인", "detail": "ls -la로 .git 숨김 폴더가 만들어졌는지 확인한다" }
+  ]
+ },
+ {
+  "type": "code",
+  "title": "작업자 정보 등록",
+  "code": ["git config --global user.name \"Your Name\"\ngit config --global user.email \"your-email@example.com\"\ngit config --global --list"]
+ },
+ {
+  "type": "rows",
+  "title": "작업자 정보",
+  "rows": [
+   { "term": "기록 용도", "detail": "커밋에 누가 만들었는지 기록되므로 먼저 등록한다" },
+   { "term": "이메일 선택", "detail": "GitHub 가입 이메일이나 noreply 이메일을 쓴다" },
+   { "term": "계정 연결", "detail": "이메일을 계정과 맞추면 커밋이 내 계정에 연결된다" },
+   { "term": "오타 정정", "detail": "같은 명령을 다시 실행하면 값을 덮어쓴다" }
+  ]
+ },
+ {
+  "type": "split",
+  "step": "STEP 30",
+  "title": "Git의 세 영역",
+  "diagram": "assets/variety-areas.svg",
+  "items": [
+   { "term": "작업 공간", "detail": "파일을 만들고 수정하는 폴더" },
+   { "term": "스테이징 영역", "detail": "다음 커밋에 넣을 변경만 골라 둔다" },
+   { "term": "로컬 저장소", "detail": "커밋으로 확정한 이력이 .git에 저장된다" }
+  ]
+ },
+ {
+  "type": "table",
+  "title": "파일 상태",
+  "rows": [
+   ["상태", "뜻"],
+   ["Untracked", "아직 Git이 추적하지 않는 새 파일"],
+   ["Modified", "고쳤지만 아직 스테이징하지 않은 파일"],
+   ["Staged", "다음 커밋에 포함하기로 골라 둔 변경"]
+  ]
+ },
+ {
+  "type": "section",
+  "title": "스테이징과 커밋"
+ },
+ {
+  "type": "steps",
+  "title": "첫 커밋 절차",
+  "steps": [
+   { "label": "파일 생성", "detail": "index.html을 만들고 저장한다" },
+   { "label": "상태 확인", "detail": "git status로 빨간색 Untracked 표시를 확인한다", "tag": "git status" },
+   { "label": "스테이징", "detail": "git add index.html로 스테이징 영역에 올린다", "tag": "git add" },
+   { "label": "재확인", "detail": "git status로 초록색 Changes to be committed를 확인한다" },
+   { "label": "커밋", "detail": "git commit -m \"feat: 첫 웹페이지 추가\"로 기록한다", "tag": "git commit" }
+  ]
+ },
+ {
+  "type": "image",
+  "step": "STEP 30",
+  "title": "스테이징 상태 화면",
+  "image": "assets/classroom-day1-staged-index.png",
+  "caption": "git status에서 스테이징된 파일 확인"
+ },
+ {
+  "type": "code",
+  "title": "스테이징 실수 되돌리기",
+  "code": ["# 커밋된 적 있는 파일: 스테이징만 취소\ngit restore --staged <파일>", "# 첫 커밋 전 새 파일: 인덱스에서만 빼기\ngit rm --cached -- <파일>"]
+ },
+ {
+  "type": "rows",
+  "title": "커밋 확인",
+  "rows": [
+   { "term": "이력 조회", "detail": "git log --oneline으로 커밋 이력을 확인한다" },
+   { "term": "메시지", "detail": "feat: 첫 웹페이지 추가처럼 변경 내용을 적는다" },
+   { "term": "add 습관", "detail": "git add . 대신 파일명을 지정해 올린다" },
+   { "term": ".git 보호", "detail": ".git 폴더 안은 사용자가 직접 고치지 않는다" }
+  ]
+ },
+ {
+  "type": "table",
+  "title": "한 장 요약",
+  "rows": [
+   ["항목", "확인할 내용"],
+   ["config", "이름과 이메일이 등록됐는지 --list로 본다"],
+   ["init", ".git 숨김 폴더가 만들어졌는지 본다"],
+   ["status", "Untracked에서 Staged로 옮겨지는지 본다"],
+   ["완료 기준", "첫 커밋이 이력에 남는다"]
+  ]
+ },
+ { "type": "eof", "title": "- EOF -" }
+]
