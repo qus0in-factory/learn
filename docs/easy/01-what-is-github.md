@@ -39,4 +39,4 @@ HTML 파일을 브라우저로 바로 열면 주소창에 인터넷 주소 대�
 
 <Illustration name="publish" alt="나만 열 수 있는 집에서 누구나 볼 수 있는 광장의 게시판으로 사이트가 공개되는 모습" />
 
-GitHub가 무엇으로 이루어져 있고 AI가 이것을 어떻게 다루는지는 [AI와 GitHub](02-ai-and-github.md)에서, 직접 해 보는 일은 [GitHub 실습](03-github-practice.md)에서 다룬다.
+GitHub가 무엇으로 이루어져 있고 AI가 이것을 어떻게 다루는지는 [AI와 GitHub](02-ai-and-github.md)에서, 직접 해 보는 일은 [GitHub 실습](github-practice/01-signup-and-repo.md)에서 다룬다.

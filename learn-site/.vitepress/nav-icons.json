@@ -52,8 +52,14 @@
   "/git-easy/": "book-open",
   "/git-easy/01-what-is-github": "cloud",
   "/git-easy/02-ai-and-github": "cpu",
-  "/git-easy/03-github-practice": "file-text",
   "/git-easy/04-what-is-git-cli": "square-terminal",
   "/git-easy/05-git-principle": "git-commit-horizontal",
-  "/git-easy/06-git-practice": "terminal"
+  "/git-easy/github-practice/01-signup-and-repo": "folder-plus",
+  "/git-easy/github-practice/02-markdown": "file-text",
+  "/git-easy/github-practice/03-til": "user",
+  "/git-easy/github-practice/04-chatgpt-connection": "cpu",
+  "/git-easy/git-practice/01-git-bash-setup": "download",
+  "/git-easy/git-practice/02-vscode-setting": "square-terminal",
+  "/git-easy/git-practice/03-source-control-commit": "git-commit-horizontal",
+  "/git-easy/git-practice/04-remote-sync": "cloud"
 }

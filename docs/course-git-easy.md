@@ -12,11 +12,19 @@ tags: ["GitHub", "Git", "입문"]
 ## GitHub
 
 - [GitHub란?](01-what-is-github.md): 소스 코드 공유, 이슈 기록, CI/CD
-- [AI와 GitHub](02-ai-and-github.md)
-- [GitHub 실습](03-github-practice.md): 가입, 저장소 만들기, 마크다운, TIL 작성법, ChatGPT 플러그인
+- [AI와 GitHub](02-ai-and-github.md): 저장소 구조와 AI 협업
+- GitHub 실습
+  - [가입과 저장소 만들기](github-practice/01-signup-and-repo.md)
+  - [마크다운 작성](github-practice/02-markdown.md)
+  - [TIL 작성](github-practice/03-til.md)
+  - [ChatGPT 연결](github-practice/04-chatgpt-connection.md)
 
 ## Git
 
-- [Git CLI란?](04-what-is-git-cli.md)
-- [Git의 원리](05-git-principle.md)
-- [Git 실습](06-git-practice.md): Git Bash, VS Code 세팅과 소스 제어
+- [Git CLI란?](04-what-is-git-cli.md): 왜 CLI와 로컬 Git이 필요한가
+- [Git의 원리](05-git-principle.md): 세 영역과 버전 관리
+- Git 실습
+  - [Git Bash 설치와 설정](git-practice/01-git-bash-setup.md)
+  - [VS Code 세팅](git-practice/02-vscode-setting.md)
+  - [소스 제어로 커밋](git-practice/03-source-control-commit.md)
+  - [원격과 동기화](git-practice/04-remote-sync.md)
