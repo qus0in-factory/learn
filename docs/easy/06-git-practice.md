@@ -1,16 +1,18 @@
 ---
-subtitle: "Git Bash와 VS Code에서 저장소를 만들고 커밋 준비를 한다."
+subtitle: "Git 설치 확인, 저장소 만들기, VS Code 소스 제어를 실습한다."
 ---
 
 # Git 실습
 
 {{ easyNotice }}
 
-출처: [STEP 01 따라하기](/git/01-environment), [STEP 02 따라하기](/git/02-local-repository), [부록 설치 준비](/git/appendix/00-installation)
+출처: [STEP 01 따라하기](/git/01-environment), [STEP 02 따라하기](/git/02-local-repository), [STEP 03 커밋과 이력 기록](/git/03-commit-history), [STEP 05 따라하기](/git/05-remote), [부록 설치 준비](/git/appendix/00-installation)
 
-## GitBash
+[Git CLI란?](04-what-is-git-cli.md)과 [Git의 원리](05-git-principle.md)에서 배운 내용을 직접 해 보는 페이지다. 설치와 설정은 모두 여기에서 한다.
 
-Windows에서는 Git Bash를 사용한다. 설치 화면의 항목과 기본값은 [설치 준비](/git/appendix/00-installation)의 Windows Git 설치 절을 따른다.
+## Git 설치 확인
+
+Windows에서는 Git을 설치할 때 함께 들어오는 Git Bash를 쓴다. 설치 화면의 항목과 기본값은 [설치 준비](/git/appendix/00-installation)의 Windows Git 설치 절을 따른다.
 
 1. VS Code를 실행한다.
 2. 상단 메뉴에서 `터미널` → `새 터미널`을 클릭한다.
@@ -18,10 +20,27 @@ Windows에서는 Git Bash를 사용한다. 설치 화면의 항목과 기본값�
 4. `git --version`을 입력하고 `Enter`를 눌러 Git 설치 버전을 확인한다.
 5. `pwd` 명령어로 현재 열려 있는 기본 폴더 위치를 확인한다.
 
-## VSCode 세팅
+## 작업자 정보 설정
 
-- VS Code 통합 터미널 설정은 위 GitBash 절차를 따른다.
-- 작업자 이름과 이메일은 GitHub 가입 이메일(또는 `noreply` 이메일)로 `--global` 설정한 뒤 `git config --global --list`로 확인한다. 자세한 명령은 [STEP 02](/git/02-local-repository)를 따른다.
+GitHub 가입 이메일(또는 `noreply` 이메일)로 작업자 이름과 이메일을 전역(`--global`)으로 설정하고, `git config --global --list`로 확인한다. 자세한 명령은 [STEP 02](/git/02-local-repository)를 따른다.
+
+## 저장소 만들기와 파일 추적
+
+1. 실습 전용 폴더(예: `portfolio-web`)를 생성하고 해당 디렉터리로 이동한다.
+2. `git init`을 실행하여 저장소를 초기화한다.
+3. `git status`를 실행하여 생성한 파일이 Untracked 상태로 표시되는지 확인한다.
+4. `git add index.html`을 입력해 스테이징 영역에 파일을 올린다.
+5. `git status`를 다시 실행하여 파일이 `Changes to be committed:` 목록으로 올라갔는지 확인한다.
+
+## 원격 저장소 연결
+
+[GitHub 실습](03-github-practice.md)에서 만든 빈 저장소를 연결한다.
+
+1. `git branch --show-current`로 브랜치 이름을 확인한다. `main`이 아니면 `git branch -m main`으로 바꾼다.
+2. `git remote add origin https://github.com/본인계정/portfolio-web.git`으로 원격 주소를 등록한다.
+3. `git remote -v`로 등록을 확인한다.
+4. `git push -u origin main`으로 로컬 커밋을 올린다. 인증 창이 뜨면 GitHub 로그인을 승인한다.
+5. GitHub 저장소 페이지를 새로고침해 파일과 커밋 이력이 보이는지 확인한다.
 
 ## 소스 제어
 
@@ -34,11 +53,3 @@ Windows에서는 Git Bash를 사용한다. 설치 화면의 항목과 기본값�
 5. 원격 저장소가 연결되어 있으면 `변경 내용 동기화` 버튼으로 GitHub에 올린다. (`git push`)
 
 버튼 이름이 다르게 보이면 터미널에서 같은 명령을 입력해도 된다.
-
-## 저장소 만들기와 파일 추적
-
-1. 실습 전용 폴더(예: `portfolio-web`)를 생성하고 해당 디렉터리로 이동한다.
-2. `git init`을 실행하여 저장소를 초기화한다.
-3. `git status`를 실행하여 생성한 파일이 Untracked 상태로 표시되는지 확인한다.
-4. `git add index.html`을 입력해 스테이징 영역에 파일을 올린다.
-5. `git status`를 다시 실행하여 파일이 `Changes to be committed:` 목록으로 올라갔는지 확인한다.
