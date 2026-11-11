@@ -1,54 +1,54 @@
 [
   {"type": "cover", "step": "STEP 24", "title": "Git의 원리"},
   {"type": "goals", "title": "학습 목표", "cards": [
-    ["세 영역", "작업 공간, 스테이징, 로컬 저장소를 구분한다"],
-    ["해시", "커밋은 스냅샷이고 해시는 그 지문이다"],
-    ["합치기", "브랜치로 실험하고 머지와 충돌을 구분한다"]
+    ["3단계 구조", "작업 공간, 스테이징 영역, 로컬 저장소를 구분한다"],
+    ["스냅샷과 해시", "커밋은 스냅샷이고 해시는 위변조를 방지하는 고유 지문이다"],
+    ["브랜치와 머지", "독립된 가지로 실험하고 머지와 충돌 해결 과정을 이해한다"]
   ]},
-  {"type": "split", "title": "세 영역", "diagram": "assets/variety-areas.svg", "items": [
-    {"term": "작업 공간", "detail": "파일을 열고 고치는 폴더. git add 전"},
-    {"term": "스테이징", "detail": "이번 커밋에 넣을 변경만 고른 대기 장소"},
-    {"term": "로컬 저장소", "detail": "git commit으로 .git에 확정한 스냅샷"}
+  {"type": "split", "title": "로컬 3단계 구조", "diagram": "assets/variety-areas.svg", "items": [
+    {"term": "작업 공간", "detail": "파일을 열고 코드를 고치는 작업 폴더 (git add 전)"},
+    {"term": "스테이징 영역", "detail": "이번 커밋에 포함할 변경만 골라 올린 대기 장소"},
+    {"term": "로컬 저장소", "detail": "git commit으로 .git에 스냅샷을 영구 보관"}
   ]},
-  {"type": "rows", "title": "마트 비유", "rows": [
-    {"term": "진열대", "detail": "작업 공간에서 파일을 비교하고 고친다"},
-    {"term": "카트", "detail": "계산할 변경만 스테이징에 담는다"},
-    {"term": "영수증", "detail": "로컬 저장소에 그 시점의 상태를 철해 둔다"}
+  {"type": "rows", "title": "쇼핑과 결제 비유", "rows": [
+    {"term": "진열대", "detail": "작업 공간에서 여러 파일을 열어보고 코드를 고친다"},
+    {"term": "쇼핑 카트", "detail": "계산할 파일만 골라 스테이징 영역에 담는다"},
+    {"term": "영수증 앨범", "detail": "로컬 저장소에 확정된 스냅샷을 안전하게 보관한다"}
   ]},
-  {"type": "rows", "title": "커밋과 해시", "rows": [
-    {"term": "커밋", "detail": "그 순간 프로젝트 모습을 스냅샷으로 남긴다"},
-    {"term": "해시", "detail": "작성자, 시각, 내용, 부모 커밋으로 계산한 고유 문자열"},
-    {"term": "짧은 해시", "detail": "SHA-1은 40자리다. 앞 7자리로 가리킬 수 있다"},
-    {"term": "위변조", "detail": "한 글자가 달라도 해시가 바뀐다"}
+  {"type": "rows", "title": "커밋 스냅샷과 커밋 해시", "rows": [
+    {"term": "스냅샷", "detail": "차이점만 잇지 않고 특정 시점의 프로젝트 전체 모습을 보관한다"},
+    {"term": "커밋 해시", "detail": "작성자, 시각, 내용, 부모 커밋 정보를 종합해 암호학적으로 계산한 고유 지문"},
+    {"term": "위변조 방지", "detail": "내용이나 정보가 1글자만 달라져도 해시가 완전히 바뀐다"},
+    {"term": "짧은 해시", "detail": "40자리 긴 문자열이지만 일상 작업에서는 앞 7자리로 가리킨다"}
   ]},
-  {"type": "compare", "title": "로컬과 원격", "left": {"label": "내 컴퓨터", "lines": ["작업 공간", "스테이지", "로컬 저장소에 commit"]}, "right": {"label": "GitHub origin", "lines": ["원격 저장소", "git push로 올린다", "git pull로 내려받는다"]}, "result": "인터넷이 없어도 로컬 커밋은 가능하다. 연결되면 push한다"},
-  {"type": "split", "title": "브랜치", "diagram": "assets/variety-branch.svg", "items": [
-    {"term": "main", "detail": "배포할 수 있는 정상 코드를 두는 기준 가지"},
-    {"term": "feature", "detail": "실험을 격리한다. 실패하면 가지를 버린다"},
-    {"term": "합치기", "detail": "성공했을 때만 메인에 머지한다"}
+  {"type": "compare", "title": "로컬 저장소와 원격 저장소", "left": {"label": "로컬 (내 컴퓨터)", "lines": ["작업 공간에서 파일 수정", "스테이징 영역에 add", "로컬 저장소에 commit"]}, "right": {"label": "원격 (GitHub origin)", "lines": ["클라우드 원격 저장소", "git push로 업로드 동기화", "git pull로 새 커밋 내려받기"]}, "result": "인터넷 없이도 로컬 커밋이 가능하며, 연결되었을 때 push로 동기화한다"},
+  {"type": "split", "title": "브랜치: 독립된 작업 가지", "diagram": "assets/variety-branch.svg", "items": [
+    {"term": "main", "detail": "배포 중이거나 배포 가능한 코드를 유지하는 기준 줄기"},
+    {"term": "feature", "detail": "새 기능이나 디자인을 안전하게 실험하는 독립된 가지"},
+    {"term": "머지", "detail": "실험이 성공했을 때만 메인 줄기에 변경 내용을 합친다"}
   ]},
   {"type": "image", "title": "가지가 합쳐지는 모습", "image": "docs/public/illust-branches-600.webp", "caption": "본줄기에서 갈라진 가지에서 실험한 뒤 다시 합쳐지는 모습"},
-  {"type": "table", "title": "머지 두 방식", "rows": [
-    ["방식", "조건"],
-    ["Fast-forward", "main에 새 커밋이 없으면 이름표만 앞으로 이동"],
-    ["3-way", "양쪽 다 새 커밋이면 공통 조상과 비교해 병합 커밋을 만든다"]
+  {"type": "table", "title": "머지의 두 가지 방식", "rows": [
+    ["방식", "조건과 동작"],
+    ["Fast-forward 병합", "main에 새 변경이 없으면 최신 커밋 위치로 앞으로 전진"],
+    ["3-way 병합", "양쪽 모두 새 커밋이 생기면 공통 조상과 비교해 병합 커밋 생성"]
   ]},
   {"type": "code", "title": "충돌 마커", "code": ["<<<<<<< HEAD\n<h1>고깃집에 오신 것을 환영합니다!</h1>\n=======\n<h1>맛있는 Git & GitHub 익힘책</h1>\n>>>>>>> feature/title"]},
-  {"type": "rows", "title": "충돌", "rows": [
-    {"term": "자동 병합", "detail": "다른 파일이나 같은 파일의 다른 줄은 합쳐질 수 있다"},
-    {"term": "충돌", "detail": "같은 줄이 다르게 바뀌면 마커를 남기고 멈춘다"},
-    {"term": "중단", "detail": "git merge --abort로 병합 시작 전으로 돌아간다"}
+  {"type": "rows", "title": "충돌이 발생하는 이유", "rows": [
+    {"term": "자동 병합", "detail": "다른 파일이나 같은 파일의 다른 줄은 Git이 자동으로 합친다"},
+    {"term": "충돌 발생", "detail": "같은 파일의 동일한 줄을 다르게 수정하면 마커를 남기고 멈춘다"},
+    {"term": "병합 취소", "detail": "해결이 꼬이면 git merge --abort로 병합 시작 전으로 되돌린다"}
   ]},
-  {"type": "steps", "title": "충돌을 푸는 순서", "steps": [
-    {"label": "확인", "detail": "git status로 충돌 파일을 본다", "tag": "git status"},
-    {"label": "정리", "detail": "마커 사이 내용을 고르고 기호를 지운다"},
-    {"label": "완료", "detail": "git add 뒤 git commit으로 병합을 마친다", "tag": "git commit"}
+  {"type": "steps", "title": "충돌 해결 순서", "steps": [
+    {"label": "확인", "detail": "git status로 충돌 파일 확인", "tag": "git status"},
+    {"label": "정리", "detail": "마커 사이 내용 비교 후 최종 코드 정리 및 기호 삭제"},
+    {"label": "완료", "detail": "git add 뒤 git commit으로 병합 완료", "tag": "git commit"}
   ]},
   {"type": "table", "title": "한 장 요약", "rows": [
-    ["원리", "명령"],
-    ["고른 변경만 기록", "git add 다음 git commit"],
-    ["원격과 맞춤", "git push, git pull"],
-    ["다음", "Git 실습에서 설치와 명령을 다룬다"]
+    ["원리", "핵심 내용"],
+    ["로컬 3단계", "작업 공간 → 스테이징 영역 → 로컬 저장소 스냅샷"],
+    ["원격 동기화", "인터넷 없이 로컬 커밋, 연결 시 push·pull"],
+    ["다음 과정", "Git 실습에서 도구 설치와 실제 명령을 실습한다"]
   ]},
   {"type": "eof", "title": "- EOF -"}
 ]

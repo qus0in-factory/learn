@@ -1,60 +1,130 @@
 [
- { "type": "cover", "step": "STEP 32", "title": "브랜치와 머지" },
+ {
+  "type": "cover",
+  "step": "STEP 32",
+  "title": "브랜치와 머지"
+ },
  {
   "type": "goals",
   "title": "학습 목표",
   "cards": [
-   ["브랜치", "switch -c로 작업을 나눠 main을 보호한다"],
-   ["머지", "merge로 갈라진 이력을 합친다"],
-   ["충돌과 PR", "충돌 마커를 정리하고 웹에서 PR로 합친다"]
+   [
+    "브랜치",
+    "switch -c로 작업을 나눠 main을 보호한다"
+   ],
+   [
+    "머지",
+    "merge로 갈라진 이력을 합친다"
+   ],
+   [
+    "충돌과 PR",
+    "충돌 마커를 정리하고 웹에서 PR로 합친다"
+   ]
   ]
  },
- { "type": "section", "title": "브랜치" },
+ {
+  "type": "section",
+  "title": "브랜치"
+ },
  {
   "type": "split",
   "step": "STEP 32",
   "title": "가지치기 구조",
   "diagram": "assets/variety-branch.svg",
   "items": [
-   { "term": "브랜치", "detail": "작업 흐름을 나누는 독립된 가지" },
-   { "term": "실험", "detail": "독립 가지에서 마음껏 고치고 실패하면 버린다" },
-   { "term": "main 보호", "detail": "배포 중인 main에 직접 실험하지 않는다" }
+   {
+    "term": "브랜치",
+    "detail": "작업 흐름을 나누는 독립된 가지"
+   },
+   {
+    "term": "실험",
+    "detail": "독립 가지에서 마음껏 고치고 실패하면 버린다"
+   },
+   {
+    "term": "main 보호",
+    "detail": "배포 중인 main에 직접 실험하지 않는다"
+   }
   ]
  },
  {
   "type": "code",
   "title": "브랜치 명령",
-  "code": ["git branch\ngit switch -c feature/profile-design\ngit switch main"]
+  "code": [
+   "git branch\ngit switch -c feature/profile-design\ngit switch main"
+  ]
  },
- { "type": "section", "title": "머지" },
+ {
+  "type": "section",
+  "title": "머지로 병합"
+ },
  {
   "type": "compare",
   "title": "머지 두 방식",
-  "left": { "label": "Fast-forward", "lines": ["기준 브랜치에 새 커밋이 없다", "포인터만 앞으로 이동한다"] },
-  "right": { "label": "3-way 병합", "lines": ["양쪽 모두 새 커밋이 있다", "공통 조상을 바탕으로 합치고 병합 커밋이 생긴다"] },
+  "left": {
+   "label": "Fast-forward",
+   "lines": [
+    "기준 브랜치에 새 커밋이 없다",
+    "포인터만 앞으로 이동한다"
+   ]
+  },
+  "right": {
+   "label": "3-way 병합",
+   "lines": [
+    "양쪽 모두 새 커밋이 있다",
+    "공통 조상을 바탕으로 합치고 병합 커밋이 생긴다"
+   ]
+  },
   "result": "main에서 git merge 브랜치명으로 합치고, 병합 커밋 뒤 git branch -d로 정리한다"
  },
- { "type": "section", "title": "충돌" },
+ {
+  "type": "section",
+  "title": "충돌 해결"
+ },
  {
   "type": "split",
   "step": "STEP 32",
   "title": "충돌 마커",
   "code": "<<<<<<< HEAD\nmain에서 고친 제목\n=======\n브랜치에서 고친 제목\n>>>>>>> feature/profile-design",
   "items": [
-   { "term": "HEAD 구간", "detail": "현재 브랜치의 변경이다." },
-   { "term": "브랜치 구간", "detail": "가져오려는 브랜치의 변경이다." },
-   { "term": "정리", "detail": "두 의도를 읽고 범위를 정리해 마커를 모두 지운다." }
+   {
+    "term": "HEAD 구간",
+    "detail": "현재 브랜치의 변경이다."
+   },
+   {
+    "term": "브랜치 구간",
+    "detail": "가져오려는 브랜치의 변경이다."
+   },
+   {
+    "term": "정리",
+    "detail": "두 의도를 읽고 범위를 정리해 마커를 모두 지운다."
+   }
   ]
  },
  {
   "type": "steps",
-  "title": "충돌 해결 절차",
+  "title": "충돌 마커 정리",
   "steps": [
-   { "label": "경고", "detail": "merge 뒤 CONFLICT 경고와 git status로 충돌 파일을 확인한다" },
-   { "label": "판단", "detail": "양쪽 변경의 의도를 읽고 정리한다" },
-   { "label": "스테이징", "detail": "git add <파일>로 해결을 올린다", "tag": "git add" },
-   { "label": "완료", "detail": "git commit으로 병합을 마친다" },
-   { "label": "취소", "detail": "꼬이면 git merge --abort로 병합 전으로 돌아간다" }
+   {
+    "label": "경고",
+    "detail": "merge 뒤 CONFLICT 경고와 git status로 충돌 파일을 확인한다"
+   },
+   {
+    "label": "판단",
+    "detail": "양쪽 변경의 의도를 읽고 정리한다"
+   },
+   {
+    "label": "스테이징",
+    "detail": "git add <파일>로 해결을 올린다",
+    "tag": "git add"
+   },
+   {
+    "label": "완료",
+    "detail": "git commit으로 병합을 마친다"
+   },
+   {
+    "label": "취소",
+    "detail": "꼬이면 git merge --abort로 병합 전으로 돌아간다"
+   }
   ]
  },
  {
@@ -64,16 +134,35 @@
   "image": "assets/merge-conflict.png",
   "caption": "같은 위치를 두 브랜치가 다르게 고쳐 충돌이 표시된 화면"
  },
- { "type": "section", "title": "GitHub 웹에서 PR" },
+ {
+  "type": "section",
+  "title": "GitHub 웹에서 PR 병합"
+ },
  {
   "type": "steps",
-  "title": "PR 생성과 병합",
+  "title": "PR 병합",
   "steps": [
-   { "label": "push", "detail": "브랜치를 원격에 올린다", "tag": "git push -u" },
-   { "label": "PR 열기", "detail": "저장소 화면의 Compare & pull request 또는 Contribute 메뉴로 연다" },
-   { "label": "작성", "detail": "제목과 설명을 확인하고 Create pull request를 누른다" },
-   { "label": "diff 확인", "detail": "Files changed 탭에서 바뀐 부분을 살핀다" },
-   { "label": "병합", "detail": "Merge pull request와 Confirm merge로 합친다" }
+   {
+    "label": "push",
+    "detail": "브랜치를 원격에 올린다",
+    "tag": "git push -u"
+   },
+   {
+    "label": "PR 열기",
+    "detail": "저장소 화면의 Compare & pull request 또는 Contribute 메뉴로 연다"
+   },
+   {
+    "label": "작성",
+    "detail": "제목과 설명을 확인하고 Create pull request를 누른다"
+   },
+   {
+    "label": "diff 확인",
+    "detail": "Files changed 탭에서 바뀐 부분을 살핀다"
+   },
+   {
+    "label": "병합",
+    "detail": "Merge pull request와 Confirm merge로 합친다"
+   }
   ]
  },
  {
@@ -87,13 +176,34 @@
   "type": "table",
   "title": "한 장 요약",
   "rows": [
-   ["항목", "확인할 내용"],
-   ["브랜치", "switch -c 생성과 격리를 확인한다"],
-   ["머지", "Fast-forward와 3-way를 구분한다"],
-   ["충돌", "마커를 지우고 add 후 commit한다"],
-   ["PR 뒤", "main 전환 뒤 git pull로 받고 브랜치를 정리한다"],
-   ["완료 기준", "PR 병합 뒤 main에 반영돼 있다"]
+   [
+    "항목",
+    "확인할 내용"
+   ],
+   [
+    "브랜치",
+    "switch -c 생성과 격리를 확인한다"
+   ],
+   [
+    "머지",
+    "Fast-forward와 3-way를 구분한다"
+   ],
+   [
+    "충돌",
+    "마커를 지우고 add 후 commit한다"
+   ],
+   [
+    "PR 뒤",
+    "main 전환 뒤 git pull로 받고 브랜치를 정리한다"
+   ],
+   [
+    "완료 기준",
+    "PR 병합 뒤 main에 반영돼 있다"
+   ]
   ]
  },
- { "type": "eof", "title": "- EOF -" }
+ {
+  "type": "eof",
+  "title": "- EOF -"
+ }
 ]
