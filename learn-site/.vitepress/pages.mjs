@@ -8,6 +8,8 @@ export const pages = {
   'lecture/glossary.md': 'git/glossary.md',
   'course-git-easy.md': 'git-easy/index.md',
   'easy/:page': 'git-easy/:page',
+  'easy/github-practice/:page': 'git-easy/github-practice/:page',
+  'easy/git-practice/:page': 'git-easy/git-practice/:page',
 }
 
 export const excluded = [

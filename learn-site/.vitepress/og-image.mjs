@@ -4,5 +4,5 @@ import { cdnUrl } from './cdn-url.mjs'
 
 export function ogImage(path, base = '') {
   const p = new URL(path, share.origin).pathname
-  const key = (p === '/git' || p.startsWith('/git/')) ? 'git' : 'home'
+  const key = (p === '/git' || p.startsWith('/git/')) && !p.startsWith('/git-easy') ? 'git' : 'home'
   return new URL(cdnUrl(config.images[key].path, base), share.origin).href}
