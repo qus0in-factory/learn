@@ -50,7 +50,6 @@
  },
  {
   "type": "compare",
-  "step": "STEP 11",
   "title": "저장소 두 종류",
   "left": {
    "label": "README 포함 저장소",
@@ -232,7 +231,54 @@
    ]
   ]
  },
- {"type": "glossary", "terms": ["GitHub", "저장소", "로컬 저장소", "원격", "커밋", "Public", "README", "브랜치", "main", "origin", "HTTPS", "git branch", "git remote", "Homebrew", "gh", "CLI", "Git Credential Manager", "push", "pull", "-u", "업스트림", "GitHub Pages", "루트", "HTML"]},
+ {
+  "type": "glossary",
+  "terms": [
+   "GitHub",
+   "저장소",
+   "로컬 저장소",
+   "원격",
+   "커밋",
+   "Public",
+   "README",
+   "브랜치",
+   "main",
+   "origin",
+   "HTTPS",
+   "git branch",
+   "git remote",
+   "Homebrew",
+   "gh",
+   "CLI",
+   "Git Credential Manager",
+   "push",
+   "pull",
+   "-u",
+   "업스트림",
+   "GitHub Pages",
+   "루트",
+   "HTML"
+  ]
+ },
+ {
+  "type": "rows",
+  "step": "STEP 11",
+  "title": "명령어 풀이",
+  "rows": [
+   {
+    "term": "gh auth login",
+    "detail": "GitHub CLI 로그인 명령이다. 브라우저 인증으로 자격 증명을 등록한다"
+   },
+   {
+    "term": "--force",
+    "detail": "강제 push 옵션이다. 거절을 우회하면 원격 커밋이 사라질 수 있다"
+   },
+   {
+    "term": "git pull origin main",
+    "detail": "origin의 main 변경을 내려받아 현재 브랜치에 반영하는 명령이다"
+   }
+  ]
+ },
  {
   "type": "eof",
   "title": "- EOF -"

@@ -131,8 +131,7 @@
   "type": "image",
   "step": "STEP 12",
   "title": "충돌 화면",
-  "image": "assets/merge-conflict.png",
-  "caption": "같은 위치를 두 브랜치가 다르게 고쳐 충돌이 표시된 화면"
+  "image": "assets/merge-conflict.png"
  },
  {
   "type": "section",
@@ -201,7 +200,34 @@
    ]
   ]
  },
- {"type": "glossary", "terms": ["브랜치", "main", "feature", "머지", "Fast-forward", "3-way", "커밋", "충돌", "충돌 마커", "HEAD", "PR", "diff", "원격", "push", "pull", "git branch", "git switch", "git merge", "git merge --abort", "git reset --hard", "git add", "git commit", "git log"]},
+ {
+  "type": "glossary",
+  "terms": [
+   "브랜치",
+   "main",
+   "feature",
+   "머지",
+   "Fast-forward",
+   "3-way",
+   "커밋",
+   "충돌",
+   "충돌 마커",
+   "HEAD",
+   "PR",
+   "diff",
+   "원격",
+   "push",
+   "pull",
+   "git branch",
+   "git switch",
+   "git merge",
+   "git merge --abort",
+   "git reset --hard",
+   "git add",
+   "git commit",
+   "git log"
+  ]
+ },
  {
   "type": "eof",
   "title": "- EOF -"

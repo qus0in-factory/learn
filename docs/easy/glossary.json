@@ -1410,6 +1410,39 @@
       ],
       "commands": [],
       "tags": []
+    },
+    {
+      "term": "gh auth login",
+      "slug": "gh-auth-login",
+      "group": "env",
+      "definition": "GitHub CLI 로그인 명령이다. GitHub.com, HTTPS, 웹 브라우저 인증을 고르고 일회용 코드로 승인하면 자격 증명이 등록된다.",
+      "plain": "GitHub CLI 로그인 명령이다. GitHub.com, HTTPS, 웹 브라우저 인증을 고르고 일회용 코드로 승인하면 자격 증명이 등록된다.",
+      "steps": [
+        "git-practice/03-remote-connect"
+      ],
+      "commands": []
+    },
+    {
+      "term": "--force",
+      "slug": "force-push",
+      "group": "collab",
+      "definition": "강제 push 옵션이다. push 거절을 강제로 우회하므로 원격 커밋을 잃을 수 있어 쓰지 않는다.",
+      "plain": "강제 push 옵션이다. push 거절을 강제로 우회하므로 원격 커밋을 잃을 수 있어 쓰지 않는다.",
+      "steps": [
+        "git-practice/03-remote-connect"
+      ],
+      "commands": []
+    },
+    {
+      "term": "git pull origin main",
+      "slug": "git-pull-origin-main",
+      "group": "collab",
+      "definition": "origin 원격의 main 브랜치 변경을 가져와 현재 브랜치에 반영하는 명령이다. push 거절 시 먼저 실행한다.",
+      "plain": "origin 원격의 main 브랜치 변경을 가져와 현재 브랜치에 반영하는 명령이다. push 거절 시 먼저 실행한다.",
+      "steps": [
+        "git-practice/03-remote-connect"
+      ],
+      "commands": []
     }
   ]
 }
