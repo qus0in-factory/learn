@@ -6,4 +6,4 @@ export const commandPages = commandOrder
 
 export const expectedPages = ['index.html', '404.html', 'licenses.html', 'privacy.html', 'git/index.html',
   'git/catalog.html', 'git/tags.html', 'git/glossary.html', ...lecturePages,
-  ...commandPages.map(name => `git/commands/${name}.html`), ...easyPages]
+  ...commandPages.map(name => `git/commands/${name}.html`), ...easyPages, 'git-easy/glossary.html']
