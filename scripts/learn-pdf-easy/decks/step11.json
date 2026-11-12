@@ -49,6 +49,26 @@
   ]
  },
  {
+  "type": "compare",
+  "step": "STEP 11",
+  "title": "저장소 두 종류",
+  "left": {
+   "label": "README 포함 저장소",
+   "lines": [
+    "웹에서 문서를 고치는 용도",
+    "원격에 커밋이 먼저 생긴다"
+   ]
+  },
+  "right": {
+   "label": "빈 저장소",
+   "lines": [
+    "내 컴퓨터 파일을 올리는 용도",
+    "로컬 커밋을 온전히 받는다"
+   ]
+  },
+  "result": "README가 있는 같은 이름 저장소에 올리면 첫 push가 거절될 수 있다"
+ },
+ {
   "type": "image",
   "step": "STEP 11",
   "title": "인증 창",

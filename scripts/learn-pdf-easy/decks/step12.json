@@ -128,6 +128,13 @@
   ]
  },
  {
+  "type": "image",
+  "step": "STEP 12",
+  "title": "충돌 화면",
+  "image": "assets/merge-conflict.png",
+  "caption": "같은 위치를 두 브랜치가 다르게 고쳐 충돌이 표시된 화면"
+ },
+ {
   "type": "section",
   "title": "GitHub 웹에서 PR 병합"
  },
