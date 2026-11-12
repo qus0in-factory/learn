@@ -1,5 +1,6 @@
 import { readFileSync } from 'node:fs'
 import { easyLabels as l } from './easy-labels.mjs'
+import { glossaryLabels } from './glossary-labels.mjs'
 import { ghPractice, gitPractice } from '../easy-pages.mjs'
 
 const dir = new URL('../../docs/easy/', import.meta.url)
@@ -13,5 +14,6 @@ export const easySidebar = {
     { text: l.title, link: '/git-easy/' },
     section('GitHub', 'git-easy/01-what-is-github.html', 'git-easy/02-ai-and-github.html', l.githubPractice, ghPractice),
     section('Git', 'git-easy/04-what-is-git-cli.html', 'git-easy/05-git-principle.html', l.gitPractice, gitPractice),
+    { items: [{ text: glossaryLabels.title, link: '/git-easy/glossary' }] },
   ],
 }
