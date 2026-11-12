@@ -1420,7 +1420,8 @@
       "steps": [
         "git-practice/03-remote-connect"
       ],
-      "commands": []
+      "commands": [],
+      "tags": []
     },
     {
       "term": "--force",
@@ -1431,7 +1432,8 @@
       "steps": [
         "git-practice/03-remote-connect"
       ],
-      "commands": []
+      "commands": [],
+      "tags": []
     },
     {
       "term": "git pull origin main",
@@ -1442,7 +1444,8 @@
       "steps": [
         "git-practice/03-remote-connect"
       ],
-      "commands": []
+      "commands": [],
+      "tags": []
     }
   ]
 }
