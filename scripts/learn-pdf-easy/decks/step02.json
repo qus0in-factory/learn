@@ -1,5 +1,5 @@
 [
-  {"type": "cover", "step": "STEP 22", "title": "AI와 GitHub"},
+  {"type": "cover", "step": "STEP 02", "title": "AI와 GitHub"},
   {"type": "goals", "title": "학습 목표", "cards": [
     ["마크다운", "README·프로필·이슈 본문을 마크다운으로 작성한다"],
     ["협업 도구", "이슈·라벨·마일스톤으로 작업 요청과 분류를 나눈다"],

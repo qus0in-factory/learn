@@ -1,7 +1,7 @@
 [
  {
   "type": "cover",
-  "step": "STEP 32",
+  "step": "STEP 12",
   "title": "브랜치와 머지"
  },
  {
@@ -28,7 +28,7 @@
  },
  {
   "type": "split",
-  "step": "STEP 32",
+  "step": "STEP 12",
   "title": "가지치기 구조",
   "diagram": "assets/variety-branch.svg",
   "items": [
@@ -82,7 +82,7 @@
  },
  {
   "type": "split",
-  "step": "STEP 32",
+  "step": "STEP 12",
   "title": "충돌 마커",
   "code": "<<<<<<< HEAD\nmain에서 고친 제목\n=======\n브랜치에서 고친 제목\n>>>>>>> feature/profile-design",
   "items": [
@@ -129,7 +129,7 @@
  },
  {
   "type": "image",
-  "step": "STEP 32",
+  "step": "STEP 12",
   "title": "충돌 화면",
   "image": "assets/merge-conflict.png",
   "caption": "같은 위치를 두 브랜치가 다르게 고쳐 충돌이 표시된 화면"
@@ -167,7 +167,7 @@
  },
  {
   "type": "image",
-  "step": "STEP 32",
+  "step": "STEP 12",
   "title": "PR 병합 화면",
   "image": "assets/pull-request.png",
   "caption": "Merge pull request 버튼이 보이는 풀 리퀘스트 화면"

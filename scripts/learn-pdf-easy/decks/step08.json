@@ -1,7 +1,7 @@
 [
  {
   "type": "cover",
-  "step": "STEP 28",
+  "step": "STEP 08",
   "title": "ChatGPT로 기록 고도화"
  },
  {
@@ -146,7 +146,7 @@
  },
  {
   "type": "split",
-  "step": "STEP 28",
+  "step": "STEP 08",
   "title": "요청 예시",
   "code": "내 저장소의 README와 docs/til.md를 읽고,\n확인하지 않은 사실은 단정하지 말고\n고칠 문장만 제안해 줘.",
   "items": [
@@ -166,10 +166,10 @@
  },
  {
   "type": "image",
-  "step": "STEP 28",
+  "step": "STEP 08",
   "title": "문서 목록 화면",
   "image": "assets/document-flow.svg",
-  "caption": "README와 기록 파일을 저장소 흐름에서 다루는 모습"
+  "caption": "작업 공간에서 GitHub까지"
  },
  {
   "type": "rows",
