@@ -177,8 +177,7 @@
   "type": "image",
   "step": "STEP 06",
   "title": "프로필 README 화면",
-  "image": "assets/profile-readme.png",
-  "caption": "프로필 화면에 보이는 README"
+  "image": "assets/profile-readme.png"
  },
  {
   "type": "rows",

@@ -157,8 +157,7 @@
   "type": "image",
   "step": "STEP 10",
   "title": "스테이징 상태 화면",
-  "image": "assets/classroom-day1-staged-index.png",
-  "caption": "git status에서 스테이징된 파일 확인"
+  "image": "assets/classroom-day1-staged-index.png"
  },
  {
   "type": "code",
