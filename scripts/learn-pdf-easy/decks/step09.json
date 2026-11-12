@@ -60,8 +60,7 @@
   "type": "image",
   "step": "STEP 09",
   "title": "설치 버전 확인 화면",
-  "image": "assets/classroom-day1-git-version.png",
-  "caption": "git -v로 설치 버전을 확인한 화면"
+  "image": "assets/classroom-day1-git-version.png"
  },
  {
   "type": "split",

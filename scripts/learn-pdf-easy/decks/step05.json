@@ -151,8 +151,7 @@
   "type": "image",
   "step": "STEP 05",
   "title": "웹에서 다루는 문서",
-  "image": "assets/variety-docs.svg",
-  "caption": "문서 작성과 확인 흐름"
+  "image": "assets/variety-docs.svg"
  },
  {
   "type": "rows",

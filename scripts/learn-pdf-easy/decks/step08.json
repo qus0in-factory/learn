@@ -168,8 +168,7 @@
   "type": "image",
   "step": "STEP 08",
   "title": "문서 목록 화면",
-  "image": "assets/document-flow.svg",
-  "caption": "작업 공간에서 GitHub까지"
+  "image": "assets/document-flow.svg"
  },
  {
   "type": "rows",

@@ -88,8 +88,7 @@
   "type": "image",
   "step": "STEP 07",
   "title": "이슈 화면",
-  "image": "assets/memo-issues.png",
-  "caption": "라벨과 마일스톤이 붙은 이슈 목록 화면"
+  "image": "assets/memo-issues.png"
  },
  {
   "type": "rows",

@@ -71,8 +71,7 @@
   "type": "image",
   "step": "STEP 11",
   "title": "인증 창",
-  "image": "assets/classroom-day1-auth-window.png",
-  "caption": "push 시 나타나는 브라우저 로그인 인증 창"
+  "image": "assets/classroom-day1-auth-window.png"
  },
  {
   "type": "section",
