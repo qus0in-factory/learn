@@ -22,10 +22,17 @@
    ]
   ]
  },
- {
-  "type": "section",
-  "title": "이슈와 마일스톤"
- },
+ { "type": "rows", "title": "Organization 생성", "rows": [
+   { "term": "조직", "detail": "Organization(조직)은 멤버와 저장소를 함께 관리하는 단위다." },
+   { "term": "생성 메뉴", "detail": "프로필 메뉴에서 Settings → Organizations → New organization을 연다." },
+   { "term": "요금제와 이름", "detail": "Free 요금제를 선택하고 조직 이름과 필수 정보를 입력해 조직을 만든다." }
+ ] },
+ { "type": "rows", "title": "멤버 초대와 공동 작업", "rows": [
+   { "term": "초대", "detail": "조직의 People → Invite member에서 사용자 이름이나 이메일로 멤버를 초대한다." },
+   { "term": "참여", "detail": "초대받은 멤버는 초대를 수락한 뒤 조직에 참여한다." },
+   { "term": "조직 저장소", "detail": "조직을 소유자로 지정해 저장소를 만들고, 접근 권한이 있는 멤버와 라벨·이슈·마일스톤을 함께 사용한다." }
+ ] },
+ { "type": "section", "title": "이슈와 마일스톤" },
  {
   "type": "split",
   "step": "STEP 07",
