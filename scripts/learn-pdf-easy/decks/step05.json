@@ -1,7 +1,7 @@
 [
  {
   "type": "cover",
-  "step": "STEP 25",
+  "step": "STEP 05",
   "title": "가입과 저장소 만들기"
  },
  {
@@ -149,7 +149,7 @@
  },
  {
   "type": "image",
-  "step": "STEP 25",
+  "step": "STEP 05",
   "title": "웹에서 다루는 문서",
   "image": "assets/variety-docs.svg",
   "caption": "웹 편집기의 README 파일"

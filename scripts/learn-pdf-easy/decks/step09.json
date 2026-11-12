@@ -1,5 +1,5 @@
 [
- { "type": "cover", "step": "STEP 29", "title": "Git 설치" },
+ { "type": "cover", "step": "STEP 09", "title": "Git 설치" },
  {
   "type": "goals",
   "title": "학습 목표",
@@ -58,14 +58,14 @@
  },
  {
   "type": "image",
-  "step": "STEP 29",
+  "step": "STEP 09",
   "title": "설치 버전 확인 화면",
   "image": "assets/classroom-day1-git-version.png",
   "caption": "git -v로 설치 버전을 확인한 화면"
  },
  {
   "type": "split",
-  "step": "STEP 29",
+  "step": "STEP 09",
   "title": "경로 확인",
   "diagram": "assets/terminal.svg",
   "items": [

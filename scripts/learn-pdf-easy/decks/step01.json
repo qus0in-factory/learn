@@ -1,5 +1,5 @@
 [
-  {"type": "cover", "step": "STEP 21", "title": "GitHub란?"},
+  {"type": "cover", "step": "STEP 01", "title": "GitHub란?"},
   {"type": "goals", "title": "학습 목표", "cards": [
     ["공유와 기여", "코드를 서버에 올려 복원하고 함께 고친다"],
     ["작업 기록", "이슈로 할 일을 관리해 중요한 작업을 빠뜨리지 않는다"],

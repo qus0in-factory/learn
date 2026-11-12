@@ -1,7 +1,7 @@
 [
  {
   "type": "cover",
-  "step": "STEP 30",
+  "step": "STEP 10",
   "title": "초기화와 커밋"
  },
  {
@@ -80,7 +80,7 @@
  },
  {
   "type": "split",
-  "step": "STEP 30",
+  "step": "STEP 10",
   "title": "Git의 세 영역",
   "diagram": "assets/variety-areas.svg",
   "items": [
@@ -155,7 +155,7 @@
  },
  {
   "type": "image",
-  "step": "STEP 30",
+  "step": "STEP 10",
   "title": "스테이징 상태 화면",
   "image": "assets/classroom-day1-staged-index.png",
   "caption": "git status에서 스테이징된 파일 확인"

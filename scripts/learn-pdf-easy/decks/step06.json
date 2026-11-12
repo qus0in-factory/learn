@@ -1,7 +1,7 @@
 [
  {
   "type": "cover",
-  "step": "STEP 26",
+  "step": "STEP 06",
   "title": "마크다운 작성"
  },
  {
@@ -129,7 +129,7 @@
  },
  {
   "type": "split",
-  "step": "STEP 26",
+  "step": "STEP 06",
   "title": "README 예시",
   "code": "# 나의 포트폴리오\n- 소개: Git과 GitHub를 배우고 있습니다\n- 사용 방법: README를 참고한다\n## 배운 점\n**굵게**와 *기울임* 표시",
   "items": [
@@ -175,7 +175,7 @@
  },
  {
   "type": "image",
-  "step": "STEP 26",
+  "step": "STEP 06",
   "title": "프로필 README 화면",
   "image": "assets/profile-readme.png",
   "caption": "프로필 화면에 보이는 README"
