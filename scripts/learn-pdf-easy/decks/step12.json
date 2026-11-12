@@ -128,12 +128,6 @@
   ]
  },
  {
-  "type": "image",
-  "step": "STEP 12",
-  "title": "충돌 화면",
-  "image": "assets/merge-conflict.png"
- },
- {
   "type": "section",
   "title": "GitHub 웹에서 PR 병합"
  },
@@ -198,6 +192,25 @@
     "완료 기준",
     "PR 병합 뒤 main에 반영돼 있다"
    ]
+  ]
+ },
+ {
+  "type": "rows",
+  "step": "STEP 12",
+  "title": "용어 풀이",
+  "rows": [
+   {
+    "term": "병합",
+    "detail": "갈라진 브랜치의 변경을 한 이력으로 합치는 작업이다"
+   },
+   {
+    "term": "충돌",
+    "detail": "두 변경이 같은 위치를 다르게 고쳐 자동 합병이 막힌 상태다"
+   },
+   {
+    "term": "풀 리퀘스트",
+    "detail": "웹에서 브랜치 변경을 검토하고 합치게 요청하는 절차다"
+   }
   ]
  },
  {

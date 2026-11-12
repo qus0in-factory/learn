@@ -215,6 +215,25 @@
   ]
  },
  {
+  "type": "rows",
+  "step": "STEP 10",
+  "title": "용어 풀이",
+  "rows": [
+   {
+    "term": "스테이징 영역",
+    "detail": "다음 커밋에 포함할 변경만 골라 두는 대기 장소다"
+   },
+   {
+    "term": ".git",
+    "detail": "저장소 이력과 설정을 보관하는 숨김 폴더다"
+   },
+   {
+    "term": "Untracked",
+    "detail": "아직 Git이 추적하지 않는 새 파일 상태다"
+   }
+  ]
+ },
+ {
   "type": "eof",
   "title": "- EOF -"
  }
