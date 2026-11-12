@@ -61,5 +61,6 @@
   "/git-easy/git-practice/01-git-install": "download",
   "/git-easy/git-practice/02-init-commit": "git-commit-horizontal",
   "/git-easy/git-practice/03-remote-connect": "cloud",
-  "/git-easy/git-practice/04-branch-merge": "git-branch"
+  "/git-easy/git-practice/04-branch-merge": "git-branch",
+  "/git-easy/glossary": "book-open"
 }

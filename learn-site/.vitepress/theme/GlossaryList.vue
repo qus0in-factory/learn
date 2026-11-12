@@ -1,11 +1,15 @@
 <script setup>
+import { computed } from 'vue'
 import { useData } from 'vitepress'
 import { glossaryLabels as t } from '../glossary-labels.mjs'
 import GlossaryTerm from './GlossaryTerm.vue'
 import './tag-groups.css'
 
-const { theme } = useData()
-const groups = theme.value.glossary.groups
+const { page, theme } = useData()
+const groups = computed(() => {
+  const isEasy = page.value.relativePath.startsWith('git-easy/')
+  return (isEasy ? theme.value.easyGlossary : theme.value.glossary).groups
+})
 </script>
 
 <template>

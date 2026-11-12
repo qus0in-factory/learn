@@ -43,5 +43,6 @@
     ["협업 도구", "Issue(요청), Label(분류 태그), Milestone(목표 묶음)"],
     ["다음 과정", "GitHub 실습에서 저장소 생성과 기록 작성을 실습한다"]
   ]},
+  {"type": "glossary", "terms": ["GitHub", "마크다운", "README", "프로필", "기술 스택", "PR", "이슈", "라벨", "마일스톤", "버그", "enhancement", "documentation", "good first issue", "Open", "Closed", "TIL", "회고", "부검", "Why→What→How", "STAR"]},
   {"type": "eof", "title": "- EOF -"}
 ]

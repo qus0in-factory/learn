@@ -214,6 +214,7 @@
    ]
   ]
  },
+ {"type": "glossary", "terms": ["Git", "커밋", "작업 공간", "스테이지", "로컬 저장소", ".git", "VS Code", "터미널", "Git Bash", "zsh", "noreply 이메일", "git config", "--global", "git init", "ls -la", "HTML", "git status", "Untracked", "Modified", "Staged", "git add", "git commit", "git log", "git restore --staged", "git rm --cached"]},
  {
   "type": "eof",
   "title": "- EOF -"

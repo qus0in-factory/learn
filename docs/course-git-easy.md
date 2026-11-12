@@ -32,3 +32,8 @@ tags: ["GitHub", "Git", "입문"]
   - [초기화와 커밋](git-practice/02-init-commit.md)
   - [원격 연결](git-practice/03-remote-connect.md)
   - [브랜치와 머지](git-practice/04-branch-merge.md)
+
+### 참고
+
+- [용어 사전](glossary.md): 핵심 Git & GitHub 용어 한 줄 정의와 쉬운 풀이
+

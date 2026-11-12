@@ -8,6 +8,19 @@ tags: ["Issue", "Label", "Milestone", "TIL", "회고", "부검"]
 
 할 일을 머릿속에만 두면 빼먹기 쉽다. Issue는 작업 요청과 버그를 적는 티켓이다. Label은 `bug`(오류), `enhancement`(새 기능 요청), `documentation`(문서)처럼 종류를 색으로 나누는 표식이다. Milestone은 목표 날짜나 버전으로 이슈를 묶고 진척을 보여 준다. 화면 이름은 버전에 따라 다를 수 있다.
 
+## Organization 생성
+
+Organization(조직)은 멤버와 저장소를 함께 관리하는 단위다.
+
+1. 프로필 메뉴에서 `Settings` → `Organizations` → `New organization`을 연다.
+2. `Free` 요금제를 선택하고 조직 이름과 필수 정보를 입력해 조직을 만든다.
+
+### 멤버 초대와 공동 작업
+
+1. 조직의 `People` → `Invite member`에서 사용자 이름이나 이메일로 멤버를 초대한다.
+2. 초대받은 멤버는 초대를 수락한 뒤 조직에 참여한다.
+3. 조직을 소유자로 지정해 저장소를 만들고, 접근 권한이 있는 멤버와 라벨·이슈·마일스톤을 함께 사용한다.
+
 ## 라벨·이슈·마일스톤
 
 실습 저장소의 `Issues` 탭에서 한다. 메뉴가 보이지 않으면 저장소 설정에서 Issues가 켜져 있는지 확인한다.
@@ -45,6 +58,7 @@ Why→What→How는 이유, 내용, 방법 순으로 적는 작성 틀이다. [G
 
 ## 추가자료
 
+- [조직 만들기](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch)
 - [STEP 09 이슈와 마일스톤](/git/09-issues)
 - [STEP 08 프로필과 작업 기록](/git/08-profile-records)
 - [기록 작성 예시](/git/appendix/16-record-examples)

@@ -231,6 +231,7 @@
    ]
   ]
  },
+ {"type": "glossary", "terms": ["GitHub", "저장소", "로컬 저장소", "원격", "커밋", "Public", "README", "브랜치", "main", "origin", "HTTPS", "git branch", "git remote", "Homebrew", "gh", "CLI", "Git Credential Manager", "push", "pull", "-u", "업스트림", "GitHub Pages", "루트", "HTML", "gh auth login", "--force", "git pull origin main"]},
  {
   "type": "eof",
   "title": "- EOF -"

@@ -52,5 +52,6 @@
     ["CLI", "정확성, 재현성, AI 에이전트 명령 실행의 장점"],
     ["다음 과정", "내부 저장 원리는 Git의 원리, 도구 설치는 Git 실습"]
   ]},
+  {"type": "glossary", "terms": ["Git", "VCS", "SCM", "SVN", "커밋", "GUI", "CLI", "터미널", "셸", "커널", "Bash", "zsh", "AI 에이전트", ".git", "HTML", "CSS", "JavaScript", "git status"]},
   {"type": "eof", "title": "- EOF -"}
 ]
