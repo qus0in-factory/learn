@@ -52,5 +52,10 @@
     ["CLI", "정확성, 재현성, AI 에이전트 명령 실행의 장점"],
     ["다음 과정", "내부 저장 원리는 Git의 원리, 도구 설치는 Git 실습"]
   ]},
+  {"type": "rows", "title": "용어 풀이", "rows": [
+    {"term": "CLI", "detail": "Command Line Interface의 약자로, 글자 명령으로 프로그램을 다루는 방식이다."},
+    {"term": "VCS", "detail": "Version Control System의 약자로, 파일의 변경 이력을 관리하는 도구다."},
+    {"term": "SCM", "detail": "Software Configuration Management의 약자로, 프로젝트 구성과 변경을 관리하는 활동이다."}
+  ]},
   {"type": "eof", "title": "- EOF -"}
 ]
