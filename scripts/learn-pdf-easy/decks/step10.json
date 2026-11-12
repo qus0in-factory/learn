@@ -214,25 +214,7 @@
    ]
   ]
  },
- {
-  "type": "rows",
-  "step": "STEP 10",
-  "title": "용어 풀이",
-  "rows": [
-   {
-    "term": "인덱스",
-    "detail": "add가 변경을 올려 두는 대상 목록의 다른 이름이다"
-   },
-   {
-    "term": ".git",
-    "detail": "저장소 이력과 설정을 보관하는 숨김 폴더다"
-   },
-   {
-    "term": "Untracked",
-    "detail": "아직 Git이 추적하지 않는 새 파일 상태다"
-   }
-  ]
- },
+ {"type": "glossary", "terms": ["Git", "커밋", "작업 공간", "스테이지", "로컬 저장소", ".git", "VS Code", "터미널", "Git Bash", "zsh", "noreply 이메일", "git config", "--global", "git init", "ls -la", "HTML", "git status", "Untracked", "Modified", "Staged", "git add", "git commit", "git log", "git restore --staged", "git rm --cached"]},
  {
   "type": "eof",
   "title": "- EOF -"

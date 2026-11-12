@@ -201,25 +201,7 @@
    ]
   ]
  },
- {
-  "type": "rows",
-  "step": "STEP 12",
-  "title": "용어 풀이",
-  "rows": [
-   {
-    "term": "병합",
-    "detail": "갈라진 브랜치의 변경을 한 이력으로 합치는 작업이다"
-   },
-   {
-    "term": "충돌",
-    "detail": "두 변경이 같은 위치를 다르게 고쳐 자동 합병이 막힌 상태다"
-   },
-   {
-    "term": "풀 리퀘스트",
-    "detail": "웹에서 브랜치 변경을 검토하고 합치게 요청하는 절차다"
-   }
-  ]
- },
+ {"type": "glossary", "terms": ["브랜치", "main", "feature", "머지", "Fast-forward", "3-way", "커밋", "충돌", "충돌 마커", "HEAD", "PR", "diff", "원격", "push", "pull", "git branch", "git switch", "git merge", "git merge --abort", "git reset --hard", "git add", "git commit", "git log"]},
  {
   "type": "eof",
   "title": "- EOF -"

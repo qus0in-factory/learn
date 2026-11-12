@@ -245,25 +245,7 @@
    ]
   ]
  },
- {
-  "type": "rows",
-  "step": "STEP 07",
-  "title": "용어 풀이",
-  "rows": [
-   {
-    "term": "이슈",
-    "detail": "작업 요청이나 버그를 티켓으로 등록해 다루는 항목이다"
-   },
-   {
-    "term": "라벨",
-    "detail": "이슈의 종류를 문서·기능 같은 색으로 구분하는 표식이다"
-   },
-   {
-    "term": "마일스톤",
-    "detail": "이슈를 목표 날짜나 버전으로 묶어 진척을 보여 주는 단위다"
-   }
-  ]
- },
+ {"type": "glossary", "terms": ["Organization", "Free", "멤버", "저장소", "접근 권한", "이슈", "라벨", "마일스톤", "documentation", "enhancement", "TIL", "회고", "부검", "Why→What→How", "STAR", "KPT", "Keep", "Problem", "Try"]},
  {
   "type": "eof",
   "title": "- EOF -"

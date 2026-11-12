@@ -43,10 +43,6 @@
     ["협업 도구", "Issue(요청), Label(분류 태그), Milestone(목표 묶음)"],
     ["다음 과정", "GitHub 실습에서 저장소 생성과 기록 작성을 실습한다"]
   ]},
-  {"type": "rows", "title": "용어 풀이", "rows": [
-    {"term": "마크다운", "detail": "기호로 제목과 목록 등의 서식을 표현하는 문서 작성 형식이다."},
-    {"term": "TIL", "detail": "Today I Learned의 약자로, 오늘 배운 점과 확인한 결과를 적는 기록이다."},
-    {"term": "PR", "detail": "Pull Request의 약자로, 변경 내용을 검토하고 합쳐 달라는 요청이다."}
-  ]},
+  {"type": "glossary", "terms": ["GitHub", "마크다운", "README", "프로필", "기술 스택", "PR", "이슈", "라벨", "마일스톤", "버그", "enhancement", "documentation", "good first issue", "Open", "Closed", "TIL", "회고", "부검", "Why→What→How", "STAR"]},
   {"type": "eof", "title": "- EOF -"}
 ]

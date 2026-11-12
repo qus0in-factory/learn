@@ -201,15 +201,7 @@
    ]
   ]
  },
- {
-  "type": "rows",
-  "title": "용어 풀이",
-  "rows": [
-   {"term": "noreply 이메일", "detail": "실제 이메일을 공개하지 않고 커밋에 사용할 수 있는 GitHub 제공 주소다."},
-   {"term": "토큰", "detail": "계정의 접근 권한을 증명하는 비밀 값으로, 비밀번호처럼 보호해야 한다."},
-   {"term": "github.dev", "detail": "브라우저 안에서 저장소 파일을 열고 수정하는 GitHub 웹 편집기다."}
-  ]
- },
+ {"type": "glossary", "terms": ["GitHub", "저장소", "README", "커밋", "원격", "Public", "noreply 이메일", "github.dev", "토큰"]},
  {
   "type": "eof",
   "title": "- EOF -"

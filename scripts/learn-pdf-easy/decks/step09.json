@@ -178,25 +178,7 @@
    ]
   ]
  },
- {
-  "type": "rows",
-  "step": "STEP 09",
-  "title": "용어 풀이",
-  "rows": [
-   {
-    "term": "셸",
-    "detail": "터미널에서 입력한 명령을 해석해 실행하는 프로그램이다"
-   },
-   {
-    "term": "PATH",
-    "detail": "실행 파일을 찾을 폴더 목록을 담은 운영체제 환경 설정이다"
-   },
-   {
-    "term": "Git Bash",
-    "detail": "Windows에서 Git과 Unix형 명령을 쓰게 하는 설치 동반 셸이다"
-   }
-  ]
- },
+ {"type": "glossary", "terms": ["Git", "Git for Windows", "Git Bash", "Windows", "macOS", "Homebrew", "VS Code", "터미널", "셸", "zsh", "PATH", "git --version", "pwd"]},
  {
   "type": "eof",
   "title": "- EOF -"

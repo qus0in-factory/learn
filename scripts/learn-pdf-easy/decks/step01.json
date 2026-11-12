@@ -34,10 +34,6 @@
     ["비슷한 서비스", "GitLab·Bitbucket (호스팅과 버전 관리 부록)"],
     ["다음 과정", "핵심 개념은 AI와 GitHub, 실습은 GitHub 실습"]
   ]},
-  {"type": "rows", "title": "용어 풀이", "rows": [
-    {"term": "저장소", "detail": "프로젝트 파일과 변경 이력을 함께 보관하는 공간이다."},
-    {"term": "이슈", "detail": "할 일이나 버그를 기록하고 논의하는 작업 카드다."},
-    {"term": "CI/CD", "detail": "코드 변경을 정해 둔 검사와 배포로 이어 주는 자동화다."}
-  ]},
+  {"type": "glossary", "terms": ["Git", "GitHub", "저장소", "원격", "오픈소스", "버그", "이슈", "CI/CD", "GitLab", "Bitbucket"]},
   {"type": "eof", "title": "- EOF -"}
 ]

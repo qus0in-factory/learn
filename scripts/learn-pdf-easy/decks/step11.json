@@ -232,25 +232,7 @@
    ]
   ]
  },
- {
-  "type": "rows",
-  "step": "STEP 11",
-  "title": "용어 풀이",
-  "rows": [
-   {
-    "term": "origin",
-    "detail": "긴 원격 저장소 주소에 붙이는 관례적 별칭이다"
-   },
-   {
-    "term": "업스트림",
-    "detail": "로컬 브랜치가 기본으로 주고받는 원격 브랜치다"
-   },
-   {
-    "term": "GitHub Pages",
-    "detail": "저장소 파일을 공개 웹사이트로 내보내는 기능이다"
-   }
-  ]
- },
+ {"type": "glossary", "terms": ["GitHub", "저장소", "로컬 저장소", "원격", "커밋", "Public", "README", "브랜치", "main", "origin", "HTTPS", "git branch", "git remote", "Homebrew", "gh", "CLI", "Git Credential Manager", "push", "pull", "-u", "업스트림", "GitHub Pages", "루트", "HTML"]},
  {
   "type": "eof",
   "title": "- EOF -"
