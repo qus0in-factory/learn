@@ -1,4 +1,5 @@
 import { registerHooks } from 'node:module'
+import { mediaSwaps } from './easy-media-swaps.mjs'
 
 const root = new URL('../../', import.meta.url)
 const easy = JSON.stringify(new URL('scripts/learn-pdf-easy/', root))
@@ -6,8 +7,7 @@ const pilot = JSON.stringify(new URL('scripts/learn-pdf/pilot/', root))
 const swaps = {
   'contract': [['new URL(\'subjects.json\', import.meta.url)',
     `new URL('subjects.json', ${easy})`]],
-  'media': [['new URL(s.image, import.meta.url)',
-    `(s.image.startsWith('docs/') ? new URL(s.image, ${JSON.stringify(root.href)}) : new URL(s.image, ${pilot}))`]],
+  'media': mediaSwaps(root, pilot),
   'subject': [['import.meta.url', easy]],
 }
 
