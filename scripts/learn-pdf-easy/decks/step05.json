@@ -201,6 +201,7 @@
    ]
   ]
  },
+ {"type": "glossary", "terms": ["GitHub", "저장소", "README", "커밋", "원격", "Public", "noreply 이메일", "github.dev", "토큰"]},
  {
   "type": "eof",
   "title": "- EOF -"

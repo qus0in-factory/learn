@@ -249,6 +249,7 @@
    ]
   ]
  },
+ {"type": "glossary", "terms": ["마크다운", "README", "프로필", "Public", "비공개 저장소", "GitHub Pages", "루트", "배지", "서식", "미리보기", "커밋", "링크"]},
  {
   "type": "eof",
   "title": "- EOF -"

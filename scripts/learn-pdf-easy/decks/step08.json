@@ -218,6 +218,7 @@
    ]
   ]
  },
+ {"type": "glossary", "terms": ["ChatGPT", "커넥터", "GitHub", "프로필", "README", "TIL", "회고", "부검", "Why→What→How", "STAR", "Try", "토큰", "비공개 저장소"]},
  {
   "type": "eof",
   "title": "- EOF -"

@@ -1,11 +1,11 @@
-import { readFileSync } from 'node:fs'
+import { readDeck } from './easy-deck.mjs'
 import { stepName } from './easy-names.mjs'
 import { out } from './easy-artifact.mjs'
 const { deckPage } = await import('../learn-pdf/pilot/page.mjs')
 const { audit } = await import('../learn-pdf/pilot/audit.mjs')
 export async function renderDeck(browser, name) {
   const deck = new URL('decks/' + stepName(name) + '.json', import.meta.url)
-  const info = JSON.parse(readFileSync(deck, 'utf8'))
+  const info = readDeck(deck)
   const { page } = await deckPage(browser, deck)
   try {
     await page.evaluate(t => { document.title = t }, info[0].step + ' ' + info[0].title)

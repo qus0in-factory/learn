@@ -1,14 +1,37 @@
 [
- { "type": "cover", "step": "STEP 07", "title": "라벨·이슈·기록 작성" },
+ {
+  "type": "cover",
+  "step": "STEP 07",
+  "title": "라벨·이슈·기록 작성"
+ },
  {
   "type": "goals",
   "title": "학습 목표",
   "cards": [
-   ["이슈와 라벨", "이슈를 등록하고 라벨과 마일스톤으로 정리한다"],
-   ["기록의 종류", "TIL과 회고, 부검의 목적 차이를 말한다"],
-   ["연결 관리", "이슈와 기록 파일을 서로 링크한다"]
+   [
+    "이슈와 라벨",
+    "이슈를 등록하고 라벨과 마일스톤으로 정리한다"
+   ],
+   [
+    "기록의 종류",
+    "TIL과 회고, 부검의 목적 차이를 말한다"
+   ],
+   [
+    "연결 관리",
+    "이슈와 기록 파일을 서로 링크한다"
+   ]
   ]
  },
+ { "type": "rows", "title": "Organization 생성", "rows": [
+   { "term": "조직", "detail": "Organization(조직)은 멤버와 저장소를 함께 관리하는 단위다." },
+   { "term": "생성 메뉴", "detail": "프로필 메뉴에서 Settings → Organizations → New organization을 연다." },
+   { "term": "요금제와 이름", "detail": "Free 요금제를 선택하고 조직 이름과 필수 정보를 입력해 조직을 만든다." }
+ ] },
+ { "type": "rows", "title": "멤버 초대와 공동 작업", "rows": [
+   { "term": "초대", "detail": "조직의 People → Invite member에서 사용자 이름이나 이메일로 멤버를 초대한다." },
+   { "term": "참여", "detail": "초대받은 멤버는 초대를 수락한 뒤 조직에 참여한다." },
+   { "term": "조직 저장소", "detail": "조직을 소유자로 지정해 저장소를 만들고, 접근 권한이 있는 멤버와 라벨·이슈·마일스톤을 함께 사용한다." }
+ ] },
  { "type": "section", "title": "이슈와 마일스톤" },
  {
   "type": "split",
@@ -16,51 +39,114 @@
   "title": "작업 관리 도구",
   "diagram": "assets/variety-issue.svg",
   "items": [
-   { "term": "Issue", "detail": "작업 요청과 버그를 적는 티켓" },
-   { "term": "Label", "detail": "종류를 색으로 나누는 표식" },
-   { "term": "Milestone", "detail": "이슈를 묶고 진척을 보여 준다" }
+   {
+    "term": "Issue",
+    "detail": "작업 요청과 버그를 적는 티켓"
+   },
+   {
+    "term": "Label",
+    "detail": "종류를 색으로 나누는 표식"
+   },
+   {
+    "term": "Milestone",
+    "detail": "이슈를 묶고 진척을 보여 준다"
+   }
   ]
  },
  {
   "type": "steps",
   "title": "이슈 등록 절차",
   "steps": [
-   { "label": "마일스톤", "detail": "v1.0 첫 기록을 만들고 마감일을 잡는다" },
-   { "label": "라벨", "detail": "문서·기능 라벨을 확인" },
-   { "label": "이슈 작성", "detail": "Issues 탭에서 2건을 등록한다" },
-   { "label": "표식 붙이기", "detail": "라벨과 마일스톤을 붙인다" },
-   { "label": "진척 확인", "detail": "닫기 전 이슈의 진척을 본다" }
+   {
+    "label": "마일스톤",
+    "detail": "v1.0 첫 기록을 만들고 마감일을 잡는다"
+   },
+   {
+    "label": "라벨",
+    "detail": "문서·기능 라벨을 확인"
+   },
+   {
+    "label": "이슈 작성",
+    "detail": "Issues 탭에서 2건을 등록한다"
+   },
+   {
+    "label": "표식 붙이기",
+    "detail": "라벨과 마일스톤을 붙인다"
+   },
+   {
+    "label": "진척 확인",
+    "detail": "닫기 전 이슈의 진척을 본다"
+   }
   ]
  },
  {
   "type": "table",
   "title": "실습 이슈 예시",
   "rows": [
-   ["이슈 제목", "라벨"],
-   ["[문서] README에 사용법 보완", "documentation"],
-   ["[기능] 프로필에 대표 작업 링크 추가", "enhancement"],
-   ["본문에 기록 파일 경로 작성", "이슈와 기록 파일을 서로 찾게 한다"]
+   [
+    "이슈 제목",
+    "라벨"
+   ],
+   [
+    "[문서] README에 사용법 보완",
+    "documentation"
+   ],
+   [
+    "[기능] 프로필에 대표 작업 링크 추가",
+    "enhancement"
+   ],
+   [
+    "본문에 기록 파일 경로 작성",
+    "이슈와 기록 파일을 서로 찾게 한다"
+   ]
   ]
  },
- { "type": "section", "title": "기록의 종류" },
+ {
+  "type": "section",
+  "title": "기록의 종류"
+ },
  {
   "type": "table",
   "title": "기록 파일과 틀",
   "rows": [
-   ["기록", "적는 내용"],
-   ["docs/til.md", "질문, 배운 점, 직접 확인한 결과, 아직 확인하지 못한 점"],
-   ["docs/retrospective.md", "한 일과 느낌, Keep, Problem, Try"],
-   ["docs/postmortem.md", "확인한 사실과 추측을 나눠 영향과 원인, 재발 방지를 적는다"]
+   [
+    "기록",
+    "적는 내용"
+   ],
+   [
+    "docs/til.md",
+    "질문, 배운 점, 직접 확인한 결과, 아직 확인하지 못한 점"
+   ],
+   [
+    "docs/retrospective.md",
+    "한 일과 느낌, Keep, Problem, Try"
+   ],
+   [
+    "docs/postmortem.md",
+    "확인한 사실과 추측을 나눠 영향과 원인, 재발 방지를 적는다"
+   ]
   ]
  },
  {
   "type": "rows",
   "title": "틀의 차이",
   "rows": [
-   { "term": "TIL", "detail": "배운 내용과 확인 결과를 남긴다" },
-   { "term": "회고", "detail": "경험과 다음 행동을 정리한다. Try에는 실행 시점과 확인 방법을 적는다" },
-   { "term": "부검", "detail": "문제의 영향과 원인, 재발 방지를 다룬다" },
-   { "term": "복수의 틀", "detail": "한 종류에 틀이 하나만 있는 것은 아니라고 기억한다" }
+   {
+    "term": "TIL",
+    "detail": "배운 내용과 확인 결과를 남긴다"
+   },
+   {
+    "term": "회고",
+    "detail": "경험과 다음 행동을 정리한다. Try에는 실행 시점과 확인 방법을 적는다"
+   },
+   {
+    "term": "부검",
+    "detail": "문제의 영향과 원인, 재발 방지를 다룬다"
+   },
+   {
+    "term": "복수의 틀",
+    "detail": "한 종류에 틀이 하나만 있는 것은 아니라고 기억한다"
+   }
   ]
  },
  {
@@ -69,19 +155,40 @@
   "title": "TIL 기록 예시",
   "code": "# README가 프로필에 보이는 조건\n- 질문: 왜 프로필 화면에 소개가 안 보일까?\n- 배운 점: 사용자명과 같은 공개 저장소의 루트 README가 비어 있지 않아야 한다.\n- 확인: 저장소를 만든 뒤 프로필을 새로고침하니 제목이 보였다.",
   "items": [
-   { "term": "구성", "detail": "질문과 배운 점, 직접 확인한 결과 순으로 적는다." },
-   { "term": "확인 결과", "detail": "자신의 확인 결과로 바꿔 적는다." },
-   { "term": "다음 질문", "detail": "확인하지 못한 점은 다음 질문으로 남긴다." }
+   {
+    "term": "구성",
+    "detail": "질문과 배운 점, 직접 확인한 결과 순으로 적는다."
+   },
+   {
+    "term": "확인 결과",
+    "detail": "자신의 확인 결과로 바꿔 적는다."
+   },
+   {
+    "term": "다음 질문",
+    "detail": "확인하지 못한 점은 다음 질문으로 남긴다."
+   }
   ]
  },
  {
   "type": "steps",
   "title": "기록 파일 커밋",
   "steps": [
-   { "label": "til", "detail": "docs/til.md에 배운 점" },
-   { "label": "회고", "detail": "retrospective에 KPT" },
-   { "label": "부검", "detail": "postmortem에 사실·추측" },
-   { "label": "링크", "detail": "대응 이슈에 링크하고 커밋" }
+   {
+    "label": "til",
+    "detail": "docs/til.md에 배운 점"
+   },
+   {
+    "label": "회고",
+    "detail": "retrospective에 KPT"
+   },
+   {
+    "label": "부검",
+    "detail": "postmortem에 사실·추측"
+   },
+   {
+    "label": "링크",
+    "detail": "대응 이슈에 링크하고 커밋"
+   }
   ]
  },
  {
@@ -94,22 +201,53 @@
   "type": "rows",
   "title": "트러블 슈팅",
   "rows": [
-   { "term": "Issues 메뉴가 안 보임", "detail": "저장소 설정에서 Issues가 켜져 있는지 확인한다" },
-   { "term": "라벨이 없음", "detail": "New label로 이름과 설명, 색을 정해 만든다" },
-   { "term": "라벨 삭제", "detail": "쓰는 이슈가 있는 라벨은 지우기 전에 영향을 확인한다" },
-   { "term": "화면 이름 차이", "detail": "메뉴 이름은 버전에 따라 다를 수 있다" }
+   {
+    "term": "Issues 메뉴가 안 보임",
+    "detail": "저장소 설정에서 Issues가 켜져 있는지 확인한다"
+   },
+   {
+    "term": "라벨이 없음",
+    "detail": "New label로 이름과 설명, 색을 정해 만든다"
+   },
+   {
+    "term": "라벨 삭제",
+    "detail": "쓰는 이슈가 있는 라벨은 지우기 전에 영향을 확인한다"
+   },
+   {
+    "term": "화면 이름 차이",
+    "detail": "메뉴 이름은 버전에 따라 다를 수 있다"
+   }
   ]
  },
  {
   "type": "table",
   "title": "한 장 요약",
   "rows": [
-   ["항목", "확인할 내용"],
-   ["이슈", "티켓에 라벨과 마일스톤을 붙인다"],
-   ["TIL", "배운 점과 확인 결과를 남긴다"],
-   ["회고", "Try에 실행 시점과 확인 방법을 적는다"],
-   ["부검", "사실과 추측을 나눠 남긴다"]
+   [
+    "항목",
+    "확인할 내용"
+   ],
+   [
+    "이슈",
+    "티켓에 라벨과 마일스톤을 붙인다"
+   ],
+   [
+    "TIL",
+    "배운 점과 확인 결과를 남긴다"
+   ],
+   [
+    "회고",
+    "Try에 실행 시점과 확인 방법을 적는다"
+   ],
+   [
+    "부검",
+    "사실과 추측을 나눠 남긴다"
+   ]
   ]
  },
- { "type": "eof", "title": "- EOF -" }
+ {"type": "glossary", "terms": ["Organization", "Free", "멤버", "저장소", "접근 권한", "이슈", "라벨", "마일스톤", "documentation", "enhancement", "TIL", "회고", "부검", "Why→What→How", "STAR", "KPT", "Keep", "Problem", "Try"]},
+ {
+  "type": "eof",
+  "title": "- EOF -"
+ }
 ]
