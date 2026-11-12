@@ -178,7 +178,7 @@
   "step": "STEP 26",
   "title": "프로필 README 화면",
   "image": "assets/profile-readme.png",
-  "caption": "프로필 저장소의 루트 README가 프로필 화면에 표시되는 모습"
+  "caption": "프로필 화면에 보이는 README"
  },
  {
   "type": "rows",

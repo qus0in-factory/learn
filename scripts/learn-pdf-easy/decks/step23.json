@@ -7,7 +7,7 @@
   ]},
   {"type": "section", "title": "복사본 대신 Git을 쓰는 이유: VCS와 SCM"},
   {"type": "compare", "title": "복사본 방식과 Git 이력", "left": {"label": "수동 복사본", "lines": ["index_v1부터 진짜최종까지 파일 누적", "어떤 파일이 최신·정상 동작 버전인지 혼동", "덮어쓰면 되돌릴 방법이 없음"]}, "right": {"label": "Git 이력", "lines": ["커밋 1: 첫 웹페이지", "커밋 2: 소개 수정", "커밋 3: 스타일 정리"]}, "result": "VCS는 변경 이력을 시간순으로 저장하여 안전한 과거 시점으로 되돌린다"},
-  {"type": "image", "title": "복사본이 이력으로", "image": "docs/public/illust-copies-600.webp", "caption": "복사본 파일이 쌓인 책상에서 순서대로 정리된 저장 기록 한 줄로 바뀌는 모습"},
+  {"type": "image", "title": "복사본이 이력으로", "image": "docs/public/illust-copies-600.webp", "caption": "복사본이 커밋 이력으로 정리됨"},
   {"type": "rows", "title": "VCS와 SCM의 개념", "rows": [
     {"term": "VCS", "detail": "버전 관리 시스템. 변경 이력을 저장하고 안전한 과거 시점으로 되돌린다"},
     {"term": "SCM", "detail": "HTML, CSS, 이미지, 문서를 하나의 상태로 묶어 관리하는 형상 관리다"},

@@ -12,7 +12,7 @@
     {"term": "자동 검사와 배포", "detail": "올라온 코드를 정해 둔 검사와 배포에 연결한다"}
   ]},
   {"type": "compare", "title": "내 컴퓨터와 GitHub", "left": {"label": "내 컴퓨터만", "lines": ["분실하면 작업물을 잃을 수 있다", "혼자만 코드를 본다", "파일 경로는 그 PC에서만 열린다"]}, "right": {"label": "GitHub", "lines": ["다른 PC에서 코드를 복원할 수 있다", "여러 사람이 한 저장소를 고친다", "올린 코드로 웹 주소를 만들 수 있다"]}, "result": "GitHub는 Git 저장소를 서버에 두고 함께 쓰게 하는 서비스다"},
-  {"type": "image", "title": "동료 검토", "image": "docs/public/illust-review-600.webp", "caption": "동료들이 문서에서 바뀐 부분을 함께 보며 검토하는 모습"},
+  {"type": "image", "title": "동료 검토", "image": "docs/public/illust-review-600.webp", "caption": "문서를 함께 검토하는 화면"},
   {"type": "rows", "title": "소스 코드 공유와 기여", "rows": [
     {"term": "사전 검토", "detail": "동료가 먼저 읽어 보면 변경 의도와 오류를 함께 확인한다"},
     {"term": "혼자 작업", "detail": "내가 바꾼 내용을 다시 읽어 보는 습관이 도움이 된다"},
@@ -28,7 +28,7 @@
     {"term": "자동화 연결", "detail": "코드가 올라오면 정해 둔 검사와 배포가 자동 실행된다"},
     {"term": "CI/CD", "detail": "지속적 통합과 배포를 돕는 자동화의 중추 역할을 한다"}
   ]},
-  {"type": "image", "title": "웹 사이트 공개", "image": "docs/public/illust-publish-600.webp", "caption": "나만 열 수 있는 집에서 누구나 볼 수 있는 광장의 게시판으로 사이트가 공개되는 모습"},
+  {"type": "image", "title": "웹 사이트 공개", "image": "docs/public/illust-publish-600.webp", "caption": "공개된 웹 사이트 화면"},
   {"type": "rows", "title": "파일 경로와 웹 주소", "rows": [
     {"term": "로컬 파일 경로", "detail": "브라우저로 열면 내 PC 안의 파일 경로가 보인다"},
     {"term": "공유 한계", "detail": "이 주소는 외부 상대방 컴퓨터에서 열리지 않는다"},
