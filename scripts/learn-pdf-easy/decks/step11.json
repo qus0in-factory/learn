@@ -1,7 +1,7 @@
 [
  {
   "type": "cover",
-  "step": "STEP 31",
+  "step": "STEP 11",
   "title": "원격 연결"
  },
  {
@@ -69,7 +69,7 @@
  },
  {
   "type": "image",
-  "step": "STEP 31",
+  "step": "STEP 11",
   "title": "인증 창",
   "image": "assets/classroom-day1-auth-window.png",
   "caption": "push 시 나타나는 브라우저 로그인 인증 창"
@@ -87,7 +87,7 @@
  },
  {
   "type": "split",
-  "step": "STEP 31",
+  "step": "STEP 11",
   "title": "로컬과 원격",
   "diagram": "assets/remote.svg",
   "items": [
@@ -158,12 +158,12 @@
  },
  {
   "type": "section",
-  "step": "STEP 31",
+  "step": "STEP 11",
   "title": "GitHub Pages 웹사이트 배포"
  },
  {
   "type": "steps",
-  "step": "STEP 31",
+  "step": "STEP 11",
   "title": "Pages 배포 절차",
   "steps": [
    {

@@ -16,6 +16,6 @@ test('easyLessons maps 12 paths to easy PDF URLs without git links', () => {
   keys.forEach((k, i) => {
     const url = `${p.baseUrl}${p.version}/easy/${n[i]}.pdf?revision=${e.revision}`
     assert.equal(el[k], url)
-    assert.match(url, /^https:\/\/files\.qus0in\.dev\/v\d+\.\d+\.\d+\/easy\/[\w-]+\.pdf\?revision=[0-9a-f]{7,40}$/)
+    assert.equal(n[i].slice(0, 2), String(i + 1).padStart(2, '0'))
   })
 })

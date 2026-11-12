@@ -1,5 +1,5 @@
 [
- { "type": "cover", "step": "STEP 27", "title": "라벨·이슈·기록 작성" },
+ { "type": "cover", "step": "STEP 07", "title": "라벨·이슈·기록 작성" },
  {
   "type": "goals",
   "title": "학습 목표",
@@ -12,7 +12,7 @@
  { "type": "section", "title": "이슈와 마일스톤" },
  {
   "type": "split",
-  "step": "STEP 27",
+  "step": "STEP 07",
   "title": "작업 관리 도구",
   "diagram": "assets/variety-issue.svg",
   "items": [
@@ -65,7 +65,7 @@
  },
  {
   "type": "split",
-  "step": "STEP 27",
+  "step": "STEP 07",
   "title": "TIL 기록 예시",
   "code": "# README가 프로필에 보이는 조건\n- 질문: 왜 프로필 화면에 소개가 안 보일까?\n- 배운 점: 사용자명과 같은 공개 저장소의 루트 README가 비어 있지 않아야 한다.\n- 확인: 저장소를 만든 뒤 프로필을 새로고침하니 제목이 보였다.",
   "items": [
@@ -86,7 +86,7 @@
  },
  {
   "type": "image",
-  "step": "STEP 27",
+  "step": "STEP 07",
   "title": "이슈 화면",
   "image": "assets/memo-issues.png",
   "caption": "라벨과 마일스톤이 붙은 이슈 목록 화면"
