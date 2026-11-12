@@ -1,59 +1,129 @@
 [
- { "type": "cover", "step": "STEP 09", "title": "Git 설치" },
+ {
+  "type": "cover",
+  "step": "STEP 09",
+  "title": "Git 설치"
+ },
  {
   "type": "goals",
   "title": "학습 목표",
   "cards": [
-   ["Git 설치", "운영체제에 맞게 Git을 설치한다"],
-   ["설치 확인", "git --version으로 버전 출력을 확인한다"],
-   ["VS Code 터미널", "통합 터미널의 기본 셸을 정한다"]
+   [
+    "Git 설치",
+    "운영체제에 맞게 Git을 설치한다"
+   ],
+   [
+    "설치 확인",
+    "git --version으로 버전 출력을 확인한다"
+   ],
+   [
+    "VS Code 터미널",
+    "통합 터미널의 기본 셸을 정한다"
+   ]
   ]
  },
- { "type": "section", "title": "Git 설치" },
+ {
+  "type": "section",
+  "title": "Git 설치"
+ },
  {
   "type": "steps",
   "title": "운영체제별 설치",
   "steps": [
-   { "label": "Windows", "detail": "Git for Windows 설치 파일을 내려받아 실행한다. Git Bash가 함께 설치된다" },
-   { "label": "설치 화면", "detail": "항목과 기본값은 설치 준비 자료의 Windows Git 설치 절을 따른다" },
-   { "label": "macOS", "detail": "터미널에 git --version을 입력해 안내 창이 뜨면 설치한다" },
-   { "label": "터미널 재시작", "detail": "설치 후 터미널을 새로 열어 확인한다" }
+   {
+    "label": "Windows",
+    "detail": "Git for Windows 설치 파일을 내려받아 실행한다. Git Bash가 함께 설치된다"
+   },
+   {
+    "label": "설치 화면",
+    "detail": "항목과 기본값은 설치 준비 자료의 Windows Git 설치 절을 따른다"
+   },
+   {
+    "label": "macOS",
+    "detail": "터미널에 git --version을 입력해 안내 창이 뜨면 설치한다"
+   },
+   {
+    "label": "터미널 재시작",
+    "detail": "설치 후 터미널을 새로 열어 확인한다"
+   }
   ]
  },
  {
   "type": "code",
   "title": "설치 확인 명령",
-  "code": ["# Git 설치 버전 확인\ngit --version", "# 현재 작업 폴더 확인\npwd"]
+  "code": [
+   "# Git 설치 버전 확인\ngit --version",
+   "# 현재 작업 폴더 확인\npwd"
+  ]
  },
  {
   "type": "rows",
   "title": "설치 확인 결과",
   "rows": [
-   { "term": "정상 출력", "detail": "git version 2.x.x 형태로 버전이 출력된다" },
-   { "term": "표기 차이", "detail": "숫자와 괄호 안 표기는 설치한 Git에 따라 다르다" },
-   { "term": "macOS 확인", "detail": "git --version 입력 시 설치 안내가 뜰 수 있다" },
-   { "term": "창 차이", "detail": "버전 확인은 로그인 확인이 아니다" }
+   {
+    "term": "정상 출력",
+    "detail": "git version 2.x.x 형태로 버전이 출력된다"
+   },
+   {
+    "term": "표기 차이",
+    "detail": "숫자와 괄호 안 표기는 설치한 Git에 따라 다르다"
+   },
+   {
+    "term": "macOS 확인",
+    "detail": "git --version 입력 시 설치 안내가 뜰 수 있다"
+   },
+   {
+    "term": "창 차이",
+    "detail": "버전 확인은 로그인 확인이 아니다"
+   }
   ]
  },
  {
   "type": "rows",
   "title": "설치 오류",
   "rows": [
-   { "term": "command not found", "detail": "설치되지 않았거나 PATH 등록이 안 된 것이므로 설치 준비 자료를 다시 확인한다" },
-   { "term": "설치 파일 경로", "detail": "gitforwindows.org에서 내려받는다" },
-   { "term": "설치 후 창", "detail": "터미널을 새로 열어 반영을 확인한다" },
-   { "term": "실습 폴더", "detail": "교육용 전용 폴더에서 명령을 실행한다" }
+   {
+    "term": "command not found",
+    "detail": "설치되지 않았거나 PATH 등록이 안 된 것이므로 설치 준비 자료를 다시 확인한다"
+   },
+   {
+    "term": "설치 파일 경로",
+    "detail": "gitforwindows.org에서 내려받는다"
+   },
+   {
+    "term": "설치 후 창",
+    "detail": "터미널을 새로 열어 반영을 확인한다"
+   },
+   {
+    "term": "실습 폴더",
+    "detail": "교육용 전용 폴더에서 명령을 실행한다"
+   }
   ]
  },
- { "type": "section", "title": "VS Code 터미널 세팅" },
+ {
+  "type": "section",
+  "title": "VS Code 터미널 세팅"
+ },
  {
   "type": "steps",
   "title": "통합 터미널 준비",
   "steps": [
-   { "label": "터미널 열기", "detail": "VS Code에서 터미널 → 새 터미널 메뉴로 연다" },
-   { "label": "프로필 선택", "detail": "터미널 오른쪽 위의 드롭다운에서 기본 프로필 선택을 누른다" },
-   { "label": "기본 셸", "detail": "Windows는 Git Bash를, macOS는 zsh를 고른다" },
-   { "label": "동작 확인", "detail": "터미널을 새로 열고 프롬프트와 경로가 보이는지 확인한다" }
+   {
+    "label": "터미널 열기",
+    "detail": "VS Code에서 터미널 → 새 터미널 메뉴로 연다"
+   },
+   {
+    "label": "프로필 선택",
+    "detail": "터미널 오른쪽 위의 드롭다운에서 기본 프로필 선택을 누른다"
+   },
+   {
+    "label": "기본 셸",
+    "detail": "Windows는 Git Bash를, macOS는 zsh를 고른다"
+   },
+   {
+    "label": "동작 확인",
+    "detail": "터미널을 새로 열고 프롬프트와 경로가 보이는지 확인한다"
+   }
   ]
  },
  {
@@ -68,21 +138,67 @@
   "title": "경로 확인",
   "diagram": "assets/terminal.svg",
   "items": [
-   { "term": "pwd", "detail": "현재 작업 폴더를 출력한다." },
-   { "term": "Git Bash 표기", "detail": "/c/Users/… 형태로 보이는 것이 정상이다." },
-   { "term": "확인 위치", "detail": "VS Code에서 연 폴더와 터미널 위치가 같은지 비교한다." }
+   {
+    "term": "pwd",
+    "detail": "현재 작업 폴더를 출력한다."
+   },
+   {
+    "term": "Git Bash 표기",
+    "detail": "/c/Users/… 형태로 보이는 것이 정상이다."
+   },
+   {
+    "term": "확인 위치",
+    "detail": "VS Code에서 연 폴더와 터미널 위치가 같은지 비교한다."
+   }
   ]
  },
  {
   "type": "table",
   "title": "한 장 요약",
   "rows": [
-   ["항목", "확인할 내용"],
-   ["설치", "Windows는 Git for Windows, macOS는 안내 설치"],
-   ["버전", "git version 뒤의 버전 문자열"],
-   ["터미널", "기본 셸을 Git Bash 또는 zsh로 정한다"],
-   ["완료 기준", "버전 출력과 경로 출력 확인"]
+   [
+    "항목",
+    "확인할 내용"
+   ],
+   [
+    "설치",
+    "Windows는 Git for Windows, macOS는 안내 설치"
+   ],
+   [
+    "버전",
+    "git version 뒤의 버전 문자열"
+   ],
+   [
+    "터미널",
+    "기본 셸을 Git Bash 또는 zsh로 정한다"
+   ],
+   [
+    "완료 기준",
+    "버전 출력과 경로 출력 확인"
+   ]
   ]
  },
- { "type": "eof", "title": "- EOF -" }
+ {
+  "type": "rows",
+  "step": "STEP 09",
+  "title": "용어 풀이",
+  "rows": [
+   {
+    "term": "셸",
+    "detail": "터미널에서 입력한 명령을 해석해 실행하는 프로그램이다"
+   },
+   {
+    "term": "PATH",
+    "detail": "실행 파일을 찾을 폴더 목록을 담은 운영체제 환경 설정이다"
+   },
+   {
+    "term": "Git Bash",
+    "detail": "Windows에서 Git과 Unix형 명령을 쓰게 하는 설치 동반 셸이다"
+   }
+  ]
+ },
+ {
+  "type": "eof",
+  "title": "- EOF -"
+ }
 ]

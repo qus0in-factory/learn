@@ -50,6 +50,7 @@
  },
  {
   "type": "compare",
+  "step": "STEP 11",
   "title": "저장소 두 종류",
   "left": {
    "label": "README 포함 저장소",
@@ -229,6 +230,25 @@
     "완료 기준",
     "원격 화면에 커밋이 보인다"
    ]
+  ]
+ },
+ {
+  "type": "rows",
+  "step": "STEP 11",
+  "title": "용어 풀이",
+  "rows": [
+   {
+    "term": "origin",
+    "detail": "긴 원격 저장소 주소에 붙이는 관례적 별칭이다"
+   },
+   {
+    "term": "업스트림",
+    "detail": "로컬 브랜치가 기본으로 주고받는 원격 브랜치다"
+   },
+   {
+    "term": "GitHub Pages",
+    "detail": "저장소 파일을 공개 웹사이트로 내보내는 기능이다"
+   }
   ]
  },
  {
