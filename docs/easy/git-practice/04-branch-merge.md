@@ -80,6 +80,20 @@ git pull origin main
 
 7. GitHub의 녹색 `Delete branch` 버튼으로 병합된 브랜치를 정리한다. 로컬에서는 `git branch -d feature/profile-design`으로 지운다.
 
+## AI에게 PR 맡기기
+
+커넥터가 쓰기 권한을 가진 요금제·설정에서는 ChatGPT 같은 AI에게 브랜치 생성부터 PR 생성, 리뷰 코멘트 작성, 머지까지 요청할 수 있다.
+
+```text
+dev 브랜치를 main으로 풀 리퀘스트 생성 및 리뷰 코멘트 작성, 그리고 머지까지 해 줘.
+```
+
+```text
+web 브랜치를 만들고 index.html을 새로 작성한 뒤 main에 PR을 열고 리뷰 코멘트를 달아 머지해 줘.
+```
+
+자동으로 PR과 머지를 처리하게 하더라도, 반영 전에 사람이 `Files changed` 탭에서 바뀐 부분(diff)을 직접 확인한다.
+
 ## 추가자료
 
 - [STEP 10 브랜치와 태그](/git/10-branches-tags)
