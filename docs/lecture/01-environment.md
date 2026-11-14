@@ -91,9 +91,9 @@ flowchart TB
 
 ### 2026년 11월 실습 사례
 
-2026년 11월 5일 Git Bash에서 `git -v`를 실행해 Windows용 Git 버전을 확인했다. 출력은 `git version 2.56.0.windows.4`였다. 아래 화면은 [당시 스크린샷](https://github.com/ilovejava26/memo/blob/main/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202026-11-05%20094752.png)에서 버전 출력만 잘라 사용했다.
+2026년 11월 5일 Git Bash에서 `git --version`을 실행해 Windows용 Git 버전을 확인했다. 출력은 `git version 2.56.0.windows.4`였다. 아래 화면은 [당시 스크린샷](https://github.com/ilovejava26/memo/blob/main/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202026-11-05%20094752.png)에서 버전 출력만 잘라 사용했다.
 
-![2026년 11월 5일 Git Bash에서 git -v로 버전을 확인한 결과](/screenshots/ilovejava26/day1-git-version.png)
+![2026년 11월 5일 Git Bash에서 git --version으로 버전을 확인한 결과](/screenshots/ilovejava26/day1-git-version.png)
 
 
 ## Git 명령

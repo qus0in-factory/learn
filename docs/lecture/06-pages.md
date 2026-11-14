@@ -151,6 +151,17 @@ footer {
 9. GitHub 저장소 상단의 `Actions` 탭을 클릭하여 `pages build and deployment` 워크플로가 돌아가는 것을 확인한다.
 10. Actions에서 성공 표시를 확인한 뒤, 브라우저의 배포 URL 탭을 강력 새로고침(`Ctrl + Shift + R` 또는 `Cmd + Shift + R`)하여 푸터가 반영되었는지 확인한다. 반영까지 최대 10분이 걸릴 수 있다.
 
+### 계정 사이트와 docs 폴더
+
+계정 이름과 같은 `<사용자명>.github.io` 저장소를 만들면 `https://<사용자명>.github.io/` 주소로 사이트를 공개할 수 있다. 루트 대신 `docs/` 폴더를 게시 원본으로 쓰려면 다음 절차를 따른다.
+
+1. GitHub에서 `<사용자명>/<사용자명>.github.io` 저장소를 만든다. 초기 파일 생성 체크박스는 모두 해제한다.
+2. 로컬에 `docs/` 폴더를 만들고 `docs/index.html`을 작성한 뒤 커밋하여 원격에 푸시한다.
+3. 저장소의 `Settings` → `Pages`로 이동한다.
+4. `Build and deployment`에서 **Source**를 `Deploy from a branch`로 둔다.
+5. **Branch**를 `main`, **Folder**를 `/docs`로 선택하고 `Save`를 누른다.
+6. 수 분 뒤 `https://<사용자명>.github.io/`로 접속해 `docs/index.html`이 첫 화면으로 열리는지 확인한다.
+
 배포가 끝난 사이트는 누구나 공개 주소로 열 수 있다. 아래는 이 과정 사이트의 첫 화면으로, 공개 주소로 열리는 정적 사이트의 예시다. 내 사이트는 `https://계정이름.github.io/portfolio-web/` 주소에서 직접 만든 페이지로 열린다.
 
 <Screenshot name="step06-public-page" alt="과정 사이트 예시: Go Git 과정의 제목과 표지, 왼쪽 강의 목차" />
