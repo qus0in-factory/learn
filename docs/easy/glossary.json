@@ -31,7 +31,7 @@
         "git-practice/02-init-commit"
       ],
       "commands": [],
-      "tags": []
+      "tags": ["저장소"]
     },
     {
       "term": "커밋",
@@ -44,7 +44,7 @@
         "git-practice/02-init-commit"
       ],
       "commands": [],
-      "tags": []
+      "tags": ["커밋"]
     },
     {
       "term": "스테이지",
@@ -57,7 +57,7 @@
         "git-practice/02-init-commit"
       ],
       "commands": [],
-      "tags": []
+      "tags": ["스테이지"]
     },
     {
       "term": "해시",
@@ -83,7 +83,7 @@
         "github-practice/03-til"
       ],
       "commands": [],
-      "tags": []
+      "tags": ["TIL"]
     },
     {
       "term": "마크다운",
@@ -96,7 +96,7 @@
         "github-practice/02-markdown"
       ],
       "commands": [],
-      "tags": []
+      "tags": ["마크다운"]
     },
     {
       "term": "VCS",
@@ -108,7 +108,7 @@
         "04-what-is-git-cli"
       ],
       "commands": [],
-      "tags": []
+      "tags": ["VCS"]
     },
     {
       "term": "SCM",
@@ -120,7 +120,7 @@
         "04-what-is-git-cli"
       ],
       "commands": [],
-      "tags": []
+      "tags": ["SCM"]
     },
     {
       "term": "브랜치",
@@ -133,7 +133,7 @@
         "git-practice/04-branch-merge"
       ],
       "commands": [],
-      "tags": []
+      "tags": ["브랜치", "branch"]
     },
     {
       "term": "머지",
@@ -146,7 +146,7 @@
         "git-practice/04-branch-merge"
       ],
       "commands": [],
-      "tags": []
+      "tags": ["merge"]
     },
     {
       "term": "충돌",
@@ -159,7 +159,7 @@
         "git-practice/04-branch-merge"
       ],
       "commands": [],
-      "tags": []
+      "tags": ["충돌"]
     },
     {
       "term": "PR",
@@ -172,7 +172,7 @@
         "git-practice/04-branch-merge"
       ],
       "commands": [],
-      "tags": []
+      "tags": ["PR"]
     },
     {
       "term": "이슈",
@@ -186,7 +186,7 @@
         "github-practice/03-til"
       ],
       "commands": [],
-      "tags": []
+      "tags": ["이슈"]
     },
     {
       "term": "라벨",
@@ -199,7 +199,7 @@
         "github-practice/03-til"
       ],
       "commands": [],
-      "tags": []
+      "tags": ["라벨"]
     },
     {
       "term": "마일스톤",
@@ -212,7 +212,7 @@
         "github-practice/03-til"
       ],
       "commands": [],
-      "tags": []
+      "tags": ["마일스톤"]
     },
     {
       "term": "GitHub Pages",
@@ -225,7 +225,7 @@
         "git-practice/03-remote-connect"
       ],
       "commands": [],
-      "tags": []
+      "tags": ["GitHub Pages"]
     },
     {
       "term": "CI/CD",
@@ -237,7 +237,7 @@
         "01-what-is-github"
       ],
       "commands": [],
-      "tags": []
+      "tags": ["CI/CD"]
     },
     {
       "term": "원격",
@@ -265,7 +265,7 @@
         "github-practice/01-signup-and-repo"
       ],
       "commands": [],
-      "tags": []
+      "tags": ["GitHub"]
     },
     {
       "term": "CLI",
@@ -278,7 +278,7 @@
         "git-practice/01-git-install"
       ],
       "commands": [],
-      "tags": []
+      "tags": ["CLI"]
     },
     {
       "term": "gh",
@@ -305,7 +305,7 @@
         "git-practice/02-init-commit"
       ],
       "commands": [],
-      "tags": []
+      "tags": ["Git"]
     },
     {
       "term": "로컬 저장소",
@@ -318,7 +318,7 @@
         "git-practice/03-remote-connect"
       ],
       "commands": [],
-      "tags": []
+      "tags": ["로컬 저장소"]
     },
     {
       "term": "작업 공간",
@@ -330,7 +330,7 @@
         "git-practice/02-init-commit"
       ],
       "commands": [],
-      "tags": []
+      "tags": ["작업 공간"]
     },
     {
       "term": "스냅샷",
@@ -352,7 +352,7 @@
         "01-what-is-github"
       ],
       "commands": [],
-      "tags": []
+      "tags": ["오픈소스"]
     },
     {
       "term": "버그",
@@ -401,7 +401,7 @@
         "git-practice/03-remote-connect"
       ],
       "commands": [],
-      "tags": []
+      "tags": ["README"]
     },
     {
       "term": "프로필",
@@ -414,7 +414,7 @@
         "github-practice/04-chatgpt-connection"
       ],
       "commands": [],
-      "tags": []
+      "tags": ["프로필"]
     },
     {
       "term": "회고",
@@ -427,7 +427,7 @@
         "github-practice/04-chatgpt-connection"
       ],
       "commands": [],
-      "tags": []
+      "tags": ["회고"]
     },
     {
       "term": "부검",
@@ -440,7 +440,7 @@
         "github-practice/04-chatgpt-connection"
       ],
       "commands": [],
-      "tags": []
+      "tags": ["부검"]
     },
     {
       "term": "Why→What→How",
@@ -545,7 +545,7 @@
         "04-what-is-git-cli"
       ],
       "commands": [],
-      "tags": []
+      "tags": ["SVN"]
     },
     {
       "term": "GUI",
@@ -569,7 +569,7 @@
         "git-practice/02-init-commit"
       ],
       "commands": [],
-      "tags": []
+      "tags": ["터미널"]
     },
     {
       "term": "셸",
@@ -794,7 +794,7 @@
         "git-practice/04-branch-merge"
       ],
       "commands": [],
-      "tags": []
+      "tags": ["push"]
     },
     {
       "term": "pull",
@@ -855,7 +855,7 @@
         "github-practice/01-signup-and-repo"
       ],
       "commands": [],
-      "tags": []
+      "tags": ["github.dev"]
     },
     {
       "term": "토큰",
@@ -1023,7 +1023,7 @@
         "github-practice/04-chatgpt-connection"
       ],
       "commands": [],
-      "tags": []
+      "tags": ["ChatGPT"]
     },
     {
       "term": "커넥터",
@@ -1034,7 +1034,7 @@
         "github-practice/04-chatgpt-connection"
       ],
       "commands": [],
-      "tags": []
+      "tags": ["커넥터"]
     },
     {
       "term": "Git Bash",
@@ -1147,7 +1147,7 @@
         "git-practice/02-init-commit"
       ],
       "commands": [],
-      "tags": []
+      "tags": ["config"]
     },
     {
       "term": "--global",
@@ -1169,7 +1169,7 @@
         "git-practice/02-init-commit"
       ],
       "commands": [],
-      "tags": []
+      "tags": ["init"]
     },
     {
       "term": "ls -la",
@@ -1193,7 +1193,7 @@
         "git-practice/02-init-commit"
       ],
       "commands": [],
-      "tags": []
+      "tags": ["status"]
     },
     {
       "term": "git add",
@@ -1206,7 +1206,7 @@
         "git-practice/04-branch-merge"
       ],
       "commands": [],
-      "tags": []
+      "tags": ["add"]
     },
     {
       "term": "git commit",
@@ -1219,7 +1219,7 @@
         "git-practice/04-branch-merge"
       ],
       "commands": [],
-      "tags": []
+      "tags": ["commit"]
     },
     {
       "term": "git log",
@@ -1297,7 +1297,7 @@
         "git-practice/03-remote-connect"
       ],
       "commands": [],
-      "tags": []
+      "tags": ["origin"]
     },
     {
       "term": "HTTPS",
@@ -1352,7 +1352,7 @@
         "git-practice/03-remote-connect"
       ],
       "commands": [],
-      "tags": []
+      "tags": ["remote"]
     },
     {
       "term": "git branch",
@@ -1364,7 +1364,7 @@
         "git-practice/04-branch-merge"
       ],
       "commands": [],
-      "tags": []
+      "tags": ["branch"]
     },
     {
       "term": "git switch",
@@ -1375,7 +1375,7 @@
         "git-practice/04-branch-merge"
       ],
       "commands": [],
-      "tags": []
+      "tags": ["switch"]
     },
     {
       "term": "git merge",
@@ -1386,7 +1386,7 @@
         "git-practice/04-branch-merge"
       ],
       "commands": [],
-      "tags": []
+      "tags": ["merge"]
     },
     {
       "term": "git merge --abort",

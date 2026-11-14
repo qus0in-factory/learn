@@ -192,13 +192,17 @@ git add index.html images/.gitkeep
 git status
 ```
 
-작업자 정보는 `git config --global --list`로 확인한다. 이름이나 이메일에 오타를 넣었다면 같은 명령을 다시 실행해 값을 덮어쓴다.
+작업자 정보는 `git config --global --list`로 확인한다. 이름이나 이메일에 오타를 넣었다면 같은 명령을 다시 실행해 값을 덮어쓴다. 등록한 값을 지우려면 `git config --global --unset user.email`처럼 `--unset`을 사용한다.
 
 ### 선택 참고 명령
 
 ```bash
 # 현재 설정된 사용자 정보 및 설정 목록 확인
 git config --list
+git config --global --list
+
+# 등록한 작업자 정보 지우기
+git config --global --unset user.email
 
 # 현재 폴더의 모든 변경 사항을 한 번에 스테이징
 git add .

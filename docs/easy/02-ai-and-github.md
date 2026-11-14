@@ -1,7 +1,7 @@
 ---
 stepHeader: true
 subtitle: "GitHub에서 AI와 협업하는 데 필요한 핵심 개념을 이해한다."
-tags: ["AI", "Markdown", "Issue", "Milestone", "Label", "TIL", "회고", "부검"]
+tags: ["AI", "이슈", "라벨", "마일스톤", "TIL", "회고"]
 ---
 
 # AI와 GitHub
