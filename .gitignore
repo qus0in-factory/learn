@@ -8,3 +8,4 @@ docs/261103/requirements-check.md
 learn-site/node_modules
 .env*
 tmp
+.claude/settings.local.json
