@@ -36,7 +36,7 @@ node --test scripts/learn/*.test.mjs learn-worker/*.test.mjs
 
 if [ "$QUICK" -eq 0 ]; then
   step "learn-site 빌드"
-  pnpm --dir course-site exec vitepress build ../learn-site
+  node ./course-site/node_modules/vitepress/bin/vitepress.js build learn-site
 
   step "빌드 산출물 검증"
   node --test learn-site/*.test.mjs
