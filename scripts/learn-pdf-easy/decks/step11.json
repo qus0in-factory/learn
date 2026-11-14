@@ -85,6 +85,24 @@
   ]
  },
  {
+  "type": "rows",
+  "title": "브랜치·원격 교정",
+  "rows": [
+   {
+    "term": "main 덮어쓰기",
+    "detail": "이미 main이 있어 -m이 거절되면 확인 후 git branch -M main을 쓴다"
+   },
+   {
+    "term": "URL 수정",
+    "detail": "주소가 틀리면 git remote set-url origin <새 URL>로 바꾼다"
+   },
+   {
+    "term": "별칭 삭제",
+    "detail": "orign처럼 별칭을 잘못 등록했으면 git remote remove <별칭>으로 지운다"
+   }
+  ]
+ },
+ {
   "type": "split",
   "step": "STEP 11",
   "title": "로컬과 원격",
@@ -171,11 +189,11 @@
    },
    {
     "label": "설정",
-    "detail": "Settings의 Pages에서 Branch를 main, 폴더를 /(root)로 확인한다"
+    "detail": "Settings → Pages에서 Branch는 main, 폴더는 /(root) 또는 /docs를 고른다"
    },
    {
     "label": "주소",
-    "detail": "배포가 끝나면 https://<사용자명>.github.io로 접속한다"
+    "detail": "배포가 끝나면 https://<사용자명>.github.io에서 index.html을 확인한다"
    },
    {
     "label": "갱신",
