@@ -7,7 +7,7 @@
   },
   "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ko",
   "licenseLabel": "코드 MIT / 교안 CC BY-NC-SA 4.0",
-  "easyTitleTemplate": ":title | 고깃집 순한맛 Git·GitHub 입문",
+  "easyTitleTemplate": ":title | Go Git 集 순한맛 Git·GitHub 입문",
   "descriptions": {
     "/": "Git과 GitHub를 처음 배우는 사람을 위한 무료 온라인 교안. 12단계 Git 과정과 비전공자용 순한맛 과정, 명령어 참조와 용어 사전을 제공한다.",
     "/licenses": "에코익힘책의 코드와 교안에 적용되는 라이선스를 구분한다. 출처 표시와 비상업 이용 조건, 브랜드 사용 허락 및 제3자 자료의 고지 내용을 안내한다.",
