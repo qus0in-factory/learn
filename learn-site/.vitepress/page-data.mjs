@@ -7,6 +7,9 @@ import { stepHeaderFlag } from './step-header-flag.mjs'
 import { ogPage } from './og-page.mjs'
 import { seoPage } from './seo-page.mjs'
 import { easy } from './easy.mjs'
+import { pagePath } from './seo-paths.mjs'
+import { courseOf } from './seo-course-of.mjs'
+import meta from './seo-meta.json' with { type: 'json' }
 
 export function transformPageData(page) {
   pdfData(page)
@@ -23,6 +26,11 @@ export function transformPageData(page) {
     page.title = site.title
     page.frontmatter.title = site.title
     page.frontmatter.titleTemplate = false
+  }
+  const course = courseOf(pagePath(page.relativePath))
+  if (course.isLesson && course.course?.id === 'git-easy' && meta.easyTitleTemplate) {
+    page.frontmatter.titleTemplate = meta.easyTitleTemplate
+    page.titleTemplate = meta.easyTitleTemplate
   }
   ogPage(page)
   seoPage(page)

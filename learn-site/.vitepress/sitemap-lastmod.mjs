@@ -2,16 +2,23 @@ import { runGit } from './updated.mjs'
 import { pages } from './pages.mjs'
 
 let cache
+let firstDates
 export function gitCommitDates() {
   if (cache) return cache
   const out = runGit(['log', '--name-only', '--format=COMMIT:%cI'])
-  const map = new Map()
+  const last = new Map()
+  const first = new Map()
   let cur = ''
   for (const l of out.split('\n')) {
     if (l.startsWith('COMMIT:')) cur = l.slice(7)
-    else if (l.trim() && !map.has(l.trim())) map.set(l.trim(), cur)
+    else if (l.trim()) {
+      const file = l.trim()
+      if (!last.has(file)) last.set(file, cur)
+      first.set(file, cur)
+    }
   }
-  return (cache = map)
+  firstDates = first
+  return (cache = last)
 }
 
 const p = Object.entries(pages)
@@ -27,4 +34,9 @@ export function urlToDoc(url) {
 
 export function pageLastmod(url) {
   return gitCommitDates().get(urlToDoc(url))
+}
+
+export function pageFirstmod(url) {
+  gitCommitDates()
+  return firstDates.get(urlToDoc(url))
 }
