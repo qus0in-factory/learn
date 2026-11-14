@@ -24,10 +24,12 @@
 | 배포 | 배포일 | dev SHA | Worker version ID |
 |---|---|---|---|
 | 1차(SEO 1차) | 2026-11-14 | `09b705c6284b8828d966d0aadbeaedc2c072a207` | `b5614ac6-5d81-4f9b-9fce-771be985e7fd` |
-| 2차(본문·태그) | (배포 후 기록) | (배포 후 기록) | (배포 후 기록) |
+| 2차(본문·태그) | 2026-11-14 | `22d769e42aa349d497ccf3a8aaf6da633dc1cab5` | `b84ac4b6-747a-4e3e-bb5e-97ffffa861fc` |
 | 3차(SEO 2차) | (배포 후 기록) | (배포 후 기록) | (배포 후 기록) |
 
 - 1차 CI: [run 43593271917](https://github.com/qus0in-factory/learn/actions/runs/43593271917) success. readback 26개 probe, `/git-easy/` Course·`hasPart` 12, easy 강의 `article` 메타·lastmod 일치, sitemap 70(태그 포함), 두 과정 교차 링크, `/git/01-environment` 회귀 없음, 카탈로그 강의12/PDF12/퀴즈10이 PASS했다.
+- 2차 CI: [run 43596356260](https://github.com/qus0in-factory/learn/actions/runs/43596356260) success. description 47쪽 보강, tags·catalog `CollectionPage`·용어사전 `mainEntity`, 홈 `WebSite.description`, `og:image` alt 정합, git 03 `vim`/`:cq` 안내, easy PDF 덱 동기화·재빌드(revision `af38ae80aa4a2b447eb9ec35799cf09deb7c9c1d`, R2 12/12), git-easy Gist 1건 갱신, 과정 판별 정리를 포함하며 readback 10개 항목·26개 probe와 sitemap 70이 PASS했다.
+- 후속 이슈: [#118](https://github.com/qus0in-factory/learn/issues/118)(git PDF 교체)·[#119](https://github.com/qus0in-factory/learn/issues/119)(Search Console 색인 요청·sitemap 재제출).
 
 - Search Console 속성 확인·sitemap 제출 상태: (배포 후 기록)
 - 리치 결과 테스트 결과: (배포 후 기록)
