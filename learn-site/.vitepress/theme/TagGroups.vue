@@ -12,7 +12,7 @@ const groups = computed(() => sortedGroups(prefix.value === '/git-easy' ? theme.
 </script>
 
 <template>
-  <p>{{ t.intro }}</p>
+  <p>{{ prefix === '/git-easy' ? t.easyIntro : t.intro }}</p>
   <nav class="tag-index" :aria-label="t.index">
     <a v-for="g in groups" :key="g.slug" :href="`#${g.slug}`">{{ g.tag }}</a>
   </nav>
