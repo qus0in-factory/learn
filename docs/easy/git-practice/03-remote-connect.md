@@ -1,7 +1,7 @@
 ---
 stepHeader: true
 subtitle: "원격 저장소를 연결하고 동기화한다."
-tags: ["remote", "origin", "push", "GitHub"]
+tags: ["remote", "origin", "push", "GitHub Pages"]
 ---
 
 # 원격 연결

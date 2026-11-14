@@ -1,7 +1,7 @@
 ---
 stepHeader: true
 subtitle: "GitHub가 필요한 이유를 이해한다."
-tags: ["GitHub", "협업", "Issue", "CI/CD"]
+tags: ["GitHub", "오픈소스", "협업", "이슈", "CI/CD"]
 ---
 
 # GitHub란?

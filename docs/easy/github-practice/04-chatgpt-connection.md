@@ -1,7 +1,7 @@
 ---
 stepHeader: true
 subtitle: "ChatGPT를 연결해 작업 기록을 검토하고 보완한다."
-tags: ["ChatGPT", "커넥터", "리뷰", "Profile"]
+tags: ["ChatGPT", "커넥터", "리뷰", "프로필"]
 ---
 
 # ChatGPT로 기록 고도화

@@ -1,7 +1,7 @@
 ---
 stepHeader: true
 subtitle: "Git을 설치하고 터미널 환경을 설정한다."
-tags: ["Git 설치", "버전 확인", "터미널"]
+tags: ["Git", "설치", "터미널"]
 installation: true
 downloads: ["gitWindows"]
 ---
