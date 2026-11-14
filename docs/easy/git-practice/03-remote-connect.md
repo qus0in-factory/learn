@@ -27,10 +27,10 @@ git remote -v                # 등록 확인
 
 `origin`은 긴 URL에 붙이는 관례적 별칭이다.
 
-브랜치 이름이나 원격 주소에 오타가 났을 때는 아래 명령으로 바로잡는다.
+브랜치 이름이 다를 때나 원격 주소에 오타가 났을 때는 아래 명령으로 바로잡는다.
 
 ```bash
-git branch -M main                                        # 이미 main이 있어 -m이 거절될 때 덮어쓰기
+git branch -M main                                        # 이미 main이 있어 -m이 거절될 때, 기존 main을 덮어써도 되는지 확인한 뒤 사용
 git remote set-url origin https://github.com/본인계정/portfolio-web.git   # 원격 URL 수정
 git remote remove origin                                  # 별칭(예: orign)을 잘못 등록해 지울 때
 ```
