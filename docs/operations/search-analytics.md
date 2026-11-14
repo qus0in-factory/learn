@@ -13,40 +13,37 @@
 
 - `/git-easy/` 첫 페이지는 `Course`, easy 12개 강의는 `LearningResource`로 출력한다. easy 과정 첫 페이지의 `hasPart`에 12개 강의를 넣고, easy 과정에는 `educationalLevel: Beginner`, 모든 강의에는 `learningResourceType: Lesson`, `isAccessibleForFree: true`, 대표 `image`를 붙인다.
 - easy 강의는 `og:type=article`과 `article:published_time`·`article:modified_time`을 출력한다. modified 값은 sitemap lastmod와 같은 함수로 계산해 서로 일치한다.
-- 설명(description)은 `subtitle` → 경로별 설명 → 과정 요약·제목 조합 순서로 한 함수에서 만든다. easy 강의는 제목과 과정명을 포함해 페이지마다 다른 문장을 쓴다.
+- 설명(description)은 frontmatter `description` → `seo-meta.json descriptions[path]` → 기존 subtitle·과정 요약·제목 조합 폴백 순서로 한 함수에서 만든다. 화면의 subtitle은 유지하고 SEO 전용 설명을 우선한다. 색인 대상 70페이지는 40~90자·중복 0으로 검증했다.
 - easy 페이지 제목에는 과정 키워드를 붙이고, OG·Twitter 제목·설명·이미지와 `og:locale`·`og:site_name`을 출력한다. JSON-LD에는 `datePublished`를 함께 넣는다.
 - `/git/`과 `/git-easy/` 첫 페이지에 서로를 가리키는 링크를 두어 내부 링크를 공급한다.
 
 ## 배포 후 기록
 
-배포가 끝나면 아래 값을 채운다. 아직 기록하지 않았다.
+2026-11-15 정리 기준이다. 운영 dev는 `e9e833d`, main은 PR #127의 `ace5d2c`이며, 아래 값은 보존한 배포·readback 기록과 GitHub 이슈를 대조했다. 이번 정리에서 배포나 Search Console 계정 작업을 다시 실행하지 않았다.
 
 | 배포 | 배포일 | dev SHA | Worker version ID |
 |---|---|---|---|
 | 1차(SEO 1차) | 2026-11-14 | `09b705c6284b8828d966d0aadbeaedc2c072a207` | `b5614ac6-5d81-4f9b-9fce-771be985e7fd` |
 | 2차(본문·태그) | 2026-11-14 | `22d769e42aa349d497ccf3a8aaf6da633dc1cab5` | `b84ac4b6-747a-4e3e-bb5e-97ffffa861fc` |
-| 3차(SEO 2차) | (배포 후 기록) | (배포 후 기록) | (배포 후 기록) |
+| PDF·내비 전환(#118·#124) | 2026-11-14 | `20be3c961e0114eb2444ed0dc149b9accf586209` | `70a95384-9fe4-44bd-85a9-6faeddb52dae` |
+| 과정명·사이드바 수정(#126) | 2026-11-14 | `e9e833d35461e6ef22fac25b3ccf958f7961feb3` | `2ba03186-e114-424b-8c31-443f108bd58a` |
 
 - 1차 CI: [run 43593271917](https://github.com/qus0in-factory/learn/actions/runs/43593271917) success. readback 26개 probe, `/git-easy/` Course·`hasPart` 12, easy 강의 `article` 메타·lastmod 일치, sitemap 70(태그 포함), 두 과정 교차 링크, `/git/01-environment` 회귀 없음, 카탈로그 강의12/PDF12/퀴즈10이 PASS했다.
 - 2차 CI: [run 43596356260](https://github.com/qus0in-factory/learn/actions/runs/43596356260) success. description 47쪽 보강, tags·catalog `CollectionPage`·용어사전 `mainEntity`, 홈 `WebSite.description`, `og:image` alt 정합, git 03 `vim`/`:cq` 안내, easy PDF 덱 동기화·재빌드(revision `af38ae80aa4a2b447eb9ec35799cf09deb7c9c1d`, R2 12/12), git-easy Gist 1건 갱신, 과정 판별 정리를 포함하며 readback 10개 항목·26개 probe와 sitemap 70이 PASS했다.
-- 후속 이슈: [#118](https://github.com/qus0in-factory/learn/issues/118)(git PDF 교체)·[#119](https://github.com/qus0in-factory/learn/issues/119)(Search Console 색인 요청·sitemap 재제출).
+- #118·#124 배포: [CI 43602264816](https://github.com/qus0in-factory/learn/actions/runs/43602264816) success. git PDF 12개/270장·revision `6e8aed6c038f0da51751ab3cbadec21fd670fbea` 전환, R2 12/12, HTTP·카탈로그 12/12/10과 이전 revision 보존을 확인했다.
+- #126 배포: [CI 43603774351](https://github.com/qus0in-factory/learn/actions/runs/43603774351) success. `Go Git 集 순한맛` 과정명과 easy 하단 독립 섹션, H1·title·OG·Course.name·공개 DOM readback 5항목을 확인했다. PDF·D1 변경은 없다.
+- [#119 확인 기록](https://github.com/qus0in-factory/learn/issues/119#issuecomment-6878026184): 2026-11-14 sitemap 재제출 성공·발견 URL 약 70, 첫 색인 요청, 구조화 데이터 수정 후 `2026-11-14T13:30` easy 첫 레슨의 리치 결과 재테스트 통과(유효한 탐색경로 1개·교육과정 오류 해소)가 기록됐다. 리치 결과 통과를 검색 색인 완료로 해석하지 않는다.
+- [#120](https://github.com/qus0in-factory/learn/issues/120) 프로필의 두 과정 링크 반영은 완료·종료됐다. #107·#117·#118·#124·#126도 닫혔으며, 남은 열린 이슈는 소유자 작업 [#119](https://github.com/qus0in-factory/learn/issues/119)다.
 
-- Search Console 속성 확인·sitemap 제출 상태: (배포 후 기록)
-- 리치 결과 테스트 결과: (배포 후 기록)
-- 색인 요청·색인 생성 보고서 확인: (배포 후 기록)
+## 남은 소유자 작업(#119)
 
-## 배포 후 소유자 체크리스트
+Search Console 도메인 속성·sitemap 제출·첫 색인 요청·리치 결과 재테스트는 이슈에 완료로 기록됐다. 다음 항목은 아직 미완료이며 자동으로 완료 표시하지 않는다.
 
-전제: Search Console 도메인 속성과 sitemap 제출은 완료된 기록이 있고, 콘솔의 현재 상태는 확인하지 않았다.
+1. `github-practice/` 4쪽과 `git-practice/` 4쪽의 색인을 요청한다. 계정의 실제 요청 가능 한도에 맞춰 나눈다.
+2. `/git-easy/glossary`와 `/git-easy/tags`의 색인을 요청한다.
+3. 첫 요청 3~5일 뒤 페이지 색인 생성 보고서에서 git-easy URL 상태를 확인하고 결과를 #119에 남긴다. 발견·크롤링·색인·검색 노출을 각각 구분한다.
 
-1. 1차 배포 직후 URL 검사에서 "색인 생성 요청"을 한다. `/git-easy/`, `/git-easy/01-what-is-github`, `/git-easy/02-ai-and-github`, `/git-easy/04-what-is-git-cli`, `/git-easy/05-git-principle` 순서다. 하루 한도가 약 10건이므로 다음 날 `github-practice/` 4건과 `git-practice/` 4건, 셋째 날 `/git-easy/glossary`를 요청한다. `/git-easy/tags`는 2차 배포 뒤에 요청한다.
-2. 1차 배포 직후 sitemap을 다시 제출하고 상태가 "성공"인지, 발견 URL이 69개(2차 배포 뒤 70개)인지 확인한다.
-3. 배포 당일 [리치 결과 테스트](https://search.google.com/test/rich-results)에 `/git-easy/`와 easy 강의 1쪽을 넣어 Course·LearningResource·BreadcrumbList 오류가 0건인지 확인한다. 오류가 있으면 3차 배포 전에 고친다.
-4. 3~5일 뒤 페이지 색인 생성 보고서에서 git-easy URL 상태를 본다. "크롤링됨 – 현재 색인이 생성되지 않음"이면 1번을 다시 요청하고, "발견됨 – 미색인"이면 내부 링크를 먼저 보강한다.
-5. 선택 사항으로 이미 색인된 외부 페이지(GitHub 조직 README, X 프로필, 수강생 공유 링크)에 `/git-easy/` 링크를 추가한다. 2주 안의 발견에 가장 영향이 크다.
-6. Bing Webmaster Tools 등록·IndexNow 키, Google 소유 확인 HTML 태그 추가는 비용·계정·승인이 필요한 별도 범위다. 도메인 속성이면 HTML 태그는 필요 없다.
-
-색인 요청·sitemap·내부 링크는 2주 안의 발견을 돕지만 색인과 노출을 보장하지 않는다.
+Bing·IndexNow는 이번 세션에서 진행하지 않았다. 색인 요청·sitemap·내부 링크는 발견을 도울 수 있지만, 2주 안의 색인과 노출을 보장하지 않는다.
 
 ## 서치 콘솔
 

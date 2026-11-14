@@ -2,6 +2,11 @@
 > AI & 코딩 웹 학습 플랫폼
 - https://echo.qus0in.dev/
 
+## 과정과 운영
+
+- [Go Git 集](https://echo.qus0in.dev/git/) · [Go Git 集 순한맛](https://echo.qus0in.dev/git-easy/)
+- [현재 운영 상태](docs/operations/index.md) · [교재 구조 프레임워크](docs/course-framework.md) · [검색·분석과 소유자 작업](docs/operations/search-analytics.md)
+
 ## 아키텍처
 
 ```mermaid
@@ -36,7 +41,7 @@ flowchart TD
 - `docs`: 강의 마크다운 문서(`lecture/`), 공용 정적 자산(`public/`), 운영 가이드(`setup/`)
 - PDF 원본은 `scripts/learn-pdf/pilot/step01.json`–`step12.json`이다. 강의 사실 대조는 `docs/lecture`다.
 - 개념 장은 비교·분할·단계·행(`compare`, `split`, `steps`, `rows`)과 수치·문장(`stat`, `statement`), 기존 표·코드를 섞는다. PDF는 12개이고 각 20–24장, 합계 270장이다.
-- 고정·교체·readback은 [운영 목차](docs/operations/index.md)를 따른다. 현재 고정 revision은 `6e8aed6c038f0da51751ab3cbadec21fd670fbea`다. R2 업로드·검증은 완료했고 사이트·D1 전환은 배포 대기 중이다.
+- 고정·교체·readback은 [운영 목차](docs/operations/index.md)를 따른다. 현재 고정 revision은 `6e8aed6c038f0da51751ab3cbadec21fd670fbea`다. 2026-11-14 사이트·D1 전환과 HTTP·R2 readback을 완료했다.
 
 ## 라이선스
 

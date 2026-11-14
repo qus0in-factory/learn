@@ -1,6 +1,6 @@
 # 교재 구조 프레임워크
 
-새 교재(과정)를 추가할 때 공통으로 따르는 구조, 메타데이터, 내비게이션, SEO 계약, 등록 체크리스트를 정리한다. 현행 `docs/lecture/`(Go Git 集, `/git/`)와 `docs/easy/`(Go Git 集 순한맛, `/git-easy/`), `learn-site/.vitepress/` 코드(`dev` `a3b0e2e` 기준)를 근거로 삼는다.
+새 교재(과정)를 추가할 때 공통으로 따르는 구조, 메타데이터, 내비게이션, SEO 계약, 등록 체크리스트를 정리한다. 현행 `docs/lecture/`(Go Git 集, `/git/`)와 `docs/easy/`(Go Git 集 순한맛, `/git-easy/`), `learn-site/.vitepress/` 코드(`dev` `e9e833d` 기준)를 근거로 삼는다.
 
 ## 목차
 
@@ -133,12 +133,13 @@
 
 ### 3-2. 현행 구현과 기준
 
-| 항목 | 현행 구현 (`dev` `a3b0e2e`) | 새 과정 설계 시 고려점 | 근거 |
+| 항목 | 현행 구현 (`dev` `e9e833d`) | 새 과정 설계 시 고려점 | 근거 |
 |---|---|---|---|
 | 최상단 과정 제목 | git·easy 모두 비링크 최상단 그룹으로 통일됐다 (`{ text: labels.courseTitle, groups: [...] }`, `{ text: 'Go Git 集 순한맛', items: [...] }`) | 새 과정도 비링크 최상단 그룹 아래에 단계 그룹을 둔다 | `nav-groups.mjs:8-12`, `easy-nav.mjs:15-22` |
 | 레슨 그룹 | git은 `groups` 3단계(`Git Newbie` 01~04, `Git Amateur` 05~08, `Git Pro` 09~12), easy는 `GitHub`·`Git` 2개 섹션과 collapsed 실습 그룹으로 구성한다 | 본문·frontmatter에 단계명을 넣지 않고 코드 `order` 배열로 선언한다(`content-style.md` 3-1). 라벨 원문·키 위치는 D-5·D-6 | `nav-groups.mjs:9-11`, `easy-nav.mjs:11,16-17` |
 | 레슨 목록 평탄화 | `courseLessons`가 `sidebar['/git/'][0].items.flatMap((group) => group.items)`로 3개 그룹의 레슨을 평탄화한다 | `sidebar['/<id>/'][0]` 구조를 바꾸면 `course-data.mjs`·`nav.test.mjs:9-13`도 함께 맞춰야 한다 | `course-data.mjs:6`, `nav.test.mjs:9-13` |
-| 하단 링크·아이콘 | git·easy 모두 `{ items: [태그 모아보기, 용어 사전] }`을 둔다. `nav-icons.json`에 `/git/`(접두 생략 키 `tags`·`glossary`)과 `/git-easy/glossary`·`/git-easy/tags` 아이콘이 모두 등록됐다 | 새 과정은 `/<id>/tags`, `/<id>/glossary`를 포함한 모든 항목을 절대 경로 키로 등록한다 | `nav-groups.mjs:15-18`, `easy-nav.mjs:18-21`, `nav-icons.json:41,47,65,66` |
+| 하단 링크·아이콘 | git·easy 모두 `{ items: [태그 모아보기, 용어 사전] }`을 둔다. `nav-icons.json`에 `/git/`(접두 생략 키 `tags`·`glossary`)과 `/git-easy/glossary`·`/git-easy/tags` 아이콘이 모두 등록됐다 | 새 과정은 `/<id>/tags`, `/<id>/glossary`를 포함한 모든 항목을 절대 경로 키로 등록한다 | `nav-groups.mjs:15-18`, `easy-nav.mjs:19-22`, `nav-icons.json:41,47,65,66` |
+| 구조 검수 | #126에서 easy 하단 링크가 과정 그룹 안에 중첩된 회귀를 `277330c`로 수정했다 | 평탄화 순서가 같아도 DOM 깊이는 달라진다. 과정 제목은 비링크, 레슨은 단계 그룹 아래, 태그·용어는 과정 그룹 밖 독립 섹션인지 빌드 HTML과 배포 readback에서 확인한다 | `easy-nav.mjs:15-22`, `nav.test.mjs`, [회고](operations/117-seo-retrospective.md) |
 | 사이드바 키·pager | `site-theme.mjs:8`이 `/git/`·`/git-easy/` 접두 매칭, `nav.mjs:9-11`이 `flatten(sidebar)`로 pager를 만든다 | 그룹을 나눠도 flatten 순서가 같으면 pager는 유지된다 | `site-theme.mjs:8`, `nav.mjs:9-11` |
 | 브레드크럼(화면) | `CourseBreadcrumb.vue:9` 정규식에 `git/…`·`git-easy/…`가 하드코딩돼 있다 | 새 과정 추가 시 정규식에 `<id>/`를 추가한다 | `CourseBreadcrumb.vue:9` |
 

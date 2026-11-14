@@ -13,18 +13,20 @@
 | 1차 | [09b705c](https://github.com/qus0in-factory/learn/commit/09b705c6284b8828d966d0aadbeaedc2c072a207), [CI 43593271917](https://github.com/qus0in-factory/learn/actions/runs/43593271917) | 26개 probe, 순한맛 Course·hasPart 12, 레슨 article 날짜와 sitemap lastmod 일치, 태그 페이지, 두 과정 교차 링크, 카탈로그 강의12/PDF12/퀴즈10 |
 | 2차 | [22d769e](https://github.com/qus0in-factory/learn/commit/22d769e42aa349d497ccf3a8aaf6da633dc1cab5), [CI 43596356260](https://github.com/qus0in-factory/learn/actions/runs/43596356260) | readback 10개 항목과 26개 probe, sitemap 70, CollectionPage·용어사전 mainEntity·홈 설명·OG alt, vim 안내, 태그 정리, easy PDF 링크 |
 
-1차 Worker version은 `b5614ac6-5d81-4f9b-9fce-771be985e7fd`, 2차는 `b84ac4b6-747a-4e3e-bb5e-97ffffa861fc`로 기록됐다. Worker version과 PDF revision은 서로 다른 값이다. 2차에는 easy PDF 12개를 재생성하고 원격 업로드·SHA 대조를 마쳤으며, 실습 Gist 1건도 갱신했다. git 과정의 고정 PDF 교체는 별도 후속으로 남겼다. 현재 고정값은 [운영 목차](index.md)를 따른다.
+1차 Worker version은 `b5614ac6-5d81-4f9b-9fce-771be985e7fd`, 2차는 `b84ac4b6-747a-4e3e-bb5e-97ffffa861fc`로 기록됐다. Worker version과 PDF revision은 서로 다른 값이다. 2차에는 easy PDF 12개를 재생성하고 원격 업로드·SHA 대조를 마쳤으며, 실습 Gist 1건도 갱신했다. 당시 git 과정의 고정 PDF 교체는 후속 #118로 분리했고, 이후 12개/270장 전환과 readback을 완료했다. 현재 고정값은 [운영 목차](index.md)를 따른다.
 
-[#121](https://github.com/qus0in-factory/learn/pull/121)은 dev에서 main으로 병합됐고, 병합 SHA는 `8e6c7b023418298fd526785679bae735d20e1b17`이다. 이 PR로 #117이 종료됐다. 다음 상태는 회고 자료를 조회한 시점의 GitHub 기록이다.
+[#121](https://github.com/qus0in-factory/learn/pull/121)은 dev에서 main으로 병합됐고, 병합 SHA는 `8e6c7b023418298fd526785679bae735d20e1b17`이다. 이 PR로 #117이 종료됐다. 다음 상태는 2026년 11월 15일 세션 정리에서 다시 조회한 GitHub 기록이다.
 
 | 후속 | 확인한 상태와 남은 일 |
 | --- | --- |
-| [#118 git PDF 교체](https://github.com/qus0in-factory/learn/issues/118) | 열림. 바뀐 git 본문을 PDF 입력에 반영하고 승인된 교체 절차로 갱신하는 작업이다. |
-| [#119 Search Console](https://github.com/qus0in-factory/learn/issues/119) | 열림. sitemap 재제출 성공·70 URL과 첫 색인 요청이 체크됐다. 레슨의 Course 오류가 발견돼 리치 결과 재테스트 항목은 미완료로 남았다. Bing·IndexNow는 진행하지 않기로 정리됐다. |
+| [#118 git PDF 교체](https://github.com/qus0in-factory/learn/issues/118) | 닫힘. revision `6e8aed6c038f0da51751ab3cbadec21fd670fbea`·12개/270장을 배포했고 R2 12/12와 HTTP readback을 완료했다. |
+| [#119 Search Console](https://github.com/qus0in-factory/learn/issues/119) | 열림. sitemap·첫 색인 요청·리치 결과 재테스트는 완료로 기록됐다. 2·3일차의 추가 색인 요청과 색인 생성 보고서 확인이 소유자 작업으로 남았다. Bing·IndexNow는 진행하지 않았다. |
 | [#120 프로필 링크](https://github.com/qus0in-factory/learn/issues/120) | 닫힘. 댓글에서 프로필 README의 보통맛·순한맛 링크 반영을 확인했다. 초안 이슈 생성과 실제 프로필 수정은 분리했다. |
 | [#121 통합 PR](https://github.com/qus0in-factory/learn/pull/121) | main 병합 완료. 배포 SHA 두 개와 후속 #118~#120을 본문에 연결했다. |
+| [#124 내비·푸터](https://github.com/qus0in-factory/learn/issues/124) | 닫힘. #118과 함께 배포됐고 [PR #125](https://github.com/qus0in-factory/learn/pull/125)로 main에 반영됐다. |
+| [#126 사이드바·과정명](https://github.com/qus0in-factory/learn/issues/126) | 닫힘. dev `e9e833d` 배포와 readback 후 [PR #127](https://github.com/qus0in-factory/learn/pull/127)로 main `ace5d2c`에 반영됐다. |
 
-이 문서는 커밋, 작업 보고, readback 기록과 GitHub 이슈·PR을 대조했다. 운영 URL·외부 계정·Discord 전송을 이번 회고 작성에서 다시 검사하지 않았다. 구조화 데이터 후속 수정은 `3e520e2`와 dev 통합 `0c5a049`로 확인했으며, 그 수정의 운영 배포·Google 재판정까지 완료됐다고 확대하지 않는다.
+이 문서는 커밋, 작업 보고, readback 기록과 GitHub 이슈·PR을 대조했다. 운영 URL·외부 계정·Discord 전송을 이번 회고 작성에서 다시 검사하지 않았다. 구조화 데이터 후속 수정은 `3e520e2`와 dev 통합 `0c5a049`, [PR #122](https://github.com/qus0in-factory/learn/pull/122)로 확인했다. 이후 [#119 소유자 기록](https://github.com/qus0in-factory/learn/issues/119#issuecomment-6878026184)에 easy 첫 레슨의 리치 결과 재테스트 통과가 남았다. 모든 URL의 외부 도구 재검사나 검색 색인 완료를 뜻하지 않는다. [PR #123](https://github.com/qus0in-factory/learn/pull/123)은 회고를 main에 반영했다.
 
 ## 유지할 작업 방식
 
@@ -124,10 +126,23 @@ watcher의 조기 반환도 이번 회고의 확인 대상이었다. 이번에 �
 
 이 수정들은 같은 린트·빌드 검사를 통과한 초안에도 남아 있었다. 리뷰에서는 타입과 링크 존재뿐 아니라 화면의 실제 내용, 명령의 선행 상태, 다시 실행했을 때의 결과, 학습자가 읽는 순서까지 확인해야 했다.
 
+### #124·#126: 링크 순서가 같아도 사이드바 구조가 달랐다
+
+#124에서 git을 Newbie·Amateur·Pro 그룹으로 나누고 두 과정의 비링크 제목과 하단 태그·용어 링크를 맞췄다. 그러나 easy 하단 링크가 과정 그룹의 `items` 안에 들어가 화면에서는 Git 그룹에 딸린 것처럼 보였다. 링크 순서와 아이콘 규칙이 맞아도 부모·자식 깊이와 독립 섹션은 달랐다. 기존 `nav.test.mjs`의 평탄화된 git 링크 순서·부록 검사는 이 easy 중첩 구조를 검증하지 않았다.
+
+[277330c](https://github.com/qus0in-factory/learn/commit/277330c0fee2e154945462dd05e88f1cac4ccc96)는 태그·용어를 과정 그룹 밖의 독립 최상위 섹션으로 옮겼다. #126 readback에서는 easy와 git 레슨의 DOM 깊이, 하단 독립 그룹, 링크 순서와 CSS 아이콘을 따로 확인했다. 내비게이션 변경은 평탄화 순서와 실제 그룹 구조를 함께 검수하는 절차로 남긴다. 이번 문서 정리에서 새 테스트나 CI는 추가하지 않는다.
+
+### #126: 사이드바 제목과 실제 과정명이 달랐다
+
+사이드바에는 이미 `Go Git 集 순한맛`이 보였지만 공통 라벨과 title 템플릿에는 이전 이름이 남아 있었다. 따라서 사이드바 확인만으로 과정 첫 화면·홈 카드·공유·SEO의 이름 통일을 판단할 수 없었다.
+
+[8f90cf3](https://github.com/qus0in-factory/learn/commit/8f90cf37bcd66076072821b2f051277bca97acf6)는 `easy-labels.mjs`, `seo-meta.json`, 교차 링크와 교재 프레임워크의 표기를 맞췄다. 빌드에서는 기존 이름 0건, description 70페이지 40~90자·중복 0, H1·title·OG·Course.name을 확인했다. dev `e9e833d`와 Worker `2ba03186-e114-424b-8c31-443f108bd58a` 배포 뒤 공개 응답 5항목을 재확인했다. URL·PDF 파일명·용어 slug는 유지했고, 충돌 실습 코드의 ‘고깃집’ 문구는 과정명이 아니므로 보존했다.
+
 ## 다음 개정에서 적용할 기준
 
 - CI 실패는 정확한 런타임과 내장 라이브러리 버전으로 재현한 뒤 응답 타입을 점검한다. 기대값이나 CI를 먼저 바꾸지 않는다.
 - 워크트리를 만들면 커밋된 하네스와 검증 도구, 의존성 링크, import를 포함한 파일 소유권을 먼저 확인한다.
+- 내비게이션은 링크 순서와 DOM 계층·독립 섹션을 함께 확인하고, 과정명은 공통 원천과 화면·메타데이터의 모든 출력을 대조한다.
 - 완료 보고를 로컬 검증, 운영 빌드, 배포, readback, 외부 도구 판정, 소유자 작업, 알림 전송으로 구분한다.
 - JSON-LD는 파싱과 타입별 필수 속성·중첩 노드·ID 참조를 각각 검사한다. 검사 범위를 넓히더라도 새 테스트·CI는 요청 없이 추가하지 않는다.
 - 회고 자료의 최초 차단 보고와 결정 이력을 보존한다. 최종 완료 보고로 덮어쓰면 반복 횟수와 원인을 다시 확인하기 어렵다.
