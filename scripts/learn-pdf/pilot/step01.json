@@ -275,7 +275,7 @@
   "rows": [
    {
     "term": "버전 출력",
-    "detail": "git version 뒤에 설치 버전 문자열이 나온다"
+    "detail": "git -v는 Git 2.37 이상에서 지원한다. 실습은 git --version을 쓴다"
    },
    {
     "term": "경로 출력",
