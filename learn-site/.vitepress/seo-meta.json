@@ -1,7 +1,7 @@
 {
   "author": { "@type": "Person", "name": "변영인", "url": "https://qus0in.dev" },
   "publisher": {
-    "@type": "Organization", "name": "에코익힘책", "url": "https://echo.qus0in.dev/",
+    "@type": "Organization", "@id": "https://echo.qus0in.dev/#organization", "name": "에코익힘책", "url": "https://echo.qus0in.dev/",
     "logo": "https://echo.qus0in.dev/header-logo.png",
     "sameAs": ["https://github.com/qus0in-factory", "https://x.com/qus0in"]
   },
