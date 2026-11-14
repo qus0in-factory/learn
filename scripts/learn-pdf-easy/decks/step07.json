@@ -96,8 +96,8 @@
     "enhancement"
    ],
    [
-    "본문에 기록 파일 경로 작성",
-    "이슈와 기록 파일을 서로 찾게 한다"
+    "기록을 파일로 남겼다면",
+    "이슈 본문과 기록 파일에 서로 주소를 적는다"
    ]
   ]
  },
@@ -107,23 +107,23 @@
  },
  {
   "type": "table",
-  "title": "기록 파일과 틀",
+  "title": "기록 유형과 틀",
   "rows": [
    [
-    "기록",
+    "이슈 유형",
     "적는 내용"
    ],
    [
-    "docs/til.md",
-    "질문, 배운 점, 직접 확인한 결과, 아직 확인하지 못한 점"
+    "TIL 이슈",
+    "질문, 배운 점, 직접 확인한 결과, 아직 확인하지 못한 점 (Why→What→How)"
    ],
    [
-    "docs/retrospective.md",
-    "한 일과 느낌, Keep, Problem, Try"
+    "회고 이슈",
+    "한 일과 느낌, Keep, Problem, Try 또는 STAR"
    ],
    [
-    "docs/postmortem.md",
-    "확인한 사실과 추측을 나눠 영향과 원인, 재발 방지를 적는다"
+    "부검 이슈",
+    "확인한 사실과 추측을 나눠 영향과 원인, 재발 방지를 적는다 (STAR)"
    ]
   ]
  },
@@ -171,23 +171,23 @@
  },
  {
   "type": "steps",
-  "title": "기록 파일 커밋",
+  "title": "이슈에 기록 작성",
   "steps": [
    {
-    "label": "til",
-    "detail": "docs/til.md에 배운 점"
+    "label": "라벨·마일스톤",
+    "detail": "새 이슈를 열고 documentation 라벨과 마일스톤을 붙인다"
    },
    {
-    "label": "회고",
-    "detail": "retrospective에 KPT"
+    "label": "본문 작성",
+    "detail": "TIL은 Why→What→How, 회고·부검은 KPT나 STAR로 적는다"
    },
    {
-    "label": "부검",
-    "detail": "postmortem에 사실·추측"
+    "label": "파일 선택",
+    "detail": "모아 두고 싶다면 docs/til.md 등 파일로 커밋한다"
    },
    {
-    "label": "링크",
-    "detail": "대응 이슈에 링크하고 커밋"
+    "label": "연결",
+    "detail": "파일로 남겼다면 이슈에 링크하고 후속 할 일을 옮긴다"
    }
   ]
  },
