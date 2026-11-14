@@ -15,6 +15,7 @@ export const pages = {
 export const excluded = [
   '261102/**', '261103/**', 'ci.md', 'deployment.md', 'operations/**',
   'setup/**', 'license-notices.md', 'lecture/index.md', 'content-style.md',
+  'course-framework.md',
 ]
 
 export const vueAlias = {
