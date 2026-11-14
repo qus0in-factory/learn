@@ -8,6 +8,7 @@ description: echo 저장소에서 브랜치를 만들거나 커밋·병합·푸�
 ## 흐름
 - 작업 브랜치(`feat/<slug>`·`fix/<slug>`·`docs/<slug>`)는 `dev`에서 분기한다. 묶음 작업은 통합 브랜치(예: `feat/easy-gloss-sync`)로 모은 뒤 `dev`에 병합한다.
 - 병렬 쓰기 작업은 worktree를 쓰고 생성 직후 `course-site/node_modules` symlink 연결([배포 문서](../../../docs/deployment.md) 작업 환경)과 하네스·검증 스크립트 커밋 여부를 확인한다. 분배 시 소유 파일 목록에는 `import`로 얽힌 파일까지 포함한다. 병합 후 `git worktree remove`·`git worktree prune`과 병합된 로컬 브랜치 삭제까지 해야 완료다.
+- 리뷰는 구현자와 다른 워커가 맡고, 수정 지적은 반영 커밋과 재확인 결과로 연결한다. 리뷰 대기 중인 작업 브랜치·위키 로컬 커밋은 인계 대상이며 리뷰 전 병합·push·정리하지 않는다.
 - `dev→main`은 PR로만 한다. `main` 직접 푸시·머지·태그는 사용자 명시 요청 시에만 한다.
 
 ## 권한
