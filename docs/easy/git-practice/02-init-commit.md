@@ -23,7 +23,7 @@ git config --global user.email "your-email@example.com"
 git config --global --list
 ```
 
-이메일을 GitHub 계정과 맞추면 커밋이 내 계정에 연결된다. 오타가 있으면 같은 명령을 다시 실행해 덮어쓴다.
+이메일을 GitHub 계정과 맞추면 커밋이 내 계정에 연결된다. 오타가 있으면 같은 명령을 다시 실행해 덮어쓰고, 등록한 값을 지우려면 `git config --global --unset user.email`을 실행한다.
 
 등록한 값은 개별 키로도 확인한다.
 
@@ -58,6 +58,16 @@ git log --oneline    # 커밋 이력 확인
 ```
 
 명령의 의미를 알면 외우기 쉽다. `status`는 상태, `add`는 스테이징 영역에 더한다(add), `commit`은 확정한다는 뜻이다.
+
+## 트러블 슈팅
+
+`-m` 없이 `git commit`을 실행하면 터미널 안에 편집기(vim)가 열릴 수 있다.
+
+1. 입력 모드로 바꾸려면 `i`를 누르고 커밋 메시지를 적는다.
+2. 저장하고 나가려면 `Esc`를 누른 뒤 `:wq`를 입력하고 Enter를 누른다.
+3. 커밋을 취소하고 빠져나오려면 `Esc`를 누른 뒤 `:q!`를 입력하고 Enter를 누른다.
+
+자세한 조작법은 [vi 에디터](/git/appendix/08-vi-editor)를 참고한다.
 
 ## 스테이징 취소
 
