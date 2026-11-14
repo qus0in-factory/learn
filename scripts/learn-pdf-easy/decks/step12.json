@@ -171,6 +171,26 @@
   "image": "assets/pull-request.png"
  },
  {
+  "type": "split",
+  "step": "STEP 12",
+  "title": "AI에게 PR 맡기기",
+  "code": "dev 브랜치를 main으로 풀 리퀘스트 생성 및\n리뷰 코멘트 작성, 그리고 머지까지 해 줘.",
+  "items": [
+   {
+    "term": "쓰기 권한",
+    "detail": "커넥터에 쓰기 권한이 있는 요금제·설정에서 PR과 머지를 요청할 수 있다."
+   },
+   {
+    "term": "작업 지시",
+    "detail": "브랜치 생성·수정·PR·리뷰 코멘트까지 한 번에 요청할 수 있다."
+   },
+   {
+    "term": "사람 확인",
+    "detail": "반영 전에 사람이 Files changed(diff)를 직접 확인한다."
+   }
+  ]
+ },
+ {
   "type": "table",
   "title": "한 장 요약",
   "rows": [

@@ -5,13 +5,14 @@ import { pageFirstmod, pageLastmod } from './sitemap-lastmod.mjs'
 import meta from './seo-meta.json' with { type: 'json' }
 
 export function describe(page, path) {
+  if (page.frontmatter.description) return page.frontmatter.description
+  if (meta.descriptions[path]) return meta.descriptions[path]
   const { course, isCourseIndex, isLesson } = courseOf(path)
   const sub = page.frontmatter.subtitle
   const usable = sub && sub !== course?.summary ? sub : ''
   if (isLesson && course?.id === 'git-easy')
     return `${page.title} — ${course.title}. ${usable || course.summary}`
   if (usable) return usable
-  if (meta.descriptions[path]) return meta.descriptions[path]
   if (isCourseIndex && course) return course.summary
   if (isLesson && course) return `${page.title} — ${course.title}. ${course.summary}`
   return site.subtitle
