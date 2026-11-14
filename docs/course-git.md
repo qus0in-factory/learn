@@ -1,6 +1,6 @@
 <CourseHeader />
 
-Git이 처음이라면 웹 화면부터 시작하는 [고깃집 순한맛 Git·GitHub 입문 과정](/git-easy/)을 함께 본다.
+Git이 처음이라면 웹 화면부터 시작하는 [Go Git 集 순한맛 Git·GitHub 입문 과정](/git-easy/)을 함께 본다.
 
 ## {{ learningGoals }}
 
