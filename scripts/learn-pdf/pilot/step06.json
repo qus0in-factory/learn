@@ -349,6 +349,29 @@
   "step": "STEP 06"
  },
  {
+  "type": "steps",
+  "title": "계정 사이트와 docs 폴더",
+  "steps": [
+   {
+    "label": "저장소",
+    "detail": "계정.github.io를 만들고 초기 파일 체크박스는 해제한다."
+   },
+   {
+    "label": "docs 폴더",
+    "detail": "docs/index.html을 작성해 커밋하고 원격에 push한다."
+   },
+   {
+    "label": "Pages 설정",
+    "detail": "Deploy from a branch에서 main과 /docs를 선택해 Save한다."
+   },
+   {
+    "label": "공개 확인",
+    "detail": "계정.github.io/ 주소에서 첫 화면이 열리는지 확인한다."
+   }
+  ],
+  "step": "STEP 06"
+ },
+ {
   "type": "table",
   "step": "STEP 06",
   "title": "한 장 요약",
