@@ -1,5 +1,7 @@
 <CourseHeader />
 
+Git이 처음이라면 웹 화면부터 시작하는 [고깃집 순한맛 Git·GitHub 입문 과정](/git-easy/)을 함께 본다.
+
 ## {{ learningGoals }}
 
 - 웹페이지 변경을 커밋으로 남기고 이전 상태를 확인할 수 있다.
