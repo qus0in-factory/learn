@@ -21,5 +21,7 @@ description: echo 사이트·Worker 배포, PDF 재생성·교체, R2 정적 자
 ## 순서
 1. `dev`가 깨끗하고 배포할 SHA의 CI가 성공했는지 확인한다(`gh run list --branch dev`).
 2. `echo-verify` 스킬로 로컬 검증을 통과시킨다.
-3. 문서의 dry-run → apply → readback(원격 크기·SHA·HTTP 응답) 순서를 지킨다. readback 없이 완료로 보고하지 않는다.
-4. 배포 SHA·Worker version·검증 결과를 운영 목차 "현재 상태"에 갱신한다.
+3. easy PDF revision(`learn-site/.vitepress/pdf-easy.json`)이 바뀌면 사이트 배포 전에 R2 업로드·readback을 선행한다.
+4. `scripts/static-assets/deploy.mjs`는 `dist/learn`이 운영 값으로 빌드돼 있어야 통과한다(`verify-local.sh` 빌드 산출물은 CDN·카카오 키가 없어 가드에 걸림). 배포 직전 `VITE_ASSET_CDN_BASE_URL=https://files.qus0in.dev node --env-file=<메인>/.env.local ./course-site/node_modules/vitepress/bin/vitepress.js build learn-site`로 다시 빌드한다.
+5. 문서의 dry-run → apply → readback(`scripts/learn-ops/readback.sh`, 원격 크기·SHA·HTTP 응답) 순서를 지킨다. readback 없이 완료로 보고하지 않는다.
+6. 배포 SHA·CI run·Worker version·검증 결과를 `docs/operations`([운영 목차](../../../docs/operations/index.md) "현재 상태")에 기록한다.
