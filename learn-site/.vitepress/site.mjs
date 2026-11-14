@@ -16,7 +16,7 @@ export const site = {
   footer: [
     { text: adLabels.privacy, link: adLabels.privacyPath },
     { text: 'License', link: '/licenses' },
-    { text: 'GitHub', link: 'https://github.com/qus0in-factory', icon: 'github' },
+    { text: 'GitHub', link: 'https://github.com/qus0in', icon: 'github' },
     { text: 'X', link: 'https://x.com/qus0in', icon: 'x' },
   ],
 }
