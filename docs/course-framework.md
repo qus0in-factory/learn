@@ -1,6 +1,6 @@
 # 교재 구조 프레임워크
 
-새 교재(과정)를 추가할 때 공통으로 따르는 구조, 메타데이터, 내비게이션, SEO 계약, 등록 체크리스트를 정리한다. 현행 `docs/lecture/`(Go Git 集, `/git/`)와 `docs/easy/`(고깃집 순한맛, `/git-easy/`), `learn-site/.vitepress/` 코드(`dev` `a3b0e2e` 기준)를 근거로 삼는다.
+새 교재(과정)를 추가할 때 공통으로 따르는 구조, 메타데이터, 내비게이션, SEO 계약, 등록 체크리스트를 정리한다. 현행 `docs/lecture/`(Go Git 集, `/git/`)와 `docs/easy/`(Go Git 集 순한맛, `/git-easy/`), `learn-site/.vitepress/` 코드(`dev` `a3b0e2e` 기준)를 근거로 삼는다.
 
 ## 목차
 
@@ -151,7 +151,7 @@
 
 ### 3-4. 제목 템플릿
 
-easy 레슨만 `titleTemplate` `:title | 고깃집 순한맛 Git·GitHub 입문`을 쓴다(`seo-meta.json:10`, `page-data.mjs:30-34`). git은 VitePress 기본(`:title | 에코익힘책`)을 쓴다(D-7).
+easy 레슨만 `titleTemplate` `:title | Go Git 集 순한맛 Git·GitHub 입문`을 쓴다(`seo-meta.json:10`, `page-data.mjs:30-34`). git은 VitePress 기본(`:title | 에코익힘책`)을 쓴다(D-7).
 
 ## 4. SEO·구조화 계약
 
