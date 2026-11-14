@@ -7,6 +7,7 @@
 - [카카오 공유](kakao-sharing.md): Web 도메인·키 주입·사전 로드 확인
 - [광고 슬롯](advertising.md): 기본 꺼짐, ads.txt 조건부 생성, 개인정보 초안
 - [콘텐츠 규칙](../content-style.md): 원본 문체·형식과 수동 린트
+- [교재 구조 프레임워크](../course-framework.md): 새 과정 구조·메타·내비·SEO 계약·등록 체크리스트
 - [Git 교안과 PDF 보강 회고 및 부검](pdf-training-retrospective.md): 편집 재작업·명령 검토·렌더링·배포 완료 기준
 - [Git·GitHub 교안과 SEO 보강 회고 및 부검](117-seo-retrospective.md): 런타임 차이·배포 가드·구조화 데이터·작업 인계 기준
 
