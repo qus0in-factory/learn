@@ -1,13 +1,14 @@
 <script setup>
 import { computed } from 'vue'
 import { useData } from 'vitepress'
+import { coursePrefix } from '../seo-course-of.mjs'
 import { tagLabels as t } from '../tag-labels.mjs'
 import { sortedGroups } from './tag-group-items.mjs'
 import TagGroupLinks from './TagGroupLinks.vue'
 import './tag-groups.css'
 
 const { page, theme } = useData()
-const prefix = computed(() => page.value.relativePath.startsWith('git-easy/') ? '/git-easy' : '/git')
+const prefix = computed(() => coursePrefix(page.value.relativePath))
 const groups = computed(() => sortedGroups(prefix.value === '/git-easy' ? theme.value.easyTagGroups : theme.value.tagGroups))
 </script>
 

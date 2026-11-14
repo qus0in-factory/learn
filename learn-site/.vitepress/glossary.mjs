@@ -1,9 +1,9 @@
 import { readFileSync } from 'node:fs'
 import { courseContents } from './course-contents.mjs'
 import { easySidebar } from './easy-nav.mjs'
+import { flattenCourseItems } from './seo-course-of.mjs'
 import { tagSlug } from './tag-slug.mjs'
 
-const flatten = items => items.flatMap(item => item.items ? flatten(item.items) : [item])
 const loadData = path => JSON.parse(readFileSync(new URL(path, import.meta.url), 'utf8'))
 
 export function buildGlossary(data, prefix, pageMap) {
@@ -26,7 +26,7 @@ export function buildGlossary(data, prefix, pageMap) {
 }
 
 const gitPages = Object.fromEntries(courseContents.map(i => [i.link, i]))
-const easyPages = Object.fromEntries(flatten(easySidebar['/git-easy/']).map(i => [i.link, i]))
+const easyPages = Object.fromEntries(flattenCourseItems(easySidebar['/git-easy/']).map(i => [i.link, i]))
 
 export const glossary = buildGlossary(loadData('../../docs/lecture/glossary.json'), '/git', gitPages)
 export const easyGlossary = buildGlossary(loadData('../../docs/easy/glossary.json'), '/git-easy', easyPages)

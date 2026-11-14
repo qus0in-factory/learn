@@ -1,12 +1,13 @@
 <script setup>
 import { computed } from 'vue'
 import { useData } from 'vitepress'
+import { coursePrefix } from '../seo-course-of.mjs'
 import { stepLabels } from '../step-labels.mjs'
 import { tagSlug } from '../tag-slug.mjs'
 import './step-tags.css'
 
 const { frontmatter, page } = useData()
-const prefix = computed(() => page.value.relativePath.startsWith('git-easy/') ? '/git-easy' : '/git')
+const prefix = computed(() => coursePrefix(page.value.relativePath))
 </script>
 
 <template>

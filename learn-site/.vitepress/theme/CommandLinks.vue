@@ -1,11 +1,13 @@
 <script setup>
 import { useData } from 'vitepress'
+import { coursePrefix } from '../seo-course-of.mjs'
 import { tagLabels } from '../tag-labels.mjs'
 import commands from '../commands.json'
 
-const { frontmatter, theme } = useData()
+const { frontmatter, theme, page } = useData()
+const prefix = coursePrefix(page.value.relativePath)
 const steps = (frontmatter.value.stepRefs || [])
-  .map((ref) => theme.value.courseContents.find((item) => item.link === `/git/${ref}`)).filter(Boolean)
+  .map((ref) => theme.value.courseContents.find((item) => item.link === `${prefix}/${ref}`)).filter(Boolean)
 const docs = `${commands.docs}${frontmatter.value.command}`
 </script>
 

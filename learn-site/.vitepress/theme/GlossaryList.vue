@@ -1,13 +1,14 @@
 <script setup>
 import { computed } from 'vue'
 import { useData } from 'vitepress'
+import { courseOf } from '../seo-course-of.mjs'
 import { glossaryLabels as t } from '../glossary-labels.mjs'
 import GlossaryTerm from './GlossaryTerm.vue'
 import './tag-groups.css'
 
 const { page, theme } = useData()
 const groups = computed(() => {
-  const isEasy = page.value.relativePath.startsWith('git-easy/')
+  const isEasy = courseOf(`/${page.value.relativePath}`).course?.id === 'git-easy'
   return (isEasy ? theme.value.easyGlossary : theme.value.glossary).groups
 })
 </script>
