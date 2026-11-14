@@ -19,8 +19,8 @@ export function courseGraph(p, url) {
     ...(onCourse ? { isAccessibleForFree: true, image: ogImage(p.path) } : {}),
     ...(onCourse && course?.id === 'git-easy' ? { educationalLevel: 'Beginner' } : {}),
     ...(isLesson ? { learningResourceType: 'Lesson' } : {}),
-    ...(isCourseIndex ? { provider: meta.publisher } : isLesson
-      ? { isPartOf: { '@type': 'Course', '@id': absolute(course.link) } } : {}),
+    ...(isCourseIndex ? { '@id': absolute(course.link), provider: meta.publisher } : isLesson
+      ? { isPartOf: { '@id': absolute(course.link) } } : {}),
   }
   return [item, breadcrumbs(p)]
 }
