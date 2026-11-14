@@ -1,7 +1,7 @@
 ---
 stepHeader: true
 subtitle: "이슈로 작업을 관리하고 실습 기록을 작성한다."
-tags: ["Issue", "Label", "Milestone", "TIL", "회고", "부검"]
+tags: ["이슈", "라벨", "마일스톤", "TIL", "회고", "부검"]
 ---
 
 # 라벨·이슈·기록 작성

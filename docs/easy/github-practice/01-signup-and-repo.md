@@ -1,7 +1,7 @@
 ---
 stepHeader: true
 subtitle: "GitHub에 가입하고 첫 저장소를 만든다."
-tags: ["GitHub 가입", "저장소 만들기", "README", "github.dev"]
+tags: ["계정", "저장소", "README", "github.dev"]
 ---
 
 # 가입과 저장소 만들기
