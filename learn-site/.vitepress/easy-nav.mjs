@@ -15,10 +15,10 @@ export const easySidebar = {
     { text: 'Go Git 集 순한맛', items: [
       section('GitHub', 'git-easy/01-what-is-github.html', 'git-easy/02-ai-and-github.html', l.githubPractice, ghPractice),
       section('Git', 'git-easy/04-what-is-git-cli.html', 'git-easy/05-git-principle.html', l.gitPractice, gitPractice),
-      { items: [
-        { text: tagLabels.title, link: '/git-easy/tags' },
-        { text: glossaryLabels.title, link: '/git-easy/glossary' },
-      ] },
+    ] },
+    { items: [
+      { text: tagLabels.title, link: '/git-easy/tags' },
+      { text: glossaryLabels.title, link: '/git-easy/glossary' },
     ] },
   ],
 }
