@@ -5,6 +5,8 @@ tags: ["GitHub", "Git", "입문"]
 
 <CourseHeader />
 
+Git 명령과 협업 흐름을 단계별로 다루는 [Go Git 集 과정](/git/)을 함께 본다.
+
 ## {{ learningGoals }}
 
 - Git과 GitHub의 핵심 개념과 협업 흐름을 이해한다.

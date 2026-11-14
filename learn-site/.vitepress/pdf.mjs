@@ -5,12 +5,12 @@ import { labels as l } from './labels.mjs'
 import { courseLessons } from './course-data.mjs'
 import { easyLessons } from './easy-pdf.mjs'
 import { courseContents } from './course-contents.mjs'
-import { tagGroups } from './tag-groups.mjs'
+import { tagGroups, easyTagGroups } from './tag-groups.mjs'
 
 export { revision }
 
 export const themeConfig = {
-  logo: site.logo, nav: [], courseLessons, easyLessons, courseContents, tagGroups,
+  logo: site.logo, nav: [], courseLessons, easyLessons, courseContents, tagGroups, easyTagGroups,
   outline: { label: l.outline }, docFooter: { prev: l.previous, next: l.next },
   sidebarMenuLabel: l.menu, returnToTopLabel: l.top,
   darkModeSwitchLabel: l.appearance, darkModeSwitchTitle: l.dark, lightModeSwitchTitle: l.light,

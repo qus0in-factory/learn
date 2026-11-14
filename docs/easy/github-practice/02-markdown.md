@@ -1,7 +1,7 @@
 ---
 stepHeader: true
 subtitle: "마크다운으로 README 문서를 작성한다."
-tags: ["Markdown", "README", "Profile", "github.dev"]
+tags: ["마크다운", "README", "프로필"]
 ---
 
 # 마크다운 작성

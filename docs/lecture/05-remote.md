@@ -89,7 +89,7 @@ flowchart TB
    - **중요 주의사항**: `Add a README file`, `Add .gitignore`, `Choose a license` 등 초기 파일 생성 체크박스를 <strong>모두 해제(체크 없음)</strong>한다. 이미 로컬에 파일이 있으므로 빈 저장소로 만들어야 한다.
    - `Create repository` 초록색 버튼 클릭.
 4. 생성된 페이지에서 HTTPS 주소를 확인하고 복사한다 (예: `https://github.com/본인계정/portfolio-web.git`).
-5. VS Code 터미널에서 `git branch --show-current`로 브랜치 이름을 확인한다. 이름이 `main`이면 다음 단계로 넘어간다. `master` 등 다른 이름이면 `git branch -m main`으로 이름을 바꾼다. `-m`은 다른 브랜치가 `main`을 쓰고 있으면 거절하므로, 오류가 나면 `git branch`로 목록을 확인하고 강사에게 문의한다. 이 실습의 뒤 단계는 모두 `main`을 기준으로 한다.
+5. VS Code 터미널에서 `git branch --show-current`로 브랜치 이름을 확인한다. 이름이 `main`이면 다음 단계로 넘어간다. `master` 등 다른 이름이면 `git branch -m main`으로 이름을 바꾼다. `-m`은 다른 브랜치가 `main`을 쓰고 있으면 거절하므로, 같은 이름이 이미 있을 때는 `-M`으로 덮어쓴다. 이 실습의 뒤 단계는 모두 `main`을 기준으로 한다.
 6. 로컬 저장소에 원격 주소를 등록한다:
    `git remote add origin https://github.com/본인계정/portfolio-web.git`
 7. 원격 주소가 제대로 등록되었는지 확인한다:
@@ -113,7 +113,7 @@ flowchart TB
 # 1. 현재 브랜치 이름 확인
 git branch --show-current
 
-# 1-1. 이름이 main이 아니면 main으로 정리 (-m은 다른 main 브랜치가 있으면 거절)
+# 1-1. 이름이 main이 아니면 main으로 정리 (-m은 같은 이름이 있으면 거절, -M은 덮어쓰기)
 git branch -m main
 
 # 2. GitHub 원격 저장소 연결 (본인의 계정명으로 입력)

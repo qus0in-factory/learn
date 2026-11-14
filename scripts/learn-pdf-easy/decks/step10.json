@@ -73,8 +73,8 @@
     "detail": "이메일을 계정과 맞추면 커밋이 내 계정에 연결된다"
    },
    {
-    "term": "오타 정정",
-    "detail": "같은 명령을 다시 실행하면 값을 덮어쓴다"
+    "term": "오타·삭제",
+    "detail": "다시 실행하면 덮어쓰고, 지울 때는 git config --global --unset user.email을 실행한다"
    }
   ]
  },
@@ -185,6 +185,28 @@
    {
     "term": ".git 보호",
     "detail": ".git 폴더 안은 사용자가 직접 고치지 않는다"
+   }
+  ]
+ },
+ {
+  "type": "rows",
+  "title": "트러블 슈팅",
+  "rows": [
+   {
+    "term": "vim 열림",
+    "detail": "-m 없이 git commit을 실행하면 편집기(vim)가 열릴 수 있다"
+   },
+   {
+    "term": "입력 모드",
+    "detail": "i를 눌러 입력 모드로 바꾼 뒤 커밋 메시지를 적는다"
+   },
+   {
+    "term": "저장·종료",
+    "detail": "Esc를 누른 뒤 :wq를 입력하고 Enter를 누른다"
+   },
+   {
+    "term": "취소·탈출",
+    "detail": "Esc를 누른 뒤 :q!를 입력하고 Enter를 눌러 빠져나온다"
    }
   ]
  },

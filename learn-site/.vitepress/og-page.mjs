@@ -1,18 +1,34 @@
 import { site } from './site.mjs'
-import { courses } from './courses.mjs'
-import { share } from './course-share.mjs'
 import config from './og.json' with { type: 'json' }
-import { ogImage } from './og-image.mjs'
+import { ogImageMeta } from './og-image.mjs'
 import { ogHead } from './og-head.mjs'
-import meta from './seo-meta.json' with { type: 'json' }
+import { absolute, pagePath } from './seo-paths.mjs'
+import { courseOf } from './seo-course-of.mjs'
+import { describe } from './seo-records.mjs'
+import { pageFirstmod, pageLastmod } from './sitemap-lastmod.mjs'
+
+const iso = value => {
+  if (!value) return ''
+  const date = new Date(value)
+  return Number.isNaN(date.getTime()) ? '' : date.toISOString()
+}
 
 export function ogPage(page) {
-  const f = page.relativePath === 'course-git.md' ? 'git/index.md' : page.relativePath
-  const p = '/' + f.replace(/index\.md$/, '').replace(/\.md$/, '')
-  const course = (p === '/git' || p.startsWith('/git/')) && !p.startsWith('/git-easy')
-  const description = page.frontmatter.subtitle || meta.descriptions[p] || (course ? courses[0].summary : site.subtitle)
-  const values = { title: page.title || site.title, description, url: new URL(p, share.origin).href,
-    image: ogImage(p, process.env.VITE_ASSET_CDN_BASE_URL),
-    type: /^\/git\/\d{2}-/.test(p) ? config.stepType : config.siteType }
-  page.frontmatter.head = [...(page.frontmatter.head || []), ...ogHead(values)]
+  const path = pagePath(page.relativePath)
+  const { isLesson } = courseOf(path)
+  const description = describe(page, path)
+  const url = path.slice(1)
+  const image = ogImageMeta(path, process.env.VITE_ASSET_CDN_BASE_URL)
+  const values = {
+    title: page.title || site.title, description, url: absolute(path),
+    image: image.url,
+    type: isLesson ? config.stepType : config.siteType,
+    locale: config.locale, site_name: site.title,
+    'image:width': config.width, 'image:height': config.height,
+    'image:alt': image.alt,
+  }
+  const article = isLesson ? {
+    published_time: iso(pageFirstmod(url)), modified_time: iso(pageLastmod(url)),
+  } : null
+  page.frontmatter.head = [...(page.frontmatter.head || []), ...ogHead(values, article)]
 }

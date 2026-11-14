@@ -1,13 +1,18 @@
 <script setup>
+import { computed } from 'vue'
+import { useData } from 'vitepress'
+import { coursePrefix } from '../seo-course-of.mjs'
 import { glossaryLabels as t } from '../glossary-labels.mjs'
 import { itemLabel } from './tag-group-items.mjs'
 
 const props = defineProps({ term: { type: Object, required: true } })
-const rows = [
+const { page } = useData()
+const prefix = computed(() => coursePrefix(page.value.relativePath))
+const rows = computed(() => [
   [t.steps, props.term.steps.map(s => ({ href: s.link, text: itemLabel(s) }))],
   [t.commands, props.term.commands.map(c => ({ href: c.link, text: c.text }))],
-  [t.tags, props.term.tags.map(g => ({ href: `/git/tags#${g.slug}`, text: g.tag }))],
-].filter(([, items]) => items.length)
+  [t.tags, props.term.tags.map(g => ({ href: `${prefix.value}/tags#${g.slug}`, text: g.tag }))],
+].filter(([, items]) => items.length))
 </script>
 
 <template>
