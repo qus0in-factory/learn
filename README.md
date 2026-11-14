@@ -35,8 +35,8 @@ flowchart TD
 - `scripts`: D1 동기화, PDF 운용, 검증 및 린트 자동화 스크립트
 - `docs`: 강의 마크다운 문서(`lecture/`), 공용 정적 자산(`public/`), 운영 가이드(`setup/`)
 - PDF 원본은 `scripts/learn-pdf/pilot/step01.json`–`step12.json`이다. 강의 사실 대조는 `docs/lecture`다.
-- 개념 장은 비교·분할·단계·행(`compare`, `split`, `steps`, `rows`)과 수치·문장(`stat`, `statement`), 기존 표·코드를 섞는다. PDF는 12개이고 각 20–24장, 합계 268장이다.
-- 고정·교체·readback은 [운영 목차](docs/operations/index.md)를 따른다. 현재 고정 revision은 `dd849e121a06f0e6e0c414bef600541f97991af3`다.
+- 개념 장은 비교·분할·단계·행(`compare`, `split`, `steps`, `rows`)과 수치·문장(`stat`, `statement`), 기존 표·코드를 섞는다. PDF는 12개이고 각 20–24장, 합계 270장이다.
+- 고정·교체·readback은 [운영 목차](docs/operations/index.md)를 따른다. 현재 고정 revision은 `6e8aed6c038f0da51751ab3cbadec21fd670fbea`다. R2 업로드·검증은 완료했고 사이트·D1 전환은 배포 대기 중이다.
 
 ## 라이선스
 
