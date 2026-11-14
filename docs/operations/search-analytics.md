@@ -23,9 +23,11 @@
 
 | 배포 | 배포일 | dev SHA | Worker version ID |
 |---|---|---|---|
-| 1차(SEO 1차) | (배포 후 기록) | (배포 후 기록) | (배포 후 기록) |
+| 1차(SEO 1차) | 2026-11-14 | `09b705c6284b8828d966d0aadbeaedc2c072a207` | `b5614ac6-5d81-4f9b-9fce-771be985e7fd` |
 | 2차(본문·태그) | (배포 후 기록) | (배포 후 기록) | (배포 후 기록) |
 | 3차(SEO 2차) | (배포 후 기록) | (배포 후 기록) | (배포 후 기록) |
+
+- 1차 CI: [run 43593271917](https://github.com/qus0in-factory/learn/actions/runs/43593271917) success. readback 26개 probe, `/git-easy/` Course·`hasPart` 12, easy 강의 `article` 메타·lastmod 일치, sitemap 70(태그 포함), 두 과정 교차 링크, `/git/01-environment` 회귀 없음, 카탈로그 강의12/PDF12/퀴즈10이 PASS했다.
 
 - Search Console 속성 확인·sitemap 제출 상태: (배포 후 기록)
 - 리치 결과 테스트 결과: (배포 후 기록)
