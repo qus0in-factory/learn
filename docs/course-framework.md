@@ -5,10 +5,10 @@
 ## 목차
 
 - [0. 용어와 식별자](#_0-용어와-식별자)
-- [1. 교재 1개의 표준 구성 요소](#_1-교재-1개의-표준-구성-요소)
-- [2. 레슨 frontmatter 스키마와 본문 골격](#_2-레슨-frontmatter-스키마와-본문-골격)
+- [1. 교재 표준 구성 요소](#_1-교재-표준-구성-요소)
+- [2. 레슨 스키마와 골격](#_2-레슨-스키마와-골격)
 - [3. 사이드바·내비 규칙](#_3-사이드바·내비-규칙)
-- [4. SEO·구조화 데이터 계약](#_4-seo·구조화-데이터-계약)
+- [4. SEO·구조화 계약](#_4-seo·구조화-계약)
 - [5. 새 과정 추가 체크리스트](#_5-새-과정-추가-체크리스트)
 - [6. 하지 말 것](#_6-하지-말-것)
 - [7. 위험과 미확인 항목](#_7-위험과-미확인-항목)
@@ -24,7 +24,7 @@
 | 레슨 | `NN-slug.md` (2자리 번호 + 영문 kebab). 정규식 `^\d{2}-[\w-]+\.md$` | `nav-items.mjs:9`, `scripts/learn/paths.mjs:12`, `pdf.mjs:21` |
 | STEP NN | 표시 계층이 사이드바 순서로 붙이는 라벨. 원본에 쓰지 않는다 | `step-label.mjs:3-5`, `course-contents.mjs:8`, `content-style.md` 3-1 |
 
-## 1. 교재 1개의 표준 구성 요소
+## 1. 교재 표준 구성 요소
 
 ### 1-1. 구성 요소 표
 
@@ -39,7 +39,7 @@
 | 7 | 용어 사전 | 필수 | `glossary.json` + `glossary.md` | `/<id>/glossary` | `glossary.mjs:31-32`, `seo-glossary-schema.mjs:5-8`, `site-theme.mjs:9`, `GlossaryList.vue:11-12` | 1-3절 |
 | 8 | 태그 | 필수 | 레슨 frontmatter `tags` (원본) + `tags.md` 껍데기 | `/<id>/tags` | `tag-groups.mjs:30-35`, `pdf.mjs:13`, `TagGroups.vue:12,16`, `markdown-widgets.mjs:10` | `tag-groups.mjs:8` 주석 "Step tags are the source" |
 | 9 | 복습 퀴즈(페이지 내) | 레슨형 필수 / 입문형 D-3 | 레슨 끝 `## 복습 퀴즈 <QuizHelp />` + `::정답::` | 없음 | `quiz-blank.mjs`, `QuizHelp.vue`, `markdown-widgets.mjs:12` | `01-environment.md:137-141`, `content-style.md` 3-11 |
-| 10 | D1 카탈로그·퀴즈 10문항 | 선택(현재 git만) | `catalog.md`, `data/learn-quiz.md` | `/<id>/catalog`, `/api/catalog` | `scripts/sync-learn-d1.mjs`, `scripts/learn/lectures.mjs:14`(day·schedule 필수), `meta.mjs:5`(제목 고정) | 5-3절, D-12 |
+| 10 | D1 카탈로그·퀴즈 10문항 | 선택(현재 git만) | `catalog.md`, `data/learn-quiz.md` | `/<id>/catalog`, `/api/catalog` | `scripts/sync-learn-d1.mjs`, `scripts/learn/lectures.mjs:14`(day·schedule 필수), `scripts/learn/meta.mjs:5`(제목 고정) | 5-3절, D-12 |
 | 11 | PDF 덱 | 선택 | git: `scripts/learn-pdf/pilot/stepNN.json`+`subjects.json`; easy: `scripts/learn-pdf-easy/`+`easy-names.mjs` | `files.qus0in.dev/v0.1.0/[<prefix>/]<name>.pdf?revision=` | `pdf.json`(frozen), `pdf-easy.json`(revision·prefix), `pdf-url.mjs:16`, `easy-pdf.mjs:14`, `pdf.mjs:20-24` | `docs/setup/pdf-release.md` |
 | 12 | Gist 예제 | 선택 | git: `scripts/learn-pdf/gists.json`(키 `NN-slug`); easy: `scripts/learn-gist-easy/gists.json`(키 `git-easy/<path>`) | 외부 | `course-data.mjs:5-9`, `StepHeader.vue:7,10` | D-11 |
 | 13 | 삽화·스크린샷 | 선택 | `<Illustration name alt />`, `<Screenshot name alt />` | CDN `/illust-<name>-<w>.webp`, `/shot-<name>-<w>.webp` | `illustrations.json`(prefix `illust-`), `markdown-illustrations.mjs:5-13` | 전 과정 공용 네임스페이스, D-14 |
@@ -54,7 +54,7 @@
 - 같은 과정 안의 링크는 상대 `.md` 경로(`glossary.md#slug`, `appendix/05-os-differences.md`)로 쓴다. Markdown 내보내기가 `.md` 링크를 절대 URL로 변환한다(`markdown-export.mjs:10-14`). 다른 과정으로 가는 링크는 절대 경로 `/<id>/...`를 쓴다(`docs/easy/05-git-principle.md:155-159`, `docs/easy/01-what-is-github.md:9`).
 - `index.md`는 과정 디렉터리 안에 두지 않는다. `docs/lecture/index.md`는 미게시 강사용 일정표로 `excluded`에 있다(`pages.mjs:17`, `content-style.md` 4절). 과정 첫 페이지는 `docs/course-<id>.md`다.
 
-### 1-3. 용어 사전 데이터 계약 (`glossary.json`)
+### 1-3. 용어 사전 계약
 
 ```json
 {
@@ -79,9 +79,9 @@
 - 태그 slug: `tagSlug` 한 규칙(`tag-slug.mjs:3`)을 쓴다. 헤더 칩(`StepTags.vue:16`)과 `/tags#slug` 앵커가 같은 함수를 쓴다.
 - 과정 첫 페이지의 `tags`(`course-git-easy.md:3`)는 집계 대상 디렉터리(`docs/easy/`) 밖이므로 태그 페이지에 나타나지 않는다(`tag-groups.mjs:31,34`). 새 과정에서는 첫 페이지 `tags`를 요구하지 않는다.
 
-## 2. 레슨 frontmatter 스키마와 본문 골격
+## 2. 레슨 스키마와 골격
 
-### 2-1. frontmatter 키
+### 2-1. 메타데이터 키
 
 | 키 | 타입 | 필수 | 사용처 | 근거 |
 |---|---|---|---|---|
@@ -116,7 +116,7 @@
 
 ## 3. 사이드바·내비 규칙
 
-### 3-1. 표준 사이드바 형식 (#124 반영 기준)
+### 3-1. 표준 사이드바 형식
 
 ```text
 <과정 제목>                      ← 비링크 최상단 그룹 (예: 'Go Git 集', 'Go Git 集 순한맛')
@@ -131,7 +131,7 @@
 용어 사전     (아이콘 book-open)
 ```
 
-### 3-2. 현행 구현과 새 과정 설계 기준
+### 3-2. 현행 구현과 기준
 
 | 항목 | 현행 구현 (`dev` `a3b0e2e`) | 새 과정 설계 시 고려점 | 근거 |
 |---|---|---|---|
@@ -142,7 +142,7 @@
 | 사이드바 키·pager | `site-theme.mjs:8`이 `/git/`·`/git-easy/` 접두 매칭, `nav.mjs:9-11`이 `flatten(sidebar)`로 pager를 만든다 | 그룹을 나눠도 flatten 순서가 같으면 pager는 유지된다 | `site-theme.mjs:8`, `nav.mjs:9-11` |
 | 브레드크럼(화면) | `CourseBreadcrumb.vue:9` 정규식에 `git/…`·`git-easy/…`가 하드코딩돼 있다 | 새 과정 추가 시 정규식에 `<id>/`를 추가한다 | `CourseBreadcrumb.vue:9` |
 
-### 3-3. 과정 간 교차 링크 규칙
+### 3-3. 과정 간 링크 규칙
 
 - 과정 첫 페이지 첫 문단에 상대 과정 링크 1문장을 둔다(`course-git.md:3`, `course-git-easy.md:8`).
 - 입문형 레슨 끝 `## 추가자료`에 `[STEP NN 제목](/git/NN-slug)` 형식을 쓴다(`docs/easy/05-git-principle.md:155-159`). 링크 텍스트의 `STEP NN`은 표시 계층 규칙(`content-style.md` 3-1)과 같은 형식을 쓴다.
@@ -153,11 +153,11 @@
 
 easy 레슨만 `titleTemplate` `:title | 고깃집 순한맛 Git·GitHub 입문`을 쓴다(`seo-meta.json:10`, `page-data.mjs:30-34`). git은 VitePress 기본(`:title | 에코익힘책`)을 쓴다(D-7).
 
-## 4. SEO·구조화 데이터 계약
+## 4. SEO·구조화 계약
 
 생성 경로는 `page-data.mjs:35-36` → `og-page.mjs`, `seo-page.mjs` → `schemas()`(`seo-schema.mjs:6-11`) → `courseGraph`(`seo-course-schema.mjs`) + `glossaryGraph` 순서다.
 
-### 4-1. 페이지 유형별 JSON-LD
+### 4-1. 페이지별 스키마
 
 | 페이지 | `@type` | 필수 속성(코드가 넣는 것) | 근거 |
 |---|---|---|---|
@@ -175,13 +175,13 @@ easy 레슨만 `titleTemplate` `:title | 고깃집 순한맛 Git·GitHub 입문`
 3. `isCollection`·`isGlossary` 판정 정규식이 `(?:git|git-easy)`를 하드코딩한다(`seo-course-schema.mjs:12-13`). 새 과정 id를 넣지 않으면 tags·glossary가 `WebPage`로 떨어지고 glossary `mainEntity`가 빠진다.
 4. `educationalLevel`은 `course.id === 'git-easy'` 조건이다(`seo-course-schema.mjs:20`, D-8).
 
-### 4-2. description 규칙
+### 4-2. 설명문 규칙
 
 - 우선순위: frontmatter `description` → `seo-meta.json descriptions[path]` → `subtitle`(과정 `summary`와 다를 때만) → 과정별 조합 문장 → `site.subtitle`(`seo-records.mjs:7-19`).
 - 길이는 40~90자, 색인 대상 전체에서 중복 0을 유지한다(`117-seo-retrospective.md:9`). `subtitle`을 과정 `summary`와 같게 쓰면 무효 처리된다(`seo-records.mjs:12`).
 - easy 레슨은 `제목 — 과정명. 부제` 조합을 기본으로 쓴다(`seo-records.mjs:13-14`). git은 `subtitle` 그대로가 다수이고 짧은 것은 `seo-meta.json:20-59`에 개별 문장을 넣었다(D-9).
 
-### 4-3. OG·sitemap·discovery
+### 4-3. OG·사이트맵
 
 - OG: 레슨은 `og:type=article` + `article:published_time`·`modified_time`(`og-page.mjs:25,30-32`), 그 외는 `website`다. `og:image`는 `courseOf(p).course`가 있으면 전부 `git` 키(`/og-git.jpg`, alt는 `courses[0].image.alt`)다(`og-image.mjs:8,15`, D-13).
 - sitemap: 404 제외 전체 페이지, `lastmod`는 git 마지막 커밋이다(`seo-options.mjs:6-14`, `sitemap-lastmod.mjs:35-37`). URL→원본 매핑은 `pages.mjs` rewrite를 역산하므로(`sitemap-lastmod.mjs:24-33`), 새 과정의 rewrite가 빠지면 lastmod가 비어 sitemap에 날짜가 안 들어간다.
@@ -197,7 +197,7 @@ easy 레슨만 `titleTemplate` `:title | 고깃집 순한맛 Git·GitHub 입문`
 3. `docs/<src>/glossary.json` + `glossary.md`, `tags.md`(1-3·1-4절).
 4. 모든 레슨에 `description`(D-9 채택 시)과 한 줄 JSON `tags`.
 
-### 5-2. 코드 등록 지점 (import 호출자 포함)
+### 5-2. 코드 등록 지점
 
 | 순서 | 파일 | 할 일 | 근거 행 |
 |---|---|---|---|
@@ -232,7 +232,7 @@ easy 레슨만 `titleTemplate` `:title | 고깃집 순한맛 Git·GitHub 입문`
 |---|---|---|---|
 | PDF 덱(R2) | 끔 | `scripts/learn-pdf-<id>/`, `learn-site/.vitepress/pdf-<id>.json {revision, prefix:'<id>/'}`, `<id>-pdf.mjs`, `pdf.mjs themeConfig`·`StepHeader.vue` 분기, `learn-worker` PDF 요청 테스트, 업로드 스크립트, `pdf-release.md`의 승인·readback | `easy-pdf.mjs:7-19`, `echo-deploy/SKILL.md:23` |
 | Gist | 끔 | `scripts/learn-gist-<id>/gists.json`(키 `<id>/<path>` 권고, D-11) + publish 스크립트, `StepHeader.vue` 조회 | `scripts/learn-gist-easy/gists.json`, `publish-git-easy-gists.mjs:6-10` |
-| D1 카탈로그·`/api/catalog` | 끔 | `lectures.mjs` `day`·`schedule` 필수(`:14`), `meta.mjs:5` 제목 고정, `catalog-sql.mjs` 단일 과정 스키마, `wrangler.jsonc` legacy 패턴. 다과정 지원은 스키마 변경이 필요하다(D-12) | `scripts/sync-learn-d1.mjs`, `docs/setup/d1-sync.md` |
+| D1 카탈로그·`/api/catalog` | 끔 | `lectures.mjs` `day`·`schedule` 필수(`:14`), `scripts/learn/meta.mjs:5` 제목 고정, `catalog-sql.mjs` 단일 과정 스키마, `wrangler.jsonc` legacy 패턴. 다과정 지원은 스키마 변경이 필요하다(D-12) | `scripts/sync-learn-d1.mjs`, `docs/setup/d1-sync.md` |
 | 레슨 내 복습 퀴즈 | 레슨형 켬 | `::정답::` 표기와 `<QuizHelp />` | `quiz-blank.mjs` |
 | 삽화 | 선택 | `illustrations.json` prefix가 전 과정 공용(`illust-`). `<id>-` 접두 또는 `stems` 매핑(D-14). 업로드는 `scripts/static-assets/` 절차 | `illustration-stem.mjs:5`, `deployment.md:38-49` |
 
