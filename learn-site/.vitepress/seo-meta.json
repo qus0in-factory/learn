@@ -7,10 +7,16 @@
   },
   "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ko",
   "licenseLabel": "코드 MIT / 교안 CC BY-NC-SA 4.0",
+  "easyTitleTemplate": ":title | 고깃집 순한맛 Git·GitHub 입문",
   "descriptions": {
+    "/": "Git과 GitHub를 처음 배우는 사람을 위한 무료 온라인 교안. 12단계 Git 과정과 비전공자용 순한맛 과정, 명령어 참조와 용어 사전을 제공한다.",
     "/licenses": "코드·교안·브랜드·제3자 자료의 사용 조건과 라이선스를 안내한다.",
+    "/privacy": "개인정보의 처리 목적, 보유 기간과 정보주체가 권리를 행사하는 방법을 안내한다.",
+    "/git/": "AI 시대에 맞춘 Git과 GitHub 교안이다. 커밋, 브랜치, 배포, 협업을 12단계로 익힌다.",
+    "/git-easy/": "프로그래밍을 처음 배우는 사람을 위한 Git·GitHub 입문 교안이다. 저장소 만들기부터 커밋, 원격, 브랜치까지 익힌다.",
     "/git/catalog": "Git 과정의 STEP별 교안과 PDF, 퀴즈 자료를 찾아본다.",
-    "/git/tags": "주제별 태그로 Git 교안과 명령어 참조를 찾아본다."
+    "/git/tags": "주제별 태그로 Git 교안과 명령어 참조를 찾아본다.",
+    "/git/glossary": "Git 강의와 부록에 나오는 기술 용어를 한 줄 정의와 쉬운 풀이로 찾아본다."
   },
   "sections": ["과정 및 STEP", "부록", "명령어 참조", "사전 및 안내"]
 }
