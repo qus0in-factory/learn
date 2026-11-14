@@ -1,18 +1,18 @@
 {
-  "sourceCommit": "bac1e798faeb313543417d86217da3fd1636d436",
-  "revision": "dd849e121a06f0e6e0c414bef600541f97991af3",
+  "sourceCommit": "eb3e3c38214ed5a77715abf220b332fe6634afe3",
+  "revision": "6e8aed6c038f0da51751ab3cbadec21fd670fbea",
   "files": [
     {
       "path": "docs/lecture/01-environment.md",
-      "sha256": "1f1699ef3738b14cc72aab3f622f902ec3a259e2dd5fbd386e1ba75d6b2d4edb"
+      "sha256": "c2ae625a37442f52eb47c1c94247c3078f9ed8e05128750edfb541cbce91083a"
     },
     {
       "path": "docs/lecture/02-local-repository.md",
-      "sha256": "d39e5e58eea96abd6606061ef49c590faa2f208433ba0a621ed8ede0a99df362"
+      "sha256": "0d1ce44806b27992c401c33d04ec849214445896fde0e0eca67c315af033f967"
     },
     {
       "path": "docs/lecture/03-commit-history.md",
-      "sha256": "b1861ed971bfac37a68c8796e05afb334f0a19c3912df4257534d8eee7383a1f"
+      "sha256": "e82aa2f9aa065cc8aae1c31b97f75ad35297f0826de6ed82d93d11b39ce866db"
     },
     {
       "path": "docs/lecture/04-amend-ignore.md",
@@ -20,11 +20,11 @@
     },
     {
       "path": "docs/lecture/05-remote.md",
-      "sha256": "8d8c9b7feb51d19b118931158bd18c4e17ba0557aea1bb326ed8c48766fc2222"
+      "sha256": "9a3b0e6d241830a9858d4acdaecf2ff2a57c52bad4bcfe57baeb0c8d07b8320d"
     },
     {
       "path": "docs/lecture/06-pages.md",
-      "sha256": "49010a1ba09643a665f9c98e24e2af66875a32ea8320d3ecd93c1b72469293ba"
+      "sha256": "f7a2bd901063858b91267097bad1474ebd5a7f5aef5bacf31db5dfdbe87209a5"
     },
     {
       "path": "docs/lecture/07-markdown-mermaid.md",
@@ -100,7 +100,7 @@
     },
     {
       "path": "docs/lecture/appendix/12-nvidia-nim.md",
-      "sha256": "e55cb3287bc786e50754509e46819d797678f8661d96b05ae3cdc6d78ab24ad3"
+      "sha256": "b83b63cd8c39c6e1728625bc0654e96b9ad32a1604c54c58b64e819339a35a37"
     },
     {
       "path": "docs/lecture/appendix/13-profile-records.md",
@@ -208,7 +208,7 @@
     },
     {
       "path": "docs/lecture/index.md",
-      "sha256": "6cdec28b5988ddb06e72fdb6a63f0673c18707bc69a8427b76b60918d14edd89"
+      "sha256": "8e666cb81a87909ac04e63f005f2c1c1eb84a3477f6c84dd2c48b07fb9376218"
     },
     {
       "path": "docs/lecture/tags.md",
@@ -812,15 +812,15 @@
     },
     {
       "path": "scripts/learn-pdf/pilot/step01.json",
-      "sha256": "0c70da13e4a3a635a8839beba26ec4f7d133597a08f046ec03c3d7942b068042"
+      "sha256": "160b23e70cfdc686984f17d5761c4e3d50f0cd3920cd407c11d581993ecd4a66"
     },
     {
       "path": "scripts/learn-pdf/pilot/step02.json",
-      "sha256": "ea5f9e13657028460176f73d23fd229c09038fb28240cfa01643765fbce31499"
+      "sha256": "3fd97df667bbcfb4fc36b6fe9843af2345c7a6321452400cd4d55529585e627f"
     },
     {
       "path": "scripts/learn-pdf/pilot/step03.json",
-      "sha256": "cadd669f9cabd48f2b700e7c9b527b376221c27d6c548af6a9269f0a88d4d53b"
+      "sha256": "1c7b8d262b7d2d1c04f54774ef16d4f4678890a3eb0ef776456222940a091ad0"
     },
     {
       "path": "scripts/learn-pdf/pilot/step04.json",
@@ -828,11 +828,11 @@
     },
     {
       "path": "scripts/learn-pdf/pilot/step05.json",
-      "sha256": "6e02fb9e08192186cfea03c729843b9101418b7d8266f4d089be31b3553a984c"
+      "sha256": "c1df9e299998ca3db1d993cef8f10618c28212919177a5009300bce8bca1cc82"
     },
     {
       "path": "scripts/learn-pdf/pilot/step06.json",
-      "sha256": "949b715c09c64c09ed83fde41d2a3440d1975e1e935f5a34ade9b3a4792f71ff"
+      "sha256": "953bbbc7dbc26f218850653c5683e4d883dfa3e1c763d5f08b249a0832e597b7"
     },
     {
       "path": "scripts/learn-pdf/pilot/step07.json",

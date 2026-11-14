@@ -1,7 +1,7 @@
 {
-  "frozen": false,
-  "sourceCommit": "bac1e798faeb313543417d86217da3fd1636d436",
-  "revision": "dd849e121a06f0e6e0c414bef600541f97991af3",
+  "frozen": true,
+  "sourceCommit": "eb3e3c38214ed5a77715abf220b332fe6634afe3",
+  "revision": "6e8aed6c038f0da51751ab3cbadec21fd670fbea",
   "manifest": "assets/pdf-frozen/source-manifest.json",
-  "sha256": "435d2ddd954a847a1774db0216476fbe9b8e0c411f375aad5f247e1a75b20ceb"
+  "sha256": "ffa9e75cbce8be4e37fd6219a2ec9b473ab365900e56b7ce3b0a63da092bc3c5"
 }
