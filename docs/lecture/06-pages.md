@@ -155,6 +155,17 @@ footer {
 
 <Screenshot name="step06-public-page" alt="과정 사이트 예시: Go Git 과정의 제목과 표지, 왼쪽 강의 목차" />
 
+### 계정 사이트와 docs 폴더
+
+계정 이름과 같은 `<사용자명>.github.io` 저장소를 만들면 `https://<사용자명>.github.io/` 주소로 사이트를 공개할 수 있다. 루트 대신 `docs/` 폴더를 게시 원본으로 쓰려면 다음 절차를 따른다.
+
+1. GitHub에서 `<사용자명>/<사용자명>.github.io` 저장소를 만든다. 초기 파일 생성 체크박스는 모두 해제한다.
+2. 로컬에 `docs/` 폴더를 만들고 `docs/index.html`을 작성한 뒤 커밋하여 원격에 푸시한다.
+3. 저장소의 `Settings` → `Pages`로 이동한다.
+4. `Build and deployment`에서 **Source**를 `Deploy from a branch`로 둔다.
+5. **Branch**를 `main`, **Folder**를 `/docs`로 선택하고 `Save`를 누른다.
+6. 수 분 뒤 `https://<사용자명>.github.io/`로 접속해 `docs/index.html`이 첫 화면으로 열리는지 확인한다.
+
 
 ## Git 명령
 
