@@ -5,7 +5,7 @@ description: echo 저장소에서 코드·콘텐츠·스크립트를 바꾼 뒤 
 
 # 로컬 검증
 
-- 범위의 단일 출처는 [docs/ci.md](../../../docs/ci.md)다. 새 테스트·CI 단계·e2e는 요청 없이 추가하지 않는다.
+- 검증 범위는 [docs/ci.md](../../../docs/ci.md), 테스트·CI 제한은 [AGENTS.md](../../../AGENTS.md)를 따른다.
 - 기본: `scripts/verify-local.sh` — Markdown 린트 → 빌드 전 테스트 → `learn-site` 빌드 → 빌드 산출물 검증 → `dist/learn-d1.sql` 생성(원격 미적용).
 - 빠른 확인: `--quick`(빌드 생략). 강의 본문(`docs/lecture`) 변경: `--content`로 `content-lint`까지 실행하고 [콘텐츠 규칙](../../../docs/content-style.md)을 따른다.
 - 의존성은 메인 `course-site/node_modules` 하나만 쓴다. 워크트리는 `course-site/node_modules`를 메인 경로 symlink로 연결하며([배포 문서](../../../docs/deployment.md) 참고), `verify-local.sh`는 `learn-site/node_modules`만 자동 연결하고 `pnpm exec` 없이 동작한다.
