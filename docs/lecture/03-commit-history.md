@@ -50,6 +50,18 @@ flowchart TB
 
 <Screenshot name="step03-commit-editor" alt="vim 커밋 메시지 화면에 `docs: add index`와 스테이징된 `index.html` 안내가 보인다." />
 
+## 편집기로 커밋 메시지 쓰기
+
+`-m`을 빠뜨리고 `git commit`을 실행하면 기본 편집기(vim)가 열린다. 당황하지 말고 아래 순서로 진행한다.
+
+1. `i`를 눌러 입력 모드로 바꾼다.
+2. 첫 줄에 커밋 메시지를 적는다.
+3. `Esc`를 눌러 입력 모드를 끝낸다.
+4. 저장하고 나가려면 `:wq`를 입력하고 Enter를 누른다.
+5. 메시지를 쓰지 않고 취소하려면 `:q!`를 입력하고 Enter를 누른다.
+
+커밋 자체를 중단하려면 `:cq`를 쓴다. 자세한 조작법은 [vi 편집기](appendix/08-vi-editor.md) 부록을 참고한다.
+
 
 ## 웹페이지 수정 코드
 
