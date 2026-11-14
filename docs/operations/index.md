@@ -8,6 +8,7 @@
 - [광고 슬롯](advertising.md): 기본 꺼짐, ads.txt 조건부 생성, 개인정보 초안
 - [콘텐츠 규칙](../content-style.md): 원본 문체·형식과 수동 린트
 - [Git 교안과 PDF 보강 회고 및 부검](pdf-training-retrospective.md): 편집 재작업·명령 검토·렌더링·배포 완료 기준
+- [Git·GitHub 교안과 SEO 보강 회고 및 부검](117-seo-retrospective.md): 런타임 차이·배포 가드·구조화 데이터·작업 인계 기준
 
 ## 현재 상태
 
