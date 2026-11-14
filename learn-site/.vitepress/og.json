@@ -5,6 +5,7 @@
   "background": "#fff8eb",
   "quality": 90,
   "card": "summary_large_image",
+  "locale": "ko_KR",
   "siteType": "website",
   "stepType": "article",
   "images": {
