@@ -27,6 +27,14 @@ git remote -v                # 등록 확인
 
 `origin`은 긴 URL에 붙이는 관례적 별칭이다.
 
+브랜치 이름이나 원격 주소에 오타가 났을 때는 아래 명령으로 바로잡는다.
+
+```bash
+git branch -M main                                        # 이미 main이 있어 -m이 거절될 때 덮어쓰기
+git remote set-url origin https://github.com/본인계정/portfolio-web.git   # 원격 URL 수정
+git remote remove origin                                  # 별칭(예: orign)을 잘못 등록해 지울 때
+```
+
 ## macOS 인증 준비 (gh CLI)
 
 macOS는 push 인증을 위해 GitHub CLI(gh)를 미리 준비해 둔다.
@@ -67,8 +75,9 @@ VS Code 소스 제어 창의 `변경 내용 동기화` 버튼도 같은 push/pul
 저장소 이름을 `<사용자명>.github.io`로 만들면 GitHub Pages로 본인 웹사이트를 직접 운영할 수 있다.
 
 1. 저장소의 `Settings` → `Pages`에서 `Branch`가 `main`, 폴더가 `/(root)`로 지정되어 있는지 배포 브랜치를 확인한다.
-2. 배포가 완료되면 `https://<사용자명>.github.io` 주소로 접속할 수 있으며, 루트의 `index.html` 또는 `README.md`가 첫 화면으로 열린다.
-3. 이후 로컬에서 코드를 수정해 `push`하면 GitHub Pages가 변경 사항을 감지해 배포 사이트를 자동으로 갱신한다.
+2. 루트 대신 `docs/` 폴더에 웹 페이지를 모아 두었다면 폴더를 `/docs`로 바꾼다. 이때는 `docs/index.html`이 첫 화면이 된다.
+3. 배포가 완료되면 `https://<사용자명>.github.io` 주소로 접속할 수 있으며, 선택한 폴더의 `index.html` 또는 `README.md`가 첫 화면으로 열린다.
+4. 이후 로컬에서 코드를 수정해 `push`하면 GitHub Pages가 변경 사항을 감지해 배포 사이트를 자동으로 갱신한다.
 
 ## push 거절 시
 
